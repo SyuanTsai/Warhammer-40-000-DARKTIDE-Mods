@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-03",
+  "blessing": "overload",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/超載/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_2h_p1_explosion_on_overheat_lockout",
+    "weapon_trait_bespoke_powersword_p2_explosion_on_overheat_lockout"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only single blessing review",
+    "blessing": "overload",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_variants": 2,
+    "reviewed_bindings": 4,
+    "findings": [
+      "Both variants reduce heat by fixed 10/15/20/25 percentage points and use the same four explosion templates.",
+      "Four exact weapon bindings and two exact-name metadata items match source; no other same-name candidate found. Icon242 is shared.",
+      "100-to-75 heat example, remaining lockout, no per-frame repeated explosion and later reactivation example are correct.",
+      "Near-zone attack/impact powers are25/62; outer-zone0/35. These are power distribution values rather than final health damage.",
+      "No damage_falloff; radius modifier scales both zones. IV with1.2 multiplier gives5.4/3.3 metres.",
+      "Self and friendly units are filtered. Current player bullets and examples match source."
+    ],
+    "corrections_resolved": [
+      "Primary distinguished nil cooldown configuration from ProcBuff.init local fallback zero: _cooldown_duration remains nil and _can_activate returns true. Gameplay conclusion of no blessing cooldown is unchanged."
+    ],
+    "inference_not_gameplay_tested": {
+      "observation": "Immediate sweep-start heat sets lockout; subsequent wielded special-class update sends event. Unwield disables special_active and only wielded classes update. Switching between these updates could suppress the pending event.",
+      "sources": [
+        "weapon_special_charging.lua83–90 and54–61",
+        "player_unit_weapon_extension.lua1128–1146",
+        "action_unwield.lua46"
+      ],
+      "primary_disposition": "Kept in AI-LOGS as an untested order-of-calls inference; player page states wielding is required at trigger."
+    },
+    "final_result": "Current player bullets, heat and radius examples, two variants and four bindings accepted."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c05b0b5b-2f43-48d2-a309-370bcdb98a57",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "overload",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_242",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_242.png",
+      "attachment": "https://github.com/user-attachments/assets/c05b0b5b-2f43-48d2-a309-370bcdb98a57",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965440717",
+      "acquired_date": "2026-10-03",
+      "sha256": "513618d38e9badb59a4f0bfea9bbe0995b2f8301983408353c9d65d02d0cdf82",
+      "content_type": "image/png",
+      "size": 3831,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "超載祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 137,
+      "tables": 126,
+      "rows": 940,
+      "lists": 148
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 510,
+      "source_files": 201,
+      "bindings": 92,
+      "variants": 42,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 837,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 137,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 155,
+    "not_started_name_groups": 155,
+    "partial_name_groups": 0,
+    "remaining_variants": 546,
+    "remaining_bindings": 1076,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "bc0d6213afe993bfaac140fb0883bbf76564db3c877b75de2412ac730078d362"
+  },
+  "previous_local_commit": "e8ed0842e407a531c963bc3c142da39eed784c4c",
+  "current_blessing_formula_review": {
+    "heat_after_proc": [
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "radii_with_20percent": [
+      5.4,
+      3.3
+    ],
+    "lockout_retained_after_proc": true,
+    "damage_profile_same_across_tiers": true
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "status": "all exact name-key items included"
+  }
+}

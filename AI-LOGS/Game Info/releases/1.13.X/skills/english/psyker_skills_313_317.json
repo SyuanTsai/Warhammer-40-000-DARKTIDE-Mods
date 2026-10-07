@@ -1,0 +1,72 @@
+{
+  "id": "psyker_skills_313_317",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L1037–1050, L1491–1509, L1292–1297, L466–483 and L1197–1228.",
+    "Verified amounts, duration/caps and shared percentage/number formatting reused, including the existing value_manipulation override rule. No Buff or event-chain retracing."
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "psyker_toughness_on_melee",
+      "name": "Warp Expenditure",
+      "name_hash": "42b1f6c1",
+      "description_hash": "3f010d59",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_toughness_on_melee.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_melee.md",
+      "commit": "8ec7a8da9"
+    },
+    {
+      "id": "psyker_crits_regen_toughness_movement_speed",
+      "name": "Mettle",
+      "name_hash": "56d92a9d",
+      "description_hash": "0da7190a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_crits_regen_toughness_movement_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_crits_regen_toughness_movement_speed.md",
+      "commit": "5f0aefc86"
+    },
+    {
+      "id": "psyker_elite_kills_add_warpfire",
+      "name": "Perilous Combustion",
+      "name_hash": "efe217b7",
+      "description_hash": "c4294372",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_elite_kills_add_warpfire.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_elite_kills_add_warpfire.md",
+      "commit": "dbe33e97e"
+    },
+    {
+      "id": "psyker_chance_to_vent_on_kill",
+      "name": "Battle Meditation",
+      "name_hash": "91b8623f",
+      "description_hash": "2b245e8a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chance_to_vent_on_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_chance_to_vent_on_kill.md",
+      "commit": "b37085db7"
+    },
+    {
+      "id": "psyker_crits_empower_next_attack",
+      "name": "Perfect Timing",
+      "name_hash": "dc8ee87d",
+      "description_hash": "62b2dfb3",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_crits_empower_next_attack.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_crits_empower_next_attack.md",
+      "commit": "21c0c5604"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 281,
+    "from_commit": "cbf1053c9",
+    "to_commit": "21c0c5604",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

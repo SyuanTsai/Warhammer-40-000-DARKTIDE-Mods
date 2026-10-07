@@ -1,0 +1,121 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "Continuous hits to a Single Target applies 2.5% Brittleness for 5 seconds to the target. Stacks 16 times.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Onslaught dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:1136-1179, English placeholder display settings only"
+  ],
+  "reused_evidence": [
+    "Accepted same-target sequence, first-hit tracking, per-attack gate, buff-damage exclusion and miss/retarget behavior",
+    "Accepted target-side Brittleness, 0.025 per stack, cap 16, shared 5-second refresh and teammate benefit",
+    "Accepted armor formula and subsequent-hit examples with full assumptions",
+    "Accepted percentage/number formatter and buff lookup evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 5612 bytes, SHA256 7fb7aafe803e4bc8f4e368fe8d20f3090e78b76dbe1205ccfb0e1badb2f7ee5a",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only text draft checked exact English pairs and first-hit/refresh/armor omissions; primary preserved five-hit/four-stack buildup and checked missing placeholder display settings. Final acceptance uses the complete staged diff review."
+  },
+  "static_examples": {
+    "first_hit_adds_stack": false,
+    "five_hit_stacks": 4,
+    "per_stack_rending": 0.025,
+    "max_stacks": 16,
+    "duration_seconds": 5,
+    "pre_armor_damage": 100,
+    "initial_armor_multiplier": 0.5,
+    "zero_stack_damage": 50,
+    "four_stack_damage": 60,
+    "four_stack_relative_gain": 0.2,
+    "sixteen_stack_damage": 90,
+    "sixteen_stack_relative_gain": 0.8
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Individual game hit/proc cases and exact timer ordering.",
+    "Final damage against specific enemies and final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/damage-pipeline analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game hit/proc/damage/UI measurements"
+  ],
+  "id": "veteran_continous_hits_apply_rending",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Onslaught",
+  "name_key": "loc_talent_veteran_continous_hits_apply_rending",
+  "name_hash": "89ef54ab",
+  "description_key": "loc_talent_veteran_continous_hits_apply_rending_description",
+  "description_hash": "29626c69",
+  "raw_template": "Continuous hits to a Single Target applies {rending_multiplier:%s} Brittleness for {duration:%s} seconds to the target. Stacks {max_stacks:%s} times.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 135,
+        "Explicit contradiction": 7,
+        "Not covered by the description": 172,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 380,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 51,
+      "comparison_rows": 6,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/onslaught-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_continous_hits_apply_rending.md",
+  "commit": "78986ab17527b246b057d5361f8cf5a80b144e19"
+}

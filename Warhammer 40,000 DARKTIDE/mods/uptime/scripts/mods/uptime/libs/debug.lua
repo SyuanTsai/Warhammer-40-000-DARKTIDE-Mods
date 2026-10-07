@@ -1,3 +1,4 @@
+-- File: uptime\scripts\mods\uptime\libs\debug.lua
 local mod = get_mod("uptime")
 
 function DEBUG()

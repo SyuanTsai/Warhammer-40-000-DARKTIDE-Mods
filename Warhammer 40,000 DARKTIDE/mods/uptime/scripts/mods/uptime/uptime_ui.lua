@@ -1,4 +1,8 @@
+-- File: uptime\scripts\mods\uptime\uptime_ui.lua
 local mod = get_mod("uptime")
+if not mod then
+    return
+end
 
 mod.register_uptime_view = function(self)
     self:add_require_path("uptime/scripts/mods/uptime/view/uptime_view")

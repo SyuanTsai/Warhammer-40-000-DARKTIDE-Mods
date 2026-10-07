@@ -1,3 +1,4 @@
+-- File: uptime\scripts\mods\uptime\libs\json.lua
 --
 -- json.lua
 --
@@ -82,7 +83,6 @@ local function encode_table(val, stack)
         end
         stack[val] = nil
         return "[" .. table.concat(res, ",") .. "]"
-
     else
         -- Treat as an object
         for k, v in pairs(val) do
@@ -128,7 +128,6 @@ end
 function json.encode(val)
     return (encode(val))
 end
-
 
 -------------------------------------------------------------------------------
 -- Decode
@@ -188,7 +187,7 @@ local function codepoint_to_utf8(n)
         return string.char(f(n / 4096) + 224, f(n % 4096 / 64) + 128, n % 64 + 128)
     elseif n <= 0x10ffff then
         return string.char(f(n / 262144) + 240, f(n % 262144 / 4096) + 128,
-                f(n % 4096 / 64) + 128, n % 64 + 128)
+            f(n % 4096 / 64) + 128, n % 64 + 128)
     end
     error(string.format("invalid unicode codepoint '%x'", n))
 end
@@ -214,7 +213,6 @@ local function parse_string(str, i)
 
         if x < 32 then
             decode_error(str, j, "control character in string")
-
         elseif x == 92 then
             -- `\`: Escape
             res = res .. str:sub(k, j - 1)
@@ -222,8 +220,8 @@ local function parse_string(str, i)
             local c = str:sub(j, j)
             if c == "u" then
                 local hex = str:match("^[dD][89aAbB]%x%x\\u%x%x%x%x", j + 1)
-                        or str:match("^%x%x%x%x", j + 1)
-                        or decode_error(str, j - 1, "invalid unicode escape in string")
+                    or str:match("^%x%x%x%x", j + 1)
+                    or decode_error(str, j - 1, "invalid unicode escape in string")
                 res = res .. parse_unicode_escape(hex)
                 j = j + #hex
             else
@@ -233,7 +231,6 @@ local function parse_string(str, i)
                 res = res .. escape_char_map_inv[c]
             end
             k = j + 1
-
         elseif x == 34 then
             -- `"`: End of string
             res = res .. str:sub(k, j - 1)

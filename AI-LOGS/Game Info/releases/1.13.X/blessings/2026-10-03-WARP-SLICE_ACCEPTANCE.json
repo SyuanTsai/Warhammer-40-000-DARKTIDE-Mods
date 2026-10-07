@@ -1,0 +1,587 @@
+{
+  "date": "2026-10-06",
+  "blessing": "warp-slice",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/亞空間斬/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcesword_2h_p1_wind_slash_crits"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "warp-slice",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-formal-peer-scope.json",
+    "scope_sha256": "970eae8752b44f05d7546debc4e7c13b505659f6f14b34249787c4004312cf62",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-agent-config.json": "6b7c14c04f5920e2d1ffb58573c75b50219fc508c78428e1c0eda46857381e33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-agent-draft.md": "316ee3a567106818e54fac866494cc408d34505aa9cf7799d7b0fac9826851ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-agent-evidence.json": "cc78638725bfe521e40f5b334cbcfb73f12a437a09a566237301cff73d21e1e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-config.json": "ba28a67aa3316b8f8c0032af9271500f833974c2871bd93030cd8503572cf691",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-extension-draft.json": "7795846032ce59a9609e9de77728de6cd211c5353f9499e0ba478cc05efc7e00",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/action-route-scan.json": "3a43375902e22734d7bf0a3908f3d906734de7f9a2b3dd850284c04af60fcb76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/association.json": "c3b43ffc1b5a63bad4d0cf56676ddf85c357d7f4e91a69c582a5687dfee30993",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/attack_coverage.json": "b5cdd37ca3cb12d8f5c83d9645816af821614df38d5c140dad224d7ac1ec4765",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/DAMAGE_PERCENTAGE_REVIEW.md": "3c713c68b4a5a1b77030ca3c9b28c8019ffac74156b27554b18c7bf37b9e633f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/LOCALIZATION_COMPARISON.md": "776a484423afc6f9a4600e6c0346da9ac570b957844ee79fd59cf86354c3cc37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/README.md": "8ae25a9f68bcccad24c91e5dd15af78ab6153090035ded83cc4f98e1311514af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/SOURCE_INDEX.md": "d7374a5848353e7d30f5ede9ac508a638aab3234038bfed3bb9c81da113aa775",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/TIER_VALUES.md": "de1d452086fe967254bfef1c3ab355a7157b5f69e6265a22558ef1edf64535a7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/WEAPON_COMPATIBILITY.md": "186978af368fcc456ecc538b4a79b1035c284228937d4b263ef03ce1a2874bd8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/weapon_trait_bespoke_forcesword_2h_p1_wind_slash_crits.md": "b4568856c4914005cd0a0c05ba7d6a1ea43f7465dddb19b33bc253df3a9e2e1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-page-preview.md": "8ae25a9f68bcccad24c91e5dd15af78ab6153090035ded83cc4f98e1311514af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-preview-manifest.json": "ac7a8c3da06cc4d05615f1768a265aa0bf80e8a8696e7bd183ba3a0f3c140f5a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/draft.md": "316ee3a567106818e54fac866494cc408d34505aa9cf7799d7b0fac9826851ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/examples.md": "f78b0af38d5d10ed28e5bfa17162281ad5d831ff2440b827dae133beef9aeeff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/math.md": "07d1464c9d5a02b4d36f93cb4b56e80cf655aa796a39b80f98b173dfb495c240",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/mechanism.md": "8975dc3a1460434029472e240b6fcc7dbc8d08a3b7efb50672f010f3327cb5ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/player.md": "aeac7491c72418f9d625392f04f600e13dd2dd8709219404281b3fa539bfd894",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/reconstruction.md": "28d1aad6c557e42c741d63d545b77bd93706815db17b346078bf0e10f3550c41",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/research-source-blocks.json": "98d3a52c56b4b4481f2a714f08c864555f8c1ee36cff3c3a7d7104081d20be66",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/review.md": "1a5445f96c462fe66fafca4b934742e7f88f57b2df24aa941e0f63907b9a5994",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/scan_routes.py": "feb9d615f26de558c3e8a2b7e0cc9f21399fde348b8e629169dcde5c4e327fd8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/selfcheck.json": "325217e918942ecbd066f73be243d797bc66b406b5011cd3c2f80977fd74e767",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/tier_table.md": "4b2ea878b2b031cf2148aadab5c842935f6979ae8560f63e1290e12723d1383e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/variant_notes.md": "7e16a0add9e0e978cb32696a44d1082ca8989b044e2f1b6af5ab7b1fbf94ab49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-001.json": "ea95209628d3ff6f078df3527f5fa6d5b53dc0d47586f6294a391d92a521e2e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-002.json": "699066c6e27a1ce66aa1c75f9cc6bc7eae3fbf8d75ef74ac6d0e922168c9a73c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-003.json": "f965e23ed476225792c986de50089d4766d4c7a058948afdd6e18a7c4fa9cc13",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-004.json": "d99f1dda345a96b4be540fb5f88112abcbfaf755231c017003d7afcf961e0bc1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-005.json": "ff44fecb20997cb1ef812eb681733470553ddd3712934d8a69a32ccadf314eeb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-006.json": "f224ba1c7cb6ffc60361ad093c06eb6b1f1f39d7875f9ad38b920773dc694a2f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-007.json": "97358d686d9e1d67730c339e731f760db97c225fcb9170a0939ddcb93cd5f897",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-008.json": "06dd0b356097f823d89bc22b8a09d680339d5ba3c1e140b11ce627c0e9ce6e6c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-agent-config.json": "6b7c14c04f5920e2d1ffb58573c75b50219fc508c78428e1c0eda46857381e33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-agent-draft.md": "316ee3a567106818e54fac866494cc408d34505aa9cf7799d7b0fac9826851ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-agent-evidence.json": "cc78638725bfe521e40f5b334cbcfb73f12a437a09a566237301cff73d21e1e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-image.json": "39a30cc7915bd2e74a30c213ea65db7ca56ea572972b6ad6aeda7c1a9c38362a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-cooldown-context-keyword-cache-delta-review.json": "3331c2f793b0a3f557d97980155e0288d52661e9dbcac716bb2abb853ccb56b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-final-content-review-pre-canonical-receipt-fix.json": "41eeb4b77d3b12cb177b9f35ec71a9c24085032e8085f6af0177b327a95a8ee5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-final-content-review.json": "09d7e2105c2e18a7d8a45015c397b0a0512391eef3372753664ac501fc960828",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-focused-checks.json": "630ee29995e4f6449bd93266c66f8abeeb835391bb227225193f67fa9a7b4da3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-frozen-source-verification.json": "4a76820d074a65a10504bf9f9c91b7b087d3c7c40a498088c5a83488f55100fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-native-critical-snapshot-consumer-delta-review.json": "dada2247321cb7d032c8d3d75bdb0e679aa775225993e079b1ee86533633d9fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-own-tier-wrapper-delta-review.json": "47887c9e2f27f6e3bce1e6d9d681f67b280300ac535c2d72771302710efdce9a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-resume-review.json": "ef2ba5e1e3883b4f9a18610d74f600fcc92f4e54288afa85b12c129803337f06",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-traits-review.json": "04b1164d4fe2f2fe0af57eea0d3188e86225a0688787ea7528aa4da3cc650d23",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-two-mark-native-special-difference-review.json": "de893216da4a77907dd1d200cded59fa4d66e25bab0f24e7e0b856f1dc88f75d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-ui-raw-verification.json": "09f54dfabadc07d923b13117af585ae9a3b34efb9182a508c4c02ed2ad972b37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-ui-review.json": "75b1c32690e35f174bc9c3f81312b206d7928098ae2cfd3e518b873f1e79020d",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-raw-verification.json": "d07ef0cc7a0e0217d959526e53ca85ee5f299743b20a7c5028b957e99857d6b1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9f30800b1d33fd5601148089659576755a5a507371bdc379fa8da873592fea64",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/亞空間斬/DAMAGE_PERCENTAGE_REVIEW.md": "3c713c68b4a5a1b77030ca3c9b28c8019ffac74156b27554b18c7bf37b9e633f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/亞空間斬/LOCALIZATION_COMPARISON.md": "776a484423afc6f9a4600e6c0346da9ac570b957844ee79fd59cf86354c3cc37",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/亞空間斬/README.md": "8ae25a9f68bcccad24c91e5dd15af78ab6153090035ded83cc4f98e1311514af",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/亞空間斬/SOURCE_INDEX.md": "d7374a5848353e7d30f5ede9ac508a638aab3234038bfed3bb9c81da113aa775",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/亞空間斬/TIER_VALUES.md": "de1d452086fe967254bfef1c3ab355a7157b5f69e6265a22558ef1edf64535a7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/亞空間斬/WEAPON_COMPATIBILITY.md": "186978af368fcc456ecc538b4a79b1035c284228937d4b263ef03ce1a2874bd8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/亞空間斬/weapon_trait_bespoke_forcesword_2h_p1_wind_slash_crits.md": "b4568856c4914005cd0a0c05ba7d6a1ea43f7465dddb19b33bc253df3a9e2e1c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/melee/README.md": "d68573c11878ec73d8aa2586708d6dcdf58548af7d109f9dfa63d1a0113d142b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/README.md": "f2743f2f629368dba1f30481dea6850c17c705fefd5cb01860ff8248fb2a6804",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "440d999704b00a15d526db790d66a9eee21996eff755ec1eea9f524c427c8595",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "75fa019a83076ed5eb375de678085dbda721533ca843be17417c8c7e7c38d7ac",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/own-association-snapshot.json": "8f475fbfa4b629d223fecd71a2e1db92d7221a348f2bd101e54c035127cd2046",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/actual-preview-008/Referneces/Translation.md": "1129a6380dc49814943d91b54c3d06b6dcb605b24b6bf3ef0900807fd1c08be4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9f30800b1d33fd5601148089659576755a5a507371bdc379fa8da873592fea64",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間斬/DAMAGE_PERCENTAGE_REVIEW.md": "3c713c68b4a5a1b77030ca3c9b28c8019ffac74156b27554b18c7bf37b9e633f",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間斬/LOCALIZATION_COMPARISON.md": "776a484423afc6f9a4600e6c0346da9ac570b957844ee79fd59cf86354c3cc37",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間斬/README.md": "8ae25a9f68bcccad24c91e5dd15af78ab6153090035ded83cc4f98e1311514af",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間斬/SOURCE_INDEX.md": "bc1999a316a0773527f0b5fdb9307899c222440ababe636a398e586cebc6118f",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間斬/TIER_VALUES.md": "de1d452086fe967254bfef1c3ab355a7157b5f69e6265a22558ef1edf64535a7",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間斬/WEAPON_COMPATIBILITY.md": "186978af368fcc456ecc538b4a79b1035c284228937d4b263ef03ce1a2874bd8",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間斬/weapon_trait_bespoke_forcesword_2h_p1_wind_slash_crits.md": "b4568856c4914005cd0a0c05ba7d6a1ea43f7465dddb19b33bc253df3a9e2e1c",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "d68573c11878ec73d8aa2586708d6dcdf58548af7d109f9dfa63d1a0113d142b",
+      "Game Info/releases/1.13.X/blessings/README.md": "f2743f2f629368dba1f30481dea6850c17c705fefd5cb01860ff8248fb2a6804",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "440d999704b00a15d526db790d66a9eee21996eff755ec1eea9f524c427c8595",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "75fa019a83076ed5eb375de678085dbda721533ca843be17417c8c7e7c38d7ac",
+      "Referneces/Translation.md": "1129a6380dc49814943d91b54c3d06b6dcb605b24b6bf3ef0900807fd1c08be4"
+    },
+    "review_summary": "All 93 fixed-scope hashes match. Reviewed the seven formal pages, two bound Marks, shared map and reverse weapon page. I–IV cooldown seconds and RAW number formatting align; event readiness/cache update order, first equip, cooldown boundary, holster versus true unequip, cross-weapon special ActionSweep consumption, saved native critical flag, the Mk VI/Mk VIII thickness difference, and both timing examples are accurately scoped. The page does not turn the critical flag into a universal melee critical-rate or final-damage multiplier. Image 221 attachment and verification receipt match. No issue found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/7491abf4-faa1-4535-a72e-ab1bc5e989cc",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "warp-slice",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_221",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_221.png",
+      "attachment": "https://github.com/user-attachments/assets/7491abf4-faa1-4535-a72e-ab1bc5e989cc",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5997286269",
+      "acquired_date": "2026-10-05",
+      "sha256": "81bf38642c2f1feccb89a68b70f4b49f37ad66d36e58210267fc47491e756bfd",
+      "content_type": "image/png",
+      "size": 6507,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "亞空間斬祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "主控目視公開下載的實際item.icon221原始128×128 PNG，未裁切、重繪或調色。"
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 12,
+      "rows": 459,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 122,
+      "source_files": 19,
+      "bindings": 869,
+      "variants": 440,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 19,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 995,
+      "remote_references": 453,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 31,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-030-full-scan.json",
+        "sha256": "25943f52efd67fd459cb760bd70a006dd9ee356340a0ccea9620905b622cf9ec",
+        "trigger": "round-030"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 43,
+    "not_started_name_groups": 43,
+    "partial_name_groups": 0,
+    "remaining_variants": 165,
+    "remaining_bindings": 316,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6a78208175fc07eabd24d1e35c43bfb2c4a3d2be7a4dff5f906bae4a67c860f0"
+  },
+  "previous_local_commit": "6fc1b0416ccc2cf2b8c60c17def16503e516e43b",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Inventory UI receipt confirms exact 1 variant and 2 bindings; no extra variant included."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-cooldown-context-keyword-cache-delta-review.json",
+      "sha256": "3331c2f793b0a3f557d97980155e0288d52661e9dbcac716bb2abb853ccb56b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-final-content-review-pre-canonical-receipt-fix.json",
+      "sha256": "41eeb4b77d3b12cb177b9f35ec71a9c24085032e8085f6af0177b327a95a8ee5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-final-content-review.json",
+      "sha256": "09d7e2105c2e18a7d8a45015c397b0a0512391eef3372753664ac501fc960828"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-focused-checks.json",
+      "sha256": "630ee29995e4f6449bd93266c66f8abeeb835391bb227225193f67fa9a7b4da3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-frozen-source-verification.json",
+      "sha256": "4a76820d074a65a10504bf9f9c91b7b087d3c7c40a498088c5a83488f55100fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-native-critical-snapshot-consumer-delta-review.json",
+      "sha256": "dada2247321cb7d032c8d3d75bdb0e679aa775225993e079b1ee86533633d9fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-own-tier-wrapper-delta-review.json",
+      "sha256": "47887c9e2f27f6e3bce1e6d9d681f67b280300ac535c2d72771302710efdce9a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-resume-review.json",
+      "sha256": "ef2ba5e1e3883b4f9a18610d74f600fcc92f4e54288afa85b12c129803337f06"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-traits-review.json",
+      "sha256": "04b1164d4fe2f2fe0af57eea0d3188e86225a0688787ea7528aa4da3cc650d23"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-two-mark-native-special-difference-review.json",
+      "sha256": "de893216da4a77907dd1d200cded59fa4d66e25bab0f24e7e0b856f1dc88f75d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-ui-raw-verification.json",
+      "sha256": "09f54dfabadc07d923b13117af585ae9a3b34efb9182a508c4c02ed2ad972b37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-ui-review.json",
+      "sha256": "75b1c32690e35f174bc9c3f81312b206d7928098ae2cfd3e518b873f1e79020d"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-config.json",
+    "sha256": "ba28a67aa3316b8f8c0032af9271500f833974c2871bd93030cd8503572cf691"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/action-route-scan.json",
+      "sha256": "3a43375902e22734d7bf0a3908f3d906734de7f9a2b3dd850284c04af60fcb76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/association.json",
+      "sha256": "c3b43ffc1b5a63bad4d0cf56676ddf85c357d7f4e91a69c582a5687dfee30993"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/attack_coverage.json",
+      "sha256": "b5cdd37ca3cb12d8f5c83d9645816af821614df38d5c140dad224d7ac1ec4765"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "3c713c68b4a5a1b77030ca3c9b28c8019ffac74156b27554b18c7bf37b9e633f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/LOCALIZATION_COMPARISON.md",
+      "sha256": "776a484423afc6f9a4600e6c0346da9ac570b957844ee79fd59cf86354c3cc37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/README.md",
+      "sha256": "8ae25a9f68bcccad24c91e5dd15af78ab6153090035ded83cc4f98e1311514af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/SOURCE_INDEX.md",
+      "sha256": "d7374a5848353e7d30f5ede9ac508a638aab3234038bfed3bb9c81da113aa775"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/TIER_VALUES.md",
+      "sha256": "de1d452086fe967254bfef1c3ab355a7157b5f69e6265a22558ef1edf64535a7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/WEAPON_COMPATIBILITY.md",
+      "sha256": "186978af368fcc456ecc538b4a79b1035c284228937d4b263ef03ce1a2874bd8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-formal-pages/weapon_trait_bespoke_forcesword_2h_p1_wind_slash_crits.md",
+      "sha256": "b4568856c4914005cd0a0c05ba7d6a1ea43f7465dddb19b33bc253df3a9e2e1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-page-preview.md",
+      "sha256": "8ae25a9f68bcccad24c91e5dd15af78ab6153090035ded83cc4f98e1311514af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/candidate-preview-manifest.json",
+      "sha256": "ac7a8c3da06cc4d05615f1768a265aa0bf80e8a8696e7bd183ba3a0f3c140f5a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/draft.md",
+      "sha256": "316ee3a567106818e54fac866494cc408d34505aa9cf7799d7b0fac9826851ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/examples.md",
+      "sha256": "f78b0af38d5d10ed28e5bfa17162281ad5d831ff2440b827dae133beef9aeeff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/math.md",
+      "sha256": "07d1464c9d5a02b4d36f93cb4b56e80cf655aa796a39b80f98b173dfb495c240"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/mechanism.md",
+      "sha256": "8975dc3a1460434029472e240b6fcc7dbc8d08a3b7efb50672f010f3327cb5ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/player.md",
+      "sha256": "aeac7491c72418f9d625392f04f600e13dd2dd8709219404281b3fa539bfd894"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/reconstruction.md",
+      "sha256": "28d1aad6c557e42c741d63d545b77bd93706815db17b346078bf0e10f3550c41"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/research-source-blocks.json",
+      "sha256": "98d3a52c56b4b4481f2a714f08c864555f8c1ee36cff3c3a7d7104081d20be66"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/review.md",
+      "sha256": "1a5445f96c462fe66fafca4b934742e7f88f57b2df24aa941e0f63907b9a5994"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/scan_routes.py",
+      "sha256": "feb9d615f26de558c3e8a2b7e0cc9f21399fde348b8e629169dcde5c4e327fd8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/selfcheck.json",
+      "sha256": "325217e918942ecbd066f73be243d797bc66b406b5011cd3c2f80977fd74e767"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/tier_table.md",
+      "sha256": "4b2ea878b2b031cf2148aadab5c842935f6979ae8560f63e1290e12723d1383e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/variant_notes.md",
+      "sha256": "7e16a0add9e0e978cb32696a44d1082ca8989b044e2f1b6af5ab7b1fbf94ab49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-008.json",
+      "sha256": "06dd0b356097f823d89bc22b8a09d680339d5ba3c1e140b11ce627c0e9ce6e6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-agent-config.json",
+      "sha256": "6b7c14c04f5920e2d1ffb58573c75b50219fc508c78428e1c0eda46857381e33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-agent-draft.md",
+      "sha256": "316ee3a567106818e54fac866494cc408d34505aa9cf7799d7b0fac9826851ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-image.json",
+      "sha256": "39a30cc7915bd2e74a30c213ea65db7ca56ea572972b6ad6aeda7c1a9c38362a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-cooldown-context-keyword-cache-delta-review.json",
+      "sha256": "3331c2f793b0a3f557d97980155e0288d52661e9dbcac716bb2abb853ccb56b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-native-critical-snapshot-consumer-delta-review.json",
+      "sha256": "dada2247321cb7d032c8d3d75bdb0e679aa775225993e079b1ee86533633d9fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-own-tier-wrapper-delta-review.json",
+      "sha256": "47887c9e2f27f6e3bce1e6d9d681f67b280300ac535c2d72771302710efdce9a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-traits-review.json",
+      "sha256": "04b1164d4fe2f2fe0af57eea0d3188e86225a0688787ea7528aa4da3cc650d23"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-two-mark-native-special-difference-review.json",
+      "sha256": "de893216da4a77907dd1d200cded59fa4d66e25bab0f24e7e0b856f1dc88f75d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-ui-raw-verification.json",
+      "sha256": "09f54dfabadc07d923b13117af585ae9a3b34efb9182a508c4c02ed2ad972b37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-ui-review.json",
+      "sha256": "75b1c32690e35f174bc9c3f81312b206d7928098ae2cfd3e518b873f1e79020d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "f2743f2f629368dba1f30481dea6850c17c705fefd5cb01860ff8248fb2a6804"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "440d999704b00a15d526db790d66a9eee21996eff755ec1eea9f524c427c8595"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "9f30800b1d33fd5601148089659576755a5a507371bdc379fa8da873592fea64"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間斬\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "3c713c68b4a5a1b77030ca3c9b28c8019ffac74156b27554b18c7bf37b9e633f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間斬\\LOCALIZATION_COMPARISON.md",
+      "sha256": "776a484423afc6f9a4600e6c0346da9ac570b957844ee79fd59cf86354c3cc37"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間斬\\README.md",
+      "sha256": "8ae25a9f68bcccad24c91e5dd15af78ab6153090035ded83cc4f98e1311514af"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間斬\\SOURCE_INDEX.md",
+      "sha256": "d7374a5848353e7d30f5ede9ac508a638aab3234038bfed3bb9c81da113aa775"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間斬\\TIER_VALUES.md",
+      "sha256": "de1d452086fe967254bfef1c3ab355a7157b5f69e6265a22558ef1edf64535a7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間斬\\WEAPON_COMPATIBILITY.md",
+      "sha256": "186978af368fcc456ecc538b4a79b1035c284228937d4b263ef03ce1a2874bd8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間斬\\weapon_trait_bespoke_forcesword_2h_p1_wind_slash_crits.md",
+      "sha256": "b4568856c4914005cd0a0c05ba7d6a1ea43f7465dddb19b33bc253df3a9e2e1c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "d68573c11878ec73d8aa2586708d6dcdf58548af7d109f9dfa63d1a0113d142b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\烈焰力場巨劍\\README.md",
+      "sha256": "75fa019a83076ed5eb375de678085dbda721533ca843be17417c8c7e7c38d7ac"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\Referneces\\Translation.md",
+      "sha256": "1129a6380dc49814943d91b54c3d06b6dcb605b24b6bf3ef0900807fd1c08be4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-raw-verification.json",
+      "sha256": "d07ef0cc7a0e0217d959526e53ca85ee5f299743b20a7c5028b957e99857d6b1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-slice-group\\actual-preview-008\\own-association-snapshot.json",
+      "sha256": "8f475fbfa4b629d223fecd71a2e1db92d7221a348f2bd101e54c035127cd2046"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-001.json",
+      "sha256": "ea95209628d3ff6f078df3527f5fa6d5b53dc0d47586f6294a391d92a521e2e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-002.json",
+      "sha256": "699066c6e27a1ce66aa1c75f9cc6bc7eae3fbf8d75ef74ac6d0e922168c9a73c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-003.json",
+      "sha256": "f965e23ed476225792c986de50089d4766d4c7a058948afdd6e18a7c4fa9cc13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-004.json",
+      "sha256": "d99f1dda345a96b4be540fb5f88112abcbfaf755231c017003d7afcf961e0bc1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-005.json",
+      "sha256": "ff44fecb20997cb1ef812eb681733470553ddd3712934d8a69a32ccadf314eeb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-006.json",
+      "sha256": "f224ba1c7cb6ffc60361ad093c06eb6b1f1f39d7875f9ad38b920773dc694a2f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-actual-preview-receipt-007.json",
+      "sha256": "97358d686d9e1d67730c339e731f760db97c225fcb9170a0939ddcb93cd5f897"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-group/warp-slice-agent-evidence.json",
+      "sha256": "cc78638725bfe521e40f5b334cbcfb73f12a437a09a566237301cff73d21e1e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-agent-config.json",
+      "sha256": "6b7c14c04f5920e2d1ffb58573c75b50219fc508c78428e1c0eda46857381e33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-agent-evidence.json",
+      "sha256": "cc78638725bfe521e40f5b334cbcfb73f12a437a09a566237301cff73d21e1e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-agent-draft.md",
+      "sha256": "316ee3a567106818e54fac866494cc408d34505aa9cf7799d7b0fac9826851ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-final-content-review-pre-canonical-receipt-fix.json",
+      "sha256": "41eeb4b77d3b12cb177b9f35ec71a9c24085032e8085f6af0177b327a95a8ee5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-final-content-review.json",
+      "sha256": "09d7e2105c2e18a7d8a45015c397b0a0512391eef3372753664ac501fc960828"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-frozen-source-verification.json",
+      "sha256": "4a76820d074a65a10504bf9f9c91b7b087d3c7c40a498088c5a83488f55100fd"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-formal-peer-scope.json",
+    "sha256": "970eae8752b44f05d7546debc4e7c13b505659f6f14b34249787c4004312cf62",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

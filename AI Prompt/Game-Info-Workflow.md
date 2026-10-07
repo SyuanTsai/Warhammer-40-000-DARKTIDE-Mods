@@ -9,8 +9,11 @@
 | SKILL／遊戲技能與天賦 | [Skill-Info-Workflow.md](Skill-Info-Workflow.md) | 原始碼機制分析、數值與公式、玩家說明、逐技能來源、版本更新 | `Game Info/releases/<版本系列>/skills/` |
 | SKILL PAGES／技能網站展示 | [Skill-Pages-Workflow.md](Skill-Pages-Workflow.md) | 保留 Git 技能知識、逐技能網站頁、職業導覽、深色範本與預覽 | Pages Repository 的 `darktide/skills/` |
 | DIALOGUE／劇情對話 | [Dialogue-Text-Workflow.md](Dialogue-Text-Workflow.md) | 官方事件與字幕配對、角色頭像、中英聊天頁、事件順序、網站導覽 | `Game Info/對話文本/` |
+| BLESSINGS／武器祝福 | [Blessings-Workflow.md](Blessings-Workflow.md) | 祝福機制分析、完整玩家說明、多武器變體與雙向索引 | `Game Info/releases/<版本系列>/blessings/` |
 
-技能任務使用技能提示詞；對話任務使用對話提示詞。同時處理兩類內容時，各自列出範圍、輸出與驗收結果。
+技能任務使用技能提示詞；武器祝福任務使用祝福提示詞；對話任務使用對話提示詞。同時處理兩類內容時，各自列出範圍、輸出與驗收結果。
+
+英文化既有技能文件時，依[技能流程的英文版本與獨立文本比較規則](Skill-Info-Workflow.md#英文版本與獨立文本比較)執行。
 
 ## 維護邊界
 

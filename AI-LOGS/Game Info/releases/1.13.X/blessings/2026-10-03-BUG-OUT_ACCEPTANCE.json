@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-04",
+  "blessing": "bug-out",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/開溜/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "bug-out",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope formal peer review with gpt-6-luna/max; runtime self-inspection is unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file_count": 29,
+      "formal_pages": 7,
+      "scope_manifest_sha256": "02523b0b01059549ec11109fbdc805b67f6435194e9470c4d3164d6e21b508f8",
+      "description": "Fixed Bug Out formal peer scope; current SHA-256 matched all 29 scoped files."
+    },
+    "findings": [
+      "The seven formal pages and connected map/reverse index consistently cover one trait across the three actual Infantry Autogun marks. Their UI names, restriction, and icon association agree with the scoped evidence.",
+      "A qualifying sprint dodge from an incoming hit-scan attack queues the player event. The one-second speed proc starts at non-local event processing, repeated qualifying events refresh the same window, and stat/cache updates govern when movement reads it; the text does not promise same-frame speed or a separate 0.2-second stat delay.",
+      "The speed formula treats same-type sprint speed contributions additively. The controlled example correctly computes 100*(1+0.20+0.15)=135 versus 120 before the blessing, a 12.5% relative increase. The angle stat combines by maximum, not addition; the 70-degree base source is directly cited, ordinary side-angle comparison is strict, and the separate run-away branch correctly uses signed direction without front/back folding.",
+      "Tier I-IV values and RAW strings/formatter reconstruction agree, including the one-second duration and correct delimiter. The RAW omission of the III/IV angle effect is described as an implementation addition rather than a textual contradiction.",
+      "The source metadata empty icon fields remain distinct from the validated effective generic UI fallback; the fallback path and attachment URL match the image evidence. The preserved original research trio is unchanged, while the canonical config and extension draft carry the generator-compatible single restriction string."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-agent-config.json": "c241cc04b157fd042b0f44742f7800e3ce078722f765f53ff41121f763a07430",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-agent-draft.md": "bc44a98ef3bf5a638628707ec83613db2d2559a53f16019c5a6cdbe330aca47f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-agent-evidence.json": "d2a773d20c85798fa663cdb7f19a8fa6b3512d868e333a08f98552fcc5bcba10",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-config.json": "a8a6998c0c1ca8292848280b6c066fc9817d3c0eee64642b79dbf3038be6bbf8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-extension-draft.json": "34586013dfe82f67b6256c0e7a86d9a6027c186d854a4509861758c229190aff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-image.json": "0428ae6df0e0571a7989def42118835d15ec1b7db1f5a36f104eb3854389b805",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-icon-fallback-review.json": "4fd94625ce2f1f245a2baa5537f10760eb45d5c53809fe265783d400b14ad19d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-own-tier-diff.json": "11c034088f9692f8f1aab22508f1ec1ba967f97a4c679e52322ab7e1ec22a9ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-proc-time-review.json": "2c20bc35a2a58a6a699b5c6cf5550dc95d833e72d40ff8eff5bffa2679465b56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-refresh-review.json": "4bfba44bfb357dc192c532a983e47c2bf791b21b7eda2731f3d4807f45cecc8b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-resume-review.json": "12868a77fab796c9204d3b27bb12c3d83d278ccfd4195a5ad57e2d6a4e0522cf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-stat-combination-review.json": "9a0a3b000c21058e877d918bd14e51c0a878691b5d66fd8d29c749fac4188520",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-ui-raw-verification.json": "5a7549c98cbcd19e974013387d6a17390973028f09bdc3515d58ab6c75efb680",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-ui-review.json": "788d1273d1cacd299465540f0a862e19baa617e7089ac6d1ff69e067abf21fd0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-render.py": "9738b4307c1c80c168698f155ef56bf63cbd401c11e3fc5d43614e1c9a0f76e8",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "df6eef29415798010382f40ce805268461cff9a6d8029018091b6957334bd766",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "73f2f548a74a417b4a53f15db9e0f8162fc6681c3b7a745bca1b7209764839ff",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "91cdfd51912ed511b93b7ddca04f2ad62721166245421fe658fb69163e0036e8",
+      "Game Info/releases/1.13.X/blessings/entries/開溜/DAMAGE_PERCENTAGE_REVIEW.md": "d8efad43e1cda9f48e1aea73d25b52f791c8b7742cd86d4134a65e363b7d5110",
+      "Game Info/releases/1.13.X/blessings/entries/開溜/LOCALIZATION_COMPARISON.md": "b45035d29026ce487cce11dfae802e03435ec5663acb2ca5b6dc2139d6484ba7",
+      "Game Info/releases/1.13.X/blessings/entries/開溜/README.md": "d522146223a46d5b5eb3f40a87de9cc2e24610e48bc940f6930a52b269db4693",
+      "Game Info/releases/1.13.X/blessings/entries/開溜/SOURCE_INDEX.md": "467274b5082c46a6657a6339b0714198f8b14190d4cf1a6bca3504986c1792ce",
+      "Game Info/releases/1.13.X/blessings/entries/開溜/TIER_VALUES.md": "466b0321bc78ad236386148e9f1ccef51ff009a8d2865b8311882d97e516205a",
+      "Game Info/releases/1.13.X/blessings/entries/開溜/WEAPON_COMPATIBILITY.md": "dc637120b297999460cd57c369b8391270a01b829cc54f9cb0be3f41e9666fd8",
+      "Game Info/releases/1.13.X/blessings/entries/開溜/weapon_trait_bespoke_autogun_p1_improved_sprint_dodge.md": "52f1aad530b63f26c6d0c323237ab65e876f6449fa486361b02a7777860ad43a",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "13d52a72dea8d353b491187e9c8525db0c2da5fd57e464319f907875ba2c3a93",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "5e00c5de8dc4a115ea1d15d675fc74925644de02da15a97225301c4b459c1c2f",
+      "Referneces/Translation.md": "85517b5569aae84efb6701dcb61bf8e8551e6d60fb5a181d22a7c069d7af8e21"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/d330a7e8-a3da-46cc-ab78-44445b228c71",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "bug-out",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_unknown",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_unknown.png",
+      "attachment": "https://github.com/user-attachments/assets/d330a7e8-a3da-46cc-ab78-44445b228c71",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5978528767",
+      "acquired_date": "2026-10-04",
+      "sha256": "3ab4afea63d3e747c3c87a17e35f902c692116f846cd5fa62070c45f26577878",
+      "content_type": "image/png",
+      "size": 2115,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "開溜的遊戲介面通用祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and public128x128 PNG visually inspected, identical byte hash; alpha diagnostic is generic question mark. Original PNG and attachment unchanged.",
+      "raw_item_icon": "",
+      "raw_icon_small": "",
+      "image_role": "Actual generic UI fallback selected by Items.trait_textures, not a dedicated BugOut icon",
+      "icon_source_resolution": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-icon-fallback-review.json",
+        "sha256": "4fd94625ce2f1f245a2baa5537f10760eb45d5c53809fe265783d400b14ad19d"
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 10,
+      "rows": 240,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 33,
+      "source_files": 14,
+      "bindings": 450,
+      "variants": 233,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 14,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 618,
+      "remote_references": 298,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 13,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-fallback-producer-check-full-scan.json",
+        "sha256": "64de216b41e7afe4e5056ef08e62262eb476704dc113e32bcb8a6b2c26b6a657",
+        "trigger": "bug-out-fallback-producer-check"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 97,
+    "not_started_name_groups": 97,
+    "partial_name_groups": 0,
+    "remaining_variants": 372,
+    "remaining_bindings": 735,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "d81f9c41f6878c288e827b707ed079e5831fe9fff98ebcc09eddab6ab3f503af"
+  },
+  "previous_local_commit": "1595da321b7ed95281c8643b89bc0d1ca67b1bea",
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-ui-review.json",
+      "sha256": "788d1273d1cacd299465540f0a862e19baa617e7089ac6d1ff69e067abf21fd0"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p1_m1",
+          "loc_weapon_pattern_autogun_p1_m1",
+          "loc_weapon_mark_autogun_p1_m1"
+        ],
+        "name_zh_tw": "步兵自動槍 阿格里皮娜 Mk I",
+        "name_en": "Infantry Autogun Agripinaa Mk I",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 768,
+        "append_line": 770
+      },
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p1_m2",
+          "loc_weapon_pattern_autogun_p1_m2",
+          "loc_weapon_mark_autogun_p1_m2"
+        ],
+        "name_zh_tw": "步兵自動槍 弗拉克斯 Mk V",
+        "name_en": "Infantry Autogun Vraks Mk V",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 764,
+        "append_line": 766
+      },
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p1_m3",
+          "loc_weapon_pattern_autogun_p1_m3",
+          "loc_weapon_mark_autogun_p1_m3"
+        ],
+        "name_zh_tw": "步兵自動槍 哥倫努 Mk VIII",
+        "name_en": "Infantry Autogun Columnus Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 765,
+        "append_line": 767
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-own-tier-diff.json",
+      "sha256": "11c034088f9692f8f1aab22508f1ec1ba967f97a4c679e52322ab7e1ec22a9ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-ui-review.json",
+      "sha256": "788d1273d1cacd299465540f0a862e19baa617e7089ac6d1ff69e067abf21fd0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-ui-raw-verification.json",
+      "sha256": "5a7549c98cbcd19e974013387d6a17390973028f09bdc3515d58ab6c75efb680"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-proc-time-review.json",
+      "sha256": "2c20bc35a2a58a6a699b5c6cf5550dc95d833e72d40ff8eff5bffa2679465b56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-refresh-review.json",
+      "sha256": "4bfba44bfb357dc192c532a983e47c2bf791b21b7eda2731f3d4807f45cecc8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-icon-fallback-review.json",
+      "sha256": "4fd94625ce2f1f245a2baa5537f10760eb45d5c53809fe265783d400b14ad19d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-image.json",
+      "sha256": "0428ae6df0e0571a7989def42118835d15ec1b7db1f5a36f104eb3854389b805"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-stat-combination-review.json",
+      "sha256": "9a0a3b000c21058e877d918bd14e51c0a878691b5d66fd8d29c749fac4188520"
+    }
+  ],
+  "primary_review_method": "Own full1tier/wrapper, actual3 UI/RAW bindings and fixed source records reviewed. Reused held, installation, cache/proc mechanism after verifying actual subclass uses inherited proc-stat predicate. Verified strict1s, no cooldown normal nonlocal queue refresh, conditional III/IV angle, actual server hit-scan event, separate Sprint angle/escape/overtime predicates and real movement consumer. Expanded additive/max-value combining and actual empty-icon UI fallback with metadata preserved.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-config.json",
+    "sha256": "a8a6998c0c1ca8292848280b6c066fc9817d3c0eee64642b79dbf3038be6bbf8"
+  },
+  "frozen_agent_inputs": {
+    "config": "c241cc04b157fd042b0f44742f7800e3ce078722f765f53ff41121f763a07430",
+    "evidence": "d2a773d20c85798fa663cdb7f19a8fa6b3512d868e333a08f98552fcc5bcba10",
+    "draft": "bc44a98ef3bf5a638628707ec83613db2d2559a53f16019c5a6cdbe330aca47f"
+  },
+  "previous_objects_unchanged": {
+    "blessings": 69,
+    "variants": 232,
+    "bindings": 447
+  },
+  "previous_weapons_unchanged": 66,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-formal-peer-scope.json",
+    "sha256": "02523b0b01059549ec11109fbdc805b67f6435194e9470c4d3164d6e21b508f8"
+  },
+  "image_fallback_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-icon-fallback-review.json",
+    "sha256": "4fd94625ce2f1f245a2baa5537f10760eb45d5c53809fe265783d400b14ad19d",
+    "raw_metadata_preserved": true,
+    "effective_ui_icon": "content/ui/textures/icons/traits/weapon_trait_unknown"
+  },
+  "single_item_renderer": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-render.py",
+    "sha256": "9738b4307c1c80c168698f155ef56bf63cbd401c11e3fc5d43614e1c9a0f76e8",
+    "general_tools_unchanged": true,
+    "raw_metadata_unchanged": true
+  }
+}

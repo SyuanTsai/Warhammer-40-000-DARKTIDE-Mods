@@ -1,5 +1,7 @@
 # 近戰傷害提升(Melee Damage Boost)：原始碼依據
 
+[English](en/base_melee_damage_node_buff_high_2.md)
+
 [返回玩家說明](README.md#base_melee_damage_node_buff_high_2)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

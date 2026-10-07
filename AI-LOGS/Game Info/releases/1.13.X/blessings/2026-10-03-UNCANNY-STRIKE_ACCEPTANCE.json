@@ -1,0 +1,691 @@
+{
+  "date": "2026-10-06",
+  "blessing": "uncanny-strike",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/詭異打擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+    "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot",
+    "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+    "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot",
+    "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot"
+  ],
+  "added_binding_count": 13,
+  "total_variants": 5,
+  "total_bindings": 13,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "uncanny-strike",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true,
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-formal-peer-scope.json",
+    "scope_sha256": "6c9882c03c3593493fcf2473920126877ed04ef6840f705ce2943c32ce595159",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-agent-config.json": "389cbf45c061b13765e2cf64bbaa9af73d8ab19d4133d6a482a9b8e5011a4a7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-agent-draft.md": "47210e36cbac38cd7fbd625a916d43fe8e0eccd1c63b5a17c77bb38c1839c637",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-agent-evidence.json": "281cac28c9b6410b217c9acf9227bce628eebf4be7caa7a3de023057a31f2bfb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-config.json": "3465e586d1b170d94cd53558cd1def290768c51734300834335b4d33304a98f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-extension-draft.json": "07e91645a80f0453effb401045f807672465aed6c4b3da210dec039ee7e77c79",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/action-source-blocks.json": "23cf13986c56542f5f84a5c1659b7c9aee94864500137bb6f92e4e75f810d94b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/association-preview.json": "632f50bc073696bd5a46d8f8be20eaa764dcb4638c39cc09b99fb52e527e79f4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/attack-coverage.json": "afc0db8af7c63925502f9874b4d470b160b97b5b6d8070c650474520077dcbc9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/action-source-blocks.json": "23cf13986c56542f5f84a5c1659b7c9aee94864500137bb6f92e4e75f810d94b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/attack-coverage.json": "afc0db8af7c63925502f9874b4d470b160b97b5b6d8070c650474520077dcbc9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/target-hit-debuff-helper-primary-shared-delta-proof.json": "0b50d467074970f65c619869991819a6c305183c3e4a3cf4eb063af8d7014142",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-image.json": "169cbbcf41748fcb7f7a619006bc9d60fcf27af693c2d209a1b473d6878c15b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-own-tier-wrapper-target-rending-material-review.json": "57a2f5e22c563a732c1e69baa76fffab4196177e3f2528ac8e97a537f4b5424f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-raw-verification.json": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-ui-raw-verification.json": "2c176b496091ea8c17ce949e306d56fcbe7b742c6f52d987441f5dee15faaedf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-ui-review.json": "f3a16ec8921cd4e3160faae4ccf100f235d8bb2abcc931eac4411086de50b0fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/pinning-fire-formal-nonauthor-review.json": "8f48962728bef3e7cf4920c264c9b0662245f7336788e312c6d3ea9d173c9d3d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-001.json": "83709210ffd7efa804f12fcf183d6d449148c65655395f12e467edb087b93a58",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-002.json": "59d183cf597f3b4fe321db975d841b57762d06a101aa301f7d91abffd238c376",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-003.json": "bbd26197e41466b7f53bc11d0835ace6ef103ca54e16c7748ae1e328baac59e9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-004.json": "9a4c21f22cca4ddcaa4a4c26800ae0106fcc40febddc090dc184139f433881dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-agent-config.json": "389cbf45c061b13765e2cf64bbaa9af73d8ab19d4133d6a482a9b8e5011a4a7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-agent-draft.md": "47210e36cbac38cd7fbd625a916d43fe8e0eccd1c63b5a17c77bb38c1839c637",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-agent-evidence.json": "281cac28c9b6410b217c9acf9227bce628eebf4be7caa7a3de023057a31f2bfb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-author-selfcheck-004.json": "23917367372a30340c120b782473c01148bcb11f63bddbc2da4c2aefdafbdf2a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-image.json": "169cbbcf41748fcb7f7a619006bc9d60fcf27af693c2d209a1b473d6878c15b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-cap-refresh-sticky-exit-content-delta-review.json": "3a106472d14ec99d5f76a2716d30b05acc5e14c8de4f95a1dcbb204c5b36a0b6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-final-content-delta-review.json": "332458a9ab74f319d03fa19ece36ac2b7c5fc5fa068d625a17aefe28ab948a63",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-focused-checks.json": "72f2414c7d04cf120806213d36e07406b9d2dfa19bba9afc4793d2bdffc77757",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-frozen-source-verification.json": "11f257814abb2941e355f663bfde835049c62fd7fedf48748bbf76158558e8ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-own-tier-wrapper-target-rending-material-review.json": "57a2f5e22c563a732c1e69baa76fffab4196177e3f2528ac8e97a537f4b5424f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-raw-verification.json": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-resume-review.json": "729d98c3e6c8bd3976952c6cc50adf12c7aaf037cb8afacc52f3adfdc4c33ed6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-ui-raw-verification.json": "2c176b496091ea8c17ce949e306d56fcbe7b742c6f52d987441f5dee15faaedf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-ui-review.json": "f3a16ec8921cd4e3160faae4ccf100f235d8bb2abcc931eac4411086de50b0fb",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-raw-verification.json": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7ed880ba96d662a457bcc711f29bc757975e6b1a81cf7638b86aa2b35c26aa28",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/DAMAGE_PERCENTAGE_REVIEW.md": "4abc1e98c4680db3e2705627ab32a5c37a698190f9678514187b285507deda10",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/LOCALIZATION_COMPARISON.md": "594546047fffa802202dc9a2a9602f102df399038335561ddff840b9ad5e32bb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/README.md": "6a13a895ca320b82eb9903c54cbc0dbb9f1ec1bd380f484adde8167a087cd991",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/SOURCE_INDEX.md": "07fa6d220a531a56d54d1c2bddc76c879a111e78d25afd0a0eb58cea58973ed9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/TIER_VALUES.md": "accd9e6ef243804613d3e1efb8a481d725177650444bffd8ded52064742d739e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/WEAPON_COMPATIBILITY.md": "c5a5e6543715e914a48d375be90c09d9a6b59cfeb56595c6401a2c95b51a2434",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot.md": "796ce1a67ac24cc796d659af454fc9b21f17025db353ce88ac5edae4ee597470",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot.md": "d7d800ff8e7f9811e6920b43670f4fa17bff9f62e91f5b0e340ecf3ea4b07399",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot.md": "a76e70e147cc9df60196a7c4797bfd336e45b21ebd0ae16afdffc8b15ed0718f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot.md": "ce41fb3e77225d86ba219ca4c905985a84332e8ec7c2b848cb096accbaa29349",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot.md": "f7bb639d4d73d5d60e2a6facf7a49790c7a3fd15ebdc4f3f3153a2a28c249594",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/melee/README.md": "7894fd50f4ad95c4ecf7829574d756714008375070618e303be9ea1bad81a7d7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "93202cbf0d93c4f39ff1ebadac827c0194ab81bdc3d494ea7f88213d4bdef7c3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "871b432a0bb6ea233b9c0571e990ac8fb7d3212755a5fa2b0b0cb98afbddf109",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "b1c955cc8a7b089ee7ea38acd4a4b149501a4b4ad8196b7ae0a3d9e28f9970f5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "3e2bd130aa34b89fd3cee8e20c2d5aa942b0c413a75e6795a8197536abb4c545",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "a85538976160ea4372b8c24335c66a6102bbbbad72216bd1b169733dfeab26d9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "7f11e88a6666a74fcef7e02b779cd61acd125e3a7304a02995e015e3b3f18173",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "b8d567b6a4a47fff50542f40e2140936e7b9f2844941477a78a3b8598cc9dbf8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/own-association-snapshot.json": "5f04a1b9c2b1d727483ad7cb4714fee41f221d27ea8b60f4952883208e98927d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/actual-preview-004/Referneces/Translation.md": "8a1a82ee3f93a1c02b719ad7303b1692b2525602f309caa9489f2cee5c59f40c",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7ed880ba96d662a457bcc711f29bc757975e6b1a81cf7638b86aa2b35c26aa28",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/DAMAGE_PERCENTAGE_REVIEW.md": "4abc1e98c4680db3e2705627ab32a5c37a698190f9678514187b285507deda10",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/LOCALIZATION_COMPARISON.md": "594546047fffa802202dc9a2a9602f102df399038335561ddff840b9ad5e32bb",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/README.md": "5bdc3bda4cc224a05c60438ce869c1b1565bf20a001fc745659153818360ae5f",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/SOURCE_INDEX.md": "aa1ce4f536126680911e1f317cdd71c0d32b65bf6fedc6c9f094f5aa8b286ef3",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/TIER_VALUES.md": "accd9e6ef243804613d3e1efb8a481d725177650444bffd8ded52064742d739e",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/WEAPON_COMPATIBILITY.md": "c5a5e6543715e914a48d375be90c09d9a6b59cfeb56595c6401a2c95b51a2434",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot.md": "796ce1a67ac24cc796d659af454fc9b21f17025db353ce88ac5edae4ee597470",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot.md": "d7d800ff8e7f9811e6920b43670f4fa17bff9f62e91f5b0e340ecf3ea4b07399",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot.md": "a76e70e147cc9df60196a7c4797bfd336e45b21ebd0ae16afdffc8b15ed0718f",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot.md": "ce41fb3e77225d86ba219ca4c905985a84332e8ec7c2b848cb096accbaa29349",
+      "Game Info/releases/1.13.X/blessings/entries/詭異打擊/weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot.md": "f7bb639d4d73d5d60e2a6facf7a49790c7a3fd15ebdc4f3f3153a2a28c249594",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "7894fd50f4ad95c4ecf7829574d756714008375070618e303be9ea1bad81a7d7",
+      "Game Info/releases/1.13.X/blessings/README.md": "93202cbf0d93c4f39ff1ebadac827c0194ab81bdc3d494ea7f88213d4bdef7c3",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "871b432a0bb6ea233b9c0571e990ac8fb7d3212755a5fa2b0b0cb98afbddf109",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "b1c955cc8a7b089ee7ea38acd4a4b149501a4b4ad8196b7ae0a3d9e28f9970f5",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "3e2bd130aa34b89fd3cee8e20c2d5aa942b0c413a75e6795a8197536abb4c545",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "a85538976160ea4372b8c24335c66a6102bbbbad72216bd1b169733dfeab26d9",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "7f11e88a6666a74fcef7e02b779cd61acd125e3a7304a02995e015e3b3f18173",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "b8d567b6a4a47fff50542f40e2140936e7b9f2844941477a78a3b8598cc9dbf8",
+      "Referneces/Translation.md": "8a1a82ee3f93a1c02b719ad7303b1692b2525602f309caa9489f2cee5c59f40c"
+    },
+    "content_review": {
+      "fixed_scope_hashes": {
+        "count": 84,
+        "all_match": true
+      },
+      "formal_pages": {
+        "count": 11,
+        "preview_receipt_sha256": "9a4c21f22cca4ddcaa4a4c26800ae0106fcc40febddc090dc184139f433881dc",
+        "pages": [
+          {
+            "file": "DAMAGE_PERCENTAGE_REVIEW.md",
+            "formal_sha256": "4abc1e98c4680db3e2705627ab32a5c37a698190f9678514187b285507deda10",
+            "preview_sha256": "4abc1e98c4680db3e2705627ab32a5c37a698190f9678514187b285507deda10",
+            "byte_equal": true
+          },
+          {
+            "file": "LOCALIZATION_COMPARISON.md",
+            "formal_sha256": "594546047fffa802202dc9a2a9602f102df399038335561ddff840b9ad5e32bb",
+            "preview_sha256": "594546047fffa802202dc9a2a9602f102df399038335561ddff840b9ad5e32bb",
+            "byte_equal": true
+          },
+          {
+            "file": "README.md",
+            "formal_sha256": "5bdc3bda4cc224a05c60438ce869c1b1565bf20a001fc745659153818360ae5f",
+            "preview_sha256": "6a13a895ca320b82eb9903c54cbc0dbb9f1ec1bd380f484adde8167a087cd991",
+            "byte_equal": false
+          },
+          {
+            "file": "SOURCE_INDEX.md",
+            "formal_sha256": "aa1ce4f536126680911e1f317cdd71c0d32b65bf6fedc6c9f094f5aa8b286ef3",
+            "preview_sha256": "07fa6d220a531a56d54d1c2bddc76c879a111e78d25afd0a0eb58cea58973ed9",
+            "byte_equal": false
+          },
+          {
+            "file": "TIER_VALUES.md",
+            "formal_sha256": "accd9e6ef243804613d3e1efb8a481d725177650444bffd8ded52064742d739e",
+            "preview_sha256": "accd9e6ef243804613d3e1efb8a481d725177650444bffd8ded52064742d739e",
+            "byte_equal": true
+          },
+          {
+            "file": "WEAPON_COMPATIBILITY.md",
+            "formal_sha256": "c5a5e6543715e914a48d375be90c09d9a6b59cfeb56595c6401a2c95b51a2434",
+            "preview_sha256": "c5a5e6543715e914a48d375be90c09d9a6b59cfeb56595c6401a2c95b51a2434",
+            "byte_equal": true
+          },
+          {
+            "file": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot.md",
+            "formal_sha256": "796ce1a67ac24cc796d659af454fc9b21f17025db353ce88ac5edae4ee597470",
+            "preview_sha256": "796ce1a67ac24cc796d659af454fc9b21f17025db353ce88ac5edae4ee597470",
+            "byte_equal": true
+          },
+          {
+            "file": "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot.md",
+            "formal_sha256": "d7d800ff8e7f9811e6920b43670f4fa17bff9f62e91f5b0e340ecf3ea4b07399",
+            "preview_sha256": "d7d800ff8e7f9811e6920b43670f4fa17bff9f62e91f5b0e340ecf3ea4b07399",
+            "byte_equal": true
+          },
+          {
+            "file": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot.md",
+            "formal_sha256": "a76e70e147cc9df60196a7c4797bfd336e45b21ebd0ae16afdffc8b15ed0718f",
+            "preview_sha256": "a76e70e147cc9df60196a7c4797bfd336e45b21ebd0ae16afdffc8b15ed0718f",
+            "byte_equal": true
+          },
+          {
+            "file": "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot.md",
+            "formal_sha256": "ce41fb3e77225d86ba219ca4c905985a84332e8ec7c2b848cb096accbaa29349",
+            "preview_sha256": "ce41fb3e77225d86ba219ca4c905985a84332e8ec7c2b848cb096accbaa29349",
+            "byte_equal": true
+          },
+          {
+            "file": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot.md",
+            "formal_sha256": "f7bb639d4d73d5d60e2a6facf7a49790c7a3fd15ebdc4f3f3153a2a28c249594",
+            "preview_sha256": "f7bb639d4d73d5d60e2a6facf7a49790c7a3fd15ebdc4f3f3153a2a28c249594",
+            "byte_equal": true
+          }
+        ],
+        "summary": "Nine pages are byte-identical to actual-preview-004. README has one 1-line replacement clarifying dodge/jump exits and that the extra exit Attack is dodge-only. SOURCE_INDEX inserts 158 source rows and replaces only the target-cap summary sentence; no source rows are removed."
+      },
+      "actual_inventory": {
+        "variant_count": 5,
+        "binding_count": 13,
+        "outside_exact_items": [],
+        "bindings": [
+          {
+            "weapon_id": "combataxe_p3",
+            "mark_id": "combataxe_p3_m1",
+            "trait_id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+            "name_zh_tw": "工兵鏟 軍務部 Mk I"
+          },
+          {
+            "weapon_id": "combataxe_p3",
+            "mark_id": "combataxe_p3_m2",
+            "trait_id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+            "name_zh_tw": "工兵鏟 軍務部 Mk III"
+          },
+          {
+            "weapon_id": "combataxe_p3",
+            "mark_id": "combataxe_p3_m3",
+            "trait_id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+            "name_zh_tw": "工兵鏟 軍務部 Mk VII"
+          },
+          {
+            "weapon_id": "combatknife_p1",
+            "mark_id": "combatknife_p1_m1",
+            "trait_id": "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot",
+            "name_zh_tw": "戰刃 卡塔昌 Mk III"
+          },
+          {
+            "weapon_id": "combatknife_p1",
+            "mark_id": "combatknife_p1_m2",
+            "trait_id": "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot",
+            "name_zh_tw": "戰刃 卡塔昌 Mk VI"
+          },
+          {
+            "weapon_id": "combatsword_p3",
+            "mark_id": "combatsword_p3_m1",
+            "trait_id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+            "name_zh_tw": "決鬥劍 馬卡比安 Mk II"
+          },
+          {
+            "weapon_id": "combatsword_p3",
+            "mark_id": "combatsword_p3_m2",
+            "trait_id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+            "name_zh_tw": "決鬥劍 馬卡比安 Mk IV"
+          },
+          {
+            "weapon_id": "combatsword_p3",
+            "mark_id": "combatsword_p3_m3",
+            "trait_id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+            "name_zh_tw": "決鬥劍 馬卡比安 Mk V"
+          },
+          {
+            "weapon_id": "dual_shivs_p1",
+            "mark_id": "dual_shivs_p1_m1",
+            "trait_id": "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot",
+            "name_zh_tw": "短刀 臨時拼湊 型號1"
+          },
+          {
+            "weapon_id": "dual_shivs_p1",
+            "mark_id": "dual_shivs_p1_m2",
+            "trait_id": "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot",
+            "name_zh_tw": "短刀 臨時拼湊 型號3"
+          },
+          {
+            "weapon_id": "forcesword_p1",
+            "mark_id": "forcesword_p1_m1",
+            "trait_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot",
+            "name_zh_tw": "烈焰力場劍 朦朧 Mk II"
+          },
+          {
+            "weapon_id": "forcesword_p1",
+            "mark_id": "forcesword_p1_m2",
+            "trait_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot",
+            "name_zh_tw": "烈焰力場劍 戴莫斯 Mk IV"
+          },
+          {
+            "weapon_id": "forcesword_p1",
+            "mark_id": "forcesword_p1_m3",
+            "trait_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot",
+            "name_zh_tw": "烈焰力場劍 伊利斯 Mk V"
+          }
+        ]
+      },
+      "tier_wrapper": {
+        "proof_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-own-tier-wrapper-target-rending-material-review.json",
+        "proof_sha256": "57a2f5e22c563a732c1e69baa76fffab4196177e3f2528ac8e97a537f4b5424f",
+        "conclusion": "All five actual wrappers select the target weakspot-rending template. Four families request 2/4/6/8 layers per I–IV; Dual Shivs requests 1/2/3/4. Target debuff is .025 rending per layer, 5 seconds, target cap 16; no attacker self-rending field was inferred."
+      },
+      "trigger_and_refresh": "Actual event requires held source item, matching source item, weakspot hit, Minion target, and target alive at processing; no attack-type or positive-HP gate was inferred. Source helper request cap 31 is separate from target debuff cap 16. At target cap, admission refreshes start time and emits max-stack-refresh without adding a physical stack. The accepted Force Sword correction accurately states jump/dodge can interrupt actual M1/M2 sticky paths, while a separately configured exit Attack occurs only on qualifying dodge with actor/unit and non-resim conditions; three scheduled hits are not guaranteed after early exit. M3 active-cleave remains separate.",
+      "raw_formatter": {
+        "raw_verification_sha256": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065",
+        "ui_raw_sha256": "2c176b496091ea8c17ce949e306d56fcbe7b742c6f52d987441f5dee15faaedf",
+        "paired_locale_check": "Name and description each have locale 0/16 with matching key/hash; paired weapon UI RAW is preserved."
+      },
+      "image": {
+        "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-image.json",
+        "sha256": "169cbbcf41748fcb7f7a619006bc9d60fcf27af693c2d209a1b473d6878c15b3",
+        "actual_icon": "weapon_trait_044",
+        "public_status": 200,
+        "hash_verified": true,
+        "display_verified": true
+      },
+      "math_and_player_copy": "The canonical player text distinguishes target-side rending from attacker stats, percentage points from final damage, delayed application to later hits, per-family tier requests, cap/refresh, source switching/removal, pure push, ordinary and weapon-special routes, Force Sword sticky follow-up limits, and the concrete armor-step example."
+    },
+    "reviewed_delta_evidence": [
+      {
+        "file": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-cap-refresh-sticky-exit-content-delta-review.json",
+        "sha256": "3a106472d14ec99d5f76a2716d30b05acc5e14c8de4f95a1dcbb204c5b36a0b6",
+        "applicability": "Both full source blocks independently matched whole-file blobs and exact ranges at the frozen source SHA."
+      },
+      {
+        "file": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-final-content-delta-review.json",
+        "sha256": "332458a9ab74f319d03fa19ece36ac2b7c5fc5fa068d625a17aefe28ab948a63",
+        "applicability": "Matches this canonical config, author actual-preview-004, 5 variants/13 bindings, and confirms formal peer was pending."
+      }
+    ],
+    "formal_peer_pending": false,
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "uncanny-strike",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_044",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_044.png",
+      "attachment": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6010230517",
+      "acquired_date": "2026-10-06",
+      "sha256": "a84fd114ff3347ca0a664877314c3bde61d36460f5ee4e13dbff78cc8d87ac41",
+      "content_type": "image/png",
+      "size": 4593,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "詭異打擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_method": "Root viewed actual public PNG through view_image; native gray directional motif and download hash/dimensions match, no replacement glyph."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 20,
+      "tables": 19,
+      "rows": 714,
+      "lists": 94,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 212,
+      "source_files": 48,
+      "bindings": 1105,
+      "variants": 570,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 48,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 1499,
+      "remote_references": 680,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 44,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-043-full-scan.json",
+        "sha256": "2d0f95b4cbd5ca6280f5bf1261983c18e4ec200c056cba1afcda392239b2a15f",
+        "trigger": "round-043"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 5,
+    "not_started_name_groups": 5,
+    "partial_name_groups": 0,
+    "remaining_variants": 35,
+    "remaining_bindings": 80,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "d56649b58c5d5ea631510399f16ab8e44f8fd8906c14d3f9ecc89b5bc365d72e"
+  },
+  "previous_local_commit": "1bbd730ef5ac47d6bbf97e060a633b07a7cdfffc",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Exact inventory and UI receipt show only these five trait families and thirteen bindings."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-cap-refresh-sticky-exit-content-delta-review.json",
+      "sha256": "3a106472d14ec99d5f76a2716d30b05acc5e14c8de4f95a1dcbb204c5b36a0b6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-final-content-delta-review.json",
+      "sha256": "332458a9ab74f319d03fa19ece36ac2b7c5fc5fa068d625a17aefe28ab948a63"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-focused-checks.json",
+      "sha256": "72f2414c7d04cf120806213d36e07406b9d2dfa19bba9afc4793d2bdffc77757"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-frozen-source-verification.json",
+      "sha256": "11f257814abb2941e355f663bfde835049c62fd7fedf48748bbf76158558e8ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-own-tier-wrapper-target-rending-material-review.json",
+      "sha256": "57a2f5e22c563a732c1e69baa76fffab4196177e3f2528ac8e97a537f4b5424f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-raw-verification.json",
+      "sha256": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-resume-review.json",
+      "sha256": "729d98c3e6c8bd3976952c6cc50adf12c7aaf037cb8afacc52f3adfdc4c33ed6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-ui-raw-verification.json",
+      "sha256": "2c176b496091ea8c17ce949e306d56fcbe7b742c6f52d987441f5dee15faaedf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-ui-review.json",
+      "sha256": "f3a16ec8921cd4e3160faae4ccf100f235d8bb2abcc931eac4411086de50b0fb"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-config.json",
+    "sha256": "3465e586d1b170d94cd53558cd1def290768c51734300834335b4d33304a98f7"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/action-source-blocks.json",
+      "sha256": "23cf13986c56542f5f84a5c1659b7c9aee94864500137bb6f92e4e75f810d94b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/association-preview.json",
+      "sha256": "632f50bc073696bd5a46d8f8be20eaa764dcb4638c39cc09b99fb52e527e79f4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/attack-coverage.json",
+      "sha256": "afc0db8af7c63925502f9874b4d470b160b97b5b6d8070c650474520077dcbc9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/action-source-blocks.json",
+      "sha256": "23cf13986c56542f5f84a5c1659b7c9aee94864500137bb6f92e4e75f810d94b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/attack-coverage.json",
+      "sha256": "afc0db8af7c63925502f9874b4d470b160b97b5b6d8070c650474520077dcbc9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/target-hit-debuff-helper-primary-shared-delta-proof.json",
+      "sha256": "0b50d467074970f65c619869991819a6c305183c3e4a3cf4eb063af8d7014142"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-image.json",
+      "sha256": "169cbbcf41748fcb7f7a619006bc9d60fcf27af693c2d209a1b473d6878c15b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-own-tier-wrapper-target-rending-material-review.json",
+      "sha256": "57a2f5e22c563a732c1e69baa76fffab4196177e3f2528ac8e97a537f4b5424f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-raw-verification.json",
+      "sha256": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-ui-raw-verification.json",
+      "sha256": "2c176b496091ea8c17ce949e306d56fcbe7b742c6f52d987441f5dee15faaedf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/inputs/uncanny-strike-primary-ui-review.json",
+      "sha256": "f3a16ec8921cd4e3160faae4ccf100f235d8bb2abcc931eac4411086de50b0fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-004.json",
+      "sha256": "9a4c21f22cca4ddcaa4a4c26800ae0106fcc40febddc090dc184139f433881dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-agent-config.json",
+      "sha256": "389cbf45c061b13765e2cf64bbaa9af73d8ab19d4133d6a482a9b8e5011a4a7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-agent-draft.md",
+      "sha256": "47210e36cbac38cd7fbd625a916d43fe8e0eccd1c63b5a17c77bb38c1839c637"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "93202cbf0d93c4f39ff1ebadac827c0194ab81bdc3d494ea7f88213d4bdef7c3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "871b432a0bb6ea233b9c0571e990ac8fb7d3212755a5fa2b0b0cb98afbddf109"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "7ed880ba96d662a457bcc711f29bc757975e6b1a81cf7638b86aa2b35c26aa28"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "4abc1e98c4680db3e2705627ab32a5c37a698190f9678514187b285507deda10"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "594546047fffa802202dc9a2a9602f102df399038335561ddff840b9ad5e32bb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\README.md",
+      "sha256": "6a13a895ca320b82eb9903c54cbc0dbb9f1ec1bd380f484adde8167a087cd991"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\SOURCE_INDEX.md",
+      "sha256": "07fa6d220a531a56d54d1c2bddc76c879a111e78d25afd0a0eb58cea58973ed9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\TIER_VALUES.md",
+      "sha256": "accd9e6ef243804613d3e1efb8a481d725177650444bffd8ded52064742d739e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "c5a5e6543715e914a48d375be90c09d9a6b59cfeb56595c6401a2c95b51a2434"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot.md",
+      "sha256": "796ce1a67ac24cc796d659af454fc9b21f17025db353ce88ac5edae4ee597470"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot.md",
+      "sha256": "d7d800ff8e7f9811e6920b43670f4fa17bff9f62e91f5b0e340ecf3ea4b07399"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot.md",
+      "sha256": "a76e70e147cc9df60196a7c4797bfd336e45b21ebd0ae16afdffc8b15ed0718f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot.md",
+      "sha256": "ce41fb3e77225d86ba219ca4c905985a84332e8ec7c2b848cb096accbaa29349"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\詭異打擊\\weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot.md",
+      "sha256": "f7bb639d4d73d5d60e2a6facf7a49790c7a3fd15ebdc4f3f3153a2a28c249594"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "7894fd50f4ad95c4ecf7829574d756714008375070618e303be9ea1bad81a7d7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\工兵鏟\\README.md",
+      "sha256": "b1c955cc8a7b089ee7ea38acd4a4b149501a4b4ad8196b7ae0a3d9e28f9970f5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰刃\\README.md",
+      "sha256": "3e2bd130aa34b89fd3cee8e20c2d5aa942b0c413a75e6795a8197536abb4c545"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\決鬥劍\\README.md",
+      "sha256": "a85538976160ea4372b8c24335c66a6102bbbbad72216bd1b169733dfeab26d9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\烈焰力場劍\\README.md",
+      "sha256": "7f11e88a6666a74fcef7e02b779cd61acd125e3a7304a02995e015e3b3f18173"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\短刀\\README.md",
+      "sha256": "b8d567b6a4a47fff50542f40e2140936e7b9f2844941477a78a3b8598cc9dbf8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\Referneces\\Translation.md",
+      "sha256": "8a1a82ee3f93a1c02b719ad7303b1692b2525602f309caa9489f2cee5c59f40c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-raw-verification.json",
+      "sha256": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\uncanny-strike-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "5f04a1b9c2b1d727483ad7cb4714fee41f221d27ea8b60f4952883208e98927d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/pinning-fire-formal-nonauthor-review.json",
+      "sha256": "8f48962728bef3e7cf4920c264c9b0662245f7336788e312c6d3ea9d173c9d3d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-001.json",
+      "sha256": "83709210ffd7efa804f12fcf183d6d449148c65655395f12e467edb087b93a58"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-002.json",
+      "sha256": "59d183cf597f3b4fe321db975d841b57762d06a101aa301f7d91abffd238c376"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-actual-preview-receipt-003.json",
+      "sha256": "bbd26197e41466b7f53bc11d0835ace6ef103ca54e16c7748ae1e328baac59e9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-agent-evidence.json",
+      "sha256": "281cac28c9b6410b217c9acf9227bce628eebf4be7caa7a3de023057a31f2bfb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-group/uncanny-strike-author-selfcheck-004.json",
+      "sha256": "23917367372a30340c120b782473c01148bcb11f63bddbc2da4c2aefdafbdf2a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-agent-config.json",
+      "sha256": "389cbf45c061b13765e2cf64bbaa9af73d8ab19d4133d6a482a9b8e5011a4a7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-agent-evidence.json",
+      "sha256": "281cac28c9b6410b217c9acf9227bce628eebf4be7caa7a3de023057a31f2bfb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-agent-draft.md",
+      "sha256": "47210e36cbac38cd7fbd625a916d43fe8e0eccd1c63b5a17c77bb38c1839c637"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-cap-refresh-sticky-exit-content-delta-review.json",
+      "sha256": "3a106472d14ec99d5f76a2716d30b05acc5e14c8de4f95a1dcbb204c5b36a0b6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-final-content-delta-review.json",
+      "sha256": "332458a9ab74f319d03fa19ece36ac2b7c5fc5fa068d625a17aefe28ab948a63"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-frozen-source-verification.json",
+      "sha256": "11f257814abb2941e355f663bfde835049c62fd7fedf48748bbf76158558e8ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-own-tier-wrapper-target-rending-material-review.json",
+      "sha256": "57a2f5e22c563a732c1e69baa76fffab4196177e3f2528ac8e97a537f4b5424f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-raw-verification.json",
+      "sha256": "e20b4496601c10448f9b1a0e181953d892c4a2975de17e4fd09db1131a5ef065"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-ui-raw-verification.json",
+      "sha256": "2c176b496091ea8c17ce949e306d56fcbe7b742c6f52d987441f5dee15faaedf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-primary-ui-review.json",
+      "sha256": "f3a16ec8921cd4e3160faae4ccf100f235d8bb2abcc931eac4411086de50b0fb"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/uncanny-strike-formal-peer-scope.json",
+    "sha256": "6c9882c03c3593493fcf2473920126877ed04ef6840f705ce2943c32ce595159",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true
+  }
+}

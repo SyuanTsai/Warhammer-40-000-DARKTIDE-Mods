@@ -1,0 +1,420 @@
+{
+  "date": "2026-10-04",
+  "blessing": "deadly-frequencies",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/致命頻率/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_power_on_weapon_special_follow_up_hits"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "deadly-frequencies",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_manifest": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-formal-peer-scope.json",
+    "scope_manifest_sha256": "7e7e7e9f501f3e4f62c6901473c63f7a4cd3baf0b355a02f9efc22c6a3df5aff",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_file_count": 21,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-config.json": "9068834af612756e9d450cc24dc46a87451d25ad08784b7075d83804aa7b0e10",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-extension-draft.json": "0265e3dae6add08e8f1e8dd06ae69880b71b96a8f56fd6c5a45dd1c06f8e4d10",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-image.json": "36a5456dbca7e668ea68aed8e292f206cf8c597ad3027553b19a31f12f49ea11",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-own-tier-diff.json": "bb78b867dcab932978cdc4c89587f0636825208fbbb6f83a4e36ddb0402bb997",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-resume-review.json": "254c109e16631e9b05797212c11b19a70b1ae2672abe91fa05f95f564f23ab33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-ui-review.json": "70224639704fa61cdbbde8aa5e7d6890f03b3f3f1c74f74cffe93f5224d91910",
+      "Game Info/releases/1.13.X/blessings/README.md": "1930be5e872626419814f92841549c87625aff8fbe738d96dcafe34817a85d4d",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "51b0f88bae068309fab7e19ed3ee654ff8c9e82af6b0e092c2f1cf9dab6512ba",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "8bd042fd01bc3b42d6ccb0f1a7afe190b641e4dad2240f03a0fedf90fc76dcff",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/DAMAGE_PERCENTAGE_REVIEW.md": "5bd7f0329e19cdf8a9303cf78dfaf5f35f3a58173dd705a7a71c01eb7c841cf7",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/LOCALIZATION_COMPARISON.md": "6d0dec524e4f6be21247103c5e0fe71ddaf245b2b3784f75af6c20a3d7ff0d4b",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/README.md": "e60f566a308d80fd25a8a656617c809c2446641a89e632514d60e28dfefd943d",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/SOURCE_INDEX.md": "eb29ed6ac3f633a603df80247e16f58bb7cb28197102beb985ad3968c7c79dc1",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/TIER_VALUES.md": "952673b16df3902be693e6d8f913f65708043783724970b14130796b6d7db160",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/WEAPON_COMPATIBILITY.md": "66bbc759c78b037da0a427aa328447f1a9cc11fa6241f84a0a1ed5b41cff8f29",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_power_on_weapon_special_follow_up_hits.md": "00cc1ce6826ec0140963d15446e26caecca5716e22f1fd0e0426c129e760120b",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "d24bb0717dc0e03e73c4422bb80f78b707e7b0c3916fe0138f212c2314b29080",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "80a307d2148c8cf31956ad12d8197f307e8c855524ed2f50db2528ef06737fe1",
+      "Referneces/Translation.md": "6e80f827d1ccd8cd6d6e901a6a3507b5db731d2ca9d1a13716db2b7081d9f636"
+    },
+    "hash_stability": {
+      "expected_scope_count": 21,
+      "checked_count": 21,
+      "all_expected_hashes_match": true,
+      "checked_before_review": true,
+      "checked_at_receipt_write": true,
+      "scope_manifest_sha256": "7e7e7e9f501f3e4f62c6901473c63f7a4cd3baf0b355a02f9efc22c6a3df5aff"
+    },
+    "reviewed_formal_pages": [
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/DAMAGE_PERCENTAGE_REVIEW.md",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/TIER_VALUES.md",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/致命頻率/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_power_on_weapon_special_follow_up_hits.md"
+    ],
+    "reviewed_deltas": [
+      {
+        "area": "Player explanation and lifecycle",
+        "result": "PASS",
+        "finding": "Trigger is the actual held activation/deactivation special melee sweep hit. Normal, special-active follow-up, and pushfollow actions may benefit while active but do not trigger; pure push is excluded. Counter refreshes to 4, qualifying sweep finish normally leaves 3, then each held active finish consumes one including a miss; multi-spline/multi-target does not multiply the decrement. The page distinguishes no retroactive trigger-hit damage, later hit in a still-open sweep after cache refresh, switch gate, and no TTL/stacking."
+      },
+      {
+        "area": "Power consumers and calculation",
+        "result": "PASS",
+        "finding": "Actual melee_power_level_modifier affects damage and impact power distribution and the cleave budget path. Documentation describes increased power inputs and explicitly avoids promising the same percentage in final health damage, stagger result, or hit count. The S formula and q additive example are scoped to already scaled power input; q=.20 plus tier-IV .30 yields 1.50, not multiplicative 1.56."
+      },
+      {
+        "area": "Cleave budget timing",
+        "result": "PASS",
+        "finding": "ActionSweep samples normal/special max-hit-mass budgets at action start. A trigger later in that sweep does not automatically recompute the stored budget, even where later damage/impact calculations can read the refreshed buff cache. The documented server-correction recomputation exception matches source."
+      },
+      {
+        "area": "RAW and tier formatter",
+        "result": "PASS",
+        "finding": "Name/description keys and hashes match the fixed bilingual RAW. All I–IV English and zh-TW placeholder substitutions show +15/+20/+25/+30; the plural English “next melee attacks” and singular-ish zh-TW “下一次近戰攻擊” are noted as wording scope ambiguity and not overcalled as a code/value erratum."
+      },
+      {
+        "area": "Actual tier/wrapper and item restriction",
+        "result": "PASS",
+        "finding": "Own tier is .15/.20/.25/.30; same-key conditional .10 fallback is replaced, not added, while held+active gates remain. Exactly one actual binding is transonic_sword_transonic_knife_p1_m1: 穿音速雙刀 布蘭克斯 Mk XI / Paired Transonic Blades Branx Mk XI; metadata restriction, item/trait IDs, import/ukeys/append agree."
+      },
+      {
+        "area": "Icon identity",
+        "result": "PASS",
+        "finding": "Formal icon uses verified weapon_trait_248 attachment. SOURCE_INDEX separates item.icon identity path from attachment URL; receipt confirms public hash and visual match."
+      }
+    ],
+    "configuration_consistency": {
+      "status": "PASS",
+      "formal_matches_approved_root_config_and_extension_draft": true,
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "trait_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_power_on_weapon_special_follow_up_hits",
+      "name_key": "loc_trait_bespoke_increased_melee_power_on_weapon_special_follow_up_hits",
+      "description_key": "loc_trait_bespoke_increased_melee_power_on_weapon_special_follow_up_hits_desc",
+      "kind": "melee",
+      "tier_values": {
+        "I": 0.15,
+        "II": 0.2,
+        "III": 0.25,
+        "IV": 0.3
+      },
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_248",
+      "icon_attachment": "https://github.com/user-attachments/assets/35aec3d1-ef69-4923-8034-2109c6646b57",
+      "faster_status": false
+    },
+    "reviewed_associations": {
+      "map_entry": "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "catalog": "Game Info/releases/1.13.X/blessings/README.md",
+      "melee_catalog": "Game Info/releases/1.13.X/blessings/melee/README.md",
+      "reverse_weapon_page": "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md",
+      "translation": "Referneces/Translation.md",
+      "result": "PASS; exact blessing entry, reverse implementation link, melee classification, UI family/pattern/mark, and single weapon association agree."
+    },
+    "source_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-own-tier-diff.json",
+        "sha256": "bb78b867dcab932978cdc4c89587f0636825208fbbb6f83a4e36ddb0402bb997",
+        "applicability": "Own values and custom wrapper."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json",
+        "sha256": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3",
+        "applicability": "Same-key tier override, conditional gate, and no extra proc stat."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json",
+        "sha256": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef",
+        "applicability": "Damage/impact/cleave consumers and start-sampled cleave budget vs server correction."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-ui-review.json",
+        "sha256": "70224639704fa61cdbbde8aa5e7d6890f03b3f3f1c74f74cffe93f5224d91910",
+        "applicability": "Actual Branx Mk XI binding, metadata restriction, UI and template wiring."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-image.json",
+        "sha256": "36a5456dbca7e668ea68aed8e292f206cf8c597ad3027553b19a31f12f49ea11",
+        "applicability": "Icon path, image hash, attachment, and visual verification."
+      }
+    ],
+    "faster_status": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/35aec3d1-ef69-4923-8034-2109c6646b57",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "deadly-frequencies",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_248",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_248.png",
+      "attachment": "https://github.com/user-attachments/assets/35aec3d1-ef69-4923-8034-2109c6646b57",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5976982017",
+      "acquired_date": "2026-10-04",
+      "sha256": "79d2befdd844d3ac86d8964210cb3692c2d93e9ad1e2e8e0462bc36dcefc773e",
+      "content_type": "image/png",
+      "size": 4854,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "致命頻率祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original/public128x128PNG match: blade shapes and curved horizontal motion lines; alpha channel inspected diagnostically without altering attachment."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 12,
+      "rows": 219,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 42,
+      "source_files": 20,
+      "bindings": 424,
+      "variants": 224,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 20,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 540,
+      "remote_references": 275,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 11,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-010-full-scan.json",
+        "sha256": "de5d8373fa4cade0e0cdc498eede92f70774d095a9a5aa7dfd4e42d57b4f991f",
+        "trigger": "round-010"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 104,
+    "not_started_name_groups": 104,
+    "partial_name_groups": 0,
+    "remaining_variants": 381,
+    "remaining_bindings": 761,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "929527e598ce090ab9bebd06ab3abf2e9adac6844b4fdcb9f179f7f508e3f4d5"
+  },
+  "previous_local_commit": "feacf7d6c3d8c619014c9a6179b5486e7a2579b5",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "status": "primary_content_review_passed_pending_formal_peer",
+    "variant_count": 1,
+    "binding_count": 1,
+    "configuration_sha256": "9068834af612756e9d450cc24dc46a87451d25ad08784b7075d83804aa7b0e10",
+    "research": {
+      "deadly-frequencies-agent-config.json": "673740c897f0b6ee406db3579978a9627a10fad89628e8ab99125740bb68bff1",
+      "deadly-frequencies-agent-evidence.json": "f81809e66d503f941e563b6bb62b1c82525c484606bb69217eb242e117769da4",
+      "deadly-frequencies-agent-draft.md": "e88c3b387fbd4173afd6a61030490c0191bb05bda2af3df4d0e94cdf0ba9146c"
+    },
+    "reviewed_distinctions": [
+      "Actual special profiles/activation/deactivation and ordinary/pushfollow mapped; same-active damage type does not imply special trigger.",
+      "Cross-field same-key stat override preserves one conditional tier contribution.",
+      "One finish outside multi-spline loop, hit/miss both consume; count4 normally becomes3 at trigger-window end.",
+      "Damage/impact current stat consumer versus sweep-start saved cleave budget and explicit server-correction recomputation distinguished.",
+      "Added actual melee attack coverage, cache-update switch gate and count example; numeric examples use native-scaled input and additive same-stage pool.",
+      "Canonical variant_notes corrected from delivered plain string to required dict keyed by actual weapon ID; original ignored trio preserved.",
+      "RAW plural/Chinese next-attack wording clarified; counter omission is not mislabeled as a numeric mistranslation."
+    ],
+    "common_cache_reused": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json",
+        "sha256": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3",
+        "finding": "Same stat key means tier override replaces conditional .10 fallback; held+active gate remains."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json",
+        "sha256": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+        "source_refs": [
+          {
+            "id": "buff-system-order",
+            "path": "scripts/extension_systems/extension_system_configuration.lua",
+            "start": 308,
+            "end": 320,
+            "content_sha256": "a85ec2dbc6c18212af664bf9ad3b84a5808b7aca9c640d32c698d658e0e10f20",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "buff_system appears before weapon_system and both are configured for fixed_update.",
+            "applicability": "Same-frame buff-cache ordering."
+          },
+          {
+            "id": "weapon-system-order",
+            "path": "scripts/extension_systems/extension_system_configuration.lua",
+            "start": 511,
+            "end": 524,
+            "content_sha256": "53845a77bc373cbc534636523b9914a55eee1603d79ee0cc4343fd7e1a0d3417",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "weapon_system occurs after buff_system and fixed_update is enabled.",
+            "applicability": "Same-frame buff-cache ordering."
+          },
+          {
+            "id": "extension-systems-build-order",
+            "path": "scripts/foundation/managers/extension/extension_system_holder.lua",
+            "start": 58,
+            "end": 105,
+            "content_sha256": "13d410a7c43ca0a8a2c6a83295170dacda4333b93c8500c6ceaad816d28c27d8",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "Configuration is iterated with ipairs; each enabled system appends to its update lists in construction order.",
+            "applicability": "Buff precedes weapon in fixed-update list."
+          },
+          {
+            "id": "extension-systems-fixed-update-dispatch",
+            "path": "scripts/foundation/managers/extension/extension_system_holder.lua",
+            "start": 125,
+            "end": 183,
+            "content_sha256": "4d5eb5cf83c514477b217a0e87a6e385494d98ccef5645f7b536fb0e2522b7e3",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "fixed_update delegates to ordered _system_update, which iterates update_list from index 1 upward.",
+            "applicability": "Same fixed update preserves config order."
+          },
+          {
+            "id": "player-buff-fixed-update",
+            "path": "scripts/extension_systems/buff/player_unit_buff_extension.lua",
+            "start": 131,
+            "end": 147,
+            "content_sha256": "df991147ee0ce535754723aec6e08ef632a96fada308c5c359208113e30667ab",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "Buff fixed_update runs _update_buffs then _update_stat_buffs_and_keywords.",
+            "applicability": "Per-player stat/keyword cache refreshed in buff phase."
+          },
+          {
+            "id": "buff-stat-cache-rebuild",
+            "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+            "start": 318,
+            "end": 353,
+            "content_sha256": "22fc6b906de0b4135cd60bbc418e1e5e7504847b53770449121e46f69e323fe1",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "Modified cached stats are reset and every active buff applies stat buffs/keywords.",
+            "applicability": "Cache content before weapon actions."
+          },
+          {
+            "id": "player-weapon-fixed-update",
+            "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+            "start": 487,
+            "end": 533,
+            "content_sha256": "fd287cbf1a9bc4777e3731c49f4748f33ee09a65cd78f71bad6637873247c1e5",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "Weapon phase calls ActionHandler first, then looks up current movement/spread timer and clears shots with strict condition.",
+            "applicability": "Current-state timer reset and order."
+          },
+          {
+            "id": "action-handler-fixed-update",
+            "path": "scripts/utilities/action/action_handler.lua",
+            "start": 137,
+            "end": 174,
+            "content_sha256": "162eb0930f07ec30175d4e9fd8aa4dbed75390cf9ae9dd34ad161ddf3cbd0f60",
+            "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "Each running action is passed once to _update_action; that calls action:fixed_update once.",
+            "applicability": "Per-action fixed-frame boundary."
+          }
+        ],
+        "applicability": "Fixed SHA Buff-before-Weapon and cache rebuild only; own attack/sweep timing sourced separately."
+      }
+    ],
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-extension-draft.json",
+      "sha256": "0265e3dae6add08e8f1e8dd06ae69880b71b96a8f56fd6c5a45dd1c06f8e4d10"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-ui-review.json",
+      "sha256": "70224639704fa61cdbbde8aa5e7d6890f03b3f3f1c74f74cffe93f5224d91910"
+    },
+    "bindings": [
+      {
+        "weapon_id": "transonic_sword_transonic_knife_p1",
+        "mark_id": "transonic_sword_transonic_knife_p1_m1",
+        "trait_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_power_on_weapon_special_follow_up_hits",
+        "template_file": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 3177,
+        "append_line": 3179,
+        "name_zh_tw": "穿音速雙刀 布蘭克斯 Mk XI",
+        "name_en": "Paired Transonic Blades Branx Mk XI",
+        "loc_ids": [
+          "loc_weapon_family_transonic_sword_transonic_knife_p1_m1",
+          "loc_weapon_pattern_transonic_sword_transonic_knife_p1_m1",
+          "loc_weapon_mark_transonic_sword_transonic_knife_p1_m1"
+        ]
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-resume-review.json",
+      "sha256": "254c109e16631e9b05797212c11b19a70b1ae2672abe91fa05f95f564f23ab33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-own-tier-diff.json",
+      "sha256": "bb78b867dcab932978cdc4c89587f0636825208fbbb6f83a4e36ddb0402bb997"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-ui-review.json",
+      "sha256": "70224639704fa61cdbbde8aa5e7d6890f03b3f3f1c74f74cffe93f5224d91910"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json",
+      "sha256": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json",
+      "sha256": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef"
+    }
+  ],
+  "primary_review_method": "Direct own tiers/custom wrapper/actual special profile/action bindings and per-key override; existing generic events/cache reused under own applicability. One finish per multi-spline sweep, later same-window damage/impact versus stored cleave budget/server correction, native-scaled/additive examples and unique UI checked. Single-item final peer scope stable.",
+  "previous_objects_unchanged": {
+    "blessings": 62,
+    "variants": 223,
+    "bindings": 423
+  }
+}

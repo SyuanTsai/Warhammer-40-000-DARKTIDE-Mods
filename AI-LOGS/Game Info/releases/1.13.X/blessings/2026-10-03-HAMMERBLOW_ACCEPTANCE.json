@@ -1,0 +1,678 @@
+{
+  "date": "2026-10-06",
+  "blessing": "hammerblow",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/錘擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p3_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_combatsword_p1_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_powermaul_2h_p1_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_powermaul_p1_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_powermaul_p2_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_powermaul_p3_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_powermaul_shield_p1_stacking_increase_impact_on_hit",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_stacking_increase_impact_on_hit"
+  ],
+  "added_binding_count": 17,
+  "total_variants": 9,
+  "total_bindings": 17,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-formal-peer-scope.json",
+    "scope_sha256": "87582b8a1f50183ec42589f27f5b5cadfd47bd5ff3fd167b69ca57ffcf2a45a5",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-agent-config.json": "f2f44a729559661e88900bca994dfb1a15a6832bdf3b495b409cc1274416d8c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-agent-draft.md": "f562637902f585de9a3a5d6afa47764c5401c9f6e762b70d21d657b8f26ed9b4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-agent-evidence.json": "9ed05cda40635c024b2603a79b760b216dae433afea47a30a5c346087c361a15",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-config.json": "d110199873f5cdf2a2cbc94f8fe4e769f94a3e1d47f7c14bc182d5e0898e578d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-extension-draft.json": "d8b58103e88f62fdbc9eea4dc7706b813f056dd7b6f4c3e741524dcaa544a52e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-page-preview.md": "187da1e8c79386194c94b3e6d02438bb58f1a6f3cf4a6e8bcd6696a7c84c400d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/DAMAGE_PERCENTAGE_REVIEW.md": "8951acf14fcdbbad557a3e70a3f3f58f6f95a7ab1c47a4ea7b5ee9cc7a47082f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/LOCALIZATION_COMPARISON.md": "9ac2853f22b4c3f702fb7e52bf37316609307898cb4f83c03013e73b8d636c02",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/README.md": "187da1e8c79386194c94b3e6d02438bb58f1a6f3cf4a6e8bcd6696a7c84c400d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/SOURCE_INDEX.md": "48847b1cc93e9e1dbb9c3fb963822f129f6921c2e4935c8670f63b6985f0ec56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/TIER_VALUES.md": "3c8b9c03d24fc94896998f67ce4f2a05abf82105068214ba9053e57deb6e8611",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/WEAPON_COMPATIBILITY.md": "89738b1672521e5508ea674286829cd0b26ff35771bbe605bf96d9d8dabc6781",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combataxe_p3_stacking_increase_impact_on_hit.md": "79812a669bad8006f1dc47fca021e8a954943a79b0aee8bb2f27e0811497c76f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combatsword_p1_stacking_increase_impact_on_hit.md": "854437f96e4fff47301a56dde4b437b8dd844d79c6210341dd7c95279f22c41f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_ogryn_hammer_2h_p1_stacking_increase_impact_on_hit.md": "9e5a19e7ccc19d6ac7381e968de10b8b06c746f0620912e72219dae0e926a979",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_2h_p1_stacking_increase_impact_on_hit.md": "495598d906fed0f92db466c74ea97d14aafef9af2c76506092d99cef11049c44",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p1_stacking_increase_impact_on_hit.md": "28c5070c5012433b4d886126f20fca54160588378780895f8cd3c79c6b86a54e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p2_stacking_increase_impact_on_hit.md": "45e85f2d309f57a474bddb11b4497ca4d7712313164e2f5f38e48d9ef92392d2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p3_stacking_increase_impact_on_hit.md": "b4ee0924e887c9717f3042fbc3465c2c92f1f2861be93d78f481ad60b649e5f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_shield_p1_stacking_increase_impact_on_hit.md": "6fee8dff16d66a1d933cd56a86c6f0d8ec1847b906664e1dd2488d6cff269532",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_thunderhammer_2h_p1_stacking_increase_impact_on_hit.md": "f07d82735b66d0da00e4858fb5bcec0ae5647b0dba76c4ee6d71d5f3b2c3cfdf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-preview-manifest-005.json": "ba5232ae98555dff38f122454a65bbaf38a2eea9ba28c4e6f621880520894193",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-action-coverage.json": "12139015e924d5797233c3f074ef99e5091fc8b7d95609685ea16ebc8d9c2851",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-001.json": "d777829c9785b0187dcb843eaf05eaa2dfd5bd6f2928dea88712fcacde2c8907",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-002.json": "16546b73e0ccd9b5d8abad8b8ef5ada274eff5afe9cbe318e1af2b2344856291",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-003.json": "d9b57f262e9149f77f7b596be8c4d9b7109c5fddbe111776f46fa33d2e19b19d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-004.json": "bc809244d8d2ceb49b8ba291df3363a20c22ccb75015efb50842e484b87eaf65",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-005.json": "0c42bd998ff9a0e868422907a21da7f334a62c934ee130df085c057a8f07d2cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-agent-config.json": "f2f44a729559661e88900bca994dfb1a15a6832bdf3b495b409cc1274416d8c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-agent-draft.md": "f562637902f585de9a3a5d6afa47764c5401c9f6e762b70d21d657b8f26ed9b4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-agent-evidence.json": "9ed05cda40635c024b2603a79b760b216dae433afea47a30a5c346087c361a15",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-association-snapshot.json": "d0f88f81ae35c6099388913d2067c787a30d419ab7abb2b739274f1ab554811f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-preflight.json": "feb50532b6855e1fdb56ca36bd25374ced5c327f4e6e4bc04ca0e23bd24b9427",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/inputs/blessing-map-snapshot-001.json": "b473af5d073817178f9cbd38983627d49f55a440d66756d0d591a19a62c9a9ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/inputs/common-mechanism-cache-snapshot.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/inputs/remaining-tasks-snapshot-001.json": "2419799ff0403d653f159f3bbfc152a9148db37c1a2884549d1af63084f514bf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/limbsplitter-formal-nonauthor-review.json": "0e24f9f4602b1b0c058e244e051146f7651a0fe24e6557ba72f36932b953f57c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-image.json": "88978caaceb0a7f799e06e139812c733df75c2b5e9d56cb347a1a2dba9a4879a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-final-content-delta-review.json": "b751ac488e2a9a29da1d88dd25e622793a87d5cd06b63403a1767446d16791d5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-focused-checks.json": "31566ad445537b180178531e5ff5897dec6afb80e75d3de756c94b9d2a5d0567",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-frozen-source-verification.json": "72b37c665a474c4e2bf37c3fc5d234978f861074bb4ee45b3c97791fef70da59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-own-tier-wrapper-impact-material-review.json": "e7dc9ff559d2b71b7d8b9b0f3b0c8358332c04cf1a68f8eb962d6f8d9b9bc4cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-raw-verification.json": "3de4428f313a278a8bad5dbc491b4f509fad6079692b70b80e2039a89fc6f11e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-resume-review.json": "ea62634be0d4ee8a562c19d7f31689c676e00ed3bbc6abee7d334c249715d2e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-sticky-shield-push-content-delta-review.json": "a4f4b0d09a98172265eb77fdeccb33614efdda894b2b71e75c4f9990353baa0c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-ui-raw-verification.json": "f1211929dba538c9ece8d3c58b24e8bbc5fc895f519523fc928bbce26e4cf0b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-ui-review.json": "41a3c6e58b5e81acfbc0c0ea48cf06d04e584181b295abd116aed6a9d4deb74b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-raw-verification.json": "3de4428f313a278a8bad5dbc491b4f509fad6079692b70b80e2039a89fc6f11e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "bc01b7ee673d1fc5c596aac9dafc23aa89dd3c3cdc495f42109497e6cab6ba2c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/DAMAGE_PERCENTAGE_REVIEW.md": "8951acf14fcdbbad557a3e70a3f3f58f6f95a7ab1c47a4ea7b5ee9cc7a47082f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/LOCALIZATION_COMPARISON.md": "9ac2853f22b4c3f702fb7e52bf37316609307898cb4f83c03013e73b8d636c02",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/README.md": "187da1e8c79386194c94b3e6d02438bb58f1a6f3cf4a6e8bcd6696a7c84c400d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/SOURCE_INDEX.md": "48847b1cc93e9e1dbb9c3fb963822f129f6921c2e4935c8670f63b6985f0ec56",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/TIER_VALUES.md": "3c8b9c03d24fc94896998f67ce4f2a05abf82105068214ba9053e57deb6e8611",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/WEAPON_COMPATIBILITY.md": "89738b1672521e5508ea674286829cd0b26ff35771bbe605bf96d9d8dabc6781",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combataxe_p3_stacking_increase_impact_on_hit.md": "79812a669bad8006f1dc47fca021e8a954943a79b0aee8bb2f27e0811497c76f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combatsword_p1_stacking_increase_impact_on_hit.md": "854437f96e4fff47301a56dde4b437b8dd844d79c6210341dd7c95279f22c41f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_ogryn_hammer_2h_p1_stacking_increase_impact_on_hit.md": "9e5a19e7ccc19d6ac7381e968de10b8b06c746f0620912e72219dae0e926a979",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_2h_p1_stacking_increase_impact_on_hit.md": "495598d906fed0f92db466c74ea97d14aafef9af2c76506092d99cef11049c44",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p1_stacking_increase_impact_on_hit.md": "28c5070c5012433b4d886126f20fca54160588378780895f8cd3c79c6b86a54e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p2_stacking_increase_impact_on_hit.md": "45e85f2d309f57a474bddb11b4497ca4d7712313164e2f5f38e48d9ef92392d2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p3_stacking_increase_impact_on_hit.md": "b4ee0924e887c9717f3042fbc3465c2c92f1f2861be93d78f481ad60b649e5f2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_shield_p1_stacking_increase_impact_on_hit.md": "6fee8dff16d66a1d933cd56a86c6f0d8ec1847b906664e1dd2488d6cff269532",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_thunderhammer_2h_p1_stacking_increase_impact_on_hit.md": "f07d82735b66d0da00e4858fb5bcec0ae5647b0dba76c4ee6d71d5f3b2c3cfdf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/melee/README.md": "e19fa1e0635796c1e54afdee74c8980001b9454beb03a8646d6b2ef8277e1155",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "8fc5b2c1dddd319adb9fea761ecec603768afa601104d7b9c7983607b96a3b48",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "18ec99a3c4cf52b908826a1460e9a787f71f2ebe9b8993eaf0e95ff1f155b8c2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "4ddbe4e3c6a153e6756152520637e00bd733b17935f9f07994412a3f00e77d98",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "497221fdb42a67b2accc7845526de69d6d158b5e7d3c995a5097d9a3caed4905",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "8fa8a6491701050e540b4eb1d39a1aeec353595fd5379b6c94b57e4d818a1ab1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "f89ce455c1e37fec05e11ac661e624fb40171db2b34e466f130e5cfd6d121fce",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "d70d6f56ec7bd9d323759a15469807b5c9d2ac47abab3ccb077d45a703d8080f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "d76b0648dcf25904ff218f3ebc035a29aed7379f443119027cdae51fc1c4910b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "ec85b6ec47ee5236831aff10800745a3b91c4a188bd03f78e4a713119ba76442",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "94fe2baaf369427f111d11c936414e879fbb376e74ba49e70ea491780de4682e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "c1947666cda496ba360f7829c94faf297139fc127edfc47fb644493d072b6733",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/own-association-snapshot.json": "d0f88f81ae35c6099388913d2067c787a30d419ab7abb2b739274f1ab554811f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/actual-preview-005/Referneces/Translation.md": "796416936155b2678e8fad78cb5cfdd98701c6370f0de4e27a379557dd9f4f90",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "bc01b7ee673d1fc5c596aac9dafc23aa89dd3c3cdc495f42109497e6cab6ba2c",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/DAMAGE_PERCENTAGE_REVIEW.md": "8951acf14fcdbbad557a3e70a3f3f58f6f95a7ab1c47a4ea7b5ee9cc7a47082f",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/LOCALIZATION_COMPARISON.md": "9ac2853f22b4c3f702fb7e52bf37316609307898cb4f83c03013e73b8d636c02",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/README.md": "187da1e8c79386194c94b3e6d02438bb58f1a6f3cf4a6e8bcd6696a7c84c400d",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/SOURCE_INDEX.md": "67c76e497fcac02cb383926aee1728da237ceadf013c54da7355044ea4ff9e89",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/TIER_VALUES.md": "3c8b9c03d24fc94896998f67ce4f2a05abf82105068214ba9053e57deb6e8611",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/WEAPON_COMPATIBILITY.md": "89738b1672521e5508ea674286829cd0b26ff35771bbe605bf96d9d8dabc6781",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combataxe_p3_stacking_increase_impact_on_hit.md": "79812a669bad8006f1dc47fca021e8a954943a79b0aee8bb2f27e0811497c76f",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combatsword_p1_stacking_increase_impact_on_hit.md": "854437f96e4fff47301a56dde4b437b8dd844d79c6210341dd7c95279f22c41f",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_ogryn_hammer_2h_p1_stacking_increase_impact_on_hit.md": "9e5a19e7ccc19d6ac7381e968de10b8b06c746f0620912e72219dae0e926a979",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_2h_p1_stacking_increase_impact_on_hit.md": "495598d906fed0f92db466c74ea97d14aafef9af2c76506092d99cef11049c44",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p1_stacking_increase_impact_on_hit.md": "28c5070c5012433b4d886126f20fca54160588378780895f8cd3c79c6b86a54e",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p2_stacking_increase_impact_on_hit.md": "45e85f2d309f57a474bddb11b4497ca4d7712313164e2f5f38e48d9ef92392d2",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p3_stacking_increase_impact_on_hit.md": "b4ee0924e887c9717f3042fbc3465c2c92f1f2861be93d78f481ad60b649e5f2",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_shield_p1_stacking_increase_impact_on_hit.md": "6fee8dff16d66a1d933cd56a86c6f0d8ec1847b906664e1dd2488d6cff269532",
+      "Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_thunderhammer_2h_p1_stacking_increase_impact_on_hit.md": "f07d82735b66d0da00e4858fb5bcec0ae5647b0dba76c4ee6d71d5f3b2c3cfdf",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "e19fa1e0635796c1e54afdee74c8980001b9454beb03a8646d6b2ef8277e1155",
+      "Game Info/releases/1.13.X/blessings/README.md": "8fc5b2c1dddd319adb9fea761ecec603768afa601104d7b9c7983607b96a3b48",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "18ec99a3c4cf52b908826a1460e9a787f71f2ebe9b8993eaf0e95ff1f155b8c2",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "4ddbe4e3c6a153e6756152520637e00bd733b17935f9f07994412a3f00e77d98",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "497221fdb42a67b2accc7845526de69d6d158b5e7d3c995a5097d9a3caed4905",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "8fa8a6491701050e540b4eb1d39a1aeec353595fd5379b6c94b57e4d818a1ab1",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "f89ce455c1e37fec05e11ac661e624fb40171db2b34e466f130e5cfd6d121fce",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "d70d6f56ec7bd9d323759a15469807b5c9d2ac47abab3ccb077d45a703d8080f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "d76b0648dcf25904ff218f3ebc035a29aed7379f443119027cdae51fc1c4910b",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "ec85b6ec47ee5236831aff10800745a3b91c4a188bd03f78e4a713119ba76442",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "94fe2baaf369427f111d11c936414e879fbb376e74ba49e70ea491780de4682e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "c1947666cda496ba360f7829c94faf297139fc127edfc47fb644493d072b6733",
+      "Referneces/Translation.md": "796416936155b2678e8fad78cb5cfdd98701c6370f0de4e27a379557dd9f4f90"
+    },
+    "reviewed_scope": {
+      "file_count": 120,
+      "formal_page_count": 15,
+      "variant_count": 9,
+      "binding_count": 17,
+      "canonical_config_sha256": "d110199873f5cdf2a2cbc94f8fe4e769f94a3e1d47f7c14bc182d5e0898e578d"
+    },
+    "actual_preview": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-005.json",
+      "sha256": "0c42bd998ff9a0e868422907a21da7f334a62c934ee130df085c057a8f07d2cb",
+      "passed": true,
+      "actual_own_formal_pages_checked": 15,
+      "config_sha256": "f2f44a729559661e88900bca994dfb1a15a6832bdf3b495b409cc1274416d8c6"
+    },
+    "reviewed_delta": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-final-content-delta-review.json",
+      "sha256": "b751ac488e2a9a29da1d88dd25e622793a87d5cd06b63403a1767446d16791d5",
+      "accepted": true,
+      "issues": []
+    },
+    "checks": [
+      "All 120 frozen scope path/hash pairs match exactly.",
+      "All 15 generated own pages in actual preview 005 passed generator, schema, source mapping, RAW, global partition/reverse association, focused links, GFM, and whitespace checks.",
+      "All nine own I-IV tier/wrapper families and 17 bindings match the frozen inventory; parent on_hit/source item/held conditions and child effective stack/timer behavior are stated accurately.",
+      "Actual pure push profiles can enqueue eligible on_hit events with original weapon item, while attack_type=push does not consume melee_impact_modifier.",
+      "Shovel sticky follow-ups, Powermaul P1 skipped sticky, and shield/arc shout nil or non-melee routes are distinguished by actual behavior.",
+      "Two UI name/Mark examples correctly separate additive impact percentage points from final stagger or health damage.",
+      "The added light_shovel_sticky source citation in SOURCE_INDEX.md points to the pinned source range and is present in the frozen formal files."
+    ],
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/309e0a2e-5b01-4af4-bde2-cddcbd580233",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "hammerblow",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_171",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_171.png",
+      "attachment": "https://github.com/user-attachments/assets/309e0a2e-5b01-4af4-bde2-cddcbd580233",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6009897055",
+      "acquired_date": "2026-10-06",
+      "sha256": "fc5191efb376b59f8df22ab58d01302c91404ac06bf784fd21bb105820e4a4ab",
+      "content_type": "image/png",
+      "size": 4987,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "錘擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_method": "Root viewed the actual public PNG through view_image; native pale square pixels, dimensions and downloaded hash match. No replacement glyph."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 29,
+      "tables": 27,
+      "rows": 677,
+      "lists": 113,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 141,
+      "source_files": 55,
+      "bindings": 1085,
+      "variants": 561,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 27,
+      "source_object_cache": {
+        "cache_hits": 55,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 30,
+      "local_references": 1567,
+      "remote_references": 653,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 44,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-043-full-scan.json",
+        "sha256": "2d0f95b4cbd5ca6280f5bf1261983c18e4ec200c056cba1afcda392239b2a15f",
+        "trigger": "round-043"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 7,
+    "not_started_name_groups": 7,
+    "partial_name_groups": 0,
+    "remaining_variants": 44,
+    "remaining_bindings": 100,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "756e0a88b71378dc11e5217546c19a0427f1f520e5c53f244e23b1d58022a532"
+  },
+  "previous_local_commit": "5e34e7d7dd3ba3dd8524a2f850fad3dd8f0fa124",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Root exact-key metadata intersection and inventory review found no outside candidate."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-final-content-delta-review.json",
+      "sha256": "b751ac488e2a9a29da1d88dd25e622793a87d5cd06b63403a1767446d16791d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-focused-checks.json",
+      "sha256": "31566ad445537b180178531e5ff5897dec6afb80e75d3de756c94b9d2a5d0567"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-frozen-source-verification.json",
+      "sha256": "72b37c665a474c4e2bf37c3fc5d234978f861074bb4ee45b3c97791fef70da59"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-own-tier-wrapper-impact-material-review.json",
+      "sha256": "e7dc9ff559d2b71b7d8b9b0f3b0c8358332c04cf1a68f8eb962d6f8d9b9bc4cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-raw-verification.json",
+      "sha256": "3de4428f313a278a8bad5dbc491b4f509fad6079692b70b80e2039a89fc6f11e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-resume-review.json",
+      "sha256": "ea62634be0d4ee8a562c19d7f31689c676e00ed3bbc6abee7d334c249715d2e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-sticky-shield-push-content-delta-review.json",
+      "sha256": "a4f4b0d09a98172265eb77fdeccb33614efdda894b2b71e75c4f9990353baa0c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-ui-raw-verification.json",
+      "sha256": "f1211929dba538c9ece8d3c58b24e8bbc5fc895f519523fc928bbce26e4cf0b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-ui-review.json",
+      "sha256": "41a3c6e58b5e81acfbc0c0ea48cf06d04e584181b295abd116aed6a9d4deb74b"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-config.json",
+    "sha256": "d110199873f5cdf2a2cbc94f8fe4e769f94a3e1d47f7c14bc182d5e0898e578d"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json",
+      "sha256": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/inputs/blessing-map-snapshot-001.json",
+      "sha256": "b473af5d073817178f9cbd38983627d49f55a440d66756d0d591a19a62c9a9ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/inputs/remaining-tasks-snapshot-001.json",
+      "sha256": "2419799ff0403d653f159f3bbfc152a9148db37c1a2884549d1af63084f514bf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/inputs/common-mechanism-cache-snapshot.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-own-tier-wrapper-impact-material-review.json",
+      "sha256": "e7dc9ff559d2b71b7d8b9b0f3b0c8358332c04cf1a68f8eb962d6f8d9b9bc4cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-ui-review.json",
+      "sha256": "41a3c6e58b5e81acfbc0c0ea48cf06d04e584181b295abd116aed6a9d4deb74b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-ui-raw-verification.json",
+      "sha256": "f1211929dba538c9ece8d3c58b24e8bbc5fc895f519523fc928bbce26e4cf0b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-raw-verification.json",
+      "sha256": "3de4428f313a278a8bad5dbc491b4f509fad6079692b70b80e2039a89fc6f11e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-image.json",
+      "sha256": "88978caaceb0a7f799e06e139812c733df75c2b5e9d56cb347a1a2dba9a4879a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-agent-config.json",
+      "sha256": "f2f44a729559661e88900bca994dfb1a15a6832bdf3b495b409cc1274416d8c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-agent-draft.md",
+      "sha256": "f562637902f585de9a3a5d6afa47764c5401c9f6e762b70d21d657b8f26ed9b4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-action-coverage.json",
+      "sha256": "12139015e924d5797233c3f074ef99e5091fc8b7d95609685ea16ebc8d9c2851"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-005.json",
+      "sha256": "0c42bd998ff9a0e868422907a21da7f334a62c934ee130df085c057a8f07d2cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-page-preview.md",
+      "sha256": "187da1e8c79386194c94b3e6d02438bb58f1a6f3cf4a6e8bcd6696a7c84c400d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-association-snapshot.json",
+      "sha256": "d0f88f81ae35c6099388913d2067c787a30d419ab7abb2b739274f1ab554811f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-preview-manifest-005.json",
+      "sha256": "ba5232ae98555dff38f122454a65bbaf38a2eea9ba28c4e6f621880520894193"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-preflight.json",
+      "sha256": "feb50532b6855e1fdb56ca36bd25374ced5c327f4e6e4bc04ca0e23bd24b9427"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "8951acf14fcdbbad557a3e70a3f3f58f6f95a7ab1c47a4ea7b5ee9cc7a47082f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/LOCALIZATION_COMPARISON.md",
+      "sha256": "9ac2853f22b4c3f702fb7e52bf37316609307898cb4f83c03013e73b8d636c02"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/README.md",
+      "sha256": "187da1e8c79386194c94b3e6d02438bb58f1a6f3cf4a6e8bcd6696a7c84c400d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/SOURCE_INDEX.md",
+      "sha256": "48847b1cc93e9e1dbb9c3fb963822f129f6921c2e4935c8670f63b6985f0ec56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/TIER_VALUES.md",
+      "sha256": "3c8b9c03d24fc94896998f67ce4f2a05abf82105068214ba9053e57deb6e8611"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/WEAPON_COMPATIBILITY.md",
+      "sha256": "89738b1672521e5508ea674286829cd0b26ff35771bbe605bf96d9d8dabc6781"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combataxe_p3_stacking_increase_impact_on_hit.md",
+      "sha256": "79812a669bad8006f1dc47fca021e8a954943a79b0aee8bb2f27e0811497c76f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_combatsword_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "854437f96e4fff47301a56dde4b437b8dd844d79c6210341dd7c95279f22c41f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_ogryn_hammer_2h_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "9e5a19e7ccc19d6ac7381e968de10b8b06c746f0620912e72219dae0e926a979"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_2h_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "495598d906fed0f92db466c74ea97d14aafef9af2c76506092d99cef11049c44"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "28c5070c5012433b4d886126f20fca54160588378780895f8cd3c79c6b86a54e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p2_stacking_increase_impact_on_hit.md",
+      "sha256": "45e85f2d309f57a474bddb11b4497ca4d7712313164e2f5f38e48d9ef92392d2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_p3_stacking_increase_impact_on_hit.md",
+      "sha256": "b4ee0924e887c9717f3042fbc3465c2c92f1f2861be93d78f481ad60b649e5f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_powermaul_shield_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "6fee8dff16d66a1d933cd56a86c6f0d8ec1847b906664e1dd2488d6cff269532"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/candidate-pages-005/Game Info/releases/1.13.X/blessings/entries/錘擊/weapon_trait_bespoke_thunderhammer_2h_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "f07d82735b66d0da00e4858fb5bcec0ae5647b0dba76c4ee6d71d5f3b2c3cfdf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "8fc5b2c1dddd319adb9fea761ecec603768afa601104d7b9c7983607b96a3b48"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "18ec99a3c4cf52b908826a1460e9a787f71f2ebe9b8993eaf0e95ff1f155b8c2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "bc01b7ee673d1fc5c596aac9dafc23aa89dd3c3cdc495f42109497e6cab6ba2c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "8951acf14fcdbbad557a3e70a3f3f58f6f95a7ab1c47a4ea7b5ee9cc7a47082f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "9ac2853f22b4c3f702fb7e52bf37316609307898cb4f83c03013e73b8d636c02"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\README.md",
+      "sha256": "187da1e8c79386194c94b3e6d02438bb58f1a6f3cf4a6e8bcd6696a7c84c400d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\SOURCE_INDEX.md",
+      "sha256": "48847b1cc93e9e1dbb9c3fb963822f129f6921c2e4935c8670f63b6985f0ec56"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\TIER_VALUES.md",
+      "sha256": "3c8b9c03d24fc94896998f67ce4f2a05abf82105068214ba9053e57deb6e8611"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "89738b1672521e5508ea674286829cd0b26ff35771bbe605bf96d9d8dabc6781"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_combataxe_p3_stacking_increase_impact_on_hit.md",
+      "sha256": "79812a669bad8006f1dc47fca021e8a954943a79b0aee8bb2f27e0811497c76f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_combatsword_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "854437f96e4fff47301a56dde4b437b8dd844d79c6210341dd7c95279f22c41f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_ogryn_hammer_2h_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "9e5a19e7ccc19d6ac7381e968de10b8b06c746f0620912e72219dae0e926a979"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_powermaul_2h_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "495598d906fed0f92db466c74ea97d14aafef9af2c76506092d99cef11049c44"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_powermaul_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "28c5070c5012433b4d886126f20fca54160588378780895f8cd3c79c6b86a54e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_powermaul_p2_stacking_increase_impact_on_hit.md",
+      "sha256": "45e85f2d309f57a474bddb11b4497ca4d7712313164e2f5f38e48d9ef92392d2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_powermaul_p3_stacking_increase_impact_on_hit.md",
+      "sha256": "b4ee0924e887c9717f3042fbc3465c2c92f1f2861be93d78f481ad60b649e5f2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_powermaul_shield_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "6fee8dff16d66a1d933cd56a86c6f0d8ec1847b906664e1dd2488d6cff269532"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\錘擊\\weapon_trait_bespoke_thunderhammer_2h_p1_stacking_increase_impact_on_hit.md",
+      "sha256": "f07d82735b66d0da00e4858fb5bcec0ae5647b0dba76c4ee6d71d5f3b2c3cfdf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "e19fa1e0635796c1e54afdee74c8980001b9454beb03a8646d6b2ef8277e1155"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\「惡魔之爪」劍\\README.md",
+      "sha256": "4ddbe4e3c6a153e6756152520637e00bd733b17935f9f07994412a3f00e77d98"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\工兵鏟\\README.md",
+      "sha256": "497221fdb42a67b2accc7845526de69d6d158b5e7d3c995a5097d9a3caed4905"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚\\README.md",
+      "sha256": "8fa8a6491701050e540b4eb1d39a1aeec353595fd5379b6c94b57e4d818a1ab1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚和鎮壓護盾\\README.md",
+      "sha256": "f89ce455c1e37fec05e11ac661e624fb40171db2b34e466f130e5cfd6d121fce"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碎骨者\\README.md",
+      "sha256": "d70d6f56ec7bd9d323759a15469807b5c9d2ac47abab3ccb077d45a703d8080f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碾壓者\\README.md",
+      "sha256": "d76b0648dcf25904ff218f3ebc035a29aed7379f443119027cdae51fc1c4910b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\雷鎚\\README.md",
+      "sha256": "ec85b6ec47ee5236831aff10800745a3b91c4a188bd03f78e4a713119ba76442"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\電弧鎚\\README.md",
+      "sha256": "94fe2baaf369427f111d11c936414e879fbb376e74ba49e70ea491780de4682e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\電擊錘\\README.md",
+      "sha256": "c1947666cda496ba360f7829c94faf297139fc127edfc47fb644493d072b6733"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "796416936155b2678e8fad78cb5cfdd98701c6370f0de4e27a379557dd9f4f90"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-raw-verification.json",
+      "sha256": "3de4428f313a278a8bad5dbc491b4f509fad6079692b70b80e2039a89fc6f11e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hammerblow-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "d0f88f81ae35c6099388913d2067c787a30d419ab7abb2b739274f1ab554811f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-001.json",
+      "sha256": "d777829c9785b0187dcb843eaf05eaa2dfd5bd6f2928dea88712fcacde2c8907"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-002.json",
+      "sha256": "16546b73e0ccd9b5d8abad8b8ef5ada274eff5afe9cbe318e1af2b2344856291"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-003.json",
+      "sha256": "d9b57f262e9149f77f7b596be8c4d9b7109c5fddbe111776f46fa33d2e19b19d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-actual-preview-receipt-004.json",
+      "sha256": "bc809244d8d2ceb49b8ba291df3363a20c22ccb75015efb50842e484b87eaf65"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/hammerblow-agent-evidence.json",
+      "sha256": "9ed05cda40635c024b2603a79b760b216dae433afea47a30a5c346087c361a15"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-group/limbsplitter-formal-nonauthor-review.json",
+      "sha256": "0e24f9f4602b1b0c058e244e051146f7651a0fe24e6557ba72f36932b953f57c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-agent-config.json",
+      "sha256": "f2f44a729559661e88900bca994dfb1a15a6832bdf3b495b409cc1274416d8c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-agent-evidence.json",
+      "sha256": "9ed05cda40635c024b2603a79b760b216dae433afea47a30a5c346087c361a15"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-agent-draft.md",
+      "sha256": "f562637902f585de9a3a5d6afa47764c5401c9f6e762b70d21d657b8f26ed9b4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-final-content-delta-review.json",
+      "sha256": "b751ac488e2a9a29da1d88dd25e622793a87d5cd06b63403a1767446d16791d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-frozen-source-verification.json",
+      "sha256": "72b37c665a474c4e2bf37c3fc5d234978f861074bb4ee45b3c97791fef70da59"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-primary-sticky-shield-push-content-delta-review.json",
+      "sha256": "a4f4b0d09a98172265eb77fdeccb33614efdda894b2b71e75c4f9990353baa0c"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hammerblow-formal-peer-scope.json",
+    "sha256": "87582b8a1f50183ec42589f27f5b5cadfd47bd5ff3fd167b69ca57ffcf2a45a5",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

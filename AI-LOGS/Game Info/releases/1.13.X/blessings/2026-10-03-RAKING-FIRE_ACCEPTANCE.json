@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-03",
+  "blessing": "raking-fire",
+  "scope": "incremental acceptance: P1 Agripinaa Mk I extension; three prior variants/four bindings remain accepted",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/掃射/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_allow_flanking_and_increased_damage_when_flanking"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 4,
+  "total_bindings": 5,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "name_key": "loc_trait_bespoke_allow_flanking_and_increased_damage_when_flanking",
+    "slug": "raking-fire",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "peer_review": "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-mark-extension-agent-peer-review.json",
+    "peer_review_sha256": "73c00e25a3cda34c0c794fbf9783d8f2699c2dbbe6d262025e64422c74e7f2c6",
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/掃射/LOCALIZATION_COMPARISON.md": "6ee2b600c20a8e923fe5a7998be663d0b028923078a098c039277d2a8ddc3f36",
+      "Game Info/releases/1.13.X/blessings/entries/掃射/README.md": "7902c00ea350367c3264aa1349739f20f361cebcedf4fd1c54a488eb51e3a97b",
+      "Game Info/releases/1.13.X/blessings/entries/掃射/SOURCE_INDEX.md": "9420dc8d352e404071516584ef48437e630c844b9ea03118e379a3c35735bc9f",
+      "Game Info/releases/1.13.X/blessings/entries/掃射/TIER_VALUES.md": "f527932e6324e135414e3b27ae891db7c6b789be5e5d775bc80ec39503aa3184",
+      "Game Info/releases/1.13.X/blessings/entries/掃射/WEAPON_COMPATIBILITY.md": "e7aa49ffffa946f1ef1de2b06c3fae25e0fe4b2c0e1e28b6e6bf6db721f7ba7a",
+      "Game Info/releases/1.13.X/blessings/entries/掃射/weapon_trait_bespoke_autogun_p1_allow_flanking_and_increased_damage_when_flanking.md": "c751750c59f9761c65ffebadfea5bdfff01cc95d932d3053f3004b7fa265e0b0",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "d510aa74d5c018ebf1a39593955cb264875a54f9344fb617fd5200bd5a65645f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-config.json": "ea42d24025de1950523b14e40acaf675557a508caeb8d39a1c0ac9da9c727048",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-mark-extension-config.json": "50f4e9eee1db3b7fcb27a2eb83120d9578c14583c79ce1705790ecaa7bc17ea0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-extension-draft.json": "bcc183b9cdd723fc683f81fb51961b37abf5bfec26ee4b2de4207bad09415a64",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-mark-extension-primary-traits-review.json": "e1841c6e3384beebe2cc5594592526580534f9b758b1418850d80793984a709b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-mark-extension-primary-ui-review.json": "d884dfb63ed16217e5a9252250220f59c957d92066a1af16cc84ef7624cf6046",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-mark-extension-primary-ui-raw-verification.json": "45a7480fc5f977bfd1240e3257cda7fbcc7bfba8d06e427ece63306e078a0de9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-image.json": "699ce5ef57b9b107458d06db9fd10ab9ecdb007bc88e985562a6d4b66a6aea06",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "f4270fbd2b56a15431d647b92fda0fe59b9ce25e9d6373cdf9a028d26dad79ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-modes-review.json": "32b14f474428a2900ca12a001838bf1adfa70d2c621d697ef2a5aea5a3d46c37",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "2f709112089d05fdb6c5c3e20d3d0a044ef9ed5a938b1efff568e4491427f8a7"
+    },
+    "review_scope": "Incremental diff HEAD review of the five changed Raking Fire markdown files and the newly added Agripinaa Mk I Infantry Autogun page. Previously accepted common Raking Fire mechanics were not re-reviewed; their applicability and six cached source ranges were checked against this P1 clone.",
+    "corrections": [],
+    "FASTER": false
+  },
+  "image": {
+    "new_issue_attachment": false,
+    "attachment": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "raking-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_041",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_041.png",
+      "attachment": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965792301",
+      "acquired_date": "2026-10-03",
+      "sha256": "26695bfc06b25c222c0e3836a5689c16c81f9fac1c824c35c4febf5718e0cb07",
+      "content_type": "image/png",
+      "size": 5010,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "掃射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    },
+    "reuse_scope": "Unchanged weapon_trait_041 icon and previously accepted public attachment receipt reused."
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 8,
+      "tables": 7,
+      "rows": 55,
+      "lists": 12,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 39,
+      "source_files": 22,
+      "bindings": 284,
+      "variants": 149,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 7,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 8,
+      "local_references": 94,
+      "remote_references": 85,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 2,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-001-full-scan.json",
+        "sha256": "7ebf2641e5b5d5eb9404c9440b8c3c78d886377b57a44d252d3907f0d541e5eb",
+        "trigger": "round-001"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 128,
+    "not_started_name_groups": 128,
+    "partial_name_groups": 0,
+    "remaining_variants": 456,
+    "remaining_bindings": 901,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "f4270fbd2b56a15431d647b92fda0fe59b9ce25e9d6373cdf9a028d26dad79ea"
+  },
+  "previous_local_commit": "dc1cc0ba75c8bc97f80f2056fde0834628101fe9",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "one new exact mark variant; accepted common rear-half gate and additive damage phase retained",
+    "own_tier_values": [
+      0.325,
+      0.35,
+      0.375,
+      0.4
+    ],
+    "stage_formula": {
+      "formula": "flanking stage multiplier = 1 + q + s when the ranged back-half condition passes; otherwise no flanking increment. q is this trait tier and s is other same-stat flanking_damage.",
+      "q_by_tier": [
+        0.325,
+        0.35,
+        0.375,
+        0.4
+      ],
+      "example": "With D=100 before flanking, tier IV and s=0: D×(1+0.40)=140 at the flanking stage; same as existing variants, not a claim of final health damage."
+    },
+    "common_evidence_reused": {
+      "cache_path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "records": [
+        {
+          "record_id": "held-slot-condition",
+          "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+          "lines": [
+            43,
+            59
+          ],
+          "content_sha256": "23f24a9375da44b47b41c983d2b0b5668bda0930a595788aaf34ec50fc2644ff",
+          "applicability": "The shared clone uses the held-slot predicate for conditional stat/keyword application; switching away stops the bonus.",
+          "fixed_cache_match_verified": true
+        },
+        {
+          "record_id": "conditional-stat-override",
+          "path": "scripts/extension_systems/buff/buffs/buff.lua",
+          "lines": [
+            689,
+            747
+          ],
+          "content_sha256": "e4da07a8e7c149e095853eae5e9ca1261c137b431b9244eb864e0a99d46e75de",
+          "applicability": "The trait override supplies the per-tier flanking_damage value consumed by generic conditional-stat calculation.",
+          "fixed_cache_match_verified": true
+        },
+        {
+          "record_id": "trait-equip-target",
+          "path": "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+          "lines": [
+            168,
+            210
+          ],
+          "content_sha256": "f053898c6fdfb70b130c2c972f68fb3cc1be16874dc2b7831be982726cffb631",
+          "applicability": "The trait buff target lifecycle is on_equip.",
+          "fixed_cache_match_verified": true
+        },
+        {
+          "record_id": "weapon-equip-install",
+          "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+          "lines": [
+            633,
+            693
+          ],
+          "content_sha256": "eccc5821f3fd364185a6e369863a99753d8082ba0eabb3e55e893435f582b06e",
+          "applicability": "The weapon extension installs the equipped item's on_equip trait buff.",
+          "fixed_cache_match_verified": true
+        },
+        {
+          "record_id": "weapon-unwield-lifecycle",
+          "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+          "lines": [
+            743,
+            785
+          ],
+          "content_sha256": "173da35e12aec0b9b5d2488d8cef7616463f54f42fd0b9fb17f790e8924764d6",
+          "applicability": "Unwield removes on_wield buffs; this Raking clone is additionally gated by the held-slot condition.",
+          "fixed_cache_match_verified": true
+        },
+        {
+          "record_id": "ranged-action-dispatch",
+          "path": "scripts/utilities/action/ranged_action.lua",
+          "lines": [
+            22,
+            28
+          ],
+          "content_sha256": "57d65a635af8b81adba45acedbb8e56939bc7b38af7172a8a9b55ae4be06aae0",
+          "applicability": "The P1 M1 hip/zoom actions are hit-scan and use ranged attack dispatch; reuse this unchanged classification evidence.",
+          "fixed_cache_match_verified": true
+        }
+      ],
+      "raking_specific_evidence": "Reuse accepted raking-fire-config.json plus raking-fire-extension-agent-review.json for unchanged direction, stat, and damage-phase details; P1 wrapper is a direct shared-base clone."
+    },
+    "primary_tier_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-mark-extension-primary-traits-review.json",
+      "sha256": "e1841c6e3384beebe2cc5594592526580534f9b758b1418850d80793984a709b"
+    },
+    "mode_evidence_reused": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-modes-review.json",
+      "sha256": "32b14f474428a2900ca12a001838bf1adfa70d2c621d697ef2a5aea5a3d46c37"
+    },
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-extension-draft.json",
+      "sha256": "bcc183b9cdd723fc683f81fb51961b37abf5bfec26ee4b2de4207bad09415a64"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/raking-fire-primary-ui-review.json",
+      "sha256": "d884dfb63ed16217e5a9252250220f59c957d92066a1af16cc84ef7624cf6046"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_allow_flanking_and_increased_damage_when_flanking",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p1_m1",
+          "loc_weapon_pattern_autogun_p1_m1",
+          "loc_weapon_mark_autogun_p1_m1"
+        ],
+        "name_zh_tw": "步兵自動槍 阿格里皮娜 Mk I",
+        "name_en": "Infantry Autogun Agripinaa Mk I",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 768,
+        "append_line": 770
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "previous_config_candidate_promoted": "weapon_trait_bespoke_autogun_p1_allow_flanking_and_increased_damage_when_flanking",
+    "promotion_evidence": "Current remaining-tasks partial row, corrected inventory binding, exact mark restriction, and verified P1 M1 category import/ukeys/append.",
+    "after_extension": {
+      "variants": 4,
+      "bindings": 5,
+      "exact_trait_metadata_items": 5
+    },
+    "remaining_exact_metadata_candidate": {
+      "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_allow_flanking_and_increased_damage_when_flanking",
+      "reason": "Prior accepted review: exact metadata exists, but its weapon template imports the Stubrevolver category rather than the dual-stubpistol bespoke category."
+    },
+    "source_only_candidate": {
+      "trait_id": "weapon_trait_bespoke_needlepistol_p1_allow_flanking_and_increased_damage_when_flanking",
+      "reason": "Source definition exists but no exact matching metadata item was found."
+    },
+    "status": "Do not classify remaining candidates as unused."
+  },
+  "incremental_scope": {
+    "new_variants": 1,
+    "new_bindings": 1,
+    "retained_accepted_variants": 3,
+    "retained_accepted_bindings": 4,
+    "previous_acceptance_sha256": "32ee4e648775cb15d718b306b97ef29e213339498c11529dcb77b559c6289020",
+    "previous_acceptance_commit": "f6e39490b107d95d288db4e9d47e7aaac32ce947"
+  }
+}

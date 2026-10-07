@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_575_579",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L429-L447 and L240-L324 (read across batches), L452-L517, L600-L631, L632-L656. Existing Buff values and mechanisms reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Signed negative Threat remains consistent; Chinese wording uncertainty is retained separately. Entry/exit restoration timing, shared recharge and current-Health sampling are supplementary. Normalize the recharge supplement result to the existing Not covered by the description category for totals."
+  ],
+  "skills": [
+    {
+      "id": "zealot_additional_charge_of_ability",
+      "name": "Redoubled Zeal",
+      "name_hash": "973b6f3c",
+      "description_hash": "13ade9bb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_additional_charge_of_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_additional_charge_of_ability.md",
+      "commit": "599ab1362"
+    },
+    {
+      "id": "zealot_stealth",
+      "name": "Shroudfield",
+      "name_hash": "e94fd822",
+      "description_hash": "644f101d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_stealth.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_stealth.md",
+      "commit": "749b7fe78"
+    },
+    {
+      "id": "zealot_increased_duration",
+      "name": "Master-Crafted Shroudfield",
+      "name_hash": "ad0e421f",
+      "description_hash": "f25397d4",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_increased_duration.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_increased_duration.md",
+      "commit": "cc8c03278"
+    },
+    {
+      "id": "zealot_leaving_stealth_restores_toughness",
+      "name": "Invigorating Revelation",
+      "name_hash": "5be8c25c",
+      "description_hash": "cc97b988",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_leaving_stealth_restores_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_leaving_stealth_restores_toughness.md",
+      "commit": "30f7ba620"
+    },
+    {
+      "id": "zealot_restore_stealth_cd_on_damage",
+      "name": "Martyr's Purpose",
+      "name_hash": "2d55be3c",
+      "description_hash": "62f53f3a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_restore_stealth_cd_on_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_restore_stealth_cd_on_damage.md",
+      "commit": "950db6bd9"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 353,
+    "from_commit": "e0361962c",
+    "to_commit": "950db6bd9",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

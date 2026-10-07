@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-03",
+  "blessing": "penetrating-flame",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/穿透火焰/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_flamer_p1_burned_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_forcestaff_p2_burned_targets_receive_rending_debuff"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 2,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_bindings",
+    "scope": "two variants/two bindings direct-flamer source research and unique ignored config draft",
+    "findings": [
+      "Both I–IV1/2/3/4; actual target .01/20cap/5s, no need already burning",
+      "Flamer gas and burst direct helper sends on_direct_flamer_hit, DoT ticks do not",
+      "Force Staff short press and charged flame both direct paths",
+      "All exact metadata/RAW UI keys/import/appends verified"
+    ],
+    "primary_review": "Primary independently read both tier overrides/wrappers, actual base/target template/helper/actions/weapon wiring, exact metadata/UI/RAW, registry and imports; shared stack and rending consumers reused at identical fixed SHA.",
+    "draft_corrections": [
+      "Primary clarified per-stack rending percentage points and delayed application; direct damage precedes queued proc.",
+      "Primary added first-hit and relative increase example, exact registry references and shortened import spans."
+    ],
+    "parallel_execution": {
+      "groups": [
+        "penetrating-flame",
+        "bloodletter",
+        "flesh-tearer"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted",
+      "scope": "current primary config player/examples/math",
+      "response": "唯讀複核 player/examples/math 沒有必要修正；每層1百分點、20層上限、延後套用及10→30/102.5算例一致。"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "penetrating-flame",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_164",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_164.png",
+      "attachment": "https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966810974",
+      "acquired_date": "2026-10-03",
+      "sha256": "1d298765a31f5b306fd52bc1b49b76d81ee5b46dd4e478980fd5dec7f19b23bb",
+      "content_type": "image/png",
+      "size": 4897,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "穿透火焰祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 274,
+      "tables": 229,
+      "rows": 1851,
+      "lists": 356
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 849,
+      "source_files": 298,
+      "bindings": 162,
+      "variants": 87,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 974,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 274,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 143,
+    "not_started_name_groups": 143,
+    "partial_name_groups": 0,
+    "remaining_variants": 501,
+    "remaining_bindings": 1006,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "5eb2deeaea8dd37cdfc59b17f5d2c72557aa350b3b6321dcf0082e72d39ec08b"
+  },
+  "previous_local_commit": "02b990f5d6a6eec6888844570a075f62da326761",
+  "current_blessing_formula_review": {
+    "result": "passed",
+    "scope": "actual .01/20cap/5s target buff and queued post-damage application, independently computed armor-phase examples",
+    "checks": [
+      {
+        "n": 16,
+        "q": 4,
+        "new_stacks": 20,
+        "B": 0.2
+      },
+      {
+        "D": 100,
+        "A": 0.1,
+        "B": 0.2,
+        "k": 1,
+        "F": 0.3,
+        "before": 10,
+        "after": 30,
+        "relative_increase": 2
+      },
+      {
+        "D": 100,
+        "A": 0.9,
+        "B": 0.2,
+        "k": 1,
+        "overflow": 0.25,
+        "F": 1.025,
+        "after": 102.5
+      }
+    ],
+    "same_hit_retroactive": false
+  },
+  "ui_name_review": {
+    "result": "passed",
+    "scope": "both fixed Git import/appends and registries, exact metadata icon/restrictions, RAW family/pattern/mark locale pairs"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "bound_bindings": 2,
+    "same_name_candidates": [],
+    "same_description_candidates": [],
+    "unresolved_candidates": [],
+    "unbound_definition_candidates": [],
+    "unresolved_total": 58,
+    "definitions_not_bound_total": 105,
+    "unique_definition_paths_checked": 32,
+    "exact_name_key_matches_in_checked_paths": 0,
+    "exact_description_key_matches_in_checked_paths": 0,
+    "exact_trait_id_or_item_path_matches_in_checked_paths": 0,
+    "status": "Exact matching inventory records and metadata checked; bounded out-of-intersection source files contain no exact name key, description key, trait ID, or item path match."
+  }
+}

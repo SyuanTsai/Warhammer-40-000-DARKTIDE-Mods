@@ -1,0 +1,323 @@
+{
+  "date": "2026-10-04",
+  "blessing": "efficiency",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/效率/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent confirmed the original collaboration dispatch used gpt-6-luna/max; runtime self-inspection unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": {
+      "scope_manifest_sha256": "8431e5bed10a165d4cbb6058c50cf8b5f2e5882f96c76ba9c0366089391cb21d",
+      "file_count": 26,
+      "description": "Fixed Efficiency formal peer scope; only the resolved four-file dry-fire wording delta was newly reviewed."
+    },
+    "findings": [
+      "The entry, compatibility page, reverse Infantry Lasgun page, release indexes, and blessing map consistently cover exactly the one Efficiency trait on the Kantrael Mk VII, Mk IIb, and Mk IX; actual IDs, names, and UI evidence agree.",
+      "The four cooldown tiers are 1.25/1/0.75/0.5 seconds. A new instance is ready, firing refreshes the timer even while cooling down, the fired-but-missed case is explicit, and an empty-clip dry fire is correctly excluded. The off-cooldown keyword is independent of held-slot display; switching does not pause the timer, while removing the source item removes the blessing.",
+      "The source formula round(u/3) with final clip clamping matches actual 3/2/3 base ammo use and 1/1/1 reduced use. Sufficient-clip savings are 2/3, 1/2, and 2/3; the one-round clip boundary correctly shows no extra savings. The examples state their assumptions and the 0.3-second refresh correctly moves the IV-tier deadline to 0.8 seconds.",
+      "The RAW 66% wording and tier formatter are reconstructed without template duplication. The 50% Mk IIb result is identified as a mark-limited numeric discrepancy; the Mk VII/IX 66.7% results are treated as a normal approximation.",
+      "Image identity weapon_trait_048, full game icon path, attachment URL, and image evidence are kept distinct and agree across the formal entry and map. No unsupported gameplay-test or FASTER claim appears."
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/README.md": "88c3ddfb06365527863631ea44718b4995bd1e27c594c83e190eda2f7562992e",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "19d5d6caf1934d2d24ec45ad5c8bd0902f23f0152ecfb55092d1bce5ea450212",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "349993220669aa95b90e0cb7c07a815626f7c18d0358b96cf6695b4eb6f463bb",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "40d3422ec89c6c00ca3786316dcf267bb57e530cd636a0d6aa6dd285b301cbf5",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "ba68c66f271f0ad086623e86dde85e2ca490b65edb226c71a95b0d148d7a7b78",
+      "Referneces/Translation.md": "5d67c270cd0cde44af5c5ff372abab8cca88cd8bf45500ca840e2c13a474a196",
+      "Game Info/releases/1.13.X/blessings/entries/效率/DAMAGE_PERCENTAGE_REVIEW.md": "4b07e60ad6d00ab6eb779b2d1c46983c0eb889c1e989c002dada73b223d83dc4",
+      "Game Info/releases/1.13.X/blessings/entries/效率/LOCALIZATION_COMPARISON.md": "b412506a7a1b03f014e399c54401efc627462f9885035e76fd1f0886e6c059b6",
+      "Game Info/releases/1.13.X/blessings/entries/效率/README.md": "0bec43c2b143b7f962c027025e1b0046f1b1c691365298838905a5898db463bb",
+      "Game Info/releases/1.13.X/blessings/entries/效率/SOURCE_INDEX.md": "8e6fe00ca7a819e7376ce36d8d83383855546e269be47eeb669a3f5c65b2e3bb",
+      "Game Info/releases/1.13.X/blessings/entries/效率/TIER_VALUES.md": "d0fc8ab537ba4e6a8b1ff956edc64fa1f410dda55fa30ec45133fe6801b68cea",
+      "Game Info/releases/1.13.X/blessings/entries/效率/WEAPON_COMPATIBILITY.md": "fddd4a2fe01ce6f109964c4dc66c72f009702dd1aa4c5b2455f5b3d51db04da3",
+      "Game Info/releases/1.13.X/blessings/entries/效率/weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction.md": "199bd21f0fdc0c37d04b40ee24fcbef0c288fe0fa1238841104b1723cb4f7246",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-config.json": "41d8d7b1f5651c0ed88135f5472e1ef1b51c7c337949abe7a0609c386033bad7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-extension-draft.json": "818c5c29ffe94423041229ed80f8afce10dc2797e04f42e95688236b5946006c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-resume-review.json": "56646d19586047b3a019fbda7ea96e38201174cb89b37552470026d282c12135",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-own-tier-diff.json": "77c5441a35a4baf07128c6c6f57abfb53d096651439c28d2b0c0622599fb0963",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ui-review.json": "35238d763a603d74731ad28a695fed3c760b74bfadba4c683e24376bda9baa76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ui-raw-verification.json": "2a78fd2eba7efc25bba35d2fb5f01db530ee007be3ad9a3d884d44bbae5a3a7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ammo-review.json": "50937f77910190b7308a0e66bb48194c9e49c227f899925c604b321a12760090",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-cooldown-keyword-review.json": "f4b9ebbcfa461575c7a1db28feab5c662a83fe2af4776ae15ec3dab7893f1ba9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-lifecycle-timing-review.json": "4f7eb6495799e138cf766f96a638a3ac86a82afa4e41d9b7836bc1ed963c7dfb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-image.json": "22e1d884c7c5a3861aea9e6a38509740129ad59429db81264a7da7570c5938d0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-agent-config.json": "b91fb85655f5acaa2c2b20d9664165aba70dd805e4086d420eea5d559f449bb1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-agent-evidence.json": "a3263d8655b8d52ac1675f21a8c902f255e810b7a4ea39e3da036465168ceeda",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-agent-draft.md": "b6c7331f267749c481ff61ebd43924ddddaeda6b5d4db330cce3144036b6dc7f"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/882a8dca-8f18-4327-901b-c03dba2ca7e7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "efficiency",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_048",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_048.png",
+      "attachment": "https://github.com/user-attachments/assets/882a8dca-8f18-4327-901b-c03dba2ca7e7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5977408707",
+      "acquired_date": "2026-10-04",
+      "sha256": "c55ecb229a06c7d39c4be11d653e97d38196753459a336fa19b0ac6c45a1b97c",
+      "content_type": "image/png",
+      "size": 3662,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "效率祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and public attachment visually matched; LA alpha inspection shows central ammunition/magazine motif, surrounding circle arcs and four directional marks. Original bytes unchanged; alpha diagnostic remains local temporary only."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 250,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 50,
+      "source_files": 18,
+      "bindings": 435,
+      "variants": 228,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 18,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 589,
+      "remote_references": 306,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 12,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-011-full-scan.json",
+        "sha256": "2481f69432050a91fcd17bef347e56680a793c964e9b8ca8632e61b9ee4a1ed8",
+        "trigger": "round-011"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 102,
+    "not_started_name_groups": 102,
+    "partial_name_groups": 0,
+    "remaining_variants": 377,
+    "remaining_bindings": 750,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "505d14a3c341d09e315dc73e25a74dfe23ccc2f96abe2bdce549b97f856d1ae1"
+  },
+  "previous_local_commit": "5cbaea76d4445a7ef270172c517026c32cebc3bc",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "method": "Own complete tier/wrapper, UI3 and actual ammoconsumer3/2/3 directly reviewed; content deltas focus on off-cooldown independentkeyword/init/default0, event handlingt, on-equip switch vs removal, ammo round and currentclip clamping. Actual44agent source proofs verified; server deliverycache reused under own installed/event prerequisites.",
+    "formula": "nonnegative nominalcost=round(u/3), actual=min(A,cost); clip=max(A-cost,0)",
+    "base_ammo_by_mark": {
+      "lasgun_p1_m1": 3,
+      "lasgun_p1_m2": 2,
+      "lasgun_p1_m3": 3
+    },
+    "reduced_ammo_all_marks": 1,
+    "cooldown_tiers_seconds": [
+      1.25,
+      1,
+      0.75,
+      0.5
+    ],
+    "first_ready": true,
+    "no_held_gate": true,
+    "events_refresh_during_cooldown": true,
+    "event_origin": "update_proc_events argumentt, not params.t",
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-own-tier-diff.json",
+        "sha256": "77c5441a35a4baf07128c6c6f57abfb53d096651439c28d2b0c0622599fb0963"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ui-review.json",
+        "sha256": "35238d763a603d74731ad28a695fed3c760b74bfadba4c683e24376bda9baa76"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ui-raw-verification.json",
+        "sha256": "2a78fd2eba7efc25bba35d2fb5f01db530ee007be3ad9a3d884d44bbae5a3a7a"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ammo-review.json",
+        "sha256": "50937f77910190b7308a0e66bb48194c9e49c227f899925c604b321a12760090"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-cooldown-keyword-review.json",
+        "sha256": "f4b9ebbcfa461575c7a1db28feab5c662a83fe2af4776ae15ec3dab7893f1ba9"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-lifecycle-timing-review.json",
+        "sha256": "4f7eb6495799e138cf766f96a638a3ac86a82afa4e41d9b7836bc1ed963c7dfb"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-image.json",
+        "sha256": "22e1d884c7c5a3861aea9e6a38509740129ad59429db81264a7da7570c5938d0"
+      }
+    ],
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-extension-draft.json",
+      "sha256": "818c5c29ffe94423041229ed80f8afce10dc2797e04f42e95688236b5946006c"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ui-review.json",
+      "sha256": "35238d763a603d74731ad28a695fed3c760b74bfadba4c683e24376bda9baa76"
+    },
+    "bindings": [
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m1",
+          "loc_weapon_pattern_lasgun_p1_m1",
+          "loc_weapon_mark_lasgun_p1_m1"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk VII",
+        "name_en": "Infantry Lasgun Kantrael Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 714,
+        "append_line": 716
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m2",
+          "loc_weapon_pattern_lasgun_p1_m2",
+          "loc_weapon_mark_lasgun_p1_m2"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IIb",
+        "name_en": "Infantry Lasgun Kantrael Mk IIb",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 692,
+        "append_line": 694
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m3",
+          "loc_weapon_pattern_lasgun_p1_m3",
+          "loc_weapon_mark_lasgun_p1_m3"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IX",
+        "name_en": "Infantry Lasgun Kantrael Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 693,
+        "append_line": 695
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-resume-review.json",
+      "sha256": "56646d19586047b3a019fbda7ea96e38201174cb89b37552470026d282c12135"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-own-tier-diff.json",
+      "sha256": "77c5441a35a4baf07128c6c6f57abfb53d096651439c28d2b0c0622599fb0963"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ui-review.json",
+      "sha256": "35238d763a603d74731ad28a695fed3c760b74bfadba4c683e24376bda9baa76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ui-raw-verification.json",
+      "sha256": "2a78fd2eba7efc25bba35d2fb5f01db530ee007be3ad9a3d884d44bbae5a3a7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-ammo-review.json",
+      "sha256": "50937f77910190b7308a0e66bb48194c9e49c227f899925c604b321a12760090"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-cooldown-keyword-review.json",
+      "sha256": "f4b9ebbcfa461575c7a1db28feab5c662a83fe2af4776ae15ec3dab7893f1ba9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-primary-lifecycle-timing-review.json",
+      "sha256": "4f7eb6495799e138cf766f96a638a3ac86a82afa4e41d9b7836bc1ed963c7dfb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-image.json",
+      "sha256": "22e1d884c7c5a3861aea9e6a38509740129ad59429db81264a7da7570c5938d0"
+    }
+  ],
+  "primary_review_method": "Own complete tier/wrapper, UI3 and actual ammoconsumer3/2/3 directly reviewed; content deltas focus on off-cooldown independentkeyword/init/default0, event handlingt, on-equip switch vs removal, ammo round and currentclip clamping. Actual44agent source proofs verified; server deliverycache reused under own installed/event prerequisites.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-config.json",
+    "sha256": "41d8d7b1f5651c0ed88135f5472e1ef1b51c7c337949abe7a0609c386033bad7"
+  },
+  "agent_frozen_hashes": {
+    "config": "b91fb85655f5acaa2c2b20d9664165aba70dd805e4086d420eea5d559f449bb1",
+    "evidence": "a3263d8655b8d52ac1675f21a8c902f255e810b7a4ea39e3da036465168ceeda",
+    "draft": "b6c7331f267749c481ff61ebd43924ddddaeda6b5d4db330cce3144036b6dc7f"
+  },
+  "previous_objects_unchanged": {
+    "blessings": 64,
+    "variants": 227,
+    "bindings": 432
+  },
+  "previous_weapons_unchanged": true,
+  "common_mechanism_cache": {
+    "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+    "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+    "application": "Fixed-SHA shared server event delivery/trait lifecycle cache used only with own installed wrapper and actual shoot event prerequisites; own cooldown/off-keyword and ammo arithmetic separately content-reviewed."
+  }
+}

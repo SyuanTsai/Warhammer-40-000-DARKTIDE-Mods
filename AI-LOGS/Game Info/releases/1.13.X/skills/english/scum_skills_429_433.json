@@ -1,0 +1,93 @@
+{
+  "id": "scum_skills_429_433",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Display only: shared recipe name/stat/keyword generator talent_settings_broker.lua L12-L114 (reuse for subsequent recipes); Spur substitution definitions L499-L549. No Buff/event/call-chain retracing."
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "broker_stimm_celerity_1",
+      "name": "Spur I",
+      "name_hash": "33b4b842",
+      "description_hash": "a2530496",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_celerity_1.md",
+      "commit": "7ea8e880a",
+      "description_hashes": [
+        "a2530496",
+        "d0347040"
+      ]
+    },
+    {
+      "id": "broker_stimm_celerity_2",
+      "name": "Spur II",
+      "name_hash": "33b4b842",
+      "description_hash": "a2530496",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_2.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_celerity_2.md",
+      "commit": "62e5185fb",
+      "description_hashes": [
+        "a2530496",
+        "d0347040",
+        "26fbf08f"
+      ]
+    },
+    {
+      "id": "broker_stimm_celerity_3",
+      "name": "Spur III",
+      "name_hash": "33b4b842",
+      "description_hash": "a2530496",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_3.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_celerity_3.md",
+      "commit": "1fb45b39b",
+      "description_hashes": [
+        "a2530496",
+        "26fbf08f"
+      ]
+    },
+    {
+      "id": "broker_stimm_celerity_4",
+      "name": "Spur IV",
+      "name_hash": "33b4b842",
+      "description_hash": "a2530496",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_4.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_celerity_4.md",
+      "commit": "2cda06205",
+      "description_hashes": [
+        "a2530496",
+        "26fbf08f"
+      ]
+    },
+    {
+      "id": "broker_stimm_celerity_5a",
+      "name": "Spur V",
+      "name_hash": "33b4b842",
+      "description_hash": "a2530496",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5a.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_celerity_5a.md",
+      "commit": "26763f7e9",
+      "description_hashes": [
+        "a2530496",
+        "a6fe7bf4",
+        "5936af23"
+      ]
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 404,
+    "from_commit": "22da018e0",
+    "to_commit": "26763f7e9",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

@@ -1,0 +1,1544 @@
+{
+  "date": "2026-10-03",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "metadata_version": 138291,
+  "reason": "The literal family/category-only restriction check omitted exact mark IDs in weapon_type_restriction. Each added binding has exact category metadata, complete tier definition, wrapper and template import/ukeys/append.",
+  "original_counts": {
+    "weapon_patterns": 70,
+    "weapon_marks": 134,
+    "display_name_groups": 164,
+    "trait_definitions_bound": 588,
+    "mark_bindings": 1168,
+    "unresolved": 58
+  },
+  "corrected_counts": {
+    "weapon_patterns": 70,
+    "weapon_marks": 134,
+    "display_name_groups": 167,
+    "trait_definitions_bound": 605,
+    "mark_bindings": 1185,
+    "unresolved": 58
+  },
+  "inventory_sha256_before": "2738f50b628ef48dbf6ff0bab1512bb4a2810e88ee2d5b103517ffe687160ccd",
+  "inventory_sha256_after": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+  "outside_definitions_before": 105,
+  "outside_definitions_after": 88,
+  "unresolved_preserved": 58,
+  "original_binding_prefix_preserved": true,
+  "primary_reviewer": "Sol / xhigh",
+  "source_ranges_directly_read": true,
+  "template_wiring": {
+    "forcesword_p1_m1": {
+      "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+      "import_line": 15,
+      "import_source": "local WeaponTraitsBespokeForceswordP1 = require(\"scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1\")",
+      "ukeys_line": 1745,
+      "append_line": 1747,
+      "append_source": [
+        "local bespoke_forcesword_p1_traits = table.ukeys(WeaponTraitsBespokeForceswordP1)",
+        "",
+        "table.append(weapon_template.traits, bespoke_forcesword_p1_traits)"
+      ]
+    },
+    "autogun_p1_m1": {
+      "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+      "import_line": 17,
+      "import_source": "local WeaponTraitsBespokeAutogunP1 = require(\"scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1\")",
+      "ukeys_line": 768,
+      "append_line": 770,
+      "append_source": [
+        "local bespoke_autogun_p1_traits = table.ukeys(WeaponTraitsBespokeAutogunP1)",
+        "",
+        "table.append(weapon_template.traits, bespoke_autogun_p1_traits)"
+      ]
+    },
+    "forcestaff_p1_m1": {
+      "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+      "import_line": 14,
+      "import_source": "local WeaponTraitsBespokeForcestaffP1 = require(\"scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1\")",
+      "ukeys_line": 1162,
+      "append_line": 1164,
+      "append_source": [
+        "local bespoke_forcestaff_p1_traits = table.ukeys(WeaponTraitsBespokeForcestaffP1)",
+        "",
+        "table.append(weapon_template.traits, bespoke_forcestaff_p1_traits)"
+      ]
+    },
+    "forcestaff_p3_m1": {
+      "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+      "import_line": 13,
+      "import_source": "local WeaponTraitsBespokeForcestaffP3 = require(\"scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3\")",
+      "ukeys_line": 1299,
+      "append_line": 1301,
+      "append_source": [
+        "local bespoke_forcestaff_p3_traits = table.ukeys(WeaponTraitsBespokeForcestaffP3)",
+        "",
+        "table.append(weapon_template.traits, bespoke_forcestaff_p3_traits)"
+      ]
+    },
+    "laspistol_p1_m1": {
+      "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+      "import_line": 16,
+      "import_source": "local WeaponTraitsBespokeLaspistolP1 = require(\"scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1\")",
+      "ukeys_line": 858,
+      "append_line": 860,
+      "append_source": [
+        "local bespoke_lasgun_p1_traits = table.ukeys(WeaponTraitsBespokeLaspistolP1)",
+        "",
+        "table.append(weapon_template.traits, bespoke_lasgun_p1_traits)"
+      ]
+    },
+    "plasmagun_p1_m1": {
+      "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+      "import_line": 18,
+      "import_source": "local WeaponTraitsBespokePlasmagunP1 = require(\"scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1\")",
+      "ukeys_line": 985,
+      "append_line": 987,
+      "append_source": [
+        "local bespoke_plasmagun_p1_traits = table.ukeys(WeaponTraitsBespokePlasmagunP1)",
+        "",
+        "table.append(weapon_template.traits, bespoke_plasmagun_p1_traits)"
+      ]
+    },
+    "shotgun_p1_m1": {
+      "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+      "import_line": 14,
+      "import_source": "local WeaponTraitsBespokeShotgunP1 = require(\"scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1\")",
+      "ukeys_line": 950,
+      "append_line": 952,
+      "append_source": [
+        "local bespoke_shotgun_p1_traits = table.ukeys(WeaponTraitsBespokeShotgunP1)",
+        "",
+        "table.append(weapon_template.traits, bespoke_shotgun_p1_traits)"
+      ]
+    }
+  },
+  "added_mapping_proofs": [
+    {
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcesword_p1_can_block_ranged",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/can_block_ranged",
+      "name_key": "loc_trait_bespoke_can_block_ranged",
+      "name_en": "Deflector",
+      "restriction": [
+        "forcesword_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "line": 53
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1745,
+        "append_line": 1747
+      },
+      "ui_name_zh_tw": "烈焰力場劍 朦朧 Mk II",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcesword_p1_m1": {
+          "0": [
+            {
+              "text": "Blaze Force Sword",
+              "hash": "936eb9dc",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "烈焰力場劍",
+              "hash": "936eb9dc",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcesword_p1_m1": {
+          "0": [
+            {
+              "text": "Obscurus",
+              "hash": "d158bba6",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "朦朧",
+              "hash": "d158bba6",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcesword_p1_m1": {
+          "0": [
+            {
+              "text": "Mk II",
+              "hash": "a0f22c2e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk II",
+              "hash": "a0f22c2e",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start": 53,
+        "end": 95
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start": 17,
+        "end": 17
+      }
+    },
+    {
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "trait_id": "weapon_trait_bespoke_autogun_p1_allow_flanking_and_increased_damage_when_flanking",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/allow_flanking_and_increased_damage_when_flanking",
+      "name_key": "loc_trait_bespoke_allow_flanking_and_increased_damage_when_flanking",
+      "name_en": "Raking Fire",
+      "restriction": [
+        "autogun_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "line": 506
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 768,
+        "append_line": 770
+      },
+      "ui_name_zh_tw": "步兵自動槍 阿格里皮娜 Mk I",
+      "ui_loc_id_components": {
+        "loc_weapon_family_autogun_p1_m1": {
+          "0": [
+            {
+              "text": "Infantry Autogun",
+              "hash": "e4751f57",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "步兵自動槍",
+              "hash": "e4751f57",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_autogun_p1_m1": {
+          "0": [
+            {
+              "text": "Agripinaa",
+              "hash": "932425cf",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "阿格里皮娜",
+              "hash": "932425cf",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_autogun_p1_m1": {
+          "0": [
+            {
+              "text": "Mk I",
+              "hash": "577cad10",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk I",
+              "hash": "577cad10",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start": 506,
+        "end": 545
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start": 44,
+        "end": 44
+      }
+    },
+    {
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "trait_id": "weapon_trait_bespoke_autogun_p1_count_as_dodge_vs_ranged_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/count_as_dodge_vs_ranged_on_close_kill",
+      "name_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill",
+      "name_en": "Hit & Run",
+      "restriction": [
+        "autogun_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "line": 362
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 768,
+        "append_line": 770
+      },
+      "ui_name_zh_tw": "步兵自動槍 阿格里皮娜 Mk I",
+      "ui_loc_id_components": {
+        "loc_weapon_family_autogun_p1_m1": {
+          "0": [
+            {
+              "text": "Infantry Autogun",
+              "hash": "e4751f57",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "步兵自動槍",
+              "hash": "e4751f57",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_autogun_p1_m1": {
+          "0": [
+            {
+              "text": "Agripinaa",
+              "hash": "932425cf",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "阿格里皮娜",
+              "hash": "932425cf",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_autogun_p1_m1": {
+          "0": [
+            {
+              "text": "Mk I",
+              "hash": "577cad10",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk I",
+              "hash": "577cad10",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start": 362,
+        "end": 391
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start": 26,
+        "end": 26
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/double_shot_on_crit",
+      "name_key": "loc_trait_bespoke_double_shot_on_crit",
+      "name_en": "Surge",
+      "restriction": [
+        "forcestaff_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "line": 451
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      "ui_name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Voidblast Force Staff",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "虛空爆破力場法杖",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Equinox",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "陰陽",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start": 451,
+        "end": 496
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start": 93,
+        "end": 95
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p1_faster_charge_on_chained_secondary_attacks",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/faster_charge_on_chained_secondary_attacks",
+      "name_key": "loc_trait_bespoke_faster_charge_on_chained_secondary_attacks",
+      "name_en": "Warp Flurry",
+      "restriction": [
+        "forcestaff_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "line": 402
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      "ui_name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Voidblast Force Staff",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "虛空爆破力場法杖",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Equinox",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "陰陽",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start": 402,
+        "end": 450
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start": 82,
+        "end": 92
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p1_warp_charge_critical_strike_chance_bonus",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/increased_crit_chance_scaled_on_peril",
+      "name_key": "loc_trait_bespoke_increased_crit_chance_scaled_on_peril",
+      "name_en": "Warp Nexus",
+      "restriction": [
+        "forcestaff_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "line": 235
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      "ui_name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Voidblast Force Staff",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "虛空爆破力場法杖",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Equinox",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "陰陽",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start": 235,
+        "end": 288
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start": 22,
+        "end": 26
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/peril_vent_on_weakspot_hit",
+      "name_key": "loc_trait_bespoke_peril_vent_on_weakspot_hit",
+      "name_en": "Transfer Peril",
+      "restriction": [
+        "forcestaff_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "line": 10
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      "ui_name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Voidblast Force Staff",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "虛空爆破力場法杖",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Equinox",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "陰陽",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start": 10,
+        "end": 39
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start": 13,
+        "end": 13
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p1_rend_armor_on_aoe_charge",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/rend_armor_on_aoe_charge",
+      "name_key": "loc_trait_bespoke_rend_armor_on_aoe_charge",
+      "name_en": "Rending Shockwave",
+      "restriction": [
+        "forcestaff_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "line": 289
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      "ui_name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Voidblast Force Staff",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "虛空爆破力場法杖",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Equinox",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "陰陽",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start": 289,
+        "end": 358
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start": 27,
+        "end": 77
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p1_uninterruptable_while_charging",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/uninterruptable_while_charging",
+      "name_key": "loc_trait_bespoke_uninterruptable_while_charging",
+      "name_en": "Focused Channelling",
+      "restriction": [
+        "forcestaff_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "line": 359
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      "ui_name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Voidblast Force Staff",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "虛空爆破力場法杖",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Equinox",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "陰陽",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start": 359,
+        "end": 401
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start": 78,
+        "end": 81
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/warpfire_burn_on_crit",
+      "name_key": "loc_trait_bespoke_warpfire_burn_on_crit",
+      "name_en": "Blazing Spirit",
+      "restriction": [
+        "forcestaff_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "line": 196
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      "ui_name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Voidblast Force Staff",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "虛空爆破力場法杖",
+              "hash": "efbd923b",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Equinox",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "陰陽",
+              "hash": "d15b5c6e",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p1_m1": {
+          "0": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk III",
+              "hash": "09c098c3",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start": 196,
+        "end": 234
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start": 20,
+        "end": 21
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p3",
+      "mark_id": "forcestaff_p3_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p3/double_shot_on_crit",
+      "name_key": "loc_trait_bespoke_double_shot_on_crit",
+      "name_en": "Surge",
+      "restriction": [
+        "forcestaff_p3_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "line": 311
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "ukeys_line": 1299,
+        "append_line": 1301
+      },
+      "ui_name_zh_tw": "電流力場法杖 諾瑪努斯 Mk VI",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p3_m1": {
+          "0": [
+            {
+              "text": "Electrokinetic Force Staff",
+              "hash": "86c06997",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "電流力場法杖",
+              "hash": "86c06997",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p3_m1": {
+          "0": [
+            {
+              "text": "Nomanus",
+              "hash": "7de6b493",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "諾瑪努斯",
+              "hash": "7de6b493",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p3_m1": {
+          "0": [
+            {
+              "text": "Mk VI",
+              "hash": "c999cfc7",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk VI",
+              "hash": "c999cfc7",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "start": 311,
+        "end": 354
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p3_buff_templates.lua",
+        "start": 45,
+        "end": 45
+      }
+    },
+    {
+      "weapon_id": "forcestaff_p3",
+      "mark_id": "forcestaff_p3_m1",
+      "trait_id": "weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p3/peril_vent_on_weakspot_hit",
+      "name_key": "loc_trait_bespoke_peril_vent_on_weakspot_hit",
+      "name_en": "Transfer Peril",
+      "restriction": [
+        "forcestaff_p3_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "line": 355
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "ukeys_line": 1299,
+        "append_line": 1301
+      },
+      "ui_name_zh_tw": "電流力場法杖 諾瑪努斯 Mk VI",
+      "ui_loc_id_components": {
+        "loc_weapon_family_forcestaff_p3_m1": {
+          "0": [
+            {
+              "text": "Electrokinetic Force Staff",
+              "hash": "86c06997",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "電流力場法杖",
+              "hash": "86c06997",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_forcestaff_p3_m1": {
+          "0": [
+            {
+              "text": "Nomanus",
+              "hash": "7de6b493",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "諾瑪努斯",
+              "hash": "7de6b493",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_forcestaff_p3_m1": {
+          "0": [
+            {
+              "text": "Mk VI",
+              "hash": "c999cfc7",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk VI",
+              "hash": "c999cfc7",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "start": 355,
+        "end": 384
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p3_buff_templates.lua",
+        "start": 50,
+        "end": 52
+      }
+    },
+    {
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "trait_id": "weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/crit_chance_on_chained_weakspot_hits",
+      "name_key": "loc_trait_bespoke_crit_chance_on_chained_weakspot_hits",
+      "name_en": "Concentrated Fire",
+      "restriction": [
+        "laspistol_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "line": 421
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 858,
+        "append_line": 860
+      },
+      "ui_name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+      "ui_loc_id_components": {
+        "loc_weapon_family_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Heavy Laspistol",
+              "hash": "9e02540d",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "重型鐳射手槍",
+              "hash": "9e02540d",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Accatran MG",
+              "hash": "425dcea2",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "奧克塔蘭MG",
+              "hash": "425dcea2",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Mk II",
+              "hash": "5d67453c",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk II",
+              "hash": "5d67453c",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start": 421,
+        "end": 472
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start": 21,
+        "end": 25
+      }
+    },
+    {
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "trait_id": "weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/crit_chance_on_successful_dodge",
+      "name_key": "loc_trait_bespoke_crit_chance_on_successful_dodge",
+      "name_en": "Desperado",
+      "restriction": [
+        "laspistol_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "line": 371
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 858,
+        "append_line": 860
+      },
+      "ui_name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+      "ui_loc_id_components": {
+        "loc_weapon_family_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Heavy Laspistol",
+              "hash": "9e02540d",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "重型鐳射手槍",
+              "hash": "9e02540d",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Accatran MG",
+              "hash": "425dcea2",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "奧克塔蘭MG",
+              "hash": "425dcea2",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Mk II",
+              "hash": "5d67453c",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk II",
+              "hash": "5d67453c",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start": 371,
+        "end": 420
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start": 20,
+        "end": 20
+      }
+    },
+    {
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "trait_id": "weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/toughness_on_crit_kills",
+      "name_key": "loc_trait_bespoke_toughness_on_crit_kills",
+      "name_en": "Reassuringly Accurate",
+      "restriction": [
+        "laspistol_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "line": 340
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 858,
+        "append_line": 860
+      },
+      "ui_name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+      "ui_loc_id_components": {
+        "loc_weapon_family_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Heavy Laspistol",
+              "hash": "9e02540d",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "重型鐳射手槍",
+              "hash": "9e02540d",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Accatran MG",
+              "hash": "425dcea2",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "奧克塔蘭MG",
+              "hash": "425dcea2",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_laspistol_p1_m1": {
+          "0": [
+            {
+              "text": "Mk II",
+              "hash": "5d67453c",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk II",
+              "hash": "5d67453c",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start": 340,
+        "end": 370
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start": 19,
+        "end": 19
+      }
+    },
+    {
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "trait_id": "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/crit_chance_bonus_based_on_charge_time",
+      "name_key": "loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time",
+      "name_en": "Power Blast",
+      "restriction": [
+        "plasmagun_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "line": 390
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "ukeys_line": 985,
+        "append_line": 987
+      },
+      "ui_name_zh_tw": "電漿槍 M35熔岩核心 Mk II",
+      "ui_loc_id_components": {
+        "loc_weapon_family_plasmagun_p1_m1": {
+          "0": [
+            {
+              "text": "Plasma Gun",
+              "hash": "0b2b5978",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "電漿槍",
+              "hash": "0b2b5978",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_plasmagun_p1_m1": {
+          "0": [
+            {
+              "text": "M35 Magnacore",
+              "hash": "92cb5d33",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "M35熔岩核心",
+              "hash": "92cb5d33",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_plasmagun_p1_m1": {
+          "0": [
+            {
+              "text": "Mk II",
+              "hash": "51a91207",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk II",
+              "hash": "51a91207",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start": 390,
+        "end": 444
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start": 159,
+        "end": 161
+      }
+    },
+    {
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "trait_id": "weapon_trait_bespoke_shotgun_p1_count_as_dodge_vs_ranged_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/count_as_dodge_vs_ranged_on_close_kill",
+      "name_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill",
+      "name_en": "Hit & Run",
+      "restriction": [
+        "shotgun_p1_m1"
+      ],
+      "workflow_state": "RELEASABLE",
+      "source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "line": 138
+      },
+      "template_source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 950,
+        "append_line": 952
+      },
+      "ui_name_zh_tw": "戰鬥霰彈槍 紮羅娜 Mk VI",
+      "ui_loc_id_components": {
+        "loc_weapon_family_shotgun_p1_m1": {
+          "0": [
+            {
+              "text": "Combat Shotgun",
+              "hash": "d0bde35c",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "戰鬥霰彈槍",
+              "hash": "d0bde35c",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_pattern_shotgun_p1_m1": {
+          "0": [
+            {
+              "text": "Zarona",
+              "hash": "e74c9080",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "紮羅娜",
+              "hash": "e74c9080",
+              "resource": "content/localization/items"
+            }
+          ]
+        },
+        "loc_weapon_mark_shotgun_p1_m1": {
+          "0": [
+            {
+              "text": "Mk VI",
+              "hash": "3645b37c",
+              "resource": "content/localization/items"
+            }
+          ],
+          "16": [
+            {
+              "text": "Mk VI",
+              "hash": "3645b37c",
+              "resource": "content/localization/items"
+            }
+          ]
+        }
+      },
+      "trait_source_range": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start": 138,
+        "end": 167
+      },
+      "buff_source_range": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start": 14,
+        "end": 14
+      }
+    }
+  ],
+  "remaining_counts": {
+    "name_groups": 132,
+    "not_started_name_groups": 130,
+    "partial_name_groups": 2,
+    "remaining_variants": 468,
+    "remaining_bindings": 924,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_exact_partition_verified": true,
+  "mechanism_review_state": "Pending individual blessing acceptance; mapping corrections are not mechanism acceptance.",
+  "previously_accepted_groups_reopened_for_new_variants": [
+    "deflector",
+    "raking-fire"
+  ]
+}

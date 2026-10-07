@@ -1,5 +1,7 @@
 # 卓越追蹤聖歌(Superior Tracking Litanies)：原始碼依據
 
+[English](en/cryptic_no_braced_movement_penalty.md)
+
 [返回玩家說明](README.md#cryptic_no_braced_movement_penalty)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_no_braced_movement_penalty)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-03",
+  "blessing": "energy-leakage",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/能量洩漏/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_2h_p1_power_bonus_scaled_on_heat",
+    "weapon_trait_bespoke_powersword_p2_power_bonus_scaled_on_heat"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only single blessing review",
+    "blessing": "energy-leakage",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_variants": 2,
+    "reviewed_bindings": 4,
+    "findings": [
+      "Both exact-name variants provide1.5/2/3/4 percent power per step with maximum five steps.",
+      "Both wrappers use round(clamp((H-0.1)/0.9)*5). Approximate algebraic thresholds19/37/55/73/91 percent are correct.",
+      "Current50/60/95 percent examples yield2/3/5 steps and8/12/20 percent IV power.",
+      "500-to-540/560/600 and existing25 percent625-to-725 examples are additive power-stage values, not final damage percentages.",
+      "Wield conditions disable bonus while unwielded and recompute on rewield from current weapon heat.",
+      "Inventory four mark bindings match two metadata items, both icon238.",
+      "Rising Heat uses a distinct exact name key and is kept separate."
+    ],
+    "corrections_resolved": [],
+    "final_result": "Current player bullets, heat thresholds, power examples, two variants and four bindings accepted."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "energy-leakage",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_238",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_238.png",
+      "attachment": "https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965537356",
+      "acquired_date": "2026-10-03",
+      "sha256": "958a66d96f77a58c24481b4012a83b47f3ed55fc3406d9a74b77660620c42e2b",
+      "content_type": "image/png",
+      "size": 3289,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "能量洩漏祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 145,
+      "tables": 132,
+      "rows": 993,
+      "lists": 161
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 520,
+      "source_files": 203,
+      "bindings": 96,
+      "variants": 44,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 845,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 145,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 154,
+    "not_started_name_groups": 154,
+    "partial_name_groups": 0,
+    "remaining_variants": 544,
+    "remaining_bindings": 1072,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "000b9988b94c9b54b3ffd02483727a13a08427612e3e0bbd713033df5d2f7476"
+  },
+  "previous_local_commit": "f565eb1a0b236d5db70580de37951f036ddb3e0a",
+  "current_blessing_formula_review": {
+    "tier_per_step": [
+      0.015,
+      0.02,
+      0.03,
+      0.04
+    ],
+    "tier_maxima": [
+      0.075,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "thresholds_algebraic": [
+      0.19,
+      0.37,
+      0.55,
+      0.73,
+      0.91
+    ],
+    "non_boundary_samples": {
+      "0.1": {
+        "steps": 0,
+        "IV_power_bonus": 0.0
+      },
+      "0.3": {
+        "steps": 1,
+        "IV_power_bonus": 0.04
+      },
+      "0.5": {
+        "steps": 2,
+        "IV_power_bonus": 0.08
+      },
+      "0.6": {
+        "steps": 3,
+        "IV_power_bonus": 0.12
+      },
+      "0.95": {
+        "steps": 5,
+        "IV_power_bonus": 0.2
+      }
+    },
+    "power_examples": {
+      "base500_no_other_bonus": [
+        540,
+        560,
+        600
+      ],
+      "other25_percent_max_IV": [
+        625,
+        725,
+        0.16
+      ]
+    }
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "status": "all exact name-key items included"
+  }
+}

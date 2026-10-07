@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-03",
+  "blessing": "brutal-momentum",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/野蠻攻勢/README.md",
+  "variants": [
+    "weapon_trait_bespoke_combataxe_p1_infinite_melee_cleave_on_weakspot_kill",
+    "weapon_trait_bespoke_combataxe_p2_infinite_melee_cleave_on_weakspot_kill"
+  ],
+  "binding_count": 6,
+  "primary_review": "Sol直接核對固定Git物件、所有等級、核心觸發、結算與算例；Luna/max協助本項唯讀證據複核。FASTER無可用設定欄位。",
+  "validation": {
+    "gfm_parse": {
+      "files": 31,
+      "tables": 24,
+      "rows": 187,
+      "lists": 12
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 76,
+      "source_files": 28,
+      "bindings": 18,
+      "variants": 6,
+      "formula_checks": "passed"
+    },
+    "gameplay_test": "not run",
+    "available_tiers": null,
+    "game-info": {
+      "markdown_files": 731,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 32,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 3,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 31,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "formulas": "80+20×1.15=103;50+50×1.15=107.5;existing25%:105→108; mass5−0=5 versus5−3=2"
+  },
+  "image": {
+    "id": "brutal-momentum",
+    "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_178.png",
+    "icon_path": "content/ui/textures/icons/traits/weapon_trait_178",
+    "sha256": "f01de7f9de30fa628e842da57ca28b8cac6ad688af5360e039b4344332c48354",
+    "size": 5727,
+    "content_type": "image/png",
+    "width": 128,
+    "height": 128,
+    "attachment": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
+    "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+    "public_download_status": 200,
+    "hash_verified": true,
+    "display": "original and public attachment inspected"
+  },
+  "limitations": [
+    "MasterItems138291 Steam Build association unverified",
+    "Backend available tiers remain null",
+    "Other same-name variants not reviewed",
+    "No in-game tests"
+  ],
+  "previous_local_commit": "9ab4bd91195b8d6911ada36d9d323662236fa5ad",
+  "localization_review": {
+    "actual_description_key": "loc_trait_bespoke_infinite_cleave_on_weakspot_kill_desc",
+    "actual_hash": "8bb0d3c8",
+    "similar_key_hash": "399cce97",
+    "review": "Both actual MasterItems descriptions select 8bb0d3c8. The similar melee key contains corrected zh-TW wording but is not selected by these items; comparison uses the actual key."
+  }
+}

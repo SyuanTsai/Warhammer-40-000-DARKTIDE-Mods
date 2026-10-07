@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-04",
+  "blessing": "smackdown",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/擊倒/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit",
+    "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit"
+  ],
+  "added_binding_count": 5,
+  "total_variants": 2,
+  "total_bindings": 5,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "task": "Smackdown formal peer review",
+    "blessing_id": "smackdown",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-formal-peer-scope.json",
+    "scope_sha256": "9c4e958404ed03bf6013199360672fa0f4b7bc9932f6e7968267a604a5dda3c8",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-agent-config.json": "28cd207e2fc94737299a22f1a63c156dbdba8789757c90ce2ea6ceb245aa2d59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-agent-draft.md": "3434e348a9bb70b4a78dc716a51d8618a985be55cd7baaea2eeb3208f71d6810",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-agent-evidence.json": "2a95db88233577cf8cfc1c41a02271c7726c5fec2ef180fa266007f674002d52",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-config.json": "89986d10643f0e58555105e72318405279c74a7c79146465ad2b5fcc63fb175a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-extension-draft.json": "200f76f1edcf11959d35ad0a8d4e4288ea410a2c064222c7c4058276fa10c7dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-image.json": "dff1e1d2e7f755ecf2e7b743c53f8c5833121ce9a439e9514cabecac2b3cb0c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-ogryn-club-image.json": "b123b979ab578126f595c4975ef2f3489a5d55c246e9657e90223cc79ac86a32",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-frozen-source-verification.json": "6d42afec6100db6c6497ed60b16f5ab21bca29b9da40fcf07e8f83cdb23a0cba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-map-before.json": "429b8f12c04258fbe00f1947f2cb3e8f40645f5aa4facebf5c4068c60ac30ec5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-mechanism-difference-review.json": "494d815f2ab6cedcc86f03884e5a7220aec1a1580683a36082e6171ee3b19e88",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-own-tier-diff.json": "9ff98fcbd7f652204e0f6d1031650790aae5da76c6e9cb75ffb5eb75c1db247b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-resume-review.json": "5b76f4efec125a155092e3e3ef462c255c9c777aca012781dd79749e7139adfd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-traits-review.json": "f5d2e622da7f9b05069edcf521f7b639a35c7dc4083cd6cd55dabd37d7b1e07e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-ui-raw-verification.json": "4d4f1b772c8a5f8ed3cae7e12a19a7281fbc7fab6fb08c9800aad2d8b2f90316",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-ui-review.json": "e02782980a71b9cba0317eff184a1034e4980fa3edbbbd3cbf6b9369d8d7121f",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "aa93d32a19d08826223fac46b8e5796077734f6c37e543d1734e5df188d9ccd7",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "404dfe7a37c59af1eb46f1446d458264effbc3027479aaa1076aad39edb3d7d5",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "65d8b685ed89de7d073d45b274fbb8f8906aef368071343f2b7971517beed42a",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/DAMAGE_PERCENTAGE_REVIEW.md": "cd24bfd52e795f6eab84ff1e4d59440cabef96f3833a8441bcd164fca842541c",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/LOCALIZATION_COMPARISON.md": "543571499be2461f60b37e491280241fcf5d56b06b615aafd8c474d7a64e4b62",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/README.md": "136119643b905776548e5074c28798b672e73f4be2eb81b1e41e8bad52e6cc11",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/SOURCE_INDEX.md": "eb91c70381062e5edc2a3872c1e1557e616a3b29dc2f9fb6cb731cc7febcc211",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/TIER_VALUES.md": "21755c24c47ee5800b49a7fc8dab9d0a81c5ccb5d6617ac93f50fc2a88904020",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/WEAPON_COMPATIBILITY.md": "d1576e9cda7946f4882fc1672a70ffdc94cbad58cba4c30c8cc71454a92137fe",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit.md": "9374daece56c9002b44457e8f89d0111b9084c489ef433e7bb1c82d3850c8739",
+      "Game Info/releases/1.13.X/blessings/entries/擊倒/weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit.md": "5913eea8be45c28e915eac9dda2c3375471f117d22943d4a9cdfd0a4cde2761c",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "d0b128b51c8b3399f6b82c65bdc815a06c2d930aae7cd75358807eb766d470ff",
+      "Game Info/releases/1.13.X/blessings/weapons/README.md": "d32e354fc233450a9c929f56f2c086828cae351bb3e140efe4f3840096f1c6ec",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "a43731b1f6a6ba3c38146ac54360cdcc0f8f142a9cf621bdd40a45e1a04d8b3c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "ace6dc40a5ae824c738343ac1988441c8f2e1ae77dfa714d51476d09765c1d3b",
+      "Referneces/Translation.md": "cd506e7b9f4fd3165df6d236a624e7e027c37fa51a8b48188a1c4c9f9c146b25"
+    },
+    "review": {
+      "player_and_trigger": "The player trigger explicitly includes targets treated as staggered by an effect. This matches MinionState.is_staggered, which returns true for either a live stagger count or count_as_staggered keyword. The predicate reads params.attacked_unit when the blessing event is checked; it does not use the separate before-attack snapshot. All other trigger/action timing conclusions remain accepted.",
+      "traits_bindings_and_ui": "The map has exactly the two actual trait variants and five bindings: combatknife_p1 M1/M2 and ogryn_club_p2 M1/M2/M3. The five displayed weapon names and mark associations match the scoped weapon metadata and UI receipt.",
+      "tier_child_and_lifecycle": "All four tiers are +0.125/+0.15/+0.175/+0.20 melee critical-chance inputs. The child conditional generic critical_strike_chance tier override replaces its 0.10 fallback; it is not an additional 0.10. Child duration is 4.5 seconds; raw cap 2 with max_stacks=1 and offset=-1 yields one effective layer. A qualifying active hit that adds zero still refreshes the timer. Held-slot gating suspends the bonus while switching away, the timer continues, and unequipping removes the trait state.",
+      "action_start_and_profiles": "ActionSweep saves the critical flag at action start; the trigger hit cannot retroactively change its result and other hits in that same action use the saved flag. Ordinary attacks and pure pushes do not trigger or refresh. The three club marks have qualifying special slaps. The Mk II special-chain follow-up punch has a weapon-special profile and can qualify; Mk IIIb uses the same-named ordinary punch profile and cannot trigger.",
+      "math_and_formatting": "The stated examples correctly distinguish percentage-point additions from relative chance increases (20 pp is +400% relative to a 5% input; with q=10 pp it changes 15% to 35%, +133.33% relative). The formula clamps the additive chance before applying chance-to-damage conversion, with stated assumptions.",
+      "raw_and_errata": "English and Traditional Chinese description strings remain exact and paired to the same keys/hashes. The four tier reconstructions substitute the verified formatter values. Omitted mechanics are labeled as not covered by the localization; no unsupported erratum is asserted.",
+      "icons_and_reverse_indexes": "Combat Blade uses weapon_trait_198 and Bully Club uses weapon_trait_211 with their distinct verified attachment URLs. The blessing map, blessing/melee directories, both weapon reverse pages, and the new Bully Club reverse page point to the correct entry and variant pages."
+    },
+    "resolved_findings": [
+      {
+        "id": "player_trigger_count_as_staggered",
+        "resolution": "Added “被效果視為踉蹌的目標也符合” to the player trigger and synchronized canonical, extension draft, and formal README. Confirmed the phrase in all three."
+      }
+    ],
+    "summary_delta_review": {
+      "previous_scope_sha256": "72e39252ac370686f40ce763b5a8f975db070c98f1372c46452620629e097a47",
+      "current_scope_sha256": "9c4e958404ed03bf6013199360672fa0f4b7bc9932f6e7968267a604a5dda3c8",
+      "changed_files": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-extension-draft.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-mechanism-difference-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-resume-review.json",
+        "Game Info/releases/1.13.X/blessings/entries/擊倒/README.md"
+      ],
+      "changed_file_count": 5,
+      "unchanged_scope_file_count": 27,
+      "all_32_current_hashes_match": true,
+      "canonical_sha256": "89986d10643f0e58555105e72318405279c74a7c79146465ad2b5fcc63fb175a",
+      "extension_draft_sha256": "200f76f1edcf11959d35ad0a8d4e4288ea410a2c064222c7c4058276fa10c7dc"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "smackdown",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_198",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_198.png",
+      "attachment": "https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5978901490",
+      "acquired_date": "2026-10-04",
+      "sha256": "2a4cf6b6e9e9f5daf216906b6c3219f87f5dfddb137a735f4b11465d97d794e4",
+      "content_type": "image/png",
+      "size": 4797,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "擊倒祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Downward fist above a skull, flanking head outlines and inward side arrows; source/public exact match, alpha diagnostic inspected."
+    },
+    "additional_variant_images": [
+      {
+        "id": "smackdown-ogryn-club",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_211",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_211.png",
+        "attachment": "https://github.com/user-attachments/assets/ea26c7d6-7705-46a0-aaf5-1936c555af89",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5978902635",
+        "acquired_date": "2026-10-04",
+        "sha256": "c90a82a9692662141b6e7cd85ec102d8760964ff2df34cbb6b60d71675eeea53",
+        "content_type": "image/png",
+        "size": 5781,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "擊倒祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_match": "Fist inside a broken circular frame with four inward arrowheads; source/public exact match, alpha diagnostic inspected.",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_198",
+        "attachment": "https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_211",
+        "attachment": "https://github.com/user-attachments/assets/ea26c7d6-7705-46a0-aaf5-1936c555af89",
+        "verified_binding_count": 3
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 14,
+      "rows": 357,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 73,
+      "source_files": 27,
+      "bindings": 473,
+      "variants": 245,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 14,
+      "source_object_cache": {
+        "cache_hits": 27,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 17,
+      "local_references": 702,
+      "remote_references": 349,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 14,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-013-full-scan.json",
+        "sha256": "54ee05026345515fb4de84abbece3cf7b430fbddf1d7d90f3f7085d6aeba1661",
+        "trigger": "round-013"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 95,
+    "not_started_name_groups": 95,
+    "partial_name_groups": 0,
+    "remaining_variants": 360,
+    "remaining_bindings": 712,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6e1c18eca58627471ca1ad1c7722e27d16fae06de67600d3e5c57e3aa3596e56"
+  },
+  "previous_local_commit": "ffedd5a0f292c3fabe2e4da53302a4557729fac0",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-own-tier-diff.json",
+      "sha256": "9ff98fcbd7f652204e0f6d1031650790aae5da76c6e9cb75ffb5eb75c1db247b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-ui-review.json",
+      "sha256": "e02782980a71b9cba0317eff184a1034e4980fa3edbbbd3cbf6b9369d8d7121f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-ui-raw-verification.json",
+      "sha256": "4d4f1b772c8a5f8ed3cae7e12a19a7281fbc7fab6fb08c9800aad2d8b2f90316"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-traits-review.json",
+      "sha256": "f5d2e622da7f9b05069edcf521f7b639a35c7dc4083cd6cd55dabd37d7b1e07e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-frozen-source-verification.json",
+      "sha256": "6d42afec6100db6c6497ed60b16f5ab21bca29b9da40fcf07e8f83cdb23a0cba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-primary-mechanism-difference-review.json",
+      "sha256": "494d815f2ab6cedcc86f03884e5a7220aec1a1580683a36082e6171ee3b19e88"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-image.json",
+      "sha256": "dff1e1d2e7f755ecf2e7b743c53f8c5833121ce9a439e9514cabecac2b3cb0c5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-ogryn-club-image.json",
+      "sha256": "b123b979ab578126f595c4975ef2f3489a5d55c246e9657e90223cc79ac86a32"
+    }
+  ],
+  "primary_review_method": "Reviewed complete frozen player draft and own2fulltiers/wrappers/actual5item/UI/RAW bindings. Reused same-SHA parent/child/cached crit/held/stat/unequip mechanisms after own template and conditional-stat key confirmed. Expanded actual live-stagger predicate vs snapshot, HitReaction-before-event update, rawcap2 add0 still4.5s refresh, M2special-punch vsM3normal-punch wiring. Both knife damage_type=punch corrected player term, additive chance consumers/examples verified.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-config.json",
+    "sha256": "89986d10643f0e58555105e72318405279c74a7c79146465ad2b5fcc63fb175a"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-agent-config.json",
+      "sha256": "28cd207e2fc94737299a22f1a63c156dbdba8789757c90ce2ea6ceb245aa2d59"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-agent-evidence.json",
+      "sha256": "2a95db88233577cf8cfc1c41a02271c7726c5fec2ef180fa266007f674002d52"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-agent-draft.md",
+      "sha256": "3434e348a9bb70b4a78dc716a51d8618a985be55cd7baaea2eeb3208f71d6810"
+    }
+  ],
+  "previous_objects_unchanged": {
+    "blessings": 71,
+    "variants": 243,
+    "bindings": 468
+  },
+  "previous_weapons_unchanged": 66,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/smackdown-formal-peer-scope.json",
+    "sha256": "9c4e958404ed03bf6013199360672fa0f4b7bc9932f6e7968267a604a5dda3c8",
+    "scope": "Single8formal player pages, own2traits/5bindings and ownrelated shared2reverse/newBullyClub weapon/glossary; unchanged accepted unrelated entries excluded.",
+    "fixed_file_count": 32,
+    "receipt_sha256": "64090dbc5ec27162d4e06ffa8b3e2753aa6e5a18efae8d661dc8fe513701469c"
+  },
+  "peer_followup": {
+    "resolved_issue": "player_trigger_count_as_staggered",
+    "formal_and_canonical_synced": true,
+    "only_declared_five_files_changed": true,
+    "unchanged_scope_files": 27,
+    "final_peer_accepted": true
+  }
+}

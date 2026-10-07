@@ -1,0 +1,315 @@
+{
+  "date": "2026-10-04",
+  "blessing": "pulverise",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "pulverise-extension-peer-review",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "corrections": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_scope": [
+      "粉碎（Pulverise）正式七頁、root config 與 extension draft、primary UI/RAW/traits/projectile formatter/source receipts、圖示收據、共用 blessing map/目錄/擲彈兵臂鎧武器頁、remaining-tasks。"
+    ],
+    "verified_findings": {
+      "formal_page_count": 7,
+      "player_and_seven_examples_match_config_and_draft": true,
+      "example_bullet_count": 7,
+      "variant_count": 1,
+      "binding_count": 1,
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "defined_tiers": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "available_tiers_field_is_null_but_defined_tiers_are_explicit": true,
+      "global_critical_chance_percentage_points": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "actual_duration_seconds": 3,
+      "raw_static_time_placeholder_seconds": 2,
+      "duration_discrepancy_documented": true,
+      "proc_gate": "持用槽 + 同一攻擊來源 item + 目標死亡 + melee 類型；無近距離條件。",
+      "timer": "合格重觸發重設完整三秒；不疊層；切出時倒數持續且 slot stat gate 暫停加成。",
+      "ordinary_projectile": "同次發射的一個遠程暴擊結果傳遞至彈體直擊及引信／撞擊爆炸；爆炸不另擲骰。",
+      "special_melee_explosion": "直接拳擊擊殺可觸發；另行爆炸為 explosion 類型且固定非爆擊。",
+      "raw_name": "繁中 RAW「粉碎」保留；文件以 Pulverise 區分既有 Shred，兩者 map page 分離。",
+      "ui_binding": "單一 Mk III 綁定；三個 UI 名稱 key、trait import/ukeys/append 與 weapon page/entry map 雙向連結一致。",
+      "shared_map_counts": {
+        "variants": 170,
+        "bindings": 326
+      },
+      "remaining_counts": {
+        "name_groups": 123,
+        "variants": 435,
+        "bindings": 859
+      },
+      "image": {
+        "icon": "content/ui/textures/icons/traits/weapon_trait_146",
+        "public_status": 200,
+        "hash_verified": true,
+        "display_verified": true
+      },
+      "local_markdown_links": "七個正式頁內的本地 Markdown 連結均解析成功。"
+    },
+    "evidence_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-ui-review.json",
+        "complete": true,
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-ui-raw-verification.json",
+        "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+        "resource": "content/localization/items"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-traits-gates-special-review.json",
+        "complete": true,
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-projectile-formatter-review.json",
+        "complete": true,
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-projectile-crit-agent-review.json",
+        "complete": true,
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-image.json",
+        "display_verified": true,
+        "sha256": "3273cd0ec4ec0d9c21caf4efe1a0ef869d6424022340e8e29f16f03956b6bf36"
+      }
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/README.md": "a71c63bf19f6daea9b639cb2859b9dc67433a238e94ca35f6dc5af7e6afa697f",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/TIER_VALUES.md": "de08ef60b57a899efc87996f26e3a54e0e3323b0406e40e04c3c2a842edf015a",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/WEAPON_COMPATIBILITY.md": "fa13b069510d31e05b95edc4330e661e8de1f460d18196ead3122c048b08e37e",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/SOURCE_INDEX.md": "60f0c6f6449c93d3fdf7566c359fa7632f29c1393ede68ae2174cd3be3339885",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/LOCALIZATION_COMPARISON.md": "3c4abcd88e93045f53596199a3a8978423deb1204d9a2e1433d8ef5b5b2c6903",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/DAMAGE_PERCENTAGE_REVIEW.md": "caebaae48c16276aba20e5c6069b332f63247565a4844703980bf4baef0885ae",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎（Pulverise）/weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills.md": "2e95ff3cad708d9a7aa36ff7422078e78bc2a23815cffa83fafc02fdf08ad161",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "df4bd319bddd1df7cfa345538bcca4e952b0cd540a821bb4609e44862f884874",
+      "Game Info/releases/1.13.X/blessings/README.md": "361c722bda6a440883ddd00b6b715fceffb6febabd17ad67ce615caf6db612da",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "fd8bf85d451f310757dd13a297129c0972ab07910a3bdf02238494244e1d4560",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-config.json": "79060fab8c80ea3f88d27fd64390cf542d8e6c6ebc3ed49765665ff1404f5b35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-extension-draft.json": "0e9e1d2788da90fec3115cde0ad9b14f1c5460be811768057df27de110bc17a7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-ui-review.json": "7196837a58563b0d28e888bef4f703528670d0476ddc607515175bfe951e6d18",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-ui-raw-verification.json": "1650698d235fec4669746d154193b36c4092d5bafd7997aac3455fcd06063b1e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-traits-gates-special-review.json": "4a50583c094de9a3b5a774129eab2c0f6f92bd5369ee5afe614858a956787828",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-projectile-formatter-review.json": "e57b2b14f33788c74bbd50cd2458475e2da44ebfbaec49cafcb8068ba3384fb7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-projectile-crit-agent-review.json": "5a1e86b1569bd4da87de6bc1160d114e29b75b51cfc5175c6b2a3798aab779cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-image.json": "d6ab5d21b3d6d04e554c3f4e7f6078ebcc40c224249999068d960e2d8f916cff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "5465b0ba65749ac2416d42056a398529a0327a6096fec45ce91e44fc3a9c620a"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/aa25ecae-6e09-442c-9eed-d14e3cadc750",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "pulverise",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_146",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_146.png",
+      "attachment": "https://github.com/user-attachments/assets/aa25ecae-6e09-442c-9eed-d14e3cadc750",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5972285324",
+      "acquired_date": "2026-10-03",
+      "sha256": "3273cd0ec4ec0d9c21caf4efe1a0ef869d6424022340e8e29f16f03956b6bf36",
+      "content_type": "image/png",
+      "size": 4721,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "粉碎祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Sol inspected original public-attachment pixels composited on dark inspection background; fist and targeting ring intact, 128x128 transparency preserved. Original uploaded/public bytes unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 169,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 44,
+      "source_files": 19,
+      "bindings": 326,
+      "variants": 170,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 19,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 406,
+      "remote_references": 248,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 4,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-003-full-scan.json",
+        "sha256": "8fdd7aadb0d21118a5700ed71e4eac5973ffddd2518de31f8e8c688858df4c8c",
+        "trigger": "round-003"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 123,
+    "not_started_name_groups": 123,
+    "partial_name_groups": 0,
+    "remaining_variants": 435,
+    "remaining_bindings": 859,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "5465b0ba65749ac2416d42056a398529a0327a6096fec45ce91e44fc3a9c620a"
+  },
+  "previous_local_commit": "d8b636e9211d16c724fc5fb90edbb720ca1a8933",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Own full I–IV and independent wrapper; item/held/death/melee gates; six sweeps and special direct/blast; ordinary projectile critical propagation; runtime3sec vs static2sec; seven complete current examples and generic crit consumer",
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-traits-gates-special-review.json",
+        "sha256": "4a50583c094de9a3b5a774129eab2c0f6f92bd5369ee5afe614858a956787828"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-ui-review.json",
+        "sha256": "7196837a58563b0d28e888bef4f703528670d0476ddc607515175bfe951e6d18"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-projectile-formatter-review.json",
+        "sha256": "e57b2b14f33788c74bbd50cd2458475e2da44ebfbaec49cafcb8068ba3384fb7"
+      }
+    ],
+    "agent_research_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-agent-config.json",
+        "sha256": "eb6e240277af7bb1f574d30eac457c391c67017a75d6fd3d2dce4a49e668fa59"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-agent-evidence.json",
+        "sha256": "a35403e2361f2e6a00a9791e49949285d8f8d31a55b01f909588402d220299a3"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-projectile-crit-agent-review.json",
+        "sha256": "5a1e86b1569bd4da87de6bc1160d114e29b75b51cfc5175c6b2a3798aab779cb"
+      }
+    ],
+    "numeric_check": {
+      "I_to_IV_pp": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "actual_duration": 3,
+      "static_display_duration": 2,
+      "pool20_IV": 45,
+      "relative_increase_percent": 125,
+      "raw92_IV_clamped": 100
+    },
+    "common_cache_reuse": "Verified ProcBuff refresh/held stat gates; own wrapper/item/death/melee applicability checked",
+    "formal_presentation_postprocess": "Same RAW Chinese name as Shred disambiguated by English; known I–IV directly stated",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-extension-draft.json",
+      "sha256": "0e9e1d2788da90fec3115cde0ad9b14f1c5460be811768057df27de110bc17a7"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pulverise-primary-ui-review.json",
+      "sha256": "7196837a58563b0d28e888bef4f703528670d0476ddc607515175bfe951e6d18"
+    },
+    "bindings": [
+      {
+        "weapon_id": "ogryn_gauntlet_p1",
+        "mark_id": "ogryn_gauntlet_p1_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills",
+        "template_file": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1295,
+        "append_line": 1297,
+        "loc_ids": [
+          "loc_weapon_family_ogryn_gauntlet_p1_m1",
+          "loc_weapon_pattern_ogryn_gauntlet_p1_m1",
+          "loc_weapon_mark_ogryn_gauntlet_p1_m1"
+        ],
+        "name_zh_tw": "擲彈兵臂鎧 布拉斯托姆 Mk III",
+        "name_en": "Grenadier Gauntlet Blastoom Mk III"
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "inventory_counts": {
+      "weapon_patterns": 70,
+      "weapon_marks": 134,
+      "display_name_groups": 167,
+      "trait_definitions_bound": 605,
+      "mark_bindings": 1185,
+      "unresolved": 58
+    },
+    "exact_name_key_bound_bindings": 1,
+    "exact_name_key_variants": 1,
+    "exact_name_key_metadata_items": 1,
+    "exact_outside_metadata_items": 0,
+    "exact_definitions_not_bound_candidates": 0,
+    "exact_source_only_candidates": 0,
+    "exact_unresolved_candidates": 0,
+    "similar_but_distinct_candidate": null,
+    "boundary": "只核對固定 SHA inventory 的 bound rows、item_metadata exact records、definitions_not_bound（全表88筆）與 unresolved（全表58筆）中的精確 name_key／trait ID。粉碎只有一筆 bound binding、無精確交集外或 unresolved 命中；此結果不對未帶該精確 key/ID 的其他檔名或 suffix 作「未使用」推論。"
+  },
+  "execution_batch_started_on": "2026-10-03"
+}

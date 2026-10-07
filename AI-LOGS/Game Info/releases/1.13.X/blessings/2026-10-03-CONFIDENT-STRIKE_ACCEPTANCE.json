@@ -1,0 +1,925 @@
+{
+  "date": "2026-10-06",
+  "blessing": "confident-strike",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks",
+    "weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks"
+  ],
+  "added_binding_count": 19,
+  "total_variants": 9,
+  "total_bindings": 19,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "confident-strike",
+    "slug": "confident-strike",
+    "name_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "source_version": "Release 1.13.1",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-formal-peer-scope.json",
+    "scope_sha256": "24da672fa30409eae65b4ca2e5abb0de69cae7277d69af26cfd311c2581738e6",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-agent-config.json": "36b250a4dad7f6f8d16020229827f0a26a9cca678acf626860dc0c260489b3fa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-agent-draft.md": "0ea28911f851c790ea8eea10c5f6d245b0f807e2ea30396c687b2f4fa0d6bf56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-agent-evidence.json": "91bb5454032886d6660003ad1989ee128374b4ce0c4d80223cab1204bcd82876",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-config.json": "073eb3d469a77861cb8f3b62a105ee76380a7d001bd2a7b5f98dff278a9c268e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-extension-draft.json": "57fba23e65a3a867abc6955bdf54c651313e792e4a61787b65ba2cc4425b77f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/action-audit.json": "cac0cec139a7d263ac2d156f65d5f7c663660d53302678630b97fd7277b28524",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/action-summary.json": "0fbd24f9da50b5781d6140b68955f0bf344c17df86a598969e6fd5ff12be3d07",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/association-snapshot.json": "0793c10beca1d34324d79cde8040dacfdd8f1e5571bfc93a5ae591de0777a8f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/attack-coverage.json": "323758b6682baba103948be1d23c4dfccc65a51580b148c1a302d3dd6ed3a7a7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/attack-matrix-generated.json": "8205a971f120c36230c00558c09a08c8f376a2da26fe6ef32622f977987984e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/between-the-eyes-formal-nonauthor-review.json": "fce1b4e91cbb09a36efa2418820d3b23bbeb6303553888a0de7943e7a15fc7fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/binding-inventory.json": "e2f0929074425744df7c98e70e2a15c642ce051b4de864578b5e4bf6dea81fa9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-page-preview-002.md": "c20febb0d6b376bf2e5b2db7259d98d55741b660dd3aba96b4aceaea8249c64c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-page-preview-003.md": "2ec144d873b82914c529b18cdcddb5e00f27610a29ee0819bbae8b9dd7f6ceca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-preview-manifest-002.json": "265982313f8d3e9ebea3df154f06e7fe3a4992a16a9c5503f2a172aec45067f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-preview-manifest-003.json": "f09852a6a36cee054ae02e772925945eb1c58d804a7d0650fce29b43626b7f02",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-actual-preview-receipt-001.json": "9b0e112daabf5fbaec0263476ab6c4a88fb23c6f61f8fc66ee9b0540a98f1e9e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-actual-preview-receipt-002.json": "df5d06d56001aef9f680e6f670c30b23c8a41bfbf4df753c09c5844526080d09",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-actual-preview-receipt-003.json": "1ecaa765eca1cd979ddebb5905b0e1958cbea337aa8d08380547a49c139e87db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-config.json": "36b250a4dad7f6f8d16020229827f0a26a9cca678acf626860dc0c260489b3fa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-draft.md": "0ea28911f851c790ea8eea10c5f6d245b0f807e2ea30396c687b2f4fa0d6bf56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-evidence-before-author-acceptance.json": "c443f8ca12ba49c463c56d99f4e0db5979ce44a3060715c43be3636b20bec407",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-evidence-before-preview-003.json": "4cee59f4e6f1bb5783b130350f407f0514835241b40aa9de48e68d5380f5deb8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-evidence.json": "91bb5454032886d6660003ad1989ee128374b4ce0c4d80223cab1204bcd82876",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-association-snapshot.json": "0793c10beca1d34324d79cde8040dacfdd8f1e5571bfc93a5ae591de0777a8f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-config.json": "36b250a4dad7f6f8d16020229827f0a26a9cca678acf626860dc0c260489b3fa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/coverage.json": "42e23a43d58646f1bf47d107aee085fa7b4befad4179c06da2e0e49b65a29b22",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/draft.md": "0ea28911f851c790ea8eea10c5f6d245b0f807e2ea30396c687b2f4fa0d6bf56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-image.json": "3612eaf32d134a4e6200b4d3ed2725edc821c2b5b193a4d158f1d0b669aa3b71",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-own-tier-wrapper-sweep-toughness-material-review.json": "b2031d04e84811f4b62508a270d1a7df5fa6a839bdf67a3ab7451a9636fcab8d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-raw-verification.json": "f43b81b8e72a8937a0d8581eefe39e664e6250bc39090c2c7a7bb1410a313779",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-ui-raw-verification.json": "69bf59db8c052794e2d2169b27be6a5ef1895258690f345a3b036cb9116c4296",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-ui-review.json": "a2c695a2f49e9febe58a97fd4ccfe44f86ab47b7c27e43ac03f4724734b49e43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/selfcheck-before-author-acceptance.json": "ca4c9a14db358b9b1ce608b3fca07bb40f15bb572e7b0ebc70a2094b1ae2a0f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/selfcheck-before-preview-003.json": "89bfc053552e30cd4ad261a3993546df2d62e635c52576d4a2cf44177545670b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/selfcheck.json": "0c1e86c883d71a14ce0e4be48ce408715e25c45f746fe2a779ebc390a19ba6e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-blocks-before-chain-pushfollow-003.json": "6d441c8a08d962494ffc2f5f10ee96c511bd0ec91f619ecf7f9ac23d27a92820",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-blocks.json": "43e22dc68d8ba449411199a42f968a0535318f3039c5e28ab2b16987961f0af3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-file-hashes.json": "502b1d5f7890cb30bbe66e9e240f56f343daa7106c42dbb81a46a9bcf9a2abf8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-hash-reconciliation.json": "dd14fde5826fa78342ade8f37cb7ebb766a20abd44791fc605cdde048a460a7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/uncanny-scope-content-manifest.json": "be9303844990b14edb3a52aa529a31b32539c73168faac5472819cf66d32b237",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/uncanny-strike-formal-nonauthor-review.json": "36f5bb5afd4aaaafd311c1e801968c856ae1cf7f4df350d1c193fc2c30c03a3c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-image.json": "3612eaf32d134a4e6200b4d3ed2725edc821c2b5b193a4d158f1d0b669aa3b71",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-final-content-delta-review.json": "edb35e7c1990910b20cc0b0bb7cf052db4b967815e99642d069c37f3b20fe30d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-focused-checks.json": "29674a6413fffbfa1a3b4e7d3db7a4d9d44b3a786920a455e363a867120c9dfd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-frozen-source-verification.json": "59efb065fcea5d3fa85c4367a710a05492dfccf3dcbfd6f2d6433e2d6f9c9b73",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-own-tier-wrapper-sweep-toughness-material-review.json": "b2031d04e84811f4b62508a270d1a7df5fa6a839bdf67a3ab7451a9636fcab8d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-raw-verification.json": "f43b81b8e72a8937a0d8581eefe39e664e6250bc39090c2c7a7bb1410a313779",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-resume-review.json": "3445474e68e5cb4ed7455d4e965cd5511e14c724e54394f1ed16686c99537737",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-ui-raw-verification.json": "69bf59db8c052794e2d2169b27be6a5ef1895258690f345a3b036cb9116c4296",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-ui-review.json": "a2c695a2f49e9febe58a97fd4ccfe44f86ab47b7c27e43ac03f4724734b49e43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-raw-verification.json": "f43b81b8e72a8937a0d8581eefe39e664e6250bc39090c2c7a7bb1410a313779",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7fde46265eb597571f4bf1da266b95c6c923de5f0d49abca4e075e1b43ca0576",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/DAMAGE_PERCENTAGE_REVIEW.md": "07eccbaa9933e160e24f5635604e71cd8ef3f04e3773edbabd6bbbfb46b6834f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/LOCALIZATION_COMPARISON.md": "ba35056048ad06b886e5878f1fc2a545b0b97343b8001e25d12cac44c427afd6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/README.md": "a3fb7e31e2085030578c21429dc427411a26e2a47f2b9692e0a957e7c9512945",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/SOURCE_INDEX.md": "05a48c15ecc67bcb0c38f1c1c8900de34123979803b514573d6fe813108a69c0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/TIER_VALUES.md": "76b07876948ea418fbfa4ed51504eb16d156b935c8904c01db870645070b3c9b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/WEAPON_COMPATIBILITY.md": "901b1cc2773f15724b3ae21790f4ab7d47d8b09bf3d9b98b6fecc88e5e0fd0e0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks.md": "84069b17ff8b1f338f56b72c1709f4fa47c72e488856f43d0805abdcc33888fd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks.md": "f9bfb39fed7b1a25c3bda46e261b0a2aa7c118d6c6a4bee1aa8553545303637a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks.md": "1ae664e7f4b71a4f326d4bfb4723b7c91578f2adb4a411066a9736439ea11d42",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks.md": "22884e7cafcf7c53ac169339c2b82da88ceed1d1c2990e39f88044d1092231b7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks.md": "7b88730960f76b063f205a79d7e8098452f9b5983500a97ddd67d995d865f48c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks.md": "27afacbee3b21d007d0b8727bb568f046b087d53a2a2b584e0053c8d4fd0573c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks.md": "9b366566fb4ffd41105648d74263afe3e0fe6e7e9c67efc3326c6dcd94c978ef",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks.md": "f8eec615805df86f9e83fd2e8f34c2bc65530a5f0cea01b838cdc424492baa48",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks.md": "c6c6e0fae237ea7fec8b55e63b569a90adf189f80dc22ccb3e95625fbe4b9c5f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/melee/README.md": "5fa6bcfb52e5cb9afe6c575de02fbb9bcc932fb2df544ca5c66a7bb5bc213877",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "9333bc8c8ca05b328e90892f337e00732a69056365e50ab3919e59ed92302980",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a8210f54881fab11821d167e933a69ac50b1ea8940cc86f900b95ea939e95ea3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "31e2ae78b04a701c26c1f9261028ecbbca75000a28b1473ab47f59fa47ae7010",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md": "c55065cdfe10082417f70d13ce895d61868681fbcad41dcf9768d4c17d02b013",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "af2c8ef7f173db548c1d9ce32eb55abf5554a2c8c91d9be01a4f4fb2102c4c9c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "4ef9723a0cd44fd2b63be9c20bfa23a76d219d4cc996187358e27d3fbfb15df3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "6c6b31882ea0b4c916491b1148b5c82cccf25c8376f330c6289a25cdeaad1bfb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "0326c9606b123d4dbfa45ae6e3fc5aed5b1c3fb326a0d9db45288e825bedb36a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "0f05532ce3b1e39a6788770fb608cc7580918eb74954b39e2409312d27eb5560",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "2ec8c9669c194b1bc71a076651c46cce2de32c2c8310372552b06a430218d2c7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "633f879b9d1bae6035fab09beced530434b8547d3e7ce02d75184412cd4b81c6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/own-association-snapshot.json": "13168f8db6927434fac6ee013b8eaf0d0e69492ecb437b189adc434014b8b541",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Referneces/Translation.md": "6fd51dc5a6edb1c5715bac394111f3d2ad16855ffc72ec5286ed20fccc605eb1",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ae012696f3e8135a26e45aa568655e54134e0b0d4a09f1364976d15614cf79f2",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/DAMAGE_PERCENTAGE_REVIEW.md": "07eccbaa9933e160e24f5635604e71cd8ef3f04e3773edbabd6bbbfb46b6834f",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/LOCALIZATION_COMPARISON.md": "ba35056048ad06b886e5878f1fc2a545b0b97343b8001e25d12cac44c427afd6",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/README.md": "a3fb7e31e2085030578c21429dc427411a26e2a47f2b9692e0a957e7c9512945",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/SOURCE_INDEX.md": "887fddd2fece63fbe9573f2377566db061c553de45dcf4d5e4c2119166395a05",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/TIER_VALUES.md": "76b07876948ea418fbfa4ed51504eb16d156b935c8904c01db870645070b3c9b",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/WEAPON_COMPATIBILITY.md": "901b1cc2773f15724b3ae21790f4ab7d47d8b09bf3d9b98b6fecc88e5e0fd0e0",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks.md": "84069b17ff8b1f338f56b72c1709f4fa47c72e488856f43d0805abdcc33888fd",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks.md": "f9bfb39fed7b1a25c3bda46e261b0a2aa7c118d6c6a4bee1aa8553545303637a",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks.md": "1ae664e7f4b71a4f326d4bfb4723b7c91578f2adb4a411066a9736439ea11d42",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks.md": "22884e7cafcf7c53ac169339c2b82da88ceed1d1c2990e39f88044d1092231b7",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks.md": "7b88730960f76b063f205a79d7e8098452f9b5983500a97ddd67d995d865f48c",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks.md": "27afacbee3b21d007d0b8727bb568f046b087d53a2a2b584e0053c8d4fd0573c",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks.md": "9b366566fb4ffd41105648d74263afe3e0fe6e7e9c67efc3326c6dcd94c978ef",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks.md": "f8eec615805df86f9e83fd2e8f34c2bc65530a5f0cea01b838cdc424492baa48",
+      "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks.md": "c6c6e0fae237ea7fec8b55e63b569a90adf189f80dc22ccb3e95625fbe4b9c5f",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "5fa6bcfb52e5cb9afe6c575de02fbb9bcc932fb2df544ca5c66a7bb5bc213877",
+      "Game Info/releases/1.13.X/blessings/README.md": "0eeb61749d26e0367e530ce3c7bfd5f4ede52698aa4f5b8a456757667aca8901",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "f7258f9345df106e9495febf55c08d318cdfc074117fe765b339cfb91cdcf214",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "31e2ae78b04a701c26c1f9261028ecbbca75000a28b1473ab47f59fa47ae7010",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md": "c55065cdfe10082417f70d13ce895d61868681fbcad41dcf9768d4c17d02b013",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "af2c8ef7f173db548c1d9ce32eb55abf5554a2c8c91d9be01a4f4fb2102c4c9c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "4ef9723a0cd44fd2b63be9c20bfa23a76d219d4cc996187358e27d3fbfb15df3",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "6c6b31882ea0b4c916491b1148b5c82cccf25c8376f330c6289a25cdeaad1bfb",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "0326c9606b123d4dbfa45ae6e3fc5aed5b1c3fb326a0d9db45288e825bedb36a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "0f05532ce3b1e39a6788770fb608cc7580918eb74954b39e2409312d27eb5560",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "2ec8c9669c194b1bc71a076651c46cce2de32c2c8310372552b06a430218d2c7",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "633f879b9d1bae6035fab09beced530434b8547d3e7ce02d75184412cd4b81c6",
+      "Referneces/Translation.md": "5cfe157cc319f53e2c6cdf4c63612ff2abf5656b24f2ed199961451fefd6a2dd"
+    },
+    "formal_review": {
+      "scope_file_count": 123,
+      "all_scope_file_hashes_match": true,
+      "own_formal_pages": 15,
+      "own_variants": 9,
+      "own_bindings": 19,
+      "author_candidate_preview_receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-actual-preview-receipt-003.json",
+      "author_candidate_preview_receipt_sha256": "1ecaa765eca1cd979ddebb5905b0e1958cbea337aa8d08380547a49c139e87db",
+      "author_candidate_preview_passed": true,
+      "author_candidate_preview_pages": 15,
+      "canonical_author_content_diff_keys": [
+        "refs"
+      ],
+      "author_ref_count": 89,
+      "root_canonical_ref_count": 451,
+      "root_added_precise_refs": 362,
+      "formal_page_comparison": {
+        "compared": 15,
+        "byte_identical_to_PV003": 14,
+        "only_changed_page": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/SOURCE_INDEX.md",
+        "expected_source_index_additions": 362,
+        "source_index_removed_rows": 0,
+        "added_rows_exactly_match_canonical_ref_delta": true,
+        "page_records": [
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/DAMAGE_PERCENTAGE_REVIEW.md",
+            "formal_sha256": "07eccbaa9933e160e24f5635604e71cd8ef3f04e3773edbabd6bbbfb46b6834f",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/DAMAGE_PERCENTAGE_REVIEW.md",
+            "preview_sha256": "07eccbaa9933e160e24f5635604e71cd8ef3f04e3773edbabd6bbbfb46b6834f",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/LOCALIZATION_COMPARISON.md",
+            "formal_sha256": "ba35056048ad06b886e5878f1fc2a545b0b97343b8001e25d12cac44c427afd6",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/LOCALIZATION_COMPARISON.md",
+            "preview_sha256": "ba35056048ad06b886e5878f1fc2a545b0b97343b8001e25d12cac44c427afd6",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/README.md",
+            "formal_sha256": "a3fb7e31e2085030578c21429dc427411a26e2a47f2b9692e0a957e7c9512945",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/README.md",
+            "preview_sha256": "a3fb7e31e2085030578c21429dc427411a26e2a47f2b9692e0a957e7c9512945",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/SOURCE_INDEX.md",
+            "formal_sha256": "887fddd2fece63fbe9573f2377566db061c553de45dcf4d5e4c2119166395a05",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/SOURCE_INDEX.md",
+            "preview_sha256": "05a48c15ecc67bcb0c38f1c1c8900de34123979803b514573d6fe813108a69c0",
+            "byte_identical": false
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/TIER_VALUES.md",
+            "formal_sha256": "76b07876948ea418fbfa4ed51504eb16d156b935c8904c01db870645070b3c9b",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/TIER_VALUES.md",
+            "preview_sha256": "76b07876948ea418fbfa4ed51504eb16d156b935c8904c01db870645070b3c9b",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/WEAPON_COMPATIBILITY.md",
+            "formal_sha256": "901b1cc2773f15724b3ae21790f4ab7d47d8b09bf3d9b98b6fecc88e5e0fd0e0",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/WEAPON_COMPATIBILITY.md",
+            "preview_sha256": "901b1cc2773f15724b3ae21790f4ab7d47d8b09bf3d9b98b6fecc88e5e0fd0e0",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "84069b17ff8b1f338f56b72c1709f4fa47c72e488856f43d0805abdcc33888fd",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "84069b17ff8b1f338f56b72c1709f4fa47c72e488856f43d0805abdcc33888fd",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "f9bfb39fed7b1a25c3bda46e261b0a2aa7c118d6c6a4bee1aa8553545303637a",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "f9bfb39fed7b1a25c3bda46e261b0a2aa7c118d6c6a4bee1aa8553545303637a",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "1ae664e7f4b71a4f326d4bfb4723b7c91578f2adb4a411066a9736439ea11d42",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "1ae664e7f4b71a4f326d4bfb4723b7c91578f2adb4a411066a9736439ea11d42",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "22884e7cafcf7c53ac169339c2b82da88ceed1d1c2990e39f88044d1092231b7",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "22884e7cafcf7c53ac169339c2b82da88ceed1d1c2990e39f88044d1092231b7",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "7b88730960f76b063f205a79d7e8098452f9b5983500a97ddd67d995d865f48c",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "7b88730960f76b063f205a79d7e8098452f9b5983500a97ddd67d995d865f48c",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "27afacbee3b21d007d0b8727bb568f046b087d53a2a2b584e0053c8d4fd0573c",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "27afacbee3b21d007d0b8727bb568f046b087d53a2a2b584e0053c8d4fd0573c",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "9b366566fb4ffd41105648d74263afe3e0fe6e7e9c67efc3326c6dcd94c978ef",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "9b366566fb4ffd41105648d74263afe3e0fe6e7e9c67efc3326c6dcd94c978ef",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "f8eec615805df86f9e83fd2e8f34c2bc65530a5f0cea01b838cdc424492baa48",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "f8eec615805df86f9e83fd2e8f34c2bc65530a5f0cea01b838cdc424492baa48",
+            "byte_identical": true
+          },
+          {
+            "formal_path": "Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks.md",
+            "formal_sha256": "c6c6e0fae237ea7fec8b55e63b569a90adf189f80dc22ccb3e95625fbe4b9c5f",
+            "preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/堅定打擊/weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks.md",
+            "preview_sha256": "c6c6e0fae237ea7fec8b55e63b569a90adf189f80dc22ccb3e95625fbe4b9c5f",
+            "byte_identical": true
+          }
+        ]
+      },
+      "content_review": {
+        "player_examples_mechanism_math_tiers_variant_notes_rules_unchanged_from_accepted_author_config": true,
+        "tier_values": "Eight implementations: I-IV 5/6/7/8%; Power Maul P3: 4/5/6/7%.",
+        "event_gate": "on_sweep_finish; the actual source-slot held conditional is present, with no wrapper source-item equality or attack-type predicate. It requires direct hit count >0 and the Sweep-start combo snapshot >0; a delivered failed finish resets the independent counter to 1; recovery begins only when it exceeds 1.",
+        "sweep_accounting": "ActionSweep snapshots living-character state before damage; a target killed by that sweep counts. Direct Sweep emits one finish event regardless of target count; pure push and WeaponShout do not. An actual push-follow-up kind=sweep can. Setup/activation, secondary explosion and chain lightning do not emit extra finish events.",
+        "recovery_math": "min(missing toughness, current max toughness × the implementation/tier percentage); disabled recovery returns zero. ignore_stat_buffs=true excludes toughness replenishment modifiers.",
+        "switch_lifecycle": "A slot switch retains the equipped Buff and counter while the held gate blocks events; returning resumes the counter. Actual unequip removes the on_equip Buff and re-equip initializes the counter.",
+        "examples": "The two exact examples use Latrine Shovel Brute-Brainer Mk III and Power Maul Mk III, with source profiles/actions; first event from counter 0 does not heal, follow-up Sweep yields 5 at T=100 and 5%; P3 IV yields 10.5 at T=150 and 7%, and secondary arcs add no second recovery.",
+        "all_15_official_pages_content_reviewed_against_frozen_PV003": true
+      },
+      "source_index_delta": {
+        "formal_rows_added": 362,
+        "rows_removed": 0,
+        "added_ref_rows_exactly_match_root_canonical_minus_author_refs": true
+      },
+      "binding_map": {
+        "global_groups": 167,
+        "global_variants": 605,
+        "global_bindings": 1185,
+        "confident_strike_variants": 9,
+        "confident_strike_bindings": 19,
+        "variant_ids_match_canonical": true,
+        "binding_tuples_match_author_inventory": true
+      },
+      "ui_raw": {
+        "ui_bindings": 19,
+        "ui_bindings_match_author_inventory": true,
+        "ui_raw_localized_components_verified": 114,
+        "mismatches": 0,
+        "outside_exact_items": [],
+        "raw_name_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks",
+        "raw_name_hash": "a38b21e9",
+        "raw_description_hash": "480a6aae"
+      },
+      "image": {
+        "icon_identifier": "weapon_trait_092",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+        "attachment": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+        "receipt_sha256": "3612eaf32d134a4e6200b4d3ed2725edc821c2b5b193a4d158f1d0b669aa3b71",
+        "public_download_status": 200,
+        "dimensions": [
+          128,
+          128
+        ],
+        "hash_verified": true,
+        "root_visual_verified": true
+      },
+      "reverse_index": {
+        "weapon_family_pages": 9,
+        "each_page_has_one_correct_confident_strike_entry_row": true,
+        "pages": [
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md",
+            "blessing_rows": 1,
+            "sha256": "31e2ae78b04a701c26c1f9261028ecbbca75000a28b1473ab47f59fa47ae7010"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md",
+            "blessing_rows": 1,
+            "sha256": "c55065cdfe10082417f70d13ce895d61868681fbcad41dcf9768d4c17d02b013"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md",
+            "blessing_rows": 1,
+            "sha256": "af2c8ef7f173db548c1d9ce32eb55abf5554a2c8c91d9be01a4f4fb2102c4c9c"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md",
+            "blessing_rows": 1,
+            "sha256": "4ef9723a0cd44fd2b63be9c20bfa23a76d219d4cc996187358e27d3fbfb15df3"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md",
+            "blessing_rows": 1,
+            "sha256": "6c6b31882ea0b4c916491b1148b5c82cccf25c8376f330c6289a25cdeaad1bfb"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md",
+            "blessing_rows": 1,
+            "sha256": "0326c9606b123d4dbfa45ae6e3fc5aed5b1c3fb326a0d9db45288e825bedb36a"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md",
+            "blessing_rows": 1,
+            "sha256": "0f05532ce3b1e39a6788770fb608cc7580918eb74954b39e2409312d27eb5560"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md",
+            "blessing_rows": 1,
+            "sha256": "2ec8c9669c194b1bc71a076651c46cce2de32c2c8310372552b06a430218d2c7"
+          },
+          {
+            "path": "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md",
+            "blessing_rows": 1,
+            "sha256": "633f879b9d1bae6035fab09beced530434b8547d3e7ce02d75184412cd4b81c6"
+          }
+        ]
+      },
+      "focused_checks": {
+        "source_ranges_verified": 462,
+        "source_files": 55,
+        "global_partition_consistency": true,
+        "links_local": 1322,
+        "links_remote": 1039,
+        "new_link_errors": [],
+        "gfm_files": 28,
+        "gfm_tables": 29,
+        "global_groups": 167,
+        "global_variants": 605,
+        "global_bindings": 1185,
+        "global_unique_partition_verified": true
+      }
+    },
+    "pre_read_receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/confident-strike-peer-pre-read.json",
+    "pre_read_receipt_sha256": "a30601a4be0698c91f1558e4025ff8f17d50ce3de4077bb04542aef88d367d1b",
+    "review_conclusion": "Formal files match the accepted content and exact association scope. The only content delta from frozen PV003 is the expected 362-row SOURCE_INDEX addition, exactly matching the Root canonical precise-reference delta. All fixed-scope hashes, binding/UI/RAW/icon and reverse/catalog relationships, and focused source/link/GFM checks match. No issue found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "confident-strike",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_092.png",
+      "attachment": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6010537811",
+      "acquired_date": "2026-10-06",
+      "sha256": "4c484d18a80532d0ac8469aeb6efea7bb7449aabdec9a6576a21d5f18b7d48cc",
+      "content_type": "image/png",
+      "size": 4067,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "堅定打擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "root_display_verified": true,
+      "root_visual_result": "Viewed native public128x128 PNG with gray/pale vertical geometric motif; matches exact item.icon."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 28,
+      "tables": 29,
+      "rows": 1084,
+      "lists": 102,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 462,
+      "source_files": 55,
+      "bindings": 1185,
+      "variants": 605,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 27,
+      "source_object_cache": {
+        "cache_hits": 55,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 30,
+      "local_references": 1703,
+      "remote_references": 1039,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 46,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-045-full-scan.json",
+        "sha256": "4b739285b95047271a6b55e27bf5f396bddc1ac1514741a891c575491fa72e80",
+        "trigger": "round-045"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 0,
+    "not_started_name_groups": 0,
+    "partial_name_groups": 0,
+    "remaining_variants": 0,
+    "remaining_bindings": 0,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "5afe95ca9effee71d2a9142412b68ed05794b56edab4c891104fd7d3bfb68915"
+  },
+  "previous_local_commit": "6896ff98c9ba7207fcf1e2b69c0a7dd4759c1856",
+  "outside_intersection_review": {
+    "status": "checked_actual_bindings_only",
+    "actual_variant_ids": [
+      "weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks",
+      "weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks"
+    ],
+    "actual_bindings": 19,
+    "outside_exact_items": [],
+    "boundary": "Only the nine actual trait variants and nineteen exact inventory bindings are included; no outside exact-name UI binding was found."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-final-content-delta-review.json",
+      "sha256": "edb35e7c1990910b20cc0b0bb7cf052db4b967815e99642d069c37f3b20fe30d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-focused-checks.json",
+      "sha256": "29674a6413fffbfa1a3b4e7d3db7a4d9d44b3a786920a455e363a867120c9dfd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-frozen-source-verification.json",
+      "sha256": "59efb065fcea5d3fa85c4367a710a05492dfccf3dcbfd6f2d6433e2d6f9c9b73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-own-tier-wrapper-sweep-toughness-material-review.json",
+      "sha256": "b2031d04e84811f4b62508a270d1a7df5fa6a839bdf67a3ab7451a9636fcab8d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-raw-verification.json",
+      "sha256": "f43b81b8e72a8937a0d8581eefe39e664e6250bc39090c2c7a7bb1410a313779"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-resume-review.json",
+      "sha256": "3445474e68e5cb4ed7455d4e965cd5511e14c724e54394f1ed16686c99537737"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-ui-raw-verification.json",
+      "sha256": "69bf59db8c052794e2d2169b27be6a5ef1895258690f345a3b036cb9116c4296"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-ui-review.json",
+      "sha256": "a2c695a2f49e9febe58a97fd4ccfe44f86ab47b7c27e43ac03f4724734b49e43"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-config.json",
+    "sha256": "073eb3d469a77861cb8f3b62a105ee76380a7d001bd2a7b5f98dff278a9c268e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-own-tier-wrapper-sweep-toughness-material-review.json",
+      "sha256": "b2031d04e84811f4b62508a270d1a7df5fa6a839bdf67a3ab7451a9636fcab8d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-ui-review.json",
+      "sha256": "a2c695a2f49e9febe58a97fd4ccfe44f86ab47b7c27e43ac03f4724734b49e43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-raw-verification.json",
+      "sha256": "f43b81b8e72a8937a0d8581eefe39e664e6250bc39090c2c7a7bb1410a313779"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-primary-ui-raw-verification.json",
+      "sha256": "69bf59db8c052794e2d2169b27be6a5ef1895258690f345a3b036cb9116c4296"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/confident-strike-image.json",
+      "sha256": "3612eaf32d134a4e6200b4d3ed2725edc821c2b5b193a4d158f1d0b669aa3b71"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-blocks.json",
+      "sha256": "43e22dc68d8ba449411199a42f968a0535318f3039c5e28ab2b16987961f0af3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-file-hashes.json",
+      "sha256": "502b1d5f7890cb30bbe66e9e240f56f343daa7106c42dbb81a46a9bcf9a2abf8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/action-audit.json",
+      "sha256": "cac0cec139a7d263ac2d156f65d5f7c663660d53302678630b97fd7277b28524"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/attack-matrix-generated.json",
+      "sha256": "8205a971f120c36230c00558c09a08c8f376a2da26fe6ef32622f977987984e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/action-summary.json",
+      "sha256": "0fbd24f9da50b5781d6140b68955f0bf344c17df86a598969e6fd5ff12be3d07"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/coverage.json",
+      "sha256": "42e23a43d58646f1bf47d107aee085fa7b4befad4179c06da2e0e49b65a29b22"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/association-snapshot.json",
+      "sha256": "0793c10beca1d34324d79cde8040dacfdd8f1e5571bfc93a5ae591de0777a8f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-hash-reconciliation.json",
+      "sha256": "dd14fde5826fa78342ade8f37cb7ebb766a20abd44791fc605cdde048a460a7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-image.json",
+      "sha256": "3612eaf32d134a4e6200b4d3ed2725edc821c2b5b193a4d158f1d0b669aa3b71"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-draft.md",
+      "sha256": "0ea28911f851c790ea8eea10c5f6d245b0f807e2ea30396c687b2f4fa0d6bf56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-actual-preview-receipt-003.json",
+      "sha256": "1ecaa765eca1cd979ddebb5905b0e1958cbea337aa8d08380547a49c139e87db"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "9333bc8c8ca05b328e90892f337e00732a69056365e50ab3919e59ed92302980"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "a8210f54881fab11821d167e933a69ac50b1ea8940cc86f900b95ea939e95ea3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "7fde46265eb597571f4bf1da266b95c6c923de5f0d49abca4e075e1b43ca0576"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "07eccbaa9933e160e24f5635604e71cd8ef3f04e3773edbabd6bbbfb46b6834f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "ba35056048ad06b886e5878f1fc2a545b0b97343b8001e25d12cac44c427afd6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\README.md",
+      "sha256": "a3fb7e31e2085030578c21429dc427411a26e2a47f2b9692e0a957e7c9512945"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\SOURCE_INDEX.md",
+      "sha256": "05a48c15ecc67bcb0c38f1c1c8900de34123979803b514573d6fe813108a69c0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\TIER_VALUES.md",
+      "sha256": "76b07876948ea418fbfa4ed51504eb16d156b935c8904c01db870645070b3c9b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "901b1cc2773f15724b3ae21790f4ab7d47d8b09bf3d9b98b6fecc88e5e0fd0e0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks.md",
+      "sha256": "84069b17ff8b1f338f56b72c1709f4fa47c72e488856f43d0805abdcc33888fd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks.md",
+      "sha256": "f9bfb39fed7b1a25c3bda46e261b0a2aa7c118d6c6a4bee1aa8553545303637a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks.md",
+      "sha256": "1ae664e7f4b71a4f326d4bfb4723b7c91578f2adb4a411066a9736439ea11d42"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks.md",
+      "sha256": "22884e7cafcf7c53ac169339c2b82da88ceed1d1c2990e39f88044d1092231b7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks.md",
+      "sha256": "7b88730960f76b063f205a79d7e8098452f9b5983500a97ddd67d995d865f48c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks.md",
+      "sha256": "27afacbee3b21d007d0b8727bb568f046b087d53a2a2b584e0053c8d4fd0573c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks.md",
+      "sha256": "9b366566fb4ffd41105648d74263afe3e0fe6e7e9c67efc3326c6dcd94c978ef"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks.md",
+      "sha256": "f8eec615805df86f9e83fd2e8f34c2bc65530a5f0cea01b838cdc424492baa48"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\堅定打擊\\weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks.md",
+      "sha256": "c6c6e0fae237ea7fec8b55e63b569a90adf189f80dc22ccb3e95625fbe4b9c5f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "5fa6bcfb52e5cb9afe6c575de02fbb9bcc932fb2df544ca5c66a7bb5bc213877"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\作戰大錘&板盾\\README.md",
+      "sha256": "31e2ae78b04a701c26c1f9261028ecbbca75000a28b1473ab47f59fa47ae7010"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\動力錘\\README.md",
+      "sha256": "c55065cdfe10082417f70d13ce895d61868681fbcad41dcf9768d4c17d02b013"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\廁所鏟\\README.md",
+      "sha256": "af2c8ef7f173db548c1d9ce32eb55abf5554a2c8c91d9be01a4f4fb2102c4c9c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\惡霸棍棒\\README.md",
+      "sha256": "4ef9723a0cd44fd2b63be9c20bfa23a76d219d4cc996187358e27d3fbfb15df3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戴維爾戰鎬\\README.md",
+      "sha256": "6c6b31882ea0b4c916491b1148b5c82cccf25c8376f330c6289a25cdeaad1bfb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚\\README.md",
+      "sha256": "0326c9606b123d4dbfa45ae6e3fc5aed5b1c3fb326a0d9db45288e825bedb36a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚和鎮壓護盾\\README.md",
+      "sha256": "0f05532ce3b1e39a6788770fb608cc7580918eb74954b39e2409312d27eb5560"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\砍刀\\README.md",
+      "sha256": "2ec8c9669c194b1bc71a076651c46cce2de32c2c8310372552b06a430218d2c7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\電弧鎚\\README.md",
+      "sha256": "633f879b9d1bae6035fab09beced530434b8547d3e7ce02d75184412cd4b81c6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "6fd51dc5a6edb1c5715bac394111f3d2ad16855ffc72ec5286ed20fccc605eb1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-raw-verification.json",
+      "sha256": "f43b81b8e72a8937a0d8581eefe39e664e6250bc39090c2c7a7bb1410a313779"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\confident-strike-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "13168f8db6927434fac6ee013b8eaf0d0e69492ecb437b189adc434014b8b541"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/attack-coverage.json",
+      "sha256": "323758b6682baba103948be1d23c4dfccc65a51580b148c1a302d3dd6ed3a7a7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/between-the-eyes-formal-nonauthor-review.json",
+      "sha256": "fce1b4e91cbb09a36efa2418820d3b23bbeb6303553888a0de7943e7a15fc7fc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/binding-inventory.json",
+      "sha256": "e2f0929074425744df7c98e70e2a15c642ce051b4de864578b5e4bf6dea81fa9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-page-preview-002.md",
+      "sha256": "c20febb0d6b376bf2e5b2db7259d98d55741b660dd3aba96b4aceaea8249c64c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-page-preview-003.md",
+      "sha256": "2ec144d873b82914c529b18cdcddb5e00f27610a29ee0819bbae8b9dd7f6ceca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-preview-manifest-002.json",
+      "sha256": "265982313f8d3e9ebea3df154f06e7fe3a4992a16a9c5503f2a172aec45067f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/candidate-preview-manifest-003.json",
+      "sha256": "f09852a6a36cee054ae02e772925945eb1c58d804a7d0650fce29b43626b7f02"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-actual-preview-receipt-001.json",
+      "sha256": "9b0e112daabf5fbaec0263476ab6c4a88fb23c6f61f8fc66ee9b0540a98f1e9e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-actual-preview-receipt-002.json",
+      "sha256": "df5d06d56001aef9f680e6f670c30b23c8a41bfbf4df753c09c5844526080d09"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-config.json",
+      "sha256": "36b250a4dad7f6f8d16020229827f0a26a9cca678acf626860dc0c260489b3fa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-evidence-before-author-acceptance.json",
+      "sha256": "c443f8ca12ba49c463c56d99f4e0db5979ce44a3060715c43be3636b20bec407"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-evidence-before-preview-003.json",
+      "sha256": "4cee59f4e6f1bb5783b130350f407f0514835241b40aa9de48e68d5380f5deb8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-agent-evidence.json",
+      "sha256": "91bb5454032886d6660003ad1989ee128374b4ce0c4d80223cab1204bcd82876"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-association-snapshot.json",
+      "sha256": "0793c10beca1d34324d79cde8040dacfdd8f1e5571bfc93a5ae591de0777a8f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/confident-strike-config.json",
+      "sha256": "36b250a4dad7f6f8d16020229827f0a26a9cca678acf626860dc0c260489b3fa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/draft.md",
+      "sha256": "0ea28911f851c790ea8eea10c5f6d245b0f807e2ea30396c687b2f4fa0d6bf56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/selfcheck-before-author-acceptance.json",
+      "sha256": "ca4c9a14db358b9b1ce608b3fca07bb40f15bb572e7b0ebc70a2094b1ae2a0f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/selfcheck-before-preview-003.json",
+      "sha256": "89bfc053552e30cd4ad261a3993546df2d62e635c52576d4a2cf44177545670b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/selfcheck.json",
+      "sha256": "0c1e86c883d71a14ce0e4be48ce408715e25c45f746fe2a779ebc390a19ba6e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/source-blocks-before-chain-pushfollow-003.json",
+      "sha256": "6d441c8a08d962494ffc2f5f10ee96c511bd0ec91f619ecf7f9ac23d27a92820"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/uncanny-scope-content-manifest.json",
+      "sha256": "be9303844990b14edb3a52aa529a31b32539c73168faac5472819cf66d32b237"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-group/uncanny-strike-formal-nonauthor-review.json",
+      "sha256": "36f5bb5afd4aaaafd311c1e801968c856ae1cf7f4df350d1c193fc2c30c03a3c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-agent-config.json",
+      "sha256": "36b250a4dad7f6f8d16020229827f0a26a9cca678acf626860dc0c260489b3fa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-agent-evidence.json",
+      "sha256": "91bb5454032886d6660003ad1989ee128374b4ce0c4d80223cab1204bcd82876"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-agent-draft.md",
+      "sha256": "0ea28911f851c790ea8eea10c5f6d245b0f807e2ea30396c687b2f4fa0d6bf56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-final-content-delta-review.json",
+      "sha256": "edb35e7c1990910b20cc0b0bb7cf052db4b967815e99642d069c37f3b20fe30d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-frozen-source-verification.json",
+      "sha256": "59efb065fcea5d3fa85c4367a710a05492dfccf3dcbfd6f2d6433e2d6f9c9b73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-own-tier-wrapper-sweep-toughness-material-review.json",
+      "sha256": "b2031d04e84811f4b62508a270d1a7df5fa6a839bdf67a3ab7451a9636fcab8d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-raw-verification.json",
+      "sha256": "f43b81b8e72a8937a0d8581eefe39e664e6250bc39090c2c7a7bb1410a313779"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-ui-raw-verification.json",
+      "sha256": "69bf59db8c052794e2d2169b27be6a5ef1895258690f345a3b036cb9116c4296"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-primary-ui-review.json",
+      "sha256": "a2c695a2f49e9febe58a97fd4ccfe44f86ab47b7c27e43ac03f4724734b49e43"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/confident-strike-formal-peer-scope.json",
+    "sha256": "24da672fa30409eae65b4ca2e5abb0de69cae7277d69af26cfd311c2581738e6",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

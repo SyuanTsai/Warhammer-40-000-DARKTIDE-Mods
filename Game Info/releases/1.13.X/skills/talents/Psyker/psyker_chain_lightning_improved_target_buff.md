@@ -1,5 +1,7 @@
 # 衰弱詛咒(Enfeeble)：原始碼依據
 
+[English](en/psyker_chain_lightning_improved_target_buff.md)
+
 [返回玩家說明](README.md#psyker_chain_lightning_improved_target_buff)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_chain_lightning_improved_target_buff)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

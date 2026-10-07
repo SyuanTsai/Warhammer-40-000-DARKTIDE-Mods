@@ -1,0 +1,568 @@
+{
+  "date": "2026-10-06",
+  "blessing": "offensive-defence",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/反守為攻/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus",
+    "weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "offensive-defence",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-formal-peer-scope.json",
+    "scope_sha256": "4e0fb542a9746cb327a3bca1c14d8e38a38e7d7a5075146dc78cca4bf040f739",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "reviewed_conclusions": [
+      "沿用前一固定 86 檔複核：8 個本項正式頁、2 個 variant、4 個實際 Mark 綁定，own tier/wrapper、格擋與掃掠事件、期限／累積計數、特殊動作類型、首次快取、切槽與真正卸下、RAW formatter、算例、共享映射、反向索引及圖示收據均核對無誤。",
+      "確認 README 明確定義 T 為累積的原始 block_cost，並說明兩個回呼依事件處理時是否持用本武器欄位判斷，不比較事件來源 item；兩句與主控 canonical、extension draft 的本項資料一致。",
+      "重新核對新增／更新的六份固定輸入和全部 92 個 scope hash；與前一 scope 比較，正式內容差異限 LOCALIZATION_COMPARISON 規則 5 來源列的標點修正，其他機制與關聯結論沿用先前複核。",
+      "規則 5 的「真正卸下）。；scripts/」已改為「真正卸下）；scripts/」；修正後正式 LOCALIZATION_COMPARISON 與作者 actual-preview-005 輸出逐 byte 相同，原始 86 檔快照保留。",
+      "確認四個實際 bindings 為 Ogryn slab shield M1/M2 與 Powermaul shield M1/M2；實際 RAW formatter、T/k 公式、特殊 block／weapon_shout 分支及圖示 weapon_trait_231 收據均與正式頁及雙向索引吻合。"
+    ],
+    "differential_reuse": "本次沿用已完成的 86 檔遊戲機制與關聯複核，只重查固定 scope 更新、新增六份輸入及規則 5 單一來源分隔符。固定 source SHA 未變；已核准的 block_cost、Sweep、計時／快取、PowerLevel、兩種盾牌特殊動作及圖示證據只在其原已證實的適用條件內重用。",
+    "previous_scope_sha256": "fa9711486bfb03cd1e950f516403ea42a7863ee5e8141e5f0ab98d7562e008bd",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-agent-config.json": "1ebb7e01dc913abdb5e0f3743e6620ccf423db98090a6b0d9aa307a60242e584",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-agent-draft.md": "2bd4f2f73e5038674ff0d1b9ec12d35d0a0c5c00645924cf39be95ff0c1bb149",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-agent-evidence.json": "93842df789b951d87b9fe189e17a5b45eac47f6852f0acb04627b2bf4942e0e9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-config.json": "45a9cd0163c4bcab908f0803847c53e64636120b3542298f965c2e053f7ddcd2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-extension-draft.json": "9eba87501d724c1415baaace448974eafdb699208e9cb6a06239482e433fa5ef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/BLESSING_WEAPON_MAP.json": "5d84cd21461f6033299b5d4e4b2ec8cac27bab4d4fe47f377e7afb1746ddf8ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/BLESSING_WEAPON_MAP.snapshot.json": "5d84cd21461f6033299b5d4e4b2ec8cac27bab4d4fe47f377e7afb1746ddf8ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/COMMON_MECHANISM_CACHE.snapshot.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/inventory.snapshot.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/item_metadata.snapshot.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/last-guard-agent-evidence.json": "5c380d2d17409e879e66aeecf7f9d4ff8dafc0dd5870d240f03a1a943d3bac52",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/last-guard-primary-private-push-settings-material-review.json": "e0eec705d42584a0b4674faa0472f75c34ba6cfa99c067c4e898de2f37def06b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/localized_keys.snapshot.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-image.json": "a445932118e164d0849a77ea9ebed42e78cf3958194fb7cbcad31a4656f08587",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-actual-special-action-kind-stat-coverage-review.json": "6f4e4d4573f77b2e416c3e87e0b6ab1b96183883f81101fc79637a18049ae805",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-own-tier-wrapper-material-delta-review.json": "f2b211cc8be1558fa1d8cc2a971b3da401da8397c078bea66008d1e52f0ec9b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-sweep-expiry-counter-difference-review.json": "cacddce9e648a93a8e1754806befe7ac666b0c889f85078727ed2b1db0495e6a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-traits-review.json": "86385afa383aff5085601a80adda40b511299d61a0cd4fdab1c8cda7b60b4a26",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-ui-raw-verification.json": "dfabf5ddbb5bfd75e7b291971a403ea8d2ab52bfb7fb985052e5c3b537b43cb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-ui-review.json": "f83106fb0d10eb734bd1215f495a41232ba71f0eee0fcc16ffb44ef0d672b2a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/remaining-tasks.json": "d2045fd276df435f433a51079255e543d0f60ee1683b7996e7833a351ba99a69",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/remaining-tasks.snapshot.json": "d2045fd276df435f433a51079255e543d0f60ee1683b7996e7833a351ba99a69",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/source-blocks.json": "1e7770b8ab676155289e42d4c8dc4317ae488012c44ab954032253e63ea666b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-001.json": "94416315a3aa06ebc08c25fdf19e7e93533e9f97fa9407994cdc254b23010af2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-002.json": "30c99162c6b3893316e31a443ce9a1026b4c2b7e92a2a7b3e69c34a38f297a37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-003.json": "33c87ef8249e46b78a3f5b06ddc6f4c39fd5f67384157faca702d79fa9dc3474",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-004.json": "bee5328123f83f803033d13e0831351c62a828e26899d278dcd48183bcd0b305",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-005.json": "4cc55b66513ada98482ee72cd604b77114dfd21c1cca76b7ade0d69d653665a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-config-005.json": "6be13a99743b68758f5729163c9a618a6ed8065f1f3efad4f6f0812baae7c622",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-config.json": "1ebb7e01dc913abdb5e0f3743e6620ccf423db98090a6b0d9aa307a60242e584",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-coverage-005.json": "8873c93274bcf18d498f61d73d0eaace68caa89d20d9d1ff534f19050ad89568",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-coverage.json": "62397e7b8c6253d8c4e378b38538e4244ca1c9085b6c5458c8cee4d992f92f97",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-draft-005.md": "c40147b5f55b940cf4c8203984913f78a61a31e0ba40a448f67536800788e3db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-draft.md": "2bd4f2f73e5038674ff0d1b9ec12d35d0a0c5c00645924cf39be95ff0c1bb149",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-evidence-005.json": "15ebd6137ea7f4d6c6e6168339c2dc14a11f308383fe211b3fd935ae74c7a054",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-evidence.json": "93842df789b951d87b9fe189e17a5b45eac47f6852f0acb04627b2bf4942e0e9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-image.json": "a445932118e164d0849a77ea9ebed42e78cf3958194fb7cbcad31a4656f08587",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-actual-special-action-kind-stat-coverage-review.json": "6f4e4d4573f77b2e416c3e87e0b6ab1b96183883f81101fc79637a18049ae805",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-final-content-review.json": "49f7868671025dc96c04cb9f86940f50898e5335ba0ebdc40d480442535a20a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-focused-checks.json": "8ba306b1b51b8589fc1d1f5795e10ae15404dd105eb5231f0c100fd99ff80ff7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-frozen-source-verification.json": "6f59866edc8582791b567868cc68b6dc67a6322ef544435703ade6f9fb49ff56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-own-tier-wrapper-material-delta-review.json": "f2b211cc8be1558fa1d8cc2a971b3da401da8397c078bea66008d1e52f0ec9b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-peer-punctuation-correction-review.json": "ae7c0e787c02942291afb5d2b895539205eec8c8a2b0617f01bd8098f2fa4387",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-resume-review.json": "040e064dc02422180b241e3a8989823cbf35df744793acbdf0e720b439785f5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-sweep-expiry-counter-difference-review.json": "cacddce9e648a93a8e1754806befe7ac666b0c889f85078727ed2b1db0495e6a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-traits-review.json": "86385afa383aff5085601a80adda40b511299d61a0cd4fdab1c8cda7b60b4a26",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-ui-raw-verification.json": "dfabf5ddbb5bfd75e7b291971a403ea8d2ab52bfb7fb985052e5c3b537b43cb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-ui-review.json": "f83106fb0d10eb734bd1215f495a41232ba71f0eee0fcc16ffb44ef0d672b2a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-raw-verification.json": "29edcc2c96e9a812ee23d41e44072671a27959ef477d24a66b55907ba4cdec53",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5dacdd29d1d3ac611338143d006247964933d7d8565486459180184389645338",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/DAMAGE_PERCENTAGE_REVIEW.md": "ea8d2d779e0025a478f2b83794f73b22f6f2e4ada6eef61623572d3a7f9bd73d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/LOCALIZATION_COMPARISON.md": "1d8f9ebc8a6975365f06df6cbc6413ca3d644b6746f784ebcdc482411dd3ad9a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/README.md": "dfd344e1ed3a9b8c0707b7156eed9574c04b7cfd4e984903d6dcaef4d3611235",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/SOURCE_INDEX.md": "7695b03840a894e2f5c45ea779d3ac4d243e9eed9805e23c80406e77de25e868",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/TIER_VALUES.md": "347f4e4248985f017f1194cbdbfe549ddca1633751fd955b465f325196b5f637",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/WEAPON_COMPATIBILITY.md": "ca019420d2093471b0bebf24ffcc2fc97e890b453003464a5cebb0cf21b3a74e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus.md": "051bd80e376474f5afc1bf14afca6c20feb12e4abe9535a8e7c782ed913b2c39",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/反守為攻/weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus.md": "ceba33acc09b913d7976db1505afb769ee0d8d401fae9cc3f2faf90aea067760",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/melee/README.md": "12b03b8be0789f9ce30f55f8bc69964b51689dbc99a28296b9a48c5168d039c0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "9a3a0577519f28009f646a2e12ffc805a1694301a5d8f1300c008f278f0cf8b9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "cd00d03db9c8c7400a7b5120102b3e5032f36edc3d47db91ec2a296dfafeb38c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "866a688e0b186f71476894a039b538479249e1a2591fa48251df59848b0d49d3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "1fd0f2247dffc8dec841e3fd82cca012ec5a3da9fb9e823ebfba6bf1881fbe3c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/own-association-snapshot.json": "2cbf7d6e46ac89d426bf89b49a20a4803b1207142e8e220d7afd19bb3b7f76ce",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/actual-preview-004/Referneces/Translation.md": "581d2b479881d482dc389ae2be5b559b370f86a30cfef3ff46334cbe652b5e10",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5dacdd29d1d3ac611338143d006247964933d7d8565486459180184389645338",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/DAMAGE_PERCENTAGE_REVIEW.md": "ea8d2d779e0025a478f2b83794f73b22f6f2e4ada6eef61623572d3a7f9bd73d",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/LOCALIZATION_COMPARISON.md": "4f1a4e427e7c6763a66d1c408ce52ab9c0d455f774f28d0d431641d1360f045e",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/README.md": "79008291a53a850f88f7f83b6ab97cf8e946b7f23344b99a3fcb5e6bd8e63ebe",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/SOURCE_INDEX.md": "3ef18c84c3282f2913f52088d59a65f106e0feeacce64f1c10f12f89b050b4eb",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/TIER_VALUES.md": "347f4e4248985f017f1194cbdbfe549ddca1633751fd955b465f325196b5f637",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/WEAPON_COMPATIBILITY.md": "ca019420d2093471b0bebf24ffcc2fc97e890b453003464a5cebb0cf21b3a74e",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus.md": "051bd80e376474f5afc1bf14afca6c20feb12e4abe9535a8e7c782ed913b2c39",
+      "Game Info/releases/1.13.X/blessings/entries/反守為攻/weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus.md": "ceba33acc09b913d7976db1505afb769ee0d8d401fae9cc3f2faf90aea067760",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "12b03b8be0789f9ce30f55f8bc69964b51689dbc99a28296b9a48c5168d039c0",
+      "Game Info/releases/1.13.X/blessings/README.md": "9a3a0577519f28009f646a2e12ffc805a1694301a5d8f1300c008f278f0cf8b9",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "cd00d03db9c8c7400a7b5120102b3e5032f36edc3d47db91ec2a296dfafeb38c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "866a688e0b186f71476894a039b538479249e1a2591fa48251df59848b0d49d3",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "1fd0f2247dffc8dec841e3fd82cca012ec5a3da9fb9e823ebfba6bf1881fbe3c",
+      "Referneces/Translation.md": "581d2b479881d482dc389ae2be5b559b370f86a30cfef3ff46334cbe652b5e10"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "offensive-defence",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_231",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_231.png",
+      "attachment": "https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6003334449",
+      "acquired_date": "2026-10-06",
+      "sha256": "657853bc175c09a16c5acbe1d7c92735d1987c6f4977c9dd19c64362987d4a3b",
+      "content_type": "image/png",
+      "size": 4690,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "反守為攻祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected actual public attachment pixels matching pinned item.icon231; 128x128 white/gray shield-style icon, legible without clipping. Public bytes match original source hash."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 459,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 79,
+      "source_files": 30,
+      "bindings": 930,
+      "variants": 478,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 30,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1127,
+      "remote_references": 444,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 36,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-035-full-scan.json",
+        "sha256": "a8530afb460be140994fa79330b54dd04c71ec241fb658eb32473456ea055397",
+        "trigger": "round-035"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 28,
+    "not_started_name_groups": 28,
+    "partial_name_groups": 0,
+    "remaining_variants": 127,
+    "remaining_bindings": 255,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "c5222551f6f2f282604f2a934d95040947f84451e82ccbc7bfd9e2ab3a1e87dc"
+  },
+  "previous_local_commit": "f3c9a2af758234bec7ab97765340e43b7e80cc6f",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "boundary": "Only exact inventory trait IDs and item restrictions are included; no unrelated same-name behavior is inferred."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-actual-special-action-kind-stat-coverage-review.json",
+      "sha256": "6f4e4d4573f77b2e416c3e87e0b6ab1b96183883f81101fc79637a18049ae805"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-final-content-review.json",
+      "sha256": "49f7868671025dc96c04cb9f86940f50898e5335ba0ebdc40d480442535a20a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-focused-checks.json",
+      "sha256": "8ba306b1b51b8589fc1d1f5795e10ae15404dd105eb5231f0c100fd99ff80ff7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-frozen-source-verification.json",
+      "sha256": "6f59866edc8582791b567868cc68b6dc67a6322ef544435703ade6f9fb49ff56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "f2b211cc8be1558fa1d8cc2a971b3da401da8397c078bea66008d1e52f0ec9b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-peer-punctuation-correction-review.json",
+      "sha256": "ae7c0e787c02942291afb5d2b895539205eec8c8a2b0617f01bd8098f2fa4387"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-resume-review.json",
+      "sha256": "040e064dc02422180b241e3a8989823cbf35df744793acbdf0e720b439785f5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-sweep-expiry-counter-difference-review.json",
+      "sha256": "cacddce9e648a93a8e1754806befe7ac666b0c889f85078727ed2b1db0495e6a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-traits-review.json",
+      "sha256": "86385afa383aff5085601a80adda40b511299d61a0cd4fdab1c8cda7b60b4a26"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-ui-raw-verification.json",
+      "sha256": "dfabf5ddbb5bfd75e7b291971a403ea8d2ab52bfb7fb985052e5c3b537b43cb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-ui-review.json",
+      "sha256": "f83106fb0d10eb734bd1215f495a41232ba71f0eee0fcc16ffb44ef0d672b2a1"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-config.json",
+    "sha256": "45a9cd0163c4bcab908f0803847c53e64636120b3542298f965c2e053f7ddcd2"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/BLESSING_WEAPON_MAP.json",
+      "sha256": "5d84cd21461f6033299b5d4e4b2ec8cac27bab4d4fe47f377e7afb1746ddf8ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/BLESSING_WEAPON_MAP.snapshot.json",
+      "sha256": "5d84cd21461f6033299b5d4e4b2ec8cac27bab4d4fe47f377e7afb1746ddf8ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/COMMON_MECHANISM_CACHE.snapshot.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/inventory.snapshot.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/item_metadata.snapshot.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/last-guard-agent-evidence.json",
+      "sha256": "5c380d2d17409e879e66aeecf7f9d4ff8dafc0dd5870d240f03a1a943d3bac52"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/last-guard-primary-private-push-settings-material-review.json",
+      "sha256": "e0eec705d42584a0b4674faa0472f75c34ba6cfa99c067c4e898de2f37def06b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/localized_keys.snapshot.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-image.json",
+      "sha256": "a445932118e164d0849a77ea9ebed42e78cf3958194fb7cbcad31a4656f08587"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-actual-special-action-kind-stat-coverage-review.json",
+      "sha256": "6f4e4d4573f77b2e416c3e87e0b6ab1b96183883f81101fc79637a18049ae805"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "f2b211cc8be1558fa1d8cc2a971b3da401da8397c078bea66008d1e52f0ec9b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-sweep-expiry-counter-difference-review.json",
+      "sha256": "cacddce9e648a93a8e1754806befe7ac666b0c889f85078727ed2b1db0495e6a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-traits-review.json",
+      "sha256": "86385afa383aff5085601a80adda40b511299d61a0cd4fdab1c8cda7b60b4a26"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-ui-raw-verification.json",
+      "sha256": "dfabf5ddbb5bfd75e7b291971a403ea8d2ab52bfb7fb985052e5c3b537b43cb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/offensive-defence-primary-ui-review.json",
+      "sha256": "f83106fb0d10eb734bd1215f495a41232ba71f0eee0fcc16ffb44ef0d672b2a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/remaining-tasks.json",
+      "sha256": "d2045fd276df435f433a51079255e543d0f60ee1683b7996e7833a351ba99a69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/remaining-tasks.snapshot.json",
+      "sha256": "d2045fd276df435f433a51079255e543d0f60ee1683b7996e7833a351ba99a69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/source-blocks.json",
+      "sha256": "1e7770b8ab676155289e42d4c8dc4317ae488012c44ab954032253e63ea666b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/inputs/tools/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-004.json",
+      "sha256": "bee5328123f83f803033d13e0831351c62a828e26899d278dcd48183bcd0b305"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "9a3a0577519f28009f646a2e12ffc805a1694301a5d8f1300c008f278f0cf8b9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "cd00d03db9c8c7400a7b5120102b3e5032f36edc3d47db91ec2a296dfafeb38c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "5dacdd29d1d3ac611338143d006247964933d7d8565486459180184389645338"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "ea8d2d779e0025a478f2b83794f73b22f6f2e4ada6eef61623572d3a7f9bd73d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\LOCALIZATION_COMPARISON.md",
+      "sha256": "1d8f9ebc8a6975365f06df6cbc6413ca3d644b6746f784ebcdc482411dd3ad9a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\README.md",
+      "sha256": "dfd344e1ed3a9b8c0707b7156eed9574c04b7cfd4e984903d6dcaef4d3611235"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\SOURCE_INDEX.md",
+      "sha256": "7695b03840a894e2f5c45ea779d3ac4d243e9eed9805e23c80406e77de25e868"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\TIER_VALUES.md",
+      "sha256": "347f4e4248985f017f1194cbdbfe549ddca1633751fd955b465f325196b5f637"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\WEAPON_COMPATIBILITY.md",
+      "sha256": "ca019420d2093471b0bebf24ffcc2fc97e890b453003464a5cebb0cf21b3a74e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus.md",
+      "sha256": "051bd80e376474f5afc1bf14afca6c20feb12e4abe9535a8e7c782ed913b2c39"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\反守為攻\\weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus.md",
+      "sha256": "ceba33acc09b913d7976db1505afb769ee0d8d401fae9cc3f2faf90aea067760"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "12b03b8be0789f9ce30f55f8bc69964b51689dbc99a28296b9a48c5168d039c0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\作戰大錘&板盾\\README.md",
+      "sha256": "866a688e0b186f71476894a039b538479249e1a2591fa48251df59848b0d49d3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚和鎮壓護盾\\README.md",
+      "sha256": "1fd0f2247dffc8dec841e3fd82cca012ec5a3da9fb9e823ebfba6bf1881fbe3c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\Referneces\\Translation.md",
+      "sha256": "581d2b479881d482dc389ae2be5b559b370f86a30cfef3ff46334cbe652b5e10"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-raw-verification.json",
+      "sha256": "29edcc2c96e9a812ee23d41e44072671a27959ef477d24a66b55907ba4cdec53"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\offensive-defence-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "2cbf7d6e46ac89d426bf89b49a20a4803b1207142e8e220d7afd19bb3b7f76ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-001.json",
+      "sha256": "94416315a3aa06ebc08c25fdf19e7e93533e9f97fa9407994cdc254b23010af2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-002.json",
+      "sha256": "30c99162c6b3893316e31a443ce9a1026b4c2b7e92a2a7b3e69c34a38f297a37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-003.json",
+      "sha256": "33c87ef8249e46b78a3f5b06ddc6f4c39fd5f67384157faca702d79fa9dc3474"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-config.json",
+      "sha256": "1ebb7e01dc913abdb5e0f3743e6620ccf423db98090a6b0d9aa307a60242e584"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-coverage.json",
+      "sha256": "62397e7b8c6253d8c4e378b38538e4244ca1c9085b6c5458c8cee4d992f92f97"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-draft.md",
+      "sha256": "2bd4f2f73e5038674ff0d1b9ec12d35d0a0c5c00645924cf39be95ff0c1bb149"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-evidence.json",
+      "sha256": "93842df789b951d87b9fe189e17a5b45eac47f6852f0acb04627b2bf4942e0e9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-agent-config.json",
+      "sha256": "1ebb7e01dc913abdb5e0f3743e6620ccf423db98090a6b0d9aa307a60242e584"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-agent-evidence.json",
+      "sha256": "93842df789b951d87b9fe189e17a5b45eac47f6852f0acb04627b2bf4942e0e9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-agent-draft.md",
+      "sha256": "2bd4f2f73e5038674ff0d1b9ec12d35d0a0c5c00645924cf39be95ff0c1bb149"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-actual-special-action-kind-stat-coverage-review.json",
+      "sha256": "6f4e4d4573f77b2e416c3e87e0b6ab1b96183883f81101fc79637a18049ae805"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-final-content-review.json",
+      "sha256": "49f7868671025dc96c04cb9f86940f50898e5335ba0ebdc40d480442535a20a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-frozen-source-verification.json",
+      "sha256": "6f59866edc8582791b567868cc68b6dc67a6322ef544435703ade6f9fb49ff56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "f2b211cc8be1558fa1d8cc2a971b3da401da8397c078bea66008d1e52f0ec9b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-sweep-expiry-counter-difference-review.json",
+      "sha256": "cacddce9e648a93a8e1754806befe7ac666b0c889f85078727ed2b1db0495e6a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-traits-review.json",
+      "sha256": "86385afa383aff5085601a80adda40b511299d61a0cd4fdab1c8cda7b60b4a26"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-ui-raw-verification.json",
+      "sha256": "dfabf5ddbb5bfd75e7b291971a403ea8d2ab52bfb7fb985052e5c3b537b43cb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-primary-ui-review.json",
+      "sha256": "f83106fb0d10eb734bd1215f495a41232ba71f0eee0fcc16ffb44ef0d672b2a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-config-005.json",
+      "sha256": "6be13a99743b68758f5729163c9a618a6ed8065f1f3efad4f6f0812baae7c622"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-draft-005.md",
+      "sha256": "c40147b5f55b940cf4c8203984913f78a61a31e0ba40a448f67536800788e3db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-coverage-005.json",
+      "sha256": "8873c93274bcf18d498f61d73d0eaace68caa89d20d9d1ff534f19050ad89568"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-agent-evidence-005.json",
+      "sha256": "15ebd6137ea7f4d6c6e6168339c2dc14a11f308383fe211b3fd935ae74c7a054"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-group/offensive-defence-actual-preview-receipt-005.json",
+      "sha256": "4cc55b66513ada98482ee72cd604b77114dfd21c1cca76b7ade0d69d653665a3"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/offensive-defence-formal-peer-scope.json",
+    "sha256": "4e0fb542a9746cb327a3bca1c14d8e38a38e7d7a5075146dc78cca4bf040f739",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

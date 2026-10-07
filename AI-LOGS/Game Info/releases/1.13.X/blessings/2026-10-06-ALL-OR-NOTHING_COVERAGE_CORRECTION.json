@@ -1,0 +1,270 @@
+{
+  "date": "2026-10-06",
+  "status": "accepted",
+  "complete": true,
+  "accepted": true,
+  "issues": [],
+  "blessing": "all-or-nothing",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "scope": "Only five affected player/source/RAW comparison/variant pages; all15ownpages and9variants18bindings verified.",
+  "reason": "Original action coverage omitted Crowbar generated BASE_ACTIONS aliases, incorrectly reporting four sweeps and no heavy sweeps. Corrected to20effectiveSweeps/eightheavySweeps and applicable sticky/shout native conditions.",
+  "count_as_new_completed_blessing": false,
+  "counts_unchanged": true,
+  "committed_inventory_counts": {
+    "blessings": 140,
+    "variants": 480,
+    "bindings": 934
+  },
+  "remaining_counts": {
+    "name_groups": 27,
+    "not_started_name_groups": 27,
+    "partial_name_groups": 0,
+    "remaining_variants": 125,
+    "remaining_bindings": 251,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "changed_files": [
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/孤注一擲/DAMAGE_PERCENTAGE_REVIEW.md",
+      "candidate": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/DAMAGE_PERCENTAGE_REVIEW.md",
+      "before_sha256": "b84674168537ef8f00822e29400f1c4cd46efbfb92886b54d1425212bc965b4e",
+      "after_sha256": "c266be4c40270bcb891d91e4c33629f161a61040204f3d62b576de08c3429702",
+      "changed": true
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/孤注一擲/LOCALIZATION_COMPARISON.md",
+      "candidate": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/LOCALIZATION_COMPARISON.md",
+      "before_sha256": "52219eaa35268507c6c2dad74ddd5a058cbb40ad5e5bb8599ea63566ab9422d4",
+      "after_sha256": "5b82cd4daf673ab1947843a871a2bc24ac48b8f01dd5aceef6f71c0fda2864be",
+      "changed": true
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/孤注一擲/README.md",
+      "candidate": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/README.md",
+      "before_sha256": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c",
+      "after_sha256": "31ca34992fb8e79478ab236d4cbc18e3809bbc1965532b7f453a9e83f8873286",
+      "changed": true
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/孤注一擲/SOURCE_INDEX.md",
+      "candidate": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/SOURCE_INDEX.md",
+      "before_sha256": "94d7cd5d4a0477098fdf09cf6cdf2bfffe458b4a93812afe4be4553eeeae7ce5",
+      "after_sha256": "4a970c2fc776bf91602c944210ddda8691333c0fa9f46cc0adaee5916c8f9d12",
+      "changed": true
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina.md",
+      "candidate": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina.md",
+      "before_sha256": "00f297343cb1d0fa8d17eefb493e02385d370aa93e12b97eb5cd531274a50e09",
+      "after_sha256": "e13ac5aab81b482582c181dbe7eeaaafbdf79f7a35289cc0d3de1a14876b833b",
+      "changed": true
+    }
+  ],
+  "original_commit": "213a9af29691d23f4a233cadcf67683991cabca1",
+  "original_acceptance": {
+    "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ALL-OR-NOTHING_ACCEPTANCE.json",
+    "sha256": "67d27b8abc2ddaf700e427c67e4e6fbac53467630121732946f681c7e76e52e2",
+    "preserved": true
+  },
+  "previous_local_commit": "174edeca7b0fe892ded8a53f8cdecd57a875c019",
+  "canonical_approved_data": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-coverage-repair-config.json",
+    "sha256": "01b9b2a694953c24b77c19b2c48b5405c56a8edead7fd927f269fbb2c5ca07e3"
+  },
+  "primary_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-coverage-repair-final-content-review.json",
+    "sha256": "a31f766834eb29e8603af3ffed486bb26bba9be701248bbc74ed0927a480f5f4",
+    "method": "Content review of generated aliases, actual heavy profile flags, sticky/shout native conditions; original unaffected tiers/math/commonmechanisms reused under matchingconditions; source387hashes supplement content review."
+  },
+  "primary_content_conclusions": [
+    "18Mark audit: onlyCrowbar generated aliases omitted; other17 unchanged;6otherCrowbardocs testedonlyAO falsecount.",
+    "8generatedWindup+16generatedSweep+4literalSweep=34signatures/20effectiveSweep,8heavy verified smiter/tank/specialtank inherited heavyflag;fullmatrix283→307.",
+    "specialsticky requires specialactive/abortedhit/validunitactor/allowedhitzone-prop; noalwayssticky oradditionalarmorban. Positive ticks melee originalitem/heldcurrentcachedstat; dodgeattack0 notpositiveHP.",
+    "P3weapon_shout explicitattack_type shout; ShieldRelease absentfield→nil passed throughclass/Attackdefault; neithermelee.",
+    "Own stride.2/.125 and p/cap5 formulas/examples/tiers/RAW/cache/lifetime/held/unequip unchanged.",
+    "Actual9v18association andimage unchanged; candidate map object equality ignoresarrayorder, Rootdidnotcopysharedmap/index."
+  ],
+  "author_actual_preview": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/all-or-nothing-actual-preview-receipt-002.json",
+    "sha256": "08a86923fc7be5a0e482ebc5739077c0b4b383e917aceccf715184bad764bb29",
+    "passed": true
+  },
+  "author_complete_player_draft": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/all-or-nothing-agent-draft-correction-001.md",
+    "sha256": "d589faa0770ec1c04d22af75d9080b213fd21d8d37822717ff895857fa820b9d"
+  },
+  "author_final_evidence": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/repair-001/all-or-nothing-agent-evidence-correction-001.json",
+    "sha256": "41f4bd18e9b0345cc4a8c1d25d3554be230f78d6749a12e656a7a99d131b1d0c"
+  },
+  "own_association": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-coverage-repair-own-association.json",
+    "sha256": "ad5fc8369fac72903beb04077af7117c93dc37e01eed0e1cd863d1cf0a1d6144",
+    "variants": 9,
+    "bindings": 18
+  },
+  "image": {
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-image.json",
+      "sha256": "dcaa4b152bf406d629c4a725e80348ef87c56626aff009e40c02d9a420087829"
+    },
+    "attachment": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+    "reused_unchanged": true,
+    "new_issue_attachment": false
+  },
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-coverage-repair-formal-peer-scope.json",
+    "sha256": "8411b42ffe6cab5fcccc7daed9bfc5a7917abc57b6bdf0fcdf326ebdde0e6237",
+    "file_count": 101,
+    "final_content_hashes_unchanged": true
+  },
+  "nonauthor_peer": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-coverage-repair-formal-peer-review.json",
+    "sha256": "f051c9e39e373565a2dd7290dd0620303630005755ccb124acbd255628f550ad",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/bash",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer": true
+  },
+  "validation": {
+    "focused": {
+      "complete": true,
+      "accepted": true,
+      "checks": {
+        "gfm": {
+          "files": 15,
+          "tables": 7,
+          "rows": 492,
+          "lists": 35,
+          "scope": "focused"
+        },
+        "links": {
+          "scope": "focused",
+          "markdown_files": 15,
+          "local_references": 124,
+          "remote_references": 518,
+          "errors": [],
+          "existing_errors": 0,
+          "new_errors": []
+        },
+        "source": {
+          "source_ranges_verified": 434,
+          "source_files": 60,
+          "bindings": 934,
+          "variants": 480,
+          "formula_checks": "passed",
+          "scope": "focused",
+          "markdown_files": 15,
+          "source_object_cache": {
+            "cache_hits": 60,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        }
+      },
+      "scope": "All15own formal pages; only5changed; fullown9v18 association and actual inventory partition",
+      "no_new_blessing_count": true
+    },
+    "expanded_full_scan": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-coverage-correction-001-full-scan.json",
+      "sha256": "ce715bada0bdfb972fadaadf4fc4da7b2a53b8fabd759fcb3f9e0109a9817ed1",
+      "passed": true,
+      "checks": {
+        "source_mapping": {
+          "source_ranges_verified": 6771,
+          "source_files": 556,
+          "bindings": 934,
+          "variants": 480,
+          "formula_checks": "passed",
+          "scope": "full",
+          "markdown_files": 1398,
+          "source_object_cache": {
+            "cache_hits": 556,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        },
+        "gfm": {
+          "files": 1398,
+          "tables": 1016,
+          "rows": 17195,
+          "lists": 2301,
+          "scope": "full"
+        },
+        "game-info": {
+          "markdown_files": 2098,
+          "existing_errors": 1,
+          "new_errors": 0
+        },
+        "ai-logs": {
+          "markdown_files": 40,
+          "existing_errors": 8,
+          "new_errors": 0
+        },
+        "prompt": {
+          "markdown_files": 4,
+          "existing_errors": 0,
+          "new_errors": 0
+        },
+        "blessings": {
+          "markdown_files": 1398,
+          "existing_errors": 0,
+          "new_errors": 0
+        },
+        "common_cache": {
+          "verified_records": 45,
+          "file_sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+        }
+      }
+    },
+    "global_uniqueness_and_exact_partition": true,
+    "shared_map_unchanged": {
+      "path": "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "sha256": "ed88ff0f5d35c402184dcb73d6cc075e2f6deb86f64379f6957c78784ec0256a"
+    },
+    "original_unaffected_tiers_math_RAW_bindings_image_reused": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "final_focused_checks": {
+      "gfm": {
+        "files": 17,
+        "tables": 7,
+        "rows": 492,
+        "lists": 39,
+        "scope": "focused"
+      },
+      "source": {
+        "source_ranges_verified": 434,
+        "source_files": 60,
+        "bindings": 934,
+        "variants": 480,
+        "formula_checks": "passed",
+        "scope": "focused",
+        "markdown_files": 15,
+        "source_object_cache": {
+          "cache_hits": 60,
+          "git_objects_read": 0
+        },
+        "global_shared_map_consistency": true
+      },
+      "links": {
+        "scope": "focused",
+        "markdown_files": 17,
+        "local_references": 451,
+        "remote_references": 518,
+        "errors": [],
+        "existing_errors": 0,
+        "new_errors": []
+      }
+    }
+  },
+  "full_scan_policy": {
+    "committed_items_before_this_correction": 109,
+    "expected_item_after_commit": 110,
+    "correction_counts_as_policy_item": true,
+    "next_round_full_scan_at_policy_item": 111
+  }
+}

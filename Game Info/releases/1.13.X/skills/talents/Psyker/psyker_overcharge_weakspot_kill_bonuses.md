@@ -1,5 +1,7 @@
 # 預知未來(Precognition)：原始碼依據
 
+[English](en/psyker_overcharge_weakspot_kill_bonuses.md)
+
 [返回玩家說明](README.md#psyker_overcharge_weakspot_kill_bonuses)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_overcharge_weakspot_kill_bonuses)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

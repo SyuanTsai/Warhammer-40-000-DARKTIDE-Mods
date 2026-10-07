@@ -1,0 +1,983 @@
+{
+  "date": "2026-10-03",
+  "blessing": "executor",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/行刑者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power",
+    "weapon_trait_bespoke_dual_shivs_p1_chained_weakspot_hits_increases_power",
+    "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power"
+  ],
+  "added_binding_count": 7,
+  "total_variants": 3,
+  "total_bindings": 7,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "3 bound variants /7 bindings independent research, special chain and primary-config cross-review",
+    "final_document_review": {
+      "task": "Executor integrated configuration peer review",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "sections": {
+        "player_description": {
+          "accepted": true,
+          "findings": [
+            "The seven UI bindings are represented by the three intended variants; the shared tier values, five-effective-stack cap, 2.5-second expiry, first qualifying weakspot hit, first-target body-hit reset, and weapon-switch behavior are consistent with the verified implementation.",
+            "Force Sword M1/M2 sticky weakspot ticks and M3's lack of sticky settings are described distinctly.",
+            "The Dual Shivs text correctly distinguishes thrown knives from melee proc/reset events and says they inherit the bonus available when the throw action starts."
+          ]
+        },
+        "examples_and_math": {
+          "accepted": true,
+          "findings": [
+            "Tier IV at five stacks is +30%; the 300 to 390 example is explicitly a post-power-type-curve power input before Executor, not final HP damage.",
+            "The existing +20% example adds the two same-stage bonuses to 1.50 and correctly describes the relative increase as 25%.",
+            "The Dual Shivs example uses three existing stacks (+18%) and 300 × 1.18 = 354 as a power input; the stated caveat avoids presenting it as final damage.",
+            "The multi-target example only promises the stacks for subsequent attacks after qualifying proc events are processed; it does not claim the current hit is retroactively recalculated."
+          ]
+        },
+        "projectile_snapshot_timing": {
+          "accepted": true,
+          "findings": [
+            "ActionSpawnProjectile.start generates the projectile before the configured 0.2-second fire time. The item_projectile template copies the owner stat-buff table at projectile creation, and PlayerProjectileUnitBuffExtension retains that copy without updating it.",
+            "ProjectileDamageExtension sends the projectile's ranged attack through Attack; Attack reads the projectile extension's copied stat buffs, and PowerLevel consumes generic power_level_modifier. Existing Executor stacks present in the start-time snapshot therefore benefit the thrown knife.",
+            "Switching weapons or expiring the owner's Executor stacks after projectile generation does not modify the existing projectile snapshot. A ranged thrown hit does not add, clear, or refresh Executor stacks."
+          ]
+        },
+        "variants_bindings_localization": {
+          "accepted": true,
+          "findings": [
+            "The integrated config lists the three formal variants and seven UI bindings, with the shared weapon_trait_030 icon.",
+            "The four tier values and metadata available-tier null state are preserved; no claim is made that all four defined tiers are obtainable.",
+            "The exact localization name/description keys and hashes, plus the separate ranged shotpistol-shield code candidate, remain distinguished from the three metadata-backed melee variants."
+          ]
+        }
+      },
+      "source_refs": [
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua#L80-L139",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua#L80-L139",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua#L483-L542",
+        "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua#L220-L273",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua#L739-L809",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L103-L172",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua#L103-L172",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua#L1096-L1123",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua#L1160-L1187",
+        "scripts/extension_systems/weapon/actions/action_weapon_throw.lua#L1-L30",
+        "scripts/extension_systems/weapon/actions/action_spawn_projectile.lua#L119-L143",
+        "scripts/extension_systems/weapon/actions/action_spawn_projectile.lua#L380-L432",
+        "scripts/settings/projectile/player_projectile_templates.lua#L620-L655",
+        "scripts/extension_systems/unit_templates/item_projectile_unit_template.lua#L79-L100",
+        "scripts/extension_systems/buff/player_projectile_unit_buff_extension.lua#L13-L35",
+        "scripts/extension_systems/buff/player_projectile_unit_buff_extension.lua#L57-L65",
+        "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L485-L540",
+        "scripts/utilities/attack/attack.lua#L199-L224",
+        "scripts/utilities/attack/attack.lua#L271-L284",
+        "scripts/utilities/attack/attack.lua#L350-L353",
+        "scripts/utilities/attack/damage_calculation.lua#L219-L227",
+        "scripts/utilities/attack/power_level.lua#L25-L60",
+        "scripts/utilities/attack/power_level.lua#L63-L91"
+      ],
+      "scope_note": "This peer review covers the integrated executor-config.json and the fixed-SHA gameplay evidence listed above. No formal source or shared file was changed."
+    },
+    "special_attack_review": {
+      "task": "Executor special attack and projectile inheritance review",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "scope": "Reviewed special-attack event behavior and whether Dual Shivs thrown projectiles inherit active Executor Power. The integrated executor-config.json has not yet received this peer review.",
+      "verified": [
+        "Combatknife P1 M1/M2 special actions use sweep with the jab_special damage profile. The profile marks weapon_special but has no skip_on_hit_proc; ActionSweep submits melee Attack.execute hits, so an actual weakspot hit can satisfy Executor's melee-and-weakspot gate.",
+        "Force Sword P1 M1/M2 sticky attacks execute three damage instances per sticky profile tick. ActionSweep submits each tick as melee against target_index 1 and computes its weakspot result; each qualifying weakspot tick can add a stack, while a body hit on that first target can clear active stacks. Force Sword P1 M3 has no sticky settings. The shared Executor gate does not exclude weapon_special.",
+        "Dual Shivs P1 M1/M2 special throw uses ActionWeaponThrow, which inherits ActionSpawnProjectile. Its projectile hit is attack_type ranged, so it cannot add or clear Executor stacks, whose parent gate is melee-only.",
+        "Dual Shivs thrown damage can benefit from active generic power_level_modifier stacks if those stacks are present in the player's stat-buff snapshot when the projectile is spawned. item_projectile_unit_template shallow-copies owner stat_buffs into PlayerProjectileUnitBuffExtension; Attack later reads stat_buffs from the projectile extension, and PowerLevel consumes the generic power_level_modifier. This is a spawn-time snapshot: switching weapons or the owner's later buff expiry does not update an already spawned projectile's copied table."
+      ],
+      "source_refs": [
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua#L881-L951",
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua#L957-L1026",
+        "scripts/settings/equipment/weapon_templates/combat_knives/settings_templates/combat_knife_damage_profile_templates.lua#L542-L550",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua#L1353-L1360",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua#L1498-L1499",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua#L739-L809",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L103-L125",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L150-L172",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua#L103-L125",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua#L150-L172",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua#L556-L565",
+        "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua#L220-L273",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua#L1096-L1121",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua#L1160-L1185",
+        "scripts/extension_systems/weapon/actions/action_weapon_throw.lua#L5-L20",
+        "scripts/extension_systems/weapon/actions/action_spawn_projectile.lua#L380-L432",
+        "scripts/settings/projectile/player_projectile_templates.lua#L620-L646",
+        "scripts/extension_systems/unit_templates/item_projectile_unit_template.lua#L82-L92",
+        "scripts/extension_systems/buff/player_projectile_unit_buff_extension.lua#L13-L23",
+        "scripts/extension_systems/buff/player_projectile_unit_buff_extension.lua#L33-L35",
+        "scripts/extension_systems/buff/player_projectile_unit_buff_extension.lua#L57-L65",
+        "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L485-L540",
+        "scripts/utilities/attack/attacking_unit_resolver.lua#L6-L20",
+        "scripts/utilities/attack/attack.lua#L217-L224",
+        "scripts/utilities/attack/attack.lua#L271-L273",
+        "scripts/utilities/attack/attack.lua#L353-L353",
+        "scripts/utilities/attack/power_level.lua#L25-L60",
+        "scripts/utilities/attack/power_level.lua#L87-L90"
+      ],
+      "validation": "JSON syntax checked after writing. All source references were read from the specified fixed SHA."
+    },
+    "draft_corrections": [
+      "Root removed unsupported errata: Repeated-hit phrasing and omitted duration are not explicit contradictions.",
+      "Primary read all three tier objects and actual metadata UI keys/RAW plus fixed-SHA binding lines.",
+      "Primary distinguished per-hit Executor from per-sweep Wrath; sticky weakspot instances each stack and body instances reset.",
+      "Primary and peer traced projectile stat snapshot at ActionSpawnProjectile.start; generic owner-stat inference alone is insufficient.",
+      "Player examples show post-curve power, additive other20percent and projectile snapshot without claiming finalHP damage."
+    ],
+    "parallel_execution": {
+      "groups": [
+        "executor",
+        "showstopper",
+        "manstopper"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "executor",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_030.png",
+      "attachment": "https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967950767",
+      "acquired_date": "2026-10-03",
+      "sha256": "28aee042845c7be6e3300f0bde1b5d80cdd49f5fd1033d2cbc649cc8b4a24598",
+      "content_type": "image/png",
+      "size": 5121,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "行刑者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected public Issue attachment pixels at128×128;actual source/public SHA-256 match."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 387,
+      "tables": 316,
+      "rows": 3091,
+      "lists": 539
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1287,
+      "source_files": 364,
+      "bindings": 241,
+      "variants": 124,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1087,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 387,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 132,
+    "not_started_name_groups": 132,
+    "partial_name_groups": 0,
+    "remaining_variants": 464,
+    "remaining_bindings": 927,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "c437bf64b20f73a6046a1a0c75674724af4a1f6596bc2e95853d0b7b5e813997"
+  },
+  "previous_local_commit": "05753df2b93dda35236ba268f64bd8a03243967c",
+  "current_blessing_formula_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "primary_direct_review": true,
+    "reviewed": "All three actual tier objects/wrappers, base220–273, parent/activated execution classes, child-tier override/offset/additive stats, PowerLevel25–92, DamageProfile29–48 and DamageCalculation219–227; ActionSweep normal per-target and sticky events, projectile spawn/snapshot/current attack consumer, equip/wield lifecycle and exact metadata/RAW UI bindings.",
+    "formula": "n=clamp(raw−1,0,5); M=1+n*p+b_other; p=.045/.05/.055/.06. Tier override replaces default.05.",
+    "examples": {
+      "IV5stacks_300to390": true,
+      "II3stacks_1_15": true,
+      "other20percent_IV5stacks_360to450_relative25percent": true,
+      "IV3stacks_projectile_300to354_start_snapshot": true,
+      "cap_refresh_2_5seconds": true,
+      "body_first_target_reset_not_later_targets": true,
+      "sticky_per_damage_instance": true
+    },
+    "source_suffix_candidate_review": "ShotpistolShield source/tier/wrapper/category is a related suffix candidate; no matching item metadata ties it to this exact name key, so it is excluded from confirmed player bindings."
+  },
+  "ui_name_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "bindings": [
+      {
+        "weapon_id": "combatknife_p1",
+        "model_id": "combatknife_p1_m1",
+        "trait_id": "weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power",
+        "trait_item": "content/items/traits/bespoke_combatknife_p1/chained_weakspot_hits_increases_power",
+        "trait_category": "bespoke_combatknife_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatknife_p1_m1",
+          "loc_weapon_pattern_combatknife_p1_m1",
+          "loc_weapon_mark_combatknife_p1_m1"
+        ],
+        "ui_name_components_en": [
+          "Combat Blade",
+          "Catachan",
+          "Mk III"
+        ],
+        "ui_name_components": [
+          "戰刃",
+          "卡塔昌",
+          "Mk III"
+        ],
+        "ui_name_zh_tw": "戰刃 卡塔昌 Mk III",
+        "source_binding_lines": [
+          15,
+          1434,
+          1436
+        ]
+      },
+      {
+        "weapon_id": "combatknife_p1",
+        "model_id": "combatknife_p1_m2",
+        "trait_id": "weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power",
+        "trait_item": "content/items/traits/bespoke_combatknife_p1/chained_weakspot_hits_increases_power",
+        "trait_category": "bespoke_combatknife_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatknife_p1_m2",
+          "loc_weapon_pattern_combatknife_p1_m2",
+          "loc_weapon_mark_combatknife_p1_m2"
+        ],
+        "ui_name_components_en": [
+          "Combat Blade",
+          "Catachan",
+          "Mk VI"
+        ],
+        "ui_name_components": [
+          "戰刃",
+          "卡塔昌",
+          "Mk VI"
+        ],
+        "ui_name_zh_tw": "戰刃 卡塔昌 Mk VI",
+        "source_binding_lines": [
+          15,
+          1524,
+          1526
+        ]
+      },
+      {
+        "weapon_id": "dual_shivs_p1",
+        "model_id": "dual_shivs_p1_m1",
+        "trait_id": "weapon_trait_bespoke_dual_shivs_p1_chained_weakspot_hits_increases_power",
+        "trait_item": "content/items/traits/bespoke_dual_shivs_p1/chained_weakspot_hits_increases_power",
+        "trait_category": "bespoke_dual_shivs_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_dual_shivs_p1_m1",
+          "loc_weapon_pattern_dual_shivs_p1_m1",
+          "loc_weapon_mark_dual_shivs_p1_m1"
+        ],
+        "ui_name_components_en": [
+          "Shivs",
+          "Improvised",
+          "Mk I"
+        ],
+        "ui_name_components": [
+          "短刀",
+          "臨時拼湊",
+          "型號1"
+        ],
+        "ui_name_zh_tw": "短刀 臨時拼湊 型號1",
+        "source_binding_lines": [
+          14,
+          1500,
+          1502
+        ]
+      },
+      {
+        "weapon_id": "dual_shivs_p1",
+        "model_id": "dual_shivs_p1_m2",
+        "trait_id": "weapon_trait_bespoke_dual_shivs_p1_chained_weakspot_hits_increases_power",
+        "trait_item": "content/items/traits/bespoke_dual_shivs_p1/chained_weakspot_hits_increases_power",
+        "trait_category": "bespoke_dual_shivs_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_dual_shivs_p1_m2",
+          "loc_weapon_pattern_dual_shivs_p1_m2",
+          "loc_weapon_mark_dual_shivs_p1_m2"
+        ],
+        "ui_name_components_en": [
+          "Shivs",
+          "Improvised",
+          "Mk III"
+        ],
+        "ui_name_components": [
+          "短刀",
+          "臨時拼湊",
+          "型號3"
+        ],
+        "ui_name_zh_tw": "短刀 臨時拼湊 型號3",
+        "source_binding_lines": [
+          14,
+          1579,
+          1581
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "model_id": "forcesword_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power",
+        "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_increases_power",
+        "trait_category": "bespoke_forcesword_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_p1_m1",
+          "loc_weapon_pattern_forcesword_p1_m1",
+          "loc_weapon_mark_forcesword_p1_m1"
+        ],
+        "ui_name_components_en": [
+          "Blaze Force Sword",
+          "Obscurus",
+          "Mk II"
+        ],
+        "ui_name_components": [
+          "烈焰力場劍",
+          "朦朧",
+          "Mk II"
+        ],
+        "ui_name_zh_tw": "烈焰力場劍 朦朧 Mk II",
+        "source_binding_lines": [
+          15,
+          1745,
+          1747
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "model_id": "forcesword_p1_m2",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power",
+        "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_increases_power",
+        "trait_category": "bespoke_forcesword_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_p1_m2",
+          "loc_weapon_pattern_forcesword_p1_m2",
+          "loc_weapon_mark_forcesword_p1_m2"
+        ],
+        "ui_name_components_en": [
+          "Blaze Force Sword",
+          "Deimos",
+          "Mk IV"
+        ],
+        "ui_name_components": [
+          "烈焰力場劍",
+          "戴莫斯",
+          "Mk IV"
+        ],
+        "ui_name_zh_tw": "烈焰力場劍 戴莫斯 Mk IV",
+        "source_binding_lines": [
+          15,
+          1671,
+          1673
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "model_id": "forcesword_p1_m3",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power",
+        "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_increases_power",
+        "trait_category": "bespoke_forcesword_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_p1_m3",
+          "loc_weapon_pattern_forcesword_p1_m3",
+          "loc_weapon_mark_forcesword_p1_m3"
+        ],
+        "ui_name_components_en": [
+          "Blaze Force Sword",
+          "Illisi",
+          "Mk V"
+        ],
+        "ui_name_components": [
+          "烈焰力場劍",
+          "伊利斯",
+          "Mk V"
+        ],
+        "ui_name_zh_tw": "烈焰力場劍 伊利斯 Mk V",
+        "source_binding_lines": [
+          15,
+          1539,
+          1541
+        ]
+      }
+    ],
+    "raw_verification": {
+      "resource": "content/localization/items",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "records": [
+        {
+          "key": "loc_combatknife_p1_m1",
+          "hash": "24d38cd6",
+          "locale": 0,
+          "text": "Catachan Mk III Combat Blade"
+        },
+        {
+          "key": "loc_combatknife_p1_m1",
+          "hash": "24d38cd6",
+          "locale": 16,
+          "text": "卡塔昌Mk III戰刃"
+        },
+        {
+          "key": "loc_combatknife_p1_m2",
+          "hash": "71de4e7d",
+          "locale": 0,
+          "text": "Catachan Mk VI Combat Blade"
+        },
+        {
+          "key": "loc_combatknife_p1_m2",
+          "hash": "71de4e7d",
+          "locale": 16,
+          "text": "卡塔昌Mk VI戰刃"
+        },
+        {
+          "key": "loc_dual_shivs_p1_m1",
+          "hash": "02ab71e0",
+          "locale": 0,
+          "text": "Improvised Mk I Shivs"
+        },
+        {
+          "key": "loc_dual_shivs_p1_m1",
+          "hash": "02ab71e0",
+          "locale": 16,
+          "text": "臨時拼湊Mk I短刀"
+        },
+        {
+          "key": "loc_dual_shivs_p1_m2",
+          "hash": "5f5d32fa",
+          "locale": 0,
+          "text": "Improvised Mk III Shivs"
+        },
+        {
+          "key": "loc_dual_shivs_p1_m2",
+          "hash": "5f5d32fa",
+          "locale": 16,
+          "text": "臨時拼湊Mk III短刀"
+        },
+        {
+          "key": "loc_forcesword_p1_m1",
+          "hash": "9cccfaf0",
+          "locale": 0,
+          "text": "Obscurus Mk II Blaze Force Sword"
+        },
+        {
+          "key": "loc_forcesword_p1_m1",
+          "hash": "9cccfaf0",
+          "locale": 16,
+          "text": "朦朧Mk II烈焰力場劍"
+        },
+        {
+          "key": "loc_forcesword_p1_m2",
+          "hash": "4a7ba511",
+          "locale": 0,
+          "text": "Deimos Mk IV Blaze Force Sword"
+        },
+        {
+          "key": "loc_forcesword_p1_m2",
+          "hash": "4a7ba511",
+          "locale": 16,
+          "text": "火衛二Mk IV烈焰力場劍"
+        },
+        {
+          "key": "loc_forcesword_p1_m3",
+          "hash": "6f72a162",
+          "locale": 0,
+          "text": "Illisi Mk V Blaze Force Sword"
+        },
+        {
+          "key": "loc_forcesword_p1_m3",
+          "hash": "6f72a162",
+          "locale": 16,
+          "text": "伊利斯Mk V烈焰力場劍"
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_increases_power",
+          "hash": "dd9dc2c9",
+          "locale": 0,
+          "text": "Executor"
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_increases_power",
+          "hash": "dd9dc2c9",
+          "locale": 16,
+          "text": "行刑者"
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_increases_power_desc",
+          "hash": "46b9cfe2",
+          "locale": 0,
+          "text": "{power_level:%s} Strength on Repeated Weak Spot Hit. Stacks {stacks:%s} times."
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_increases_power_desc",
+          "hash": "46b9cfe2",
+          "locale": 16,
+          "text": "重複命中弱點時威力提升{power_level:%s}，可疊加{stacks:%s}層。"
+        },
+        {
+          "key": "loc_weapon_family_combatknife_p1_m1",
+          "hash": "52bc1474",
+          "locale": 0,
+          "text": "Combat Blade"
+        },
+        {
+          "key": "loc_weapon_family_combatknife_p1_m1",
+          "hash": "52bc1474",
+          "locale": 16,
+          "text": "戰刃"
+        },
+        {
+          "key": "loc_weapon_family_combatknife_p1_m2",
+          "hash": "f9a9605b",
+          "locale": 0,
+          "text": "Combat Blade"
+        },
+        {
+          "key": "loc_weapon_family_combatknife_p1_m2",
+          "hash": "f9a9605b",
+          "locale": 16,
+          "text": "戰刃"
+        },
+        {
+          "key": "loc_weapon_family_dual_shivs_p1_m1",
+          "hash": "1a8ffcee",
+          "locale": 0,
+          "text": "Shivs"
+        },
+        {
+          "key": "loc_weapon_family_dual_shivs_p1_m1",
+          "hash": "1a8ffcee",
+          "locale": 16,
+          "text": "短刀"
+        },
+        {
+          "key": "loc_weapon_family_dual_shivs_p1_m2",
+          "hash": "c5868493",
+          "locale": 0,
+          "text": "Shivs"
+        },
+        {
+          "key": "loc_weapon_family_dual_shivs_p1_m2",
+          "hash": "c5868493",
+          "locale": 16,
+          "text": "短刀"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m1",
+          "hash": "936eb9dc",
+          "locale": 0,
+          "text": "Blaze Force Sword"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m1",
+          "hash": "936eb9dc",
+          "locale": 16,
+          "text": "烈焰力場劍"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m2",
+          "hash": "58f7dfcf",
+          "locale": 0,
+          "text": "Blaze Force Sword"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m2",
+          "hash": "58f7dfcf",
+          "locale": 16,
+          "text": "烈焰力場劍"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m3",
+          "hash": "cba51c49",
+          "locale": 0,
+          "text": "Blaze Force Sword"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m3",
+          "hash": "cba51c49",
+          "locale": 16,
+          "text": "烈焰力場劍"
+        },
+        {
+          "key": "loc_weapon_mark_combatknife_p1_m1",
+          "hash": "05fa86f0",
+          "locale": 0,
+          "text": "Mk III"
+        },
+        {
+          "key": "loc_weapon_mark_combatknife_p1_m1",
+          "hash": "05fa86f0",
+          "locale": 16,
+          "text": "Mk III"
+        },
+        {
+          "key": "loc_weapon_mark_combatknife_p1_m2",
+          "hash": "3b5606b3",
+          "locale": 0,
+          "text": "Mk VI"
+        },
+        {
+          "key": "loc_weapon_mark_combatknife_p1_m2",
+          "hash": "3b5606b3",
+          "locale": 16,
+          "text": "Mk VI"
+        },
+        {
+          "key": "loc_weapon_mark_dual_shivs_p1_m1",
+          "hash": "f03d8aac",
+          "locale": 0,
+          "text": "Mk I"
+        },
+        {
+          "key": "loc_weapon_mark_dual_shivs_p1_m1",
+          "hash": "f03d8aac",
+          "locale": 16,
+          "text": "型號1"
+        },
+        {
+          "key": "loc_weapon_mark_dual_shivs_p1_m2",
+          "hash": "8d4fa030",
+          "locale": 0,
+          "text": "Mk III"
+        },
+        {
+          "key": "loc_weapon_mark_dual_shivs_p1_m2",
+          "hash": "8d4fa030",
+          "locale": 16,
+          "text": "型號3"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m1",
+          "hash": "a0f22c2e",
+          "locale": 0,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m1",
+          "hash": "a0f22c2e",
+          "locale": 16,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m2",
+          "hash": "7247522d",
+          "locale": 0,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m2",
+          "hash": "7247522d",
+          "locale": 16,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m3",
+          "hash": "fe655b2d",
+          "locale": 0,
+          "text": "Mk V"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m3",
+          "hash": "fe655b2d",
+          "locale": 16,
+          "text": "Mk V"
+        },
+        {
+          "key": "loc_weapon_pattern_combatknife_p1_m1",
+          "hash": "43c3a6c2",
+          "locale": 0,
+          "text": "Catachan"
+        },
+        {
+          "key": "loc_weapon_pattern_combatknife_p1_m1",
+          "hash": "43c3a6c2",
+          "locale": 16,
+          "text": "卡塔昌"
+        },
+        {
+          "key": "loc_weapon_pattern_combatknife_p1_m2",
+          "hash": "a5f97b11",
+          "locale": 0,
+          "text": "Catachan"
+        },
+        {
+          "key": "loc_weapon_pattern_combatknife_p1_m2",
+          "hash": "a5f97b11",
+          "locale": 16,
+          "text": "卡塔昌"
+        },
+        {
+          "key": "loc_weapon_pattern_dual_shivs_p1_m1",
+          "hash": "6a5f0b2a",
+          "locale": 0,
+          "text": "Improvised"
+        },
+        {
+          "key": "loc_weapon_pattern_dual_shivs_p1_m1",
+          "hash": "6a5f0b2a",
+          "locale": 16,
+          "text": "臨時拼湊"
+        },
+        {
+          "key": "loc_weapon_pattern_dual_shivs_p1_m2",
+          "hash": "1581e7e4",
+          "locale": 0,
+          "text": "Improvised"
+        },
+        {
+          "key": "loc_weapon_pattern_dual_shivs_p1_m2",
+          "hash": "1581e7e4",
+          "locale": 16,
+          "text": "臨時拼湊"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m1",
+          "hash": "d158bba6",
+          "locale": 0,
+          "text": "Obscurus"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m1",
+          "hash": "d158bba6",
+          "locale": 16,
+          "text": "朦朧"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m2",
+          "hash": "3e6d37c3",
+          "locale": 0,
+          "text": "Deimos"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m2",
+          "hash": "3e6d37c3",
+          "locale": 16,
+          "text": "戴莫斯"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m3",
+          "hash": "3cc92a21",
+          "locale": 0,
+          "text": "Illisi"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m3",
+          "hash": "3cc92a21",
+          "locale": 16,
+          "text": "伊利斯"
+        }
+      ]
+    },
+    "primary_review": "actual metadata family/pattern/mark loc_id and fixed-SHA import/table.ukeys/append lines independently read",
+    "refs": [
+      [
+        "戰刃 卡塔昌 Mk III接入",
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        15,
+        15
+      ],
+      [
+        "戰刃 卡塔昌 Mk III接入",
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        1434,
+        1434
+      ],
+      [
+        "戰刃 卡塔昌 Mk III接入",
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        1436,
+        1436
+      ],
+      [
+        "戰刃 卡塔昌 Mk VI接入",
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        15,
+        15
+      ],
+      [
+        "戰刃 卡塔昌 Mk VI接入",
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        1524,
+        1524
+      ],
+      [
+        "戰刃 卡塔昌 Mk VI接入",
+        "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        1526,
+        1526
+      ],
+      [
+        "短刀 臨時拼湊 型號1接入",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        14,
+        14
+      ],
+      [
+        "短刀 臨時拼湊 型號1接入",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        1500,
+        1500
+      ],
+      [
+        "短刀 臨時拼湊 型號1接入",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        1502,
+        1502
+      ],
+      [
+        "短刀 臨時拼湊 型號3接入",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        14,
+        14
+      ],
+      [
+        "短刀 臨時拼湊 型號3接入",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        1579,
+        1579
+      ],
+      [
+        "短刀 臨時拼湊 型號3接入",
+        "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        1581,
+        1581
+      ],
+      [
+        "烈焰力場劍 朦朧 Mk II接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        15,
+        15
+      ],
+      [
+        "烈焰力場劍 朦朧 Mk II接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        1745,
+        1745
+      ],
+      [
+        "烈焰力場劍 朦朧 Mk II接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        1747,
+        1747
+      ],
+      [
+        "烈焰力場劍 戴莫斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        15,
+        15
+      ],
+      [
+        "烈焰力場劍 戴莫斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        1671,
+        1671
+      ],
+      [
+        "烈焰力場劍 戴莫斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        1673,
+        1673
+      ],
+      [
+        "烈焰力場劍 伊利斯 Mk V接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        15,
+        15
+      ],
+      [
+        "烈焰力場劍 伊利斯 Mk V接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        1539,
+        1539
+      ],
+      [
+        "烈焰力場劍 伊利斯 Mk V接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        1541,
+        1541
+      ]
+    ]
+  },
+  "outside_intersection_review": {
+    "matching_exact_key_metadata_items": 3,
+    "bound_variants": 3,
+    "bindings": 7,
+    "candidates": [
+      {
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_chained_weakspot_hits_increases_power",
+        "metadata_item": null,
+        "source_trait": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua#L288-L355",
+        "source_wrapper": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua#L18-L22",
+        "source_parent": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua#L166-L187",
+        "category_registration": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua#L16,#L1533-L1535",
+        "tiers": [
+          0.045,
+          0.05,
+          0.055,
+          0.06
+        ],
+        "cap": 5,
+        "duration_override_seconds": 3.5,
+        "power_stat": "ranged_power_level_modifier",
+        "trigger": "on_shoot weakspot; ranged-only base; separate candidate",
+        "binding_found": false,
+        "status": "source/category candidate, no exact metadata item in inventory; applicability not confirmed",
+        "note": "Keep outside the three confirmed metadata-backed melee variants. Although the shotpistol-shield trait key is appended to that weapon template's trait category, local item_metadata has no matching trait item, so do not call it a confirmed player binding or declare it unavailable."
+      }
+    ],
+    "status": "3 metadata-backed variants / 7 player model bindings; retain Shotpistol Shield P1 as an unresolved code/category candidate.",
+    "source_suffix_candidates_without_name_key_metadata": [
+      "weapon_trait_bespoke_shotpistol_shield_p1_chained_weakspot_hits_increases_power"
+    ],
+    "candidate_name_key_status": "No metadata display_name links the source suffix candidate to this exact localization name; preserve as a related source/category candidate only."
+  }
+}

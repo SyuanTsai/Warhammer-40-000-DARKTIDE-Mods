@@ -1,0 +1,74 @@
+{
+  "id": "psyker_skills_323_327",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L1469–1480, L1061–1066, L1241–1247, L1077–1088 and L1380–1392.",
+    "Existing verified Quelling time/interval formula, Damage interpolation, critical-hit event limits and Coherency radius calculations reused; no mechanism retracing."
+  ],
+  "questions": [
+    "Puppet Master display reconstructs as 75% Radius without a plus sign or increase verb; bonus-versus-final-radius wording is Cannot confirm. Existing radius mechanism is unchanged."
+  ],
+  "skills": [
+    {
+      "id": "psyker_dodge_after_crits",
+      "name": "Empathic Evasion",
+      "name_hash": "390d90d6",
+      "description_hash": "654d056c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_dodge_after_crits.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_dodge_after_crits.md",
+      "commit": "3c1d9b555"
+    },
+    {
+      "id": "psyker_increased_vent_speed",
+      "name": "Solidity",
+      "name_hash": "cab0da20",
+      "description_hash": "479e9713",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_vent_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_vent_speed.md",
+      "commit": "287c6f3e3"
+    },
+    {
+      "id": "psyker_damage_based_on_warp_charge",
+      "name": "Warp Rider",
+      "name_hash": "02e8b371",
+      "description_hash": "bfd23655",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_damage_based_on_warp_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_damage_based_on_warp_charge.md",
+      "commit": "84191f6f2"
+    },
+    {
+      "id": "psyker_guaranteed_crit_on_multiple_weakspot_hits",
+      "name": "True Aim",
+      "name_hash": "702479a6",
+      "description_hash": "2341fb06",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_guaranteed_crit_on_multiple_weakspot_hits.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_guaranteed_crit_on_multiple_weakspot_hits.md",
+      "commit": "3a7176714"
+    },
+    {
+      "id": "psyker_coherency_aura_size_increase",
+      "name": "Puppet Master",
+      "name_hash": "3d9caf6e",
+      "description_hash": "5556945e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_coherency_aura_size_increase.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_coherency_aura_size_increase.md",
+      "commit": "17fa55372"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 264,
+    "from_commit": "b89154ab8",
+    "to_commit": "17fa55372",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-04",
+  "blessing": "fan-the-flames",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/煽風點火/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "fan-the-flames",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_manifest": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-formal-peer-scope.json",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_file_count": 21,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-config.json": "15a83ccc719c430d95c450466793f8afed50dda469c69997229ac346e666ec92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-extension-draft.json": "c91e0b2455a7b0dacc4e25daa3add5a2ce86fb5f6e56ca54671e5614289589bd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-image.json": "e376709b0d24430adc32a89f3b1d07c02fb263c6449ce582478aa2c6cb6cd950",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-consumer-review.json": "a472f095965e189b2421802809eb76efb567aaa56645f4a25e7ab132df5687d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-dot-review.json": "d56e30ea9787ae7589eed03a8642dcb9e479c1ec613f99547dc8d48cb5e0e795",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-own-tier-diff.json": "5b8d224d0008a402d5a3db6687e06ff48b295e0bb12749dc4e8ea371b6903fa9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-resume-review.json": "7a5062fad697d6d1ec0820e3bb38560af913ca2ef8b6a690fa104c9b88ca860d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-ui-review.json": "89f856cb940d37d75c4a41b9252185349438f89ce9401ee6aa546f8d04b9c883",
+      "Game Info/releases/1.13.X/blessings/README.md": "1797af5733dce6d3887b29c0eb4f2450a89ff54424cf27f8609f37e21c3c2204",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "fe577b83d50ef68ff84471e1ce10190c9e7d2d601f6ff31df710c804523e4cbe",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "64449e1253f7d046c0905a9a1553c335f7190e62638e92c87aa2bc9b8e20c4c8",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/DAMAGE_PERCENTAGE_REVIEW.md": "8e097facb67657f557a7741a3090fc7fe49b7bacbba7d62fde1726876967eef9",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/LOCALIZATION_COMPARISON.md": "9ebe7a965cc9dda19d87b3873e666fe020fcde2a26644bc47272b35b31ec7c60",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/README.md": "3467947a3c399fc1f4b0ae7f0b0d1392a521cfa81044c781affdc4837af93112",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/SOURCE_INDEX.md": "d3d3f854a66ac6992ce935d8f354d70b013a25d75f1f6262f85d052913c32ec0",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/TIER_VALUES.md": "12ac17d968988144123f31748be01b4fc8e0a5da57165ce4f2109276c045502c",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/WEAPON_COMPATIBILITY.md": "d77cb13f68d43fb20474b4908d73dfc93ce97112839fda9e5d327401869d8eb0",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning.md": "da57f6277928c848c306d76a43beefd110b9962fb1460ae45a6b1a7956c99209",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "e1f18ea970f96cb09420a89cb6fdd9d14af33ed98c6b0b4e007fff8e107714a8",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/淨化噴火器/README.md": "d53a9738739023649376c26ffc10f06d1437f1938c902816dcc22122b017cc38",
+      "Referneces/Translation.md": "cf388b3a49b96a7beed764eb7c2e3bb0f80bc6d60d39dfd15340986f58ba9f61"
+    },
+    "reviewed_formal_pages": [
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/DAMAGE_PERCENTAGE_REVIEW.md",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/TIER_VALUES.md",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/煽風點火/weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning.md"
+    ],
+    "reviewed_deltas": [
+      {
+        "area": "Exact RAW reconstruction",
+        "result": "PASS",
+        "details": "LOCALIZATION_COMPARISON includes the exact EN and zh-TW placeholder templates with all four I–IV substitutions; hashes 0037e44e and ed2f3a74 match the fixed RAW. The text calls this a static reconstruction, not an in-game screenshot."
+      },
+      {
+        "area": "Taiwan wording and values",
+        "result": "PASS",
+        "details": "Player text uses 踉蹌; m=.60/.50/.40/.30 renders 40/50/60/70% ignored reduction, p=.30/.35/.40/.45 renders +30/+35/+40/+45%. Formatter applies 100*(1-m) once and adds the impact plus sign."
+      },
+      {
+        "area": "Trigger, first hit, TTL, stacks, switching",
+        "result": "PASS",
+        "details": "Held flamer_p1_m1 plus action_shoot gate is explicit; action_shoot_braced and push are excluded. There is no hit stack or independent post-hit TTL. Direct burst damage precedes burn application, so self-applied burning cannot retroactively qualify that hit; only an active burning keyword at the stagger check qualifies. Switching/action changes disable the condition after stat update."
+      },
+      {
+        "area": "Impact curve versus native reduction",
+        "result": "PASS",
+        "details": "Impact stat is applied to stagger_power_level before the power percentage/min-max curve; R is a separate multiplier after applicable native-reduction branches. The example separately shows P=100 to 145 and R=100 to 30, and avoids claiming a matching final stagger-strength percent. Same-stat q combines additively."
+      },
+      {
+        "area": "DoT qualification",
+        "result": "PASS",
+        "details": "New dot receipt traces server Attack to HitReaction to Stagger using the owner’s current stats. The burning reduction may enter for a tick only while owner action_shoot/held stat cache is active, target burning is active, and no early-return excludes R. The buff-type tick does not receive ranged Impact; the text does not call it another primary shot or claim HP damage."
+      },
+      {
+        "area": "Binding, map, reverse page and image identity",
+        "result": "PASS",
+        "details": "Map contains one ranged blessing and exactly one binding, flamer_p1/flamer_p1_m1 with the actual negate trait id and ignore item path. The ranged catalog, flamer reverse page, translation row, icon identity path and attachment URL agree; icon metadata receipt verifies the displayed asset."
+      }
+    ],
+    "configuration_consistency": {
+      "canonical_config_sha256": "15a83ccc719c430d95c450466793f8afed50dda469c69997229ac346e666ec92",
+      "extension_draft_sha256": "c91e0b2455a7b0dacc4e25daa3add5a2ce86fb5f6e56ca54671e5614289589bd",
+      "formal_player_and_examples_match_config": true,
+      "exact_tier_reconstruction_present": true,
+      "map_binding_count": 1,
+      "map_kind": "ranged",
+      "actual_trait_id": "weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_162",
+      "icon_attachment": "https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040"
+    },
+    "source_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-own-tier-diff.json",
+        "sha256": "5b8d224d0008a402d5a3db6687e06ff48b295e0bb12749dc4e8ea371b6903fa9"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-ui-review.json",
+        "sha256": "89f856cb940d37d75c4a41b9252185349438f89ce9401ee6aa546f8d04b9c883"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-consumer-review.json",
+        "sha256": "a472f095965e189b2421802809eb76efb567aaa56645f4a25e7ab132df5687d4"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-dot-review.json",
+        "sha256": "d56e30ea9787ae7589eed03a8642dcb9e479c1ec613f99547dc8d48cb5e0e795"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-image.json",
+        "sha256": "e376709b0d24430adc32a89f3b1d07c02fb263c6449ce582478aa2c6cb6cd950"
+      }
+    ],
+    "faster_status": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "fan-the-flames",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_162",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_162.png",
+      "attachment": "https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5976573934",
+      "acquired_date": "2026-10-04",
+      "sha256": "1ac9f915be6b8f9a55c27c3c342da4d33999c51e0e615fc4276afa0484ab6cf7",
+      "content_type": "image/png",
+      "size": 4086,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "煽風點火祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_validation": "Original/public128x128 PNG both visually matched; flame surrounding skull with incoming directional arrows, alpha diagnostic identical; originals unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 213,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 29,
+      "source_files": 19,
+      "bindings": 422,
+      "variants": 222,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 19,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 548,
+      "remote_references": 273,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 10,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-009-full-scan.json",
+        "sha256": "9480b3465b6d2b5f7f942ccda418b160560e8ed6fa746fc8f6a603e666c69f52",
+        "trigger": "round-009"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 106,
+    "not_started_name_groups": 106,
+    "partial_name_groups": 0,
+    "remaining_variants": 383,
+    "remaining_bindings": 763,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "58df33fbedeb3e353e24f364a1b086a9b3991cb24395278dd2239260a9321fb6"
+  },
+  "previous_local_commit": "b73064e2698b9d76b64a55b8b8ace8ccdd9dfa73",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_all_tiers_reviewed": true,
+    "own_wrapper_reviewed": true,
+    "tier_remaining_reduction": [
+      0.6,
+      0.5,
+      0.4,
+      0.3
+    ],
+    "tier_ranged_impact": [
+      0.3,
+      0.35,
+      0.4,
+      0.45
+    ],
+    "raw_formatter": "value manipulation100*(1-m) bypasses genericx100; impact percent+",
+    "conditions": "action_shoot+held; impact attacktype ranged independentofburning; reduction current targetburning and nativeRmodifierbranch",
+    "consumer": "impact multiplies P before min/max curve; reduction R*m; no final HPdamage/finalstagger percent assumption",
+    "dot": "actual server owner/statcache/HitReaction/Stagger route, buff type excludes rangedimpact but not burning reduction",
+    "pending": [],
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-extension-draft.json",
+      "sha256": "c91e0b2455a7b0dacc4e25daa3add5a2ce86fb5f6e56ca54671e5614289589bd"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-ui-review.json",
+      "sha256": "89f856cb940d37d75c4a41b9252185349438f89ce9401ee6aa546f8d04b9c883"
+    },
+    "bindings": [
+      {
+        "weapon_id": "flamer_p1",
+        "mark_id": "flamer_p1_m1",
+        "trait_id": "weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_flamer_p1_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_flamer_p1_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_flamer_p1_m1"
+        },
+        "name_zh_tw": "淨化噴火器 奧特米亞 Mk III",
+        "name_en": "Purgation Flamer Artemia Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 745,
+        "append_line": 747
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fan-the-flames-primary-resume-review.json",
+      "sha256": "7a5062fad697d6d1ec0820e3bb38560af913ca2ef8b6a690fa104c9b88ca860d"
+    }
+  ],
+  "primary_review_method": "Own fulltiers/custom wrapper/action/RAW/binding and new impact-before-curve, nativeR earlyreturn, firstburn and actual server DoT owner-cache HitReaction/Stagger differences reviewed; prior unchanged conditional override cache applicability reused. Root read7formal pages and precise P/R examples.",
+  "previous_objects_unchanged": {
+    "blessings": 60,
+    "variants": 221,
+    "bindings": 421
+  }
+}

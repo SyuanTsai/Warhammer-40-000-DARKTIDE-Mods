@@ -1,5 +1,7 @@
 # 天生領袖(Born Leader)：原始碼依據
 
+[English](en/veteran_allies_in_coherency_share_toughness_gain.md)
+
 [返回玩家說明](README.md#veteran_allies_in_coherency_share_toughness_gain)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

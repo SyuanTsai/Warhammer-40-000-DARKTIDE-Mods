@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-03",
+  "blessing": "flechette",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/飛鏢彈/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_rippergun_p1_bleed_on_crit",
+    "weapon_trait_bespoke_shotgun_p1_bleed_on_crit",
+    "weapon_trait_bespoke_shotgun_p2_bleed_on_crit",
+    "weapon_trait_bespoke_shotgun_p3_bleed_on_crit"
+  ],
+  "added_binding_count": 9,
+  "total_variants": 4,
+  "total_bindings": 9,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_bindings",
+    "scope": "four variants/nine bindings, RAW/UI and pellet consumer, independent ignored draft and primary cross-review",
+    "findings": [
+      "I–IV3/4/5/6 per aggregated target event, not multiplied by pellet count",
+      "all9shoot_pellets; special loading/toggling alone not hit; melee sweep excluded",
+      "shared bleed16cap/.5tick/1.5before decay; retained interval phase",
+      "three same-suffix outside definitions lack matching metadata and are not declared unused"
+    ],
+    "draft_corrections": [
+      "Primary retained accurate9–9.5sec nominal timing rather than agent draft approximate9sec",
+      "Primary added independently verified special action wording and outside candidate references"
+    ],
+    "parallel_execution": {
+      "groups": [
+        "bloodletter",
+        "flechette",
+        "lacerate"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted current primary player/examples/math; later additions reproduce separately verified agent findings",
+      "required_corrections": []
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "flechette",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_107",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_107.png",
+      "attachment": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966904627",
+      "acquired_date": "2026-10-03",
+      "sha256": "afd70f48e3fda3075630cdb6813c7813109fbdd91e5dd71b4031e86cea2e6f71",
+      "content_type": "image/png",
+      "size": 5281,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "飛鏢彈祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 296,
+      "tables": 249,
+      "rows": 2026,
+      "lists": 388
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 908,
+      "source_files": 313,
+      "bindings": 175,
+      "variants": 93,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 996,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 296,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 141,
+    "not_started_name_groups": 141,
+    "partial_name_groups": 0,
+    "remaining_variants": 495,
+    "remaining_bindings": 993,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "a1a5accd509e8c67b74764bcdcc5f1f18d9dcf421d2b598a7b907c697c45ad86"
+  },
+  "previous_local_commit": "04dd325fc7f39c1a0329fb347ba9198932fa2adc",
+  "current_blessing_formula_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "primary_read": "complete wrappers,tiers,actual9shoot action kinds,on_pellet_hits aggregation,shared bleed consumer",
+    "cases": [
+      "3/4/5/6 per target per shot; pellet count ignored",
+      "IV0→6→12→16→16",
+      "P6=158.203125;P4/8/12/16=78.125/250/421.875/500",
+      "nominalT=1.5+delta+(N-1)*.5;N16=9–9.5 plus update delay"
+    ],
+    "result": "accepted"
+  },
+  "ui_name_review": {
+    "binding_count": 9,
+    "all_metadata_restrictions_imports_and_append_read": true,
+    "current_ui_three_key_names_reconstructed": true,
+    "raw_name_hash": "d1d03cff",
+    "raw_description_hash": "9a66212b",
+    "legacy_display_name_used": false
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 4,
+    "bound_variants": 4,
+    "bound_bindings": 9,
+    "same_name_candidates": [],
+    "unresolved_candidates": [],
+    "unbound_definition_candidates": [],
+    "status": "Exact matching metadata/UI/source bindings and bounded inventory outside candidates reviewed; no exact-name or trait-ID match outside.",
+    "related_unbound_definitions": [
+      {
+        "trait_id": "weapon_trait_bespoke_saw_p1_bleed_on_crit",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start": 305,
+        "end": 343,
+        "matching_metadata": false,
+        "scope": "same suffix only; no established same-name-key/item binding; not classified unused"
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_bleed_on_crit",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start": 270,
+        "end": 308,
+        "matching_metadata": false,
+        "scope": "same suffix only; no established same-name-key/item binding; not classified unused"
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_bleed_on_crit",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start": 788,
+        "end": 826,
+        "matching_metadata": false,
+        "scope": "same suffix only; no established same-name-key/item binding; not classified unused"
+      }
+    ]
+  }
+}

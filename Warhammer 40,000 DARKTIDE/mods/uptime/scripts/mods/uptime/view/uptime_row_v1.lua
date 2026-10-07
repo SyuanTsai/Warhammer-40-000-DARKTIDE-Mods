@@ -1,4 +1,5 @@
-local mod = get_mod("uptime")
+-- File: uptime/scripts/mods/uptime/view/uptime_row_v1.lua
+local mod = get_mod("uptime"); if not mod then return end
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
 local Definitions = mod:io_dofile("uptime/scripts/mods/uptime/view/uptime_view_definitions")
 local get_barchart_widget = mod:io_dofile("uptime/scripts/mods/uptime/view/barchart_widget")
@@ -9,82 +10,133 @@ local ROW_HEIGHT = 40
 local is_stackable = function(buff)
     return buff.stackable
 end
-local default_width = 90
+
+local default_width = 95
+local combat_percentage_per_stack_width = 400
+
+local archetype_prefixed_column_ids = {
+    uptime = true,
+    uptime_percentage = true,
+    uptime_combat = true,
+    uptime_combat_percentage = true,
+    average_stacks_combat = true,
+    combat_time_at_max_stack = true,
+    combat_percentage_at_max_stack = true,
+}
+
+local function add_archetype_prefix(buff, column_id, value)
+    local prefix = buff and buff.foreign_archetype_text_prefix
+
+    if prefix and archetype_prefixed_column_ids[column_id] then
+        return prefix .. value
+    end
+
+    return value
+end
+
 local data_columns = {
     {
         id = "uptime",
         display_name = "loc_uptime_header",
-        setting = "show_uptime",
+        is_active = function()
+            local val = mod.show_uptime_mode
+
+            return val == "time" or val == "both"
+        end,
         width = default_width,
         accessor = function(buff)
             return ui_lib.format_seconds(buff.uptime)
         end
     }, {
-        id = "uptime_percentage",
-        display_name = "loc_uptime_percentage_header",
-        setting = "show_uptime_percentage",
-        width = default_width,
-        accessor = function(buff)
-            return string.format("%.1f%%", buff.uptime_percentage)
-        end
-    }, {
-        id = "uptime_combat",
-        display_name = "loc_uptime_combat_header",
-        setting = "show_uptime_combat",
-        width = default_width,
-        accessor = function(buff)
-            return ui_lib.format_seconds(buff.uptime_combat)
-        end
-    }, {
-        id = "uptime_combat_percentage",
-        display_name = "loc_uptime_combat_percentage_header",
-        setting = "show_uptime_combat_percentage",
-        width = 90,
-        accessor = function(buff)
-            return string.format("%.1f%%", buff.uptime_combat_percentage)
-        end
-    }, {
-        id = "combat_percentage_per_stack",
-        display_name = "loc_combat_percentage_per_stack_header",
-        setting = "show_combat_percentage_per_stack",
-        width = 400,
-        accessor = function(buff, uptime_view)
-            return get_barchart_widget(
-                    uptime_view,
-                    Definitions.row_scene_graph_id,
-                    400,
-                    ROW_HEIGHT - 8,
-                    buff.combat_percentage_per_stack
-            )
-        end
-    }, {
-        id = "average_stacks_combat",
-        display_name = "loc_avg_stacks_header",
-        setting = "show_average_stacks_combat",
-        width = default_width,
-        condition = is_stackable,
-        accessor = function(buff)
-            return string.format("%.2f", buff.average_stacks_combat)
-        end
-    }, {
-        id = "combat_time_at_max_stack",
-        display_name = "loc_combat_time_at_max_stack_header",
-        setting = "show_combat_time_at_max_stack",
-        width = default_width,
-        condition = is_stackable,
-        accessor = function(buff)
-            return ui_lib.format_seconds(buff.combat_time_at_max_stack)
-        end
-    }, {
-        id = "combat_percentage_at_max_stack",
-        display_name = "loc_percentage_at_max_stacks_header",
-        setting = "show_combat_percentage_at_max_stack",
-        width = default_width,
-        condition = is_stackable,
-        accessor = function(buff)
-            return string.format("%.1f%%", buff.combat_percentage_at_max_stack)
-        end
-    },
+    id = "uptime_percentage",
+    display_name = "loc_uptime_percentage_header",
+    is_active = function()
+        local val = mod.show_uptime_mode
+
+        return val == "percentage" or val == "both"
+    end,
+    width = default_width,
+    accessor = function(buff)
+        return string.format("%.1f%%", buff.uptime_percentage)
+    end
+}, {
+    id = "uptime_combat",
+    display_name = "loc_uptime_combat_header",
+    is_active = function()
+        local val = mod.show_uptime_combat_mode
+
+        return val == "time" or val == "both"
+    end,
+    width = default_width,
+    accessor = function(buff)
+        return ui_lib.format_seconds(buff.uptime_combat)
+    end
+}, {
+    id = "uptime_combat_percentage",
+    display_name = "loc_uptime_combat_percentage_header",
+    is_active = function()
+        local val = mod.show_uptime_combat_mode
+
+        return val == "percentage" or val == "both"
+    end,
+    width = default_width,
+    accessor = function(buff)
+        return string.format("%.1f%%", buff.uptime_combat_percentage)
+    end
+}, {
+    id = "combat_percentage_per_stack",
+    display_name = "loc_combat_percentage_per_stack_header",
+    is_active = function()
+        return mod.show_combat_percentage_per_stack ~= false
+    end,
+    width = combat_percentage_per_stack_width,
+    accessor = function(buff, uptime_view)
+        return get_barchart_widget(
+            uptime_view,
+            Definitions.row_scene_graph_id,
+            combat_percentage_per_stack_width,
+            ROW_HEIGHT - 8,
+            buff.combat_percentage_per_stack
+        )
+    end
+}, {
+    id = "average_stacks_combat",
+    display_name = "loc_avg_stacks_header",
+    is_active = function()
+        return mod.show_average_stacks_combat ~= false
+    end,
+    width = default_width,
+    condition = is_stackable,
+    accessor = function(buff)
+        return string.format("%.2f", buff.average_stacks_combat)
+    end
+}, {
+    id = "combat_time_at_max_stack",
+    display_name = "loc_combat_time_at_max_stack_header",
+    is_active = function()
+        local val = mod.show_combat_max_stack_mode
+
+        return val == "time" or val == "both"
+    end,
+    width = default_width,
+    condition = is_stackable,
+    accessor = function(buff)
+        return ui_lib.format_seconds(buff.combat_time_at_max_stack)
+    end
+}, {
+    id = "combat_percentage_at_max_stack",
+    display_name = "loc_percentage_at_max_stacks_header",
+    is_active = function()
+        local val = mod.show_combat_max_stack_mode
+
+        return val == "percentage" or val == "both"
+    end,
+    width = default_width,
+    condition = is_stackable,
+    accessor = function(buff)
+        return string.format("%.1f%%", buff.combat_percentage_at_max_stack)
+    end
+},
 }
 
 local ICON_PADDING = 2
@@ -105,32 +157,36 @@ local row_pass_template = {
             material_values = {}
         }
     }, {
-        content_id = "hotspot",
-        pass_type = "hotspot",
-        style = {
-            offset = { 0, 0, 100 },
-            size = {
-                ROW_HEIGHT, ROW_HEIGHT
-            }
+    content_id = "hotspot",
+    pass_type = "hotspot",
+    style = {
+        offset = { 0, 0, 100 },
+        size = {
+            ROW_HEIGHT, ROW_HEIGHT
         }
     }
 }
+}
 
-function get_active_columns()
+local function get_active_columns()
     local active_columns = {}
+
     for _, column in pairs(data_columns) do
-        if mod:get(column.setting) then
+        if column.is_active() then
             active_columns[#active_columns + 1] = column
         end
     end
+
     return active_columns
 end
 
-function get_width()
+local function get_width()
     local width = ROW_HEIGHT
+
     for _, col in pairs(get_active_columns()) do
         width = width + col.width
     end
+
     return width
 end
 
@@ -145,11 +201,12 @@ local colors = {
     }
 }
 
-function add_columns(pass_template, column_definitions, background_colors, row_height)
+local function add_columns(pass_template, column_definitions, background_colors, row_height)
     local offset = ICON_SIZE
     local alternate = true
     local padding = 12
     local half_padding = padding / 2
+
     for _, column in pairs(column_definitions) do
         local template = {
             pass_type = "text",
@@ -188,10 +245,11 @@ function add_columns(pass_template, column_definitions, background_colors, row_h
         offset = offset + column.width
         alternate = not alternate
     end
+
     return pass_template
 end
 
-function create_header_row_widget_v1(uptime_view)
+local function create_header_row_widget_v1(uptime_view)
     local columns = get_active_columns()
     local template = add_columns(table.clone(row_pass_template), columns, colors.row, ROW_HEIGHT * 2)
     local row_widget_def = UIWidget.create_definition(template, Definitions.row_scene_graph_id)
@@ -200,12 +258,13 @@ function create_header_row_widget_v1(uptime_view)
     for _, column in pairs(columns) do
         widget.content[column.id] = mod:localize(column.display_name)
     end
+
     widget.style.buff_icon.visible = false
 
     return widget
 end
 
-function create_row_widget(uptime_view, buff, index)
+local function create_row_widget(uptime_view, buff, index)
     local columns = get_active_columns()
 
     local row_colors
@@ -235,7 +294,7 @@ function create_row_widget(uptime_view, buff, index)
         if not column.condition or column.condition(buff) then
             local value = column.accessor(buff, uptime_view)
             if type(value) == "string" then
-                widget.content[column.id] = value
+                widget.content[column.id] = add_archetype_prefix(buff, column.id, value)
             else
                 -- value is a widget
                 value.offset = { total_width, top_offset + 4 }
@@ -250,24 +309,26 @@ function create_row_widget(uptime_view, buff, index)
     return { widget, unpack(additional_widgets) }
 end
 
-local weapon_row_template = {
-    {
-        pass_type = 'text',
-        value_id = "text",
-        style = {
-            size = { get_width(), ROW_HEIGHT },
-            text_vertical_alignment = "center",
-            line_spacing = 1.2,
-            font_size = 26,
-            drop_shadow = true,
-            font_type = "machine_medium",
-            text_color = Color.terminal_text_header(255, true),
-        },
+local function create_weapon_row_template()
+    return {
+        {
+            pass_type = 'text',
+            value_id = "text",
+            style = {
+                size = { get_width(), ROW_HEIGHT },
+                text_vertical_alignment = "center",
+                line_spacing = 1.2,
+                font_size = 26,
+                drop_shadow = true,
+                font_type = "machine_medium",
+                text_color = Color.terminal_text_header(255, true),
+            },
+        }
     }
-}
+end
 
-function get_weapon_row(uptime_view, weapon_name, weapon_entry, index)
-    local widget_def = UIWidget.create_definition(weapon_row_template, Definitions.row_scene_graph_id)
+local function get_weapon_row(uptime_view, weapon_name, weapon_entry, index)
+    local widget_def = UIWidget.create_definition(create_weapon_row_template(), Definitions.row_scene_graph_id)
     local widget = uptime_view:_create_widget("weapon_row_" .. weapon_name, widget_def)
     local weapon_combat_uptime = mod.ui.format_seconds(weapon_entry.uptime_combat)
     local weapon_combat_uptime_percentage = string.format("%.1f", weapon_entry.uptime_combat_percentage) .. "%"

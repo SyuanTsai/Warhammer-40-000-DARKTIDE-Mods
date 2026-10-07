@@ -1,0 +1,67 @@
+{
+  "id": "ogryn_skills_196_200",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display maps were read for Feel No Pain, Heavy Hitter, Pained Outburst, Strongest and Toughest. Existing mechanisms, calculations, formatting and image evidence reused; source pointers remain in the English documents.",
+  "questions": [
+    "Feel No Pain: English Damage Reduction leaves the damage type unspecified; existing evidence confirms Toughness-only scope.",
+    "Pained Outburst threshold difference is resolved from existing evidence; see the English comparison.",
+    "Existing multi-Ogryn shared-state behavior and final game UI remain unobserved."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_carapace_armor",
+      "name": "Feel No Pain",
+      "name_hash": "9b72c015",
+      "description_hash": "cae1c616",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor.md",
+      "commit": "2b9601008"
+    },
+    {
+      "id": "ogryn_passive_heavy_hitter",
+      "name": "Heavy Hitter",
+      "name_hash": "e189a8b0",
+      "description_hash": "ccb2288d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_passive_heavy_hitter.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_passive_heavy_hitter.md",
+      "commit": "b6e35c3bb"
+    },
+    {
+      "id": "ogryn_carapace_armor_trigger_on_zero_stacks",
+      "name": "Pained Outburst",
+      "name_hash": "307e4378",
+      "description_hash": "d03260f0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_trigger_on_zero_stacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor_trigger_on_zero_stacks.md",
+      "commit": "f8c63d923"
+    },
+    {
+      "id": "ogryn_carapace_armor_add_stack_on_push",
+      "name": "Strongest!",
+      "name_hash": "28cda661",
+      "description_hash": "60ac22bf",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_add_stack_on_push.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor_add_stack_on_push.md",
+      "commit": "6ac18481b"
+    },
+    {
+      "id": "ogryn_carapace_armor_more_toughness",
+      "name": "Toughest!",
+      "name_hash": "70367a4e",
+      "description_hash": "2fd914ff",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_more_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor_more_toughness.md",
+      "commit": "03acd5510"
+    }
+  ]
+}

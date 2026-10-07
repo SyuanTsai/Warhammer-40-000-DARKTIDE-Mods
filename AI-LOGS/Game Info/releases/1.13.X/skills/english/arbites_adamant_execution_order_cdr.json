@@ -1,0 +1,32 @@
+{
+  "id": "adamant_execution_order_cdr",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Malocator",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order_cdr.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order_cdr.md",
+  "name_key": "loc_talent_adamant_exterminator_ability_cooldown",
+  "name_hash": "c0ecae0e",
+  "description_key": "loc_talent_execution_order_cdr_on_kill_description",
+  "description_hash": "1cb35d28",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 3,
+      "Not covered by the description": 4
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mappings only: adamant_talents.lua#L2257-L2276. Existing mechanisms, numerical values, citations, shared formatting and icons reused.",
+  "questions": [
+    "Game execution and final game UI observation were not performed.",
+    "Actual restoration tick count depends on expiry update order; examples state nominal totals. The unused cdr_time = 3 does not determine the active 8s duration."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order_cdr.md"
+}

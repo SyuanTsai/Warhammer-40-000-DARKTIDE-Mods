@@ -1,0 +1,144 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "id": "veteran_snipers_focus_increased_stacks",
+  "class": "Veteran",
+  "name": "Long Range Assassin",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; no repeated full implementation analysis.",
+  "name_key": "loc_talent_veteran_snipers_focus_increased_stacks",
+  "name_hash": "20154bac",
+  "description_key": "loc_talent_veteran_snipers_focus_increased_stacks_description",
+  "description_hash": "c41d398b",
+  "raw_template": "Increase Maximum stacks of Focus from {stacks:%s} to {new_stacks:%s}.",
+  "static_reconstruction": "Increase Maximum stacks of Focus from 10 to 15.",
+  "comparison_rule_totals": {
+    "Consistent": 1,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name/description records and full raw template",
+    "Accepted English Marksman's Focus dossier and its existing source evidence"
+  ],
+  "reused_mechanism_evidence": "veteran_snipers_focus.json: fixed-SHA core, cap variant, finesse and reload source checks previously performed; translate the existing Chinese results without reconstructing that call chain again.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, two key/hash/text pairs and complete description template",
+      "result": "passed",
+      "pairs": 2
+    },
+    {
+      "check": "display value reconstruction: effective caps 10 and 15",
+      "result": "passed"
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 358,
+      "unique_source_ranges": 120,
+      "source_files": 29
+    },
+    {
+      "check": "damage and reload substitutions with separate zero-stack and old-cap baselines",
+      "result": "passed",
+      "whole_hit_percent_vs_zero": 32.14,
+      "whole_hit_percent_vs_ten": 8.82,
+      "reload_seconds": 3.48,
+      "reload_time_saved_percent": 13.04
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 710,
+      "local_references": 6491,
+      "remote_references": 9225,
+      "errors": 0
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 6
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 4
+      },
+      "example_table": {
+        "columns": 3,
+        "rows": 3
+      },
+      "parameter_table": {
+        "columns": 3,
+        "rows": 2
+      },
+      "player_icons": "32x32 and 72x72; all loaded",
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "visual inspection of player section, examples and raw template/reconstruction viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 4748,
+      "sha256": "595ccf6500438e08713e99599bfcbea43846f29b3f4d4f69e53974c0fccedf8d",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese mechanism content preserved except language switch; English prose/alt and private-path exclusion",
+      "result": "passed"
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 8,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, six accepted skills, INDEX Git paths, privacy and ignored QA artifacts",
+      "result": "passed"
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Final game UI display of raw stacks above the effective cap."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full implementation call-chain analysis (outside clarified review scope)"
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/long-range-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_increased_stacks.md",
+  "commit": "7b855bbdeeb08249496de654f0eebd07fc96f17f"
+}

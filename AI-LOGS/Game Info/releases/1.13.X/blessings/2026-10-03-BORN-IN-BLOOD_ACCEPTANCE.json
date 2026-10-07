@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-04",
+  "blessing": "born-in-blood",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/浴血而生/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_rippergun_p1_toughness_on_close_range_kills",
+    "weapon_trait_bespoke_shotgun_p3_toughness_on_close_range_kills",
+    "weapon_trait_bespoke_shotgun_p4_toughness_on_close_range_kills"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 3,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "born-in-blood",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-formal-peer-scope.json",
+    "scope_sha256": "11b424b7c27846408b4baf3825635795ab30bb8400a6f0dff6fdcdf95c5526d2",
+    "formal_scope": "9 formal pages, 3 variants, 6 bindings, related map/reverse/catalog/glossary; unrelated round15 execution carry excluded.",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "faster_enabled": false,
+    "review_findings": [
+      "All 32 fixed-scope file hashes match the scope manifest exactly; frozen research trio, canonical config/draft, root receipts, nine formal files, shared map/indexes and three reverse weapon pages are stable.",
+      "The three actual trait families each define I–IV toughness_fixed_percentage 0.045/0.05/0.055/0.06 with percentage-plus formatting; each wrapper directly clones the common close-kill recovery buff without a later override. The tier percentage replaces the 0.02 fallback.",
+      "The Traditional Chinese RAW says melee kill while the implementation requires a ranged death or count_as_ranged_attack; formal reconstruction preserves the exact wording and the errata identifies the contradiction. English omits attack type and exact range, correctly marked as undocumented.",
+      "Eligibility is source-item and held-slot gated, requires a death and a ranged attack, and uses an inclusive 12.5 m hit-position distance. Rippergun bayonet/push/melee actions are excluded; P3’s actual special is a toggle with no special-shell wiring; P4 special direct pellets remain ranged, while P4 Mk III follow-up interval damage is a buff attack without count_as_ranged_attack and does not qualify.",
+      "Recovery uses the current effective maximum toughness times the tier fraction, caps at current missing toughness, ignores toughness replenish modifiers via ignore_stat_buffs, and remains subject to the three recovery-prevention keywords and alive/downed conditions. The 2 s ProcBuff active window is not a cooldown, regeneration period, or stacking recovery effect; a processed eligible kill recovers immediately, and switching/window expiry does not undo recovered toughness.",
+      "The M=200 examples are arithmetically correct: III with 20 missing restores 11; IV with 5 missing calculates 12 but restores only 5. Map values, 3 variants/6 bindings, item restrictions, UI names, icon 059 attachment, and all reverse links agree with the formal pages and receipts."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-agent-config.json": "b08cfaddee1d7905a4836e6ebd29eab04e0befccc4e25f24140a1f5b1774b307",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-agent-draft.md": "c8afa07e998ba95e32e74f05aee8abe6281385f24ea7f82c99f922b4e86d3dfb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-agent-evidence.json": "6321076bf0b57deed44556f4949dba32a3de36de17a64b937681a5f81c062e30",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-config.json": "764025d3bdc6c05a32c8f5aad0f3270adb4dd983d0b4a748745a52923ebd1274",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-extension-draft.json": "c080d6ed79c20df36682a3750072b312fa3145fa1d730558f7d2ae1ee709585d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-image.json": "33ed7b05b4b4f57fbaa1181fc81908077000b5596352d6162505a6633478d577",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-consumer-delta-review.json": "2d3c53af8ca11831ac20d9cb2a9fbe4e66d29f4fde875b464947f5cbf8131e54",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-focused-checks.json": "3a7e0039753808e62ed58b8145c66a7de8a1bb1b769439f50c34078cc7f730d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-frozen-source-verification.json": "ef3283d1760082f7d9d99c7ae64493cb279ea679c13c890046fd94c4e000cdb1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-own-tier-diff.json": "147c03d3dea0164011f633be21f6f007868018ff9b688c656a51abc37d5dd2b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-resume-review.json": "0264a450fb0c6edc499270e1100668a8078fd59410cf75bd8a85c2f1d53e6d0f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-traits-review.json": "846d746f84546a2dc7cee9ec317a0a7a7010a4823d4e4239fd0898b417fa8cef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-ui-raw-verification.json": "abe9dda2ab162cfad6d866be88ead1a58cadcac87aae2c021828b119db6f75d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-ui-review.json": "a309179ee8c60bebab61b2b2e2083f63fa5b69504d9fcbf7df0b79194a27813d",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "f21ff714615983c0295ea84606877dba0460c8459000325b3950a05cf5766877",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "27293baaa7af1e325af8ce5089cea420381aca84544b75d0254cf6ae0b1ec719",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "0f5c748b67d5bb507673cda400189f134b723ef5ab0d2943410e50701014bbfa",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/DAMAGE_PERCENTAGE_REVIEW.md": "d06a73f9f73467ec3919f7137ac0f07a546d0884045fb801cf5e74f27f0bdf18",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/LOCALIZATION_COMPARISON.md": "c971504ab0d0324937900451c29a4c9383cdb7700f10cb9543edddd86e318fb1",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/README.md": "d9e37683a9186b17ed34a79d5abfa48ec69db6c2660d4b4e882a827370d00f89",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/SOURCE_INDEX.md": "9fef6b246ea703c61bb7c06ea07307200c700b7c9a70f2bae7b22eadd85e2e97",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/TIER_VALUES.md": "dc56fc3f74231f604265cb5059172020a661a5528d01f2416e9f898cba6a5824",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/WEAPON_COMPATIBILITY.md": "af4318565ebd0cf0765eb6698ecfe71fe701d836dcdd0535058ed3e7da25019a",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/weapon_trait_bespoke_ogryn_rippergun_p1_toughness_on_close_range_kills.md": "430ba0833dc94b51272245028e833ad13fa2fcf4b6e8e7812956949bc56257ac",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/weapon_trait_bespoke_shotgun_p3_toughness_on_close_range_kills.md": "edcb08cbfa5f108b840a38aa1dc97ec55b885c2d4c6511c91c1f68c4feb1a6b3",
+      "Game Info/releases/1.13.X/blessings/entries/浴血而生/weapon_trait_bespoke_shotgun_p4_toughness_on_close_range_kills.md": "1e4f9756c2c2598c534cf9ac33364d9260b37484d874b1f0ae1ff8ff574498bd",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "ae5ecb5013111d8d90de5892e0fb0a282c375feb5819cff2d902078f2a404e95",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂槍/README.md": "150193e47acde5b6956a20381f00d8388cad7ba87faee7520171cf3b53b22d7e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "c373fda3a18c8e8a5fa66a254c158efdad1f8d0dd0fea4db6577927c47e63d16",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "8e7e91c75b10ff9b9f375838b51d9af0679404bdae44718a2eaa49bf98dcac6a",
+      "Referneces/Translation.md": "19756f5d2e4a5636741dfbac60fa4f3bd8734156dbb49be470b9cb5e05e36006"
+    }
+  },
+  "image": {
+    "new_issue_attachment": false,
+    "attachment": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "born-in-blood",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_059",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_059.png",
+      "attachment": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966423611",
+      "acquired_date": "2026-10-03",
+      "sha256": "2cdf5a6e2a8f9ec200d8fb1bf5f4f9c7bad0c630e7a340b8976742f8051c564c",
+      "content_type": "image/png",
+      "size": 2607,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "浴血而生祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "reuse": {
+        "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/can-opener-image.json",
+        "receipt_sha256": "38f0624f85667b922df456b4833ddeb36fea7473b84a52d0efdb49ed640d6ed7",
+        "reason": "Exact item.icon identical for all3BornInBlood trait items; unchanged acceptedsource/publichash128px/visualreceipt reused, no reupload."
+      }
+    },
+    "reused_existing_verified_attachment": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 15,
+      "rows": 312,
+      "lists": 94,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 69,
+      "source_files": 29,
+      "bindings": 492,
+      "variants": 255,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 29,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 724,
+      "remote_references": 362,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 16,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-015-full-scan.json",
+        "sha256": "f3247716fcfb74a948b692fd33e897f3bb16093e0f9f16e0ad71cf5982d651d0",
+        "trigger": "round-015"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 90,
+    "not_started_name_groups": 90,
+    "partial_name_groups": 0,
+    "remaining_variants": 350,
+    "remaining_bindings": 693,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "1f11b1fb4ab9165f42fd4d882dafc4823dd92684000508b68922bc55176ed937"
+  },
+  "previous_local_commit": "fa1343391326daa5ee0e585d51a8ed6911ee4fc6",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_toughness_on_close_range_kills",
+        "inventory_bound": false
+      }
+    ],
+    "status": "excluded_outside_fixed_six_binding_intersection"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-consumer-delta-review.json",
+      "sha256": "2d3c53af8ca11831ac20d9cb2a9fbe4e66d29f4fde875b464947f5cbf8131e54"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-focused-checks.json",
+      "sha256": "3a7e0039753808e62ed58b8145c66a7de8a1bb1b769439f50c34078cc7f730d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-frozen-source-verification.json",
+      "sha256": "ef3283d1760082f7d9d99c7ae64493cb279ea679c13c890046fd94c4e000cdb1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-own-tier-diff.json",
+      "sha256": "147c03d3dea0164011f633be21f6f007868018ff9b688c656a51abc37d5dd2b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-resume-review.json",
+      "sha256": "0264a450fb0c6edc499270e1100668a8078fd59410cf75bd8a85c2f1d53e6d0f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-traits-review.json",
+      "sha256": "846d746f84546a2dc7cee9ec317a0a7a7010a4823d4e4239fd0898b417fa8cef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-ui-raw-verification.json",
+      "sha256": "abe9dda2ab162cfad6d866be88ead1a58cadcac87aae2c021828b119db6f75d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-primary-ui-review.json",
+      "sha256": "a309179ee8c60bebab61b2b2e2083f63fa5b69504d9fcbf7df0b79194a27813d"
+    }
+  ],
+  "primary_review_method": "Reused held/item/on_kill/close-range/ProcBuff common cache under direct-clone conditions; root verified all independent own tiers/wrappers/UI6 and exact51 range hashes, then reviewed new max-toughness consumer/recovery-block conditions/P4 interval eligibility and examples.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-config.json",
+    "sha256": "764025d3bdc6c05a32c8f5aad0f3270adb4dd983d0b4a748745a52923ebd1274"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "b08cfaddee1d7905a4836e6ebd29eab04e0befccc4e25f24140a1f5b1774b307",
+    "evidence.json": "6321076bf0b57deed44556f4949dba32a3de36de17a64b937681a5f81c062e30",
+    "draft.md": "c8afa07e998ba95e32e74f05aee8abe6281385f24ea7f82c99f922b4e86d3dfb"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/born-in-blood-formal-peer-scope.json",
+    "sha256": "11b424b7c27846408b4baf3825635795ab30bb8400a6f0dff6fdcdf95c5526d2",
+    "final_content_hashes_unchanged": true
+  }
+}

@@ -1,0 +1,1028 @@
+{
+  "date": "2026-10-03",
+  "blessing": "hotshot",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/激射/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_galvanic_rifle_p1_target_hit_mass_reduction_on_weakspot_hits",
+    "weapon_trait_bespoke_lasgun_p2_target_hit_mass_reduction_on_weakspot_hits",
+    "weapon_trait_bespoke_needlepistol_p1_target_hit_mass_reduction_on_weakspot_hits"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 3,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "delegation_scope": "one separate blessing group: Hot-Shot; three different blessings in parallel",
+    "peer_review": {
+      "task": "Hot-Shot formal peer review",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "sections": {
+        "player_text_and_calculations": {
+          "accepted": true,
+          "findings": [
+            "README correctly says the current weakspot hit receives the reduced hit-mass cost; HitScan determines weakspot and consumes mass before damage, and ActionSweep routes melee weakspot hits through the same hit-mass consumer.",
+            "The three weapon families have distinct displayed tiers: Galvanic Rifle 20/25/30/35%, Helbore Lasgun and Needle Pistol 20/30/40/50%. The examples and idealized 1/(1-r) capacity comparison are arithmetically correct and explicitly avoid promising fixed target counts or final damage.",
+            "The text correctly describes a reduction to weakspot target hit-mass consumption, not an equal increase to cleave budget or damage. Hit mass is deducted from both attack and impact budgets; body hits do not receive this weakspot modifier.",
+            "The wield condition, absence of stacks/duration, and application to ordinary/aimed fire and the listed sweep actions agree with the wrappers and consumer."
+          ],
+          "refs": [
+            "scripts/extension_systems/buff/buffs/buff.lua#L689-L708",
+            "scripts/extension_systems/buff/buffs/buff.lua#L735-L746",
+            "scripts/utilities/attack/hit_mass.lua#L12-L99",
+            "scripts/utilities/attack/hit_scan.lua#L215-L227",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua#L1353-L1380"
+          ]
+        },
+        "needle_chemical_special": {
+          "accepted": true,
+          "findings": [
+            "The README correctly calls the chemical special hitscan and states that its hit-mass explosion requires both attack and impact budgets to be exhausted before choosing the kill/stop explosion template.",
+            "It distinguishes the separate scene-object penetration-stop explosion and treats the attached toxin as a separate damage effect, not a Hot-Shot bonus."
+          ],
+          "refs": [
+            "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua#L228-L283",
+            "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua#L228-L283",
+            "scripts/settings/equipment/weapon_templates/needlepistols/settings_templates/needlepistol_hitscan_templates.lua#L43-L58",
+            "scripts/utilities/attack/hit_scan.lua#L215-L247",
+            "scripts/utilities/action/ranged_action.lua#L86-L137",
+            "scripts/utilities/attack/hit_scan.lua#L261-L320",
+            "scripts/settings/buff/weapon_buff_templates.lua#L1493-L1521"
+          ]
+        },
+        "tiers_and_variant_bindings": {
+          "accepted": true,
+          "findings": [
+            "The formal tier table has three weapon families with I-IV values and omits an availability claim; metadata available_tiers remains null.",
+            "The formal pages and config agree on three exact trait variants and six bindings: one Galvanic Rifle P1, three Helbore Lasgun P2 marks, and two Needle Pistol P1 marks. Per-weapon effects match each family’s tier values.",
+            "The configured tier multiplier replaces the wrapper default 0.5 through the buff override path; it is not added to the default."
+          ],
+          "refs": [
+            "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua#L163-L204",
+            "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p2.lua#L422-L465",
+            "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua#L72-L113",
+            "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua#L17-L24",
+            "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p2_buff_templates.lua#L60-L69",
+            "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua#L27-L34"
+          ]
+        },
+        "localization_and_ui": {
+          "accepted": true,
+          "findings": [
+            "The RAW name key loc_trait_bespoke_cleave_on_weakspot_hits matches EN Hot-Shot / zh-TW 激射, hash 83870716. The description key loc_trait_bespoke_cleave_on_weakspot_hits_desc matches the English and Traditional Chinese templates, hash cdc89e43.",
+            "The six listed UI names agree with their family/pattern/mark localization fields. The generic 'gain Cleave' wording does not specify the hit-mass formula; the comparison correctly treats that detail as not covered rather than an erratum.",
+            "The three variants consistently use icon weapon_trait_147; the image receipt records successful public hash verification and display verification."
+          ],
+          "actual_ui_names": [
+            "電能步槍 布蘭克斯 Mk CV",
+            "冥潮鐳射槍 盧修斯 MK IIIa",
+            "冥潮鐳射槍 盧修斯 MK V",
+            "冥潮鐳射槍 盧修斯 Mk IV",
+            "針彈手槍 布蘭克斯 MkVI",
+            "針彈手槍 布蘭克斯 MKII"
+          ],
+          "refs": [
+            "scripts/utilities/items.lua#L315-L327",
+            "scripts/utilities/items.lua#L378-L426",
+            "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-primary-ui-raw-verification.json",
+            "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-image.json"
+          ]
+        }
+      },
+      "reviewed_hashes": {
+        "config": {
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-config.json": "C3D018ABA5C3692C37ABC92B4FA1C62C6C0B305FF4094A7ECE58EF3137AFC3AB",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-agent-config.json": "41A4F10D896644C2445EA032F63F5CC08AFBE16FCD27A37EFAB5E81185F46E6A",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-extension-draft.json": "17554ABA3B581FE6CF82ED80ACE637798396EAF3FCA008E6FFFCDDF781E90B5B"
+        },
+        "formal": {
+          "Game Info/releases/1.13.X/blessings/entries/激射/README.md": "26AE02D47163A88AFBD01197145984C9776878204956BE8E9CEA12E6E7B66DE3",
+          "Game Info/releases/1.13.X/blessings/entries/激射/SOURCE_INDEX.md": "26250E3C0CA9484CAFB02881B7B4815130B4FC197FF4B59B888A0DD4CEBD665F",
+          "Game Info/releases/1.13.X/blessings/entries/激射/TIER_VALUES.md": "6B31956A0EDC7D264743440DD5B3D8AEFCC85CFE064883AC0AA566BE2AAF0151",
+          "Game Info/releases/1.13.X/blessings/entries/激射/LOCALIZATION_COMPARISON.md": "9783AB038E84940D13A79AC9993A2951D411F43537DA1C54B7C1107C7DAAD882",
+          "Game Info/releases/1.13.X/blessings/entries/激射/DAMAGE_PERCENTAGE_REVIEW.md": "2AB842FBF5EB87E11807B2C8A6544577CD334B55A57CCB7926C66BD9FC2B6AC0",
+          "Game Info/releases/1.13.X/blessings/entries/激射/WEAPON_COMPATIBILITY.md": "4CA70284BDC443ACE7535AEA9DE5A56D7EE5E5804009A878F7C1F89C5ACED36B",
+          "Game Info/releases/1.13.X/blessings/entries/激射/weapon_trait_bespoke_galvanic_rifle_p1_target_hit_mass_reduction_on_weakspot_hits.md": "2622EE295D7467D8DAEDDC10379B0D980C086BDA462AF64CCFFCCC458566E7A5",
+          "Game Info/releases/1.13.X/blessings/entries/激射/weapon_trait_bespoke_lasgun_p2_target_hit_mass_reduction_on_weakspot_hits.md": "C46B45AC4084826EC1EBA887D2D85FBDA812642889B869DD72D97EDDE5804603",
+          "Game Info/releases/1.13.X/blessings/entries/激射/weapon_trait_bespoke_needlepistol_p1_target_hit_mass_reduction_on_weakspot_hits.md": "43161C1D9689AD1FC1C79A403CBA5A6498EF73F673BACAA2BEDB1E2D77EA642C"
+        },
+        "evidence": {
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "2738F50B628EF48DBF6FF0BAB1512BB4A2810E88EE2D5B103517FFE687160CCD",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "AB47F7705562DEDAD695EC59F0E06E616E3340DBDAB861EDE48D909EE3606551",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314F135ACC27411F7908E43EA5AE55F8E8C2940A51518B76CA52B4A8C310A4",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-raw-verification.json": "3A542527B855F2D2ECD4503EA3840ABFF170884B8F246894C8004851201AC35A",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-primary-ui-review.json": "81FD17DFFC31415691ACB4FBAD4EF6DD68AB472B41180D9F792EFC116B61AA3B",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-primary-ui-raw-verification.json": "638021FA5561FD728DE97044441E0CA82FAF6942CF007D7BA7512D3292E6A384",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-primary-mechanism-review.json": "E16C5C925EC9DB5B88D360D1831894E77C3FB409BAC92EBBE3548358D0FEDBAC",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-image.json": "7C125D8DBF2BBA477225731F04480016A6EB90893FC56D6F498C3D3207881249"
+        }
+      },
+      "scope_note": "Read-only final review of Hot-Shot formal pages against the corrected config, evidence receipts, and fixed source SHA. Only this agent's unique ignored peer-review JSON was written; no formal/shared files, images, or Git state were changed."
+    },
+    "peer_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hotshot-agent-peer-review.json",
+    "peer_review_sha256": "ee9d437fe053e5eee0838a7e72c75390e1e86272e03c1da3df154732caf51be4",
+    "primary_reviewer": "Sol / xhigh",
+    "required_corrections": [],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "hotshot",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_147",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_147.png",
+      "attachment": "https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5968424717",
+      "acquired_date": "2026-10-03",
+      "sha256": "962ed70989b94af4ba6ae0f7477a3ae4a1f7bbc6caf8a177d82c391c12f42231",
+      "content_type": "image/png",
+      "size": 4149,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "激射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 417,
+      "tables": 336,
+      "rows": 3396,
+      "lists": 590
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1444,
+      "source_files": 385,
+      "bindings": 258,
+      "variants": 135,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1117,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 417,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 129,
+    "not_started_name_groups": 129,
+    "partial_name_groups": 0,
+    "remaining_variants": 453,
+    "remaining_bindings": 910,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "16b8e99525fe38cbda8bb9b8af02eb9d6a79076e8b330ccfbb818bf7f33c4411"
+  },
+  "previous_local_commit": "9acb022753af76b7cb1eb35608c9d7acb2efa620",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "primary_reviewer": "Sol / xhigh",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "current_trait_consumer_review": {
+      "primary_reviewer": "Sol",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "all_3_tier_overrides_directly_read": true,
+      "all_3_wrappers_directly_read": true,
+      "actual_6_UI_bindings_verified": true,
+      "source_ranges_directly_read": [
+        [
+          "buff.lua",
+          689,
+          747
+        ],
+        [
+          "buff_settings.lua",
+          752,
+          754
+        ],
+        [
+          "hit_mass.lua",
+          12,
+          112
+        ],
+        [
+          "action_sweep.lua",
+          1353,
+          1367
+        ]
+      ],
+      "verified_core": {
+        "galvanic_multipliers": [
+          0.8,
+          0.75,
+          0.7,
+          0.65
+        ],
+        "helbore_and_needle_multipliers": [
+          0.8,
+          0.7,
+          0.6,
+          0.5
+        ],
+        "trait_stat_buffs_override_replaces_conditional_default_value": true,
+        "conditional_default_is_not_an_extra_multiplier": true,
+        "weakspot_consumer_has_no_attack_type_gate": true,
+        "normal_and_special_needle_hitscan_templates_read": true,
+        "galvanic_bash_and_helbore_bayonet_sweep_kind_read": true,
+        "melee_sweep_calls_hitmass_weakspot_consumer": true,
+        "raw_gain_cleave_is_generic_not_direct_budget_formula": true
+      },
+      "formal_generation": "waiting for agent config"
+    },
+    "verified_examples": "- **共同假設**：只示範順劈預算；假設目標命中質量為10、攻擊與衝擊預算各為25、其他質量倍率皆為1，且沒有裝甲中止或其他攻擊設定改變。\n\n- **電能步槍IV弱點命中**：消耗10×0.65=6.5；攻擊與衝擊預算各剩25−6.5=18.5。\n\n- **冥潮鐳射槍／針彈手槍IV弱點命中**：消耗10×0.5=5；兩種預算各剩20。\n\n- **身體命中**：不套用弱點倍率，消耗仍為10；各預算剩15。\n\n- **理想化連續容量**：若所有目標質量相同且每次命中弱點，消耗倍率0.8與0.5分別對應1/0.8=1.25倍與1/0.5=2倍的可承受總質量；這不是整數目標數或實戰穿透承諾。\n\n- **解讀限制**：實際能否多命中目標，仍看下一目標質量、剩餘預算、攻擊設定與裝甲條件；算例不是最終傷害或衝擊值。",
+    "tier_override_replaces_conditional_default": true,
+    "both_attack_and_impact_budgets_consume_modified_current_target_mass": true,
+    "needle_enemy_hit_explosion_requires_both_mass_budgets_depleted": true,
+    "needle_penetration_stop_explosion_is_separate": true,
+    "buff_toxin_ticks_are_separate_attack_type": true,
+    "referenced_files_and_ranges": [
+      [
+        "Galvanic tier override and value display",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        163,
+        201
+      ],
+      [
+        "Lasgun tier override and value display",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p2.lua",
+        422,
+        460
+      ],
+      [
+        "Needle Pistol tier override and value display",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        72,
+        110
+      ],
+      [
+        "Galvanic wield conditional wrapper",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        17,
+        24
+      ],
+      [
+        "Lasgun wield conditional wrapper",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p2_buff_templates.lua",
+        60,
+        67
+      ],
+      [
+        "Needle Pistol wield conditional wrapper",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        27,
+        34
+      ],
+      [
+        "Override applied to conditional stat buff",
+        "scripts/extension_systems/buff/buffs/buff.lua",
+        689,
+        708
+      ],
+      [
+        "Conditional override calculation",
+        "scripts/extension_systems/buff/buffs/buff.lua",
+        735,
+        746
+      ],
+      [
+        "Mass multiplier type",
+        "scripts/settings/buff/buff_settings.lua",
+        752,
+        754
+      ],
+      [
+        "Weakspot hit mass calculation",
+        "scripts/utilities/attack/hit_mass.lua",
+        12,
+        62
+      ],
+      [
+        "Mass subtracts from attack and impact budgets",
+        "scripts/utilities/attack/hit_mass.lua",
+        65,
+        99
+      ],
+      [
+        "Hitscan weakspot and mass before damage",
+        "scripts/utilities/attack/hit_scan.lua",
+        215,
+        227
+      ],
+      [
+        "Melee sweep weakspot mass and stop calculation",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        1353,
+        1380
+      ],
+      [
+        "Galvanic P1 M1 hitscan and trait bind",
+        "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        263,
+        269
+      ],
+      [
+        "Galvanic P1 M1 aim hitscan",
+        "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        346,
+        350
+      ],
+      [
+        "Galvanic P1 M1 bash sweep",
+        "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        547,
+        557
+      ],
+      [
+        "Helbore P2 M1 hitscan/trait link and bayonet sweep",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        413,
+        413
+      ],
+      [
+        "Helbore P2 M1 ADS and bayonet action",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        608,
+        608
+      ],
+      [
+        "Helbore P2 M1 bayonet sweep",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        904,
+        913
+      ],
+      [
+        "Helbore P2 M2 hitscan/trait link and bayonet sweep",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        413,
+        413
+      ],
+      [
+        "Helbore P2 M2 ADS",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        608,
+        608
+      ],
+      [
+        "Helbore P2 M2 bayonet sweep",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        904,
+        913
+      ],
+      [
+        "Helbore P2 M3 hitscan/trait link",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        423,
+        423
+      ],
+      [
+        "Helbore P2 M3 ADS",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        617,
+        617
+      ],
+      [
+        "Helbore P2 M3 bayonet sweep",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        927,
+        927
+      ],
+      [
+        "Needle Pistol P1 M1 hitscan and trait link",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        228,
+        233
+      ],
+      [
+        "Needle Pistol P1 M2 hitscan and trait link",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        228,
+        233
+      ],
+      [
+        "Needle Pistol special hit-scan AoE",
+        "scripts/settings/equipment/weapon_templates/needlepistols/settings_templates/needlepistol_hitscan_templates.lua",
+        43,
+        58
+      ],
+      [
+        "Needle Pistol toxin application on explosion",
+        "scripts/settings/equipment/weapon_templates/needlepistols/settings_templates/needlepistol_damage_profile_templates.lua",
+        237,
+        245
+      ],
+      [
+        "UI item-name composition",
+        "scripts/utilities/items.lua",
+        315,
+        327
+      ],
+      [
+        "UI family, pattern, and mark loc IDs",
+        "scripts/utilities/items.lua",
+        378,
+        426
+      ],
+      [
+        "持用條件",
+        "scripts/settings/buff/helper_functions/conditional_functions.lua",
+        43,
+        59
+      ],
+      [
+        "完整tier與condition覆寫",
+        "scripts/extension_systems/buff/buffs/buff.lua",
+        689,
+        747
+      ],
+      [
+        "針彈射擊殺死或停止後的爆炸判斷",
+        "scripts/utilities/action/ranged_action.lua",
+        86,
+        137
+      ],
+      [
+        "針彈毒素tick獨立buff攻擊",
+        "scripts/settings/buff/weapon_buff_templates.lua",
+        1493,
+        1521
+      ],
+      [
+        "針彈手槍M1普通及特殊射擊",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        269,
+        283
+      ],
+      [
+        "針彈手槍M2普通及特殊射擊",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        269,
+        283
+      ],
+      [
+        "穿透物件停止的獨立爆炸分支",
+        "scripts/utilities/attack/hit_scan.lua",
+        261,
+        320
+      ]
+    ]
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 6,
+    "bindings": [
+      {
+        "weapon_id": "galvanic_rifle_p1",
+        "mark_id": "galvanic_rifle_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/galvanic_rifle_p1_m1",
+        "trait_id": "weapon_trait_bespoke_galvanic_rifle_p1_target_hit_mass_reduction_on_weakspot_hits",
+        "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/cleave_on_weakspot_hits",
+        "trait_category": "bespoke_galvanic_rifle_p1",
+        "loc_ids": [
+          "loc_weapon_family_galvanic_rifle_p1_m1",
+          "loc_weapon_pattern_galvanic_rifle_p1_m1",
+          "loc_weapon_mark_galvanic_rifle_p1_m1"
+        ],
+        "name_zh_tw": "電能步槍 布蘭克斯 Mk CV",
+        "name_en": "Galvanic Rifle Branx Mk CV",
+        "template_file": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 863,
+        "append_line": 865,
+        "raw_components": {
+          "loc_weapon_family_galvanic_rifle_p1_m1": {
+            "0": [
+              {
+                "text": "Galvanic Rifle",
+                "hash": "2f33461c",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "電能步槍",
+                "hash": "2f33461c",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_galvanic_rifle_p1_m1": {
+            "0": [
+              {
+                "text": "Branx",
+                "hash": "90a43f81",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "布蘭克斯",
+                "hash": "90a43f81",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_galvanic_rifle_p1_m1": {
+            "0": [
+              {
+                "text": "Mk CV",
+                "hash": "400daeda",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk CV",
+                "hash": "400daeda",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m1",
+        "metadata_item": "content/items/weapons/player/ranged/lasgun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_target_hit_mass_reduction_on_weakspot_hits",
+        "trait_item": "content/items/traits/bespoke_lasgun_p2/cleave_on_weakspot_hits",
+        "trait_category": "bespoke_lasgun_p2",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p2_m1",
+          "loc_weapon_pattern_lasgun_p2_m1",
+          "loc_weapon_mark_lasgun_p2_m1"
+        ],
+        "name_zh_tw": "冥潮鐳射槍 盧修斯 MK IIIa",
+        "name_en": "Helbore Lasgun Lucius MK IIIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1333,
+        "append_line": 1335,
+        "raw_components": {
+          "loc_weapon_family_lasgun_p2_m1": {
+            "0": [
+              {
+                "text": "Helbore Lasgun",
+                "hash": "95217161",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "冥潮鐳射槍",
+                "hash": "95217161",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_lasgun_p2_m1": {
+            "0": [
+              {
+                "text": "Lucius",
+                "hash": "db677a3a",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "盧修斯",
+                "hash": "db677a3a",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_lasgun_p2_m1": {
+            "0": [
+              {
+                "text": "MK IIIa",
+                "hash": "e181430f",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "MK IIIa",
+                "hash": "e181430f",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m2",
+        "metadata_item": "content/items/weapons/player/ranged/lasgun_p2_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_target_hit_mass_reduction_on_weakspot_hits",
+        "trait_item": "content/items/traits/bespoke_lasgun_p2/cleave_on_weakspot_hits",
+        "trait_category": "bespoke_lasgun_p2",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p2_m2",
+          "loc_weapon_pattern_lasgun_p2_m2",
+          "loc_weapon_mark_lasgun_p2_m2"
+        ],
+        "name_zh_tw": "冥潮鐳射槍 盧修斯 MK V",
+        "name_en": "Helbore Lasgun Lucius MK V",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1327,
+        "append_line": 1329,
+        "raw_components": {
+          "loc_weapon_family_lasgun_p2_m2": {
+            "0": [
+              {
+                "text": "Helbore Lasgun",
+                "hash": "d40f9e77",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "冥潮鐳射槍",
+                "hash": "d40f9e77",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_lasgun_p2_m2": {
+            "0": [
+              {
+                "text": "Lucius",
+                "hash": "812a07cc",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "盧修斯",
+                "hash": "812a07cc",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_lasgun_p2_m2": {
+            "0": [
+              {
+                "text": "MK V",
+                "hash": "d1ef33c6",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "MK V",
+                "hash": "d1ef33c6",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m3",
+        "metadata_item": "content/items/weapons/player/ranged/lasgun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_target_hit_mass_reduction_on_weakspot_hits",
+        "trait_item": "content/items/traits/bespoke_lasgun_p2/cleave_on_weakspot_hits",
+        "trait_category": "bespoke_lasgun_p2",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p2_m3",
+          "loc_weapon_pattern_lasgun_p2_m3",
+          "loc_weapon_mark_lasgun_p2_m3"
+        ],
+        "name_zh_tw": "冥潮鐳射槍 盧修斯 Mk IV",
+        "name_en": "Helbore Lasgun Lucius Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 1244,
+        "append_line": 1246,
+        "raw_components": {
+          "loc_weapon_family_lasgun_p2_m3": {
+            "0": [
+              {
+                "text": "Helbore Lasgun",
+                "hash": "b6a39d2f",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "冥潮鐳射槍",
+                "hash": "b6a39d2f",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_lasgun_p2_m3": {
+            "0": [
+              {
+                "text": "Lucius",
+                "hash": "b0aa987d",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "盧修斯",
+                "hash": "b0aa987d",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_lasgun_p2_m3": {
+            "0": [
+              {
+                "text": "Mk IV",
+                "hash": "08be7ed5",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk IV",
+                "hash": "08be7ed5",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/needlepistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_target_hit_mass_reduction_on_weakspot_hits",
+        "trait_item": "content/items/traits/bespoke_needlepistol_p1/cleave_on_weakspot_hits",
+        "trait_category": "bespoke_needlepistol_p1",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m1",
+          "loc_weapon_pattern_needlepistol_p1_m1",
+          "loc_weapon_mark_needlepistol_p1_m1"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MkVI",
+        "name_en": "Needle Pistol Branx MkVI",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 791,
+        "append_line": 793,
+        "raw_components": {
+          "loc_weapon_family_needlepistol_p1_m1": {
+            "0": [
+              {
+                "text": "Needle Pistol",
+                "hash": "7c20ba03",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "針彈手槍",
+                "hash": "7c20ba03",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_needlepistol_p1_m1": {
+            "0": [
+              {
+                "text": "Branx",
+                "hash": "f582e820",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "布蘭克斯",
+                "hash": "f582e820",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_needlepistol_p1_m1": {
+            "0": [
+              {
+                "text": "MkVI",
+                "hash": "2397109e",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "MkVI",
+                "hash": "2397109e",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m2",
+        "metadata_item": "content/items/weapons/player/ranged/needlepistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_target_hit_mass_reduction_on_weakspot_hits",
+        "trait_item": "content/items/traits/bespoke_needlepistol_p1/cleave_on_weakspot_hits",
+        "trait_category": "bespoke_needlepistol_p1",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m2",
+          "loc_weapon_pattern_needlepistol_p1_m2",
+          "loc_weapon_mark_needlepistol_p1_m2"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MKII",
+        "name_en": "Needle Pistol Branx MKII",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 788,
+        "append_line": 790,
+        "raw_components": {
+          "loc_weapon_family_needlepistol_p1_m2": {
+            "0": [
+              {
+                "text": "Needle Pistol",
+                "hash": "5c6d670c",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "針彈手槍",
+                "hash": "5c6d670c",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_needlepistol_p1_m2": {
+            "0": [
+              {
+                "text": "Branx",
+                "hash": "c6119d59",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "布蘭克斯",
+                "hash": "c6119d59",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_needlepistol_p1_m2": {
+            "0": [
+              {
+                "text": "MKII",
+                "hash": "36f85c5d",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "MKII",
+                "hash": "36f85c5d",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "refs": [
+      [
+        "電能步槍 布蘭克斯 Mk CV匯入",
+        "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        17,
+        17
+      ],
+      [
+        "電能步槍 布蘭克斯 Mk CV接入",
+        "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        863,
+        865
+      ],
+      [
+        "冥潮鐳射槍 盧修斯 MK IIIa匯入",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        15,
+        15
+      ],
+      [
+        "冥潮鐳射槍 盧修斯 MK IIIa接入",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        1333,
+        1335
+      ],
+      [
+        "冥潮鐳射槍 盧修斯 MK V匯入",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        15,
+        15
+      ],
+      [
+        "冥潮鐳射槍 盧修斯 MK V接入",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        1327,
+        1329
+      ],
+      [
+        "冥潮鐳射槍 盧修斯 Mk IV匯入",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        15,
+        15
+      ],
+      [
+        "冥潮鐳射槍 盧修斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        1244,
+        1246
+      ],
+      [
+        "針彈手槍 布蘭克斯 MkVI匯入",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        17,
+        17
+      ],
+      [
+        "針彈手槍 布蘭克斯 MkVI接入",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        791,
+        793
+      ],
+      [
+        "針彈手槍 布蘭克斯 MKII匯入",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        17,
+        17
+      ],
+      [
+        "針彈手槍 布蘭克斯 MKII接入",
+        "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        788,
+        790
+      ]
+    ],
+    "exact_name_key_metadata_items": 3,
+    "outside_exact_items": [],
+    "raw_name": {
+      "0": [
+        {
+          "text": "Hot-Shot",
+          "hash": "83870716",
+          "resource": "content/localization/items"
+        }
+      ],
+      "16": [
+        {
+          "text": "激射",
+          "hash": "83870716",
+          "resource": "content/localization/items"
+        }
+      ]
+    }
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 3,
+    "bound_variants": 3,
+    "same_name_candidates": [],
+    "exact_key_unresolved_candidates": [],
+    "source_definition_candidates_outside_metadata_intersection": [],
+    "status": "精確名稱鍵的三個變體均有metadata及模板綁定；交集外與缺口清單無同名稱鍵候選。只界定本次交集，不推定其他定義未使用。",
+    "inventory_source": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+    "metadata_source": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json"
+  }
+}

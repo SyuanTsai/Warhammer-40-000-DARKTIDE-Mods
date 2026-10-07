@@ -1,5 +1,7 @@
 # 電擊破壞協定(Shockline Breach Protocol)：原始碼依據
 
+[English](en/cryptic_pushing_grants_cleave.md)
+
 [返回玩家說明](README.md#cryptic_pushing_grants_cleave)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_pushing_grants_cleave)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

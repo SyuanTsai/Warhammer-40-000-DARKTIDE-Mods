@@ -1,0 +1,405 @@
+{
+  "date": "2026-10-04",
+  "blessing": "sustained-fire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/持續射擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_autopistol_p1_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_dual_autopistols_p1_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_forcestaff_p1_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_forcestaff_p3_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_forcestaff_p4_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_lasgun_p2_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_damage",
+    "weapon_trait_bespoke_stubrevolver_p1_followup_shots_ranged_damage"
+  ],
+  "added_binding_count": 18,
+  "total_variants": 10,
+  "total_bindings": 18,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "sustained-fire-formal-agent-review",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope peer review with gpt-6-luna/max settings.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file_count": 51,
+      "formal_markdown_count": 16,
+      "reverse_weapon_page_count": 10,
+      "scope_manifest_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-formal-peer-scope.json",
+      "scope_manifest_sha256": "ae2ca36b04173f926f9d4ff8bd7a3996f0b7e539da1f5b73ddb0a7365a68b7af",
+      "description": "Fixed single-item peer review of Sustained Fire formal pages, ten own traits/eighteen bindings, related reverse pages/map/localization, frozen research trio, and root difference receipts."
+    },
+    "reviewed_associations": {
+      "name_key": "loc_trait_bespoke_followup_shots_ranged_damage",
+      "variant_ids": [
+        "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_autopistol_p1_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_dual_autopistols_p1_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_forcestaff_p1_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_forcestaff_p3_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_forcestaff_p4_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_lasgun_p2_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_damage",
+        "weapon_trait_bespoke_stubrevolver_p1_followup_shots_ranged_damage"
+      ],
+      "kind": "ranged",
+      "binding_count": 18,
+      "actual_mark_ids": [
+        "autogun_p1_m1",
+        "autogun_p1_m2",
+        "autogun_p1_m3",
+        "autopistol_p1_m1",
+        "dual_autopistols_p1_m1",
+        "forcestaff_p1_m1",
+        "forcestaff_p3_m1",
+        "forcestaff_p4_m1",
+        "lasgun_p2_m1",
+        "lasgun_p2_m2",
+        "lasgun_p2_m3",
+        "lasgun_p3_m1",
+        "lasgun_p3_m2",
+        "lasgun_p3_m3",
+        "shotgun_p4_m1",
+        "shotgun_p4_m2",
+        "stubrevolver_p1_m1",
+        "stubrevolver_p1_m2"
+      ],
+      "actual_names_zh_tw": [
+        "快拔左輪手槍 阿格里皮娜 Mk XIV",
+        "快拔左輪手槍 紮羅娜 Mk IIa",
+        "步兵自動槍 弗拉克斯 Mk V",
+        "步兵自動槍 阿格里皮娜 Mk I",
+        "步兵自動槍 哥倫努 Mk VIII",
+        "冥潮鐳射槍 盧修斯 MK IIIa",
+        "冥潮鐳射槍 盧修斯 Mk IV",
+        "冥潮鐳射槍 盧修斯 MK V",
+        "偵察鐳射槍 奧克塔蘭 Mk VIc",
+        "偵察鐳射槍 奧克塔蘭 Mk XII",
+        "偵察鐳射槍 奧克塔蘭 Mk XIV",
+        "虛空打擊力場法杖 陰陽 Mk IV",
+        "虛空爆破力場法杖 陰陽 Mk III",
+        "滅絕者霰彈槍 鐵腕 Mk III",
+        "滅絕者霰彈槍 鐵腕 Mk VIII",
+        "電流力場法杖 諾瑪努斯 Mk VI",
+        "撕裂者自動手槍 尤斯 Mk IV",
+        "雙持自動手槍 布蘭克斯 MkIII"
+      ],
+      "metadata_outside_intersection": [
+        "content/items/traits/bespoke_dual_stubpistols_p1/followup_shots_ranged_damage"
+      ],
+      "conclusion": "The ten full trait IDs and eighteen UI-derived marks agree across canonical config, extension draft, current blessing map, compatibility table, and reverse weapon pages. The exact-name dual-stubpistols item is outside this blessing inventory intersection and is not included."
+    },
+    "reviewed_deltas": [
+      {
+        "topic": "P2 grounded versus airborne state correction",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/README.md:19",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_lasgun_p2_followup_shots_ranged_damage.md:14",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/SOURCE_INDEX.md:171-172"
+        ],
+        "evidence_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-state-correction.json",
+        "evidence_sha256": "50843e3f8c52cf29eafbf4e4b0dbb2d094332092d143c783b614ec1e3b4bb79e",
+        "conclusion": "Accepted. The frozen correction supersedes the earlier counter addendum: grounded crouch_moving inherits still and is 0.5s; crouch_still is 0.5s; airborne maps to moving regardless of crouch and uses 1.2s. Final player, variant, and source-index text uses the corrected distinction."
+      },
+      {
+        "topic": "Own tiers, shared counter/cache and conditional-map override",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/TIER_VALUES.md",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/SOURCE_INDEX.md"
+        ],
+        "conclusion": "Accepted. I–IV add ranged_damage .14/.16/.18/.20; the held-slot wrapper reads shared num_shots 1–3, while Shotgun P4 uses combo_count 1–3. General firing increments at prepare and misses consume counts; cache-before-weapon ordering, current spread/state strict clear, switch-to-none T=0 possibility, and the four P2 dont_clear action exemptions are stated with limits. Staff own tier conditional maps replace the entire wrapper map, so the apparent +.05 charge conditional does not coexist."
+      },
+      {
+        "topic": "Shotgun combo, first-shell and last-pellet behavior",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_damage.md",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/SOURCE_INDEX.md"
+        ],
+        "conclusion": "Accepted. Both P4 marks use combo_count and strict >0.2s post-action reset, separate from spread timers. An idle first shell starts at zero, while a first shell chained from a still-live reload/aim/special-load action can start at one; final pellet batches read player stats at processing time. Wording preserves the timing condition and does not equate each pellet with a shot."
+      },
+      {
+        "topic": "Damage consumer and worked example",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/README.md:37-40",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/DAMAGE_PERCENTAGE_REVIEW.md"
+        ],
+        "conclusion": "Accepted. The consumer requires attack_type=ranged OR profile.count_as_ranged_attack and adds the coefficient to the shared damage bucket. Under the stated D=100, q=.20, p=.20 assumptions the result is 140 versus 120 (+16.67% relative); 144 would incorrectly multiply additive terms."
+      },
+      {
+        "topic": "Special damage routes and weapon coverage",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/README.md:24-29",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/SOURCE_INDEX.md"
+        ],
+        "conclusion": "Accepted. P1 ActionExplosion and P1/P4 splash profiles do not pass the ranged type/profile gate; P4 direct projectile damage is separately ranged. P3 chain defaults to ranged where applicable, but does not add num_shots or guarantee a surviving valid cached count. Ordinary melee/toggles are excluded; the final text keeps model-specific exceptions."
+      },
+      {
+        "topic": "RAW localization, UI bindings, image and formatting",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/LOCALIZATION_COMPARISON.md",
+          "Game Info/releases/1.13.X/blessings/entries/持續射擊/WEAPON_COMPATIBILITY.md",
+          "Game Info/releases/1.13.X/blessings/README.md",
+          "Game Info/releases/1.13.X/blessings/ranged/README.md",
+          "Referneces/Translation.md"
+        ],
+        "conclusion": "Accepted. The English and zh-TW name/description keys and resource hash match the frozen RAW receipt; tier strings are formatter-based reconstructions and ordinal wording is explicitly distinguished from implementation counters. All eighteen names derive from metadata family/pattern/mark keys and actual import/ukeys/append wiring. The image receipt verifies icon path separately from attachment URL, with matching SHA-256, 128x128 dimensions, and display verification. FASTER remains unverified and disabled."
+      }
+    ],
+    "configuration_consistency": {
+      "canonical_config": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-config.json",
+      "canonical_config_sha256": "f376a78035cc36b6a9f622ff6795d3705607a8b6600c3916cbdd66fe06339d85",
+      "extension_draft": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-extension-draft.json",
+      "extension_draft_sha256": "7e59f6cc1b3c74c53eb3ec82ecf60ed152827fb507c99bffb2e3e50eaabfe627",
+      "extension_configuration_equal": true,
+      "map_bindings": 18,
+      "ui_bindings": 18,
+      "image_icon_id": "weapon_trait_057",
+      "image_icon_path": "content/ui/textures/icons/traits/weapon_trait_057",
+      "image_attachment": "https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5",
+      "faster_enabled": false
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-config.json": "631202b7d68c97bc890db012520a288f1a1329028b04a6852ec1bc99ad204417",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-addendum.json": "dad6f68790be43e2c73893e8e9d9dc635938b79fdbce44bfd2cd6065b402196c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-addendum.md": "7dd054947fc80ad0dfc8d148d3c7eae5f0e0b5e5206114246b1bf5c61b3d0194",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-hash-clarification.json": "5a72ec35267ec26149a252e2dc1205cb33ded4e34e74ccad75c21815f413215c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-state-correction.json": "50843e3f8c52cf29eafbf4e4b0dbb2d094332092d143c783b614ec1e3b4bb79e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-draft.md": "385fe4b5610714f96bd31908a87633f611323cc39bfdb51d53056831b936efa9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-evidence.json": "033a37b8e6eb43bca943d5722406418f986a8d4f572ad0f85601cc756237a3d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-config.json": "f376a78035cc36b6a9f622ff6795d3705607a8b6600c3916cbdd66fe06339d85",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-extension-draft.json": "7e59f6cc1b3c74c53eb3ec82ecf60ed152827fb507c99bffb2e3e50eaabfe627",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-image.json": "d2cbe5c77b733fc7ffaf0653b94f41b84dbcf4dc49a9bfef88e3f0b556c4c946",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-conditional-map-review.json": "95d73e22975f56b69120d784f859a32cc1e407b041227d77989a8a2378c21f72",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-counter-clarification-verification.json": "2d1c1b84915842648f91559ad925bfdbbc8877dfca7a6e15e6f11e5a14415a7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-damage-consumer-review.json": "3c7d27d36cf3ca01b893ae9056ed59891e90b07f03a81bb7ef47ac2a9e353925",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-frozen-source-verification.json": "c81290b7d1c96d701c4b5eb7143c8f3fa368087a6246f2ffe427459ec5c4f8db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-own-tier-diff.json": "4fb73f418ca107a8149e1b11f08b2d4195ca73db44c8d5e885ef68f3ee703bc7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-resume-review.json": "1be5d32b14df743ed064720f92da720b0f3214a0056073e8a9f9ea55099502ca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-special-damage-review.json": "249e0fdb797dc4717051bdc38c2562b657b00068fee24312b1b095d27744af9d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-ui-raw-verification.json": "0d559731ec305f6b358d4f6754b6f4083e1e4df0faea99aa6b0db850bc671b8b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-ui-review.json": "db94e58d99f77b5d583e1a823e0ac854703b8b83c100ada8028736d6c4be94c3",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "96dbe7549d590c144b6dd1cd436efee22c149f152c9d2a9088d892b812ec597f",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c70dc877c796d265e2a2c60b62342f7a87da5f4eeb79a67f4cbda88cffd4607f",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "429b8f12c04258fbe00f1947f2cb3e8f40645f5aa4facebf5c4068c60ac30ec5",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/DAMAGE_PERCENTAGE_REVIEW.md": "6e3292130307033cf7ecf95c865b7ba55ebc70b96a480a1a4b24a14c52b2a1a0",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/LOCALIZATION_COMPARISON.md": "8b0fed72fed62087fdd80c73691c5ecfca1e531e0a45286a79db2e413ff396d9",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/README.md": "f70447f818b250e7058629f03854f472aa69d5c4029f96397d78a6ba2f73752a",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/SOURCE_INDEX.md": "99166f5c5deee1917b166639f0d952628113534d47c32c79f415e8207f67564b",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/TIER_VALUES.md": "0676c800f0fdce9ff36f4060e33400baefb78660a923268c60a62c7a16c6d5de",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/WEAPON_COMPATIBILITY.md": "e922d4edb3ec6522a260a7bcb8ea70a1cd33593484d7f70ac8b30de1ec9c2b1e",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_autogun_p1_followup_shots_ranged_damage.md": "c5376e36d7b7e5461507547b3f9afbb3c6fa96702cd91bb97b4158f17fa0ee20",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_autopistol_p1_followup_shots_ranged_damage.md": "9fc00e71a61d40b4dc422b161030d65c7b8865c2d612521192bb07884b86acfb",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_dual_autopistols_p1_followup_shots_ranged_damage.md": "11a43985c269e1748aca66e90490a5f5969b4f05e40509ff445d3ace58698751",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_forcestaff_p1_followup_shots_ranged_damage.md": "a6ceb8ca17b79e7ffb7423971d13883a6d36edacd9ed9679abcf865040ab5ad1",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_forcestaff_p3_followup_shots_ranged_damage.md": "120775237a5e70bee0475c8d703d92de16820d0598e2914c55a6fd2456615394",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_forcestaff_p4_followup_shots_ranged_damage.md": "c9813daa356a04ba816011ed7424d7e9be952f96bcd644032b9cbf61b47af03c",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_lasgun_p2_followup_shots_ranged_damage.md": "5c731761201197b253343b4fb7239ef83c2bc10052185c958bbecd180bca1ed3",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_damage.md": "1000675e4d503d011da2f1113bc63e1cad52692da917a46f46f90f2a12a2d35d",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_damage.md": "67d7d21dd1d7ff1337eb31658931fefbef4d8e790656b98a0a6b0d53f49c9f14",
+      "Game Info/releases/1.13.X/blessings/entries/持續射擊/weapon_trait_bespoke_stubrevolver_p1_followup_shots_ranged_damage.md": "0e47558e0ceadf029d35219211b4841718fcc3fa121ad7697dcdb0845eeb6cf0",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "522cfb5c3c77e85758eeccc82777708be0a0d5c6bb8e6160bf1fdfa8ea7accb2",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "6f57d58c84ace105fc087965c3924bbc25f608fa0e725be1cc339297264cfe0d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/冥潮鐳射槍/README.md": "fa220c8fe7f7b7525a779862676656d488864958ebc4ea681fd9f63977370fcb",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "b61475b27ba5ce930d52ca89d8efad23d2121552bff9b5c78c5b77c29f3ae857",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "0c930ede96a15c4ff02162b9ba9b78486010614e04c75b9176d227cbd0ef4461",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "937d7adab1ec10c59952d859194345f55f2ac7c6619df98c616cd5f8bf1f4a4b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "a1e80e59fdf4e3fd8bfe1053bdbe0769e3a9fbad1a2755548cb24f0a50c006cf",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "b3b7dd11641f3083a714526ec89f9ce5b739dfedfe776a4177fd82a63f9a61c3",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "45947d9bb8f05f2be9eb1e11faa8cb329ff17964a4127a2762fb7c13b3fa4691",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "1398d6290382828542f49b6e068fb022210948ffc8f62c12c0c3b611ebaa1704",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "8147d6017535c6bfeaad24a5b1eb876f92edd21ef8a4a73e3d99cbc9957442ed",
+      "Referneces/Translation.md": "db65b1d416378f2ac59495b016e288ac18a32986248e09503613ec7c8499f47d"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "sustained-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_057",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_057.png",
+      "attachment": "https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5977792942",
+      "acquired_date": "2026-10-04",
+      "sha256": "55829c64185e52e5470b6603972e9568e09ca142ee197d3658a6642689fb255e",
+      "content_type": "image/png",
+      "size": 4941,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "持續射擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and public attachment visually identical; 128x128 RGBA rightward projectile/arrow with jagged radiating impact marks. Alpha-only diagnostic used for transparency inspection; uploaded original unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 31,
+      "tables": 29,
+      "rows": 509,
+      "lists": 106,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 173,
+      "source_files": 62,
+      "bindings": 468,
+      "variants": 243,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 29,
+      "source_object_cache": {
+        "cache_hits": 62,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 32,
+      "local_references": 866,
+      "remote_references": 579,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 14,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-013-full-scan.json",
+        "sha256": "54ee05026345515fb4de84abbece3cf7b430fbddf1d7d90f3f7085d6aeba1661",
+        "trigger": "round-013"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 96,
+    "not_started_name_groups": 96,
+    "partial_name_groups": 0,
+    "remaining_variants": 362,
+    "remaining_bindings": 717,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "d92f7cb87a1ccf86ac1e7615106177ad4cfb787f6f0d2b64f9f01c7c3a224056"
+  },
+  "previous_local_commit": "fc19e9466c8c2b20348d0c08b4d16813d7f3f5d9",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-own-tier-diff.json",
+      "sha256": "4fb73f418ca107a8149e1b11f08b2d4195ca73db44c8d5e885ef68f3ee703bc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-ui-review.json",
+      "sha256": "db94e58d99f77b5d583e1a823e0ac854703b8b83c100ada8028736d6c4be94c3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-ui-raw-verification.json",
+      "sha256": "0d559731ec305f6b358d4f6754b6f4083e1e4df0faea99aa6b0db850bc671b8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-conditional-map-review.json",
+      "sha256": "95d73e22975f56b69120d784f859a32cc1e407b041227d77989a8a2378c21f72"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-damage-consumer-review.json",
+      "sha256": "3c7d27d36cf3ca01b893ae9056ed59891e90b07f03a81bb7ef47ac2a9e353925"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-special-damage-review.json",
+      "sha256": "249e0fdb797dc4717051bdc38c2562b657b00068fee24312b1b095d27744af9d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-frozen-source-verification.json",
+      "sha256": "c81290b7d1c96d701c4b5eb7143c8f3fa368087a6246f2ffe427459ec5c4f8db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-addendum.json",
+      "sha256": "dad6f68790be43e2c73893e8e9d9dc635938b79fdbce44bfd2cd6065b402196c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-addendum.md",
+      "sha256": "7dd054947fc80ad0dfc8d148d3c7eae5f0e0b5e5206114246b1bf5c61b3d0194"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-hash-clarification.json",
+      "sha256": "5a72ec35267ec26149a252e2dc1205cb33ded4e34e74ccad75c21815f413215c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-primary-counter-clarification-verification.json",
+      "sha256": "2d1c1b84915842648f91559ad925bfdbbc8877dfca7a6e15e6f11e5a14415a7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-image.json",
+      "sha256": "d2cbe5c77b733fc7ffaf0653b94f41b84dbcf4dc49a9bfef88e3f0b556c4c946"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-counter-state-correction.json",
+      "sha256": "50843e3f8c52cf29eafbf4e4b0dbb2d094332092d143c783b614ec1e3b4bb79e"
+    }
+  ],
+  "primary_review_method": "Own10tier/wrapper complete maps and18 actual item/UI/RAW bindings reviewed. Reused same-SHA conditional stat/cache/order/ranged consumer only after own conditions checked. Expanded parent/default→combo selection, P2 movement/dont-clear differences, shared counter switch/noneT0, actual three staff explosion/chain/direct/splash dispatchers and P4 combo/first/pellet applicability. Controlled additive damage pool math independently verified.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-config.json",
+    "sha256": "f376a78035cc36b6a9f622ff6795d3705607a8b6600c3916cbdd66fe06339d85"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-config.json",
+      "sha256": "631202b7d68c97bc890db012520a288f1a1329028b04a6852ec1bc99ad204417"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-evidence.json",
+      "sha256": "033a37b8e6eb43bca943d5722406418f986a8d4f572ad0f85601cc756237a3d4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-agent-draft.md",
+      "sha256": "385fe4b5610714f96bd31908a87633f611323cc39bfdb51d53056831b936efa9"
+    }
+  ],
+  "previous_objects_unchanged": {
+    "blessings": 70,
+    "variants": 233,
+    "bindings": 450
+  },
+  "previous_weapons_unchanged": 66,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sustained-fire-formal-peer-scope.json",
+    "sha256": "ae2ca36b04173f926f9d4ff8bd7a3996f0b7e539da1f5b73ddb0a7365a68b7af",
+    "scope": "Single16formal player pages, own10traits/18bindings and own related shared10reverse/glossary; unrelatedround13 execution carry excluded. Previous70objects unchanged.",
+    "fixed_file_count": 51,
+    "receipt_sha256": "9e5c37bb5fb1e610c846f87c301e742b33069f84517174ce9e33fa5157391896",
+    "unrelated_round13_execution_carry_excluded": true
+  }
+}

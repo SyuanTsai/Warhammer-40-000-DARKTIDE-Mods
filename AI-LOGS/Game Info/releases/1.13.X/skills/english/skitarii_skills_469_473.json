@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_469_473",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only necessary display mappings: cryptic_talents.lua L892-L919 (Kinetic Repulsion), L23-L57 (Noospheric Command), L985-L1015 (Overcharged Arc Grenades), L962-L984 (Enhanced Arc Grenades), L832-L855 (Overcharged Refraction Emitter). Mechanisms and values reuse accepted evidence."
+  ],
+  "questions": [
+    "Overcharged Refraction Emitter retains the earlier record limitation: fixed source and localized text were not independently established as an identical game Build; no in-game observation."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_force_field_capacitance_restore",
+      "name": "Kinetic Repulsion",
+      "name_hash": "fc74e086",
+      "description_hash": "e9096586",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_capacitance_restore.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_force_field_capacitance_restore.md",
+      "commit": "ccf03d5a6"
+    },
+    {
+      "id": "cryptic_servo_skull_improved_tagging",
+      "name": "Noospheric Command",
+      "name_hash": "dd8d8400",
+      "description_hash": "843cef80",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_improved_tagging.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_improved_tagging.md",
+      "commit": "597402bfa"
+    },
+    {
+      "id": "cryptic_arc_grenades_brittleness",
+      "name": "Overcharged Arc Grenades",
+      "name_hash": "514f9bc7",
+      "description_hash": "699afdc0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_arc_grenades_brittleness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_arc_grenades_brittleness.md",
+      "commit": "a1ee698b7"
+    },
+    {
+      "id": "cryptic_arc_grenades_weapon_malfunction",
+      "name": "Enhanced Arc Grenades",
+      "name_hash": "9658f591",
+      "description_hash": "6282ba9c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_arc_grenades_weapon_malfunction.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_arc_grenades_weapon_malfunction.md",
+      "commit": "b23ab3772"
+    },
+    {
+      "id": "cryptic_force_field_duration_increase",
+      "name": "Overcharged Refraction Emitter",
+      "name_hash": "1736bea5",
+      "description_hash": "edf9be63",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_duration_increase.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_force_field_duration_increase.md",
+      "commit": "c3c816324"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 467,
+    "from_commit": "2ef8528f4",
+    "to_commit": "c3c816324",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

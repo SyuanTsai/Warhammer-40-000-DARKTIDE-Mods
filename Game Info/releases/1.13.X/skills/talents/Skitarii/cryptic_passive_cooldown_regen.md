@@ -1,5 +1,7 @@
 # 動力引擎(Motive Engine)：原始碼依據
 
+[English](en/cryptic_passive_cooldown_regen.md)
+
 [返回基礎效果](BASE_EFFECTS.md#cryptic_passive_cooldown_regen)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。

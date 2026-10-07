@@ -1,0 +1,76 @@
+{
+  "id": "scum_skills_424_428",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: broker_talents.lua L1629-L1659, L1734-L1765, L2123-L2154, L1864-L1896.",
+    "Hive City Brawler missing display-field values only: broker_buff_templates.lua L2195-L2199 and talent_settings_broker.lua L421-L424. Existing mechanisms and formatting reused."
+  ],
+  "questions": [
+    "Blessed Stimms: English's up to 50% is contradicted by the accepted pre-clear stopping threshold permitting the final clear to exceed 50%.",
+    "Battering Momentum: later hits of the triggering attack may already read the new bonus; existing sampling caveat remains Cannot confirm.",
+    "Equip Cartel Special: existing evidence does not fully establish the English universal other-Stimm use restriction; retained Cannot confirm without mechanism research."
+  ],
+  "skills": [
+    {
+      "id": "broker_passive_stimm_cleanse_on_kill",
+      "name": "Blessed Stimms",
+      "name_hash": "df6da11d",
+      "description_hash": "565482d8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stimm_cleanse_on_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stimm_cleanse_on_kill.md",
+      "commit": "8b7fbcf13"
+    },
+    {
+      "id": "broker_passive_dr_damage_tradeoff_on_stamina",
+      "name": "Hive City Brawler",
+      "name_hash": "514f1d9d",
+      "description_hash": "2fe3c231",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_dr_damage_tradeoff_on_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_dr_damage_tradeoff_on_stamina.md",
+      "commit": "62d75d658"
+    },
+    {
+      "id": "broker_passive_low_ammo_regen",
+      "name": "Pickpocket",
+      "name_hash": "f774ba92",
+      "description_hash": "aa6ac8e6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_low_ammo_regen.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_low_ammo_regen.md",
+      "commit": "e9843ef08"
+    },
+    {
+      "id": "broker_passive_cleave_on_cleave",
+      "name": "Battering Momentum",
+      "name_hash": "66764aec",
+      "description_hash": "04b9c8f2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_cleave_on_cleave.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_cleave_on_cleave.md",
+      "commit": "218c74f57"
+    },
+    {
+      "id": "broker_stimm_activation_talent",
+      "name": "Equip Cartel Special",
+      "name_hash": "6158914f",
+      "description_hash": "95c45406",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_activation_talent.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_activation_talent.md",
+      "commit": "4b2c0478b"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 343,
+    "from_commit": "e8949e939",
+    "to_commit": "4b2c0478b",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

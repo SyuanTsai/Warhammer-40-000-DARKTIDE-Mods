@@ -1,0 +1,71 @@
+{
+  "id": "ogryn_skills_251_255",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing display mappings in ogryn_talents.lua L2603–2632, L1979–2001, L764–780, L2369–2395 and L2538–2553 were read. Accepted mechanisms, values, formulas, sources and common formatting were reused.",
+  "questions": [
+    "Steady Grip weapon-switch state cleanup remains untested as recorded in the Chinese source. Final game UI remains unobserved."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_drain_stamina_for_handling",
+      "name": "Concentrate",
+      "name_hash": "d4a809fa",
+      "description_hash": "6c43172c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_drain_stamina_for_handling.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_drain_stamina_for_handling.md",
+      "commit": "4f5f20431"
+    },
+    {
+      "id": "ogryn_damage_reduction_after_elite_kill",
+      "name": "Strongman",
+      "name_hash": "6839065a",
+      "description_hash": "fb76eb37",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_damage_reduction_after_elite_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_damage_reduction_after_elite_kill.md",
+      "commit": "3ccd7f705"
+    },
+    {
+      "id": "ogryn_toughness_while_bracing",
+      "name": "Steady Grip",
+      "name_hash": "e009e53e",
+      "description_hash": "c73dc498",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_toughness_while_bracing.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_toughness_while_bracing.md",
+      "commit": "3eef53a66"
+    },
+    {
+      "id": "ogryn_ranged_damage_immunity",
+      "name": "Can't Hit Me...Again",
+      "name_hash": "27d5a227",
+      "description_hash": "5b06263e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ranged_damage_immunity.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ranged_damage_immunity.md",
+      "commit": "d9609c26b"
+    },
+    {
+      "id": "ogryn_wield_speed_increase",
+      "name": "Dedicated Practice",
+      "name_hash": "b44ee911",
+      "description_hash": "6349b08e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_wield_speed_increase.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_wield_speed_increase.md",
+      "commit": "f22591e1a"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 198,
+    "from_commit": "00bf2fab9",
+    "to_commit": "f22591e1a",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

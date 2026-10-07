@@ -1,16 +1,61 @@
-local mod = get_mod("uptime")
-local DMF = get_mod("DMF")
+-- File: uptime/scripts/mods/uptime/history/uptime_history_view.lua
+local mod = get_mod("uptime"); if not mod then return end
+local DMF = get_mod("DMF"); if not DMF then return end
 
 local ScriptWorld = mod:original_require("scripts/foundation/utilities/script_world")
 local UIRenderer = mod:original_require("scripts/managers/ui/ui_renderer")
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
 local UIWidgetGrid = mod:original_require("scripts/ui/widget_logic/ui_widget_grid")
-local ViewElementInputLegend = mod:original_require("scripts/ui/view_elements/view_element_input_legend/view_element_input_legend")
+local ViewElementInputLegend = mod:original_require(
+    "scripts/ui/view_elements/view_element_input_legend/view_element_input_legend")
 
 local UptimeHistoryData = mod:io_dofile("uptime/scripts/mods/uptime/history/uptime_history_data")
 
 local ENTRIES_GRID = 1
 local UptimeHistoryView = class("UptimeHistoryView", "BaseView")
+
+local function input_text_length(value)
+    value = tostring(value or "")
+
+    if Utf8 and Utf8.string_length then
+        return Utf8.string_length(value)
+    end
+
+    return #value
+end
+
+local function clean_note_text(note)
+    note = tostring(note or "")
+    note = note:gsub("[\r\n]", " "):gsub("^%s+", ""):gsub("%s+$", "")
+
+    return note
+end
+
+local function populate_uptime_popup_inputs(self, options)
+    if not options then
+        return
+    end
+
+    for i, option in ipairs(options) do
+        if option.uptime_input_text ~= nil then
+            local widget = self._content_widgets and self._content_widgets[i]
+            local content = widget and widget.content
+
+            if content then
+                local text = clean_note_text(option.uptime_input_text)
+
+                content.input_text = text
+                content.placeholder_text = option.uptime_placeholder_text or ""
+                content.caret_position = input_text_length(text) + 1
+            end
+        end
+    end
+end
+
+if not mod.uptime_popup_input_hooked then
+    mod.uptime_popup_input_hooked = true
+    mod:hook_safe("ConstantElementPopupHandler", "_create_popup_content", populate_uptime_popup_inputs)
+end
 
 UptimeHistoryView.init = function(self, settings)
     self._definitions = mod:io_dofile("uptime/scripts/mods/uptime/history/uptime_history_view_definitions")
@@ -35,9 +80,11 @@ UptimeHistoryView._setup_offscreen_gui = function(self)
     local viewport_name = class_name .. "_ui_offscreen_world_viewport"
     local viewport_type = "overlay_offscreen"
     local viewport_layer = 1
-    self._offscreen_viewport = ui_manager:create_viewport(self._offscreen_world, viewport_name, viewport_type, viewport_layer, shading_environment)
+    self._offscreen_viewport = ui_manager:create_viewport(self._offscreen_world, viewport_name, viewport_type,
+        viewport_layer, shading_environment)
     self._offscreen_viewport_name = viewport_name
-    self._ui_offscreen_renderer = ui_manager:create_renderer(class_name .. "_ui_offscreen_renderer", self._offscreen_world)
+    self._ui_offscreen_renderer = ui_manager:create_renderer(class_name .. "_ui_offscreen_renderer",
+        self._offscreen_world)
 end
 
 UptimeHistoryView.on_enter = function(self)
@@ -52,6 +99,18 @@ UptimeHistoryView.on_enter = function(self)
     self:_update_grid_navigation_selection()
 end
 
+UptimeHistoryView._selected_history_entry = function(self)
+    local selected_widget = self._selected_entry_widget
+    local selected_content = selected_widget and selected_widget.content
+    local selected_entry = selected_content and selected_content.entry
+
+    if selected_entry and selected_entry.history_entry then
+        return selected_entry.history_entry
+    end
+
+    return self.entry
+end
+
 UptimeHistoryView._setup_input_legend = function(self)
     self._input_legend_element = self:_add_element(ViewElementInputLegend, "input_legend", 10)
     local legend_inputs = self._definitions.legend_inputs
@@ -59,12 +118,15 @@ UptimeHistoryView._setup_input_legend = function(self)
         local legend_input = legend_inputs[i]
         local on_pressed_callback = legend_input.on_pressed_callback and callback(self, legend_input.on_pressed_callback)
         local visibility_function = legend_input.visibility_function
-        if legend_input.display_name == "loc_delete_entry" then
+
+        if legend_input.requires_selected_entry then
             visibility_function = function()
-                return self.entry
+                return self:_selected_history_entry() ~= nil
             end
         end
-        self._input_legend_element:add_entry(legend_input.display_name, legend_input.input_action, visibility_function, on_pressed_callback, legend_input.alignment)
+
+        self._input_legend_element:add_entry(legend_input.display_name, legend_input.input_action, visibility_function,
+            on_pressed_callback, legend_input.alignment)
     end
 end
 
@@ -76,16 +138,25 @@ end
 
 UptimeHistoryView.present_entry_widgets = function(self)
     if self.entry then
+        local full_entry = self._data_handler:get_full_entry(self.entry)
+
+        if not full_entry then
+            mod:echo("Uptime failed to load selected history entry.")
+            return
+        end
+
         local context = {
-            entry = self.entry
+            entry = full_entry
         }
+        self.entry = full_entry
         mod:close_view()
         Managers.ui:open_view("uptime_view", nil, false, false, nil, context, { use_transition_ui = false })
     end
 end
 
 -- Set up scrollbar for content grid with optional scrolling speed from DMF settings
-UptimeHistoryView._setup_content_grid_scrollbar = function(self, grid, widget_id, grid_scenegraph_id, grid_pivot_scenegraph_id)
+UptimeHistoryView._setup_content_grid_scrollbar = function(self, grid, widget_id, grid_scenegraph_id,
+                                                           grid_pivot_scenegraph_id)
     local widgets_by_name = self._widgets_by_name
     local scrollbar_widget = widgets_by_name[widget_id]
 
@@ -118,15 +189,18 @@ UptimeHistoryView._setup_entries_config = function(self, scan_dir)
     -- Set up the grid and widgets
     local scenegraph_id = "grid_content_pivot"
     local callback_name = "cb_on_entry_pressed"
-    self._entry_content_widgets, self._entry_alignment_list = self:_setup_list_entry_widgets(entries, scenegraph_id, callback_name)
+    self._entry_content_widgets, self._entry_alignment_list = self:_setup_list_entry_widgets(entries, scenegraph_id,
+        callback_name)
 
     -- Configure grid and scrollbar
     local scrollbar_widget_id = "scrollbar"
     local grid_scenegraph_id = "background"
     local grid_pivot_scenegraph_id = "grid_content_pivot"
     local grid_spacing = self._settings.grid_spacing
-    self._entries_content_grid = self:_setup_grid(self._entry_content_widgets, self._entry_alignment_list, grid_scenegraph_id, grid_spacing, true)
-    self:_setup_content_grid_scrollbar(self._entries_content_grid, scrollbar_widget_id, grid_scenegraph_id, grid_pivot_scenegraph_id)
+    self._entries_content_grid = self:_setup_grid(self._entry_content_widgets, self._entry_alignment_list,
+        grid_scenegraph_id, grid_spacing, true)
+    self:_setup_content_grid_scrollbar(self._entries_content_grid, scrollbar_widget_id, grid_scenegraph_id,
+        grid_pivot_scenegraph_id)
 
     -- Set up navigation
     self._navigation_widgets = { self._entry_content_widgets }
@@ -137,7 +211,8 @@ end
 UptimeHistoryView._setup_grid = function(self, widgets, alignment_list, grid_scenegraph_id, spacing, use_is_focused)
     local ui_scenegraph = self._ui_scenegraph
     local direction = "down"
-    local grid = UIWidgetGrid:new(widgets, alignment_list, ui_scenegraph, grid_scenegraph_id, direction, spacing, nil, use_is_focused)
+    local grid = UIWidgetGrid:new(widgets, alignment_list, ui_scenegraph, grid_scenegraph_id, direction, spacing, nil,
+        use_is_focused)
 
     -- Apply render scale to the grid
     grid:set_render_scale(self._render_scale)
@@ -163,10 +238,10 @@ UptimeHistoryView._setup_list_entry_widgets = function(self, entries, scenegraph
         -- Create widget definition if not already created for this type
         if template.pass_template and not widget_definitions[widget_type] then
             widget_definitions[widget_type] = UIWidget.create_definition(
-                    template.pass_template,
-                    scenegraph_id,
-                    nil,
-                    size
+                template.pass_template,
+                scenegraph_id,
+                nil,
+                size
             )
         end
 
@@ -205,7 +280,8 @@ UptimeHistoryView._update_grid_navigation_selection = function(self)
     else
         -- Handle keyboard navigation
         local navigation_widgets = self._navigation_widgets[selected_column_index]
-        local selected_widget = navigation_widgets and navigation_widgets[selected_row_index] or self._selected_settings_widget
+        local selected_widget = navigation_widgets and navigation_widgets[selected_row_index] or
+            self._selected_settings_widget
 
         if selected_widget then
             -- Ensure widget is properly selected in grid
@@ -311,10 +387,10 @@ UptimeHistoryView._set_selected_navigation_widget = function(self, widget)
         -- Only set grid index for the selected column
         local grid_index = is_selected_column and selected_row or nil
         navigation_grid:select_grid_index(
-                grid_index,
-                nil,
-                nil,
-                column_index == ENTRIES_GRID
+            grid_index,
+            nil,
+            nil,
+            column_index == ENTRIES_GRID
         )
     end
 
@@ -397,7 +473,6 @@ end
 
 -- Callback for when an entry is pressed in the history view
 UptimeHistoryView.cb_on_entry_pressed = function(self, widget, entry)
-    -- Load the uptime history entry from file
     self.entry = entry.history_entry
     self:present_entry_widgets()
 end
@@ -408,20 +483,95 @@ UptimeHistoryView.cb_on_back_pressed = function(self)
     self.ui_manager:close_view("uptime_history_view")
 end
 
+-- Callback for when the favourite toggle button is pressed
+UptimeHistoryView.cb_toggle_favourite_pressed = function(self)
+    local entry = self:_selected_history_entry()
+    if not entry then return end
+
+    if self._data_handler:toggle_entry_favourite(entry) then
+        self.entry = entry
+        self:_setup_entries_config()
+        self:_update_grid_navigation_selection()
+    end
+end
+
 -- Callback for when the delete button is pressed
 UptimeHistoryView.cb_delete_pressed = function(self)
-    if self._data_handler:delete_entry(self.entry) then
+    local entry = self:_selected_history_entry()
+
+    -- Failsafe: Prevent execution if it's marked as a favourite
+    if entry and entry.meta_data and entry.meta_data.favourite then
+        return
+    end
+
+    if self._data_handler:delete_entry(entry) then
         self.entry = nil
+        self._selected_entry_widget = nil
+
         mod:close_view()
         self:_setup_entries_config()
+        self:_update_grid_navigation_selection()
     end
+end
+
+-- Callback for when the edit note button is pressed
+UptimeHistoryView.cb_edit_note_pressed = function(self)
+    local entry = self:_selected_history_entry()
+    if not entry then
+        return
+    end
+
+    local meta_data = entry.meta_data or {}
+    local current_note = clean_note_text(meta_data.note)
+
+    local context = {
+        title_text_unlocalized = Localize("loc_edit_note"),
+        description_text_unlocalized = Localize("loc_note_popup_description"),
+        options = {
+            {
+                keyboard_title = "loc_note_popup_title",
+                max_length = 110,
+                template_type = "terminal_input_field",
+                uptime_input_text = current_note,
+                uptime_placeholder_text = Localize("loc_note_empty_placeholder"),
+                width = 500,
+            },
+            {
+                close_on_pressed = true,
+                template_type = "terminal_button_small",
+                text = "loc_popup_button_confirm",
+                callback = function(text_input)
+                    local saved = self._data_handler:set_entry_note(entry, text_input)
+
+                    if saved then
+                        self.entry = entry
+                        self:_setup_entries_config()
+                        self:_update_grid_navigation_selection()
+                    else
+                        mod:echo(Localize("loc_note_save_failed"))
+                    end
+                end,
+            },
+            {
+                close_on_pressed = true,
+                force_same_row = true,
+                text = "loc_popup_button_cancel",
+            },
+        },
+    }
+
+    Managers.event:trigger("event_show_ui_popup", context, function(id)
+        self._popup_id = id
+    end)
 end
 
 -- Callback for when the reload cache button is pressed
 UptimeHistoryView.cb_reload_cache_pressed = function(self)
     -- Clear current entry and reload with scan_dir=true to force refresh
     self.entry = nil
+    self._selected_entry_widget = nil
     self:_setup_entries_config(true)
+    self:_update_grid_navigation_selection()
 end
 
 -- Main update function for the view
@@ -497,6 +647,10 @@ UptimeHistoryView._update_entry_content_widgets = function(self, dt, t)
             if widget ~= selected_entry_widget then
                 self._selected_entry_widget = widget
                 local entry = widget.content.entry
+
+                if entry and entry.history_entry then
+                    self.entry = entry.history_entry
+                end
 
                 if entry and entry.select_function then
                     entry.select_function(self, widget, entry)
@@ -577,12 +731,12 @@ UptimeHistoryView.draw = function(self, dt, t, input_service, layer)
     local widgets_by_name = self._widgets_by_name
     local grid_interaction_widget = widgets_by_name.grid_interaction
     self:_draw_grid(
-            self._entries_content_grid,
-            self._entry_content_widgets,
-            grid_interaction_widget,
-            dt,
-            t,
-            input_service
+        self._entries_content_grid,
+        self._entry_content_widgets,
+        grid_interaction_widget,
+        dt,
+        t,
+        input_service
     )
 
     -- Call parent draw method

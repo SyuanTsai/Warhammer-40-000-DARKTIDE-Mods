@@ -1,0 +1,91 @@
+{
+  "id": "scum_skills_439_443",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "talent_settings_broker.lua L596-L640: only selected recipe display definitions for missing name tiers/stat values; shared generator/formatting reused"
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "broker_stimm_combat_4a",
+      "name": "Wildfire IV",
+      "name_hash": "fe5e6f12",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4a.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_4a.md",
+      "commit": "cfd1ae2a0",
+      "description_hashes": [
+        "f8a49d31",
+        "b004d6a5"
+      ]
+    },
+    {
+      "id": "broker_stimm_combat_4b",
+      "name": "Fury I",
+      "name_hash": "ea57fba3",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4b.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_4b.md",
+      "commit": "9039160a1",
+      "description_hashes": [
+        "f8a49d31",
+        "0dd2df4e"
+      ]
+    },
+    {
+      "id": "broker_stimm_combat_4c",
+      "name": "Vultoprene I",
+      "name_hash": "0f81fa53",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4c.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_4c.md",
+      "commit": "1aa16047d",
+      "description_hashes": [
+        "f8a49d31",
+        "a4e46663"
+      ]
+    },
+    {
+      "id": "broker_stimm_combat_5a",
+      "name": "Wildfire V",
+      "name_hash": "fe5e6f12",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5a.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_5a.md",
+      "commit": "0ac6cbc51",
+      "description_hashes": [
+        "f8a49d31",
+        "b004d6a5"
+      ]
+    },
+    {
+      "id": "broker_stimm_combat_5b",
+      "name": "Fury II",
+      "name_hash": "ea57fba3",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_5b.md",
+      "commit": "0c770d196",
+      "description_hashes": [
+        "f8a49d31",
+        "0dd2df4e"
+      ]
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 208,
+    "from_commit": "5018a8330",
+    "to_commit": "0c770d196",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

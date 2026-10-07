@@ -1,0 +1,466 @@
+{
+  "date": "2026-10-05",
+  "blessing": "deathspitter",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill",
+    "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill",
+    "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill",
+    "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill",
+    "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill"
+  ],
+  "added_binding_count": 21,
+  "total_variants": 9,
+  "total_bindings": 21,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "deathspitter",
+    "name_zh_tw": "死亡噴吐",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/bash",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "faster_status": "unverified",
+    "complete": true,
+    "accepted": true,
+    "status": "accepted_formal_peer_review",
+    "scope_file": "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\deathspitter-formal-peer-scope.json",
+    "scope_sha256": "20317957bd2881e1276278a372d55be3a979d5ff5ea4935d99be05dca8a211f6",
+    "canonical_config_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-config.json",
+    "canonical_config_sha256": "4eca4f89abee3f382c1d0e13d2759c0e5287bf36c7c3b742b29e7d57ec27e440",
+    "extension_configuration_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-extension-draft.json",
+    "extension_configuration_sha256": "8d6efad0fe7f2140c265a004fbc454ae3be0d954dd8ca34a7374934bff0de791",
+    "scoped_file_count": 65,
+    "all_scoped_file_hashes_match": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-config.json": "7c5596c3ac8fea2f3f5d72d09b50af716bc8449f96d3e89139dde12330c743be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-draft.md": "19868eb096cf121de5cd431cbc54b7f96f2019ab8981459d8110b3a36cb65e7b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-evidence.json": "e26375282c863ad44bd738691a8e50927d65ef93b426dd7f3e836bdded5778d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-config.json": "4eca4f89abee3f382c1d0e13d2759c0e5287bf36c7c3b742b29e7d57ec27e440",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-extension-draft.json": "8d6efad0fe7f2140c265a004fbc454ae3be0d954dd8ca34a7374934bff0de791",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-config.json": "7c5596c3ac8fea2f3f5d72d09b50af716bc8449f96d3e89139dde12330c743be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-draft.md": "19868eb096cf121de5cd431cbc54b7f96f2019ab8981459d8110b3a36cb65e7b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-evidence.json": "e26375282c863ad44bd738691a8e50927d65ef93b426dd7f3e836bdded5778d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-selfcheck.json": "1e6c91c689766fbaadb9f563e3f5c8f26246f83b2216d0432da80c5b01fa82a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-association-snapshot.json": "59872b2e545dd33f5aa68e651c5581b74649a2a81b3a9c2b96d9415e4a6cc089",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-attack-coverage.json": "3b7ac489206dc42adb03628d7bea7dc2cc1e30b4b8c043ee49fd750a2a239dbd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-candidate-formal-preview.md": "95fb7a723c25558878d8c45a9b1bee925ca3208668215698aae909b26ab69a76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-image.json": "a5df21e43aa75055f90efa8206a5c490475c2648263c5e8b0d84fa27db7714de",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-base-applicability-review.json": "bece9a19eef36ff83d2325a06e6b69e6fc7eb7e8b5e6da4eae804857710bdabf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-focused-checks.json": "8ea6048e89724dee74e7e4663b907ae9c3bad230cb8eee5b1be588879c3eb809",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-frozen-source-verification.json": "af9899c612edf183eb9d00521bcd5445880701fd9729a0d1fd80f7dec43fefc1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-own-tier-wrapper-diff-review.json": "125ecc22eb1b7b8c2cdd05d331fac568622e5e04bcceee211e02135515b0fa3b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-resume-review.json": "262ff3c17a1ee2d7451baee6c1eb64f31eda07926831860c45548fd02104176a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-runtime-formula-review.json": "b0d0fb95e824fa7b7eb7c0ddbebd411f8e1076334e3b714beaafac2b1fc85550",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-traits-review.json": "f5b3fd010b8f3b2fb93282c0655df69b206f1601d1d8828640dcd5b8b04387c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-delta-review.json": "ab3cd20cb222eef5f4507dba743a2d87eb8329f096cfb8fcc91d4fbcee2fa28f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-raw-verification.json": "d0e8033ace1f9a8674f444986f9f125d7af71d5d017229cd36b98f4a3b5cb44a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-review.json": "13c39593ff86f7fad4fc40373a5311058ca79994fbe78740081a676afa314bea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-attack-coverage.json": "4d5dc7c4924f8704e4ac3137528ea53f8e4f71438a3b83b2bfc0834a306367aa",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "0859591d4a095168b0555dbf93c33a5573deeb90cbf49bb4c6ee04915715cc98",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/README.md": "7b0e6f653ee7f20e57db850f8b70d17529e355ceb96a2a7b0bfcb3ce943fe01b",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/SOURCE_INDEX.md": "2b31c530d0d4081da94d0f9cf900f87c04254ded071a7f3c5d96233657b13451",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/WEAPON_COMPATIBILITY.md": "573c5fbfbde717863f2c69856af425108ac38901253fed5b495bc2cddd681bcf",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/DAMAGE_PERCENTAGE_REVIEW.md": "5adc99beeabd7674f15ee4f707c77a003be6ca24c3d578afdf122c69d340ab0a",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/LOCALIZATION_COMPARISON.md": "093d013e6aa553b87fd07d1673fb9486e03c41e49978a2c45689f70157d83d29",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/README.md": "5c16c4f840a65a83593af4186a31690531f4b08e3339d0accc41438d731c7eb8",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/SOURCE_INDEX.md": "e8177c6a1e517dcdbf622ac0fd1df56c405542f7be404fb91991df4f470a8178",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/TIER_VALUES.md": "3692f3c72af5992a17d0e749388c42ff92118d7f86ea00dbae37f1809f15d2f4",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/WEAPON_COMPATIBILITY.md": "ca2d831f479f0f50139a8a485e6862ae75bb5abcdaf101e86b46a73159652b86",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill.md": "e564daf49943ffc2617d62c2239d2d0f2878173a7dddc5a2ee91d2f792eb5405",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill.md": "c550fca5cdedb3b7bd56ecf039e5d526ad7dbdf5893b69ec1e309815bf5f84df",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill.md": "f735939ae19feb0590b1c6d21de3eea7eccc84d4f86a9eff68c05627513eecb5",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill.md": "5fc6f38f7a3de19c35886892b5289aba377e2eef95a7ac3dc362c26c870fa420",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill.md": "a2ad42a39d9c6c5a5451bfda49ffcb6b72c8b1751d69d87c326703fdd2e078eb",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill.md": "6ea3897591b9a5cfd1e106953ed457e40cd404f6d70cb06ef557bdb60744baab",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill.md": "6cd0d18f1436d4a80677449b43465b1014cd79cfade4085e02506abfa81e3874",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill.md": "ce59ff0c70e08aeb75aeeb9218e4e2614abc92dea5d6a94a89a3f466b3fd89cc",
+      "Game Info/releases/1.13.X/blessings/entries/死亡噴吐/weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill.md": "0087f7775e3123326f33ff6dbd0c2ac53fd6f410495dad427eea89b4a131a663",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/README.md": "53214a17ae8b6872082246b90da073fb00a7a0c6017f8a86110d739ab1d90d5a",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/SOURCE_INDEX.md": "6e8586a24048470f39734bb0783ac2826034e261b5ab1aea194bfbe63341c2d1",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/WEAPON_COMPATIBILITY.md": "e7c34c1fec9d4548d991659ae92ccf115870bcd144d693bb87b38f40d007d06d",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "cc51aa760d9b40855542768ffeef01109b9995ad2385025c993afa7a0ad9b31a",
+      "Game Info/releases/1.13.X/blessings/README.md": "e15aa2b03c6657e38325e57f62d8694b2614d0be56eb8198ca477832ca53514b",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "e379cba36e1f146c7f79b4f270a0e7344db132c43992126a1c5910787d6f6ce2",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "0edc1d3db2db083d9b23759f666587ddf0881bf0f330b90bb4d204daad7b91d9",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/戰鬥霰彈槍/README.md": "4c48b4580f2971c96192ab6d801ce0b4bdd60d17eab3792bf6e0e5d3460a0750",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "df66575a4d469c411dedc65738741959588cd2bb60fd409b2d333d3bc234ca82",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "00016e5c11d86a353dc84ba2cec436a0a0ac23cbb0bb61b17d66c704ab0a141e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "f8791150cbd64fb5a5f1fc1b5e5e68292908344fe258b7544ee66eb2a1121ca3",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "4c4753edc7503f582aac6f258433424205d57cc0da3d5ffe73b2a05df901ea38",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "0971e483e0fdd73259b4424e12dea38df23ce6ebb1d8e690899e80c8204545d9",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙管霰彈槍/README.md": "dbd773ed29577bee8427cb323f38ccefbba7e76e3c4cf63519ab719d71b9d8b2",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙鏈重型機槍/README.md": "9ab1c618a1adba1dec48d532d23faf81d7ffccbec75e7c5c766d3d5b6cf60992",
+      "Game Info/releases/1.13.X/blessings/weapons/README.md": "f40720729709b1367ac97fbc4c671a0f28816cf16ca4bd38d6b9f4013c5b623a",
+      "Referneces/Translation.md": "79128de085c25e973d7585e9b9208453adf62aaa5a9a5aedd799853ae773d517"
+    },
+    "primary_candidate_precheck": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/deathspitter-candidate-nonauthor-precheck.json",
+      "sha256": "6aba9a37675adadf4c94e2010a0c780f0f6a23a37e15c6dbbf10b4de69e1e261",
+      "result": "pass",
+      "formal_peer_acceptance": false,
+      "committed": false
+    },
+    "review_summary": [
+      "Scope audit: the exact 65-file manifest SHA matches and every current file hash equals its frozen value. Canonical config remains the specified 9 variants / 21 bindings; the evidence covers 96 flattened action routes and 156 source blocks.",
+      "Tiers and lifecycle: the nine actual own I–IV tier tables provide .05/.055/.06/.065 generic power modifier per effective layer. The matching child conditional override replaces the .01 base fallback; it is not added on top. Eight variants use 3.5 seconds and shotgun_p2 uses 5 seconds. Five effective layers are the cap. Accepted kills add one and refresh the shared timer even at cap; expiry clears the effective layers together on the relevant fixed update. Switching suppresses the held-slot stat but does not pause the timer; true removal cleans the parent and child.",
+      "Trigger boundary: a died result is required, with attack_type=ranged or explicit count_as_ranged_attack, exact source item, held slot, and hit distance <=12.5m. This predicate has no Terrifying Barrage-style explosion allowance. The delayed P1 fire and P4 M1 stun ticks use buff attacks without ranged opt-in; P4 M2 applies a rending state without damage ticks.",
+      "Shotgun P2 special: actual bound modes include a special windup/setup followed by melee/push sweeps, not a special-projectile attack route. Those attacks do not trigger this ranged-close kill effect; an already active generic power modifier can still contribute when a held attack consumes that power input.",
+      "First effect and formula: the lethal hit resolves before on_kill is delivered and before the new child stack/stat cache is available. With B measured after its native power-type curve and before generic pooled modifiers, P=B*(1+q+n*p). Tier IV at n=5, B=100, q=0 gives 132.5. At q=.20, input 120 becomes 152.5: +32.5 power input or 27.08% relative to 120. Neither example claims the same final health damage percentage.",
+      "RAW comparison: the paired description uses hash fe798d47. English says “Close Range Kill”; the paired Traditional Chinese RAW says “近戰攻擊擊殺後”. The formal erratum correctly flags that as a melee-trigger wording contradiction and clarifies “近距離擊殺”; omitted range/item/lifecycle details remain documentation gaps.",
+      "UI delta: the bound Heavy Stubber P1 m3 UI name is reconstructed from actual family, pattern and Mark fields as “雙鏈重型機槍 阿克利斯 Mk VII” / “Twin-Linked Heavy Stubber Achlys Mk VII”. The old single-key RAW quote “阿克利斯MK V二聯重機槍” and English “Achlys Mk VII Twin-Linked Heavy Stubber” remain explicitly preserved; only UI mark name/name_en/name_keys changed in the delta.",
+      "Presentation and associations: all 15 own formal pages, source index, compatibility pages, shared map/global/reverse references and the scoped related pages agree with the exact binding and UI evidence. The icon receipt matches the formal image URL and records 128x128, public HTTP 200, hash and display verification. Focused source/link/GFM receipts report 344 ranges / 110 files, 0 new link errors, 36 Markdown files, and verified global partition/previous objects."
+    ],
+    "reviewed_claims": [
+      {
+        "topic": "Final scope hashes and canonical inputs",
+        "result": "pass",
+        "detail": "All 65 current file hashes match the frozen scope; canonical config SHA and fixed source commit match the task."
+      },
+      {
+        "topic": "Own tier, wrapper and duration differences",
+        "result": "pass",
+        "detail": "All nine own variants use matching parent/child overrides; the tier value replaces the same-key base child fallback. P2 alone uses a 5-second child duration; the other eight use 3.5 seconds."
+      },
+      {
+        "topic": "Ranged-close versus Terrify explosion",
+        "result": "pass",
+        "detail": "Only ranged attacks or an explicitly ranged-counting profile can pass this event gate, with a death and the exact item/held/range checks. No generic explosion branch is present."
+      },
+      {
+        "topic": "Actual P2 special route",
+        "result": "pass",
+        "detail": "P2 special setup leads to melee/push sweep actions. It does not provide a special-projectile trigger route."
+      },
+      {
+        "topic": "First effect and examples",
+        "result": "pass",
+        "detail": "Kill damage precedes proc/cache update. Both pool arithmetic examples are correct and explicitly describe power input rather than final health damage."
+      },
+      {
+        "topic": "RAW and Heavy Stubber UI delta",
+        "result": "pass",
+        "detail": "The Chinese melee wording discrepancy is accurately flagged. The real m3 composite display name is used while the original paired single-key RAW wording/hash is retained."
+      },
+      {
+        "topic": "Image and global association",
+        "result": "pass",
+        "detail": "The actual icon receipt and scoped local/shared/reverse associations match; focused link, GFM and global consistency checks pass."
+      }
+    ],
+    "evidence_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-resume-review.json",
+        "sha256": "262ff3c17a1ee2d7451baee6c1eb64f31eda07926831860c45548fd02104176a",
+        "role": "Current canonical delta, examples, exact P2 special route, unchanged 9/21 scope."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-runtime-formula-review.json",
+        "sha256": "b0d0fb95e824fa7b7eb7c0ddbebd411f8e1076334e3b714beaafac2b1fc85550",
+        "role": "Own triggers, power-pool formula, route and tick applicability."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-own-tier-wrapper-diff-review.json",
+        "sha256": "125ecc22eb1b7b8c2cdd05d331fac568622e5e04bcceee211e02135515b0fa3b",
+        "role": "Nine complete own tiers, wrapper bindings and duration values."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-base-applicability-review.json",
+        "sha256": "bece9a19eef36ff83d2325a06e6b69e6fc7eb7e8b5e6da4eae804857710bdabf",
+        "role": "Exact base parent/child fields and applicable shared behavior."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-delta-review.json",
+        "sha256": "ab3cd20cb222eef5f4507dba743a2d87eb8329f096cfb8fcc91d4fbcee2fa28f",
+        "role": "Exact three Heavy Stubber Marks UI label/name-key delta and unchanged original RAW quotations."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-raw-verification.json",
+        "sha256": "d0e8033ace1f9a8674f444986f9f125d7af71d5d017229cd36b98f4a3b5cb44a",
+        "role": "Paired localization keys, hashes and exact RAW."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-review.json",
+        "sha256": "13c39593ff86f7fad4fc40373a5311058ca79994fbe78740081a676afa314bea",
+        "role": "21 actual UI bindings and exact model names."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-image.json",
+        "sha256": "a5df21e43aa75055f90efa8206a5c490475c2648263c5e8b0d84fa27db7714de",
+        "role": "Actual icon file, attachment, public hash and display receipt."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-focused-checks.json",
+        "sha256": "8ea6048e89724dee74e7e4663b907ae9c3bad230cb8eee5b1be588879c3eb809",
+        "role": "Focused source, Markdown link, GFM and global association checks."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-attack-coverage.json",
+        "sha256": "3b7ac489206dc42adb03628d7bea7dc2cc1e30b4b8c043ee49fd750a2a239dbd",
+        "role": "21 bindings and 96 concrete action-route coverage records."
+      }
+    ],
+    "conclusion": "Accepted for formal peer review. The scoped pages and associations match the reviewed final configuration and the UI-only Heavy Stubber label delta.",
+    "issues": []
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "deathspitter",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_052.png",
+      "attachment": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5988583173",
+      "acquired_date": "2026-10-05",
+      "sha256": "78462449ff103316d3bd35a5f59f622f790daefdd734c5c467b351f37dfeaa5b",
+      "content_type": "image/png",
+      "size": 3002,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "死亡噴吐祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Primary viewed actual publicly downloaded128 native weapon_trait_052 PNG: white central crossed/bar-like shape with narrow vertical side elements on dark/transparent surrounding; intact original dimensions and outline; public attachment bytes exactly match icon source."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 36,
+      "tables": 38,
+      "rows": 865,
+      "lists": 118,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 344,
+      "source_files": 110,
+      "bindings": 671,
+      "variants": 346,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 34,
+      "source_object_cache": {
+        "cache_hits": 110,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 37,
+      "local_references": 1357,
+      "remote_references": 885,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 26,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-025-full-scan.json",
+        "sha256": "cfbc8a780a445f772a203a79188335cb0760e20400812520e8b78e3fb166d262",
+        "trigger": "round-025"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 60,
+    "not_started_name_groups": 60,
+    "partial_name_groups": 0,
+    "remaining_variants": 259,
+    "remaining_bindings": 514,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "74def79c638eaea3abc696edf1908ffedbdd6ee2e2de363484263e64c03bf96b"
+  },
+  "previous_local_commit": "4ce76c74bf8b4c920f44e39550368568e794a400",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "ActualprimaryUI metadata candidates checked individually: none outside exact itemlist. Sourceonlydefinitions notpromoted; exact9variant21binding boundary unchanged."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-base-applicability-review.json",
+      "sha256": "bece9a19eef36ff83d2325a06e6b69e6fc7eb7e8b5e6da4eae804857710bdabf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-focused-checks.json",
+      "sha256": "8ea6048e89724dee74e7e4663b907ae9c3bad230cb8eee5b1be588879c3eb809"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-frozen-source-verification.json",
+      "sha256": "af9899c612edf183eb9d00521bcd5445880701fd9729a0d1fd80f7dec43fefc1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "125ecc22eb1b7b8c2cdd05d331fac568622e5e04bcceee211e02135515b0fa3b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-resume-review.json",
+      "sha256": "262ff3c17a1ee2d7451baee6c1eb64f31eda07926831860c45548fd02104176a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-runtime-formula-review.json",
+      "sha256": "b0d0fb95e824fa7b7eb7c0ddbebd411f8e1076334e3b714beaafac2b1fc85550"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-traits-review.json",
+      "sha256": "f5b3fd010b8f3b2fb93282c0655df69b206f1601d1d8828640dcd5b8b04387c5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-delta-review.json",
+      "sha256": "ab3cd20cb222eef5f4507dba743a2d87eb8329f096cfb8fcc91d4fbcee2fa28f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-raw-verification.json",
+      "sha256": "d0e8033ace1f9a8674f444986f9f125d7af71d5d017229cd36b98f4a3b5cb44a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-review.json",
+      "sha256": "13c39593ff86f7fad4fc40373a5311058ca79994fbe78740081a676afa314bea"
+    }
+  ],
+  "primary_review_method": "Existing own9rootreceipts plus156currentagentblocks/11inputs; native21Mark96routes and12sameMark reuseconditions examined. Actual ownheldconditionalchild/matchingkey transfers, controlledgeneralpowercurve reviewed. Sourceverification complements contentreview.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-config.json",
+    "sha256": "4eca4f89abee3f382c1d0e13d2759c0e5287bf36c7c3b742b29e7d57ec27e440"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-attack-coverage.json",
+      "sha256": "4d5dc7c4924f8704e4ac3137528ea53f8e4f71438a3b83b2bfc0834a306367aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-review.json",
+      "sha256": "13c39593ff86f7fad4fc40373a5311058ca79994fbe78740081a676afa314bea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-raw-verification.json",
+      "sha256": "d0e8033ace1f9a8674f444986f9f125d7af71d5d017229cd36b98f4a3b5cb44a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "125ecc22eb1b7b8c2cdd05d331fac568622e5e04bcceee211e02135515b0fa3b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-base-applicability-review.json",
+      "sha256": "bece9a19eef36ff83d2325a06e6b69e6fc7eb7e8b5e6da4eae804857710bdabf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-image.json",
+      "sha256": "a5df21e43aa75055f90efa8206a5c490475c2648263c5e8b0d84fa27db7714de"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-config.json",
+      "sha256": "7c5596c3ac8fea2f3f5d72d09b50af716bc8449f96d3e89139dde12330c743be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-draft.md",
+      "sha256": "19868eb096cf121de5cd431cbc54b7f96f2019ab8981459d8110b3a36cb65e7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-evidence.json",
+      "sha256": "e26375282c863ad44bd738691a8e50927d65ef93b426dd7f3e836bdded5778d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-agent-selfcheck.json",
+      "sha256": "1e6c91c689766fbaadb9f563e3f5c8f26246f83b2216d0432da80c5b01fa82a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-association-snapshot.json",
+      "sha256": "59872b2e545dd33f5aa68e651c5581b74649a2a81b3a9c2b96d9415e4a6cc089"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-attack-coverage.json",
+      "sha256": "3b7ac489206dc42adb03628d7bea7dc2cc1e30b4b8c043ee49fd750a2a239dbd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-group/deathspitter-candidate-formal-preview.md",
+      "sha256": "95fb7a723c25558878d8c45a9b1bee925ca3208668215698aae909b26ab69a76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-config.json",
+      "sha256": "7c5596c3ac8fea2f3f5d72d09b50af716bc8449f96d3e89139dde12330c743be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-evidence.json",
+      "sha256": "e26375282c863ad44bd738691a8e50927d65ef93b426dd7f3e836bdded5778d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-draft.md",
+      "sha256": "19868eb096cf121de5cd431cbc54b7f96f2019ab8981459d8110b3a36cb65e7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-runtime-formula-review.json",
+      "sha256": "b0d0fb95e824fa7b7eb7c0ddbebd411f8e1076334e3b714beaafac2b1fc85550"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-delta-review.json",
+      "sha256": "ab3cd20cb222eef5f4507dba743a2d87eb8329f096cfb8fcc91d4fbcee2fa28f"
+    }
+  ],
+  "previous_map_objects_unchanged": false,
+  "previous_weapon_ui_label_delta": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-primary-ui-delta-review.json",
+    "sha256": "ab3cd20cb222eef5f4507dba743a2d87eb8329f096cfb8fcc91d4fbcee2fa28f",
+    "mechanisms_unchanged": true
+  },
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-formal-peer-scope.json",
+    "sha256": "20317957bd2881e1276278a372d55be3a979d5ff5ea4935d99be05dca8a211f6",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}

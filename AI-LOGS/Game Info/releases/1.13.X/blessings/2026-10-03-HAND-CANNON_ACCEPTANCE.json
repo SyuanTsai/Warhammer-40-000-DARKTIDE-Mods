@@ -1,0 +1,613 @@
+{
+  "date": "2026-10-06",
+  "blessing": "hand-cannon",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/手銃/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_phosphor_pistol_p1_rending_on_crit",
+    "weapon_trait_bespoke_stubrevolver_p1_rending_on_crit"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 2,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "hand-cannon",
+    "review_type": "formal non-author peer",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-formal-peer-scope.json",
+    "scope_sha256": "a4614c9b30b0a21221fb32afcd4366314299840f35abc885a1b929bbd9121a76",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "250c2d48e8152e2f1dd4a5df5c5e5a89c1c2a8b3797f5f423bbe29de09e4a15a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-agent-config.json": "3a01b6246756193ac89b91d4310386418de47d195ecd12d2b4cb7860201df3f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-agent-draft.md": "f4693620523d05ed834df055e107c56b4274a83f828d2acbcb3828fac1d8a99a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-agent-evidence.json": "634e449769733fd100c453e611a9bc1e0c79c21e28e2ff337caeb1ca73fc73c4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-config.json": "3a01b6246756193ac89b91d4310386418de47d195ecd12d2b4cb7860201df3f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-extension-draft.json": "a65c72f3af53bec527388eb27fbbe029896d49a9e2c75b4a57b6661e1be428e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/association.json": "79663f8e17d973b9eb4b30a7b6c5babed42b706bc20fff7d540c58f2ca1b4b0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/attack_coverage.json": "a0acbacc42add61df461142db314fc298e3d24803eca06d5c8ae25dde1c9c852",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/build_hand_package.py": "6cb603f34080a16020ee171e8c12303d68059cd42ef6b31f2267accde444b1d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/draft.md": "f4693620523d05ed834df055e107c56b4274a83f828d2acbcb3828fac1d8a99a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-actual-preview-receipt-001.json": "117f9014cdb51fc0c067d6124c777139aca5d15bf80d3604dd01a2d12211b132",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-actual-preview-receipt-002.json": "ae69ec56dd54475748fde663aa67fad6cd63670d0f6657d4ec6bfb6fa783405a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-agent-config.json": "3a01b6246756193ac89b91d4310386418de47d195ecd12d2b4cb7860201df3f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-agent-draft.md": "f4693620523d05ed834df055e107c56b4274a83f828d2acbcb3828fac1d8a99a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-agent-evidence.json": "634e449769733fd100c453e611a9bc1e0c79c21e28e2ff337caeb1ca73fc73c4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-copy.json": "7fbb64871567a9c0370976d2eab5d2ce55e6953a447d1ffb1e5029c13420d860",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-selfcheck.json": "181946c5857ad49e110b61e64c20986d17459e62782a41de8774f04cca9d9caa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/extraction_summary.json": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-image.json": "49007e83b95164080669e8447bf7d66ee433cf9ec9f00df1a321cc02937b9b0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-critical-armor-example-consumer-difference-review.json": "9160768fa62200ae5d960007f78c40153e34a16eac879cdb004dc1c6a0ee779a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-own-tier-wrapper-material-delta-review.json": "47c5b6f5e143abb4ae1d8c5612bd2a209a7fff37c37b3c62181f8b44667659cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-traits-review.json": "df76f1d78b27f6c6735a8614186d8590e765b57e3d5f9ec670c99878e93ae02c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-ui-raw-verification.json": "5d9e7ad0ad370910fddb917a55dfd5c04cf867c22f34fa537078616e46e15fe9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-ui-review.json": "c768a28df4ff1fc64a15e0a1221713854b3dd7ad60ac9d22298f85f0b674a2f4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/items-f1e50e33afca75ad.strings": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/rending-shockwave-primary-armor-consumer-review.json": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-image.json": "49007e83b95164080669e8447bf7d66ee433cf9ec9f00df1a321cc02937b9b0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-critical-armor-example-consumer-difference-review.json": "9160768fa62200ae5d960007f78c40153e34a16eac879cdb004dc1c6a0ee779a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-final-content-review.json": "8b0d0da70620bedbb690cbbbe6cc6e22756451b23249c834c8430d2da386b68f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-focused-checks.json": "63c83c31b23b207958e265553e485258bae61277d79dc77cc10034f84da970be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-frozen-source-verification.json": "09851982df5558942b08f51ce623ed5b557aa0ea1f4220654c6dfda5c7d9c5dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-own-tier-wrapper-material-delta-review.json": "47c5b6f5e143abb4ae1d8c5612bd2a209a7fff37c37b3c62181f8b44667659cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-resume-review.json": "ca3708c1e371c67a999a109aa2621eb6f4e09f952e03f46ddc5af7cbd76c1b72",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-traits-review.json": "df76f1d78b27f6c6735a8614186d8590e765b57e3d5f9ec670c99878e93ae02c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-raw-verification.json": "5d9e7ad0ad370910fddb917a55dfd5c04cf867c22f34fa537078616e46e15fe9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-review.json": "c768a28df4ff1fc64a15e0a1221713854b3dd7ad60ac9d22298f85f0b674a2f4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-raw-verification.json": "42f6d9d683d7da552f498c9cc037298f90da65f2d3e2e9000c4e5c9b1346acd6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "48457d6336eb210dc4a17dd1ccc046a10a9e89e7353152735aa7f731d37f4e65",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/DAMAGE_PERCENTAGE_REVIEW.md": "19f8a792a88d72b387b68e78184a27a11511e85dc61451e0ba06fe72dda30a03",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/LOCALIZATION_COMPARISON.md": "f4b03ad73af7e1fe3ef388a0b83324d4b3659ef6f189bb02049ffb2dddf322db",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/README.md": "dcfbff13090d2210d0979b571e0b2ba04312740d3b142148568af02dc7adad04",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/SOURCE_INDEX.md": "e95e5c7139591f2dd7cbb014652d04607c20de6d8855ca6f4c55b80d9775a9f2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/TIER_VALUES.md": "14cecb37142735957cae80e5e2efe05db0f4f97ea292be96c4fce3a21e27a5ef",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/WEAPON_COMPATIBILITY.md": "910295726b4ce2b5215c0dc9a147c8c3013163861a9eddc48233b7586bb09281",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/weapon_trait_bespoke_phosphor_pistol_p1_rending_on_crit.md": "a3b9843f2f0289a957525c2fc8c80dea9e92d4ec14b21c92c7114037c6bfdeb5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/手銃/weapon_trait_bespoke_stubrevolver_p1_rending_on_crit.md": "d3db30b2deb12389b76b24e379e1afddfdc7f07cbf2ae62fab25a8d06fc7d796",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/ranged/README.md": "fb32b813c0949b15f970e80df99a15229bd4525a6626caff61e05a5c139aebdb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/README.md": "faaf5da22946301c70819ddcd97f6b43610d4cf3f02ed069bc0870c471bee444",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "568c5e6fcd4084c7f9e75b51578d0cebad8b13992582810518a5d32d1a89a19c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "ecf05c325dfaa3b5dbd1c7db15acf5e1082bc34c3bbd274ca3e3366c9b274649",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md": "cd82e25844465b2b4bdf349f955721b804ba49ce92e5b6f013f50fdcefa9c526",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/own-association-snapshot.json": "e9b5e6daff363e77f1025c225b348e4ab3330b7fa0c1293d0d88e3231c7dd640",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/actual-preview-002/Referneces/Translation.md": "2f00877ec74ab01ac7bf5b94cf14857fa43db5648722e971dd8e323354735b86",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "a10e20c1317bca638b5e686f7c1347bce14346e8fcdc841439b163997bce21f2",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/DAMAGE_PERCENTAGE_REVIEW.md": "19f8a792a88d72b387b68e78184a27a11511e85dc61451e0ba06fe72dda30a03",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/LOCALIZATION_COMPARISON.md": "f4b03ad73af7e1fe3ef388a0b83324d4b3659ef6f189bb02049ffb2dddf322db",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/README.md": "dcfbff13090d2210d0979b571e0b2ba04312740d3b142148568af02dc7adad04",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/SOURCE_INDEX.md": "e95e5c7139591f2dd7cbb014652d04607c20de6d8855ca6f4c55b80d9775a9f2",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/TIER_VALUES.md": "14cecb37142735957cae80e5e2efe05db0f4f97ea292be96c4fce3a21e27a5ef",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/WEAPON_COMPATIBILITY.md": "910295726b4ce2b5215c0dc9a147c8c3013163861a9eddc48233b7586bb09281",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/weapon_trait_bespoke_phosphor_pistol_p1_rending_on_crit.md": "a3b9843f2f0289a957525c2fc8c80dea9e92d4ec14b21c92c7114037c6bfdeb5",
+      "Game Info/releases/1.13.X/blessings/entries/手銃/weapon_trait_bespoke_stubrevolver_p1_rending_on_crit.md": "d3db30b2deb12389b76b24e379e1afddfdc7f07cbf2ae62fab25a8d06fc7d796",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "fb32b813c0949b15f970e80df99a15229bd4525a6626caff61e05a5c139aebdb",
+      "Game Info/releases/1.13.X/blessings/README.md": "238316e281a17ae135be0ce858eb994184ce5972b1ccb6a031899b285e261f13",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "f727d40455dc94dba46a1ee776b3b08415cbba97b504fbd047574c68f99071ac",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "ecf05c325dfaa3b5dbd1c7db15acf5e1082bc34c3bbd274ca3e3366c9b274649",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md": "cd82e25844465b2b4bdf349f955721b804ba49ce92e5b6f013f50fdcefa9c526",
+      "Referneces/Translation.md": "586d6d4b00f0bc4d94f64da5898cdce0dfc6e798f75a3b3ce2cdf96efec2c56c"
+    },
+    "verified_scope": {
+      "file_count": 74,
+      "missing": [],
+      "mismatches": []
+    },
+    "candidate_preparation": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/hand-cannon-nonauthor-candidate-review.json",
+      "sha256": "3d213766b983ca8a1865f44dd0a7749b0bdbd99f0c46b470833c3283ddf1747c",
+      "formal_peer_accepted_before_this_review": false
+    },
+    "actual_preview": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-actual-preview-receipt-002.json",
+      "sha256": "ae69ec56dd54475748fde663aa67fad6cd63670d0f6657d4ec6bfb6fa783405a",
+      "passed": true,
+      "config_sha256": "3a01b6246756193ac89b91d4310386418de47d195ecd12d2b4cb7860201df3f6",
+      "all_8_own_pages_byte_equal_to_current_formal": true,
+      "own_pages": [
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/DAMAGE_PERCENTAGE_REVIEW.md",
+          "sha256": "19f8a792a88d72b387b68e78184a27a11511e85dc61451e0ba06fe72dda30a03"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/LOCALIZATION_COMPARISON.md",
+          "sha256": "f4b03ad73af7e1fe3ef388a0b83324d4b3659ef6f189bb02049ffb2dddf322db"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/README.md",
+          "sha256": "dcfbff13090d2210d0979b571e0b2ba04312740d3b142148568af02dc7adad04"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/SOURCE_INDEX.md",
+          "sha256": "e95e5c7139591f2dd7cbb014652d04607c20de6d8855ca6f4c55b80d9775a9f2"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/TIER_VALUES.md",
+          "sha256": "14cecb37142735957cae80e5e2efe05db0f4f97ea292be96c4fce3a21e27a5ef"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/WEAPON_COMPATIBILITY.md",
+          "sha256": "910295726b4ce2b5215c0dc9a147c8c3013163861a9eddc48233b7586bb09281"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/weapon_trait_bespoke_phosphor_pistol_p1_rending_on_crit.md",
+          "sha256": "a3b9843f2f0289a957525c2fc8c80dea9e92d4ec14b21c92c7114037c6bfdeb5"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/手銃/weapon_trait_bespoke_stubrevolver_p1_rending_on_crit.md",
+          "sha256": "d3db30b2deb12389b76b24e379e1afddfdc7f07cbf2ae62fab25a8d06fc7d796"
+        }
+      ],
+      "association_snapshot": {
+        "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\own-association-snapshot.json",
+        "sha256": "e9b5e6daff363e77f1025c225b348e4ab3330b7fa0c1293d0d88e3231c7dd640"
+      }
+    },
+    "current_association": {
+      "map_path": "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "entry": {
+        "id": "hand-cannon",
+        "name_zh_tw": "手銃",
+        "name_en": "Hand-Cannon",
+        "name_key": "loc_trait_bespoke_rending_on_crit",
+        "description_key": "loc_trait_bespoke_rending_on_crit_desc",
+        "name_hash": "1391c6e5",
+        "description_hash": "3dea63a1",
+        "page": "entries/手銃/README.md",
+        "kind": "ranged",
+        "icon": "https://github.com/user-attachments/assets/ef8ee5ad-6fcc-4309-9000-f0533a247c20",
+        "effect": "暴擊攻擊時提高撕裂倍率；實際幅度依手槍系別與祝福等級。"
+      },
+      "variant_count": 2,
+      "binding_count": 3,
+      "bindings": [
+        {
+          "weapon_id": "phosphor_pistol_p1",
+          "mark_id": "phosphor_pistol_p1_m1",
+          "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_rending_on_crit",
+          "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/rending_on_crit"
+        },
+        {
+          "weapon_id": "stubrevolver_p1",
+          "mark_id": "stubrevolver_p1_m1",
+          "variant_id": "weapon_trait_bespoke_stubrevolver_p1_rending_on_crit",
+          "trait_item": "content/items/traits/bespoke_stubrevolver_p1/rending_on_crit"
+        },
+        {
+          "weapon_id": "stubrevolver_p1",
+          "mark_id": "stubrevolver_p1_m2",
+          "variant_id": "weapon_trait_bespoke_stubrevolver_p1_rending_on_crit",
+          "trait_item": "content/items/traits/bespoke_stubrevolver_p1/rending_on_crit"
+        }
+      ],
+      "entry_equal_to_candidate_preview": true,
+      "reverse_indices": [
+        {
+          "path": "Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md",
+          "sha256": "cd82e25844465b2b4bdf349f955721b804ba49ce92e5b6f013f50fdcefa9c526",
+          "contains_hand_cannon_links": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md",
+          "sha256": "ecf05c325dfaa3b5dbd1c7db15acf5e1082bc34c3bbd274ca3e3366c9b274649",
+          "contains_hand_cannon_links": true
+        }
+      ]
+    },
+    "reviewed_root_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-final-content-review.json",
+        "sha256": "8b0d0da70620bedbb690cbbbe6cc6e22756451b23249c834c8430d2da386b68f"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-critical-armor-example-consumer-difference-review.json",
+        "sha256": "9160768fa62200ae5d960007f78c40153e34a16eac879cdb004dc1c6a0ee779a"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-own-tier-wrapper-material-delta-review.json",
+        "sha256": "47c5b6f5e143abb4ae1d8c5612bd2a209a7fff37c37b3c62181f8b44667659cd"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-review.json",
+        "sha256": "c768a28df4ff1fc64a15e0a1221713854b3dd7ad60ac9d22298f85f0b674a2f4"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-raw-verification.json",
+        "sha256": "5d9e7ad0ad370910fddb917a55dfd5c04cf867c22f34fa537078616e46e15fe9"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-image.json",
+        "sha256": "49007e83b95164080669e8447bf7d66ee433cf9ec9f00df1a321cc02937b9b0b"
+      }
+    ],
+    "formal_differences": {
+      "gameplay_or_own_page_changes_from_candidate": 0,
+      "root_added_exact_source_ranges": 0,
+      "conclusion": "The eight own formal pages are byte-identical to the passed preview; root added no gameplay/source-range changes. The fixed 74-file scope and current map/reverse relationships are valid."
+    },
+    "content_conclusions": [
+      "All 74 fixed-scope file hashes match. The seven-page blessing content and two implementation pages match the reviewed preview exactly.",
+      "The map entry, two variants and three bindings are the exact Phosphor Blast Pistol Branx Mk XI (M1), Stub Revolver Zarona Mk IIa (M1), and Stub Revolver Agripinaa Mk XIV (M2) inventory intersection; both weapon reverse indexes link back to the correct Hand Cannon pages.",
+      "The two own tier tables show Phosphor +.05/.075/.10/.15 and Stub Revolver +.30/.40/.50/.60 to critical-strike rending. Each actual wrapper clones the held-slot conditional rending-on-critical template; the own same-key tier replaces the fallback rather than adding to it.",
+      "Ordinary hip/ADS hit-scan and each configured pistol-whip/follow-up Sweep route use their native critical result. The Phosphor reload-origin Sweep routes remain subject to their real reload transition. Its backblast and burn ticks are noncritical and are correctly excluded; its separate native ranged target-rending effect is distinguished.",
+      "The M2 example states far range/dropoff, target_index=1/default target, armored, no target-settings override, lerp inputs .5, and critical-hit conditions. A=.6+.15=.75. With no other rending, armor factor 1 and overdamage .25, B=100 before the armor segment gives I r=.30 ->101.25 and IV r=.60 ->108.75 against same-critical baseline75, a 35%/45% increase in this armor segment only, not final HP damage.",
+      "English and Traditional Chinese RAW are paired by the same description hash. The own formatter reconstructs all four tiers for both variants. Omitted attack conditions and armor math are document omissions, not RAW contradictions; no erratum is needed.",
+      "The actual icon 118 path and verified attachment are distinct and match the image receipt; the current shared map entry points to that attachment."
+    ],
+    "review_method": "Reused the already completed candidate content review for unchanged gameplay; verified the exact fixed formal scope, actual candidate-vs-formal page bytes, updated current map/reverse links, and relevant root material receipts."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/ef8ee5ad-6fcc-4309-9000-f0533a247c20",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "hand-cannon",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_118",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_118.png",
+      "attachment": "https://github.com/user-attachments/assets/ef8ee5ad-6fcc-4309-9000-f0533a247c20",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6003610769",
+      "acquired_date": "2026-10-06",
+      "sha256": "4362655b5161856967fd4a58bf0e29521721a1c14c1853ced67a560900ad2f34",
+      "content_type": "image/png",
+      "size": 6530,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "手銃祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected exact public attachment128x128: pale gray diagonal layered native icon, intact square framing; public bytes identical to source item.icon118 PNG hash."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 14,
+      "rows": 502,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 91,
+      "source_files": 39,
+      "bindings": 949,
+      "variants": 488,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 39,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1195,
+      "remote_references": 477,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 38,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author-preview-cwd-prefix-fix-full-scan.json",
+        "sha256": "07c093e11582a73691bc12a93d5c6fa459d47a82430ff14925dc085bea1a0e02",
+        "trigger": "author-preview-cwd-prefix-fix"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 23,
+    "not_started_name_groups": 23,
+    "partial_name_groups": 0,
+    "remaining_variants": 117,
+    "remaining_bindings": 236,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "41abb18eb4a0cd95d442e8f63429b9657604df4a7ee560087a757ab5e5610d7a"
+  },
+  "previous_local_commit": "73c73ab9766b5c3ee3acb15d6c1c3b505c974422",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in the actual inventory intersection; 2 implementation IDs map to 3 actual Mark bindings"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-critical-armor-example-consumer-difference-review.json",
+      "sha256": "9160768fa62200ae5d960007f78c40153e34a16eac879cdb004dc1c6a0ee779a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-final-content-review.json",
+      "sha256": "8b0d0da70620bedbb690cbbbe6cc6e22756451b23249c834c8430d2da386b68f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-focused-checks.json",
+      "sha256": "63c83c31b23b207958e265553e485258bae61277d79dc77cc10034f84da970be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-frozen-source-verification.json",
+      "sha256": "09851982df5558942b08f51ce623ed5b557aa0ea1f4220654c6dfda5c7d9c5dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "47c5b6f5e143abb4ae1d8c5612bd2a209a7fff37c37b3c62181f8b44667659cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-resume-review.json",
+      "sha256": "ca3708c1e371c67a999a109aa2621eb6f4e09f952e03f46ddc5af7cbd76c1b72"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-traits-review.json",
+      "sha256": "df76f1d78b27f6c6735a8614186d8590e765b57e3d5f9ec670c99878e93ae02c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-raw-verification.json",
+      "sha256": "5d9e7ad0ad370910fddb917a55dfd5c04cf867c22f34fa537078616e46e15fe9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-review.json",
+      "sha256": "c768a28df4ff1fc64a15e0a1221713854b3dd7ad60ac9d22298f85f0b674a2f4"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-config.json",
+    "sha256": "3a01b6246756193ac89b91d4310386418de47d195ecd12d2b4cb7860201df3f6"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "250c2d48e8152e2f1dd4a5df5c5e5a89c1c2a8b3797f5f423bbe29de09e4a15a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/build_hand_package.py",
+      "sha256": "6cb603f34080a16020ee171e8c12303d68059cd42ef6b31f2267accde444b1d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-actual-preview-receipt-002.json",
+      "sha256": "ae69ec56dd54475748fde663aa67fad6cd63670d0f6657d4ec6bfb6fa783405a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-copy.json",
+      "sha256": "7fbb64871567a9c0370976d2eab5d2ce55e6953a447d1ffb1e5029c13420d860"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/extraction_summary.json",
+      "sha256": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-image.json",
+      "sha256": "49007e83b95164080669e8447bf7d66ee433cf9ec9f00df1a321cc02937b9b0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-critical-armor-example-consumer-difference-review.json",
+      "sha256": "9160768fa62200ae5d960007f78c40153e34a16eac879cdb004dc1c6a0ee779a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "47c5b6f5e143abb4ae1d8c5612bd2a209a7fff37c37b3c62181f8b44667659cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-traits-review.json",
+      "sha256": "df76f1d78b27f6c6735a8614186d8590e765b57e3d5f9ec670c99878e93ae02c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-ui-raw-verification.json",
+      "sha256": "5d9e7ad0ad370910fddb917a55dfd5c04cf867c22f34fa537078616e46e15fe9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/hand-cannon-primary-ui-review.json",
+      "sha256": "c768a28df4ff1fc64a15e0a1221713854b3dd7ad60ac9d22298f85f0b674a2f4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/items-f1e50e33afca75ad.strings",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/rending-shockwave-primary-armor-consumer-review.json",
+      "sha256": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/inputs/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "faaf5da22946301c70819ddcd97f6b43610d4cf3f02ed069bc0870c471bee444"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "568c5e6fcd4084c7f9e75b51578d0cebad8b13992582810518a5d32d1a89a19c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "48457d6336eb210dc4a17dd1ccc046a10a9e89e7353152735aa7f731d37f4e65"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "19f8a792a88d72b387b68e78184a27a11511e85dc61451e0ba06fe72dda30a03"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\LOCALIZATION_COMPARISON.md",
+      "sha256": "f4b03ad73af7e1fe3ef388a0b83324d4b3659ef6f189bb02049ffb2dddf322db"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\README.md",
+      "sha256": "dcfbff13090d2210d0979b571e0b2ba04312740d3b142148568af02dc7adad04"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\SOURCE_INDEX.md",
+      "sha256": "e95e5c7139591f2dd7cbb014652d04607c20de6d8855ca6f4c55b80d9775a9f2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\TIER_VALUES.md",
+      "sha256": "14cecb37142735957cae80e5e2efe05db0f4f97ea292be96c4fce3a21e27a5ef"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\WEAPON_COMPATIBILITY.md",
+      "sha256": "910295726b4ce2b5215c0dc9a147c8c3013163861a9eddc48233b7586bb09281"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\weapon_trait_bespoke_phosphor_pistol_p1_rending_on_crit.md",
+      "sha256": "a3b9843f2f0289a957525c2fc8c80dea9e92d4ec14b21c92c7114037c6bfdeb5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\手銃\\weapon_trait_bespoke_stubrevolver_p1_rending_on_crit.md",
+      "sha256": "d3db30b2deb12389b76b24e379e1afddfdc7f07cbf2ae62fab25a8d06fc7d796"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "fb32b813c0949b15f970e80df99a15229bd4525a6626caff61e05a5c139aebdb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\快拔左輪手槍\\README.md",
+      "sha256": "ecf05c325dfaa3b5dbd1c7db15acf5e1082bc34c3bbd274ca3e3366c9b274649"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\磷光爆破手槍\\README.md",
+      "sha256": "cd82e25844465b2b4bdf349f955721b804ba49ce92e5b6f013f50fdcefa9c526"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\Referneces\\Translation.md",
+      "sha256": "2f00877ec74ab01ac7bf5b94cf14857fa43db5648722e971dd8e323354735b86"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-raw-verification.json",
+      "sha256": "42f6d9d683d7da552f498c9cc037298f90da65f2d3e2e9000c4e5c9b1346acd6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hand-cannon-group\\actual-preview-002\\own-association-snapshot.json",
+      "sha256": "e9b5e6daff363e77f1025c225b348e4ab3330b7fa0c1293d0d88e3231c7dd640"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/association.json",
+      "sha256": "79663f8e17d973b9eb4b30a7b6c5babed42b706bc20fff7d540c58f2ca1b4b0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/attack_coverage.json",
+      "sha256": "a0acbacc42add61df461142db314fc298e3d24803eca06d5c8ae25dde1c9c852"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/draft.md",
+      "sha256": "f4693620523d05ed834df055e107c56b4274a83f828d2acbcb3828fac1d8a99a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-actual-preview-receipt-001.json",
+      "sha256": "117f9014cdb51fc0c067d6124c777139aca5d15bf80d3604dd01a2d12211b132"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-agent-config.json",
+      "sha256": "3a01b6246756193ac89b91d4310386418de47d195ecd12d2b4cb7860201df3f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-agent-draft.md",
+      "sha256": "f4693620523d05ed834df055e107c56b4274a83f828d2acbcb3828fac1d8a99a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-agent-evidence.json",
+      "sha256": "634e449769733fd100c453e611a9bc1e0c79c21e28e2ff337caeb1ca73fc73c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-group/hand-cannon-selfcheck.json",
+      "sha256": "181946c5857ad49e110b61e64c20986d17459e62782a41de8774f04cca9d9caa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-agent-config.json",
+      "sha256": "3a01b6246756193ac89b91d4310386418de47d195ecd12d2b4cb7860201df3f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-agent-evidence.json",
+      "sha256": "634e449769733fd100c453e611a9bc1e0c79c21e28e2ff337caeb1ca73fc73c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-agent-draft.md",
+      "sha256": "f4693620523d05ed834df055e107c56b4274a83f828d2acbcb3828fac1d8a99a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-critical-armor-example-consumer-difference-review.json",
+      "sha256": "9160768fa62200ae5d960007f78c40153e34a16eac879cdb004dc1c6a0ee779a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-final-content-review.json",
+      "sha256": "8b0d0da70620bedbb690cbbbe6cc6e22756451b23249c834c8430d2da386b68f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-frozen-source-verification.json",
+      "sha256": "09851982df5558942b08f51ce623ed5b557aa0ea1f4220654c6dfda5c7d9c5dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "47c5b6f5e143abb4ae1d8c5612bd2a209a7fff37c37b3c62181f8b44667659cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-traits-review.json",
+      "sha256": "df76f1d78b27f6c6735a8614186d8590e765b57e3d5f9ec670c99878e93ae02c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-raw-verification.json",
+      "sha256": "5d9e7ad0ad370910fddb917a55dfd5c04cf867c22f34fa537078616e46e15fe9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-primary-ui-review.json",
+      "sha256": "c768a28df4ff1fc64a15e0a1221713854b3dd7ad60ac9d22298f85f0b674a2f4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hand-cannon-formal-peer-scope.json",
+    "sha256": "a4614c9b30b0a21221fb32afcd4366314299840f35abc885a1b929bbd9121a76",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

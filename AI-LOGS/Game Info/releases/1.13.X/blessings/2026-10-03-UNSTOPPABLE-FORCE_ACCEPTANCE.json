@@ -1,0 +1,483 @@
+{
+  "date": "2026-10-05",
+  "blessing": "unstoppable-force",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/勢不可擋/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_crowbar_p1_pass_past_armor_on_heavy_attack",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack",
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_pass_past_armor_on_heavy_attack"
+  ],
+  "added_binding_count": 5,
+  "total_variants": 3,
+  "total_bindings": 5,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer_review": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-formal-peer-scope.json",
+    "scope_sha256": "eeea982e75bc44914d3fab7fb1c067d0a6c2f52c5d55c6e1526ab7db460f4a03",
+    "scope_file_count": 74,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-agent-config.json": "942a6d0d10e551091664c3cb5154370fee523179716a4b8b11808f6d25a50e91",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-agent-draft.md": "0374abcbfd0556736dfa3dd4887882e375049cd2b33e3bff0b5b63aa39d03866",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-agent-evidence.json": "bc3617f17f25b41d4f9ec383b21ef25047b48ad2fe3c1a1958911ef350285e94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-config.json": "942a6d0d10e551091664c3cb5154370fee523179716a4b8b11808f6d25a50e91",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-extension-draft.json": "f6a08fbe378d97cd0018b45716751604ee0d1e4222603eaed94a3f2578fbab84",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/action-route-scan.json": "1b81493cc5962e01ec0084ea26b3ace0946bbd3d9ddc446e92d82d9ea7376643",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/own-association-snapshot.json": "64816b73f2a8a94522ee64760429f32462f6b359ec5e4719dcb84a4f1215c90b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/examples.md": "788eb649f91ece9a4a746bd7556636290743f37e09fa9f626965347f17868b1a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/math.md": "bf995b3339509f55313d68d765a8ed4d20a3ecf6994843d75ccdbd57a56e0987",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/mechanism.md": "537ead209dfd116b04fa5894569863b45196ff9d8524e1402f7a2ec01251d5c3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/player.md": "367939113cb235b72fc589572146e5d1fde87e06d1f3a078183f42fcb8b6173d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/range_specs.json": "3207897e12ed2b9e2ee5b249a776849c7fd074664458cfbd6b3348e3004bba42",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/reconstruction.md": "e08b6044c34859890ba234985c9bcbe2b1066e6eb577e435e7a331f54419e812",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/review.md": "184f1e277a6f79e48b801814dc11499e11902337f8588d38dbd35bcf1235a135",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/tier_table.md": "985398321e9fcfc5bc42f1eaa6db6786c123423d3d9a1b03c74a43b17e430a48",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-001.json": "bb209b983526d95b6cb9c650d1087616153fcc1f7e832abd287274fc9d6c985b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-002.json": "c5927d6ec54b44b7a25396a41f0908f32661cbb75319756d37457181b4f68c1b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-003.json": "27258eecfee0dd12651530975050bec49427e7a74d669fc4af0dab69246a72d2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-004.json": "31f44833d80468dfe5ece39c15e519a3efe8b7dbd70e397ef2b8902d5424f90b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-config.json": "942a6d0d10e551091664c3cb5154370fee523179716a4b8b11808f6d25a50e91",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-coverage.json": "d6220555f52c3b7c5e4cae42e8e1a4118ea96002073bcf38fcbc873813079505",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-draft.md": "0374abcbfd0556736dfa3dd4887882e375049cd2b33e3bff0b5b63aa39d03866",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-evidence.json": "bc3617f17f25b41d4f9ec383b21ef25047b48ad2fe3c1a1958911ef350285e94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-selfcheck.json": "d598423158fc2a969808482b2991227613ea5473e4f919818c7865aaea8392df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-image.json": "370ba2fe96b6c67f4fd7aa444c0f467b61a6a1a9687e658dc61f7b2a087059af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-cancellation-delta-review.json": "a0e7dcf957f766cfd3c885522c406bc3541347afa1ea31cdd6ce617ce614a18e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-final-player-math-raw-delta-review.json": "a012660a87865817bea9b7e8655d3e91036f30583d05dc095bffd7511a6b6905",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-focused-checks.json": "fb5a9bfc49e77025d0028e4b69972876c7211668bcd9f4919d2fb8f5d479ac87",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-formal-rule-column-delta-review.json": "5c2777c6570070ab5116d5de09bf5a20ab78675e38eb5992976f564b7d9dcd40",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-frozen-source-verification.json": "28521f5cf6261dd2ea60976693ab06a75cedb6c16ce571d34a7c8e1395c6f59c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-own-tier-wrapper-runtime-delta-review.json": "aa02702bb7be3a0c595b9c8912add423b37dc50e552851b3e436f6e96f8777c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-resume-review.json": "f21a59503e6ec965d4de52f5ee29227fe25ec923605db50bf96d926940e18fca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-traits-review.json": "eb1cc5839ee45d0fc7f3fa2e932c4367fd67f6d7690ce200bf27a55a1f370999",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-ui-raw-verification.json": "3d3e1e516d45c5f2f124238c68134698e24d70c221e75cfd807677af5591c532",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-ui-review.json": "71b95d9e6deb69f5e622f6ee2b2993f71dfb6175e2a993ccc852dbec7d668cae",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-raw-verification.json": "83835b4f09f901290cfb711830fd07803cfeaa3abf92abd52cec6e3eda17ac2b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "39a6a642829d61f9924076f7b20e2dec7484f7e96f63fedbae4312b6e9e2ab9d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/DAMAGE_PERCENTAGE_REVIEW.md": "7d8c54a28963b9e18d4dfc0814b8f6c0e9f0d0e3505741406e7f74ea6106e781",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/LOCALIZATION_COMPARISON.md": "34636e87209737bf1dcf8ec4143137a110a3c1e94978fd5c1d63fe9135c77e99",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/README.md": "53749c114a3c524609edd047eb5009d20ad198bff1070046347bcf03492f6b87",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/SOURCE_INDEX.md": "8bf5e2b7660cd0467af468560a15f685e047293b3806875227a11ce414593ef7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/TIER_VALUES.md": "32e87006295684e63e935bf221cf2199ce100e6fa9c6dcf2cd4e03280fc89bc5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/WEAPON_COMPATIBILITY.md": "12201322b259be7995d3e7604a86dd3e7080b2605211fb8b16f79ce6e1b63f55",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/weapon_trait_bespoke_crowbar_p1_pass_past_armor_on_heavy_attack.md": "5c18e0c65201f7ba0bb372956c0991909a9c402d0de43f2141fba86556d4432b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack.md": "502af737424602ab2b87311f65c62830583b586fdea30ac98df5b3bbb7c206fa",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/勢不可擋/weapon_trait_bespoke_ogryn_hammer_2h_p1_pass_past_armor_on_heavy_attack.md": "ad641976144e58f8e75da3987931efdfc58f4616bb6ab6e484eddb732a0b373a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/own-association-snapshot.json": "64816b73f2a8a94522ee64760429f32462f6b359ec5e4719dcb84a4f1215c90b",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "39a6a642829d61f9924076f7b20e2dec7484f7e96f63fedbae4312b6e9e2ab9d",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/DAMAGE_PERCENTAGE_REVIEW.md": "7d8c54a28963b9e18d4dfc0814b8f6c0e9f0d0e3505741406e7f74ea6106e781",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/LOCALIZATION_COMPARISON.md": "34636e87209737bf1dcf8ec4143137a110a3c1e94978fd5c1d63fe9135c77e99",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/README.md": "53749c114a3c524609edd047eb5009d20ad198bff1070046347bcf03492f6b87",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/SOURCE_INDEX.md": "8bf5e2b7660cd0467af468560a15f685e047293b3806875227a11ce414593ef7",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/TIER_VALUES.md": "32e87006295684e63e935bf221cf2199ce100e6fa9c6dcf2cd4e03280fc89bc5",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/WEAPON_COMPATIBILITY.md": "12201322b259be7995d3e7604a86dd3e7080b2605211fb8b16f79ce6e1b63f55",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/weapon_trait_bespoke_crowbar_p1_pass_past_armor_on_heavy_attack.md": "5c18e0c65201f7ba0bb372956c0991909a9c402d0de43f2141fba86556d4432b",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack.md": "502af737424602ab2b87311f65c62830583b586fdea30ac98df5b3bbb7c206fa",
+      "Game Info/releases/1.13.X/blessings/entries/勢不可擋/weapon_trait_bespoke_ogryn_hammer_2h_p1_pass_past_armor_on_heavy_attack.md": "ad641976144e58f8e75da3987931efdfc58f4616bb6ab6e484eddb732a0b373a",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "ca6eca198779bc6757a6ff18847fd21742643d018283b63d91eaf5b6bdc88a9a",
+      "Game Info/releases/1.13.X/blessings/README.md": "1324a43c03c2f4c787eb0863f39c65a568f00e6bd508017f5ffbc2c0c8e909a3",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "eea1fc7bb181602393a7e782ecb937a91da207999e0ad8badb6ba27026acf82f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "2e01c7874eaea2369bc82faa9d97922923f1b596eb601abe4e87bf8e1e46d865",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "84161376f583fc5df291d40cb48e1e35d980329e65600136170cb1e227f3b5ac",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "1c93edc4e61dbe12fce2f8a7158baddc0baccf39b748d9a2478c74f91318e033",
+      "Referneces/Translation.md": "e5d18e498f65ab4b8c0535247676320e4ffcfe18d3b48869702a7bbf5ba04717"
+    },
+    "reviewed_findings": [
+      "All 74 fixed-scope file hashes match the current files. The earlier rejected revision-001 receipt is preserved as a separate file.",
+      "The five formal comparison rows now follow the declared columns: rule; paired RAW description/resource identity; native behavior with exact source path, method, and line range; comparison result; reason.",
+      "Each row pairs the exact English and zh-TW RAW wording or explicitly marks the RAW omission; implementation cells contain the native code references and concrete ranges.",
+      "The five formal rows exactly match the canonical and extension-draft rules. The formatting row cites the percentage/prefix formatter and all three actual trait definitions; the armor-abort and auto-complete rows correctly classify additional implementation details as RAW omissions.",
+      "Across files shared with revision-001, changes are confined to the corrected formal comparison and the corresponding canonical/draft/evidence/resume/selfcheck/focused-check records. Other formal pages and the global association map/reverse links remain byte-identical."
+    ],
+    "delta_review": {
+      "formal_file": "Game Info/releases/1.13.X/blessings/entries/勢不可擋/LOCALIZATION_COMPARISON.md",
+      "rows_checked": 5,
+      "column_alignment": "pass",
+      "raw_pairing": "pass",
+      "source_path_method_range": "pass",
+      "result_and_reason_columns": "pass",
+      "canonical_draft_formal_equal": true,
+      "prior_rejection_preserved": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/unstoppable-force-formal-nonauthor-review-revision-001.json",
+      "prior_rejection_sha256": "9dc122013da4979d9936f4d90ffed389303304cee667cc926b3efa4c58aa2529"
+    },
+    "non_author_peer": true
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "unstoppable-force",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_094",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_094.png",
+      "attachment": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5994205285",
+      "acquired_date": "2026-10-05",
+      "sha256": "4b2b67448cd368f489693d3273f96de3263978b97138d1321e3558777cb1d768",
+      "content_type": "image/png",
+      "size": 4125,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "勢不可擋祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root visually inspected exact publicly downloaded original128x128 grayscale icon with block/irregular contour; accepted for actual item.icon identification."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 16,
+      "tables": 16,
+      "rows": 424,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 73,
+      "source_files": 30,
+      "bindings": 860,
+      "variants": 432,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 30,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 1035,
+      "remote_references": 424,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 30,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/primary-actual-buff-key-wrapper-delta-full-scan.json",
+        "sha256": "6e8c33592a006d981910dc9ef571d15e2bcf486a3b47b0fba2fe9c2d07e4f526",
+        "trigger": "primary-actual-buff-key-wrapper-delta"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 46,
+    "not_started_name_groups": 46,
+    "partial_name_groups": 0,
+    "remaining_variants": 173,
+    "remaining_bindings": 325,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "98d36aacc992924a1e6301e4dd01126595b8ec37e350f135206f858ab3223485"
+  },
+  "previous_local_commit": "61100f7fd3ae74853f15fb22eb1e4830df3170a0",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "exact name-key UI binding intersection limited to the three reviewed actual variants and five bindings."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-cancellation-delta-review.json",
+      "sha256": "a0e7dcf957f766cfd3c885522c406bc3541347afa1ea31cdd6ce617ce614a18e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-final-player-math-raw-delta-review.json",
+      "sha256": "a012660a87865817bea9b7e8655d3e91036f30583d05dc095bffd7511a6b6905"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-focused-checks.json",
+      "sha256": "fb5a9bfc49e77025d0028e4b69972876c7211668bcd9f4919d2fb8f5d479ac87"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-formal-rule-column-delta-review.json",
+      "sha256": "5c2777c6570070ab5116d5de09bf5a20ab78675e38eb5992976f564b7d9dcd40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-frozen-source-verification.json",
+      "sha256": "28521f5cf6261dd2ea60976693ab06a75cedb6c16ce571d34a7c8e1395c6f59c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-own-tier-wrapper-runtime-delta-review.json",
+      "sha256": "aa02702bb7be3a0c595b9c8912add423b37dc50e552851b3e436f6e96f8777c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-resume-review.json",
+      "sha256": "f21a59503e6ec965d4de52f5ee29227fe25ec923605db50bf96d926940e18fca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-traits-review.json",
+      "sha256": "eb1cc5839ee45d0fc7f3fa2e932c4367fd67f6d7690ce200bf27a55a1f370999"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-ui-raw-verification.json",
+      "sha256": "3d3e1e516d45c5f2f124238c68134698e24d70c221e75cfd807677af5591c532"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-ui-review.json",
+      "sha256": "71b95d9e6deb69f5e622f6ee2b2993f71dfb6175e2a993ccc852dbec7d668cae"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-config.json",
+    "sha256": "942a6d0d10e551091664c3cb5154370fee523179716a4b8b11808f6d25a50e91"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-traits-review.json",
+      "sha256": "eb1cc5839ee45d0fc7f3fa2e932c4367fd67f6d7690ce200bf27a55a1f370999"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-ui-review.json",
+      "sha256": "71b95d9e6deb69f5e622f6ee2b2993f71dfb6175e2a993ccc852dbec7d668cae"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-ui-raw-verification.json",
+      "sha256": "3d3e1e516d45c5f2f124238c68134698e24d70c221e75cfd807677af5591c532"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-own-tier-wrapper-runtime-delta-review.json",
+      "sha256": "aa02702bb7be3a0c595b9c8912add423b37dc50e552851b3e436f6e96f8777c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-cancellation-delta-review.json",
+      "sha256": "a0e7dcf957f766cfd3c885522c406bc3541347afa1ea31cdd6ce617ce614a18e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-image.json",
+      "sha256": "370ba2fe96b6c67f4fd7aa444c0f467b61a6a1a9687e658dc61f7b2a087059af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/action-route-scan.json",
+      "sha256": "1b81493cc5962e01ec0084ea26b3ace0946bbd3d9ddc446e92d82d9ea7376643"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-004.json",
+      "sha256": "31f44833d80468dfe5ece39c15e519a3efe8b7dbd70e397ef2b8902d5424f90b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/actual-preview-004/own-association-snapshot.json",
+      "sha256": "64816b73f2a8a94522ee64760429f32462f6b359ec5e4719dcb84a4f1215c90b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-selfcheck.json",
+      "sha256": "d598423158fc2a969808482b2991227613ea5473e4f919818c7865aaea8392df"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "39a6a642829d61f9924076f7b20e2dec7484f7e96f63fedbae4312b6e9e2ab9d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "7d8c54a28963b9e18d4dfc0814b8f6c0e9f0d0e3505741406e7f74ea6106e781"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\LOCALIZATION_COMPARISON.md",
+      "sha256": "34636e87209737bf1dcf8ec4143137a110a3c1e94978fd5c1d63fe9135c77e99"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\README.md",
+      "sha256": "53749c114a3c524609edd047eb5009d20ad198bff1070046347bcf03492f6b87"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\SOURCE_INDEX.md",
+      "sha256": "8bf5e2b7660cd0467af468560a15f685e047293b3806875227a11ce414593ef7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\TIER_VALUES.md",
+      "sha256": "32e87006295684e63e935bf221cf2199ce100e6fa9c6dcf2cd4e03280fc89bc5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\WEAPON_COMPATIBILITY.md",
+      "sha256": "12201322b259be7995d3e7604a86dd3e7080b2605211fb8b16f79ce6e1b63f55"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\weapon_trait_bespoke_crowbar_p1_pass_past_armor_on_heavy_attack.md",
+      "sha256": "5c18e0c65201f7ba0bb372956c0991909a9c402d0de43f2141fba86556d4432b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack.md",
+      "sha256": "502af737424602ab2b87311f65c62830583b586fdea30ac98df5b3bbb7c206fa"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\勢不可擋\\weapon_trait_bespoke_ogryn_hammer_2h_p1_pass_past_armor_on_heavy_attack.md",
+      "sha256": "ad641976144e58f8e75da3987931efdfc58f4616bb6ab6e484eddb732a0b373a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-raw-verification.json",
+      "sha256": "83835b4f09f901290cfb711830fd07803cfeaa3abf92abd52cec6e3eda17ac2b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstoppable-force-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "64816b73f2a8a94522ee64760429f32462f6b359ec5e4719dcb84a4f1215c90b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/examples.md",
+      "sha256": "788eb649f91ece9a4a746bd7556636290743f37e09fa9f626965347f17868b1a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/math.md",
+      "sha256": "bf995b3339509f55313d68d765a8ed4d20a3ecf6994843d75ccdbd57a56e0987"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/mechanism.md",
+      "sha256": "537ead209dfd116b04fa5894569863b45196ff9d8524e1402f7a2ec01251d5c3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/player.md",
+      "sha256": "367939113cb235b72fc589572146e5d1fde87e06d1f3a078183f42fcb8b6173d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/range_specs.json",
+      "sha256": "3207897e12ed2b9e2ee5b249a776849c7fd074664458cfbd6b3348e3004bba42"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/reconstruction.md",
+      "sha256": "e08b6044c34859890ba234985c9bcbe2b1066e6eb577e435e7a331f54419e812"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/review.md",
+      "sha256": "184f1e277a6f79e48b801814dc11499e11902337f8588d38dbd35bcf1235a135"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/tier_table.md",
+      "sha256": "985398321e9fcfc5bc42f1eaa6db6786c123423d3d9a1b03c74a43b17e430a48"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-001.json",
+      "sha256": "bb209b983526d95b6cb9c650d1087616153fcc1f7e832abd287274fc9d6c985b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-002.json",
+      "sha256": "c5927d6ec54b44b7a25396a41f0908f32661cbb75319756d37457181b4f68c1b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-actual-preview-receipt-003.json",
+      "sha256": "27258eecfee0dd12651530975050bec49427e7a74d669fc4af0dab69246a72d2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-config.json",
+      "sha256": "942a6d0d10e551091664c3cb5154370fee523179716a4b8b11808f6d25a50e91"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-coverage.json",
+      "sha256": "d6220555f52c3b7c5e4cae42e8e1a4118ea96002073bcf38fcbc873813079505"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-draft.md",
+      "sha256": "0374abcbfd0556736dfa3dd4887882e375049cd2b33e3bff0b5b63aa39d03866"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-group/unstoppable-force-agent-evidence.json",
+      "sha256": "bc3617f17f25b41d4f9ec383b21ef25047b48ad2fe3c1a1958911ef350285e94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-agent-config.json",
+      "sha256": "942a6d0d10e551091664c3cb5154370fee523179716a4b8b11808f6d25a50e91"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-agent-evidence.json",
+      "sha256": "bc3617f17f25b41d4f9ec383b21ef25047b48ad2fe3c1a1958911ef350285e94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-agent-draft.md",
+      "sha256": "0374abcbfd0556736dfa3dd4887882e375049cd2b33e3bff0b5b63aa39d03866"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-final-player-math-raw-delta-review.json",
+      "sha256": "a012660a87865817bea9b7e8655d3e91036f30583d05dc095bffd7511a6b6905"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-formal-rule-column-delta-review.json",
+      "sha256": "5c2777c6570070ab5116d5de09bf5a20ab78675e38eb5992976f564b7d9dcd40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-primary-frozen-source-verification.json",
+      "sha256": "28521f5cf6261dd2ea60976693ab06a75cedb6c16ce571d34a7c8e1395c6f59c"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstoppable-force-formal-peer-scope.json",
+    "sha256": "eeea982e75bc44914d3fab7fb1c067d0a6c2f52c5d55c6e1526ab7db460f4a03",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

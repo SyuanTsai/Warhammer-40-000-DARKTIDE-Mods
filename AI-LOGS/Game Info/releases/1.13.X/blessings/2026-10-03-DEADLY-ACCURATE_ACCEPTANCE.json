@@ -1,0 +1,434 @@
+{
+  "date": "2026-10-04",
+  "blessing": "deadly-accurate",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/致命精準/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+    "weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse",
+    "weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse",
+    "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse"
+  ],
+  "added_binding_count": 12,
+  "total_variants": 5,
+  "total_bindings": 12,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Focused peer review of the 11 Deadly Accurate formal entry pages, five reverse weapon READMEs, the current map/config/extension draft, and the primary RAW/UI/tier/formula/resume/image receipts. Existing full source-range and generator validations were not repeated.",
+    "counts": {
+      "formal_entry_pages": 11,
+      "variants": 5,
+      "weapon_bindings": 12,
+      "reverse_weapon_pages": 5,
+      "hashed_files": 31
+    },
+    "findings": [
+      "The five trait tiers and wrappers agree across the final pages, config and map: four weapon families use 70/80/90/100%, Galvanic Rifle uses 30/40/50/60%; each tier value replaces the wrapper conditional .5 fallback. The generic consumer requires critical AND weakspot and adds one shared finesse-extra component, not whole-hit damage.",
+      "All displayed arithmetic is correct under the stated assumptions: B=100,F=50,c=0,h=1 gives 150→200, +50 and 33.33%; B=100,F=100,c=.25,h=1 gives 225→325, +100 and 44.44%; Galvanic h=.6 gives 150→180, +30 and 20%.",
+      "The map has exactly five variants and twelve bindings under kind ranged. Its weapon IDs, trait IDs, marks, tier values, exact UI-derived names, config and five reverse README rows agree. UI names are reconstructed from family/pattern/mark loc IDs and metadata/import/ukeys/append evidence; legacy display_name is not used.",
+      "The final coverage distinguishes direct shots from weapon-specific actions: Autogun bash variants and Bolt Pistol melee and Galvanic bash can use the shared consumer when both hit flags qualify; Lasgun and Heavy Stubber special actions are flashlight toggles; the Galvanic beam is visual-only. Bolt Pistol secondary armor and hitmass-consumed explosions dispatch with is_critical_strike=false, including the kill/stop branch, and cannot receive this bonus.",
+      "The held-slot wrapper is passive: no first-hit activation, stack, proc timer or fixed duration is claimed; switching away disables the held condition and switching back restores it, without claiming same-frame timing.",
+      "RAW trait keys and English/zh-TW text share the recorded resource hash. The localization page separates literal RAW from formatter-based static reconstruction and reports the weapon-specific values without presenting reconstruction as an in-game screenshot. The concise map effect is consistent with the detailed eligibility explanation.",
+      "The image receipt verifies icon ID 050/path separately from its attachment URL, matching hash, 128×128 dimensions and display verification. The config and extension draft agree on all config fields; the draft-only derived tier_table matches config.tiers. Required tuple/string/kind shapes pass.",
+      "The parent-recorded focused link/GFM and generator checks pass; this focused peer review found no conflicting markup or unsynchronized reference."
+    ],
+    "focused_source_evidence": [
+      {
+        "path": "scripts/utilities/action/ranged_action.lua",
+        "start_line": 53,
+        "end_line": 139,
+        "content_sha256": "7c4831e1cf6d56e84d16f3e44850da49819babaec905e4faa0f84010eeef4021",
+        "conclusion": "Armor and hitmass-consumed secondary explosion helpers dispatch with is_critical_strike=false; hitmass branch distinguishes kill/stop after depletion and arming-distance checks."
+      },
+      {
+        "path": "scripts/utilities/attack/hit_scan.lua",
+        "start_line": 226,
+        "end_line": 248,
+        "content_sha256": "e4d7529f35363314a8c8ee9c632c80c63855dcf138686238825158396c1f640b",
+        "conclusion": "The direct hit result dispatches both armor and hitmass-consumed explosion branches for qualifying character targets."
+      }
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/DAMAGE_PERCENTAGE_REVIEW.md": "2f5553b61bd89c9c8bb356cfd2d18430046eb49d6a763fdc9f1d4b3a9a204d19",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/LOCALIZATION_COMPARISON.md": "f476db864d81260ef77894875ef1f6c9cd766fa35bcae36a2ad0190fe26c40ca",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/README.md": "d1fa191bb919d754fd93866692edc3f62fde5af8a9bc02a714ee0906340dae74",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/SOURCE_INDEX.md": "eb12974c21449b9ecbd300184d697bd58348f2ed391ae9f0c996960929534396",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/TIER_VALUES.md": "bc190682053c7454f590ac3d847f10dd82b5cfae0b381c412a42c73a24cea48b",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/WEAPON_COMPATIBILITY.md": "2132c0eb9c0bb392bebf9b5b6393b85bbd6c56e54274193dc9d89e608770a8b2",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse.md": "41364ae93565d8dfe7c13da55cdd96d98c927a9987887ae6d1049aaaef7421ec",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse.md": "ff307ebee8e7776e3d6ff2d73af1fd261f6a7693893b04e19cefd097aa7e74b0",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse.md": "54e6c7fee06c18a6862cf7f108d1d6d518db666c50334f05530e48d61455a94a",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse.md": "e82b4fd6d930f76f43d6b0441f50d8ff3370c37cd7d778c7f128e823104f14b1",
+      "Game Info/releases/1.13.X/blessings/entries/致命精準/weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse.md": "4017047f2242c7c12068d601ea242778c73a248c2ba54c9a1666f7f553c215df",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "fee7cdf00e15b11c0ba9e51edfe4c9ef7648663ac5a7e8adc8dd84f589a7ee25",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/爆彈手槍/README.md": "41b5054b7e13775789c13a5d64941f1870f7bb64c6bed83750b5f1f6100c7e65",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "305677c951123d83c8dd8972d20f4772991877417ff58629c5c35b8a2ec770f8",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "de2c531c3b265bc207ce500d2cab0056a6e46a8072614d68912535509f4b302f",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "6c0d3ad341f76e6836e069566c2b50cb26b581a3cb822b5d459029c2937ea710",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "4e140770aeb2ff24130ac7482b238a478f48430247d8402a9c879e8c2e3e1ce3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-config.json": "104a51e543c517ec74d7159fc142c306bb64aa96510743db44fcf7f7cfb3e9c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-extension-draft.json": "3a17b08c3760cc67284cd7cfa91c1dfd5af978723bf6278273330ffbb6fe1d65",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-image.json": "c52e97f85db60254cba9176751891f647e130f7b9c3be953748f43cc4fcbaa27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-image-upload-journal.json": "a908dc8686b010ba85e514ef7b974b1817a1151c377df88cb456d34fa3941da4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-own-tier-diff.json": "132fd0f59e5ca6d29dc138ebed57940e4fe52ff92dc9df76184d5b08ab0ccaf2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-formula-review.json": "1304010214884b27a957a0f16c33f65aa4b5fa13b34e2cebc9a054a81db85656",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-map-before.json": "62ad3c866a3331ba839a54b6b5621533698683e6ee2b04c2eaec60ede2152655",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-resume-review.json": "53212c330a380477fda93dd6f0c03ad4e96a07c5f5ee37715bff499cbf38bb25",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-ui-review.json": "d769beb6d2c73e460b8dd3bf907d276f84d131f5ebb9b4a983e904e3c6a6b573",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-existing-ui-delta.json": "33555b26a93c975acdc1dc9f6b90ad3f03e28e1ddf2e6300dc10156a1ec3d6b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-raw-verification.json": "c0d92de9f7ac30d3029e03d0ec4d996a81ce03123eebb6b55f02b7e13b703edf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-extension-raw-verification.json": "1840ba6114c08fc12d95f6812023c968ee36e2f10e2919134d59e13eef828e31",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "deadly-accurate",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_050",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_050.png",
+      "attachment": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5974502104",
+      "acquired_date": "2026-10-04",
+      "sha256": "038230851f4f36bd009d606edfac87846d3dfda52edcf5176cab1ad6ac53fa5f",
+      "content_type": "image/png",
+      "size": 4631,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "致命精準祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Primary visually inspected original and publicly downloaded PNG side by side: matching white/gray stepped outline with central bulge, thin detached left bar and transparent background; no edits or substitution."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 20,
+      "rows": 335,
+      "lists": 103,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 126,
+      "source_files": 43,
+      "bindings": 389,
+      "variants": 200,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 43,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 608,
+      "remote_references": 408,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 8,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-007-full-scan.json",
+        "sha256": "61a9d3451bbae4b425a544f95c5b3be7a9df9d326fefd777a9e2c3537b166fca",
+        "trigger": "round-007"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 114,
+    "not_started_name_groups": 114,
+    "partial_name_groups": 0,
+    "remaining_variants": 405,
+    "remaining_bindings": 796,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "2c39a67bf7aeb165cd3264228a6aebb1fe2964d465875590e6a97cd700cb2959"
+  },
+  "previous_local_commit": "16983ffe34399e8ad5b11166b5f5cad820af889e",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_variants": 5,
+    "binding_count": 12,
+    "primary_receipt": "deadly-accurate-primary-formula-review.json",
+    "shared_extra_not_whole_damage": true,
+    "crit_and_weakspot_both_required": true,
+    "conditional_override_replaces_fallback": true,
+    "secondary_explosion_branches_verified": [
+      "penetration/impact",
+      "armor",
+      "hitmass consumed kill/stop"
+    ],
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-extension-draft.json",
+      "sha256": "3a17b08c3760cc67284cd7cfa91c1dfd5af978723bf6278273330ffbb6fe1d65"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 12,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-ui-review.json",
+      "sha256": "d769beb6d2c73e460b8dd3bf907d276f84d131f5ebb9b4a983e904e3c6a6b573"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m1",
+          "loc_weapon_pattern_autogun_p3_m1",
+          "loc_weapon_mark_autogun_p3_m1"
+        ],
+        "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+        "name_en": "Vigilant Autogun Columnus Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1031,
+        "append_line": 1033
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m2",
+          "loc_weapon_pattern_autogun_p3_m2",
+          "loc_weapon_mark_autogun_p3_m2"
+        ],
+        "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+        "name_en": "Vigilant Autogun Graia Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1094,
+        "append_line": 1096
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m3",
+          "loc_weapon_pattern_autogun_p3_m3",
+          "loc_weapon_mark_autogun_p3_m3"
+        ],
+        "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+        "name_en": "Vigilant Autogun Agripinaa Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1039,
+        "append_line": 1041
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m1",
+          "loc_weapon_pattern_boltpistol_p1_m1",
+          "loc_weapon_mark_boltpistol_p1_m1"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m2",
+          "loc_weapon_pattern_boltpistol_p1_m2",
+          "loc_weapon_mark_boltpistol_p1_m2"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "galvanic_rifle_p1",
+        "mark_id": "galvanic_rifle_p1_m1",
+        "trait_id": "weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_galvanic_rifle_p1_m1",
+          "loc_weapon_pattern_galvanic_rifle_p1_m1",
+          "loc_weapon_mark_galvanic_rifle_p1_m1"
+        ],
+        "name_zh_tw": "電能步槍 布蘭克斯 Mk CV",
+        "name_en": "Galvanic Rifle Branx Mk CV",
+        "template_file": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 863,
+        "append_line": 865
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m1",
+          "loc_weapon_pattern_lasgun_p1_m1",
+          "loc_weapon_mark_lasgun_p1_m1"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk VII",
+        "name_en": "Infantry Lasgun Kantrael Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 714,
+        "append_line": 716
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m2",
+          "loc_weapon_pattern_lasgun_p1_m2",
+          "loc_weapon_mark_lasgun_p1_m2"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IIb",
+        "name_en": "Infantry Lasgun Kantrael Mk IIb",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 692,
+        "append_line": 694
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m3",
+          "loc_weapon_pattern_lasgun_p1_m3",
+          "loc_weapon_mark_lasgun_p1_m3"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IX",
+        "name_en": "Infantry Lasgun Kantrael Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 693,
+        "append_line": 695
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m1",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m1",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m1"
+        ],
+        "name_zh_tw": "重伐木槍 克魯克 Mk IIa",
+        "name_en": "Heavy Stubber Krourk Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 794,
+        "append_line": 796
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m2",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m2",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m2"
+        ],
+        "name_zh_tw": "重伐木槍 戈爾貢努姆 Mk IIIa",
+        "name_en": "Heavy Stubber Gorgonum Mk IIIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 815,
+        "append_line": 817
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m3",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m3",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m3"
+        ],
+        "name_zh_tw": "重伐木槍 阿克利斯 Mk II",
+        "name_en": "Heavy Stubber Achlys Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 815,
+        "append_line": 817
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-own-tier-diff.json",
+      "sha256": "132fd0f59e5ca6d29dc138ebed57940e4fe52ff92dc9df76184d5b08ab0ccaf2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-formula-review.json",
+      "sha256": "1304010214884b27a957a0f16c33f65aa4b5fa13b34e2cebc9a054a81db85656"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-ui-review.json",
+      "sha256": "d769beb6d2c73e460b8dd3bf907d276f84d131f5ebb9b4a983e904e3c6a6b573"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-resume-review.json",
+      "sha256": "53212c330a380477fda93dd6f0c03ad4e96a07c5f5ee37715bff499cbf38bb25"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-accurate-primary-existing-ui-delta.json",
+      "sha256": "33555b26a93c975acdc1dc9f6b90ad3f03e28e1ddf2e6300dc10156a1ec3d6b5"
+    }
+  ],
+  "primary_review_method": "Own five complete tiers/wrappers, conditional override route, actual UI family/pattern/mark and import+ukeys+append for12models; common cache only with matching applicability; independently verify all configured secondary explosion branches including hitmass kill/stop; combined finesse examples and RAW formatter compared.",
+  "prior_reviewed_map_objects_unchanged": {
+    "blessings": 52,
+    "variants": 195,
+    "bindings": 377,
+    "verified": true
+  }
+}

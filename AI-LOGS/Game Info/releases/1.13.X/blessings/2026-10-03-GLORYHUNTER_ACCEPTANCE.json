@@ -1,0 +1,395 @@
+{
+  "date": "2026-10-05",
+  "blessing": "gloryhunter",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_bolter_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_boltpistol_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_galvanic_rifle_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_needlepistol_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_toughness_on_elite_kills",
+    "weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_phosphor_pistol_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_plasmagun_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_shotgun_p3_toughness_on_elite_kills",
+    "weapon_trait_bespoke_stubrevolver_p1_toughness_on_elite_kills",
+    "weapon_trait_bespoke_ogryn_thumper_p2_toughness_on_elite_kills"
+  ],
+  "added_binding_count": 18,
+  "total_variants": 11,
+  "total_bindings": 18,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "gloryhunter",
+    "name_zh_tw": "榮耀獵手",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "faster_status": "unverified",
+    "complete": true,
+    "accepted": true,
+    "status": "accepted_formal_peer_review",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-formal-peer-scope.json",
+    "scope_sha256": "760d5ff3a13fd0855765e2d2b970075367b1412f250619eb4b025057fa0c221c",
+    "canonical_config_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-config.json",
+    "canonical_config_sha256": "0d6781b69baf909dd7c74f287dd2caa82877093c19ae86263e5b998c559d5127",
+    "wording_delta_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-wording-delta-review.json",
+    "wording_delta_sha256": "4dafb8f1badd5963046b8f8d32efc4c509db48473f94a0387daa7a3c395a839d",
+    "scoped_file_count": 68,
+    "all_scoped_file_hashes_match": true,
+    "reviewed_source_delta_ranges": 3,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "c5e01e771eb8b5805d0d651de056e1bb85384953bbee8b02b9a90dc2e3629323",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-agent-config.json": "310e9b4d37519f55b19551b342b2f331786c1374529bfbec42e69ffb7d58c79a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-agent-draft.md": "d88cc55fcf6c6200b4033a785e2213b603a8d7e0751593c9e372ba1ba22b57e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-agent-evidence.json": "a60f85c3b0d3d483c8c1a51f0db6f84b2a86f41dcfed164096b66b09c18ce60e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-config.json": "0d6781b69baf909dd7c74f287dd2caa82877093c19ae86263e5b998c559d5127",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-extension-draft.json": "06f341a46a1d22c245f7aae09edaf315e3511603b3df8dbb0cbd80d1c7818ae0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-additional-attribution-review.json": "ae6a0a27e5d2b5b28f6ffccd79c31502cde7b5392a3f84abb9ea8df5b2275873",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-agent-config.json": "310e9b4d37519f55b19551b342b2f331786c1374529bfbec42e69ffb7d58c79a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-agent-draft.md": "d88cc55fcf6c6200b4033a785e2213b603a8d7e0751593c9e372ba1ba22b57e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-agent-evidence.json": "a60f85c3b0d3d483c8c1a51f0db6f84b2a86f41dcfed164096b66b09c18ce60e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-association-snapshot.json": "aa17e0dd700b0100fbb4fff7196bf83c2d57f2e7001c8bf6622dc0a7959102fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-attack-coverage.json": "4d22a9528f9b308370e02ff8f2e44b7acb4c5d233e2bebb7373ec7095ae313a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-candidate-page.md": "984e1be9cc5cc3782608e2704b1ef44b5a62503f75febbebfc0c464d022347e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-frozen-translation-glossary.md": "ee75207f752cf9551efc086fba3ea1515166543d8e4b0dd8c1c345e0eb40fa18",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-selfcheck.json": "20853a3864a05fd6208d5301b30844cba75b2769fb7d45e9efa63710c97f7195",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-image.json": "2ec1fb9e3420c1fb3497f09fb8e87245bf211dd7cfbe0caaeac37b2b9e0aedca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-additional-attribution-review.json": "cebe3efd1e099ca2da4377d65390ec04428fc58c6b4751f9af6f0889afa3511f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-canonical-before-attribution.json": "6b1f1ab6f0a7412c7e1ef7c5ea55e370594dc6b3691540b41932cb86c604a612",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-focused-checks.json": "ae686b9ce4febcc13c2ab186259e9a5fdf062164b75fee0abe269bcb3eafe4c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-frozen-source-verification.json": "27d07e8ee544208ea04657b003ad6b78e2f41dec749f985d7909f113d31895b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-glossary-snapshot-review.json": "7164c2449d47b611c26e484b60c269a7245973735dd7c31cd045367795af0536",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-own-tier-diff.json": "dc043d8fd118138f3d057e8f53e34278d7ea8afe9b3df9a48dfd87b0fbdd76d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-prior-wording-peer-scope.json": "c6e3f2c6dc64c13b89d958ad40e5f822b593120b1d577d435fdc1609d7e00aba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-recovery-formatter-review.json": "275524eea127070e2abf56ea3a3ec189b438e3bd02b82b13878306c674ba6e14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-resume-review.json": "c19f4bf600fa889dc29109cfc0239fd5b480a4f4a172bc749b04f09dfcc5b92b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-revised-package-preflight.json": "6ae678b3eccad2aa1e6ddc174066ffb41206007e50c0a2f067f3d055ed26c36b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-runtime-formula-review.json": "b8e81c258fce8bb54ddd29641c01750be8844f62ba3397aa101c5d964e687478",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-traits-review.json": "925293bd70f0b6e383dc3ffd89e2980787f95cf3bcb79c81c2ad5a06e0bbf029",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-ui-raw-verification.json": "78691531c9e5be7273cd0b1a9b1f7198c7a5fd8ebf2774d7104f5feee6ccba30",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-ui-review.json": "e067c54026b1aa517435732100b8bdbe3c3a9f3fbac9e00886c8c5ba99a1e756",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-wording-delta-review.json": "4dafb8f1badd5963046b8f8d32efc4c509db48473f94a0387daa7a3c395a839d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "39b84c05d04fc647e55766702984b0902c7b2ea5d8058ecbf9526898059d2520",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/DAMAGE_PERCENTAGE_REVIEW.md": "14f8628140c684a654401bab19f270d7b1097945b27ee21b57f15c03410584a2",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/LOCALIZATION_COMPARISON.md": "ed9727658fbe5d188c13d83ec68fb612361b1f5c9c60eb3baa0eb3a78c6fd45c",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/README.md": "ebb7bfe0b6c100f456cebf1192cf7ff81cf2ccfac17fd23dfe4d35ae2185ea80",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/SOURCE_INDEX.md": "2897d2ae693ad96145ed9a7141e2483aff5f2c9c748b2edc2f8a017826bf745c",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/TIER_VALUES.md": "6661039731d5f6b19ab91d9af411d86f689c910a2d33cdce9a0f3a06e8738d60",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/WEAPON_COMPATIBILITY.md": "8570933cc04a4b96a7e832f9f33de197e3ea566f9fb24040a6f3f34c468ec45b",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_bolter_p1_toughness_on_elite_kills.md": "5dfa6920f23ab00949df0c56f52a398a0d210da443c5dab9b851993774612747",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_boltpistol_p1_toughness_on_elite_kills.md": "43a2577191b34ff9ff126103fdede0e81f3bfe141632e3eeda40c3abf5bf1aef",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_galvanic_rifle_p1_toughness_on_elite_kills.md": "803f6b497c622dac0a46c5129df5c871d491e8bf214c0c62ad2522961afe38e7",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_needlepistol_p1_toughness_on_elite_kills.md": "51fc954a5e21b23d89401161c0a243e2dca39c2c07a84e0e27cf0441c530f232",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_elite_kills.md": "e3758393a400dfe80b556abd43c94fb975172f562c46138cf4e0fbf416c41298",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_ogryn_heavystubber_p2_toughness_on_elite_kills.md": "2f317adb74d29a76a79077dbe0649c3771c91f99817ef00f4bc6dca126d31ff4",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_ogryn_thumper_p2_toughness_on_elite_kills.md": "78f5ae38841b5e3f7f63f03758b618895d2094c03ba19ede61cad34c139ac36e",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_phosphor_pistol_p1_toughness_on_elite_kills.md": "ecb28131b5574193f0a479585956e938c9f990e4a833d39ddf8a23a8fe54b0cf",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_plasmagun_p1_toughness_on_elite_kills.md": "1c836da6a6d8f015972e2aa2ef83034659fee860019cac3959333b6f39ed8445",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_shotgun_p3_toughness_on_elite_kills.md": "6be12f3a5532108b8e2195dac6e14f3f5a7d27a182386bf2a066f6b2483685f0",
+      "Game Info/releases/1.13.X/blessings/entries/榮耀獵手/weapon_trait_bespoke_stubrevolver_p1_toughness_on_elite_kills.md": "70f5f766901580ee5f7855e86515509a32b73c3dcebaa71ba7f81cbfc1c492c2",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "c64cb3f182d9751c5da9d4514e7627f41c84186d28947d4bc92c291a81f6d0e0",
+      "Game Info/releases/1.13.X/blessings/README.md": "1f861caf7dd43058f7a77d62d46f1b83a83642a0e9f5d9295a1ed2822c6382f5",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "42115959006b2e49bb52a4a07f5d63157742c9875f5bd72ebe0eebf87f70546d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "8544068f607530f40f8d04eb6c940cb669792bc1cd51d5804ecf00a5ca9b335a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "85695063e93e419fe5d18d7bee6eea74e6c6f8a9c5b7a1b20cb9827ecc7e9b8b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/爆彈手槍/README.md": "30a26f7260c397ce7fffdaa3c864b9db2329c62d5dc7fb7ddf894b6bfb37300b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "5ac575a6e4cb118e85a674efc59c0846c7c833e3ce71ae646b82c59851bc02cd",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/矛頭爆矢槍/README.md": "f87e308f31675f3837f08753025832a47cf195813dc1c926893691879c5c0189",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md": "c4e50efc1539be2373a86ea50017b3c726f882261c787448f32897ae3e5d4ff0",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "dfe96480793f046fdfd711e836be7a0884b8a60ca8fadf47b5260321dd593194",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "a8fc706a2a48dc2de60f9ee6cde8f4c21e6fa4c3385a00cc90e6482e36ddab13",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "f654656810bc713b27c79ab4eb1fa0b7a58e0815d11974a7ac2747b80261246a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "1133e0ba996353c69161a1fd60b535f0e32cda5dce7d24307d669e381b970191",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "94a67900a49a04a180b40969823e2b2a598c370930a67015d5e09bf5ea6a1373",
+      "Referneces/Translation.md": "64d5e98721947b10a535f8132011566397778221852bb050dc7e2f3931e3e985"
+    },
+    "findings": [
+      "已核對固定 68 檔 scope 與每一檔 SHA-256，全部吻合；正式範圍以 Release 1.13.1 固定來源提交 7e662fcda16219d775b84af50322be2e9cd9d62e 為準。",
+      "重查新增措辭差異與三段固定來源範圍：hitscan 以 hit_minion 納入 minion 與 living_prop；breed 分類為 breed_type，沒有小型體型條件。原「小型敵人」敘述過窄，修成「敵人或可受傷的活體物件」準確涵蓋實際可受傷活體物件，沒有擴大到不受傷目標。",
+      "三處定稿差異限於榮耀獵手 README、磷光爆破手槍變體說明及該祝福 SOURCE_INDEX。README/變體說明現均採上述無體型限制的目標描述；SOURCE_INDEX 保留精確 backend 條件並列出三段可追溯引用。逐項與 wording-delta receipt 所列前後雜湊相符。",
+      "原固定範圍內 I–IV 數值、11 個 trait variants／18 個實際 bindings、UI/RAW 對照、其餘攻擊路徑與恢復機制、算例、圖片及索引關係未因本次措辭修訂改變；已由新增 scope hashes 覆蓋，delta receipt 亦標明 tiers、raw、formula、image 與其他 routes unchanged。"
+    ],
+    "issues": []
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "gloryhunter",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_120.png",
+      "attachment": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5988346927",
+      "acquired_date": "2026-10-05",
+      "sha256": "39f6ce7a6d61904b6070679324c053cd1423bb7f46ea6a2eb7e01990afe665a3",
+      "content_type": "image/png",
+      "size": 3334,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "榮耀獵手祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Primary viewed exact publicly downloaded native weapon_trait_120 PNG at128x128; very pale grayscale graphic with transparent areas, no image substitution; publicbytes match actual icon-path source. PIL decoded nativeLA luminance187..255 alpha0..255 confirms intact transparent PNG; no diagrammeaning inferred."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 32,
+      "tables": 33,
+      "rows": 677,
+      "lists": 119,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 160,
+      "source_files": 68,
+      "bindings": 721,
+      "variants": 369,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 31,
+      "source_object_cache": {
+        "cache_hits": 68,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 34,
+      "local_references": 1263,
+      "remote_references": 658,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 26,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-025-full-scan.json",
+        "sha256": "cfbc8a780a445f772a203a79188335cb0760e20400812520e8b78e3fb166d262",
+        "trigger": "round-025"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 58,
+    "not_started_name_groups": 58,
+    "partial_name_groups": 0,
+    "remaining_variants": 236,
+    "remaining_bindings": 464,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6dc5f65fc353e656543822a8195a6d3bc75151f00aaea4feb996727baba51fb2"
+  },
+  "previous_local_commit": "a65c2f1fb60662de424c54b228c8afeb63e56789",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-additional-attribution-review.json",
+      "sha256": "cebe3efd1e099ca2da4377d65390ec04428fc58c6b4751f9af6f0889afa3511f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-canonical-before-attribution.json",
+      "sha256": "6b1f1ab6f0a7412c7e1ef7c5ea55e370594dc6b3691540b41932cb86c604a612"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-focused-checks.json",
+      "sha256": "ae686b9ce4febcc13c2ab186259e9a5fdf062164b75fee0abe269bcb3eafe4c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-frozen-source-verification.json",
+      "sha256": "27d07e8ee544208ea04657b003ad6b78e2f41dec749f985d7909f113d31895b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-glossary-snapshot-review.json",
+      "sha256": "7164c2449d47b611c26e484b60c269a7245973735dd7c31cd045367795af0536"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-own-tier-diff.json",
+      "sha256": "dc043d8fd118138f3d057e8f53e34278d7ea8afe9b3df9a48dfd87b0fbdd76d4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-prior-wording-peer-scope.json",
+      "sha256": "c6e3f2c6dc64c13b89d958ad40e5f822b593120b1d577d435fdc1609d7e00aba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-recovery-formatter-review.json",
+      "sha256": "275524eea127070e2abf56ea3a3ec189b438e3bd02b82b13878306c674ba6e14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-resume-review.json",
+      "sha256": "c19f4bf600fa889dc29109cfc0239fd5b480a4f4a172bc749b04f09dfcc5b92b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-revised-package-preflight.json",
+      "sha256": "6ae678b3eccad2aa1e6ddc174066ffb41206007e50c0a2f067f3d055ed26c36b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-runtime-formula-review.json",
+      "sha256": "b8e81c258fce8bb54ddd29641c01750be8844f62ba3397aa101c5d964e687478"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-traits-review.json",
+      "sha256": "925293bd70f0b6e383dc3ffd89e2980787f95cf3bcb79c81c2ad5a06e0bbf029"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-ui-raw-verification.json",
+      "sha256": "78691531c9e5be7273cd0b1a9b1f7198c7a5fd8ebf2774d7104f5feee6ccba30"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-ui-review.json",
+      "sha256": "e067c54026b1aa517435732100b8bdbe3c3a9f3fbac9e00886c8c5ba99a1e756"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-wording-delta-review.json",
+      "sha256": "4dafb8f1badd5963046b8f8d32efc4c509db48473f94a0387daa7a3c395a839d"
+    }
+  ],
+  "primary_review_method": "Actualown11tier/wrapper+18UI+RAWformatter/recovery inspected; matchedfixedcommonelite/name/held/directrecovery conditions reused. Onlynew mode/input/attribution differences expanded; Gauntlet zoom-only projectile, Needle omitteditem vsPhosphor/projectile/enemyPlasma retaineditem closed. Core101blocks11inputs andaddendum47blocks4receipts allverified. Actualgenerator variant_ids vsinventory exactly11traitIDs/18bindings beforeformal.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-config.json",
+    "sha256": "0d6781b69baf909dd7c74f287dd2caa82877093c19ae86263e5b998c559d5127"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-traits-review.json",
+      "sha256": "925293bd70f0b6e383dc3ffd89e2980787f95cf3bcb79c81c2ad5a06e0bbf029"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-ui-review.json",
+      "sha256": "e067c54026b1aa517435732100b8bdbe3c3a9f3fbac9e00886c8c5ba99a1e756"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-ui-raw-verification.json",
+      "sha256": "78691531c9e5be7273cd0b1a9b1f7198c7a5fd8ebf2774d7104f5feee6ccba30"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-own-tier-diff.json",
+      "sha256": "dc043d8fd118138f3d057e8f53e34278d7ea8afe9b3df9a48dfd87b0fbdd76d4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-image.json",
+      "sha256": "2ec1fb9e3420c1fb3497f09fb8e87245bf211dd7cfbe0caaeac37b2b9e0aedca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "c5e01e771eb8b5805d0d651de056e1bb85384953bbee8b02b9a90dc2e3629323"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-frozen-translation-glossary.md",
+      "sha256": "ee75207f752cf9551efc086fba3ea1515166543d8e4b0dd8c1c345e0eb40fa18"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-additional-attribution-review.json",
+      "sha256": "ae6a0a27e5d2b5b28f6ffccd79c31502cde7b5392a3f84abb9ea8df5b2275873"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-agent-config.json",
+      "sha256": "310e9b4d37519f55b19551b342b2f331786c1374529bfbec42e69ffb7d58c79a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-agent-draft.md",
+      "sha256": "d88cc55fcf6c6200b4033a785e2213b603a8d7e0751593c9e372ba1ba22b57e5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-agent-evidence.json",
+      "sha256": "a60f85c3b0d3d483c8c1a51f0db6f84b2a86f41dcfed164096b66b09c18ce60e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-association-snapshot.json",
+      "sha256": "aa17e0dd700b0100fbb4fff7196bf83c2d57f2e7001c8bf6622dc0a7959102fc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-attack-coverage.json",
+      "sha256": "4d22a9528f9b308370e02ff8f2e44b7acb4c5d233e2bebb7373ec7095ae313a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-candidate-page.md",
+      "sha256": "984e1be9cc5cc3782608e2704b1ef44b5a62503f75febbebfc0c464d022347e5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-frozen-translation-glossary.md",
+      "sha256": "ee75207f752cf9551efc086fba3ea1515166543d8e4b0dd8c1c345e0eb40fa18"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-group/gloryhunter-selfcheck.json",
+      "sha256": "20853a3864a05fd6208d5301b30844cba75b2769fb7d45e9efa63710c97f7195"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-agent-config.json",
+      "sha256": "310e9b4d37519f55b19551b342b2f331786c1374529bfbec42e69ffb7d58c79a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-agent-evidence.json",
+      "sha256": "a60f85c3b0d3d483c8c1a51f0db6f84b2a86f41dcfed164096b66b09c18ce60e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-agent-draft.md",
+      "sha256": "d88cc55fcf6c6200b4033a785e2213b603a8d7e0751593c9e372ba1ba22b57e5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-additional-attribution-review.json",
+      "sha256": "cebe3efd1e099ca2da4377d65390ec04428fc58c6b4751f9af6f0889afa3511f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-primary-runtime-formula-review.json",
+      "sha256": "b8e81c258fce8bb54ddd29641c01750be8844f62ba3397aa101c5d964e687478"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gloryhunter-formal-peer-scope.json",
+    "sha256": "760d5ff3a13fd0855765e2d2b970075367b1412f250619eb4b025057fa0c221c",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

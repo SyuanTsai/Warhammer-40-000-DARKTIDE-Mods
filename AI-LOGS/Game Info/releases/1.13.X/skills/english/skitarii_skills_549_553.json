@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_549_553",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L1971-L1986, L2414-L2425, L2302-L2316, L2546-L2551, L2631-L2650; missing post-assistance display values: talent_settings_cryptic.lua L639-L643. Previously checked percentage formatter reused; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction. Exact Toughness boundary, full-charge count and reduction combination, regeneration refresh/cap, outline versus SmartTag, and assistance-effect boundaries are supplements. Outline presentation on other clients remains unobserved."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_cleave_and_impact",
+      "name": "Adaptive Combat Calibration",
+      "name_hash": "6ae25bc5",
+      "description_hash": "6d23edd0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_cleave_and_impact.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_cleave_and_impact.md",
+      "commit": "7499e9975"
+    },
+    {
+      "id": "cryptic_tdr_based_on_charge",
+      "name": "Residual Current Buffer",
+      "name_hash": "f6f0d3f8",
+      "description_hash": "3b317052",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_tdr_based_on_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_tdr_based_on_charge.md",
+      "commit": "3e875a918"
+    },
+    {
+      "id": "cryptic_ranged_stacking_toughness",
+      "name": "Superior Defence Engrams",
+      "name_hash": "24e5786c",
+      "description_hash": "057bb0ce",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ranged_stacking_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ranged_stacking_toughness.md",
+      "commit": "5190ff9cf"
+    },
+    {
+      "id": "cryptic_specials_marking",
+      "name": "Target Prioritization Psalms",
+      "name_hash": "08e4cc0d",
+      "description_hash": "5d780574",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_specials_marking.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_specials_marking.md",
+      "commit": "42965f728"
+    },
+    {
+      "id": "cryptic_disabled_allies_defense",
+      "name": "Protectorate Protocol",
+      "name_hash": "45c3de20",
+      "description_hash": "5bdd6b9d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_disabled_allies_defense.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_disabled_allies_defense.md",
+      "commit": "326ef32e9"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 502,
+    "from_commit": "6b56c7b4e",
+    "to_commit": "326ef32e9",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

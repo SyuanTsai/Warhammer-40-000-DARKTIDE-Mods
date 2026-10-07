@@ -1,0 +1,78 @@
+{
+  "id": "arbites_class",
+  "class": "Arbites",
+  "date": "2026-10-04",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "FILE_MAP.json: scope Arbites",
+  "English_entry": "Game Info/releases/1.13.X/skills/talents/Arbites/en/README.md",
+  "checks": {
+    "mapped_English_pages": 97,
+    "previous_skill_acceptance": "Reused; no mechanism reanalysis or repeated skill text acceptance.",
+    "new_base_skills": "Changed translation, independent English comparison, Markdown and local links passed; complete diff reviewed once per local skill commit.",
+    "new_Chinese_support_switches": 2,
+    "shared_page_checks": {
+      "pages": 6,
+      "local_references": 558,
+      "remote_references": 1592,
+      "errors": 0,
+      "Markdown_parse_and_HTML_structure": "3-column / 86-row index; one 32px icon per row and 72px per skill body; 5 base sections, 91 technical-index rows, 89 percentage rows, 40 unused definitions."
+    },
+    "icon_identity_matches_Chinese": 86,
+    "public_images_GET": {
+      "checked": 86,
+      "passed": 86,
+      "method": "Anonymous GET, content type and first 16 bytes; no files saved."
+    }
+  },
+  "comparison_totals": {
+    "Consistent": 239,
+    "Explicit contradiction": 1,
+    "Not covered by the description": 234,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 13
+  },
+  "evidence_limits": [
+    "Existing mechanism and icon-provenance evidence reused. Only missing English display mappings were read.",
+    "Existing unresolved interpretations remain in LOCALIZATION_COMPARISON.md; no event-chain tracing was added.",
+    "No in-game execution or final game UI observation. Layout checked through Markdown and HTML structure; no browser screenshot inspection."
+  ],
+  "skills": [
+    {
+      "id": "adamant_area_buff_drone",
+      "name": "Nuncio-Aquila",
+      "name_hash": "82756b8c",
+      "description_hash": "f24979b8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_area_buff_drone.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_area_buff_drone.md",
+      "commit": "c6534206"
+    },
+    {
+      "id": "adamant_command_dog_with_tag",
+      "name": "Cyber-Mastiff tag command",
+      "name_hash": "3ff1128e",
+      "description_hash": "abf97cfc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_command_dog_with_tag.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_command_dog_with_tag.md",
+      "commit": "07c67d49"
+    },
+    {
+      "id": "adamant_companion_aura",
+      "name": "Companion Aura",
+      "name_hash": "ce3146d6",
+      "description_hash": "f0d0f1f5",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_aura.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_aura.md",
+      "commit": "cda64c1d"
+    },
+    {
+      "id": "adamant_companion_damage_per_level",
+      "name": "Companion Damage per Level",
+      "name_hash": "222be16d",
+      "description_hash": "78dd0b24",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_damage_per_level.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_damage_per_level.md",
+      "commit": "92bddae3"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "scum_skills_349_353",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum missing display mappings only: broker_talents.lua L646–663, L674–697, L724–729, L781–796 and L808–814.",
+    "Existing verified values and shared formatter behavior reused; no mechanism or event-chain retracing."
+  ],
+  "questions": [
+    "Gunslinger Improved: special mission large_ammunition_crate_pickup ignores the share modifier, but its route to the same pickup event is unresolved. Cannot confirm; no new source-chain research."
+  ],
+  "skills": [
+    {
+      "id": "broker_blitz_flash_grenade_improved",
+      "name": "Blackout",
+      "name_hash": "3176e093",
+      "description_hash": "44ce3a9a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_flash_grenade_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_flash_grenade_improved.md",
+      "commit": "9747504bb"
+    },
+    {
+      "id": "broker_blitz_missile_launcher",
+      "name": "Boom Bringer",
+      "name_hash": "a29ee6e4",
+      "description_hash": "fad7e488",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_missile_launcher.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_missile_launcher.md",
+      "commit": "2a074222f"
+    },
+    {
+      "id": "broker_blitz_tox_grenade",
+      "name": "Chem Grenade",
+      "name_hash": "5ecc7244",
+      "description_hash": "cbe2dc42",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_tox_grenade.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_tox_grenade.md",
+      "commit": "e69e8b9d1"
+    },
+    {
+      "id": "broker_aura_gunslinger_improved",
+      "name": "Gunslinger Improved",
+      "name_hash": "9826063e",
+      "description_hash": "03a59c5c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_aura_gunslinger_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_aura_gunslinger_improved.md",
+      "commit": "885ea03b7"
+    },
+    {
+      "id": "broker_coherency_melee_damage",
+      "name": "Ruffian",
+      "name_hash": "3b445793",
+      "description_hash": "a241f5b9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_coherency_melee_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_coherency_melee_damage.md",
+      "commit": "c604a0b17"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 395,
+    "from_commit": "d798e00f9",
+    "to_commit": "c604a0b17",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

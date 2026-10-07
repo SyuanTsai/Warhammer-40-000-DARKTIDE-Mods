@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "state": "batch_complete_awaiting_user_description_rules",
+  "branch": "codex/blessings-translation",
+  "baseline": "e8aa9289ecf84bfd8586bc759f30616c27fcbe54",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "completed": {
+    "blessings": 6,
+    "variants": 9,
+    "weapon_families": 4,
+    "marks": 12,
+    "mark_bindings": 27,
+    "markdown_files": 55
+  },
+  "per_blessing_commits": [
+    {
+      "id": "decimator",
+      "name_zh_tw": "屠戮者",
+      "commit": "89a51a7debd60a67561bfce3af00370010e411de",
+      "variants": 2,
+      "bindings": 6,
+      "acceptance_file": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DECIMATOR_ACCEPTANCE.json"
+    },
+    {
+      "id": "shred",
+      "name_zh_tw": "粉碎",
+      "commit": "9ab4bd91195b8d6911ada36d9d323662236fa5ad",
+      "variants": 2,
+      "bindings": 6,
+      "acceptance_file": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHRED_ACCEPTANCE.json"
+    },
+    {
+      "id": "brutal-momentum",
+      "name_zh_tw": "野蠻攻勢",
+      "commit": "f1148695df0cf468c350180a444c2e91e8885bf8",
+      "variants": 2,
+      "bindings": 6,
+      "acceptance_file": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_ACCEPTANCE.json"
+    },
+    {
+      "id": "dumdum",
+      "name_zh_tw": "達姆彈",
+      "commit": "9aeb999acd5deb3caa04dd17988948c78330c6a5",
+      "variants": 1,
+      "bindings": 3,
+      "acceptance_file": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DUMDUM_ACCEPTANCE.json"
+    },
+    {
+      "id": "charmed-reload",
+      "name_zh_tw": "魔力彈藥",
+      "commit": "c76fd80a33aa2de62fd306fe5ea773ef1fde1866",
+      "variants": 1,
+      "bindings": 3,
+      "acceptance_file": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_ACCEPTANCE.json"
+    },
+    {
+      "id": "inspiring-barrage",
+      "name_zh_tw": "振奮彈幕",
+      "commit": "9f7427d8ce6cc14d5d38a1187e057b8a533ac241",
+      "variants": 1,
+      "bindings": 3,
+      "acceptance_file": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_ACCEPTANCE.json"
+    }
+  ],
+  "source_mapping_validation": {
+    "ranges": 157,
+    "files": 53,
+    "bindings": 27,
+    "variants": 9,
+    "formulas": "passed"
+  },
+  "image_validation": {
+    "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+    "image_links": 6,
+    "all_actual_attachment_urls": true,
+    "no_local_or_external_image_embeds": true
+  },
+  "remaining": {
+    "name_groups": 157,
+    "not_started_name_groups": 151,
+    "partial_name_groups": 6,
+    "remaining_variants": 556,
+    "remaining_bindings": 1102,
+    "unresolved": 58,
+    "definitions_outside_intersection": 128
+  },
+  "remaining_full_json": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "storage": "local",
+    "sha256": "8067c015031d792ac82cabaf24acdfad978c2da467f92a499d5597ba337aeb30"
+  },
+  "limitations": [
+    "Static source analysis only; in-game testing not performed",
+    "Backend available tier bits unavailable; all available_tiers null",
+    "MasterItems138291 Steam Build association unverified",
+    "Other same-name variants remain unreviewed",
+    "Existing broken links: Game Info 1, AI-LOGS Game Info 8; no new errors from batch"
+  ],
+  "actions": {
+    "local_commits": true,
+    "push": false,
+    "pull_request": false,
+    "merge": false,
+    "source_or_mod_edit": false,
+    "seventh_blessing_started": false,
+    "images_in_git": false
+  },
+  "models": {
+    "main": "gpt-6.1-sol/xhigh",
+    "assistant": "gpt-6-luna/max",
+    "faster": "not enabled; no supported setting field"
+  },
+  "final_validation": {
+    "links": {
+      "game-info": {
+        "markdown_files": 755,
+        "existing_errors": 1,
+        "new_errors": 0
+      },
+      "ai-logs": {
+        "markdown_files": 34,
+        "existing_errors": 8,
+        "new_errors": 0
+      },
+      "prompt": {
+        "markdown_files": 3,
+        "existing_errors": 0,
+        "new_errors": 0
+      },
+      "blessings": {
+        "markdown_files": 55,
+        "existing_errors": 0,
+        "new_errors": 0
+      }
+    },
+    "log_gfm": {
+      "files": 2,
+      "tables": 4,
+      "rows": 175
+    },
+    "remaining_binding_multiset": "exact match to inventory minus reviewed variants",
+    "gap_and_unbound_preservation": "exact match to original inventory",
+    "remaining_json_hash": "verified",
+    "index_ids": "unique",
+    "source_worktree": "clean at fixed SHA",
+    "git_images": "none"
+  }
+}

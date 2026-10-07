@@ -1,0 +1,300 @@
+{
+  "date": "2026-10-05",
+  "blessing": "deathblow",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/致命一擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "deathblow",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-formal-peer-scope.json",
+    "scope_sha256": "98f810a72fb436fa24ddda1bca30691ce156bed2f221eef7443c48b95fc94464",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "reviewed_file_count": 31,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-agent-config.json": "6abf068f580c08cd15b5e96c540687f8965d3f01e61f4abe8e3c77c8709db036",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-agent-draft.md": "06a730f40a5f2b1a97d93319e371da01ac14996cd60c4fadd7c5f3b8ab82ef9d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-agent-evidence.json": "553283efa0693991783aa0092ca82f92efa37f0bdcc7ee949469a56346bb8fd2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-config.json": "808a55447e612f988e0ba611e434cc6ed25c111879820e02a44ba2eb76160238",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-extension-draft.json": "2d6aaca4a7fd9a20b02f427869a39ffcb2efd17ab54e22a75cdc1dba20d59aaf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-image.json": "6a36e9b90938f7fe0bf30d3ef2b537381a940910637222312b1a38990435d78f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-focused-checks.json": "0e8d0c4d3eed4353177e09d9774ec4252621a3f67b09e0f4fc3af4bc3ce29289",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-frozen-source-verification.json": "f5385a48a1575177b6913d43a8089a12b6156196b2314cd5e9576e2d795ea9d2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-mass-limit-diff-review.json": "cb4f4614ec7b0557c7098858bd0886b361d97160849726fcb3c6961cdbb02752",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-own-tier-diff.json": "59e1a1ea3b13c5edce21e196b69ef2e01697091ad5bde4e03da38f973f18ad7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-resume-review.json": "2cc4cb9ae2c4d388cd1b2f7fb6555bd68a1f4712333ca562ec4063ed83366c70",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-sweep-keyword-diff-review.json": "474b1254b0521e3fdbf31dc2228a8f87cfa163ff622ba9f5f159bee08c6c4959",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-traits-review.json": "d5eba620a8292ef9fbf296d8cdbd72f70b6a21d6adf2173f1167310559d30235",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-ui-raw-verification.json": "91cb016e89b041b2213fb17fd4aa0e24cd0c9c493f38b0e2dabe1a4870794e2b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-ui-review.json": "de5c8eb4c81c0b9221db66b71f70e6c922ecd4f2778851d3bb2f8d8eb177784b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-weakspot-finesse-reuse-review.json": "9aeb82e4864287ef85c86f171e7d70b15874872ae4ad147edd40b770c121c55e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-finesse-formula-review.json": "3519ed0df43089bde22ccc0392da8063bdc2e6b82d163e08a74b1d37a79a17e4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "64955145f422a2beb35f3a936d83325c83e7a9ae72bba5e6cf287b02dabf5f3a",
+      "Game Info/releases/1.13.X/blessings/entries/致命一擊/DAMAGE_PERCENTAGE_REVIEW.md": "825ee7b9056dacc86e6d01ccbab2dadd3dc693863d15b1b96b0663c7052f4a06",
+      "Game Info/releases/1.13.X/blessings/entries/致命一擊/LOCALIZATION_COMPARISON.md": "9acb83be813a69c867417f21827630d85f65bf2736473f7fc20e838d7e2e06c9",
+      "Game Info/releases/1.13.X/blessings/entries/致命一擊/README.md": "5e32fc378da01eb85eddd7f24629fa532c9126c43cb144e48ff1ba2093f14b52",
+      "Game Info/releases/1.13.X/blessings/entries/致命一擊/SOURCE_INDEX.md": "049e71a104b99c7a7d94efa461d3d3bdd28019e8179e49281d0aafd4305d530d",
+      "Game Info/releases/1.13.X/blessings/entries/致命一擊/TIER_VALUES.md": "cee55e2a6dc2206891f89891825a239f77dbde97b6474b6c3bdeaf9bccb75cf6",
+      "Game Info/releases/1.13.X/blessings/entries/致命一擊/WEAPON_COMPATIBILITY.md": "4fa70370b34192ac6be2155e2e7e437e66b157f03f945737a949f2585329d483",
+      "Game Info/releases/1.13.X/blessings/entries/致命一擊/weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill.md": "d64915f4dba6fbce3bbc9211c8c94c135bd8562a6f625ce686ce232166206fc0",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "59877edd7e976164c38945e02335de330ec595f00bfa6e979ef012bd8ab93fbc",
+      "Game Info/releases/1.13.X/blessings/README.md": "153fb80f42d79e44db86557d124a763b05457aa33970279bf444969619bce6e8",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "bfef09f5b2ef08c9b90716b9d54ecb293740cc7806958df91c9c4750f9c50033",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "d9ea4664b6023497720faf3e66afc0b50c2491856aa7dad76922b59ca93c14bc",
+      "Referneces/Translation.md": "75af77353751995f4a63cb01cf218f3b16eb9151ec2da0716415e249318630ec"
+    },
+    "findings": [
+      "已核 scope 檔與31個列檔的SHA-256；磁碟內容與scope逐項相符。正式範圍含7份Deathblow頁、共用地圖/分類索引/重劍反向索引/詞表，以及固定來源、UI、RAW與圖片收據。",
+      "正式頁、canonical deathblow-config與extension-draft的第3條RAW規則均將「非Ogryn、同次掃掠前三個角色擊殺位置、傷害後質量回退」列為文件未涵蓋；沒有把RAW省略程式條件判成翻譯矛盾。名稱/描述鍵、hash與中英文RAW逐鍵配對正確。",
+      "實際只有trait weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill、weapon ID combatsword_p2及三個實際Mark binding：Turtolsky Mk VI、Mk VII、Mk IX；正式武器表、共用Map、分類頁與重劍反向頁一致，available_tiers保留null。",
+      "以source_object_cache.py對固定SHA重算作者70個來源區塊（16個source paths），hash mismatches=0；另直接核讀tier/wrapper/base gate/Buff同鍵覆寫、weakspot與melee damage consumer，以及ActionSweep預算、先選abort profile、傷害後合格回退、跳過target_index更新與其後擊殺計數、ActionPush獨立路徑。",
+      "I–IV melee_weakspot_damage為.075/.10/.125/.15；持用條件控制被動弱點傷害與關鍵字。被動弱點傷害不要求擊殺、也不排除Ogryn；質量回退則要求非Ogryn弱點擊殺且前置總角色擊殺計數≤2。每次ActionSweep重設計數；傷害後回退不改寫當前命中。",
+      "弱點例的B=100、F=50、S=1、IV t=.15，按B+F×(S+t)從150到157.5；弱點額外部分+15%，整擊+5%。質量例的M/H/h/a=10/4/6/1已明示為示意值，沒有冒充原生型號數值。",
+      "UI/RAW收據記錄1個trait、3個mark bindings及同resource/key/hash的locale 0/16名稱與描述。圖片收據的實際icon為weapon_trait_178、路徑與attachment相符，SHA/PNG/128×128/公開下載/顯示驗收均已記錄。",
+      "正式GFM觸發標題存在；層數/期限/移除/切換、三Mark輕重擊/推擊追擊/特殊Sweep與純推擊分界均與固定來源相符。Focused receipt記錄source 83 ranges/18 files、formula checks passed、links errors=0、12個Markdown GFM通過。",
+      "凍結作者agent-config與agent-draft保留較早草稿：其中trigger把持用被動弱點傷害與非Ogryn弱點擊殺合併，作者config亦將RAW省略限制標成明確矛盾。此舊稿依scope保留作歷史輸入；root canonical config、extension draft及7份正式頁已訂正，故不構成正式內容缺陷。"
+    ],
+    "source_range_verification": {
+      "fixed_source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "verified_author_source_blocks": 70,
+      "unique_source_paths": 16,
+      "hash_mismatches": 0,
+      "source_object_cache": {
+        "cache_hits": 16,
+        "git_objects_read": 0
+      }
+    },
+    "focused_checks_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-focused-checks.json",
+      "sha256": "0e8d0c4d3eed4353177e09d9774ec4252621a3f67b09e0f4fc3af4bc3ce29289",
+      "source_ranges": 83,
+      "source_files": 18,
+      "link_errors": 0,
+      "gfm_files": 12
+    },
+    "verification": "Reviewed all seven fixed-scope formal pages, actual trait and three Mark bindings, UI/RAW, formatter and full tiers, attack modes, held/passive and post-hit mass rollback boundaries, formula and examples, image identity/receipt, glossary, shared maps, reverse weapon page, and root primary deltas. Canonical config and extension draft reflect the required RAW document-not-covered classification. The stale agent package is preserved historical input only. No formal-page issue remains.",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/voltaic_arcs"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/727852d8-6e95-4327-9114-a8b78126a891",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "deathblow",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_178",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_178.png",
+      "attachment": "https://github.com/user-attachments/assets/727852d8-6e95-4327-9114-a8b78126a891",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5986809644",
+      "acquired_date": "2026-10-05",
+      "sha256": "f01de7f9de30fa628e842da57ca28b8cac6ad688af5360e039b4344332c48354",
+      "content_type": "image/png",
+      "size": 5727,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "致命一擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Root viewed public downloaded original128x128; visible pale-gray/white central shape and transparent margin, no detailed icon interpretation used."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 353,
+      "lists": 85,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 83,
+      "source_files": 18,
+      "bindings": 587,
+      "variants": 300,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 18,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 809,
+      "remote_references": 374,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 23,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-022-full-scan.json",
+        "sha256": "858e80014ef3561b83222f46b2b996ed3e3bb4cab6009e84b04d85eb44a9b2ad",
+        "trigger": "round-022"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 67,
+    "not_started_name_groups": 67,
+    "partial_name_groups": 0,
+    "remaining_variants": 305,
+    "remaining_bindings": 598,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "8cb1af4102c82bcbb4bf1ce53252f00df3a19b037ef4bb84f9b0e67d6ef5a6f4"
+  },
+  "previous_local_commit": "7baaf59c232650f58d7c721eaff85f54de0c39e8",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in exact primaryUI metadata scan"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-focused-checks.json",
+      "sha256": "0e8d0c4d3eed4353177e09d9774ec4252621a3f67b09e0f4fc3af4bc3ce29289"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-frozen-source-verification.json",
+      "sha256": "f5385a48a1575177b6913d43a8089a12b6156196b2314cd5e9576e2d795ea9d2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-mass-limit-diff-review.json",
+      "sha256": "cb4f4614ec7b0557c7098858bd0886b361d97160849726fcb3c6961cdbb02752"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-own-tier-diff.json",
+      "sha256": "59e1a1ea3b13c5edce21e196b69ef2e01697091ad5bde4e03da38f973f18ad7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-resume-review.json",
+      "sha256": "2cc4cb9ae2c4d388cd1b2f7fb6555bd68a1f4712333ca562ec4063ed83366c70"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-sweep-keyword-diff-review.json",
+      "sha256": "474b1254b0521e3fdbf31dc2228a8f87cfa163ff622ba9f5f159bee08c6c4959"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-traits-review.json",
+      "sha256": "d5eba620a8292ef9fbf296d8cdbd72f70b6a21d6adf2173f1167310559d30235"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-ui-raw-verification.json",
+      "sha256": "91cb016e89b041b2213fb17fd4aa0e24cd0c9c493f38b0e2dabe1a4870794e2b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-ui-review.json",
+      "sha256": "de5c8eb4c81c0b9221db66b71f70e6c922ecd4f2778851d3bb2f8d8eb177784b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-weakspot-finesse-reuse-review.json",
+      "sha256": "9aeb82e4864287ef85c86f171e7d70b15874872ae4ad147edd40b770c121c55e"
+    }
+  ],
+  "primary_review_method": "Own evidence and actual consumer differences review; reuse fixedSHA Buff held/cache/stat/removal and finesse proof only under current own conditions. Hash check follows applicability/content review.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-config.json",
+    "sha256": "808a55447e612f988e0ba611e434cc6ed25c111879820e02a44ba2eb76160238"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-own-tier-diff.json",
+      "sha256": "59e1a1ea3b13c5edce21e196b69ef2e01697091ad5bde4e03da38f973f18ad7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-ui-review.json",
+      "sha256": "de5c8eb4c81c0b9221db66b71f70e6c922ecd4f2778851d3bb2f8d8eb177784b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-ui-raw-verification.json",
+      "sha256": "91cb016e89b041b2213fb17fd4aa0e24cd0c9c493f38b0e2dabe1a4870794e2b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-image.json",
+      "sha256": "6a36e9b90938f7fe0bf30d3ef2b537381a940910637222312b1a38990435d78f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-sweep-keyword-diff-review.json",
+      "sha256": "474b1254b0521e3fdbf31dc2228a8f87cfa163ff622ba9f5f159bee08c6c4959"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-primary-weakspot-finesse-reuse-review.json",
+      "sha256": "9aeb82e4864287ef85c86f171e7d70b15874872ae4ad147edd40b770c121c55e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-finesse-formula-review.json",
+      "sha256": "3519ed0df43089bde22ccc0392da8063bdc2e6b82d163e08a74b1d37a79a17e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-agent-config.json",
+      "sha256": "6abf068f580c08cd15b5e96c540687f8965d3f01e61f4abe8e3c77c8709db036"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-agent-evidence.json",
+      "sha256": "553283efa0693991783aa0092ca82f92efa37f0bdcc7ee949469a56346bb8fd2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-agent-draft.md",
+      "sha256": "06a730f40a5f2b1a97d93319e371da01ac14996cd60c4fadd7c5f3b8ab82ef9d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-formal-peer-scope.json",
+    "sha256": "98f810a72fb436fa24ddda1bca30691ce156bed2f221eef7443c48b95fc94464",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true
+  },
+  "delivery_preparation": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-group/candidate-formal-preview.md",
+      "sha256": "df735a472d24ae86157367414651a7c87a25ebf50d92a4ff750da9c24bbd0c50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-group/association-snapshot.json",
+      "sha256": "7e3c65a0f033d0ab9c7acf118a4747d4519dafa9552f6203b4a229b838d1c596"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-group/preflight-report.json",
+      "sha256": "61563225a7fed3b7c5e64223103f5c505461837770b4aff7174d9f016919c7f1"
+    }
+  ]
+}

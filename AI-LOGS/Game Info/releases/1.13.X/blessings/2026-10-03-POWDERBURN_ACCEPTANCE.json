@@ -1,0 +1,688 @@
+{
+  "date": "2026-10-06",
+  "blessing": "powderburn",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+    "weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+    "weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+    "weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills"
+  ],
+  "added_binding_count": 5,
+  "total_variants": 4,
+  "total_bindings": 5,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "powderburn",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true,
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-formal-peer-scope.json",
+    "scope_sha256": "8c863ae06cef0250e3690d66b8d0dbdfff549b6ca19d6b336f082bf83d3f1feb",
+    "file_sha256": {
+      "AI Prompt/Blessings-Workflow.md": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef",
+      "AI Prompt/Game-Info-Workflow.md": "5a7c5b7e97186f2c62354267ff0d24010dadf342cb987f4b5b635108d31f94e0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "250c2d48e8152e2f1dd4a5df5c5e5a89c1c2a8b3797f5f423bbe29de09e4a15a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-agent-config.json": "44100ba52c997bec95c58ee11e8185b0b1bf2895995c5a6b4ffe2b90ae4c67d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-agent-draft.md": "a70f9169c5d44f90af7738fea370426d899058bc710cf10bdeb11e2cc37e3aec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-agent-evidence.json": "b641388d6f42cfe0775803da1aad9f79c9861a4c5260401cfd6f66be470e26f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-config.json": "44100ba52c997bec95c58ee11e8185b0b1bf2895995c5a6b4ffe2b90ae4c67d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-extension-draft.json": "7654f833cd6620a6f9e51ef5e1c9c7a1d095a13b7bee3dabf0b3e8af76fd204f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/build_powderburn_package.py": "70837d63c9bcbe342a539d53cb8ec01661e36fa7c07151eb53e018e5979db6e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/blessing-map.json": "81baf81d55dd9f47eff2c8ee3800659dd9746e4f5dacb80b3070d03c0258490c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/remaining-tasks.json": "cdaa949edae04b4e46d09b98ada549fddf8ca7d7313401dcdc1e13b56d83f232",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/source-provenance.json": "bf8c9cf6fafdd590cc197fb5431be136f9479989e014098abec3149bdc7f90d0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/translation-reference.md": "3f1f5564bdb1523355154f2ac2d1a8ffd15740b2c9013a409e233ffc7595e2b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/no-respite-formal-nonauthor-review.json": "1d43fe7ef38092d110ad6d29162423a3eabcd035f74120adf4114a7d26df699b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-action-coverage-review.json": "64a4d262da25b1b4fa9628165b42bfe17fde278f2bc91c867e41bdb7e55f719a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-001.json": "116f20ff1fbd4be06f6f229474de38934b4e4f5934a98437d07d322538039ee4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-002.json": "75a2788828c9a69bb6864f1bc04c88ebd246418b24c24950799792d4826090ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-003.json": "ac842b8f9b7f4d418727c16cce4cfe4e372f0c691a28f9c31e2bed9d580dbee4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-004.json": "337d45f81a1241b100ced75d3d01ce5a246f33cfe87fe36353fc7e77095588df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-005.json": "f3ff2f4b798a93d59ef676737b66c8c3fbd77d31e475e768667a5aa40603a1a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-config.json": "44100ba52c997bec95c58ee11e8185b0b1bf2895995c5a6b4ffe2b90ae4c67d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-draft.md": "a70f9169c5d44f90af7738fea370426d899058bc710cf10bdeb11e2cc37e3aec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-evidence.json": "b641388d6f42cfe0775803da1aad9f79c9861a4c5260401cfd6f66be470e26f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-selfcheck.json": "55769d81d94a235cc9f7b93b1f0062015ad2d008f1be28f17741de541906282c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-narratives.json": "1b08d72f8110129dbe4736ee8efdc243496139d6ef0692fef67be0cec5cff33b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/trickshooter-formal-nonauthor-review.json": "832c16a49e6ac80d72e22bb4a205ae85cebe6a647ff91a84da73f06fa865ddd3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-image.json": "c25d22f025fc3a4b9cba89f3ead1564a3682e3e315f75db3fbeaae8218169bc2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-actual-zero-backblast-vs-burning-damage-difference-review.json": "a443357a3eeeee8fefd57f4308cc43b31cac6c5103952ac8bbea188ee01c33ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-final-content-delta-review.json": "9a77325a5ad0c5be6bfcf798ba5aad0cced3ad19328079d3b6e63114ecb23f7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-focused-checks.json": "f4f15451ca2bca194da690e3954d6a5d8476a0c46bff9a99cff3c6d94b065f3d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-frozen-source-verification.json": "f313811155d86bc4bd23ed5b7c3530682d5dd43e9ebd1ae28553b7788a8e251c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-own-tier-wrapper-close-kill-material-review.json": "bac818a2d86ccd926cba9ca47a0262016b50703f1404ec3394556913e9805168",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-raw-trigger-signed-formatter-material-review.json": "af7c4b4c58ce40f7c9ef13807ed194bbd6a2682f4ee5e534294f2085f27c5e4d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-resume-review.json": "584d29e5bc1e388a4ea52bb9b809ae645875722cb5735bc18f3fab4d075d779f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-traits-review.json": "25d342b8757c09256344a9d876c32a90bbb5bfedaec7516540c851750f2ba030",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-ui-raw-verification.json": "5f8ef2a1e01a853f2e95a589f2ed90f7fa3f4647b2da881189c6496762368380",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-ui-review.json": "4e750e6c4261849f3ea2b5916658240d2096ad3c52ddf24e9e53c39243cacbf5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL.md": "46d7f35910449cf224692084f7f991148576d0cf88c158ffa732f30e9d1b27e7",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-raw-verification.json": "1e38e4767eec1994eede853c66e3fd8f2f12193f08c70d5159f5c76221b7ee3a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "addd10e597a2ffa0209ba5a924148d74a72fa8b86876a559258826c5edd345a6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/DAMAGE_PERCENTAGE_REVIEW.md": "b74b456426ace0557251723b0db61d6cfa6815887b5f1ad8ba78a3d97ac3f734",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/LOCALIZATION_COMPARISON.md": "1740502c50f13cee36a0832a1400cc84fbb191f72a31887f43a856662a6e8be7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/README.md": "fccd3ddaa832103b4a0f087d2688b9cf16843e45f255c479c4edcc79e1aa666a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/SOURCE_INDEX.md": "dc272efd24d58295f7b9fa52821434ab2f8ebed6e45e34bb3df5923a838229af",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/TIER_VALUES.md": "1a662774572505b157bcab7ec63eafdfb42c4969e80460c0823627d9146827ea",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/WEAPON_COMPATIBILITY.md": "ef7aae94f648388c45d9bbeb7aa6e8c47bd6bfa771010277354c555a983dd36e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md": "faf3e5579915455bec9af6671b18fce0653f1d7f9d25b5c2d33308e38922dfcf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills.md": "053ed476f526d024c484ef32e5da6ef0d1244fd1c0de76f0270357780d208733",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md": "0c61e979b733464c403c33f0938bb06e73113e02ecb6dd18016755d802e4eb57",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills.md": "842d4cc9de114ec673f4f0e06a754990f8d10a12661aec0d805fbfe2b2467c4f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/ranged/README.md": "64f251b9927ff7ec771895cae2e0bdcc2896fe9cfb5b3ffdd15e484e3901f99a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "f476f4e766fdc589c31e6e6efd01890a91aee8f0cd80c0b4fb1ead88228688f7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8f92db8fb0d891d6143881064314b645a9fff5cb008ac87d5797e7cf1db55b47",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "1316019e756a9cd6d170e463751e1c50bbc6cda196f30bfd43fedd62623bfe5e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "623e1714f64e530da3384afc1858b952b68980cb238cda4cf7de8544594fbbc7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md": "546d358fb74840cb96af45c41a44c1be5cafeabf6b467f5f87178e1fbba26e0d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "21ad42777e27432206fdc3495d8115191eb11c98c30fc5689149773641880557",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/own-association-snapshot.json": "ad90313f4de64cfdb52f9adba853718ed01c0712b7bebcd4b01f8e3126b5ea4e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/actual-preview-005/Referneces/Translation.md": "929ebfda09924433019b9495d130e95ac6f1c0444349277005dc16fd65a35390",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "addd10e597a2ffa0209ba5a924148d74a72fa8b86876a559258826c5edd345a6",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/DAMAGE_PERCENTAGE_REVIEW.md": "b74b456426ace0557251723b0db61d6cfa6815887b5f1ad8ba78a3d97ac3f734",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/LOCALIZATION_COMPARISON.md": "1740502c50f13cee36a0832a1400cc84fbb191f72a31887f43a856662a6e8be7",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/README.md": "fccd3ddaa832103b4a0f087d2688b9cf16843e45f255c479c4edcc79e1aa666a",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/SOURCE_INDEX.md": "dc272efd24d58295f7b9fa52821434ab2f8ebed6e45e34bb3df5923a838229af",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/TIER_VALUES.md": "1a662774572505b157bcab7ec63eafdfb42c4969e80460c0823627d9146827ea",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/WEAPON_COMPATIBILITY.md": "ef7aae94f648388c45d9bbeb7aa6e8c47bd6bfa771010277354c555a983dd36e",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md": "faf3e5579915455bec9af6671b18fce0653f1d7f9d25b5c2d33308e38922dfcf",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills.md": "053ed476f526d024c484ef32e5da6ef0d1244fd1c0de76f0270357780d208733",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md": "0c61e979b733464c403c33f0938bb06e73113e02ecb6dd18016755d802e4eb57",
+      "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills.md": "842d4cc9de114ec673f4f0e06a754990f8d10a12661aec0d805fbfe2b2467c4f",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "64f251b9927ff7ec771895cae2e0bdcc2896fe9cfb5b3ffdd15e484e3901f99a",
+      "Game Info/releases/1.13.X/blessings/README.md": "f476f4e766fdc589c31e6e6efd01890a91aee8f0cd80c0b4fb1ead88228688f7",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8f92db8fb0d891d6143881064314b645a9fff5cb008ac87d5797e7cf1db55b47",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "1316019e756a9cd6d170e463751e1c50bbc6cda196f30bfd43fedd62623bfe5e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "623e1714f64e530da3384afc1858b952b68980cb238cda4cf7de8544594fbbc7",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md": "546d358fb74840cb96af45c41a44c1be5cafeabf6b467f5f87178e1fbba26e0d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "21ad42777e27432206fdc3495d8115191eb11c98c30fc5689149773641880557",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/extraction_summary.json": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "Referneces/Translation.md": "929ebfda09924433019b9495d130e95ac6f1c0444349277005dc16fd65a35390"
+    },
+    "canonical_config_sha256": "44100ba52c997bec95c58ee11e8185b0b1bf2895995c5a6b4ffe2b90ae4c67d9",
+    "formal_own_markdown_count": 10,
+    "formal_and_actual_preview": {
+      "receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-005.json",
+      "receipt_sha256": "f3ff2f4b798a93d59ef676737b66c8c3fbd77d31e475e768667a5aa40603a1a0",
+      "all_10_own_markdown_pages_byte_identical": true,
+      "pages": [
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/DAMAGE_PERCENTAGE_REVIEW.md",
+          "sha256": "b74b456426ace0557251723b0db61d6cfa6815887b5f1ad8ba78a3d97ac3f734",
+          "preview_sha256": "b74b456426ace0557251723b0db61d6cfa6815887b5f1ad8ba78a3d97ac3f734",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/LOCALIZATION_COMPARISON.md",
+          "sha256": "1740502c50f13cee36a0832a1400cc84fbb191f72a31887f43a856662a6e8be7",
+          "preview_sha256": "1740502c50f13cee36a0832a1400cc84fbb191f72a31887f43a856662a6e8be7",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/README.md",
+          "sha256": "fccd3ddaa832103b4a0f087d2688b9cf16843e45f255c479c4edcc79e1aa666a",
+          "preview_sha256": "fccd3ddaa832103b4a0f087d2688b9cf16843e45f255c479c4edcc79e1aa666a",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/SOURCE_INDEX.md",
+          "sha256": "dc272efd24d58295f7b9fa52821434ab2f8ebed6e45e34bb3df5923a838229af",
+          "preview_sha256": "dc272efd24d58295f7b9fa52821434ab2f8ebed6e45e34bb3df5923a838229af",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/TIER_VALUES.md",
+          "sha256": "1a662774572505b157bcab7ec63eafdfb42c4969e80460c0823627d9146827ea",
+          "preview_sha256": "1a662774572505b157bcab7ec63eafdfb42c4969e80460c0823627d9146827ea",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/WEAPON_COMPATIBILITY.md",
+          "sha256": "ef7aae94f648388c45d9bbeb7aa6e8c47bd6bfa771010277354c555a983dd36e",
+          "preview_sha256": "ef7aae94f648388c45d9bbeb7aa6e8c47bd6bfa771010277354c555a983dd36e",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+          "sha256": "faf3e5579915455bec9af6671b18fce0653f1d7f9d25b5c2d33308e38922dfcf",
+          "preview_sha256": "faf3e5579915455bec9af6671b18fce0653f1d7f9d25b5c2d33308e38922dfcf",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+          "sha256": "053ed476f526d024c484ef32e5da6ef0d1244fd1c0de76f0270357780d208733",
+          "preview_sha256": "053ed476f526d024c484ef32e5da6ef0d1244fd1c0de76f0270357780d208733",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+          "sha256": "0c61e979b733464c403c33f0938bb06e73113e02ecb6dd18016755d802e4eb57",
+          "preview_sha256": "0c61e979b733464c403c33f0938bb06e73113e02ecb6dd18016755d802e4eb57",
+          "byte_identical": true
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/火藥灼傷/weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills.md",
+          "sha256": "842d4cc9de114ec673f4f0e06a754990f8d10a12661aec0d805fbfe2b2467c4f",
+          "preview_sha256": "842d4cc9de114ec673f4f0e06a754990f8d10a12661aec0d805fbfe2b2467c4f",
+          "byte_identical": true
+        }
+      ]
+    },
+    "verification": {
+      "all_fixed_scope_hashes_match": true,
+      "fixed_scope_file_count": 95,
+      "global_binding_partition_and_uniqueness": "confirmed by the frozen actual preview and current associated map/reverse pages in scope",
+      "focused_source_links_gfm_and_whitespace": "actual preview checks passed; formal hashes match preview",
+      "variants": 4,
+      "bindings": 5,
+      "ui_and_raw": "actual five bindings verified; RAW EN/ZH paired hashes and icon 129 receipt are included in fixed scope",
+      "image": {
+        "path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-image.json",
+        "sha256": "c25d22f025fc3a4b9cba89f3ead1564a3682e3e315f75db3fbeaae8218169bc2",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_129",
+        "attachment": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+        "public_status": 200,
+        "sha256_verified": true,
+        "display_verified": true,
+        "dimensions": [
+          128,
+          128
+        ]
+      }
+    },
+    "content_review": [
+      "Own four I–IV implementations/wrappers, values, formatter substitutions, five binding intersection, outside metadata boundary, and image 129 match the fixed primary receipts and generated pages.",
+      "The close-range-kill gate requires a died result, ranged attack or count_as_ranged_attack profile, matching held item, an available hit position, and inclusive 12.5 m distance measured from the attacker position when the event is processed; no unsupported elite/breed restriction is added.",
+      "The two-second single window refreshes on qualifying kills, permits refresh while active, and does not stack. Damage is evaluated after its event/cache update; no retroactive bonus is claimed for the triggering hit.",
+      "The target damage addition is sampled only if the target is suppressed when that damage is calculated. The candidate example correctly distinguishes the +20 input from its relative 18.18% increase over 110 and does not state a fixed final HP percentage.",
+      "The phosphor pistol Mk XI special sweep and follow-up sweep do not meet the ranged close-kill trigger; generic damage_vs_suppressed can still be sampled on held eligible damage paths. Its actual backblast has attack power 0, impact 1, and no target override with a zero minimum damage floor, so this bonus does not create HP damage there; the separate burning buff profile has nonzero attack power 20 and may benefit per tick only under the stated suppression/active/held conditions.",
+      "The four actual shotgun P4 bindings use ranged pellet attacks; special loading itself does not attack, and subsequent fired pellets remain ranged. No charged attack is invented for the bound variants.",
+      "The Chinese RAW phrase “近戰擊殺後” conflicts with the implementation’s ranged-or-count_as_ranged_attack kill gate; the explicit localization erratum preserves the RAW. The signed recoil values also yield a double-negative phrase such as “後坐力減少-28%”; the documentation preserves the formatter output and explains the actual stat direction. English Close Range Kill omits attack type and is classified as omitted implementation detail, not an English contradiction.",
+      "Formal pages, including all four trait pages, are byte-identical to the passed actual preview. The fixed review scope and every listed content hash remained unchanged."
+    ],
+    "limitations": "This review checks the frozen 1.13.1 source/configuration and the exact preview/formal package; examples are conditional calculations, not gameplay measurements.",
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "powderburn",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_129",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_129.png",
+      "attachment": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6007357942",
+      "acquired_date": "2026-10-06",
+      "sha256": "6007a357cceb1cca052c94eebe7a470598848b992e338e3adba5ca0d9a9ebdcb",
+      "content_type": "image/png",
+      "size": 6365,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "火藥灼傷祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": "Root viewed the actual public downloaded128x128 original: pale gray/white native icon composition with central horizontal shapes and lower curved outlines; no error-page text or unrelated screenshot. Original artwork retained."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 17,
+      "rows": 549,
+      "lists": 94,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 76,
+      "source_files": 37,
+      "bindings": 984,
+      "variants": 506,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 37,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1300,
+      "remote_references": 527,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 40,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-039-full-scan.json",
+        "sha256": "18cb5727b7203513db5ac5bcc20329e9deaf208f3aefbf4652ac2bb7c517e601",
+        "trigger": "round-039"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 18,
+    "not_started_name_groups": 18,
+    "partial_name_groups": 0,
+    "remaining_variants": 99,
+    "remaining_bindings": 201,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "95f01a5836bdcf420c075b8a3bc294dcd2ba2d471ab4a42a5073bf4e3f43df5c"
+  },
+  "previous_local_commit": "33f292c4aa4673ce1e5a934aa69b7a6cebb06f05",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "item": "content/items/traits/bespoke_dual_stubpistols_p1/recoil_reduction_and_suppression_increase_on_close_kills",
+        "trait": "weapon_trait_bespoke_dual_stubpistols_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+        "restriction": [
+          "dual_stubpistols_p1"
+        ]
+      }
+    ],
+    "status": "Exact-name outside item is metadata-only with dual_stubpistols_p1 restriction and is excluded because it is not in current inventory name-key binding intersection; actual scope remains four implementations/five bindings."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-actual-zero-backblast-vs-burning-damage-difference-review.json",
+      "sha256": "a443357a3eeeee8fefd57f4308cc43b31cac6c5103952ac8bbea188ee01c33ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-final-content-delta-review.json",
+      "sha256": "9a77325a5ad0c5be6bfcf798ba5aad0cced3ad19328079d3b6e63114ecb23f7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-focused-checks.json",
+      "sha256": "f4f15451ca2bca194da690e3954d6a5d8476a0c46bff9a99cff3c6d94b065f3d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-frozen-source-verification.json",
+      "sha256": "f313811155d86bc4bd23ed5b7c3530682d5dd43e9ebd1ae28553b7788a8e251c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-own-tier-wrapper-close-kill-material-review.json",
+      "sha256": "bac818a2d86ccd926cba9ca47a0262016b50703f1404ec3394556913e9805168"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-raw-trigger-signed-formatter-material-review.json",
+      "sha256": "af7c4b4c58ce40f7c9ef13807ed194bbd6a2682f4ee5e534294f2085f27c5e4d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-resume-review.json",
+      "sha256": "584d29e5bc1e388a4ea52bb9b809ae645875722cb5735bc18f3fab4d075d779f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-traits-review.json",
+      "sha256": "25d342b8757c09256344a9d876c32a90bbb5bfedaec7516540c851750f2ba030"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-ui-raw-verification.json",
+      "sha256": "5f8ef2a1e01a853f2e95a589f2ed90f7fa3f4647b2da881189c6496762368380"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-ui-review.json",
+      "sha256": "4e750e6c4261849f3ea2b5916658240d2096ad3c52ddf24e9e53c39243cacbf5"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-config.json",
+    "sha256": "44100ba52c997bec95c58ee11e8185b0b1bf2895995c5a6b4ffe2b90ae4c67d9"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI Prompt/Blessings-Workflow.md",
+      "sha256": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef"
+    },
+    {
+      "path": "AI Prompt/Game-Info-Workflow.md",
+      "sha256": "5a7c5b7e97186f2c62354267ff0d24010dadf342cb987f4b5b635108d31f94e0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL.md",
+      "sha256": "46d7f35910449cf224692084f7f991148576d0cf88c158ffa732f30e9d1b27e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "250c2d48e8152e2f1dd4a5df5c5e5a89c1c2a8b3797f5f423bbe29de09e4a15a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-own-tier-wrapper-close-kill-material-review.json",
+      "sha256": "bac818a2d86ccd926cba9ca47a0262016b50703f1404ec3394556913e9805168"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-raw-trigger-signed-formatter-material-review.json",
+      "sha256": "af7c4b4c58ce40f7c9ef13807ed194bbd6a2682f4ee5e534294f2085f27c5e4d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-ui-review.json",
+      "sha256": "4e750e6c4261849f3ea2b5916658240d2096ad3c52ddf24e9e53c39243cacbf5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-ui-raw-verification.json",
+      "sha256": "5f8ef2a1e01a853f2e95a589f2ed90f7fa3f4647b2da881189c6496762368380"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-image.json",
+      "sha256": "c25d22f025fc3a4b9cba89f3ead1564a3682e3e315f75db3fbeaae8218169bc2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-action-coverage-review.json",
+      "sha256": "64a4d262da25b1b4fa9628165b42bfe17fde278f2bc91c867e41bdb7e55f719a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-narratives.json",
+      "sha256": "1b08d72f8110129dbe4736ee8efdc243496139d6ef0692fef67be0cec5cff33b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/build_powderburn_package.py",
+      "sha256": "70837d63c9bcbe342a539d53cb8ec01661e36fa7c07151eb53e018e5979db6e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-config.json",
+      "sha256": "44100ba52c997bec95c58ee11e8185b0b1bf2895995c5a6b4ffe2b90ae4c67d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-draft.md",
+      "sha256": "a70f9169c5d44f90af7738fea370426d899058bc710cf10bdeb11e2cc37e3aec"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/extraction_summary.json",
+      "sha256": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-selfcheck.json",
+      "sha256": "55769d81d94a235cc9f7b93b1f0062015ad2d008f1be28f17741de541906282c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/remaining-tasks.json",
+      "sha256": "cdaa949edae04b4e46d09b98ada549fddf8ca7d7313401dcdc1e13b56d83f232",
+      "original_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+      "original_sha256": "cdaa949edae04b4e46d09b98ada549fddf8ca7d7313401dcdc1e13b56d83f232",
+      "captured_head": "33f292c4aa4673ce1e5a934aa69b7a6cebb06f05"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/translation-reference.md",
+      "sha256": "3f1f5564bdb1523355154f2ac2d1a8ffd15740b2c9013a409e233ffc7595e2b8",
+      "original_path": "Referneces/Translation.md",
+      "original_sha256": "3f1f5564bdb1523355154f2ac2d1a8ffd15740b2c9013a409e233ffc7595e2b8",
+      "captured_head": "33f292c4aa4673ce1e5a934aa69b7a6cebb06f05"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/blessing-map.json",
+      "sha256": "81baf81d55dd9f47eff2c8ee3800659dd9746e4f5dacb80b3070d03c0258490c",
+      "original_path": "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "original_sha256": "81baf81d55dd9f47eff2c8ee3800659dd9746e4f5dacb80b3070d03c0258490c",
+      "captured_head": "33f292c4aa4673ce1e5a934aa69b7a6cebb06f05"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/frozen-inputs/source-provenance.json",
+      "sha256": "bf8c9cf6fafdd590cc197fb5431be136f9479989e014098abec3149bdc7f90d0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-actual-zero-backblast-vs-burning-damage-difference-review.json",
+      "sha256": "a443357a3eeeee8fefd57f4308cc43b31cac6c5103952ac8bbea188ee01c33ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-005.json",
+      "sha256": "f3ff2f4b798a93d59ef676737b66c8c3fbd77d31e475e768667a5aa40603a1a0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "f476f4e766fdc589c31e6e6efd01890a91aee8f0cd80c0b4fb1ead88228688f7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "8f92db8fb0d891d6143881064314b645a9fff5cb008ac87d5797e7cf1db55b47"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "addd10e597a2ffa0209ba5a924148d74a72fa8b86876a559258826c5edd345a6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "b74b456426ace0557251723b0db61d6cfa6815887b5f1ad8ba78a3d97ac3f734"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\LOCALIZATION_COMPARISON.md",
+      "sha256": "1740502c50f13cee36a0832a1400cc84fbb191f72a31887f43a856662a6e8be7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\README.md",
+      "sha256": "fccd3ddaa832103b4a0f087d2688b9cf16843e45f255c479c4edcc79e1aa666a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\SOURCE_INDEX.md",
+      "sha256": "dc272efd24d58295f7b9fa52821434ab2f8ebed6e45e34bb3df5923a838229af"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\TIER_VALUES.md",
+      "sha256": "1a662774572505b157bcab7ec63eafdfb42c4969e80460c0823627d9146827ea"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\WEAPON_COMPATIBILITY.md",
+      "sha256": "ef7aae94f648388c45d9bbeb7aa6e8c47bd6bfa771010277354c555a983dd36e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "sha256": "faf3e5579915455bec9af6671b18fce0653f1d7f9d25b5c2d33308e38922dfcf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "sha256": "053ed476f526d024c484ef32e5da6ef0d1244fd1c0de76f0270357780d208733"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "sha256": "0c61e979b733464c403c33f0938bb06e73113e02ecb6dd18016755d802e4eb57"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\火藥灼傷\\weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "sha256": "842d4cc9de114ec673f4f0e06a754990f8d10a12661aec0d805fbfe2b2467c4f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "64f251b9927ff7ec771895cae2e0bdcc2896fe9cfb5b3ffdd15e484e3901f99a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\撕裂者自動手槍\\README.md",
+      "sha256": "1316019e756a9cd6d170e463751e1c50bbc6cda196f30bfd43fedd62623bfe5e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\滅絕者霰彈槍\\README.md",
+      "sha256": "623e1714f64e530da3384afc1858b952b68980cb238cda4cf7de8544594fbbc7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\磷光爆破手槍\\README.md",
+      "sha256": "546d358fb74840cb96af45c41a44c1be5cafeabf6b467f5f87178e1fbba26e0d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\雙持自動手槍\\README.md",
+      "sha256": "21ad42777e27432206fdc3495d8115191eb11c98c30fc5689149773641880557"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "929ebfda09924433019b9495d130e95ac6f1c0444349277005dc16fd65a35390"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-raw-verification.json",
+      "sha256": "1e38e4767eec1994eede853c66e3fd8f2f12193f08c70d5159f5c76221b7ee3a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\powderburn-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "ad90313f4de64cfdb52f9adba853718ed01c0712b7bebcd4b01f8e3126b5ea4e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/no-respite-formal-nonauthor-review.json",
+      "sha256": "1d43fe7ef38092d110ad6d29162423a3eabcd035f74120adf4114a7d26df699b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-001.json",
+      "sha256": "116f20ff1fbd4be06f6f229474de38934b4e4f5934a98437d07d322538039ee4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-002.json",
+      "sha256": "75a2788828c9a69bb6864f1bc04c88ebd246418b24c24950799792d4826090ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-003.json",
+      "sha256": "ac842b8f9b7f4d418727c16cce4cfe4e372f0c691a28f9c31e2bed9d580dbee4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-actual-preview-receipt-004.json",
+      "sha256": "337d45f81a1241b100ced75d3d01ce5a246f33cfe87fe36353fc7e77095588df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/powderburn-agent-evidence.json",
+      "sha256": "b641388d6f42cfe0775803da1aad9f79c9861a4c5260401cfd6f66be470e26f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-group/trickshooter-formal-nonauthor-review.json",
+      "sha256": "832c16a49e6ac80d72e22bb4a205ae85cebe6a647ff91a84da73f06fa865ddd3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-agent-config.json",
+      "sha256": "44100ba52c997bec95c58ee11e8185b0b1bf2895995c5a6b4ffe2b90ae4c67d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-agent-evidence.json",
+      "sha256": "b641388d6f42cfe0775803da1aad9f79c9861a4c5260401cfd6f66be470e26f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-agent-draft.md",
+      "sha256": "a70f9169c5d44f90af7738fea370426d899058bc710cf10bdeb11e2cc37e3aec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-final-content-delta-review.json",
+      "sha256": "9a77325a5ad0c5be6bfcf798ba5aad0cced3ad19328079d3b6e63114ecb23f7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-frozen-source-verification.json",
+      "sha256": "f313811155d86bc4bd23ed5b7c3530682d5dd43e9ebd1ae28553b7788a8e251c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-primary-traits-review.json",
+      "sha256": "25d342b8757c09256344a9d876c32a90bbb5bfedaec7516540c851750f2ba030"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/powderburn-formal-peer-scope.json",
+    "sha256": "8c863ae06cef0250e3690d66b8d0dbdfff549b6ca19d6b336f082bf83d3f1feb",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}

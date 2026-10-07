@@ -1,0 +1,589 @@
+{
+  "date": "2026-10-06",
+  "blessing": "blazing-spirit-warpfire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits",
+    "weapon_trait_bespoke_forcestaff_p4_warp_burninating_on_crits",
+    "weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 3,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "blazing-spirit-warpfire",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-formal-peer-scope.json",
+    "scope_sha256": "8be26a086de45d8b252d3d5c7ea4b406734f7fa824c991b258bac51586976bc1",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "formal_acceptance": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-primary-native-first-tick-sticky-delta-review.json": "f0d28faafb175db1f8f0c29760d80bfa06aac4b55ac574c7a0cd78e60a2be785",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-primary-own-tier-wrapper-target-cap-delta-review.json": "dcfdb6d99385ab57914a72e60fb86dc917b8bbfa072226cc801b9e4c39130d05",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-agent-config.json": "208375b0c76efeb8601c9888312a1d8f355b67bf99a96b9d0319b1ff5beb402e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-agent-draft.md": "a63f44d456d3703dd5ed07a196ca015931ad7c3e0dd9d41e2ba25161c59671ef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-agent-evidence.json": "f6a2ab86976ab718a7d9c41811a7fd7498134e6767b05267f1e0c431a57adf8b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-config.json": "208375b0c76efeb8601c9888312a1d8f355b67bf99a96b9d0319b1ff5beb402e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-extension-draft.json": "4a0aab13d2e99d97acd77e278ad1a8d690b7d2c1a0b7abe9ab41195e5cb26094",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/association.json": "bbf1cd0fbf6502b26208b98f28cb48da7a86ecc2e38540f33bcf0ae4b2be6d71",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-001.json": "6282a92579552cacdfa7b36670d23bb3e7f2b83247b0869f5b377f029fe492fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-002.json": "535d6522eacf7dc860c0f28df02f03e5353b550157533ebe111f7b228dd2d7dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-003.json": "3be67d3d4d9522610d3e6fca39417b1ba386f6a7ab9c6b6984852c1771a73cc7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-004.json": "06a05959df81166f2cd4ed1d76b7e7cb30ff4c7a472b0af27959b732bcf23810",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-config.json": "208375b0c76efeb8601c9888312a1d8f355b67bf99a96b9d0319b1ff5beb402e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-draft.md": "a63f44d456d3703dd5ed07a196ca015931ad7c3e0dd9d41e2ba25161c59671ef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-evidence-before-queue-path-fix.json": "a7ed416335d577c3bb0edeb6f474642daaff94ea1123ebf7d3b619e647f983be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-evidence.json": "f6a2ab86976ab718a7d9c41811a7fd7498134e6767b05267f1e0c431a57adf8b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-coverage.json": "dc8b6b44cf7de3231d5be0cc4f76621412dd6a9c243d3f7eaf8e428484eea3c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-selfcheck-before-queue-path-fix.json": "7fc87031ecadc18d6892e6bb87fe5f8f5781da5c7b61cbe065d4aaf1ae09e01f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-selfcheck.json": "eb731d29779c6ff387609518b30404ba76aadaf34b497a4b30213f9437093a4d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/build_package.py": "630a0e12d56a86572ace87ceb02e812c6141a1f110ddd633f06794cfbfddc990",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/draft.md": "a63f44d456d3703dd5ed07a196ca015931ad7c3e0dd9d41e2ba25161c59671ef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/examples.txt": "2e55022978b8ea19ba40bdfce48660acedd1ef3b3a8397399da50639620b4f2a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/finalize_package.py": "847ef5fc744709e4374c8a32ca42de9b857d9acbef1e402765290a0c6d1c66ed",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/inputs/remaining-tasks-input-before-root-generation.json": "58729ef786a7395f7d240269e6a0c442273b14125f84e1642abe15dc4848875b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/inputs/sitecustomize.py": "d8a3b2990a8d095d4af4476d9c0ceb973d321eddfc0048525a7cab1f76395fee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/math.txt": "2d12a086ddb19a0da7939cb3603637440009b803192b90d5b8d238c4d0eae40e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/mechanism.txt": "c34534f6d321cab33c123b2fc842971c861aa109e44d9aa4c582c0a7d75eaa7e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/package-text.json": "7698e54f509d68d0858c48114ae40fbdfb053213d52483a4d7c7c98d88302daa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/player.txt": "14969db8e2e30d01362fe40d8c76208c9cfb3b4622791ad8e166b8997faf590d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/reconstruction.txt": "ae61aa0d5faa1d4a160f6c94ce8afc44be6ee8d9cad154e8f984363a27529575",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/review.txt": "fddd9c63a44349d2ad7a943e2ca6ab7662a427a351900b51410addb7d33a6678",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-image.json": "84d48ee2c9e5c4795f36662160e506401bfcd90cee027e96404be5a97644100b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-final-content-review.json": "f143e4e88bdea77569a66e1867925a00c230ea5663cf00d85bda01f4c610d517",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-focused-checks.json": "cd2381a69309b38dbd1db62192fea9c16eebd20809d67da6045b40afa4bf5a40",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-formal-author-preview-equality-review.json": "b7937a8b575f1da47f070b630291d2f98d03f5aca904df41c555a44780caf740",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-frozen-source-verification.json": "7b45951bfd10fe00027c37c11c30f7c9a824c7c4e90855f94b04ad5fef86cf7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-map-before.json": "373645a94f980734a77774a0c354240508314adffc385d49fe621a48c058037e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-map-input-line-ending-equivalence-review.json": "8b04e860e4650728825ca8b2ad293ea08d0baaf751f7833d0635333fd2e2ed41",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-native-staff-and-push-delta-review.json": "c1bed28aba5e2ad66245eb08ffd9f31f713641dc1fbcec0564e072de8aed5851",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-own-tier-wrapper-material-delta-review.json": "ae56dc03269f27527f6b81c201fca6a26e6b45a6f0e6c9e6fa88fd00b60146df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-resume-review.json": "897c77dedbcdfed0357a622d166cb5f768d300ed9d40d55d1a90d61f3dca7fd5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-traits-review.json": "7329dc591c8e0ed2810c8761438081e4523d40781e48aace4adb042ae73072b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-ui-raw-verification.json": "9435b00afce140b953f8a68a216dde701028bb4e0cad99d504211f57a1d6987f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-ui-review.json": "083cc6a1f0c21643ab98e5b987e3dfd63de503eb780582d8d1cefd1a405466a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-native-critical-snapshot-consumer-delta-review.json": "dada2247321cb7d032c8d3d75bdb0e679aa775225993e079b1ee86533633d9fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-two-mark-native-special-difference-review.json": "de893216da4a77907dd1d200cded59fa4d66e25bab0f24e7e0b856f1dc88f75d",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-raw-verification.json": "fe823090a99c7aa8ec1d5a87859db14ac4ce4b52dc93ebc69b1a80103e44a47e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "61824cb56493d56031bdb4f7b8f6b44f886f61b7deec85554176dc395eca2a39",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/DAMAGE_PERCENTAGE_REVIEW.md": "6ea1866187ce6bb4f4c926c9ffcd41307c8e82d6517ec971fec9da9edfdf7e81",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/LOCALIZATION_COMPARISON.md": "f2cc4e1a2acecae475adaa459c7175428d447d82d9970a8de32114a37f55b2b9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/README.md": "200660d5ee29f69740a35f47e40dedce1752ba6ccb16236c54353dd4830164d0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/SOURCE_INDEX.md": "7f0ee1f8dd1859a27554fe671520db8c1ae741d23706e9326e5e0475a39da1f1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/TIER_VALUES.md": "f18b8ec23bf1eb6b74f5fd5a611eb532856cc75a049cf80fa76bd1925bb6b63d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/WEAPON_COMPATIBILITY.md": "57dcac8b1373d4b05415651c0c5f6fa6e44e4fd68f90f2f6d800a6dffd842496",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits.md": "6a1b643dffdd8d5f6cb82b336b555d137528a9a7c16bf7eaa0676ac6a85d9dca",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcestaff_p4_warp_burninating_on_crits.md": "0af65284bbc9bcaad6687003dcd4a776c9b069d1861ef456be287ce865e6d740",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit.md": "6dac2b4c8320da070589756064337c8fa6a6264497dec8e03046b2666d4a5e53",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/actual-preview-004/own-association-snapshot.json": "ebe405ab9418c9ca517362bc8e3f5ebe10ba3a52c4c9358877efdfa24eb437bd",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "61824cb56493d56031bdb4f7b8f6b44f886f61b7deec85554176dc395eca2a39",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/DAMAGE_PERCENTAGE_REVIEW.md": "6ea1866187ce6bb4f4c926c9ffcd41307c8e82d6517ec971fec9da9edfdf7e81",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/LOCALIZATION_COMPARISON.md": "f2cc4e1a2acecae475adaa459c7175428d447d82d9970a8de32114a37f55b2b9",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/README.md": "200660d5ee29f69740a35f47e40dedce1752ba6ccb16236c54353dd4830164d0",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/SOURCE_INDEX.md": "7f0ee1f8dd1859a27554fe671520db8c1ae741d23706e9326e5e0475a39da1f1",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/TIER_VALUES.md": "f18b8ec23bf1eb6b74f5fd5a611eb532856cc75a049cf80fa76bd1925bb6b63d",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/WEAPON_COMPATIBILITY.md": "57dcac8b1373d4b05415651c0c5f6fa6e44e4fd68f90f2f6d800a6dffd842496",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits.md": "6a1b643dffdd8d5f6cb82b336b555d137528a9a7c16bf7eaa0676ac6a85d9dca",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcestaff_p4_warp_burninating_on_crits.md": "0af65284bbc9bcaad6687003dcd4a776c9b069d1861ef456be287ce865e6d740",
+      "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit.md": "6dac2b4c8320da070589756064337c8fa6a6264497dec8e03046b2666d4a5e53",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "b9eafb541190ecb0fc16c8fd6975bf71c66212c032570c9e4b03308129ff4d1e",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "523414ac7b432f29d8c740efa3e4aa3c8d3ffd0c72c5ded6727b53731f4d789c",
+      "Game Info/releases/1.13.X/blessings/README.md": "fee321be2fe8029ce93040dafdcb755f1c5c6462cca0d2cbd3e87a55918ac067",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "9f3cad891adc5c961781f3559af4279643ab23ebf123679c54a14da1f2402473",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "88a5b369de161e4794a17744874adbc419da5ceadb002d2ffacb14293cf3ad0b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "ebbaf62232c65a237e77493b18f37dc4f77fa110af22501bca23a76f05035393",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "f130f5ce40e92fb8863954f68e38ec4f60a8b3915c78f4950c3f4c98a1376358",
+      "Referneces/Translation.md": "c482548c0ed1c3212a5394d477810af62bc9d06e0dc86e3be2f75401bc75b1a8"
+    },
+    "reused_prior_content_review": {
+      "scope_sha256": "16b4504484b994f4c44f7e91facd5b45ccc0326ce5f08c496da2c527f85ee757",
+      "final_content_review_sha256": "f143e4e88bdea77569a66e1867925a00c230ea5663cf00d85bda01f4c610d517",
+      "applies_to": "All unchanged gameplay, tiers, bindings, RAW reconstruction, examples, lifecycle, shared warp_fire/WarpSlice proofs, image and reverse associations; new review is limited to corrected comparison-page punctuation and frozen-input metadata."
+    },
+    "delta_review": {
+      "author_preview_equality_review_sha256": "b7937a8b575f1da47f070b630291d2f98d03f5aca904df41c555a44780caf740",
+      "actual_preview_receipt_sha256": "06a05959df81166f2cd4ed1d76b7e7cb30ff4c7a472b0af27959b732bcf23810",
+      "changed_page": "Game Info/releases/1.13.X/blessings/entries/燃燒靈魂（靈能法杖與雙手力場劍）/LOCALIZATION_COMPARISON.md",
+      "verified_changes": [
+        "Reconstruction note is now one bullet: - 各級使用相同描述句型；依格式參數重建，並非遊戲畫面。",
+        "The trigger-route source list now uses a semicolon separator after Attack._handle_buffs range; the erroneous 。； sequence is gone.",
+        "All nine current formal pages equal actual-preview-004 output; eight own pages are byte-identical to the prior formal version."
+      ]
+    },
+    "metadata_snapshot_review": {
+      "line_ending_proof_sha256": "8b04e860e4650728825ca8b2ad293ea08d0baaf751f7833d0635333fd2e2ed41",
+      "immutable_queue_sha256": "58729ef786a7395f7d240269e6a0c442273b14125f84e1642abe15dc4848875b",
+      "applicability": "The captured remaining-tasks input and immutable pre-generation copy share the same SHA; the runner HEAD map differs from the frozen working snapshot only in CRLF-to-LF normalization with identical JSON data. This narrowly explains the metadata snapshot handling and does not change blessing content or authorize other input differences."
+    },
+    "reviewed_conclusions": [
+      "The two formatting defects reported in the prior peer pass are corrected in the single changed comparison page.",
+      "Three actual implementations and four bindings remain correctly separated: Force Staff P1, Force Staff P4, and Force Greatsword P1 M1/M2; actual UI names and icon 061 evidence remain consistent.",
+      "Staff I–IV requests 1/2/3/4 under the ranged-or-explosion plus critical and held/same-item conditions; the greatsword general melee-crit requests 1/2/3/4, while the true warp_slice critical path requests 1/1/2/3 and per-tier target caps are 3/6/9/12.",
+      "The README correctly distinguishes per-target hit processing from global explosion events, pure push and fling exclusions, per-target shared warp_fire cap/refresh behavior, first-tick/expiry sequence, and source-buff unequip from target-buff lifetime.",
+      "The RAW reconstruction preserves both description resources and formatter values; the examples distinguish requested layers from caps and Power Level from health damage.",
+      "The fixed image attachment, UI metadata, reverse associations, and 90 scoped file hashes match their receipts."
+    ],
+    "focused_reuse": {
+      "image_receipt_sha256": "84d48ee2c9e5c4795f36662160e506401bfcd90cee027e96404be5a97644100b",
+      "author_preview_equality_sha256": "b7937a8b575f1da47f070b630291d2f98d03f5aca904df41c555a44780caf740",
+      "root_final_review_sha256": "f143e4e88bdea77569a66e1867925a00c230ea5663cf00d85bda01f4c610d517"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "blazing-spirit-warpfire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_061",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_061.png",
+      "attachment": "https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5998949099",
+      "acquired_date": "2026-10-06",
+      "sha256": "f4c2ed10833b791143c56b38bc9bdb52c1fe09042bbb7e0c0c759890c020efe7",
+      "content_type": "image/png",
+      "size": 3605,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "燃燒靈魂祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected public PNG: visible light polygon badge with gray gradient; image is readable and intact, no missing/corrupt pixels; actual item.icon061 and identical source/public hash verified.",
+      "reused_unchanged_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-image.json",
+        "sha256": "88cbd12fc3dc9c19933f0c61cd111417d9028c52057b3fc9b6083424b1a05fdd",
+        "applicability": "Exact actual item.icon weapon_trait_061 on ForceStaff P1/P4 and ForceSword2H P1; unchanged accepted attachment/hash/dimensions/visual proof reused."
+      }
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 17,
+      "rows": 652,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 162,
+      "source_files": 36,
+      "bindings": 891,
+      "variants": 455,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 16,
+      "source_object_cache": {
+        "cache_hits": 36,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 19,
+      "local_references": 1284,
+      "remote_references": 641,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 34,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-033-full-scan.json",
+        "sha256": "38de1dc151104dc4c536bdc6be3c359d7bfeb63b4d5a3b2f5948741a89448bf3",
+        "trigger": "round-033"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 35,
+    "not_started_name_groups": 35,
+    "partial_name_groups": 0,
+    "remaining_variants": 150,
+    "remaining_bindings": 294,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "dd6acb5701c2cf2b6edd74b51595ab374e0f8b78c8b4784f97ed88145c8f97c1"
+  },
+  "previous_local_commit": "ee5596d263c89f976da4f0dd71e1f739e2f9069b",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Only the exact trait id / name key / 4 UI bindings from frozen receipts are included; no additional bound item."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-final-content-review.json",
+      "sha256": "f143e4e88bdea77569a66e1867925a00c230ea5663cf00d85bda01f4c610d517"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-focused-checks.json",
+      "sha256": "cd2381a69309b38dbd1db62192fea9c16eebd20809d67da6045b40afa4bf5a40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-formal-author-preview-equality-review.json",
+      "sha256": "b7937a8b575f1da47f070b630291d2f98d03f5aca904df41c555a44780caf740"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-frozen-source-verification.json",
+      "sha256": "7b45951bfd10fe00027c37c11c30f7c9a824c7c4e90855f94b04ad5fef86cf7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-map-input-line-ending-equivalence-review.json",
+      "sha256": "8b04e860e4650728825ca8b2ad293ea08d0baaf751f7833d0635333fd2e2ed41"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-native-staff-and-push-delta-review.json",
+      "sha256": "c1bed28aba5e2ad66245eb08ffd9f31f713641dc1fbcec0564e072de8aed5851"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "ae56dc03269f27527f6b81c201fca6a26e6b45a6f0e6c9e6fa88fd00b60146df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-resume-review.json",
+      "sha256": "897c77dedbcdfed0357a622d166cb5f768d300ed9d40d55d1a90d61f3dca7fd5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-traits-review.json",
+      "sha256": "7329dc591c8e0ed2810c8761438081e4523d40781e48aace4adb042ae73072b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-ui-raw-verification.json",
+      "sha256": "9435b00afce140b953f8a68a216dde701028bb4e0cad99d504211f57a1d6987f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-ui-review.json",
+      "sha256": "083cc6a1f0c21643ab98e5b987e3dfd63de503eb780582d8d1cefd1a405466a1"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-config.json",
+    "sha256": "208375b0c76efeb8601c9888312a1d8f355b67bf99a96b9d0319b1ff5beb402e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-primary-native-first-tick-sticky-delta-review.json",
+      "sha256": "f0d28faafb175db1f8f0c29760d80bfa06aac4b55ac574c7a0cd78e60a2be785"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-primary-own-tier-wrapper-target-cap-delta-review.json",
+      "sha256": "dcfdb6d99385ab57914a72e60fb86dc917b8bbfa072226cc801b9e4c39130d05"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/association.json",
+      "sha256": "bbf1cd0fbf6502b26208b98f28cb48da7a86ecc2e38540f33bcf0ae4b2be6d71"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-004.json",
+      "sha256": "06a05959df81166f2cd4ed1d76b7e7cb30ff4c7a472b0af27959b732bcf23810"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-config.json",
+      "sha256": "208375b0c76efeb8601c9888312a1d8f355b67bf99a96b9d0319b1ff5beb402e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-draft.md",
+      "sha256": "a63f44d456d3703dd5ed07a196ca015931ad7c3e0dd9d41e2ba25161c59671ef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-coverage.json",
+      "sha256": "dc8b6b44cf7de3231d5be0cc4f76621412dd6a9c243d3f7eaf8e428484eea3c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-selfcheck.json",
+      "sha256": "eb731d29779c6ff387609518b30404ba76aadaf34b497a4b30213f9437093a4d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/build_package.py",
+      "sha256": "630a0e12d56a86572ace87ceb02e812c6141a1f110ddd633f06794cfbfddc990"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/draft.md",
+      "sha256": "a63f44d456d3703dd5ed07a196ca015931ad7c3e0dd9d41e2ba25161c59671ef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/examples.txt",
+      "sha256": "2e55022978b8ea19ba40bdfce48660acedd1ef3b3a8397399da50639620b4f2a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/finalize_package.py",
+      "sha256": "847ef5fc744709e4374c8a32ca42de9b857d9acbef1e402765290a0c6d1c66ed"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/inputs/remaining-tasks-input-before-root-generation.json",
+      "sha256": "58729ef786a7395f7d240269e6a0c442273b14125f84e1642abe15dc4848875b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/inputs/sitecustomize.py",
+      "sha256": "d8a3b2990a8d095d4af4476d9c0ceb973d321eddfc0048525a7cab1f76395fee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/math.txt",
+      "sha256": "2d12a086ddb19a0da7939cb3603637440009b803192b90d5b8d238c4d0eae40e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/mechanism.txt",
+      "sha256": "c34534f6d321cab33c123b2fc842971c861aa109e44d9aa4c582c0a7d75eaa7e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/package-text.json",
+      "sha256": "7698e54f509d68d0858c48114ae40fbdfb053213d52483a4d7c7c98d88302daa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/player.txt",
+      "sha256": "14969db8e2e30d01362fe40d8c76208c9cfb3b4622791ad8e166b8997faf590d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/reconstruction.txt",
+      "sha256": "ae61aa0d5faa1d4a160f6c94ce8afc44be6ee8d9cad154e8f984363a27529575"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/review.txt",
+      "sha256": "fddd9c63a44349d2ad7a943e2ca6ab7662a427a351900b51410addb7d33a6678"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-image.json",
+      "sha256": "84d48ee2c9e5c4795f36662160e506401bfcd90cee027e96404be5a97644100b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-map-before.json",
+      "sha256": "373645a94f980734a77774a0c354240508314adffc385d49fe621a48c058037e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-map-input-line-ending-equivalence-review.json",
+      "sha256": "8b04e860e4650728825ca8b2ad293ea08d0baaf751f7833d0635333fd2e2ed41"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-native-staff-and-push-delta-review.json",
+      "sha256": "c1bed28aba5e2ad66245eb08ffd9f31f713641dc1fbcec0564e072de8aed5851"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "ae56dc03269f27527f6b81c201fca6a26e6b45a6f0e6c9e6fa88fd00b60146df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-traits-review.json",
+      "sha256": "7329dc591c8e0ed2810c8761438081e4523d40781e48aace4adb042ae73072b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-ui-raw-verification.json",
+      "sha256": "9435b00afce140b953f8a68a216dde701028bb4e0cad99d504211f57a1d6987f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-ui-review.json",
+      "sha256": "083cc6a1f0c21643ab98e5b987e3dfd63de503eb780582d8d1cefd1a405466a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-native-critical-snapshot-consumer-delta-review.json",
+      "sha256": "dada2247321cb7d032c8d3d75bdb0e679aa775225993e079b1ee86533633d9fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-slice-primary-two-mark-native-special-difference-review.json",
+      "sha256": "de893216da4a77907dd1d200cded59fa4d66e25bab0f24e7e0b856f1dc88f75d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "61824cb56493d56031bdb4f7b8f6b44f886f61b7deec85554176dc395eca2a39"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "6ea1866187ce6bb4f4c926c9ffcd41307c8e82d6517ec971fec9da9edfdf7e81"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\LOCALIZATION_COMPARISON.md",
+      "sha256": "f2cc4e1a2acecae475adaa459c7175428d447d82d9970a8de32114a37f55b2b9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\README.md",
+      "sha256": "200660d5ee29f69740a35f47e40dedce1752ba6ccb16236c54353dd4830164d0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\SOURCE_INDEX.md",
+      "sha256": "7f0ee1f8dd1859a27554fe671520db8c1ae741d23706e9326e5e0475a39da1f1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\TIER_VALUES.md",
+      "sha256": "f18b8ec23bf1eb6b74f5fd5a611eb532856cc75a049cf80fa76bd1925bb6b63d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\WEAPON_COMPATIBILITY.md",
+      "sha256": "57dcac8b1373d4b05415651c0c5f6fa6e44e4fd68f90f2f6d800a6dffd842496"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits.md",
+      "sha256": "6a1b643dffdd8d5f6cb82b336b555d137528a9a7c16bf7eaa0676ac6a85d9dca"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\weapon_trait_bespoke_forcestaff_p4_warp_burninating_on_crits.md",
+      "sha256": "0af65284bbc9bcaad6687003dcd4a776c9b069d1861ef456be287ce865e6d740"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\燃燒靈魂（靈能法杖與雙手力場劍）\\weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit.md",
+      "sha256": "6dac2b4c8320da070589756064337c8fa6a6264497dec8e03046b2666d4a5e53"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-raw-verification.json",
+      "sha256": "fe823090a99c7aa8ec1d5a87859db14ac4ce4b52dc93ebc69b1a80103e44a47e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blazing-spirit-warpfire-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "ebe405ab9418c9ca517362bc8e3f5ebe10ba3a52c4c9358877efdfa24eb437bd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-001.json",
+      "sha256": "6282a92579552cacdfa7b36670d23bb3e7f2b83247b0869f5b377f029fe492fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-002.json",
+      "sha256": "535d6522eacf7dc860c0f28df02f03e5353b550157533ebe111f7b228dd2d7dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-actual-preview-receipt-003.json",
+      "sha256": "3be67d3d4d9522610d3e6fca39417b1ba386f6a7ab9c6b6984852c1771a73cc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-evidence-before-queue-path-fix.json",
+      "sha256": "a7ed416335d577c3bb0edeb6f474642daaff94ea1123ebf7d3b619e647f983be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-agent-evidence.json",
+      "sha256": "f6a2ab86976ab718a7d9c41811a7fd7498134e6767b05267f1e0c431a57adf8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-group/blazing-spirit-warpfire-selfcheck-before-queue-path-fix.json",
+      "sha256": "7fc87031ecadc18d6892e6bb87fe5f8f5781da5c7b61cbe065d4aaf1ae09e01f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-agent-config.json",
+      "sha256": "208375b0c76efeb8601c9888312a1d8f355b67bf99a96b9d0319b1ff5beb402e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-agent-evidence.json",
+      "sha256": "f6a2ab86976ab718a7d9c41811a7fd7498134e6767b05267f1e0c431a57adf8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-agent-draft.md",
+      "sha256": "a63f44d456d3703dd5ed07a196ca015931ad7c3e0dd9d41e2ba25161c59671ef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-final-content-review.json",
+      "sha256": "f143e4e88bdea77569a66e1867925a00c230ea5663cf00d85bda01f4c610d517"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-formal-author-preview-equality-review.json",
+      "sha256": "b7937a8b575f1da47f070b630291d2f98d03f5aca904df41c555a44780caf740"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-primary-frozen-source-verification.json",
+      "sha256": "7b45951bfd10fe00027c37c11c30f7c9a824c7c4e90855f94b04ad5fef86cf7d"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blazing-spirit-warpfire-formal-peer-scope.json",
+    "sha256": "8be26a086de45d8b252d3d5c7ea4b406734f7fa824c991b258bac51586976bc1",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

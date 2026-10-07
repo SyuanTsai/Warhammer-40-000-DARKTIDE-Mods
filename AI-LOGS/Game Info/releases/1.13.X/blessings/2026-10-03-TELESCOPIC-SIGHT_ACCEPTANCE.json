@@ -1,0 +1,272 @@
+{
+  "date": "2026-10-04",
+  "blessing": "telescopic-sight",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/千里眼/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_lasgun_p1_increased_zoom"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "telescopic-sight",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope formal peer review with gpt-6-luna/max; runtime self-inspection is unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file_count": 27,
+      "formal_pages": 7,
+      "scope_manifest_sha256": "c36c1b26b7b1da2d9f8ea517a606b4ab4b224acf63a9c18aff0cb72cb47c9fa5",
+      "description": "Fixed Telescopic Sight formal peer scope; current hashes matched all 27 scoped files."
+    },
+    "findings": [
+      "The seven formal pages and connected catalog data consistently cover exactly three actual bindings: lasgun_p1_m1, lasgun_p1_m2, and lasgun_p1_m3, with the corresponding three weapon_trait_bespoke_lasgun_p1_increased_zoom variants. The compatibility page, map, reverse Infantry Lasgun index, and UI evidence agree on the actual marks and names.",
+      "The held-slot plus alternate-fire condition, not a hit, activates the .85 target conditional attribute. The trait has no hit stacks, blessing TTL, or independent countdown. Zoomed shooting and the zoomed special remain in ADS; the hipfire special is the flashlight path. Cache and camera updates govern first visible application and exit, so the text makes no same-frame promise.",
+      "Tier I-IV all provide .85. The same-key .95 wrapper conditional is fallback and is replaced by the tier stat while its held/alternate-fire gate remains. RAW English and Traditional Chinese strings are reproduced exactly with their hashes; the formatter has no tier placeholder and reconstructs the same fixed RAW string at every tier. The comparison correctly distinguishes the numeric runtime value from qualitative RAW wording without inventing a RAW tier placeholder.",
+      "The camera math distinguishes the .85 target attribute from the smoothed r_prev and r_now samples. The 32.5125-degree example is explicitly controlled math under first-person ADS, completed transition, r_prev=r_now=.85, and external/global factors of 1; it is not presented as a measured or guaranteed stable in-game angle. The per-frame update/getter order and degrees-to-radians conversion are consistent with the cited camera and AlternateFire evidence.",
+      "The image identifier weapon_trait_045, full game icon path, and attachment URL are separate and consistent with the image receipt and formal/map association."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-agent-config.json": "63eb3556800479e0408cbff177ff57904f8b5d094c7be35c12fae3f96979a046",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-agent-draft.md": "16e21c8b620877ef2748be123548a5b93327da6561789a7b3a6fa775379e761e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-agent-evidence.json": "0f597ad847bfde0c2ebe58bda4e36855a2ab5b0338fcb487a0bbc97f063365f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-config.json": "d4d18bbe5ba0081ad7b169faeacd6489ddfb8d4ba838a92f146c94175c9f7d2f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-extension-draft.json": "983e816464ffdaf7e311ee75b36ee2e0bdab7d19a59d56a2dd31508011c1d706",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-image.json": "c4a6cae05a0efeeeedafa2db42618febe5efa16b04315d2fedacafba27babbcb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-angle-conversion-review.json": "d3b207b4dfc77787aa4bcf895057be822db5c5616b16f630fee4b43bcd58c1a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-camera-review.json": "bf88a4e9d2f36823fd5f9af1c2defe457cc91ac1f4c8c182b81ccb37a1870e96",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-own-tier-diff.json": "ed8ed6f2a34986a070da438d0b48efa74fe0c2b27e01cdfaf058f545121e347c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-resume-review.json": "f61f64063e4a15b1d24176fa12d84e76290b8411319ef682b3cd8587cb24a1c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-traits-review.json": "542dc1fb3a29f95855126076559785ec873cd4b8a6c6b5c773975847c12303dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-ui-raw-verification.json": "c0c315ccd796d98a95b7798c3621d6c21ab4ea6b52459e332433ed401922d446",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-ui-review.json": "3847362a2dc7cbdc5fa599feeb473687dc8e0c57aaab9d19e533c8b48568e980",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "77919e973f680f69cd2df35997bfffde07721b1a69addcc06b734b4f2d384134",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "bbbe643491a14aed347d6af813c121347ed8985ffc9ba81e007e546a2ca3ed81",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "6e46766fb542a47114b0bd72745483c97aa3cb62adff5dbe712a2e5edc7948d9",
+      "Game Info/releases/1.13.X/blessings/entries/千里眼/DAMAGE_PERCENTAGE_REVIEW.md": "cbaa061e82c4a51d863c21a97efec577f164e331b643e7d4b6f897738a19b4eb",
+      "Game Info/releases/1.13.X/blessings/entries/千里眼/LOCALIZATION_COMPARISON.md": "155c7245c03c5c10185f621f55f4eeb1cebca51f9f2ae5b0963d664c0549e100",
+      "Game Info/releases/1.13.X/blessings/entries/千里眼/README.md": "1145f9e1989c0ed4bc54d1725b5436134831c16c219097bc6687bd075455f8df",
+      "Game Info/releases/1.13.X/blessings/entries/千里眼/SOURCE_INDEX.md": "2e409efc9d4b6b10f90ac5f885bb27ac2c651edc934cae842b8daea2810fea07",
+      "Game Info/releases/1.13.X/blessings/entries/千里眼/TIER_VALUES.md": "3c1561005bc93f003bfb2cbb424a75e3bd29f5b4d7e8f36fa226305b4201226c",
+      "Game Info/releases/1.13.X/blessings/entries/千里眼/WEAPON_COMPATIBILITY.md": "6dc4aa44a99b276c2210ff8162bc5f7649a1b628b8af8b98a99836f481724001",
+      "Game Info/releases/1.13.X/blessings/entries/千里眼/weapon_trait_bespoke_lasgun_p1_increased_zoom.md": "dae96d11d69f2cb50d977dc6e153c78a1dca5e8074cb3c39d9bdf2ab2709e8d0",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "e5cba9ec94cdcac6cd530d3161104fc0a5bee7d62cfdd88dd62fabe6d6c1fe10",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "8728cf704c83ec8bf942f00ab0d81c92061a02c97976124bfa71f6cf1e788393",
+      "Referneces/Translation.md": "d9a9d42256882a84822014c8613d81bbf23370c5859de1bbf82d8ccaee5e6b10"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/4dbeb712-e6a5-4bd9-8798-a5e3a93cd4ea",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "telescopic-sight",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_045",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_045.png",
+      "attachment": "https://github.com/user-attachments/assets/4dbeb712-e6a5-4bd9-8798-a5e3a93cd4ea",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5977930121",
+      "acquired_date": "2026-10-04",
+      "sha256": "68282e6cdf238cb23601d1a61f9936ad84f73fd5fa89dd79a0d1b4f547ffb8bb",
+      "content_type": "image/png",
+      "size": 3969,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "千里眼祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and public attachment visually compared; identical four inward triangular sight marks, circular ring and central aiming cross. LA alpha diagnostic confirms icon shape; original128x128 PNG bytes unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 10,
+      "rows": 265,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 60,
+      "source_files": 24,
+      "bindings": 444,
+      "variants": 231,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 24,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 612,
+      "remote_references": 323,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 13,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-012-full-scan.json",
+        "sha256": "a96353e9bfb29a878ed953616c92b0964acdd1ddf97c055b600a57f0c6f68163",
+        "trigger": "round-012"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 99,
+    "not_started_name_groups": 99,
+    "partial_name_groups": 0,
+    "remaining_variants": 374,
+    "remaining_bindings": 741,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "9649e45e94cd3cb56c4be269bf179b70a5088c95df8d31ba77017af81345827b"
+  },
+  "previous_local_commit": "5a4587b6f6fb30c96fe29d4f07caf0233be44719",
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-ui-review.json",
+      "sha256": "3847362a2dc7cbdc5fa599feeb473687dc8e0c57aaab9d19e533c8b48568e980"
+    },
+    "bindings": [
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m1",
+          "loc_weapon_pattern_lasgun_p1_m1",
+          "loc_weapon_mark_lasgun_p1_m1"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk VII",
+        "name_en": "Infantry Lasgun Kantrael Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 714,
+        "append_line": 716
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m2",
+          "loc_weapon_pattern_lasgun_p1_m2",
+          "loc_weapon_mark_lasgun_p1_m2"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IIb",
+        "name_en": "Infantry Lasgun Kantrael Mk IIb",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 692,
+        "append_line": 694
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m3",
+          "loc_weapon_pattern_lasgun_p1_m3",
+          "loc_weapon_mark_lasgun_p1_m3"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IX",
+        "name_en": "Infantry Lasgun Kantrael Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 693,
+        "append_line": 695
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-camera-review.json",
+      "sha256": "bf88a4e9d2f36823fd5f9af1c2defe457cc91ac1f4c8c182b81ccb37a1870e96"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-own-tier-diff.json",
+      "sha256": "ed8ed6f2a34986a070da438d0b48efa74fe0c2b27e01cdfaf058f545121e347c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-traits-review.json",
+      "sha256": "542dc1fb3a29f95855126076559785ec873cd4b8a6c6b5c773975847c12303dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-ui-review.json",
+      "sha256": "3847362a2dc7cbdc5fa599feeb473687dc8e0c57aaab9d19e533c8b48568e980"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-ui-raw-verification.json",
+      "sha256": "c0c315ccd796d98a95b7798c3621d6c21ab4ea6b52459e332433ed401922d446"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-image.json",
+      "sha256": "c4a6cae05a0efeeeedafa2db42618febe5efa16b04315d2fedacafba27babbcb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-angle-conversion-review.json",
+      "sha256": "d3b207b4dfc77787aa4bcf895057be822db5c5616b16f630fee4b43bcd58c1a0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-primary-resume-review.json",
+      "sha256": "f61f64063e4a15b1d24176fa12d84e76290b8411319ef682b3cd8587cb24a1c9"
+    }
+  ],
+  "primary_review_method": "Own entire13–26 wrapper and I–IV11–49 tier, three exact UI/RAW bindings reviewed; per-key conditional overwrite/cache applicable. Expanded actual camera utility degree conversion, first-person ADS selection, inheritance/getter, two temporal samples, transition/global/external factors and interpolation-without-forced-snap. Prior unchanged cache reused for own held AND alternate_fire condition; no event/TTL stack template present.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-config.json",
+    "sha256": "d4d18bbe5ba0081ad7b169faeacd6489ddfb8d4ba838a92f146c94175c9f7d2f"
+  },
+  "frozen_agent_trio_preserved": {
+    "config": "63eb3556800479e0408cbff177ff57904f8b5d094c7be35c12fae3f96979a046",
+    "evidence": "0f597ad847bfde0c2ebe58bda4e36855a2ab5b0338fcb487a0bbc97f063365f5",
+    "draft": "16e21c8b620877ef2748be123548a5b93327da6561789a7b3a6fa775379e761e"
+  },
+  "previous_objects_unchanged": {
+    "blessings": 67,
+    "variants": 230,
+    "bindings": 441
+  },
+  "previous_weapons_unchanged": 66,
+  "formal_peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/telescopic-sight-formal-peer-scope.json",
+    "sha256": "c36c1b26b7b1da2d9f8ea517a606b4ab4b224acf63a9c18aff0cb72cb47c9fa5",
+    "files": 27
+  }
+}

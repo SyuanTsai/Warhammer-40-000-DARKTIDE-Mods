@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_539_543",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L2349-L2355, L1996-L2001, L1745-L1751, L2011-L2016, L2251-L2265. Previously checked percentage formatter reused. Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction or new unresolved question. Breed tags, armour/Brittleness calculation, reserve capacity rounding, per-activation recovery and wider assistance scope are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_ranged_vs_bfg",
+      "name": "Assassination Protocols",
+      "name_hash": "575cea5a",
+      "description_hash": "01397401",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ranged_vs_bfg.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ranged_vs_bfg.md",
+      "commit": "61f67a5ca"
+    },
+    {
+      "id": "cryptic_electrocution_applies_brittleness",
+      "name": "System Shock",
+      "name_hash": "78199f16",
+      "description_hash": "47a5f3d9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_electrocution_applies_brittleness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_applies_brittleness.md",
+      "commit": "11c0297e3"
+    },
+    {
+      "id": "cryptic_ammo_reserve",
+      "name": "Ammo-Cell Augury",
+      "name_hash": "848fe38c",
+      "description_hash": "bf4067b1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ammo_reserve.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ammo_reserve.md",
+      "commit": "db7cc954e"
+    },
+    {
+      "id": "cryptic_coherency_toughness_on_ability",
+      "name": "Voltaic Restoration",
+      "name_hash": "9e27f37f",
+      "description_hash": "5c2bb368",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_coherency_toughness_on_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_coherency_toughness_on_ability.md",
+      "commit": "414d1773b"
+    },
+    {
+      "id": "cryptic_revive_speed_and_dr",
+      "name": "Salvation Doctrine",
+      "name_hash": "06f7094a",
+      "description_hash": "16a4ff53",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_revive_speed_and_dr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_revive_speed_and_dr.md",
+      "commit": "4d44dd0e3"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 287,
+    "from_commit": "45ac32e35",
+    "to_commit": "4d44dd0e3",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

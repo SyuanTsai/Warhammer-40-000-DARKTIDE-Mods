@@ -1,5 +1,7 @@
 # 淨化不潔(Purge the Unclean)：原始碼依據
 
+[English](en/zealot_increased_damage_vs_resilient.md)
+
 [返回玩家說明](README.md#zealot_increased_damage_vs_resilient)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_increased_damage_vs_resilient)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

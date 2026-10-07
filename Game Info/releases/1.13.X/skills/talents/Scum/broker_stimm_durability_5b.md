@@ -1,5 +1,7 @@
 # 恢復(Regain)：原始碼依據
 
+[English](en/broker_stimm_durability_5b.md)
+
 [返回玩家說明](README.md#broker_stimm_durability_5b)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_stimm_durability_5b)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -27,7 +29,7 @@
 
 ## 算例條件與待確認事項
 
-- **恢復算例**：最大韌性 100，計入彈幕 I～IV 的 20% 恢復加成，每次恢復 100 × 5% × 1.2 = 6 點；若只缺 3 點，實際只補 3 點。
+- **恢復算例**：最大韌性 100，計入彈幕I～IV 的 20% 恢復加成，每次恢復 100 × 5% × 1.2 = 6 點；若只缺 3 點，實際只補 3 點。
 - tick以當次更新時間加1排下次，最終恢復次數會受步進、root移除時序與倒地影響；不承諾15秒必定固定15次。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

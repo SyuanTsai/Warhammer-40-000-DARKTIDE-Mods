@@ -1,4 +1,6 @@
-# 生存專家（基礎被動）(Survivalist Passive)
+# 實踐效率(Practiced Efficiency)
+
+[English](en/veteran_survivalist_passive.md)
 
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 
@@ -16,7 +18,7 @@
 - 職業基礎清單直接啟用 veteran_survivalist_passive，與光環不是同一個identifier。template使用on_kill、cooldown_duration=5；實際後一個check_proc_func覆蓋前者，檢查tags.elite or tags.special。on_kill本身由本人攻擊造成死亡時發送，params.tags包含目標分類。
 - 伺服器proc只對template_context.unit呼叫Ammo.add_to_all_slots(.01)，不分享給隊友。
 - 每槽floor(max_reserve×.01+carryover)，餘數保留；備用彈藥上限允許到max_reserve+missing_clip。與光環共享每槽餘數記帳，但各自buff冷卻。
-- 名稱採識別碼的描述性暫譯；原定義殘留name="Increased Ranged Damage"，不能據此寫成另一份傷害加成。
+- 名稱採識別碼的描述性暫譯；原定義殘留name="Guardsman"，不能據此寫成另一份傷害加成。
 
 
 ## 原始碼依據

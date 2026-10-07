@@ -1,0 +1,468 @@
+{
+  "date": "2026-10-05",
+  "blessing": "speedload",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/快速裝彈/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_reload_speed_on_slide",
+    "weapon_trait_bespoke_autogun_p2_reload_speed_on_slide",
+    "weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide",
+    "weapon_trait_bespoke_dual_autopistols_p1_reload_speed_on_slide",
+    "weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide",
+    "weapon_trait_bespoke_laspistol_p1_reload_speed_on_slide",
+    "weapon_trait_bespoke_needlepistol_p1_reload_speed_on_slide",
+    "weapon_trait_bespoke_shotgun_p2_reload_speed_on_slide",
+    "weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide",
+    "weapon_trait_bespoke_shotgun_p4_reload_speed_on_slide",
+    "weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide",
+    "weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide"
+  ],
+  "added_binding_count": 23,
+  "total_variants": 12,
+  "total_bindings": 23,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "speedload",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-formal-peer-scope.json",
+    "scope_sha256": "e5e56d944cd07c8c6c9b106609940624cbc619d85f518fccd05af9d5e17fe613",
+    "delivery_delta": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-formal-peer-switch-delta.json",
+      "sha256": "eeddf6132ad20b1bcaea692af68b848c4e3fb16a9cb8de0fb9eee585f0fc6adb",
+      "unchanged": 62,
+      "changed": 4,
+      "added": 1,
+      "removed": 0
+    },
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "reviewed_file_count": 67,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-reload-sampling-review.json": "0ec8a956c874a6059ab7fa8dcf3801e59fb001bade996478262bf99894cf1685",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-agent-config.json": "f374594eab921982cab1964cbd2deab74ae0f36c20e5628bba82da7253aa35d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-agent-draft.md": "ac947fac76a9f502a787f80ae2816616c6e82a6f9e9e048caf78c0492bacff57",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-agent-evidence.json": "9341584d80b4b48de3f0d5a19c9c32b1d23e7467477bfd94a7c4794dd411ecfd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-config.json": "34b77361c25186e83d45d1892ce267deb0ba21c5e04d98ddfb823bf9cfd71bec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-extension-draft.json": "1443aba40d67eb3847f9887e64e0cf3825931631d8beae8465d3ea870f80692f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-action-coverage.json": "f2f3639058dcd77f8f2f5dfcc10509cc0b8858cc7dd12b8fd466089498e479c1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-build-status.json": "efa355865a4807b7a8d130fd2bc958338a24fdb2812676f6139a2e6ad8e0e924",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-config.json": "f374594eab921982cab1964cbd2deab74ae0f36c20e5628bba82da7253aa35d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-draft.md": "ac947fac76a9f502a787f80ae2816616c6e82a6f9e9e048caf78c0492bacff57",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-evidence.json": "9341584d80b4b48de3f0d5a19c9c32b1d23e7467477bfd94a7c4794dd411ecfd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-association-snapshot.json": "7d1c822f108429ff7e3c71d424401076853d7b1d44e5f69ea79bdaee70414dd1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-candidate-preview.md": "5feb565576a2e12641152b9d683dc67a7469ef88165ad289b49f191d568a58c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-selfcheck.json": "fb45bf9c2d142626685f38422165960bbb0bb009c381c9e43f1f64a6af169abc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-image-upload-journal.json": "21248e154120e842aa652d1d0e65c4065f6d49b4719afdec39b65144a25e2530",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-image.json": "2eea25a75ba773ad51ab7d070b50f4f6e973aab1ac70521acbcd999dafd7ab77",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-delivery-peer-fix-review.json": "f5ae40585fdde24648c676495e264dffdc11d818132da0c9404d0bd86e5c7e19",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-focused-checks.json": "5709ccfcd9bbd6a18949dc9e982492adba4ac9638ec889be1ab7a8078b9b8d19",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-frozen-source-verification.json": "9c395ca0a5d92eaceaf1fb78ec7a85b7e93b6cd66ef49616c9b65ff54ea0dbaa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-outside-intersection-review.json": "eded044b7d0a4043e8b96a319d8bf5c019550a01a492976349d085f11541ed23",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-own-tier-wrapper-diff-review.json": "bd312fb9d411d7ff52c593584f3f42aef1504fc056bccba4c48aab72ba465929",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-prior-author-config.json": "bcee80d88e62f596464115fce3489f831fe06f6cbebf497814d5477746c395cf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-prior-author-evidence.json": "032cc2e2d4bb5788aa8760a181ff5f6a02caad3a8b29dcf1cb97a84b846f4adc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-resume-review.json": "d09dec7a995af1bce6601301fb40e671f1778e1f763699146fcdd2f3a534d0f8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-switch-consumer-review.json": "44cbb31e40cb3c9c1a798d75815b1d9e2721d7d01fc03c411ca4f964d2f03a3e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-traits-review.json": "07db270a4daf2bdd1d7ca67b31dd9c1ec088753366bdb530f7d2762f6b4cd570",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-raw-verification.json": "4e0d68639ef064f7f6e39f2397c2420793bbbd2f9cf2418cf9e9f03cc75536c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-review.json": "7a540530665192f93dc38c9d6bd710278f59bee5487c9328d510247bde88a986",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "c3ba827507312cb110516c8e21d50dbaba87701b5a71af939d58d8c05fb0d21c",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/DAMAGE_PERCENTAGE_REVIEW.md": "6a36ca927669ccecf596b6c10d9b6194d3aa2433bc21c682ca4f9e0f03a0f951",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/LOCALIZATION_COMPARISON.md": "e351982ffab7803dedad08b5cb835fa941e1c25703d4982025700caf0c4fa323",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/README.md": "7ba5b6c57eecbb51eb1efa1fa5892eaf27d2d31c6c262ef514e5059489a5e003",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/SOURCE_INDEX.md": "dc9b176965cd39a47200b2d291b499f0f6bb0fd5bd406a83e402568595583199",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/TIER_VALUES.md": "41b1508f6268cf5678683015628d7657c4482fc42dc10e9994d1a11c19c4dce9",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/WEAPON_COMPATIBILITY.md": "a496e77b4080c1f6dc94139216bb87fbbc59d2ff75fee2bab30936f3a28e81ae",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_autogun_p1_reload_speed_on_slide.md": "3db783312021c3d4cb649d57453dbc7ebca68e5229a423b5152d48f84d17abcb",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_autogun_p2_reload_speed_on_slide.md": "2f7278028029c13e847fa2aca204b849ea6d53c8b28af3f580a5eb015a80ce3d",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide.md": "eeb669f52c874a25ebd3d2aee874cbac9c1a28a74d2e158d1a982c7e88b944a4",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_dual_autopistols_p1_reload_speed_on_slide.md": "388a7566f5eff2e3264268a6314bc3f6c3cb39587ff7f634a78dc30d9852e8e7",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide.md": "8dc9ac792797ee5e0a44a4c3d190b3655cb167c7c611565c7a415c4781673607",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_laspistol_p1_reload_speed_on_slide.md": "02ad6cb1bc024eca1252bfc495a860171bbcf9af1e028eceba30d635ad1a752a",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_needlepistol_p1_reload_speed_on_slide.md": "a4350da4da34f392f6cba7467b55e29f000a4f321b261cdcf5ea6d3e21a96cb8",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_shotgun_p2_reload_speed_on_slide.md": "f43a3ccd22f3f0b22a0f99fa179357b63e12a5246ff0c8948c8642b4147f31ff",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide.md": "3a02f4f6b7b1a30ab1b192867b244be4748db2896713f63428bc1bc72fca23ab",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_shotgun_p4_reload_speed_on_slide.md": "617dea2ea4f6c2a96329f8ecc25f3abb45246cce00dac5770119194af5a963ac",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide.md": "5e4d0ca28e90657caada46f0bd5373a2576374dda6bfb0c1ed1183d0dc3775b5",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝彈/weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide.md": "1f3918c86689fba01528846ffdac9c7848a595ae294b7bc95a273dc8354e0c4a",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "56c0d3001e45c076d5feb4a38084094d158d4edc488407e91077844ceb736b76",
+      "Game Info/releases/1.13.X/blessings/README.md": "97768b7de8578c9a92120b5fd82b7edfe710184ddbc0c4d5ceaec542efe20aa5",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "5c9f82ef2bb0329710746aaef0e78c45dc2ad02a403d5af7d42848ebee9b9d43",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "9888c31e28709e41e19fc87ad676f673fe90ac61bcbff0715fa838f379f0139d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "7381739486df74574c8693830a2db8fa84b2376bc1d8a0de8c519d36d1cb50b4",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "8c3342ab15056d811fc176bcc876660748e907cb77f1ac10f17f74e7e0304e8d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "e459056b1a41ccf57e47120ae109b5974b6594900470fdaafb74e52458a4e532",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "959890a4a721956398f8db0426bc451817c04faa577cf06ea38f9e87d8e8a36b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "c227e874467cab2f8f36a07d4102c3a80661d921ac6525ba30b7e235576c025c",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "ec68246c3c4ddc6a46d03381e29f21557dfc033b77b76369336015af178cd451",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "caaa1abf2cda2c33aceda97c899868c995ead1ab89274aed31903447b6adb65e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md": "940d32cc0534eec20c78fbec42877176d9d8a7c903adfb08f53509f113f751b9",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "ed34abb523f70a38fe89226110ac21359e2fa203a251cd8a5c4852c9f0e07d44",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "94520831a4892226c098526fbba9b6a1c307fa07041409aea7b5cf3947f035cb",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙管霰彈槍/README.md": "c6471a03d50cc5f3f6c557b35ec6205c1d345947bf358246264cdc79eb3dfa5b",
+      "Referneces/Translation.md": "77d97d91c184030d8c895e0f3ea8d984e415b48fa607e9827969ddb49555660e"
+    },
+    "findings": [
+      "66-file final scope hash逐項相符；交付 delta 為39 unchanged、23 changed、4 added、0 removed。新產生的 root canonical、作者修正後研究套件與最終正式頁均與本 scope 對應；原始 author/config 快照及凍結歷史回條分開保留。",
+      "實際範圍維持12個 trait variants 和23個實際 Mark bindings；variant IDs、武器 IDs 與 UI bindings 在 canonical config、association snapshot 及 UI receipt 間相符。Dual Stub Pistols P1 是同名 metadata candidate，沒有實際 inventory binding，明確排除。",
+      "完成逐 Mark 對照：23/23 Mark 在正式頁各有裝填 consumer；29/29 個來源核實動作全部含 reload_speed time-scale，逐項 action 名稱、狀態、時間與補彈量/時點均符合正式頁。Shotgun P3 分列開始段和逐發循環；Shotgun P4 Mk III/Mk VIII 的特殊彈 consumer 為 ranged_load_special；Stub Revolver Mk IIa 的兩段逐發路徑及 Mk XIV 整段動作各自列出。",
+      "12個武器 wrapper/tier 與原已核准 source receipt 一致。每有效層 I–IV 分別 +7%、+8%、+9%、+10%，最多5個有效層；實際持續時間依 weapon_id 為2秒、2.5秒、3秒或4秒。root canonical 數值、格式化與各正式頁相符。",
+      "一般近距離遠程擊殺路徑、同一實際攻擊物品、死亡結果、遠程或 count_as_ranged 分支、12.5公尺距離與持用 gate，與固定來源和共通機制收據相符。子 Buff 沒有 held 條件；切槽保留舊層並繼續倒數；子 stat_buff 沒有持用條件，所以剩餘期限內其他實際讀取 reload_speed 的裝填動作也可使用這項加成；切出後不能用本項武器取得新層。合格事件刷新整體期限，即使已達5層；到期在後續 fixed update 移除有效層，parent 銷毀清理追蹤子效果。",
+      "首次實際效果需等後續玩家統計快取更新；每個 reload action 在 action start 保存當時的 reload_speed time scale，已開始的段落不因後續加層或到期而回溯改寫。公式與例子分清速度加成和時間縮短：無其他加成時一層 IV 將10秒段變為9.09秒，五層變為6.67秒（縮短約33.33%，不是50%）。逐發 reload 的每個 action 段各自取樣。",
+      "Needle P1 的兩個 UI Mark 保留獨立標記毒素死亡路徑。實際 Needle 次要槽遠程命中存活目標標記、不受標記距離限制；毒素 keyword 消失超過一個 fixed frame 後由後續更新移除。標記仍在時，toxin death、死亡位置和 event attacker 距該位置≤12.5公尺可提出加層請求，attacker 可與標記者/持有者不同；此分支不重查 attacking_item 或當下 toxin keyword，外層仍要求持用本項副手武器。此措辭與主頁、variant note 一致。",
+      "每 Mark consumer 差異與特殊動作註記現在按實際 weapon template 分列。Needle 的 action_cycle_chem（toggle_special）及 Shotgun P3 的 toggle_special 不消費 reload_speed；Shotgun P4 特殊逐發裝填則會消費。此前11個空白 Mark 欄位已完整補齊，Needle/P3/P4 重複文字和多餘標點已清除。",
+      "同一 resource/key/hash 的 RAW locale 0/16 保持不變；遊戲字串英文本體為 Speedload，繁中本體為快速裝彈，key 後綴 on_slide 未被誤當玩家觸發方式。逐級英文重建保留本體字串並清除多餘句號，繁中 comparison 標點已修復；沒有把 RAW 省略條件誤判為矛盾。",
+      "圖片 receipt 仍以實際 item.icon weapon_trait_117 識別；icon path 與 attachment URL 分開，依既有 root receipt 驗證 public PNG SHA 與尺寸，本次未上傳或修改圖像。",
+      "最終正式頁與新 root canonical 的核心 tier、trigger、RAW 和 image 內容一致。Global blessing map、分類/反向索引及共用詞表在 delivery delta 中維持原雜湊；候選正式頁、引用、GFM 與 links 檢查均完成。",
+      "固定來源 SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；source verification receipt 核過95個作者來源區塊/11個 canonical inputs、12套 own tiers/wrappers、23 bindings/29 reload consumers，無 issue。 focused check 保持157 ranges/69 files、links errors 0、GFM 34 files PASS。",
+      "針對上一輪唯一缺漏完成小範圍複核：canonical player 與正式主 README 的切槽 bullet 逐字一致，明確說明 child stat buff 沒有 held condition，切槽後其他實際讀取 reload_speed 的裝填 action 可在剩餘期限內使用加成。追加的固定來源收據確認 29 個實際 reload consumers 讀取該 stat，且未發現第二層 item-local stat gate。"
+    ],
+    "checks": {
+      "scope_file_hashes_all_match": true,
+      "config_association_ui_bindings_equal": true,
+      "variants": 12,
+      "bindings": 23,
+      "formal_per_mark_rows": 23,
+      "coverage_per_mark_rows": 23,
+      "reload_action_blocks": 29,
+      "reload_action_blocks_with_reload_speed_time_scale": 29,
+      "per_mark_action_mapping_mismatches": 0,
+      "needle_special_note_occurrences": 1,
+      "double_full_stop_found": false,
+      "dot_semicolon_found": false,
+      "outside_candidate_count_excluded": 1,
+      "switchout_reload_consumer_explained": true,
+      "child_buff_has_held_gate": false,
+      "other_item_local_gate_found": false,
+      "player_sentence_matches_readme_exactly": true,
+      "switch_consumer_source_receipt_accepted": true
+    },
+    "source_range_verification": {
+      "fixed_source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "verified_author_source_blocks": 95,
+      "unique_source_paths": 67,
+      "hash_mismatches": 0,
+      "source_object_cache": {
+        "cache_hits": 67,
+        "git_objects_read": 0
+      },
+      "receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-frozen-source-verification.json",
+      "receipt_sha256": "9c395ca0a5d92eaceaf1fb78ec7a85b7e93b6cd66ef49616c9b65ff54ea0dbaa"
+    },
+    "focused_checks_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-focused-checks.json",
+      "sha256": "5709ccfcd9bbd6a18949dc9e982492adba4ac9638ec889be1ab7a8078b9b8d19",
+      "source_ranges": 157,
+      "source_files": 69,
+      "link_errors": 0,
+      "gfm_files": 34
+    },
+    "primary_receipts": {
+      "ui_review": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-review.json",
+        "sha256": "7a540530665192f93dc38c9d6bd710278f59bee5487c9328d510247bde88a986"
+      },
+      "ui_raw_verification": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-raw-verification.json",
+        "sha256": "4e0d68639ef064f7f6e39f2397c2420793bbbd2f9cf2418cf9e9f03cc75536c8"
+      },
+      "image": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-image.json",
+        "sha256": "2eea25a75ba773ad51ab7d070b50f4f6e973aab1ac70521acbcd999dafd7ab77",
+        "icon_id": "weapon_trait_117"
+      }
+    },
+    "root_delivery_fix_review": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-delivery-peer-fix-review.json",
+      "sha256": "f5ae40585fdde24648c676495e264dffdc11d818132da0c9404d0bd86e5c7e19",
+      "accepted": true,
+      "source_blocks_unchanged": 95,
+      "canonical_inputs_unchanged": 11
+    },
+    "verification": "Completed the exact 67-file final scope and its switch-out wording delta. The previous single omission is fixed: the canonical player bullet and formal README match exactly and explain that the ordinary child reload_speed stat has no held gate, so other actual reload actions may consume it during the remaining duration after switching. All 23 binding/action rows, 29 consumers, Needle and special-action boundaries, RAW, tiers, formula, image receipt, and index relations pass; no issues remain.",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "switch_delta_review": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-formal-peer-switch-delta.json",
+      "sha256": "eeddf6132ad20b1bcaea692af68b848c4e3fb16a9cb8de0fb9eee585f0fc6adb",
+      "unchanged": 62,
+      "changed": 4,
+      "added": 1,
+      "removed": 0,
+      "canonical_player_sha256": "34b77361c25186e83d45d1892ce267deb0ba21c5e04d98ddfb823bf9cfd71bec",
+      "formal_readme_sha256": "7ba5b6c57eecbb51eb1efa1fa5892eaf27d2d31c6c262ef514e5059489a5e003",
+      "root_source_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-switch-consumer-review.json",
+        "sha256": "44cbb31e40cb3c9c1a798d75815b1d9e2721d7d01fc03c411ca4f964d2f03a3e",
+        "accepted": true
+      }
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "speedload",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_117.png",
+      "attachment": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987932416",
+      "acquired_date": "2026-10-05",
+      "sha256": "1449d279f316f04544aebe2e8e1318f699098fb8c370a16e675d6e257e741481",
+      "content_type": "image/png",
+      "size": 4193,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "快速裝彈祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root visually inspected actual public PNG: white and pale-gray geometric icon at original128x128; actual icon identifier/source/publichash match. Image used as identity only, not gameplay evidence."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 34,
+      "tables": 35,
+      "rows": 622,
+      "lists": 110,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 157,
+      "source_files": 69,
+      "bindings": 650,
+      "variants": 337,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 33,
+      "source_object_cache": {
+        "cache_hits": 69,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 36,
+      "local_references": 1289,
+      "remote_references": 631,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 25,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-024-full-scan.json",
+        "sha256": "c417cbd6d35555af07a27d085edc56ea44dd137f4419d934018175d01f11a3ba",
+        "trigger": "round-024"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 61,
+    "not_started_name_groups": 61,
+    "partial_name_groups": 0,
+    "remaining_variants": 268,
+    "remaining_bindings": 535,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "90858cee74bc54ea3d5741c41a1018e07469370c43f4281dd8598e8a120ce55c"
+  },
+  "previous_local_commit": "072850b24ede497dabc49e041ecf0539983440a1",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "item": "content/items/traits/bespoke_dual_stubpistols_p1/reload_speed_on_slide",
+        "trait": "weapon_trait_bespoke_dual_stubpistols_p1_reload_speed_on_slide",
+        "restriction": [
+          "dual_stubpistols_p1"
+        ]
+      }
+    ],
+    "status": "metadata same-name candidate dual_stubpistols_p1 has no actual inventory binding at fixedsource intersection; excluded, not presented as usable. Exact scope12variants23bindings unchanged."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-delivery-peer-fix-review.json",
+      "sha256": "f5ae40585fdde24648c676495e264dffdc11d818132da0c9404d0bd86e5c7e19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-focused-checks.json",
+      "sha256": "5709ccfcd9bbd6a18949dc9e982492adba4ac9638ec889be1ab7a8078b9b8d19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-frozen-source-verification.json",
+      "sha256": "9c395ca0a5d92eaceaf1fb78ec7a85b7e93b6cd66ef49616c9b65ff54ea0dbaa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-outside-intersection-review.json",
+      "sha256": "eded044b7d0a4043e8b96a319d8bf5c019550a01a492976349d085f11541ed23"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "bd312fb9d411d7ff52c593584f3f42aef1504fc056bccba4c48aab72ba465929"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-prior-author-config.json",
+      "sha256": "bcee80d88e62f596464115fce3489f831fe06f6cbebf497814d5477746c395cf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-prior-author-evidence.json",
+      "sha256": "032cc2e2d4bb5788aa8760a181ff5f6a02caad3a8b29dcf1cb97a84b846f4adc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-resume-review.json",
+      "sha256": "d09dec7a995af1bce6601301fb40e671f1778e1f763699146fcdd2f3a534d0f8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-switch-consumer-review.json",
+      "sha256": "44cbb31e40cb3c9c1a798d75815b1d9e2721d7d01fc03c411ca4f964d2f03a3e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-traits-review.json",
+      "sha256": "07db270a4daf2bdd1d7ca67b31dd9c1ec088753366bdb530f7d2762f6b4cd570"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-raw-verification.json",
+      "sha256": "4e0d68639ef064f7f6e39f2397c2420793bbbd2f9cf2418cf9e9f03cc75536c8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-review.json",
+      "sha256": "7a540530665192f93dc38c9d6bd710278f59bee5487c9328d510247bde88a986"
+    }
+  ],
+  "primary_review_method": "Actual12 own fulltier/wrapper/formatter and23bindings checked via frozen rootreceipts; matched Parent/Buff cache/eventtimer and acceptedMarksman reloadaction sampling/formula reused. Root focused newly differing Needlepistol tag/death broadcaster/item/attacker/keyword/held conditions; author corrected and froze actual evidence;95range verification complements contentreview.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-config.json",
+    "sha256": "34b77361c25186e83d45d1892ce267deb0ba21c5e04d98ddfb823bf9cfd71bec"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-traits-review.json",
+      "sha256": "07db270a4daf2bdd1d7ca67b31dd9c1ec088753366bdb530f7d2762f6b4cd570"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "bd312fb9d411d7ff52c593584f3f42aef1504fc056bccba4c48aab72ba465929"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-review.json",
+      "sha256": "7a540530665192f93dc38c9d6bd710278f59bee5487c9328d510247bde88a986"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-ui-raw-verification.json",
+      "sha256": "4e0d68639ef064f7f6e39f2397c2420793bbbd2f9cf2418cf9e9f03cc75536c8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-image.json",
+      "sha256": "2eea25a75ba773ad51ab7d070b50f4f6e973aab1ac70521acbcd999dafd7ab77"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-image-upload-journal.json",
+      "sha256": "21248e154120e842aa652d1d0e65c4065f6d49b4719afdec39b65144a25e2530"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-reload-sampling-review.json",
+      "sha256": "0ec8a956c874a6059ab7fa8dcf3801e59fb001bade996478262bf99894cf1685"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-action-coverage.json",
+      "sha256": "f2f3639058dcd77f8f2f5dfcc10509cc0b8858cc7dd12b8fd466089498e479c1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-build-status.json",
+      "sha256": "efa355865a4807b7a8d130fd2bc958338a24fdb2812676f6139a2e6ad8e0e924"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-config.json",
+      "sha256": "f374594eab921982cab1964cbd2deab74ae0f36c20e5628bba82da7253aa35d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-draft.md",
+      "sha256": "ac947fac76a9f502a787f80ae2816616c6e82a6f9e9e048caf78c0492bacff57"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-agent-evidence.json",
+      "sha256": "9341584d80b4b48de3f0d5a19c9c32b1d23e7467477bfd94a7c4794dd411ecfd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-association-snapshot.json",
+      "sha256": "7d1c822f108429ff7e3c71d424401076853d7b1d44e5f69ea79bdaee70414dd1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-candidate-preview.md",
+      "sha256": "5feb565576a2e12641152b9d683dc67a7469ef88165ad289b49f191d568a58c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-group/speedload-selfcheck.json",
+      "sha256": "fb45bf9c2d142626685f38422165960bbb0bb009c381c9e43f1f64a6af169abc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-agent-config.json",
+      "sha256": "f374594eab921982cab1964cbd2deab74ae0f36c20e5628bba82da7253aa35d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-agent-evidence.json",
+      "sha256": "9341584d80b4b48de3f0d5a19c9c32b1d23e7467477bfd94a7c4794dd411ecfd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-agent-draft.md",
+      "sha256": "ac947fac76a9f502a787f80ae2816616c6e82a6f9e9e048caf78c0492bacff57"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-primary-outside-intersection-review.json",
+      "sha256": "eded044b7d0a4043e8b96a319d8bf5c019550a01a492976349d085f11541ed23"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/speedload-formal-peer-scope.json",
+    "sha256": "e5e56d944cd07c8c6c9b106609940624cbc619d85f518fccd05af9d5e17fe613",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true
+  }
+}

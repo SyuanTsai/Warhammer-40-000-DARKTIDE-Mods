@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_489_493",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only necessary display mappings: cryptic_talents.lua L1637-L1651 (Capacitor Reclamation Loop), L123-L161 (Voltaic Emitter), L259-L318 (Advanced Combat Doctrines), L531-L545 (Satiated Steel), L554-L568 (Slice and Dice). Existing ability/Capacitance names reused. No mechanism retracing."
+  ],
+  "questions": [
+    "No new unresolved question or explicit English contradiction. English Slice and Dice explicitly states Chordclaw-only damage; this is consistent, not an omission. Existing target/duration/resource limits retained as supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_multi_hits_grant_power",
+      "name": "Capacitor Reclamation Loop",
+      "name_hash": "6f438130",
+      "description_hash": "998c8ded",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_multi_hits_grant_power.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_multi_hits_grant_power.md",
+      "commit": "3d05aacb3"
+    },
+    {
+      "id": "cryptic_discharge",
+      "name": "Voltaic Emitter",
+      "name_hash": "0c5b9c4a",
+      "description_hash": "1ffeaa91",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge.md",
+      "commit": "87c3b3cd5"
+    },
+    {
+      "id": "cryptic_precision_stance",
+      "name": "Advanced Combat Doctrines",
+      "name_hash": "c4f43796",
+      "description_hash": "090d6895",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance.md",
+      "commit": "1c4a3cf4a"
+    },
+    {
+      "id": "cryptic_chordclaw_capacitance_restoration",
+      "name": "Satiated Steel",
+      "name_hash": "19578f15",
+      "description_hash": "18058d13",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_capacitance_restoration.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_capacitance_restoration.md",
+      "commit": "6d211e52b"
+    },
+    {
+      "id": "cryptic_chordclaw_consecutive_bonus",
+      "name": "Slice and Dice",
+      "name_hash": "9cf4cd86",
+      "description_hash": "0ec90e2e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_consecutive_bonus.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_consecutive_bonus.md",
+      "commit": "d2291f599"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 483,
+    "from_commit": "aacb300ca",
+    "to_commit": "d2291f599",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_630_634",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L2142-L2161, L2111-L2141, L1984-L2024, L1917-L1941. Existing mechanisms and percentage formatter reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Providence separates Revive Speed from assistance rewards; restoration caps, classification and refreshing effects are supplements."
+  ],
+  "skills": [
+    {
+      "id": "zealot_melee_crits_restore_stamina",
+      "name": "No Respite",
+      "name_hash": "a0fbdd92",
+      "description_hash": "01adc74d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_crits_restore_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_melee_crits_restore_stamina.md",
+      "commit": "13062abff"
+    },
+    {
+      "id": "zealot_revive_speed",
+      "name": "Providence",
+      "name_hash": "0e3f36dc",
+      "description_hash": "6421ecda",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_revive_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_revive_speed.md",
+      "commit": "6dbb3aa7f"
+    },
+    {
+      "id": "zealot_damage_vs_elites",
+      "name": "Abolish Blasphemers",
+      "name_hash": "964482ce",
+      "description_hash": "43f97b1b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_damage_vs_elites.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_damage_vs_elites.md",
+      "commit": "a5c3d7b60"
+    },
+    {
+      "id": "zealot_weakspot_damage_reduction",
+      "name": "Hubris",
+      "name_hash": "d2297aa1",
+      "description_hash": "b3615f2a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_weakspot_damage_reduction.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_weakspot_damage_reduction.md",
+      "commit": "0453f543e"
+    },
+    {
+      "id": "zealot_elite_kills_empowers",
+      "name": "Prime Target",
+      "name_hash": "b976e500",
+      "description_hash": "3d3cbd01",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_elite_kills_empowers.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_elite_kills_empowers.md",
+      "commit": "bcf9e898c"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 448,
+    "from_commit": "99ed9bfdb",
+    "to_commit": "bcf9e898c",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

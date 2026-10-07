@@ -11,6 +11,7 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 - [13筆本機來源引用的狀態更正](publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION.md)
 
 - [七職業全部技能 Pages 轉移與交付](publication/2026-10-04-ALL_SKILLS_PAGES.md)
+
 - [技能 Pages 範本與獨立展示流程](publication/2026-10-04-SKILL_PAGE_TEMPLATE.md)
 
 - [全量對話 Pages 最終建置與交付](publication/2026-10-04-ALL_DIALOGUES_PAGES.md)
@@ -32,6 +33,15 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 - [Darktide 分類與 Pages 可行性評估](publication/2026-10-03-DARKTIDE_PAGES_FEASIBILITY.md)
 
 - [10 組中英字幕深色聊天版型](dialogues/2026-10-03-CHAT_LAYOUT.md)
+
+- [屠戮者文件與圖片驗收](releases/1.13.X/blessings/2026-10-03-DECIMATOR_ACCEPTANCE.json)
+
+- [祝福新對話交接：Sol／xhigh](plans/2026-10-03-BLESSINGS_HANDOFF_SOL.md)
+
+- [祝福執行範圍](plans/2026-10-03-BLESSINGS_EXECUTION.md)
+- [祝福初步盤點](releases/1.13.X/blessings/2026-10-03-INVENTORY.md)
+
+- [七職業英文文件維護](releases/1.13.X/skills/english/README.md)
 
 - [1.13.1天賦更新](releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE.md)
 
@@ -66,3 +76,367 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 本機封存收據與雲端觀察資料分開保存。封存後未重新上傳時標示cloud_replacement_required，不能以本機SHA或大小宣稱雲端內容已更新。
 
 每次維護完成，檢查引用、INDEX路徑、Git忽略與來源雜湊。文本包變更時另驗證從ZIP離線復原全部104份匯出，結果新增至audits/。既有Git暫存與使用者修改不納入自動操作。
+
+- [粉碎驗收](releases/1.13.X/blessings/2026-10-03-SHRED_ACCEPTANCE.json)
+
+- [野蠻攻勢驗收](releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_ACCEPTANCE.json)
+
+- [達姆彈驗收](releases/1.13.X/blessings/2026-10-03-DUMDUM_ACCEPTANCE.json)
+
+- [魔力彈藥驗收](releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_ACCEPTANCE.json)
+
+- [振奮彈幕驗收](releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_ACCEPTANCE.json)
+
+- [首批六項驗收與Commit](releases/1.13.X/blessings/2026-10-03-BATCH_ACCEPTANCE.md)
+- [祝福完整剩餘清單與續作邊界](releases/1.13.X/blessings/2026-10-03-REMAINING.md)
+- [祝福完整說明入口與玩家用詞修正](releases/1.13.X/blessings/2026-10-03-PLAYER_WORDING_REVIEW.md)
+- [祝福專屬提示詞建立紀錄](plans/2026-10-03-BLESSINGS_WORKFLOW.md)
+- [祝福提示詞與玩家正文條列格式修正](releases/1.13.X/blessings/2026-10-03-BULLET_FORMAT_REVIEW.md)
+
+- [全部祝福續作與逐項驗收](releases/1.13.X/blessings/2026-10-03-ALL_BLESSINGS_EXECUTION.md)
+
+- [屠戮者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DECIMATOR_EXTENSION_ACCEPTANCE.json)
+
+- [粉碎全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHRED_EXTENSION_ACCEPTANCE.json)
+
+- [野蠻攻勢全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_EXTENSION_ACCEPTANCE.json)
+
+- [達姆彈全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DUMDUM_EXTENSION_ACCEPTANCE.json)
+
+- [魔力彈藥全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_EXTENSION_ACCEPTANCE.json)
+
+- [振奮彈幕全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_EXTENSION_ACCEPTANCE.json)
+
+- [反擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-COUNTERATTACK_ACCEPTANCE.json)
+
+- [顱骨落地全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CRANIAL-GROUNDING_ACCEPTANCE.json)
+
+- [超載全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OVERLOAD_ACCEPTANCE.json)
+
+- [能量洩漏全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ENERGY-LEAKAGE_ACCEPTANCE.json)
+
+- [散熱器全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HEATSINK_ACCEPTANCE.json)
+
+- [能量轉換全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ENERGY-TRANSFER_ACCEPTANCE.json)
+
+- [掃射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RAKING-FIRE_ACCEPTANCE.json)
+
+- [連跑帶打全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RUN-N-GUN_ACCEPTANCE.json)
+
+- [永燃烈焰全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EVERLASTING-FLAME_ACCEPTANCE.json)
+
+- [電靈超載全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-VOLTAGHEIST-OVERLOAD_ACCEPTANCE.json)
+
+- [機會主義者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OPPORTUNIST_ACCEPTANCE.json)
+
+- [超級充能全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUPERCHARGE_ACCEPTANCE.json)
+
+- [開罐器全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CAN-OPENER_ACCEPTANCE.json)
+
+- [破碎衝擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHATTERING-IMPACT_ACCEPTANCE.json)
+
+- [穿透火焰全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PENETRATING-FLAME_ACCEPTANCE.json)
+
+- [血肉撕裂者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FLESH-TEARER_ACCEPTANCE.json)
+
+- [飛鏢彈全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FLECHETTE_ACCEPTANCE.json)
+
+- [放血者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLOODLETTER_ACCEPTANCE.json)
+
+- [撕碎全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LACERATE_ACCEPTANCE.json)
+
+- [出血穿透全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PUNCTURE_ACCEPTANCE.json)
+
+- [閃電反射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LIGHTNING-REFLEXES_ACCEPTANCE.json)
+
+- [煉獄全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-INFERNUS_ACCEPTANCE.json)
+
+- [偏轉全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DEFLECTOR_ACCEPTANCE.json)
+
+- [憤怒全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-WRATH_ACCEPTANCE.json)
+
+- [驅魔者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EXORCIST_ACCEPTANCE.json)
+
+- [行刑者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EXECUTOR_ACCEPTANCE.json)
+
+- [歎為觀止全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHOWSTOPPER_ACCEPTANCE.json)
+
+- [大口徑彈藥全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MANSTOPPER_ACCEPTANCE.json)
+
+- [激射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HOTSHOT_ACCEPTANCE.json)
+
+- [致命零距離全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LETHAL-PROXIMITY_ACCEPTANCE.json)
+
+- [破片四濺全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHRAPNEL_ACCEPTANCE.json)
+
+- [祝福精確型號限制盤點修正](releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json)。
+
+- [祝福效率流程調整](releases/1.13.X/blessings/2026-10-03-EFFICIENCY_WORKFLOW.md)
+
+- [祝福共通機制證據快取](releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json)
+
+- [創傷全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TRAUMA_ACCEPTANCE.json)
+
+- [遊擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HIT-AND-RUN_ACCEPTANCE.json)
+
+- [幽靈全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-GHOST_ACCEPTANCE.json)
+
+- [近身平射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-POINT-BLANK_ACCEPTANCE.json)
+
+- [精確打擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SURGICAL_ACCEPTANCE.json)
+
+- [克魯錫安輪盤全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CRUCIAN-ROULETTE_ACCEPTANCE.json)
+
+- [粉碎（Pulverise）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PULVERISE_ACCEPTANCE.json)
+
+- [亡命之徒全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DESPERADO_ACCEPTANCE.json)
+
+- [集中火力全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CONCENTRATED-FIRE_ACCEPTANCE.json)
+
+- [散彈全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SCATTERSHOT_ACCEPTANCE.json)
+
+- [祝福暫停交接：47項已Commit，還擊／猛撞／燃起來！待續作](plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL.md)
+
+- [還擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RIPOSTE_ACCEPTANCE.json)
+
+- [粉碎：實際UI型號名稱同步](releases/1.13.X/blessings/2026-10-04-SHRED_UI_NAME_CORRECTION.json)
+
+- [猛撞全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BASH_ACCEPTANCE.json)
+
+- [燃起來！全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-GETS-HOT_ACCEPTANCE.json)
+
+- [未卜先知全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PRECOGNITION_ACCEPTANCE.json)
+
+- [敏捷全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-AGILE_ACCEPTANCE.json)
+
+- [致命精準全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DEADLY-ACCURATE_ACCEPTANCE.json)
+
+- [高壓電全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HIGH-VOLTAGE_ACCEPTANCE.json)
+
+- [處決全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EXECUTION_ACCEPTANCE.json)
+
+- [湧動全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SURGE_ACCEPTANCE.json)
+
+- [狂轟猛炸全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLAST-ZONE_ACCEPTANCE.json)
+
+- [開啟齊射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OPENING-SALVO_ACCEPTANCE.json)
+
+- [迅捷火焰全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-QUICKFLAME_ACCEPTANCE.json)
+
+- [黏著炸藥全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ADHESIVE-CHARGE_ACCEPTANCE.json)
+
+- [煽風點火全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FAN-THE-FLAMES_ACCEPTANCE.json)
+
+- [聚能爆發全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-POWER-BLAST_ACCEPTANCE.json)
+
+- [致命頻率全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DEADLY-FREQUENCIES_ACCEPTANCE.json)
+
+- [懲罰齊射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PUNISHING-SALVO_ACCEPTANCE.json)
+
+- [效率全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EFFICIENCY_ACCEPTANCE.json)
+
+- [肉槌全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TENDERISER_ACCEPTANCE.json)
+
+- [凌遲全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TORMENT_ACCEPTANCE.json)
+
+- [千里眼全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TELESCOPIC-SIGHT_ACCEPTANCE.json)
+
+- [突然襲擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUCKER-PUNCH_ACCEPTANCE.json)
+
+- [開溜全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BUG-OUT_ACCEPTANCE.json)
+
+- [持續射擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUSTAINED-FIRE_ACCEPTANCE.json)
+
+- [擊倒全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SMACKDOWN_ACCEPTANCE.json)
+
+- [猛攻全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-WEIGHT-OF-FIRE_ACCEPTANCE.json)
+
+- [殺戮狂潮全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SLAUGHTER-SPREE_ACCEPTANCE.json)
+
+- [亞空間亂舞全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-WARP-FLURRY_ACCEPTANCE.json)
+
+- [懲罰者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PUNISHER_ACCEPTANCE.json)
+
+- [浴血而生全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BORN-IN-BLOOD_ACCEPTANCE.json)
+
+- [熱力震盪全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-VOLATILE_ACCEPTANCE.json)
+
+- [升溫全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RISING-HEAT_ACCEPTANCE.json)
+
+- [優化冷卻全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OPTIMISED-COOLING_ACCEPTANCE.json)
+
+- [專注冷卻全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FOCUSED-COOLING_ACCEPTANCE.json)
+
+- [超壓全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OVERPRESSURE_ACCEPTANCE.json)
+
+- [虹吸全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SYPHON_ACCEPTANCE.json)
+
+- [雙管齊發全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BOTH-BARRELS_ACCEPTANCE.json)
+
+- [交叉動量全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-GAUNTLET-MOMENTUM_ACCEPTANCE.json)
+
+- [凶殘之寧全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MURDEROUS-TRANQUILITY_ACCEPTANCE.json)
+
+- [快速裝填全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-QUICKLOADER_ACCEPTANCE.json)
+
+- [奪顱者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HEADTAKER_ACCEPTANCE.json)
+
+- [勢頭全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MOMENTUM_ACCEPTANCE.json)
+
+- [撕扯震盪全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RENDING-SHOCKWAVE_ACCEPTANCE.json)
+
+- [機魂再臨全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MACHINE-SPIRIT-RESURGENT_ACCEPTANCE.json)
+
+- [精煉殺意全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-REFINED-LETHALITY_ACCEPTANCE.json)
+
+- [迅雷反射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MARKSMAN-REFLEX_ACCEPTANCE.json)
+
+- [仁慈殺手全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MERCY-KILLER_ACCEPTANCE.json)
+
+- [能量循環全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-POWER-CYCLER_ACCEPTANCE.json)
+
+- [完美一擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PERFECT-STRIKE_ACCEPTANCE.json)
+
+- [強力一擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HAYMAKER_ACCEPTANCE.json)
+
+- [嗜血全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLOODTHIRSTY_ACCEPTANCE.json)
+
+- [兇狠切割全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-VICIOUS-SLICE_ACCEPTANCE.json)
+
+- [致命一擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DEATHBLOW_ACCEPTANCE.json)
+
+- [破甲全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUNDER_ACCEPTANCE.json)
+
+- [致命連擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CHAINED-DEATHBLOW_ACCEPTANCE.json)
+
+- [強化電流弧全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ENHANCED-VOLTAIC-ARCS_ACCEPTANCE.json)
+
+- [恐怖阻擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TERRIFYING-BARRAGE_ACCEPTANCE.json)
+
+- [震懾全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHOCK-AND-AWE_ACCEPTANCE.json)
+
+- [快速裝彈全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SPEEDLOAD_ACCEPTANCE.json)
+
+- [死亡噴吐全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DEATHSPITTER_ACCEPTANCE.json)
+
+- [推進全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-THRUST_ACCEPTANCE.json)
+
+- [榮耀獵手全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-GLORYHUNTER_ACCEPTANCE.json)
+
+- [烈火熱焰全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FIRE-FRENZY_ACCEPTANCE.json)
+
+- [殺戮者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SLAUGHTERER_ACCEPTANCE.json)
+
+- [野蠻橫掃全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SAVAGE-SWEEP_ACCEPTANCE.json)
+
+- [暴走全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RAMPAGE_ACCEPTANCE.json)
+
+- [提速全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-REV-IT-UP_ACCEPTANCE.json)
+
+- [毀滅打擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DEVASTATING-STRIKE_ACCEPTANCE.json)
+
+- [雷鳴全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-THUNDEROUS_ACCEPTANCE.json)
+
+- [亞空間樞紐全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-WARP-NEXUS_ACCEPTANCE.json)
+
+- [輕裝全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-STRIPPED-DOWN_ACCEPTANCE.json)
+
+- [咆哮突進全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ROARING-ADVANCE_ACCEPTANCE.json)
+
+- [踉蹌全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FALTER_ACCEPTANCE.json)
+
+- [勢不可擋全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-UNSTOPPABLE-FORCE_ACCEPTANCE.json)
+
+- [穿透全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PIERCE_ACCEPTANCE.json)
+
+- [精確定位全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PINPOINTING-TARGET_ACCEPTANCE.json)
+
+- [亞空間斬全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-WARP-SLICE_ACCEPTANCE.json)
+
+- [轉移反噬全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TRANSFER-PERIL_ACCEPTANCE.json)
+
+- [不入虎穴，焉得虎子全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-NO-GUTS-NO-GLORY_ACCEPTANCE.json)
+
+- [護甲之禍全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ARMOURBANE_ACCEPTANCE.json)
+
+- [燃燒靈魂全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLAZING-SPIRIT_ACCEPTANCE.json)
+
+- [擴展性全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EXPANSIVE_ACCEPTANCE.json)
+
+- [慰藉精準全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-REASSURINGLY-ACCURATE_ACCEPTANCE.json)
+
+- [懲罰射擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PUNISHING-FIRE_ACCEPTANCE.json)
+
+- [燃燒靈魂（靈能法杖與雙手力場劍）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLAZING-SPIRIT-WARPFIRE_ACCEPTANCE.json)
+
+- [專注引導全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FOCUSED-CHANNELLING_ACCEPTANCE.json)
+
+- [激勵彈幕全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE-THUMPER_ACCEPTANCE.json)
+
+- [不穩定能量全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-UNSTABLE-POWER_ACCEPTANCE.json)
+
+- [最後防線全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LAST-GUARD_ACCEPTANCE.json)
+
+- [孤注一擲全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ALL-OR-NOTHING_ACCEPTANCE.json)
+
+- [優勢（近戰力量）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUPERIORITY-MELEE_ACCEPTANCE.json)
+
+- [反守為攻全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OFFENSIVE-DEFENCE_ACCEPTANCE.json)
+
+- [優勢（通用力量）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUPERIORITY_ACCEPTANCE.json)
+
+- [孤注一擲動作覆蓋修正驗收](releases/1.13.X/blessings/2026-10-06-ALL-OR-NOTHING_COVERAGE_CORRECTION.json)
+
+- [緩慢而確實全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SLOW-AND-STEADY_ACCEPTANCE.json)
+
+- [無情背刺全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RUTHLESS-BACKSTAB_ACCEPTANCE.json)
+
+- [利刃攻勢全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLADED-MOMENTUM_ACCEPTANCE.json)
+
+- [手銃全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HAND-CANNON_ACCEPTANCE.json)
+
+- [刻不容緩全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-NO-RESPITE_ACCEPTANCE.json)
+
+- [壓倒性的武力全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OVERWHELMING-FORCE_ACCEPTANCE.json)
+
+- [持續阻擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CEASELESS-BARRAGE_ACCEPTANCE.json)
+
+- [狡猾射手全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TRICKSHOOTER_ACCEPTANCE.json)
+
+- [火藥灼傷全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-POWDERBURN_ACCEPTANCE.json)
+
+- [遊擊（特殊攻擊命中）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HIT-AND-RUN-ACTIVATED_ACCEPTANCE.json)
+
+- [壓倒性火力全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OVERWHELMING-FIRE_ACCEPTANCE.json)
+
+- [連續發射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLAZE-AWAY_ACCEPTANCE.json)
+
+- [揮拳出擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TAKE-A-SWING_ACCEPTANCE.json)
+
+- [接連不斷全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CAVALCADE_ACCEPTANCE.json)
+
+- [斷肢者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LIMBSPLITTER_ACCEPTANCE.json)
+
+- [持續打擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RELENTLESS-STRIKES_ACCEPTANCE.json)
+
+- [全孔射擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FULL-BORE_ACCEPTANCE.json)
+
+- [鉗制射擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PINNING-FIRE_ACCEPTANCE.json)
+
+- [連續發射（射擊連段）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLAZE-AWAY-ALTERNATIVE_ACCEPTANCE.json)
+
+- [錘擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HAMMERBLOW_ACCEPTANCE.json)
+
+- [斬首者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DECAPITATOR_ACCEPTANCE.json)
+
+- [詭異打擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-UNCANNY-STRIKE_ACCEPTANCE.json)
+
+- [正中眉心全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BETWEEN-THE-EYES_ACCEPTANCE.json)
+
+- [碎顱者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SKULLCRUSHER_ACCEPTANCE.json)
+
+- [雷霆打擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-THUNDERSTRIKE_ACCEPTANCE.json)
+
+- [獵頭者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HEADHUNTER_ACCEPTANCE.json)
+
+- [堅定打擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CONFIDENT-STRIKE_ACCEPTANCE.json)

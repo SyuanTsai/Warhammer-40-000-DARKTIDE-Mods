@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_544_548",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L2189-L2198, L2102-L2116, L2224-L2241, L2479-L2489, L1706-L1711. Previously checked percentage formatter and same-build Capacitance keyword ecc15a9f reused. Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction or new unresolved question. Fractional ammo carryover/cap, general Damage, defensive persistence/cost basis, per-activation refresh and immediate maximum-Toughness recovery are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_passive_ammo_replenishment",
+      "name": "Ammunition-Restoration Pod",
+      "name_hash": "dc9bf3b0",
+      "description_hash": "41aa3ba1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_ammo_replenishment.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_passive_ammo_replenishment.md",
+      "commit": "ae265c627"
+    },
+    {
+      "id": "cryptic_stacking_melee_damage",
+      "name": "Sustained Assault Doctrine",
+      "name_hash": "062af30d",
+      "description_hash": "32d4da44",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stacking_melee_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stacking_melee_damage.md",
+      "commit": "bba4e8fd1"
+    },
+    {
+      "id": "cryptic_stun_dr_power",
+      "name": "Galvanized Coating",
+      "name_hash": "e854ba74",
+      "description_hash": "bb527abc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stun_dr_power.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stun_dr_power.md",
+      "commit": "10f158dd9"
+    },
+    {
+      "id": "cryptic_damage_on_ability",
+      "name": "Moebian Conductor",
+      "name_hash": "7a67e0cf",
+      "description_hash": "d9e47181",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_damage_on_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_damage_on_ability.md",
+      "commit": "6d6e462e0"
+    },
+    {
+      "id": "cryptic_weakspot_kills_restore_toughness",
+      "name": "Servo-Core Recharge Engine",
+      "name_hash": "bd0b9fe9",
+      "description_hash": "8c1c47d8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_weakspot_kills_restore_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_weakspot_kills_restore_toughness.md",
+      "commit": "e2604bd27"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 317,
+    "from_commit": "90d69e7e9",
+    "to_commit": "e2604bd27",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

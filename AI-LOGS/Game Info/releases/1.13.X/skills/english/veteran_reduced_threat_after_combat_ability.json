@@ -1,0 +1,147 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; no repeated full implementation analysis.",
+  "id": "veteran_reduced_threat_after_combat_ability",
+  "class": "Veteran",
+  "name": "Low Profile",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "name_key": "loc_talent_veteran_reduced_threat_after_combat_ability",
+  "name_hash": "6a142c22",
+  "description_key": "loc_talent_veteran_reduced_threat_after_stealth_desc",
+  "description_hash": "7d63094b",
+  "raw_template": "{threat_multiplier:%s} Threat for {duration:%s}s on leaving Stealth.",
+  "static_reconstruction": "-90% Threat for 10s on leaving Stealth.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name/description records",
+    "Existing Low Profile icon audit",
+    "veteran_talents.lua:1268-1302 (targeted display parameters)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese Low Profile dossier for threat-score weighting, two trigger routes, during/post-Stealth timing, single instance and unchanged existing custom deadline. Shared formatter evidence was already accepted. No full mechanism analysis repeated.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, two actual key/hash/text pairs and full raw template",
+      "result": "passed",
+      "pairs": 2
+    },
+    {
+      "check": "display percentage/number parameters and unused talent_name field",
+      "result": "passed",
+      "threat_reduction_percent": 90,
+      "post_exit_duration_seconds": 10
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 573,
+      "unique_source_ranges": 151,
+      "source_files": 33
+    },
+    {
+      "check": "isolated threat-weight and same-instance deadline arithmetic with stated assumptions",
+      "result": "passed",
+      "weight_units": 10,
+      "deadline_seconds": 13,
+      "remaining_seconds_on_reapplication": 6
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 715,
+      "local_references": 6561,
+      "remote_references": 9465,
+      "errors": 0
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 11
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 5
+      },
+      "example_table": {
+        "columns": 3,
+        "rows": 3
+      },
+      "parameter_table": {
+        "columns": 3,
+        "rows": 3
+      },
+      "player_icons": "32x32 and 72x72; all 22 loaded",
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "visual inspection of player section, threat/deadline examples and full-template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 4700,
+      "sha256": "cea4b04a8f3732e59bd024cb294afe9c4737836d38c6e2e2791d6bdf38d9f99d",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 13,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, eleven accepted skills, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed"
+    }
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Exact runtime update-frame timing.",
+    "Reapplication behavior measured in game."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full implementation call-chain analysis (outside clarified review scope)"
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/low-profile-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_threat_after_combat_ability.md",
+  "commit": "72550d39a3fd8b6e03a27097cb7ba04922bce3fb"
+}

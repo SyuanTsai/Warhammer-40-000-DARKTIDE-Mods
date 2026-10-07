@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-03",
+  "blessing": "charmed-reload",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/README.md",
+  "variants": [
+    "weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit"
+  ],
+  "binding_count": 3,
+  "primary_review": "Sol直接核對固定Git物件、所有等級、核心觸發、結算與算例；Luna/max協助本項唯讀證據複核。FASTER無可用設定欄位。",
+  "validation": {
+    "gfm_parse": {
+      "files": 48,
+      "tables": 39,
+      "rows": 288,
+      "lists": 18
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 121,
+      "source_files": 49,
+      "bindings": 24,
+      "variants": 8,
+      "formula_checks": "passed"
+    },
+    "gameplay_test": "not run",
+    "available_tiers": null,
+    "game-info": {
+      "markdown_files": 748,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 32,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 3,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 48,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "formulas": "min(5,20,50)=5;min(5,2,50)=2;min(5,20,2)=2; clip+reserve conserved; one critical burst transfers at most5 not30"
+  },
+  "image": {
+    "id": "charmed-reload",
+    "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_143.png",
+    "icon_path": "content/ui/textures/icons/traits/weapon_trait_143",
+    "sha256": "cbb29c9a6a0c261b1df8d127e28daf186acb99f6eea1a7245a31944047909005",
+    "size": 3218,
+    "content_type": "image/png",
+    "width": 128,
+    "height": 128,
+    "attachment": "https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92",
+    "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+    "public_download_status": 200,
+    "hash_verified": true,
+    "display": "original and public attachment inspected"
+  },
+  "limitations": [
+    "MasterItems138291 Steam Build association unverified",
+    "Backend available tiers remain null",
+    "Other same-name variants not reviewed",
+    "No in-game tests"
+  ],
+  "previous_local_commit": "9aeb999acd5deb3caa04dd17988948c78330c6a5",
+  "localization_review": "Critical Hit wording differs from new crit decision event; misses can proc. Actual MasterItems uses ammo_refill_from_reserve_on_crit path. Weapon m3 zh-TW Mk V / English Mk VII discrepancy preserved and annotated."
+}

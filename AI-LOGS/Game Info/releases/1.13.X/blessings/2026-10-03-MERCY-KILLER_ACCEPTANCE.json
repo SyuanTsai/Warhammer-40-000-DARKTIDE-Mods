@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-05",
+  "blessing": "mercy-killer",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_increased_weakspot_damage_against_bleeding",
+    "weapon_trait_bespoke_dual_shivs_p1_increased_weakspot_damage_against_bleeding"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "mercy-killer",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-formal-peer-scope.json",
+    "scope_sha256": "8c95f48c04a27748f2ded0d6dfde970c2f27f3622953ee5ef3b6ecb282381c8b",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_count": 31,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-agent-config.json": "7694ecadc52f7bdece3a61b8ec0868c7bb0bf0be6aaa60461a1c7d29e619435b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-agent-draft.md": "a10956ee922ef8f2cfea5dca99c01e670c7134b3988acc5059cfe8ccca05673a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-agent-evidence.json": "18a36e680ff03a0d52e8ebd2fd005f169459c4a156e0d98998ceec923a00434f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-config.json": "f06422b418d63bb0b4383fb564f3abed231498d04478f482adce3efc4c0d48c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-extension-draft.json": "d0e90ace2836486685b0f515016754a3c886d08b151950fa90a371f3c0ee8916",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-image.json": "fd27699352c2eaf8060d27c7219d1589cb95afbbdb320dffea7f55f8fe3cb41a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-finesse-reuse-review.json": "0aa1bed3e0fedaf699383188daed3d79c8ddfa5dda8ab1da4ad23f2c34ca9662",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-focused-checks.json": "06586a30620efd41e51d422a08c62ad06db01c3e413ed75b9cdf9201162c27fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-frozen-source-verification.json": "70ec6a4161326f7d1dd567e8e9ae6d90c127beb4be37156c95e7b39a8debbf06",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-own-tier-diff.json": "44d6737572302c77d948a6eeac9a0a05a1c0598c5a31a02265c8f5e553999880",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-resume-review.json": "510047886cf430ff6d7a8e1267ba41543be2f1c6f6dfbf26d7d662aaf28e0e6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-special-routing-review.json": "3388ab919ea5fe18ca4b3c11eaa860bc07e45b08c97ba92299af6417c2b48070",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-traits-review.json": "4b0963686a7c7aaa584411ebc1d4be47a6739a2d6df785eb3c1da2e245a2e479",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-ui-raw-verification.json": "28811342eb6e88eaaf0a4bf5ab822286ac98399c32e45ea46ae14d317457a8e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-ui-review.json": "bbfcebe813002b6f84a305a6d4f7fea96d645b3d778069bd4972ee0427b77809",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "766c5bd6fb461fa1421794db71869ed85f11b035573ef7a81e702e963bb13507",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/DAMAGE_PERCENTAGE_REVIEW.md": "1b8d6ba0d90d7a6c7c7cc10fc75af4ad97a606e5b38280e77ec6d2e3d57c4fd3",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/LOCALIZATION_COMPARISON.md": "16dbaaf7898a2d4a8f6822bc0d0ea758439fcab4f667dfe6793805e565aa9dd6",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/README.md": "313197f9a8da46c67e68c906dac0bb7ee560c9bb6154831bb8c71cc9965b6cc5",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/SOURCE_INDEX.md": "42c2c65f5d5c6248c01cfb42aecf47fd40d5bc8ccc45e57bebec8f77b8337eb2",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/TIER_VALUES.md": "9c611564c90993c1b964832393e8a1ccdd95c1f3bf4e55721e3a8c68817f4748",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/WEAPON_COMPATIBILITY.md": "86e3f685ff2535980c3c0d5555abe8b9546d0a698fade2c36c89845a39e9b309",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/weapon_trait_bespoke_combatknife_p1_increased_weakspot_damage_against_bleeding.md": "688bab24aadefae9dd975ff7334df9c6b4d0f8fe888ae2aaff3a0f8241fbf802",
+      "Game Info/releases/1.13.X/blessings/entries/仁慈殺手/weapon_trait_bespoke_dual_shivs_p1_increased_weakspot_damage_against_bleeding.md": "5f88e12b0bd1fc723aa0b8b126b5ddf8b8c3d88837663f93134e0319e836caf8",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "95a5ae9b2805d20a5f24e547e7ae32b2043a3353aa4715eb7869c0df222142e2",
+      "Game Info/releases/1.13.X/blessings/README.md": "2dd2088990ad3971a3e3d9cbdd018117094333d9916b12dbf903d535b6229fbf",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "22a36edf95a56d4de4ff142d808b5aeb9f695729354830c1c2cf22a4d963b475",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "cf6fda00a68bc179a09f37b2a03608b9f2776154586f936689cd9f4899207b95",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "0ec9bedbafc20daea983e17e7dc7993f95d2ba355081ca164aa8a295bf8556b3",
+      "Referneces/Translation.md": "ba8178d599d432b9f5c8c82a8d00a4aa45ebb34fa794d7284daf211c141f04fb"
+    },
+    "review_findings": [
+      "All 31 fixed-scope paths exist and match their exact recorded SHA-256. The frozen research trio, canonical configuration and extension draft match the reviewed scope.",
+      "The eight Mercy Killer formal pages and related map, both reverse weapon pages, blessing catalogs and glossary consistently identify two variants and four bindings: Catachan Combat Blade Mk III/Mk VI and Improvised Shivs Mk I/Mk III. Trait/item restrictions, RAW keys, per-variant pages and icon identity agree.",
+      "Both own I–IV tiers are .525/.55/.575/.6 with the expected percentage formatter. The actual wrappers clone the bleeding base template; the held-slot conditional fallback 1.0 is replaced by the own conditional value rather than added.",
+      "The implementation gate is melee plus weakspot plus the target bleeding keyword already present at damage calculation; it does not scale with bleed-stack count. Attack damage calculation precedes post-hit buff handling, so a bleed applied by that same hit cannot retroactively qualify it. Bleed periodic damage is attack_type=buff and is excluded.",
+      "The Combat Blade special jab is an actual melee sweep/punch and can qualify when its hit independently meets the gate. Both Shivs specials are ranged projectile throws; their wired neurotoxin applies toxin, not bleeding, so these special hits do not qualify.",
+      "The controlled examples correctly use F*(S+t), with final damage B+F*(S+t) only when later multipliers are neutral: at B=200,F=100,S=1, baseline 300 and tier IV 360 (+20%); tier I is 352.5 and IV is +2.13% over I final damage. At S=1.4, baseline 340 and tier IV 400 (+17.65%). These are not claims that the tier multiplies the entire final hit.",
+      "All four EN/ZH RAW tier sentences and static reconstructions preserve the source wording and values. The implementation-only conditions are identified as documentation coverage rather than a false RAW contradiction. The 128px icon path, id and verified attachment are kept distinct and consistent.",
+      "The focused source receipt records 52 ranges across 22 source files; link and GFM checks report no new errors, and the current shared-map partition checks pass. These validations agree with the peer-reviewed pages and indexes."
+    ],
+    "content_checks": {
+      "formal_pages": 8,
+      "variants": 2,
+      "bindings": 4,
+      "raw_tier_rows": 8,
+      "actual_special_routes_checked": true,
+      "first_effect_and_bleeding_keyword_timing_checked": true,
+      "formula_and_controlled_examples_checked": true,
+      "map_and_reverse_relations_checked": true,
+      "image_identity_checked": true,
+      "frozen_agent_trio_unchanged": true,
+      "source_links_and_gfm_receipts_checked": true
+    },
+    "verification": "Focused content review completed; no substantive discrepancy remains in this fixed scope."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/b9fd0379-1424-48e1-8f8b-d7fbef8c9388",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "mercy-killer",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_196",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_196.png",
+      "attachment": "https://github.com/user-attachments/assets/b9fd0379-1424-48e1-8f8b-d7fbef8c9388",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5985327872",
+      "acquired_date": "2026-10-05",
+      "sha256": "61a30aecfcd9dff644b78678265429b1b76d08e21208cbacd357357e55e649ae",
+      "content_type": "image/png",
+      "size": 4178,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "仁慈殺手祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_notes": "目視128×128公開下載原圖：中央淡白／灰色直向塊狀圖案、周圍透明區；低對比細部不據此推斷，保留原圖。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 315,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 52,
+      "source_files": 22,
+      "bindings": 547,
+      "variants": 282,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 805,
+      "remote_references": 345,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 21,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-020-full-scan.json",
+        "sha256": "ea1f2d22dab98fffd677eceba82ef817a98252023f59ac0d331292071ec880c8",
+        "trigger": "round-020"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 73,
+    "not_started_name_groups": 73,
+    "partial_name_groups": 0,
+    "remaining_variants": 323,
+    "remaining_bindings": 638,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "dd17c0b468d7d3a7f0e3ebc5ffacf42c2ccf54d94775cdd2c26eea0d96216c38"
+  },
+  "previous_local_commit": "7ad575c54e9b1eeb277870d9c1a416078b4e628c",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in actual inventory and primary UI exact-name outside definitions check"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-finesse-reuse-review.json",
+      "sha256": "0aa1bed3e0fedaf699383188daed3d79c8ddfa5dda8ab1da4ad23f2c34ca9662"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-focused-checks.json",
+      "sha256": "06586a30620efd41e51d422a08c62ad06db01c3e413ed75b9cdf9201162c27fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-frozen-source-verification.json",
+      "sha256": "70ec6a4161326f7d1dd567e8e9ae6d90c127beb4be37156c95e7b39a8debbf06"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-own-tier-diff.json",
+      "sha256": "44d6737572302c77d948a6eeac9a0a05a1c0598c5a31a02265c8f5e553999880"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-resume-review.json",
+      "sha256": "510047886cf430ff6d7a8e1267ba41543be2f1c6f6dfbf26d7d662aaf28e0e6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-special-routing-review.json",
+      "sha256": "3388ab919ea5fe18ca4b3c11eaa860bc07e45b08c97ba92299af6417c2b48070"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-traits-review.json",
+      "sha256": "4b0963686a7c7aaa584411ebc1d4be47a6739a2d6df785eb3c1da2e245a2e479"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-ui-raw-verification.json",
+      "sha256": "28811342eb6e88eaaf0a4bf5ab822286ac98399c32e45ea46ae14d317457a8e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-primary-ui-review.json",
+      "sha256": "bbfcebe813002b6f84a305a6d4f7fea96d645b3d778069bd4972ee0427b77809"
+    }
+  ],
+  "primary_review_method": "Reuse fixedSHA held-stat, melee/push/projectile dispatch, target keyword cache and additive finesse final assembly after proving actual bleeding branch. Independently check both full own tiers/wrappers, actual four UI/bindings and RAW; only actual special fist versus ranged throw, native poison equip wiring and first-effect/DoT differences expanded.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-config.json",
+    "sha256": "f06422b418d63bb0b4383fb564f3abed231498d04478f482adce3efc4c0d48c5"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-agent-config.json",
+      "sha256": "7694ecadc52f7bdece3a61b8ec0868c7bb0bf0be6aaa60461a1c7d29e619435b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-agent-evidence.json",
+      "sha256": "18a36e680ff03a0d52e8ebd2fd005f169459c4a156e0d98998ceec923a00434f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-agent-draft.md",
+      "sha256": "a10956ee922ef8f2cfea5dca99c01e670c7134b3988acc5059cfe8ccca05673a"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/mercy-killer-formal-peer-scope.json",
+    "sha256": "8c95f48c04a27748f2ded0d6dfde970c2f27f3622953ee5ef3b6ecb282381c8b",
+    "final_content_hashes_unchanged": true
+  }
+}

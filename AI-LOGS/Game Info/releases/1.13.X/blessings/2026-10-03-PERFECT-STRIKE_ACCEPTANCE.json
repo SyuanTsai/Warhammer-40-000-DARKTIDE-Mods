@@ -1,0 +1,296 @@
+{
+  "date": "2026-10-05",
+  "blessing": "perfect-strike",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/完美一擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainsword_2h_p1_pass_past_armor_on_crit",
+    "weapon_trait_bespoke_combatsword_p2_pass_past_armor_on_crit",
+    "weapon_trait_bespoke_ogryn_club_p1_pass_past_armor_on_crit",
+    "weapon_trait_bespoke_ogryn_club_p2_pass_past_armor_on_crit",
+    "weapon_trait_bespoke_ogryn_powermaul_p1_pass_past_armor_on_crit",
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_pass_past_armor_on_crit",
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_pass_past_armor_on_crit"
+  ],
+  "added_binding_count": 15,
+  "total_variants": 7,
+  "total_bindings": 15,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "perfect-strike",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-formal-peer-scope.json",
+    "scope_sha256": "03936cb4c8618b2c022445e371844322652d30934a8c38dfb4ca5393267f348a",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_count": 46,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-agent-config.json": "937a305cb24b30dc93d076f25865f5320ca0c440df186ca161f6dc17758909d8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-agent-draft.md": "a5f07b234f8ebfb41558b573bcf4e1d67e0b7ce651b49255f7178740258a4f02",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-agent-evidence.json": "ae8bf0424d07ef07d59fc8b5d75735bde221b8dc08a6a6ad5d7fc75601201258",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-config.json": "724674456fde55229db5a28fedc9c4b6ee442a2a05135c52885f95890c383dbc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-extension-draft.json": "8b1593966d529b7516649acf9be7999023210bbcda144ada50640697c102a460",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-image.json": "5a0e60b5b915478184f7560861f9dea281bdb275d5ee018d1577be6fe679562a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-critical-finesse-reuse-review.json": "98694875553c2e13162508e256df80e2c7b444f20616e166d7d7660e803c6e74",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-focused-checks.json": "ea3d114bb4cb531c921d9160e3353e49955028bca313fe74a3c4c142a23da416",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-frozen-source-verification.json": "fcc553a48de6ced1e18c9629b74a1cdf8b81dc68813b21d2382ad48cc8ca7f6d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-own-tier-diff.json": "9de551ec0c99ad0e4a7d207f8fcdd2914045a577ec733beac040182dba6be9d0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-peer-correction-review.json": "33525bf5701dd40c05abafeec57fcf07665b83b8fd677188faa575b915ead180",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-resume-review.json": "f2045fece30e494bd927cf8535c2e726fc150c8e8549f3d24b2aa576e50ab6ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-special-consumer-diff-review.json": "f4caf237741b413d318218e178d029efff198597dfbe90523845e3d33e606e40",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-traits-review.json": "3b74e52e18119a354f3cd11767d5b46b34d793ac292062d24559893539bf1b3b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-ui-raw-verification.json": "ef52bbd6c07d46c7d27cb53f1b36ad88ab8a959d646e53582b7af91eb11ecdd1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-ui-review.json": "c8300e69c7d65d396b34a89f98076bc43ec64a6493c78e02f10297e41209634d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-finesse-formula-review.json": "3519ed0df43089bde22ccc0392da8063bdc2e6b82d163e08a74b1d37a79a17e4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ef13683ec52ee5b94b3a345cba505622491ce4f0433bbb098450373f0a2912f4",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/DAMAGE_PERCENTAGE_REVIEW.md": "9b9c24761502d9bb02e2de39406e26249938cafff6be076f53b09f569178ee43",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/LOCALIZATION_COMPARISON.md": "a8066984a6c8d64771e5e78de58928330d4fe6413919bb8b994a33500bca86f8",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/README.md": "1de5637d3dbe642f5214a9338a5d74c5ed8cd5d5ba0f7764a0297c910a0fbe35",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/SOURCE_INDEX.md": "243fa905c4e74caf1a8ef03cf3af1ac53bd235765b58d96a3c30b6211dab8a54",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/TIER_VALUES.md": "984d3a8e960c23a8fe12252410a61df83c78041903f313f4b89aac1833777ab1",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/WEAPON_COMPATIBILITY.md": "48550508a4e6e93f922f16047fb2064f3e905e32e4ace156518905f047adcba3",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/weapon_trait_bespoke_chainsword_2h_p1_pass_past_armor_on_crit.md": "f27080e880b7cfc17c4ed2efafd9748eb5666b0878c22ecd3a663b18a0ebe305",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/weapon_trait_bespoke_combatsword_p2_pass_past_armor_on_crit.md": "300ed78ed1323265159c330e3b5a6f30b4b2231b646c75de2d618e77f2d7805a",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/weapon_trait_bespoke_ogryn_club_p1_pass_past_armor_on_crit.md": "71f4c469c10294c09b18990e165a1e8ff281bbf2ef007eacc7a364d3b4d415ca",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/weapon_trait_bespoke_ogryn_club_p2_pass_past_armor_on_crit.md": "d82b623f6e320c3b36555a82acd54fea4fc98c68dc337f0cc6ee47931e6757b4",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/weapon_trait_bespoke_ogryn_powermaul_p1_pass_past_armor_on_crit.md": "6e80ca8fac93a1bdcb7043d87a211646eefdf298ed518679705af8ba7e7bee0c",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_pass_past_armor_on_crit.md": "98934d45c47a36d4acca6734fc14ee58ac73ce0e9838b50113dc7c53b7d5ead0",
+      "Game Info/releases/1.13.X/blessings/entries/完美一擊/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_pass_past_armor_on_crit.md": "8d4cde8ed8044f1b1916dc6acac49dddae37d118c7f8ccba0ecf64ecae8e1764",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "d4b4337dfb671b27f2333295c30f6c0510caa4b61977afe622acb0caa3a95e1c",
+      "Game Info/releases/1.13.X/blessings/README.md": "9734ebb660b6cc9fd717c47d4bcf012d8a04ea2b7047938585b9f3b468c99350",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "e16ac882d0e43c852b3746ab76c71e107f26b62e772dd528f001dbb201e61bb8",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "51aa9dfd0c6a8c0cab78e4eb98834fe993d7753fd20a0a175f867f069f8cc4a2",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md": "850f7d0524f77ff11b18db812035b0f50d7f0ba55a8dedd7f7c827c4be4264b5",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "84bc38a02b830f8ed880b78d13379deb7dbe926714d8ca22d19f30958cdfe952",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "46819d1f062bc8c9841a2c0c610b7bd0f84d8e909b5abb39c362973f337418f6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "5e59c1097c1824a582ecbdd088f4a8c5bc5a4d342f9d52177b8751c57abac640",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "381fa901e16f34ea13bd1657aee2936655c755c3ef31d3aee6b5e0cb04ed422c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重型開膛劍/README.md": "c3daf288566f79048f9e690b556304fdd1772ee08dbdb3cc3282cf737202dc75",
+      "Referneces/Translation.md": "d3330e46ddc9414b83a2bd918fd01093d97ee314f33cd6b015c6c85ecca2ce2e"
+    },
+    "review_findings": [
+      "Verified the fixed 46-file scope SHA and every on-disk SHA-256; all paths match. Canonical config and extension-draft configuration are identical, and the frozen agent trio is unchanged.",
+      "The formal set covers seven own implementation pages, seven trait variants, and 15 real Mark bindings. The shared map and reverse weapon pages retain the same actual IDs, Mark names, restrictions, and trait item paths.",
+      "I–IV values are .025/.05/.075/.10; the bilingual RAW keys and formatter reconstruction match, and available_tiers remains null.",
+      "The controlled formula is B+F*(S+t): only the melee-critical finesse portion receives t, with weakspot and critical terms sharing S. The example states its no-forcefield/no-conversion and neutral-downstream assumptions. Hit Mass reduction and armor-abort behavior remain distinct; cumulative mass budget and breed abort remain.",
+      "The corrected M1/M2/M3 shovel distinction is now singular and precise in SOURCE_INDEX and synchronized with the canonical/draft and formal variant text: M1 sweep punch; M2 no extra player movement; M3 special-active with pre-hit captured alive target can move the player backward, including if that hit then kills the target; no enemy push or extra damage Attack. The focused correction receipt matches the prior scope and is accepted.",
+      "The 128px image receipt, game icon identifier/path, and attachment URL are separated and agree across canonical, map, and README. Existing applicable cache and special-route evidence was reused without broadening the claim."
+    ],
+    "verification": "Reviewed the fixed formal pages, RAW/reconstruction, tiers and formulas, variant and shared/reverse associations, corrected M3 delta, and verified all scoped file hashes. No remaining substantive issue was found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "perfect-strike",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_181.png",
+      "attachment": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5985620335",
+      "acquired_date": "2026-10-05",
+      "sha256": "775e686d7d46a0d9dce1b97719ca0717b05847c4dcb49aa432b1c69ce5784aaf",
+      "content_type": "image/png",
+      "size": 4524,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "完美一擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_notes": "目視公開下載128×128原始PNG：中央為淡灰／白色塊狀圖案，周圍透明區；低對比細部不據此推斷，不改圖。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 24,
+      "tables": 23,
+      "rows": 455,
+      "lists": 99,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 101,
+      "source_files": 44,
+      "bindings": 564,
+      "variants": 290,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 23,
+      "source_object_cache": {
+        "cache_hits": 44,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 26,
+      "local_references": 948,
+      "remote_references": 493,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 22,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-021-full-scan.json",
+        "sha256": "46b98052df35ac215de6219c04c3e53b2d51bdbb5fdf9b3d9450434ad0acd720",
+        "trigger": "round-021"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 71,
+    "not_started_name_groups": 71,
+    "partial_name_groups": 0,
+    "remaining_variants": 315,
+    "remaining_bindings": 621,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "19372f26b6cc2c1c539546a819aefa881b3e8d5a625e60e3fc94232be7ded51b"
+  },
+  "previous_local_commit": "96e23e71d1aef9b80812289a30a4c4a8d98fdad7",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in primary exact-name metadata outside check"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-critical-finesse-reuse-review.json",
+      "sha256": "98694875553c2e13162508e256df80e2c7b444f20616e166d7d7660e803c6e74"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-focused-checks.json",
+      "sha256": "ea3d114bb4cb531c921d9160e3353e49955028bca313fe74a3c4c142a23da416"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-frozen-source-verification.json",
+      "sha256": "fcc553a48de6ced1e18c9629b74a1cdf8b81dc68813b21d2382ad48cc8ca7f6d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-own-tier-diff.json",
+      "sha256": "9de551ec0c99ad0e4a7d207f8fcdd2914045a577ec733beac040182dba6be9d0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-peer-correction-review.json",
+      "sha256": "33525bf5701dd40c05abafeec57fcf07665b83b8fd677188faa575b915ead180"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-resume-review.json",
+      "sha256": "f2045fece30e494bd927cf8535c2e726fc150c8e8549f3d24b2aa576e50ab6ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-special-consumer-diff-review.json",
+      "sha256": "f4caf237741b413d318218e178d029efff198597dfbe90523845e3d33e606e40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-traits-review.json",
+      "sha256": "3b74e52e18119a354f3cd11767d5b46b34d793ac292062d24559893539bf1b3b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-ui-raw-verification.json",
+      "sha256": "ef52bbd6c07d46c7d27cb53f1b36ad88ab8a959d646e53582b7af91eb11ecdd1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-ui-review.json",
+      "sha256": "c8300e69c7d65d396b34a89f98076bc43ec64a6493c78e02f10297e41209634d"
+    }
+  ],
+  "primary_review_method": "Reuse fixedSHA held-stat/keyword cache and additive finesse final assembly under proved applicability. Check all7 own full tiers and wrappers,15 actual UI/bindings/RAW and single icon. Review new livecritical consumers, sticky direct versus sweep, noncritical independent explosion and exact M1/M2/M3 shovel tweaks/captured-alive player movement; no blanket base/suffix inference.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-config.json",
+    "sha256": "724674456fde55229db5a28fedc9c4b6ee442a2a05135c52885f95890c383dbc"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-agent-config.json",
+      "sha256": "937a305cb24b30dc93d076f25865f5320ca0c440df186ca161f6dc17758909d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-agent-evidence.json",
+      "sha256": "ae8bf0424d07ef07d59fc8b5d75735bde221b8dc08a6a6ad5d7fc75601201258"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-agent-draft.md",
+      "sha256": "a5f07b234f8ebfb41558b573bcf4e1d67e0b7ce651b49255f7178740258a4f02"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-traits-review.json",
+      "sha256": "3b74e52e18119a354f3cd11767d5b46b34d793ac292062d24559893539bf1b3b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-own-tier-diff.json",
+      "sha256": "9de551ec0c99ad0e4a7d207f8fcdd2914045a577ec733beac040182dba6be9d0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-ui-review.json",
+      "sha256": "c8300e69c7d65d396b34a89f98076bc43ec64a6493c78e02f10297e41209634d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-ui-raw-verification.json",
+      "sha256": "ef52bbd6c07d46c7d27cb53f1b36ad88ab8a959d646e53582b7af91eb11ecdd1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-image.json",
+      "sha256": "5a0e60b5b915478184f7560861f9dea281bdb275d5ee018d1577be6fe679562a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-critical-finesse-reuse-review.json",
+      "sha256": "98694875553c2e13162508e256df80e2c7b444f20616e166d7d7660e803c6e74"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-finesse-formula-review.json",
+      "sha256": "3519ed0df43089bde22ccc0392da8063bdc2e6b82d163e08a74b1d37a79a17e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-primary-special-consumer-diff-review.json",
+      "sha256": "f4caf237741b413d318218e178d029efff198597dfbe90523845e3d33e606e40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/perfect-strike-formal-peer-scope.json",
+    "sha256": "03936cb4c8618b2c022445e371844322652d30934a8c38dfb4ca5393267f348a",
+    "final_content_hashes_unchanged": true
+  }
+}

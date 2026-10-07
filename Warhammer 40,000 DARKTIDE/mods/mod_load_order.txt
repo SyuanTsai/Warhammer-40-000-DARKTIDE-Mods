@@ -37,6 +37,7 @@ quick_level_mastery
 Radar
 SprintRelicHeavy
 AutoMark
+Field_Awareness
 
 -- 小遊戲自動化
 NoBrainer

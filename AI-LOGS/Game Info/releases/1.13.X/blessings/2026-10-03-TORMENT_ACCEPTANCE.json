@@ -1,0 +1,365 @@
+{
+  "date": "2026-10-04",
+  "blessing": "torment",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/凌遲/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "torment",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_manifest": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-formal-peer-scope.json",
+    "scope_manifest_sha256": "02b116f5810b4eb3c896156f6dd3e90cbe1689ea87c02780d72ad6dedfab9ebb",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_file_count": 29,
+    "hash_stability": {
+      "expected_scope_count": 29,
+      "checked_count": 29,
+      "all_expected_hashes_match": true,
+      "checked_before_review": true,
+      "checked_at_receipt_write": true,
+      "scope_manifest_sha256": "02b116f5810b4eb3c896156f6dd3e90cbe1689ea87c02780d72ad6dedfab9ebb"
+    },
+    "reviewed_formal_pages": [
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/DAMAGE_PERCENTAGE_REVIEW.md",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/TIER_VALUES.md",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit.md"
+    ],
+    "reviewed_deltas": [
+      {
+        "area": "Own tiers, parent/child and one effective layer",
+        "result": "PASS",
+        "finding": "The three marks share one actual trait variant and the same I–IV parent melee_power_level_modifier values .12/.16/.20/.24, formatted +12/+16/+20/+24%. The wrapper replaces the parent proc predicate with the weapon-special melee check while preserving the held-slot gates. Its child uses stack_offset=-1 and max_stacks=1; the initial child is a zero-effect placeholder. The matching parent tier is supplied to the child and replaces the child conditional .20 fallback because neither template has a static stat_buffs contribution. There is one effective tier term, not a parent constant plus child fallback."
+      },
+      {
+        "area": "Three actual special attacks and attack-type coverage",
+        "result": "PASS",
+        "finding": "The actual UI bindings are Delver’s Pickaxe Branx Mk Ia, Borovian Mk III, and Karsolas Mk II. Their weapon-special sweeps use the uppercut profile on Branx and hook-pull profiles on the other two; each profile sets weapon_special=true and dispatches melee attacks through ActionSweep. Ordinary light/heavy or charged attacks and push-followups do not proc or refresh, though melee attacks may use the active modifier while the pickaxe is held. Pure push is attack_type=push and does not proc or consume this melee power key."
+      },
+      {
+        "area": "First hit, refresh, strict expiry and switching",
+        "result": "PASS",
+        "finding": "Attack damage and HitReaction resolve before on_hit, so the triggering hit is not retroactively boosted. An accepted special hit activates or refreshes the one child at event-handling time; re-hits refresh the same 3.5-second timer even at the one-effective-layer cap. Expiry uses remove_t<t: equality is not yet expired, and later stat reads follow cache updates. Switching away disables the held-gated proc/stat while the timer continues; switching back before expiry may restore the remaining effect after the cache update. Destroying the parent removes its externally controlled child."
+      },
+      {
+        "area": "Power math and saved cleave budget",
+        "result": "PASS",
+        "finding": "The native power-type curve produces S before additive melee-power modifiers, so S_after=S×(1+q+p). At tier IV with S=100 and no other same-key term, the input becomes 124; with q=.20, 120 becomes 144, which is +20% relative to 120 rather than a further ×1.24. The source routes power into damage, impact, and cleave consumers without implying equal final health damage, stagger, or target counts. ActionSweep samples its cleave budget at swing start; a later proc does not automatically recalculate that saved budget, while later damage/impact reads may see an updated cache and server correction has its separately documented recomputation path."
+      },
+      {
+        "area": "RAW reconstruction and comparison",
+        "result": "PASS",
+        "finding": "The paired name/description keys and hashes match the fixed 1.13.1 English and zh-TW RAW. The four tier placeholders reconstruct to +12%, +16%, +20%, +24%, with a 3.5-second duration. The comparison distinguishes RAW-stated trigger/value/time from first-hit, cache, switch, strict-expiry, and cleave timing that the text does not cover; it does not present those omissions as RAW errors or add an empty errata section."
+      },
+      {
+        "area": "Formal pages, map, reverse index and icon identity",
+        "result": "PASS",
+        "finding": "All seven formal pages match the approved config for the actual three marks, tier values, special-action differences, player trigger/lifecycle text, math, and source conclusions. The shared map has exactly one melee blessing entry, one trait variant, and three bindings for marks m1/m2/m3. The three rows and reverse Delver’s Pickaxe page link to the Torment overview/variant correctly; the shared blessing indexes and translation index contain the expected rows and RAW key. Icon content identity weapon_trait_214 is kept as its source path, separate from the verified attachment URL."
+      }
+    ],
+    "configuration_consistency": {
+      "canonical_config_sha256": "a64220bbdedf9d2a8a8d186b7e34dd9ad0ed61439e550fa949481313ae1f736c",
+      "extension_draft_sha256": "3c99eb6bbae773d433ea0cfbddc36de3834cb821520aa717117a1828ba4561c9",
+      "formal_player_and_examples_match_config": true,
+      "exact_tier_reconstruction_present": true,
+      "map_blessing_count": 1,
+      "map_variant_count": 1,
+      "map_binding_count": 3,
+      "map_kind": "melee",
+      "actual_trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+      "actual_weapon_id": "ogryn_pickaxe_2h_p1",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_214",
+      "icon_attachment": "https://github.com/user-attachments/assets/4a26461f-b7ea-4fcc-a54c-529c4ebfeca9",
+      "image_receipt_sha256": "2b85071653fb84542a2ee990877bb7a85d3d8344be452d8ca687ec5b5b4345fb"
+    },
+    "source_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-image.json",
+        "sha256": "2b85071653fb84542a2ee990877bb7a85d3d8344be452d8ca687ec5b5b4345fb"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-base-review.json",
+        "sha256": "57167fb27caff03cca7bc1a09e94c7d93129dc9378c6fc6828cbbe834baa20be"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-common-applicability.json",
+        "sha256": "885bdf2e52352b8ea33650fc4c6978b6a4eaa4619e1eafba0848d6fb159bb602"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-own-tier-diff.json",
+        "sha256": "9ca1a2ea8f64eba3031b2e4a4c26747abb9ff5ec2ebbda63e779fc19e7d1fdab"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-resume-review.json",
+        "sha256": "b6ed60a24f25116e2b12434574e213f1b6811ea9e0a3c6a55f8c093e3a1ae4b2"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-ui-raw-verification.json",
+        "sha256": "4259ca3b384df748b47e074dd6a474a8f85271682d9b6aee3e94e0e1da7a27de"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-ui-review.json",
+        "sha256": "c2b06cdb1219302ffb7831d47e4a6546bf2c954786bd8091e1122364847d00dc"
+      }
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-agent-config.json": "34493a9802a13b35f67b9d1711d55a8074aec4ad2db695691227cd3af41ec97f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-agent-draft.md": "a6e83f697fb3aaf013a5139d52f080bd2c5fd838bfc7aff67e31a5a62b8682a6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-agent-evidence.json": "2a868477faabcf3c4de2ca11ce5f7efdff95fc172b60a963f23fc0c7c0d7e5ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-config.json": "a64220bbdedf9d2a8a8d186b7e34dd9ad0ed61439e550fa949481313ae1f736c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-extension-draft.json": "3c99eb6bbae773d433ea0cfbddc36de3834cb821520aa717117a1828ba4561c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-image.json": "2b85071653fb84542a2ee990877bb7a85d3d8344be452d8ca687ec5b5b4345fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-base-review.json": "57167fb27caff03cca7bc1a09e94c7d93129dc9378c6fc6828cbbe834baa20be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-common-applicability.json": "885bdf2e52352b8ea33650fc4c6978b6a4eaa4619e1eafba0848d6fb159bb602",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-own-tier-diff.json": "9ca1a2ea8f64eba3031b2e4a4c26747abb9ff5ec2ebbda63e779fc19e7d1fdab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-resume-review.json": "b6ed60a24f25116e2b12434574e213f1b6811ea9e0a3c6a55f8c093e3a1ae4b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-ui-raw-verification.json": "4259ca3b384df748b47e074dd6a474a8f85271682d9b6aee3e94e0e1da7a27de",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-ui-review.json": "c2b06cdb1219302ffb7831d47e4a6546bf2c954786bd8091e1122364847d00dc",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "9b3d30965a7c9a8efa6b0a993083c901d0a606159f3302b0664382b8ac1574bc",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8efba4f26f240ac8215a2a60d9f56013f10fd451102959bee8db14d6303fe65f",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "2e47d4f2715f47e665b3f6c8dabb4166961c42a2747831e2053a5efecc1f4914",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/DAMAGE_PERCENTAGE_REVIEW.md": "69ad9f075ce3c11a81108ff7e7823339ffc610f102fdd8d66048d94120d993aa",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/LOCALIZATION_COMPARISON.md": "fbd61ce52ca623884c43d28795b290f814f3d7f4226967b699fe6e8df93a3da0",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/README.md": "5cb44d5e62520735d81de11a395073ec6b5168f4d335e756548776a7a28199a6",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/SOURCE_INDEX.md": "f45e0ff272ecc18d30621bb0a33b5e31ed2cf008b3a71cff7d2bc57f85658b99",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/TIER_VALUES.md": "092906a6971120ac92f3a4ab3c7ca2f2516d1d1359dac12fed71cce019e23067",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/WEAPON_COMPATIBILITY.md": "7d64f9b651429167289cbc7bdfe474a07b1de53bae8a81881f534f2c5c37cf58",
+      "Game Info/releases/1.13.X/blessings/entries/凌遲/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit.md": "f5a074abeccd452996068a32acdcad5272d2752c5356398d5efef964b3de3553",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "a8bf7e614d6df21762838637505e629344a428f4265e2bb53fd5618c4147adef",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "93d2a1c9b0c777022add26b3e095d94c30fed4e6b2dd558dc3e7f4e7b604b214",
+      "Referneces/Translation.md": "1f383748cda1fd6b890ecdb86b5ab43a52a0026e1cebcab92bad2558464169a8"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/4a26461f-b7ea-4fcc-a54c-529c4ebfeca9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "torment",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_214",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_214.png",
+      "attachment": "https://github.com/user-attachments/assets/4a26461f-b7ea-4fcc-a54c-529c4ebfeca9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5977996668",
+      "acquired_date": "2026-10-04",
+      "sha256": "fe4c5ec90edaffc2184dcca0689a4a1ef9b1da39f82b9919287162cabf1096e9",
+      "content_type": "image/png",
+      "size": 6253,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "凌遲祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and public128x128 LA images visually compared; crossed pickaxes in a ring with radial jagged marks, confirmed through original alpha diagnostic. Original/public PNG content hash identical and unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 265,
+      "lists": 86,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 81,
+      "source_files": 22,
+      "bindings": 441,
+      "variants": 230,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 568,
+      "remote_references": 321,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 12,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-011-full-scan.json",
+        "sha256": "2481f69432050a91fcd17bef347e56680a793c964e9b8ca8632e61b9ee4a1ed8",
+        "trigger": "round-011"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 100,
+    "not_started_name_groups": 100,
+    "partial_name_groups": 0,
+    "remaining_variants": 375,
+    "remaining_bindings": 744,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "feab25512d83bd6bfea6186a2853bd602639968b8f97ebe139350bee3cd756be"
+  },
+  "previous_local_commit": "f4d380055f443715e890f9d27b839a3559dd98fb",
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-ui-review.json",
+      "sha256": "c2b06cdb1219302ffb7831d47e4a6546bf2c954786bd8091e1122364847d00dc"
+    },
+    "bindings": [
+      {
+        "weapon_id": "ogryn_pickaxe_2h_p1",
+        "mark_id": "ogryn_pickaxe_2h_p1_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m1",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m1",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m1"
+        ],
+        "name_zh_tw": "戴維爾戰鎬 布蘭克斯 Mk Ia",
+        "name_en": "Delver's Pickaxe Branx Mk Ia",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1569,
+        "append_line": 1571
+      },
+      {
+        "weapon_id": "ogryn_pickaxe_2h_p1",
+        "mark_id": "ogryn_pickaxe_2h_p1_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m2",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m2",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m2"
+        ],
+        "name_zh_tw": "戴維爾戰鎬 博羅維安 Mk III",
+        "name_en": "Delver's Pickaxe Borovian Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 1566,
+        "append_line": 1568
+      },
+      {
+        "weapon_id": "ogryn_pickaxe_2h_p1",
+        "mark_id": "ogryn_pickaxe_2h_p1_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m3",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m3",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m3"
+        ],
+        "name_zh_tw": "戴維爾戰鎬 卡索拉斯 Mk II",
+        "name_en": "Delver's Pickaxe Karsolas Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 1880,
+        "append_line": 1882
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-own-tier-diff.json",
+      "sha256": "9ca1a2ea8f64eba3031b2e4a4c26747abb9ff5ec2ebbda63e779fc19e7d1fdab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-base-review.json",
+      "sha256": "57167fb27caff03cca7bc1a09e94c7d93129dc9378c6fc6828cbbe834baa20be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-ui-review.json",
+      "sha256": "c2b06cdb1219302ffb7831d47e4a6546bf2c954786bd8091e1122364847d00dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-ui-raw-verification.json",
+      "sha256": "4259ca3b384df748b47e074dd6a474a8f85271682d9b6aee3e94e0e1da7a27de"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-image.json",
+      "sha256": "2b85071653fb84542a2ee990877bb7a85d3d8344be452d8ca687ec5b5b4345fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-common-applicability.json",
+      "sha256": "885bdf2e52352b8ea33650fc4c6978b6a4eaa4619e1eafba0848d6fb159bb602"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json",
+      "sha256": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json",
+      "sha256": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json",
+      "sha256": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-primary-resume-review.json",
+      "sha256": "b6ed60a24f25116e2b12434574e213f1b6811ea9e0a3c6a55f8c093e3a1ae4b2"
+    }
+  ],
+  "primary_review_method": "Own full wrapper27–31, tier366–415, inherited parent873–889/child890–900, actual3special sweeps and both profile flags directly reviewed. Parent init/cap/refresh/expiry/destroy and override transfer expanded. Existing unchanged generic cache/event/equip/power/cleave records reused only for matching connected classes and predicates.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-config.json",
+    "sha256": "a64220bbdedf9d2a8a8d186b7e34dd9ad0ed61439e550fa949481313ae1f736c"
+  },
+  "frozen_agent_trio_preserved": {
+    "config": "34493a9802a13b35f67b9d1711d55a8074aec4ad2db695691227cd3af41ec97f",
+    "evidence": "2a868477faabcf3c4de2ca11ce5f7efdff95fc172b60a963f23fc0c7c0d7e5ea",
+    "draft": "a6e83f697fb3aaf013a5139d52f080bd2c5fd838bfc7aff67e31a5a62b8682a6"
+  },
+  "previous_objects_unchanged": {
+    "blessings": 66,
+    "variants": 229,
+    "bindings": 438
+  },
+  "previous_weapons_unchanged": 66,
+  "formal_peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/torment-formal-peer-scope.json",
+    "sha256": "02b116f5810b4eb3c896156f6dd3e90cbe1689ea87c02780d72ad6dedfab9ebb",
+    "files": 29
+  }
+}

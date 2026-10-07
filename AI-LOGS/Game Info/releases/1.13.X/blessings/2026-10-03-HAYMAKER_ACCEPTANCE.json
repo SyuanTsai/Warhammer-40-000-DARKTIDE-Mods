@@ -1,0 +1,299 @@
+{
+  "date": "2026-10-05",
+  "blessing": "haymaker",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/強力一擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_heavy_chained_hits_increases_killing_blow_chance",
+    "weapon_trait_bespoke_dual_shivs_p1_heavy_chained_hits_increases_killing_blow_chance",
+    "weapon_trait_bespoke_ogryn_club_p2_heavy_chained_hits_increases_killing_blow_chance"
+  ],
+  "added_binding_count": 7,
+  "total_variants": 3,
+  "total_bindings": 7,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "haymaker",
+    "name_zh_tw": "強力一擊",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_manifest": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-formal-peer-scope.json",
+    "scope_manifest_sha256": "28bf456c29de1dc2d70b7ac74e0f31dac92f401d06df2e3c9cb6e9ea3cad9849",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-agent-config.json": "4687cbadf952eb8b8b92354eeaedd5adf5e4a117dd1a14d473ca34db8d48ec9f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-agent-draft.md": "6dee03370328dabe78ff63dbfe2a8ed63df176685f65f37e97d0368f9a8f000a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-agent-evidence.json": "df2e91e2f1af6f155a0cf9d686fc2b766e1f1e6c327a3aa85932be6915184197",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-config.json": "56c70d1568d14ceae28095ceb586b9439bc5881e22fa7610df9585859715444b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-extension-draft.json": "f5bf4027b03857945cf7b5afb4b5e5ba752b0b50f76023483277951a54850131",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-image.json": "239da8dfdb9068ef12fae76b0027a60c8e12fc575a908b4d29d4d8c51637667d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-focused-checks.json": "b6ada556a72f919d099e9411f8d3e3df9bbd7a872aa5bfab3413072c1743a187",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-frozen-source-verification.json": "5a22f32b808be8f7abee5ade481809fe7e4c9861fcd1cb93bbd62c0dbd388021",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-image-bindings.json": "ab889f35e0142ce57806820da980a9b664c759bc63c666945675fdc55b1a167f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-instakill-event-diff-review.json": "89338f211bfe0e823f3a562fb25e185c82aedd0a5d80cd438709344f3a5eb6e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-own-tier-diff.json": "535a43cd432fc1176ae595deb8045d0c86c07a1c3f683355f7f5162a7885d3d6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-parent-offset-diff-review.json": "2cc485a655ddce12243a412a29d6e428db174dc6e43f6c1dc4f9374e891a1bdf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-peer-punctuation-correction.json": "d6736e5c48fe0edc5507ae62544142776e9b25f32ff0907f3cda84e4ba271c3d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-raw-encoding-review.json": "63fb9e3d01a3784f5e79a4516f3d1fc6dd6d4ec428ce27bcc36f69459b1ab6df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-removal-diff-review.json": "0b4b0a34f301b579141f2b43d956661ee108ab29556df787300e949e696ef149",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-resume-review.json": "043457a55cb98c03df2ec26636438f689f377b9dad003c7a041d9bed9a1c7eb5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-traits-review.json": "e71f18bf0a8022971dbf22a9a9b8f64659317ad315b12f03b36a66bd53acdbbb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-ui-raw-verification.json": "9550cf64f2291a7a53e74e39276b2116f69e992a724559a25d27ab198b9be3fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-ui-review.json": "229ae97116fd341014c69405448381b3eefb368bd93172979f2f475624772542",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "2dc54b3fe488d48fba419b02b42d15c03526dd9ac72d42bd3e0cf7e0986ae514",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/DAMAGE_PERCENTAGE_REVIEW.md": "0f1d3e7f89af8172edefc1b6f5ef219e1abcb4b5011bceaf87929ff7906cf0ef",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/LOCALIZATION_COMPARISON.md": "5406a0b052fc08beb3df12ef848d6e6c73b126d850fa3a619d9aa0b02a35ab58",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/README.md": "e38a2f990e8a322767c41d2c781a10a4fe74359b5b096e5c3741fd76f4719e09",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/SOURCE_INDEX.md": "bbebe10d712b0ae10d3dc541dcb162e35627d5336031427a4d45b7ec3235aadd",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/TIER_VALUES.md": "9ff6712bffde5360e69a8c3b70a04373284d7166d9c080cae4c7d5f057fa8d24",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/WEAPON_COMPATIBILITY.md": "01f11d774ac3aab6082c925145605adc9dccf1753e9fcdcaa7ba68c4ecb1fafc",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/weapon_trait_bespoke_combatknife_p1_heavy_chained_hits_increases_killing_blow_chance.md": "0c1418f162b7b7436403789120e22b66e7956c701216bde527456485a3815e6a",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/weapon_trait_bespoke_dual_shivs_p1_heavy_chained_hits_increases_killing_blow_chance.md": "6e4abef80d3186e63bbf81ed55069155f185afc4993a256c9e99e7ed39d93cd7",
+      "Game Info/releases/1.13.X/blessings/entries/強力一擊/weapon_trait_bespoke_ogryn_club_p2_heavy_chained_hits_increases_killing_blow_chance.md": "f66a5d70ce6f9f6c587b9e0e408104a95b2c24007db81b72cf59d4711d9f70c3",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "d5b3bc472a066c9773eab9d3c12c904195a8d684e9f8bc04633a7e8af2c8ff75",
+      "Game Info/releases/1.13.X/blessings/README.md": "c5d38a9c81772200f40f90da5d2030a172b5f0737d33a43d6f9f50d555ea0791",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "110dc1d61fc3c8aabcc31bfcce7d310ce7fd68c8e996fca0e7748835e2490b7e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "c2790db050810cb503edc6bc3e02d3d38126025b1b7f70e3ce88ed27ae040915",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "ef9b25cad607df755d071770796dc579562ced969b1e60bc00bda82c32e209f5",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "e214a9f155ca0c2c4023a8e73f92d43b26b60d20b2092eab1cc04d9bca548fb8",
+      "Referneces/Translation.md": "6b748443f7dbf9b34fd83e4a355c655ff1daf5525052e56988706c1eb0809d4c"
+    },
+    "review_conclusion": {
+      "canonical_alignment": "Final configuration and extension draft match; formal player content, effect, formulas and tables match the approved canonical values and stated conditions.",
+      "inventory_and_indices": "Map has the one blessing object, three exact trait variants and seven exact bindings for combatknife_p1, dual_shivs_p1 and ogryn_club_p2. Each binding points to its real Mark template import/append and corresponding formal variant page. Shared blessing/melee indices and all three weapon reverse pages link to this entry and list the actual Marks.",
+      "tier_and_wrapper": "All three own tier files give I–IV .01/.02/.03/.04 per effective stack and formatter percent-plus; each wrapper clones the activated parent, selects its actual child, and clones that child. Child effective cap is five (six raw slots include reserved placeholder); chance is n*p, with no additional inferred clamp.",
+      "first_effect_and_event_batch": "Starts at zero effective stacks. The hit that queues a new layer is resolved first; the child handles all queued events before the parent adds one layer per qualifying hit. Same-batch target checks use the pre-batch stack count. Multi-target hits can add multiple layers; no combo-step predicate is implemented.",
+      "target_action_lifetime": "Child requires live target and breed then excludes captain, monster, ogryn and cultist_captain tags; this is not a geometry/height test. Heavy action matrix, heavy push-follow exceptions, light specials, pure push and thrown projectile exclusions match all seven bound Marks. Shared timer removes one layer after each five-second idle interval; qualifying events including cap hits refresh it. Switching away stops held-gated checks while timer continues; actual parent destruction removes its controlled children.",
+      "raw_and_formula": "I–IV full English and Traditional Chinese formatter reconstructions match the exact RAW keys/hashes. Chained Heavy Hit is classified as documentation not covering the exact combo-state condition, not as a proven translation error; human-sized is likewise not a geometric rule. The blanket claim that no other potential triggers activate on Instakill is an explicit mismatch because generic on_hit/on_kill events still dispatch; receiving effects retain their own predicates. IV example at n=2 is 8%, then parent adds one stack; a later separate event at n=3 is 12%.",
+      "image": "All three actual trait items use item.icon content/ui/textures/icons/traits/weapon_trait_195; official attachment matches the reviewed source/public image receipt. ID/path and attachment URL are not conflated.",
+      "punctuation_delta": "Rechecked final LOCALIZATION_COMPARISON: complete IV Chinese RAW line ends cleanly; the sentence explaining shared format and static reconstruction is a separate paragraph, without the prior terminal full stop plus semicolon."
+    },
+    "verification": {
+      "scope_hashes": "all 37 file hashes match exact scope",
+      "canonical_sha256": "56c70d1568d14ceae28095ceb586b9439bc5881e22fa7610df9585859715444b",
+      "extension_draft_sha256": "f5bf4027b03857945cf7b5afb4b5e5ba752b0b50f76023483277951a54850131",
+      "image_receipt_sha256": "239da8dfdb9068ef12fae76b0027a60c8e12fc575a908b4d29d4d8c51637667d",
+      "map_variant_count": 3,
+      "map_binding_count": 7,
+      "local_markdown_links": "all resolved within fixed scope"
+    },
+    "status": "accepted_for_commit"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/9a68dfab-1a01-42c6-a9fa-ffe4d8295036",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "haymaker",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_195",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_195.png",
+      "attachment": "https://github.com/user-attachments/assets/9a68dfab-1a01-42c6-a9fa-ffe4d8295036",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5986010110",
+      "acquired_date": "2026-10-05",
+      "sha256": "a87e31681b7f333b03b6f83ad2cd4cc139e6f4930c4244e00d93fbc33ca00457",
+      "content_type": "image/png",
+      "size": 4230,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "強力一擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_notes": "原圖128×128；中央有淡灰輪廓與周圍灰白形塊，透明邊緣；僅作圖示辨識，不推定細節。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 16,
+      "tables": 15,
+      "rows": 395,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 109,
+      "source_files": 26,
+      "bindings": 571,
+      "variants": 293,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 26,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 871,
+      "remote_references": 424,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 22,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-021-full-scan.json",
+        "sha256": "46b98052df35ac215de6219c04c3e53b2d51bdbb5fdf9b3d9450434ad0acd720",
+        "trigger": "round-021"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 70,
+    "not_started_name_groups": 70,
+    "partial_name_groups": 0,
+    "remaining_variants": 312,
+    "remaining_bindings": 614,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "7bbe0be1818f69d16d1809da245b5d256acaf5ab58c5b6c9a3aa2867a8852fb3"
+  },
+  "previous_local_commit": "55a68fe7669c3c2c17360c9b57cb2dc01287041d",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in actual primary UI exact-name scan"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-focused-checks.json",
+      "sha256": "b6ada556a72f919d099e9411f8d3e3df9bbd7a872aa5bfab3413072c1743a187"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-frozen-source-verification.json",
+      "sha256": "5a22f32b808be8f7abee5ade481809fe7e4c9861fcd1cb93bbd62c0dbd388021"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-image-bindings.json",
+      "sha256": "ab889f35e0142ce57806820da980a9b664c759bc63c666945675fdc55b1a167f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-instakill-event-diff-review.json",
+      "sha256": "89338f211bfe0e823f3a562fb25e185c82aedd0a5d80cd438709344f3a5eb6e5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-own-tier-diff.json",
+      "sha256": "535a43cd432fc1176ae595deb8045d0c86c07a1c3f683355f7f5162a7885d3d6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-parent-offset-diff-review.json",
+      "sha256": "2cc485a655ddce12243a412a29d6e428db174dc6e43f6c1dc4f9374e891a1bdf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-peer-punctuation-correction.json",
+      "sha256": "d6736e5c48fe0edc5507ae62544142776e9b25f32ff0907f3cda84e4ba271c3d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-raw-encoding-review.json",
+      "sha256": "63fb9e3d01a3784f5e79a4516f3d1fc6dd6d4ec428ce27bcc36f69459b1ab6df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-removal-diff-review.json",
+      "sha256": "0b4b0a34f301b579141f2b43d956661ee108ab29556df787300e949e696ef149"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-resume-review.json",
+      "sha256": "043457a55cb98c03df2ec26636438f689f377b9dad003c7a041d9bed9a1c7eb5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-traits-review.json",
+      "sha256": "e71f18bf0a8022971dbf22a9a9b8f64659317ad315b12f03b36a66bd53acdbbb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-ui-raw-verification.json",
+      "sha256": "9550cf64f2291a7a53e74e39276b2116f69e992a724559a25d27ab198b9be3fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-ui-review.json",
+      "sha256": "229ae97116fd341014c69405448381b3eefb368bd93172979f2f475624772542"
+    }
+  ],
+  "primary_review_method": "Evidence/difference review; actual own complete tiers/wrappers/UI/RAW, reserved initial layer and whole-packet ordering, heavy-profile/throw/special differences, shared idle decay/cap refresh/holster/removal, no-instakill-veto dispatch. Reuse fixed-SHA common mechanisms under proved exact conditions.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-config.json",
+    "sha256": "56c70d1568d14ceae28095ceb586b9439bc5881e22fa7610df9585859715444b"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-own-tier-diff.json",
+      "sha256": "535a43cd432fc1176ae595deb8045d0c86c07a1c3f683355f7f5162a7885d3d6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-traits-review.json",
+      "sha256": "e71f18bf0a8022971dbf22a9a9b8f64659317ad315b12f03b36a66bd53acdbbb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-ui-review.json",
+      "sha256": "229ae97116fd341014c69405448381b3eefb368bd93172979f2f475624772542"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-ui-raw-verification.json",
+      "sha256": "9550cf64f2291a7a53e74e39276b2116f69e992a724559a25d27ab198b9be3fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-parent-offset-diff-review.json",
+      "sha256": "2cc485a655ddce12243a412a29d6e428db174dc6e43f6c1dc4f9374e891a1bdf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-raw-encoding-review.json",
+      "sha256": "63fb9e3d01a3784f5e79a4516f3d1fc6dd6d4ec428ce27bcc36f69459b1ab6df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-instakill-event-diff-review.json",
+      "sha256": "89338f211bfe0e823f3a562fb25e185c82aedd0a5d80cd438709344f3a5eb6e5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-image.json",
+      "sha256": "239da8dfdb9068ef12fae76b0027a60c8e12fc575a908b4d29d4d8c51637667d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-primary-image-bindings.json",
+      "sha256": "ab889f35e0142ce57806820da980a9b664c759bc63c666945675fdc55b1a167f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-agent-config.json",
+      "sha256": "4687cbadf952eb8b8b92354eeaedd5adf5e4a117dd1a14d473ca34db8d48ec9f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-agent-draft.md",
+      "sha256": "6dee03370328dabe78ff63dbfe2a8ed63df176685f65f37e97d0368f9a8f000a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-agent-evidence.json",
+      "sha256": "df2e91e2f1af6f155a0cf9d686fc2b766e1f1e6c327a3aa85932be6915184197"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/haymaker-formal-peer-scope.json",
+    "sha256": "28bf456c29de1dc2d70b7ac74e0f31dac92f401d06df2e3c9cb6e9ea3cad9849",
+    "final_content_hashes_unchanged": true
+  }
+}

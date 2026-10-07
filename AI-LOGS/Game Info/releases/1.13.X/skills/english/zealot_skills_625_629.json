@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_625_629",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L2358-L2385, L2074-L2090, L3083-L3098, L2050-L2073, L1224-L1255. Existing mechanisms and known formatter rules reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Blinded by Blood event owner and single-stack vulnerability are supplements. Desperation current English has no 5s timer; old identifier/unused mapping does not load that proc."
+  ],
+  "skills": [
+    {
+      "id": "zealot_sprint_improvements",
+      "name": "Relentless Fervor",
+      "name_hash": "bc4195b7",
+      "description_hash": "490f7206",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_sprint_improvements.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_sprint_improvements.md",
+      "commit": "593fb0239"
+    },
+    {
+      "id": "zealot_damage_vs_nonthreat",
+      "name": "Unseen Blade",
+      "name_hash": "25c947ad",
+      "description_hash": "9ca32fdb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_damage_vs_nonthreat.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_damage_vs_nonthreat.md",
+      "commit": "cad719ca5"
+    },
+    {
+      "id": "zealot_defensive_knockback",
+      "name": "The Master's Retribution",
+      "name_hash": "8fb484ca",
+      "description_hash": "f3ca681a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_defensive_knockback.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_defensive_knockback.md",
+      "commit": "5460c6dcb"
+    },
+    {
+      "id": "zealot_bled_enemies_take_more_damage",
+      "name": "Blinded by Blood",
+      "name_hash": "79b878e0",
+      "description_hash": "fb00baf2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_bled_enemies_take_more_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_bled_enemies_take_more_damage.md",
+      "commit": "a92cf6199"
+    },
+    {
+      "id": "zealot_more_damage_when_low_on_stamina",
+      "name": "Desperation",
+      "name_hash": "00b548f8",
+      "description_hash": "3a2192a6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_more_damage_when_low_on_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_more_damage_when_low_on_stamina.md",
+      "commit": "b02e0cd65"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 290,
+    "from_commit": "ff987d3aa",
+    "to_commit": "b02e0cd65",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

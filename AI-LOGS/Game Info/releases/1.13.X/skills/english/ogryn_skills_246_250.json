@@ -1,0 +1,71 @@
+{
+  "id": "ogryn_skills_246_250",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing display mappings in ogryn_talents.lua L2491–2506, L2174–2196, L2737–2752, L2089–2112 and L2249–2268 were read. Existing mechanisms, values, formulas, source links and common formatting were reused.",
+  "questions": [
+    "Final game UI remains unobserved. No new explicit English contradiction in this batch."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_block_all_attacks",
+      "name": "Unbreakable",
+      "name_hash": "017d4d2d",
+      "description_hash": "b565afeb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_block_all_attacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_block_all_attacks.md",
+      "commit": "63e1d2119"
+    },
+    {
+      "id": "ogryn_damage_reduction_on_high_stamina",
+      "name": "Pumped Up",
+      "name_hash": "bd034d9a",
+      "description_hash": "ab8d5e62",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_damage_reduction_on_high_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_damage_reduction_on_high_stamina.md",
+      "commit": "bc73e808f"
+    },
+    {
+      "id": "ogryn_crit_damage_increase",
+      "name": "Lucky Streak",
+      "name_hash": "ec3af270",
+      "description_hash": "c90c5cb1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_crit_damage_increase.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_crit_damage_increase.md",
+      "commit": "fffe297f4"
+    },
+    {
+      "id": "ogryn_stacking_attack_speed",
+      "name": "Frenzied Blows",
+      "name_hash": "fae480df",
+      "description_hash": "2909d3df",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_stacking_attack_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_stacking_attack_speed.md",
+      "commit": "7c21f0200"
+    },
+    {
+      "id": "ogryn_melee_damage_after_heavy",
+      "name": "Beat Them Back",
+      "name_hash": "438287c2",
+      "description_hash": "ee301680",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_damage_after_heavy.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_damage_after_heavy.md",
+      "commit": "37bf56400"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 348,
+    "from_commit": "884794236",
+    "to_commit": "37bf56400",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

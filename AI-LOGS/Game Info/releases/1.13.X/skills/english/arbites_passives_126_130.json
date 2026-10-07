@@ -1,0 +1,66 @@
+{
+  "id": "arbites_passives_126_130",
+  "date": "2026-10-04",
+  "scope": "Arbites",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display mappings for Force of Will, Voltaic Mandibles Augment and Walk It Off. True Grit numeric formatting and Toughness Damage Reduction shared display evidence reused. Source pointers are in each English document.",
+  "questions": [
+    "Voltaic Mandibles Augment: generic attack wording versus the accepted companion_pounce filter remains unconfirmed; no widened mechanism research.",
+    "Final game UI and runtime behavior were not observed."
+  ],
+  "skills": [
+    {
+      "id": "adamant_staggers_replenish_toughness",
+      "name": "Force of Will",
+      "name_hash": "fb06b425",
+      "description_hash": "050254b5",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_staggers_replenish_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_staggers_replenish_toughness.md",
+      "commit": "8c868c1c"
+    },
+    {
+      "id": "adamant_dog_attacks_electrocute",
+      "name": "Voltaic Mandibles Augment",
+      "name_hash": "cb0985b3",
+      "description_hash": "f2c7dafd",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_attacks_electrocute.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_attacks_electrocute.md",
+      "commit": "24f1d7b6"
+    },
+    {
+      "id": "adamant_stamina_spent_replenish_toughness",
+      "name": "Walk It Off",
+      "name_hash": "69689f35",
+      "description_hash": "5bfeac39",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stamina_spent_replenish_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stamina_spent_replenish_toughness.md",
+      "commit": "430fa9a9"
+    },
+    {
+      "id": "adamant_limit_dmg_taken_from_hits",
+      "name": "True Grit",
+      "name_hash": "3261784d",
+      "description_hash": "a25ab598",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_limit_dmg_taken_from_hits.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_limit_dmg_taken_from_hits.md",
+      "commit": "1d1af63a"
+    },
+    {
+      "id": "base_toughness_damage_reduction_node_buff_medium_1",
+      "name": "Toughness Damage Reduction",
+      "name_hash": "4cf5defc",
+      "description_hash": "1272bcc0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "commit": "4d4e3a6b"
+    }
+  ]
+}

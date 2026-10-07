@@ -1,0 +1,469 @@
+{
+  "date": "2026-10-06",
+  "blessing": "no-guts-no-glory",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "no-guts-no-glory",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-formal-peer-scope.json",
+    "scope_sha256": "98e5b6f5a3051c12f7dde96f94f9cb0bb0f5c7a062094c78fb4198b9fe6132b7",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-agent-config.json": "cf0ec1f5f1a14f71df865e5a6e42f0a3a8bcd1e4c636b00fc4ee4fbb212edf34",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-agent-draft.md": "512a7af9e3d6eb0d554b96e2f83423220331f79d25c997d319ea0aa962997ae6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-agent-evidence.json": "50760e0085d069f8b19222a2d271220b0ccedb8b9f6561b653ab510c739760ed",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-config.json": "01572f5a5bfde0d7e2602ee3ecfb71127e8fc5ef1b9560ab509bc6542ac58754",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-extension-draft.json": "c6e7f47cf979962506bf2b61bf6a5c43313cb8754fcfa1e90183b1010154d51e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/build_no_guts_group.py": "3089dc8c18a518c14d613299aae537d3df07d7a5a4196bef7093b75a3f7c7843",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/candidate-formal-preview.md": "33356ababb3c46a6030bbfaacadfd884535248583e41abc4ce5408a83b98b8c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-001.json": "539bf08109ff15719aa2085b201e2d294c9c7e99d037705c41e4c4aeaf5040fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-002.json": "f7cb276279d84abde7b7a3ddbebe2bd5fb7eb7392a35839329f790f942d3d419",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-003.json": "2968311ac72cd8df59b29bad83af0c3eda2a549df6bf6bcdf18d5cc965ab01d8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-004.json": "99fdab5f69bcc18c0d359b83bb03bc01bc6a9a47ddd60b392299d2389e4ddd87",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-005.json": "820c4154863e8627d787eef5770ec46845d29be0551f662dd36c7b9d8885f741",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-agent-config.json": "cf0ec1f5f1a14f71df865e5a6e42f0a3a8bcd1e4c636b00fc4ee4fbb212edf34",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-agent-draft.md": "512a7af9e3d6eb0d554b96e2f83423220331f79d25c997d319ea0aa962997ae6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-agent-evidence.json": "50760e0085d069f8b19222a2d271220b0ccedb8b9f6561b653ab510c739760ed",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-association-snapshot.json": "65a497c76f6921fdd22165daf8e9a848b5b8e42236141b7af4c8189ace5361f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-attack-coverage.json": "746d92e710117cb9e25cb4d7bddf4e6ac800aa42dbf36d4a6e4a1de9615f9a97",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-selfcheck.json": "c69b433e78223c5d136b2935818eabdda00b8d34c41075c92c47ca7710fda62c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-image.json": "69efdb588f1d9a225ec5d60cb56825a5e9762ec9cdbdbbc6eebe9dc49bade03a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-final-content-review.json": "0cf6c7001b0c4557924ccf41abc17d862002bfd1751348911cda3ef9f41a8c61",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-focused-checks.json": "d5e7a06e3fa16d4d98718d0a962a22fa8dfacac11ab2a2055cae826499e3dc51",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-frozen-source-verification.json": "e89076bdb932f52eea4d625856cc257ace0718cdf497ac25a33b595b7a2e144a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-native-toughness-rate-consumer-delta-review.json": "29a805dc3cba0e08f264078e229301883d6b53a3ca9dbb714e8296c07414c72a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-own-tier-wrapper-regen-delta-review.json": "6c7bc443ec8d63e2a859b2f321acd8431de6720118b22ca36e29ebed6ef107df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-resume-review.json": "944bbe03407ebc5fe441310f2c0e089b74dfdc3b42c6847c7a60d84cef3d0bf0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-slot-meaning-and-held-active-stat-review.json": "a7c0abbe9e3507be4b1ac83f5bc8e37924044d397d312452df52ac3a75b36a82",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-traits-review.json": "aeff669b44e5642ee258c6a8de1001f83a91a9d35bf7fbb48b40c4856ac9119b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-ui-raw-verification.json": "6ff3e77ad032787bf486d2f9407212155e3831070648430ba74563a7137e7a75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-ui-review.json": "cc75b0b48ad07fa9705b7401a88aac422fabe47ce06485d60e66d27c9525e173",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-raw-verification.json": "88397cbdbc286ee8f2235fb8fd1d144c3237f31c400ac1c2ef4ef26f87b89dc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "4dd488ae68c78caf75e866e67f34daa63b85a1f18f52e49664a0f16ef5af09a0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/DAMAGE_PERCENTAGE_REVIEW.md": "ed90f54eb8c8ae55824690b4830a77b1b8926bf1698a6183a2dbd3d1a50b0490",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/LOCALIZATION_COMPARISON.md": "b564e007723682a0a0651ee71b20935f4b213a1bc1d756202527bd3831d41d9e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/README.md": "33356ababb3c46a6030bbfaacadfd884535248583e41abc4ce5408a83b98b8c8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/SOURCE_INDEX.md": "54349211b43912e6b0f4a30ef8bcbec8bc0b821df9b3da39d307b973cfd44ad4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/TIER_VALUES.md": "2022f86e2312718b4266358bb8b28cb5d185e645fc40529b15af2dd119363ca8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/WEAPON_COMPATIBILITY.md": "c6bcf3ce0944946169b19b95a2b6c61cf71f3c492920c83044fdcf48a43f8100",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites.md": "9dd748adef0f439646cf52bcb6c1c21a1301e1367406c306372832b6caba73af",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/melee/README.md": "e729ef411ce63c9b05e9f655767fd9123d509eed8e7a0edb72e9a7d01eebe7eb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "bd442ee182b20b7f5aff23f583a2560b6b4c8fd75751c46de04f4c732eac14f2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "5b0c66d3415f3cf278014af60544d4aefe6cd8a3070a9263a55a927d4baa500f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "15cd7ea1e4c1043b9a9ff0e10ebdef4c85567145edb600a45d35ccdc8ed78e07",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/own-association-snapshot.json": "65a497c76f6921fdd22165daf8e9a848b5b8e42236141b7af4c8189ace5361f0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/actual-preview-005/Referneces/Translation.md": "91c8251a5cc4f31f4cddf17a00f584f9f11bdd58156587b94d8f723bd9050c1b",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "96791bd6660b59dc1ee5007acf5749da6a1e477852a37be537d4a9137f2f17a9",
+      "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/DAMAGE_PERCENTAGE_REVIEW.md": "ed90f54eb8c8ae55824690b4830a77b1b8926bf1698a6183a2dbd3d1a50b0490",
+      "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/LOCALIZATION_COMPARISON.md": "b564e007723682a0a0651ee71b20935f4b213a1bc1d756202527bd3831d41d9e",
+      "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/README.md": "33356ababb3c46a6030bbfaacadfd884535248583e41abc4ce5408a83b98b8c8",
+      "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/SOURCE_INDEX.md": "b8277b63116d00abcfe14edd4f59c55100b88df795f45e037f8022ab68718668",
+      "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/TIER_VALUES.md": "2022f86e2312718b4266358bb8b28cb5d185e645fc40529b15af2dd119363ca8",
+      "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/WEAPON_COMPATIBILITY.md": "c6bcf3ce0944946169b19b95a2b6c61cf71f3c492920c83044fdcf48a43f8100",
+      "Game Info/releases/1.13.X/blessings/entries/不入虎穴，焉得虎子/weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites.md": "9dd748adef0f439646cf52bcb6c1c21a1301e1367406c306372832b6caba73af",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "e729ef411ce63c9b05e9f655767fd9123d509eed8e7a0edb72e9a7d01eebe7eb",
+      "Game Info/releases/1.13.X/blessings/README.md": "f677e0cbcef363559e9252baba4ea306091c53dbe73b927037ecbdde62acba91",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c4c939a71df61c4699dc72b74346df678c6260d44bbd1a240337544ad63e4805",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "15cd7ea1e4c1043b9a9ff0e10ebdef4c85567145edb600a45d35ccdc8ed78e07",
+      "Referneces/Translation.md": "1cd915fdbf937766b59862d22741a39f1ab5194f998cbc013ce4545c37db453b"
+    },
+    "review_summary": "All 71 fixed-scope hashes match. Reviewed the seven formal pages, one implementation, three bindings, shared map and reverse weapon index. I–IV all format as +50% with 2/3/4/5-second active windows. The actual qualifying action is the held same-item elite melee weapon-special slap sweep; ordinary light/heavy, push/follow-up and the non-special fist sweeps do not qualify. The single timer refreshes without stacking or extra cooldown; holster gates new events and active stats while time continues, and true unequip removes the on-equip Buff. The proc resets the regeneration delay after hit damage and grants no instant toughness. The base-rate/coherency examples, geometric AI occupied-slot condition, missing-toughness cap, subsequent damage delay, RAW five-column comparison, actual three model names, and icon 212 receipt are consistent. No issue found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/0f9d8b8f-e684-4a43-8301-20f9a41a3b10",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "no-guts-no-glory",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_212",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_212.png",
+      "attachment": "https://github.com/user-attachments/assets/0f9d8b8f-e684-4a43-8301-20f9a41a3b10",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5998330852",
+      "acquired_date": "2026-10-06",
+      "sha256": "b54492751674dfbe331f094da4745b5953a859357a3f863c20a5aeca162f88ca",
+      "content_type": "image/png",
+      "size": 5187,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "不入虎穴，焉得虎子祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed actual128x128 public downloaded PNG: white upward arrow-like silhouette on dark/transparent surround, no clipping relative to source weapon_trait_212 verified identical hash."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 398,
+      "lists": 86,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 55,
+      "source_files": 22,
+      "bindings": 875,
+      "variants": 444,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 1010,
+      "remote_references": 393,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 32,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-031-full-scan.json",
+        "sha256": "4506605986b6aef05339158f61067a77d1a009648974c5ca64e19fffdb129a15",
+        "trigger": "round-031"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 41,
+    "not_started_name_groups": 41,
+    "partial_name_groups": 0,
+    "remaining_variants": 161,
+    "remaining_bindings": 310,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "118dd0fbc8f367ace7da9e377d8b7e5fe808b3ecb413eaaaaa63cc69be628e07"
+  },
+  "previous_local_commit": "8b693f772fad1a3e018a12d842d5905cba435813",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-final-content-review.json",
+      "sha256": "0cf6c7001b0c4557924ccf41abc17d862002bfd1751348911cda3ef9f41a8c61"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-focused-checks.json",
+      "sha256": "d5e7a06e3fa16d4d98718d0a962a22fa8dfacac11ab2a2055cae826499e3dc51"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-frozen-source-verification.json",
+      "sha256": "e89076bdb932f52eea4d625856cc257ace0718cdf497ac25a33b595b7a2e144a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-native-toughness-rate-consumer-delta-review.json",
+      "sha256": "29a805dc3cba0e08f264078e229301883d6b53a3ca9dbb714e8296c07414c72a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-own-tier-wrapper-regen-delta-review.json",
+      "sha256": "6c7bc443ec8d63e2a859b2f321acd8431de6720118b22ca36e29ebed6ef107df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-resume-review.json",
+      "sha256": "944bbe03407ebc5fe441310f2c0e089b74dfdc3b42c6847c7a60d84cef3d0bf0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-slot-meaning-and-held-active-stat-review.json",
+      "sha256": "a7c0abbe9e3507be4b1ac83f5bc8e37924044d397d312452df52ac3a75b36a82"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-traits-review.json",
+      "sha256": "aeff669b44e5642ee258c6a8de1001f83a91a9d35bf7fbb48b40c4856ac9119b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-ui-raw-verification.json",
+      "sha256": "6ff3e77ad032787bf486d2f9407212155e3831070648430ba74563a7137e7a75"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-ui-review.json",
+      "sha256": "cc75b0b48ad07fa9705b7401a88aac422fabe47ce06485d60e66d27c9525e173"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-config.json",
+    "sha256": "01572f5a5bfde0d7e2602ee3ecfb71127e8fc5ef1b9560ab509bc6542ac58754"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/build_no_guts_group.py",
+      "sha256": "3089dc8c18a518c14d613299aae537d3df07d7a5a4196bef7093b75a3f7c7843"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/candidate-formal-preview.md",
+      "sha256": "33356ababb3c46a6030bbfaacadfd884535248583e41abc4ce5408a83b98b8c8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-005.json",
+      "sha256": "820c4154863e8627d787eef5770ec46845d29be0551f662dd36c7b9d8885f741"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-agent-config.json",
+      "sha256": "cf0ec1f5f1a14f71df865e5a6e42f0a3a8bcd1e4c636b00fc4ee4fbb212edf34"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-agent-draft.md",
+      "sha256": "512a7af9e3d6eb0d554b96e2f83423220331f79d25c997d319ea0aa962997ae6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-association-snapshot.json",
+      "sha256": "65a497c76f6921fdd22165daf8e9a848b5b8e42236141b7af4c8189ace5361f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-attack-coverage.json",
+      "sha256": "746d92e710117cb9e25cb4d7bddf4e6ac800aa42dbf36d4a6e4a1de9615f9a97"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-selfcheck.json",
+      "sha256": "c69b433e78223c5d136b2935818eabdda00b8d34c41075c92c47ca7710fda62c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-image.json",
+      "sha256": "69efdb588f1d9a225ec5d60cb56825a5e9762ec9cdbdbbc6eebe9dc49bade03a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-native-toughness-rate-consumer-delta-review.json",
+      "sha256": "29a805dc3cba0e08f264078e229301883d6b53a3ca9dbb714e8296c07414c72a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-own-tier-wrapper-regen-delta-review.json",
+      "sha256": "6c7bc443ec8d63e2a859b2f321acd8431de6720118b22ca36e29ebed6ef107df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-slot-meaning-and-held-active-stat-review.json",
+      "sha256": "a7c0abbe9e3507be4b1ac83f5bc8e37924044d397d312452df52ac3a75b36a82"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-traits-review.json",
+      "sha256": "aeff669b44e5642ee258c6a8de1001f83a91a9d35bf7fbb48b40c4856ac9119b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-ui-raw-verification.json",
+      "sha256": "6ff3e77ad032787bf486d2f9407212155e3831070648430ba74563a7137e7a75"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-ui-review.json",
+      "sha256": "cc75b0b48ad07fa9705b7401a88aac422fabe47ce06485d60e66d27c9525e173"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "bd442ee182b20b7f5aff23f583a2560b6b4c8fd75751c46de04f4c732eac14f2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "5b0c66d3415f3cf278014af60544d4aefe6cd8a3070a9263a55a927d4baa500f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "4dd488ae68c78caf75e866e67f34daa63b85a1f18f52e49664a0f16ef5af09a0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\不入虎穴，焉得虎子\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "ed90f54eb8c8ae55824690b4830a77b1b8926bf1698a6183a2dbd3d1a50b0490"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\不入虎穴，焉得虎子\\LOCALIZATION_COMPARISON.md",
+      "sha256": "b564e007723682a0a0651ee71b20935f4b213a1bc1d756202527bd3831d41d9e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\不入虎穴，焉得虎子\\README.md",
+      "sha256": "33356ababb3c46a6030bbfaacadfd884535248583e41abc4ce5408a83b98b8c8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\不入虎穴，焉得虎子\\SOURCE_INDEX.md",
+      "sha256": "54349211b43912e6b0f4a30ef8bcbec8bc0b821df9b3da39d307b973cfd44ad4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\不入虎穴，焉得虎子\\TIER_VALUES.md",
+      "sha256": "2022f86e2312718b4266358bb8b28cb5d185e645fc40529b15af2dd119363ca8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\不入虎穴，焉得虎子\\WEAPON_COMPATIBILITY.md",
+      "sha256": "c6bcf3ce0944946169b19b95a2b6c61cf71f3c492920c83044fdcf48a43f8100"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\不入虎穴，焉得虎子\\weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites.md",
+      "sha256": "9dd748adef0f439646cf52bcb6c1c21a1301e1367406c306372832b6caba73af"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "e729ef411ce63c9b05e9f655767fd9123d509eed8e7a0edb72e9a7d01eebe7eb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\惡霸棍棒\\README.md",
+      "sha256": "15cd7ea1e4c1043b9a9ff0e10ebdef4c85567145edb600a45d35ccdc8ed78e07"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "91c8251a5cc4f31f4cddf17a00f584f9f11bdd58156587b94d8f723bd9050c1b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-raw-verification.json",
+      "sha256": "88397cbdbc286ee8f2235fb8fd1d144c3237f31c400ac1c2ef4ef26f87b89dc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-guts-no-glory-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "65a497c76f6921fdd22165daf8e9a848b5b8e42236141b7af4c8189ace5361f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-001.json",
+      "sha256": "539bf08109ff15719aa2085b201e2d294c9c7e99d037705c41e4c4aeaf5040fc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-002.json",
+      "sha256": "f7cb276279d84abde7b7a3ddbebe2bd5fb7eb7392a35839329f790f942d3d419"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-003.json",
+      "sha256": "2968311ac72cd8df59b29bad83af0c3eda2a549df6bf6bcdf18d5cc965ab01d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-actual-preview-receipt-004.json",
+      "sha256": "99fdab5f69bcc18c0d359b83bb03bc01bc6a9a47ddd60b392299d2389e4ddd87"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-group/no-guts-no-glory-agent-evidence.json",
+      "sha256": "50760e0085d069f8b19222a2d271220b0ccedb8b9f6561b653ab510c739760ed"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-agent-config.json",
+      "sha256": "cf0ec1f5f1a14f71df865e5a6e42f0a3a8bcd1e4c636b00fc4ee4fbb212edf34"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-agent-evidence.json",
+      "sha256": "50760e0085d069f8b19222a2d271220b0ccedb8b9f6561b653ab510c739760ed"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-agent-draft.md",
+      "sha256": "512a7af9e3d6eb0d554b96e2f83423220331f79d25c997d319ea0aa962997ae6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-final-content-review.json",
+      "sha256": "0cf6c7001b0c4557924ccf41abc17d862002bfd1751348911cda3ef9f41a8c61"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-primary-frozen-source-verification.json",
+      "sha256": "e89076bdb932f52eea4d625856cc257ace0718cdf497ac25a33b595b7a2e144a"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-guts-no-glory-formal-peer-scope.json",
+    "sha256": "98e5b6f5a3051c12f7dde96f94f9cb0bb0f5c7a062094c78fb4198b9fe6132b7",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

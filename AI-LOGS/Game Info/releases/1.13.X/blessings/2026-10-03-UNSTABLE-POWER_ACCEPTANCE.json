@@ -1,0 +1,555 @@
+{
+  "date": "2026-10-06",
+  "blessing": "unstable-power",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/不穩定能量/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus",
+    "weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus"
+  ],
+  "added_binding_count": 5,
+  "total_variants": 2,
+  "total_bindings": 5,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "unstable-power",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-formal-peer-scope.json",
+    "scope_sha256": "76a2a72c400ddac7e6b9c9bbbaf6940c72f57867e279d9da08780f4995e4586b",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "formal_acceptance": true,
+    "root_content_review": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-final-content-review.json",
+      "sha256": "1cf4a5e693d0466562effc79f30766538bc3957877f613a16a1a8d15e30cccbe",
+      "accepted": true
+    },
+    "image_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-image.json",
+      "sha256": "e7ac892967008f0eac8e128d8ed473d04572bbbe07e5b434a02e856178e35418",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "attachment": "https://github.com/user-attachments/assets/dba7c355-1bf0-46d3-ab64-a9bcffefe3e0",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    },
+    "reviewed_conclusions": [
+      "All 82 frozen scope input hashes match disk; the scope identifies this exact source commit and all eight own formal pages.",
+      "The two actual implementations and five Mark bindings are correctly separated: the force sword and force greatsword share .035/.04/.045/.05 per peril step, but use distinct formatter behavior and actual Mark routes.",
+      "Peril step count is k=min(4,floor(current_peril/.20)); each wrapper held-slot gate applies the own tier override to the same conditional power-level key, replacing the .05 fallback rather than adding to it. No separate stepped_stat_buffs table or hit-triggered stack exists.",
+      "The documented modifier is applied after the native weapon power-type curve as S_native*(1+q+k*p). Examples distinguish the power input from final HP damage, impact, and hit-mass outcomes and correctly account for pre-existing applicable modifier q.",
+      "The RAW English and Traditional Chinese strings match the fixed localization resource and hash. The single-hand formatter shows the four-step maximum, while the greatsword formatter shows only per-step p despite the shared “Up to/最多” wording; the documented discrepancy and retained RAW are supported.",
+      "Ordinary melee, push and follow-up, special Force Slash, sticky extra hits on only Obscurus Mk II and Deimos Mk IV, fixed-update/cache timing, cooling/venting, held-slot switching, and true unequip behavior are described with the limits supported by the actual binding and source proofs.",
+      "The actual icon receipt is in scope and reports verified public bytes/hash and visual review; weapon compatibility and reverse associations are part of the frozen scope."
+    ],
+    "formal_page_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/DAMAGE_PERCENTAGE_REVIEW.md": "aeb8ca9b3d75c10aad4ebd79a5952172328f8fc0fa252b70aa6ef078279fbbe1",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/LOCALIZATION_COMPARISON.md": "0827cd22b0b801fe3eeb5f5a78161594e5da96c0475927d51a180286cec1c9b4",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/README.md": "b501ad235c76389b98857041c94e1ca5291b195c87ffd52416abf7cf16466f77",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/SOURCE_INDEX.md": "966d42bd195f2d063de9a517dac05a384ca453d43211a7a64554b2c65887b698",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/TIER_VALUES.md": "207888fc6bfbc4f3b0c334982be1d37fb0e1db39fa4f898573bbabf28b69b811",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/WEAPON_COMPATIBILITY.md": "d8fdecaead9d571ba4ccd303d303a0164cc7a46d85c48e91328dd606e7770f0b",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus.md": "36bae02278d11e6f87b957b01a32c9db7bbed62fbfb1b509ecc2fb79a7197d1b",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus.md": "2525780ee20fb9bc52d13da2a933dd5488d8ae9e41ef5703197de5970c63d72c"
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-config.json": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-image.json": "b64dfa4f7686738c4f0d5584591796615bfb226cd5a7c34f2e1a1ecb71a29fe4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-agent-config.json": "983dfb331e5be9df5aea30c9de9718c05f77e71ed307cae8f40feeb9a7025c97",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-agent-draft.md": "a02b7be23f26130d1eea3959764b3ba64820864636fc9277f1a48a627af3f373",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-agent-evidence.json": "d7b832c649c2a37162641ed7fa5aebe04c82c7ae34af8a8c2eadac1ea0879f01",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-config.json": "00dde4cf0afdb74ea93d8a8a6717362ce5a351d9eb30c6e08002981f942ce8a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-extension-draft.json": "9471707a9d59f7b1d6ed24f8087ba3618164f5e30cb2e584b6e8410efa6e23d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/own-association-snapshot.json": "5b365203de874cca5776c578bd4372559903e2584a0a535118f0be0efcba8ab4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/inputs/map-snapshot-002.json": "c6b4c67661b99902868ef8dd8c907c4f68731c69dbda04015c478f8c4f039ad6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/inputs/remaining-tasks-snapshot-002.json": "39f5f876ea76b2b3f4c035161f79f70ec061ce29bac278de4a55724c185cc345",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-001.json": "82c521891cd05a94e60b57907294917fe9f258bfbad6a1facd76437e3c340f48",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-002.json": "d830811c7656f4fd0a6132f4dbafd70e6d66005e37bc4054ef0b16d2820a9ad4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-003.json": "7cf706fcbbd33b2c220f4d0e2de5be96cf1b8e6d20baf6222100b4d70ccc8c69",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-005.json": "e917d620d7ce2e51c8aa5fe51dbb039ed4b09f0e943eb7425554947317c15b69",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-006.json": "46d32397ad1ed679e9c70db6c1c92c08caa95e0d38e8d00d71310aa8a9dad5c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-association.json": "5b365203de874cca5776c578bd4372559903e2584a0a535118f0be0efcba8ab4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-candidate-manifest.json": "57a73b50702867915d5060da465b43b8370ab56af4d73a26998b74f19aa19cbd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-config.json": "983dfb331e5be9df5aea30c9de9718c05f77e71ed307cae8f40feeb9a7025c97",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-coverage.json": "2ddb563df9c84b699fe6b2b9c04e4447850f903e5ad269ab52034e0fb168a70d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-draft.md": "a02b7be23f26130d1eea3959764b3ba64820864636fc9277f1a48a627af3f373",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-evidence.json": "d7b832c649c2a37162641ed7fa5aebe04c82c7ae34af8a8c2eadac1ea0879f01",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-preflight.json": "641b97542aa6df62278f1b619acc37040011907016a3ccf56bce9edf8ecc3d7e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-image.json": "e7ac892967008f0eac8e128d8ed473d04572bbbe07e5b434a02e856178e35418",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-final-content-review.json": "1cf4a5e693d0466562effc79f30766538bc3957877f613a16a1a8d15e30cccbe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-focused-checks.json": "4634c421cd4437f4a72676f3f1b1d944630bacd4ca92f0c75345dd9a3deaff2e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-frozen-source-verification.json": "6244fff006dd41944127ee738fcf92edd89585983fe52b16c098d32ea607ca55",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-native-own-override-delivery-material-review.json": "dd08ec9703ecff9a237262d9a0c89bffb39aa6af721abc22e9190c0f6db6886c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-native-step-override-consumer-delta-review.json": "3e144d14c4e1fef6f1ce20bec37d22b63c6c30a59ec3ae2bd96f8b1ec311cbc7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-own-tier-wrapper-material-delta-review.json": "ef047280de13a69e8fccc1f0ff5fa63df6e3bd20bae0b8997fa861e5b14dac6c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-resume-review.json": "c17fe8314a79f4d5d585d12c43a4930351fd1fe884027f62bd11cc8f342721c4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-special-snapshot-source-delta-review.json": "7b829851b17ee6aeb001850a14054a672c4d649f14ea96f8cab2bb3896cad769",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-traits-review.json": "22acc2c09b9d3f71f2becb4809081c87d242c4937bb4d70b70420053ed736d84",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-ui-raw-verification.json": "c059f66aade5932981c8992378cf709e1a8b6c869ad82eb5a57e72f98186301f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-ui-review.json": "c395c84dfa268bb98d42717732e0117e64cb4bd6db4ece984f1bd3358c0eba45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-raw-verification.json": "3d38f0318b0ae22f5cd455b1e6a88c30d2c5b2315b02b41a17c8a9e2bfa321d4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "492ea00af2c8a73d2cc0bc9745ce50e1de4e9c46851e62d03a311def26fb6a57",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/DAMAGE_PERCENTAGE_REVIEW.md": "aeb8ca9b3d75c10aad4ebd79a5952172328f8fc0fa252b70aa6ef078279fbbe1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/LOCALIZATION_COMPARISON.md": "0827cd22b0b801fe3eeb5f5a78161594e5da96c0475927d51a180286cec1c9b4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/README.md": "b501ad235c76389b98857041c94e1ca5291b195c87ffd52416abf7cf16466f77",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/SOURCE_INDEX.md": "966d42bd195f2d063de9a517dac05a384ca453d43211a7a64554b2c65887b698",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/TIER_VALUES.md": "207888fc6bfbc4f3b0c334982be1d37fb0e1db39fa4f898573bbabf28b69b811",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/WEAPON_COMPATIBILITY.md": "d8fdecaead9d571ba4ccd303d303a0164cc7a46d85c48e91328dd606e7770f0b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus.md": "36bae02278d11e6f87b957b01a32c9db7bbed62fbfb1b509ecc2fb79a7197d1b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/不穩定能量/weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus.md": "2525780ee20fb9bc52d13da2a933dd5488d8ae9e41ef5703197de5970c63d72c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/melee/README.md": "7c7702811f821f1322b7689363901e80b704a53977fc9b6bab651c15b30d76a1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/README.md": "e1b64311ded14b56e5d779441b7ba882c27c12c7549ec2e8688d6d7dc75f3897",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6d0487f44bdaaac02fe2ce9771cf38df59ce4e9644e144b62e58dd5107cb8a3f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "472cbf3b36812f24444e4b3ef428e0f339437af4003518af69dcbe74bc105b09",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "86c2787c9d821e025b2c40ba8521a6ebb2737d765fb2e6d444698ff2280f3560",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/own-association-snapshot.json": "5b365203de874cca5776c578bd4372559903e2584a0a535118f0be0efcba8ab4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/Referneces/Translation.md": "4687254f88bd758565e8a77de031e42a127b3046dcfda9ba0fabf13a04256b8f",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "492ea00af2c8a73d2cc0bc9745ce50e1de4e9c46851e62d03a311def26fb6a57",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/DAMAGE_PERCENTAGE_REVIEW.md": "aeb8ca9b3d75c10aad4ebd79a5952172328f8fc0fa252b70aa6ef078279fbbe1",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/LOCALIZATION_COMPARISON.md": "0827cd22b0b801fe3eeb5f5a78161594e5da96c0475927d51a180286cec1c9b4",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/README.md": "b501ad235c76389b98857041c94e1ca5291b195c87ffd52416abf7cf16466f77",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/SOURCE_INDEX.md": "966d42bd195f2d063de9a517dac05a384ca453d43211a7a64554b2c65887b698",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/TIER_VALUES.md": "207888fc6bfbc4f3b0c334982be1d37fb0e1db39fa4f898573bbabf28b69b811",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/WEAPON_COMPATIBILITY.md": "d8fdecaead9d571ba4ccd303d303a0164cc7a46d85c48e91328dd606e7770f0b",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus.md": "36bae02278d11e6f87b957b01a32c9db7bbed62fbfb1b509ecc2fb79a7197d1b",
+      "Game Info/releases/1.13.X/blessings/entries/不穩定能量/weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus.md": "2525780ee20fb9bc52d13da2a933dd5488d8ae9e41ef5703197de5970c63d72c",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "7c7702811f821f1322b7689363901e80b704a53977fc9b6bab651c15b30d76a1",
+      "Game Info/releases/1.13.X/blessings/README.md": "e1b64311ded14b56e5d779441b7ba882c27c12c7549ec2e8688d6d7dc75f3897",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6d0487f44bdaaac02fe2ce9771cf38df59ce4e9644e144b62e58dd5107cb8a3f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "472cbf3b36812f24444e4b3ef428e0f339437af4003518af69dcbe74bc105b09",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "86c2787c9d821e025b2c40ba8521a6ebb2737d765fb2e6d444698ff2280f3560",
+      "Referneces/Translation.md": "4687254f88bd758565e8a77de031e42a127b3046dcfda9ba0fabf13a04256b8f"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/dba7c355-1bf0-46d3-ab64-a9bcffefe3e0",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "unstable-power",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_064.png",
+      "attachment": "https://github.com/user-attachments/assets/dba7c355-1bf0-46d3-ab64-a9bcffefe3e0",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6000147502",
+      "acquired_date": "2026-10-06",
+      "sha256": "91c4bc123fbfed4fa82510aba04d75cf6861f8b637b346e0b581e13d29124dc2",
+      "content_type": "image/png",
+      "size": 4210,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "不穩定能量祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed public PNG actual pale identified icon motif and transparency; matches verified source content hash."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 449,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 65,
+      "source_files": 31,
+      "bindings": 902,
+      "variants": 463,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 31,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1134,
+      "remote_references": 434,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 35,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-034-full-scan.json",
+        "sha256": "e52565ec6a21637469cd9bb47af839d8aa23d9abe7472a9eb2ce40cc2335f2ef",
+        "trigger": "round-034"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 32,
+    "not_started_name_groups": 32,
+    "partial_name_groups": 0,
+    "remaining_variants": 142,
+    "remaining_bindings": 283,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "f819b803deeb2d93078e13e157a90df31cc6e9125888e043dc2d109c3bab30d7"
+  },
+  "previous_local_commit": "4f5a1ecfe6aa846e8f1173c5694a226cffc4558d",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-final-content-review.json",
+      "sha256": "1cf4a5e693d0466562effc79f30766538bc3957877f613a16a1a8d15e30cccbe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-focused-checks.json",
+      "sha256": "4634c421cd4437f4a72676f3f1b1d944630bacd4ca92f0c75345dd9a3deaff2e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-frozen-source-verification.json",
+      "sha256": "6244fff006dd41944127ee738fcf92edd89585983fe52b16c098d32ea607ca55"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-native-own-override-delivery-material-review.json",
+      "sha256": "dd08ec9703ecff9a237262d9a0c89bffb39aa6af721abc22e9190c0f6db6886c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-native-step-override-consumer-delta-review.json",
+      "sha256": "3e144d14c4e1fef6f1ce20bec37d22b63c6c30a59ec3ae2bd96f8b1ec311cbc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "ef047280de13a69e8fccc1f0ff5fa63df6e3bd20bae0b8997fa861e5b14dac6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-resume-review.json",
+      "sha256": "c17fe8314a79f4d5d585d12c43a4930351fd1fe884027f62bd11cc8f342721c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-special-snapshot-source-delta-review.json",
+      "sha256": "7b829851b17ee6aeb001850a14054a672c4d649f14ea96f8cab2bb3896cad769"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-traits-review.json",
+      "sha256": "22acc2c09b9d3f71f2becb4809081c87d242c4937bb4d70b70420053ed736d84"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-ui-raw-verification.json",
+      "sha256": "c059f66aade5932981c8992378cf709e1a8b6c869ad82eb5a57e72f98186301f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-ui-review.json",
+      "sha256": "c395c84dfa268bb98d42717732e0117e64cb4bd6db4ece984f1bd3358c0eba45"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-config.json",
+    "sha256": "00dde4cf0afdb74ea93d8a8a6717362ce5a351d9eb30c6e08002981f942ce8a1"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-image.json",
+      "sha256": "b64dfa4f7686738c4f0d5584591796615bfb226cd5a7c34f2e1a1ecb71a29fe4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-config.json",
+      "sha256": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "ef047280de13a69e8fccc1f0ff5fa63df6e3bd20bae0b8997fa861e5b14dac6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-native-step-override-consumer-delta-review.json",
+      "sha256": "3e144d14c4e1fef6f1ce20bec37d22b63c6c30a59ec3ae2bd96f8b1ec311cbc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-native-own-override-delivery-material-review.json",
+      "sha256": "dd08ec9703ecff9a237262d9a0c89bffb39aa6af721abc22e9190c0f6db6886c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-traits-review.json",
+      "sha256": "22acc2c09b9d3f71f2becb4809081c87d242c4937bb4d70b70420053ed736d84"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-ui-review.json",
+      "sha256": "c395c84dfa268bb98d42717732e0117e64cb4bd6db4ece984f1bd3358c0eba45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-ui-raw-verification.json",
+      "sha256": "c059f66aade5932981c8992378cf709e1a8b6c869ad82eb5a57e72f98186301f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-image.json",
+      "sha256": "e7ac892967008f0eac8e128d8ed473d04572bbbe07e5b434a02e856178e35418"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-config.json",
+      "sha256": "983dfb331e5be9df5aea30c9de9718c05f77e71ed307cae8f40feeb9a7025c97"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-draft.md",
+      "sha256": "a02b7be23f26130d1eea3959764b3ba64820864636fc9277f1a48a627af3f373"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-coverage.json",
+      "sha256": "2ddb563df9c84b699fe6b2b9c04e4447850f903e5ad269ab52034e0fb168a70d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-006.json",
+      "sha256": "46d32397ad1ed679e9c70db6c1c92c08caa95e0d38e8d00d71310aa8a9dad5c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-candidate-manifest.json",
+      "sha256": "57a73b50702867915d5060da465b43b8370ab56af4d73a26998b74f19aa19cbd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-association.json",
+      "sha256": "5b365203de874cca5776c578bd4372559903e2584a0a535118f0be0efcba8ab4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-preflight.json",
+      "sha256": "641b97542aa6df62278f1b619acc37040011907016a3ccf56bce9edf8ecc3d7e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/actual-preview-006/own-association-snapshot.json",
+      "sha256": "5b365203de874cca5776c578bd4372559903e2584a0a535118f0be0efcba8ab4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/inputs/map-snapshot-002.json",
+      "sha256": "c6b4c67661b99902868ef8dd8c907c4f68731c69dbda04015c478f8c4f039ad6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/inputs/remaining-tasks-snapshot-002.json",
+      "sha256": "39f5f876ea76b2b3f4c035161f79f70ec061ce29bac278de4a55724c185cc345"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "e1b64311ded14b56e5d779441b7ba882c27c12c7549ec2e8688d6d7dc75f3897"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "6d0487f44bdaaac02fe2ce9771cf38df59ce4e9644e144b62e58dd5107cb8a3f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "492ea00af2c8a73d2cc0bc9745ce50e1de4e9c46851e62d03a311def26fb6a57"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "aeb8ca9b3d75c10aad4ebd79a5952172328f8fc0fa252b70aa6ef078279fbbe1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\LOCALIZATION_COMPARISON.md",
+      "sha256": "0827cd22b0b801fe3eeb5f5a78161594e5da96c0475927d51a180286cec1c9b4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\README.md",
+      "sha256": "b501ad235c76389b98857041c94e1ca5291b195c87ffd52416abf7cf16466f77"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\SOURCE_INDEX.md",
+      "sha256": "966d42bd195f2d063de9a517dac05a384ca453d43211a7a64554b2c65887b698"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\TIER_VALUES.md",
+      "sha256": "207888fc6bfbc4f3b0c334982be1d37fb0e1db39fa4f898573bbabf28b69b811"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\WEAPON_COMPATIBILITY.md",
+      "sha256": "d8fdecaead9d571ba4ccd303d303a0164cc7a46d85c48e91328dd606e7770f0b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus.md",
+      "sha256": "36bae02278d11e6f87b957b01a32c9db7bbed62fbfb1b509ecc2fb79a7197d1b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\不穩定能量\\weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus.md",
+      "sha256": "2525780ee20fb9bc52d13da2a933dd5488d8ae9e41ef5703197de5970c63d72c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "7c7702811f821f1322b7689363901e80b704a53977fc9b6bab651c15b30d76a1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\烈焰力場劍\\README.md",
+      "sha256": "472cbf3b36812f24444e4b3ef428e0f339437af4003518af69dcbe74bc105b09"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\烈焰力場巨劍\\README.md",
+      "sha256": "86c2787c9d821e025b2c40ba8521a6ebb2737d765fb2e6d444698ff2280f3560"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\Referneces\\Translation.md",
+      "sha256": "4687254f88bd758565e8a77de031e42a127b3046dcfda9ba0fabf13a04256b8f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-raw-verification.json",
+      "sha256": "3d38f0318b0ae22f5cd455b1e6a88c30d2c5b2315b02b41a17c8a9e2bfa321d4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\unstable-power-group\\actual-preview-006\\own-association-snapshot.json",
+      "sha256": "5b365203de874cca5776c578bd4372559903e2584a0a535118f0be0efcba8ab4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-001.json",
+      "sha256": "82c521891cd05a94e60b57907294917fe9f258bfbad6a1facd76437e3c340f48"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-002.json",
+      "sha256": "d830811c7656f4fd0a6132f4dbafd70e6d66005e37bc4054ef0b16d2820a9ad4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-003.json",
+      "sha256": "7cf706fcbbd33b2c220f4d0e2de5be96cf1b8e6d20baf6222100b4d70ccc8c69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-actual-preview-receipt-005.json",
+      "sha256": "e917d620d7ce2e51c8aa5fe51dbb039ed4b09f0e943eb7425554947317c15b69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-group/unstable-power-agent-evidence.json",
+      "sha256": "d7b832c649c2a37162641ed7fa5aebe04c82c7ae34af8a8c2eadac1ea0879f01"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-agent-config.json",
+      "sha256": "983dfb331e5be9df5aea30c9de9718c05f77e71ed307cae8f40feeb9a7025c97"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-agent-evidence.json",
+      "sha256": "d7b832c649c2a37162641ed7fa5aebe04c82c7ae34af8a8c2eadac1ea0879f01"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-agent-draft.md",
+      "sha256": "a02b7be23f26130d1eea3959764b3ba64820864636fc9277f1a48a627af3f373"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-final-content-review.json",
+      "sha256": "1cf4a5e693d0466562effc79f30766538bc3957877f613a16a1a8d15e30cccbe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-frozen-source-verification.json",
+      "sha256": "6244fff006dd41944127ee738fcf92edd89585983fe52b16c098d32ea607ca55"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-primary-special-snapshot-source-delta-review.json",
+      "sha256": "7b829851b17ee6aeb001850a14054a672c4d649f14ea96f8cab2bb3896cad769"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/unstable-power-formal-peer-scope.json",
+    "sha256": "76a2a72c400ddac7e6b9c9bbbaf6940c72f57867e279d9da08780f4995e4586b",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

@@ -1,0 +1,1068 @@
+{
+  "date": "2026-10-03",
+  "blessing": "lethal-proximity",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/致命零距離/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_boltpistol_p1_close_explosion"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "delegation_scope": "one separate blessing group: Lethal Proximity; three different blessings in parallel",
+    "peer_review": {
+      "id": "lethal-proximity-agent-peer-review",
+      "reviewer": "Luna / max",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "reviewed_config": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-config.json",
+      "reviewed_draft": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-extension-draft.json",
+      "verified_findings": {
+        "scope": {
+          "variant_count": 1,
+          "variant_id": "weapon_trait_bespoke_boltpistol_p1_close_explosion",
+          "weapon_id": "boltpistol_p1",
+          "bindings": [
+            "boltpistol_p1_m1",
+            "boltpistol_p1_m2"
+          ],
+          "tiers": [
+            "I",
+            "II",
+            "III",
+            "IV"
+          ],
+          "available_tiers_null_is_backend_metadata_only": true
+        },
+        "wrapper_and_lifecycle": {
+          "trait_source": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua:428-469; radius override I-IV = 0.10/0.15/0.20/0.25",
+          "buff_wrapper": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua:20-32; ordinary stat radius +0.10, conditional arming multiplier 0 only while slot is wielded",
+          "tier_override": "The trait rarity value replaces the wrapper default +0.10; it is not added a second time.",
+          "lifecycle": "Trait buff targets on_equip and remains while the pistol stays equipped; switching changes wield/unwield buffs. Thus generic radius persists while conditional zero-arming ends when switched away."
+        },
+        "trigger_and_explosion": {
+          "distance": "Arming compares hit.distance from the first-person shooting origin to the physical hit point; baseline is 5 m for Mk IV and 3 m for Mk VI.",
+          "detonation": "Zeroing the arming threshold does not bypass the pistol projectile’s existing hit-mass, penetration-stop, kill/stop, or impact explosion paths and does not guarantee one blast per hit.",
+          "modes": "Hip-fire and aimed fire use each mark’s hitscan setup; push is a weapon-butt melee sweep.",
+          "radius_scope": "The generic radius modifier scales template radius and close radius, including the same holder’s other explosions while the pistol remains equipped. It does not change damage profile or power.",
+          "resolution": "Both marks have damage_falloff=true and scalable_radius=false. Per explosion template, close_damage_profile equals that event’s full damage_profile. The close radius expands the no-distance-falloff region; outside it, the existing squared falloff and cover raycast remain. These pistol explosions exclude owner and allies."
+        },
+        "tier_and_mark_values": {
+          "shared_bonus_percent_by_tier": [
+            10,
+            15,
+            20,
+            25
+          ],
+          "shared_multiplier_by_tier": [
+            1.1,
+            1.15,
+            1.2,
+            1.25
+          ],
+          "boltpistol_p1_m1": {
+            "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+            "arming_distance_m": 5,
+            "base_radius_m": 3,
+            "base_close_radius_m": 0.75,
+            "radius_by_tier_m": [
+              3.3,
+              3.45,
+              3.6,
+              3.75
+            ],
+            "close_radius_by_tier_m": [
+              0.825,
+              0.8625,
+              0.9,
+              0.9375
+            ]
+          },
+          "boltpistol_p1_m2": {
+            "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+            "arming_distance_m": 3,
+            "base_radius_m": 5,
+            "base_close_radius_m": 1.75,
+            "radius_by_tier_m": [
+              5.5,
+              5.75,
+              6,
+              6.25
+            ],
+            "close_radius_by_tier_m": [
+              1.925,
+              2.0125,
+              2.1,
+              2.1875
+            ]
+          },
+          "generic_modifier_math": "M=1+B+t+Σ(Sj−1); tier override replaces wrapper default. Radius R=R0×M; close radius C=C0×M.",
+          "example_math": {
+            "no_other_modifier_premise": true,
+            "tier_IV_plus_existing_20_percent_multiplier": 1.45,
+            "mk_iv_radius_m": 4.35,
+            "mk_iv_close_radius_m": 1.0875,
+            "mk_iv_tier_I_dropoff_scalar_at_adjusted_distance_2m": 0.22538516477910422
+          }
+        },
+        "localization_and_ui": {
+          "raw_resource": "content/localization/items",
+          "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+          "name": {
+            "key": "loc_trait_bespoke_close_explosion",
+            "hash": "9fbc423b",
+            "en": "Lethal Proximity",
+            "zh_tw": "致命零距離"
+          },
+          "description": {
+            "key": "loc_trait_bespoke_close_explosion_desc",
+            "hash": "4823386b",
+            "en": "Point blank shots cause an explosion. Explosion Radius increases by {radius:%s}.",
+            "zh_tw": "零距離射擊會造成爆炸。爆炸範圍增加{radius:%s}。"
+          },
+          "ui_components": {
+            "boltpistol_p1_m1": {
+              "family": [
+                "loc_weapon_family_boltpistol_p1_m1",
+                "5aaa647a",
+                "爆彈手槍"
+              ],
+              "pattern": [
+                "loc_weapon_pattern_boltpistol_p1_m1",
+                "f1ddb8fc",
+                "戈德溫–布蘭克斯"
+              ],
+              "mark": [
+                "loc_weapon_mark_boltpistol_p1_m1",
+                "aafe90a7",
+                "Mk IV"
+              ]
+            },
+            "boltpistol_p1_m2": {
+              "family": [
+                "loc_weapon_family_boltpistol_p1_m2",
+                "4eb1d2d5",
+                "爆彈手槍"
+              ],
+              "pattern": [
+                "loc_weapon_pattern_boltpistol_p1_m2",
+                "8b33d353",
+                "戈德溫–布蘭克斯"
+              ],
+              "mark": [
+                "loc_weapon_mark_boltpistol_p1_m2",
+                "9e082991",
+                "Mk VI"
+              ]
+            }
+          },
+          "metadata_intersection": {
+            "exact_name_metadata_items": 1,
+            "exact_trait_definitions": 1,
+            "bindings": 2,
+            "exact_unresolved": 0,
+            "exact_unbound": 0,
+            "exact_outside": 0,
+            "similar_but_distinct_key": "loc_trait_bespoke_close_explosion_applies_bleed"
+          }
+        },
+        "rules_and_errata": {
+          "rule_count": 12,
+          "explicit_contradictions": 0,
+          "config_errata": "",
+          "review_wording_confirmed": true,
+          "notes": "The final comparison labels omitted details as 文件未涵蓋; it does not promote omissions to errata. The generic-radius row now says 同一持有者的其他爆炸."
+        },
+        "image_mapping": {
+          "icon_path": "content/ui/textures/icons/traits/weapon_trait_229",
+          "receipt_sha256": "ce034bd72ff4ed2c95e66a69c97011e41ba4ded845f63018c904cd0fd6f01a88",
+          "image_sha256": "11483b96c519c467c8475761923eff4ead8f1a8d8e7a24ac6c6dcdc840f2a3c5",
+          "dimensions": [
+            128,
+            128
+          ],
+          "public_download_status": 200,
+          "hash_verified": true,
+          "display_verified": true,
+          "attachment": "https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a"
+        }
+      },
+      "reviewed_files": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-config.json",
+          "sha256": "1a47a0c93106f7bc7fe0d53bc81291fc58fc45c15ec480875e150df3e63f6971"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-extension-draft.json",
+          "sha256": "7cc4be812f3aa165ce11d18ba2e35642982bcf2e630c46e1fc1cfae53a77a50b"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-raw-verification.json",
+          "sha256": "6630d26fdfb67d84a9aa9fcb0af5226b773c0f6e47006bad15d07d915b5e8710"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-extension-raw-verification.json",
+          "sha256": "593abd83e46054ddb670aeabf33e072c21f7b30e124e9c5a80e7bc6e2d2f7e14"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-primary-ui-review.json",
+          "sha256": "b1c6ace368726e4a0cdcc3725461cd71b0c7b063716c56913eb8de1a00febfcf"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-primary-ui-raw-verification.json",
+          "sha256": "593abd83e46054ddb670aeabf33e072c21f7b30e124e9c5a80e7bc6e2d2f7e14"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-primary-traits-review.json",
+          "sha256": "3004f9bed11d78d7896cb8e3466a318c0bc919be45a5b78b9331c0c18fbc66f0"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-image.json",
+          "sha256": "ce034bd72ff4ed2c95e66a69c97011e41ba4ded845f63018c904cd0fd6f01a88"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/致命零距離/README.md",
+          "sha256": "6dce70c078795473e87e4683e4981c33c1413ce8bb3ba028c0280bf15d56fc64"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/致命零距離/SOURCE_INDEX.md",
+          "sha256": "f54a665c85f9fe7e1dbe581c3a35b69f6f9fb31ac8f6791d0a39b4806aa14e40"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/致命零距離/TIER_VALUES.md",
+          "sha256": "64b43c2e1333886074aaf6dc0a75840ce534d59b7506ced0afbd10fbbfee91ec"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/致命零距離/DAMAGE_PERCENTAGE_REVIEW.md",
+          "sha256": "d11ebb4c497980f8b061317e05930932dcbc8fd90bf05b1cd369ea487c52bdb8"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/致命零距離/LOCALIZATION_COMPARISON.md",
+          "sha256": "c3281a30ba8473d3d799bcdb0d9a9122b0ec1f0954abb60112e71241254470af"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/致命零距離/WEAPON_COMPATIBILITY.md",
+          "sha256": "030410f64ec77f4d53d0d8fa8d2f3f3bd5f988c9df08485b02ccb4e194ce6b11"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/致命零距離/weapon_trait_bespoke_boltpistol_p1_close_explosion.md",
+          "sha256": "fa72402ff6f3e361d206a0a3facd1cbd20c8c7be4102d35131ffa8f5f8633e45"
+        }
+      ],
+      "fixed_source_refs": [
+        {
+          "label": "I–IV trait literals與格式值",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+          "start_line": 428,
+          "end_line": 469,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Buff wrapper：普通radius與conditional arming",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+          "start_line": 20,
+          "end_line": 32,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "trait加入on_equip目標",
+          "path": "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+          "start_line": 168,
+          "end_line": 190,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "上裝、卸下、切換時的buff生命週期",
+          "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+          "start_line": 633,
+          "end_line": 693,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "切出時只切換on_wield與on_unwield",
+          "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+          "start_line": 780,
+          "end_line": 785,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "trait rarity override組合",
+          "path": "scripts/extension_systems/buff/buffs/buff.lua",
+          "start_line": 159,
+          "end_line": 221,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "普通stat與conditional stat分開計算",
+          "path": "scripts/extension_systems/buff/buffs/buff.lua",
+          "start_line": 689,
+          "end_line": 747,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "wielded slot條件",
+          "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+          "start_line": 43,
+          "end_line": 59,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "radius stat類型及neutral base",
+          "path": "scripts/settings/buff/buff_settings.lua",
+          "start_line": 808,
+          "end_line": 808,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "additive stat neutral value",
+          "path": "scripts/settings/buff/buff_settings.lua",
+          "start_line": 1048,
+          "end_line": 1060,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk IV與Mk VI hitscan距離及爆炸模板接線",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua",
+          "start_line": 11,
+          "end_line": 64,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk IV腰射與瞄準hitscan",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+          "start_line": 208,
+          "end_line": 339,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk VI腰射與瞄準hitscan",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+          "start_line": 208,
+          "end_line": 339,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk IV push為近戰sweep",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+          "start_line": 454,
+          "end_line": 541,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk VI push為近戰sweep",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+          "start_line": 454,
+          "end_line": 541,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "first-person射擊起點與shot update",
+          "path": "scripts/extension_systems/weapon/actions/action_shoot.lua",
+          "start_line": 403,
+          "end_line": 449,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "shot position傳入hitscan",
+          "path": "scripts/extension_systems/weapon/actions/action_shoot.lua",
+          "start_line": 307,
+          "end_line": 313,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "hitscan執行呼叫與物理hit結果",
+          "path": "scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua",
+          "start_line": 145,
+          "end_line": 200,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "arming distance比較及armed damage type",
+          "path": "scripts/utilities/attack/hit_scan.lua",
+          "start_line": 88,
+          "end_line": 109,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "目標命中傷害與hitmass explosion呼叫",
+          "path": "scripts/utilities/attack/hit_scan.lua",
+          "start_line": 214,
+          "end_line": 247,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "穿透停止及impact explosion路徑",
+          "path": "scripts/utilities/attack/hit_scan.lua",
+          "start_line": 288,
+          "end_line": 320,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "hit mass explosion條件及kill/stop template",
+          "path": "scripts/utilities/action/ranged_action.lua",
+          "start_line": 86,
+          "end_line": 141,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk IV boltshell kill/stop explosion基礎值",
+          "path": "scripts/settings/equipment/weapon_templates/bolters/settings_templates/bolter_explosion_templates.lua",
+          "start_line": 120,
+          "end_line": 174,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk VI boltshell kill/stop explosion基礎值",
+          "path": "scripts/settings/equipment/weapon_templates/bolters/settings_templates/bolter_explosion_templates.lua",
+          "start_line": 204,
+          "end_line": 257,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "半徑與close radius套用generic stat",
+          "path": "scripts/utilities/attack/explosion.lua",
+          "start_line": 430,
+          "end_line": 502,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "爆炸目標距離、breed半徑、掩體與falloff",
+          "path": "scripts/extension_systems/weapon/weapon_system.lua",
+          "start_line": 208,
+          "end_line": 324,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "爆炸排除owner與allies",
+          "path": "scripts/utilities/attack/explosion.lua",
+          "start_line": 173,
+          "end_line": 186,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk IV trait import",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+          "start_line": 16,
+          "end_line": 16,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk IV trait ukeys與append",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+          "start_line": 769,
+          "end_line": 771,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk VI trait import",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+          "start_line": 16,
+          "end_line": 16,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        },
+        {
+          "label": "Mk VI trait ukeys與append",
+          "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+          "start_line": 769,
+          "end_line": 771,
+          "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e"
+        }
+      ]
+    },
+    "peer_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/lethal-proximity-agent-peer-review.json",
+    "peer_review_sha256": "91af45b96cf7441910733dc917cee86f73db47231ec17f4120621e452c2c756a",
+    "primary_reviewer": "Sol / xhigh",
+    "required_corrections": [],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "lethal-proximity",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_229",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_229.png",
+      "attachment": "https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5968605782",
+      "acquired_date": "2026-10-03",
+      "sha256": "11483b96c519c467c8475761923eff4ead8f1a8d8e7a24ac6c6dcdc840f2a3c5",
+      "content_type": "image/png",
+      "size": 6599,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "致命零距離祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 424,
+      "tables": 342,
+      "rows": 3459,
+      "lists": 601
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1468,
+      "source_files": 385,
+      "bindings": 260,
+      "variants": 136,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1124,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 424,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 128,
+    "not_started_name_groups": 128,
+    "partial_name_groups": 0,
+    "remaining_variants": 452,
+    "remaining_bindings": 908,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "1ba0e5e2726dd6cd4aba28227a08ce2541f3a57542bce01da6cc92b2ebdbd3eb"
+  },
+  "previous_local_commit": "4df05a74afc59f69307be3b91262f82d7688513c",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "primary_reviewer": "Sol / xhigh",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "all_trait_and_wrapper_sources": {
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "name_key": "loc_trait_bespoke_close_explosion",
+      "variant_count": 1,
+      "records": [
+        {
+          "trait_id": "weapon_trait_bespoke_boltpistol_p1_close_explosion",
+          "weapon_id": "boltpistol_p1",
+          "tier_source": {
+            "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+            "start": 428,
+            "end": 469,
+            "lines": [
+              "templates.weapon_trait_bespoke_boltpistol_p1_close_explosion = {",
+              "\tformat_values = {",
+              "\t\tradius = {",
+              "\t\t\tformat_type = \"percentage\",",
+              "\t\t\tprefix = \"+\",",
+              "\t\t\tfind_value = {",
+              "\t\t\t\tbuff_template_name = \"weapon_trait_bespoke_boltpistol_p1_close_explosion\",",
+              "\t\t\t\tfind_value_type = \"trait_override\",",
+              "\t\t\t\tpath = {",
+              "\t\t\t\t\t\"stat_buffs\",",
+              "\t\t\t\t\tstat_buffs.explosion_radius_modifier,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t},",
+              "\t},",
+              "\tbuffs = {",
+              "\t\tweapon_trait_bespoke_boltpistol_p1_close_explosion = {",
+              "\t\t\t{",
+              "\t\t\t\tstat_buffs = {",
+              "\t\t\t\t\t[stat_buffs.explosion_radius_modifier] = 0.1,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t\t{",
+              "\t\t\t\tstat_buffs = {",
+              "\t\t\t\t\t[stat_buffs.explosion_radius_modifier] = 0.15,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t\t{",
+              "\t\t\t\tstat_buffs = {",
+              "\t\t\t\t\t[stat_buffs.explosion_radius_modifier] = 0.2,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t\t{",
+              "\t\t\t\tstat_buffs = {",
+              "\t\t\t\t\t[stat_buffs.explosion_radius_modifier] = 0.25,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t},",
+              "\t},",
+              "}",
+              "",
+              "return templates"
+            ]
+          },
+          "buff_source": {
+            "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+            "start": 20,
+            "end": 32,
+            "lines": [
+              "templates.weapon_trait_bespoke_boltpistol_p1_close_explosion = {",
+              "\tclass_name = \"buff\",",
+              "\tpredicted = false,",
+              "\tconditional_stat_buffs = {",
+              "\t\t[stat_buffs.explosion_arming_distance_multiplier] = 0,",
+              "\t},",
+              "\tstat_buffs = {",
+              "\t\t[stat_buffs.explosion_radius_modifier] = 0.1,",
+              "\t},",
+              "\tconditional_stat_buffs_func = ConditionalFunctions.is_item_slot_wielded,",
+              "}",
+              "",
+              "return templates"
+            ]
+          },
+          "refs": [
+            [
+              "I–IV完整定義",
+              "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+              428,
+              469
+            ],
+            [
+              "Buff完整覆寫",
+              "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+              20,
+              32
+            ]
+          ]
+        }
+      ],
+      "fixed_Git_object_ranges_extracted": true
+    },
+    "ordinary_radius_on_equip_persists_after_switch": true,
+    "conditional_arming_zero_requires_wielded_slot": true,
+    "shot_origin_is_first_person_component_position": true,
+    "existing_hitmass_explosion_requires_both_budgets_depleted": true,
+    "static_penetration_stop_explosion_separate": true,
+    "same_close_and_full_profile_within_each_explosion_template": true,
+    "generic_radius_modifier_additive_from_neutral_one": true,
+    "scalable_radius_false_forces_charge_one": true,
+    "square_dropoff_example": 0.22538516477910422,
+    "verified_examples": "- **半徑算例前提**：只套用此祝福的等級加成，沒有其他爆炸半徑修正；半徑採各型號的原始設定。\n\n- **Mk IV I級結果**：半徑倍率1.10，3m×1.10=3.3m；近距離區0.75m×1.10=0.825m。手持時啟動距離5m×0=0m。\n\n- **Mk VI IV級結果**：半徑倍率1.25，5m×1.25=6.25m；近距離區1.75m×1.25=2.1875m。\n\n- **距離衰減算例**：採Mk IV I級半徑，假設目標經尺寸修正後距爆炸中心2m，距離衰減參數為 `((2−0.825) ÷ (3.3−0.825))² ≈ 0.2254`。它會送入武器原有的傷害計算，不等於生命傷害降低22.54%。\n\n- **切換武器算例**：切換到另一把武器後，仍裝備的爆彈手槍保留該級半徑加成；但持用槽位條件解除，彈頭啟動距離恢復該型號的5m或3m。\n\n- **其他範圍加成**：若原有同階段+20%爆炸半徑，再加IV級+25%，總倍率為1.45；Mk IV半徑變為3m×1.45=4.35m，近距離區變為0.75m×1.45=1.0875m。",
+    "fixed_source_references_directly_reviewed": [
+      [
+        "I–IV trait literals與格式值",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        428,
+        469
+      ],
+      [
+        "Buff wrapper：普通radius與conditional arming",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        20,
+        32
+      ],
+      [
+        "trait加入on_equip目標",
+        "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+        168,
+        190
+      ],
+      [
+        "上裝、卸下、切換時的buff生命週期",
+        "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+        633,
+        693
+      ],
+      [
+        "切出時只切換on_wield與on_unwield",
+        "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+        780,
+        785
+      ],
+      [
+        "trait rarity override組合",
+        "scripts/extension_systems/buff/buffs/buff.lua",
+        159,
+        221
+      ],
+      [
+        "普通stat與conditional stat分開計算",
+        "scripts/extension_systems/buff/buffs/buff.lua",
+        689,
+        747
+      ],
+      [
+        "wielded slot條件",
+        "scripts/settings/buff/helper_functions/conditional_functions.lua",
+        43,
+        59
+      ],
+      [
+        "radius stat類型及neutral base",
+        "scripts/settings/buff/buff_settings.lua",
+        808,
+        808
+      ],
+      [
+        "additive stat neutral value",
+        "scripts/settings/buff/buff_settings.lua",
+        1048,
+        1060
+      ],
+      [
+        "Mk IV與Mk VI hitscan距離及爆炸模板接線",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua",
+        11,
+        64
+      ],
+      [
+        "Mk IV腰射與瞄準hitscan",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        208,
+        339
+      ],
+      [
+        "Mk VI腰射與瞄準hitscan",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        208,
+        339
+      ],
+      [
+        "Mk IV push為近戰sweep",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        454,
+        541
+      ],
+      [
+        "Mk VI push為近戰sweep",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        454,
+        541
+      ],
+      [
+        "first-person射擊起點與shot update",
+        "scripts/extension_systems/weapon/actions/action_shoot.lua",
+        403,
+        449
+      ],
+      [
+        "shot position傳入hitscan",
+        "scripts/extension_systems/weapon/actions/action_shoot.lua",
+        307,
+        313
+      ],
+      [
+        "hitscan執行呼叫與物理hit結果",
+        "scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua",
+        145,
+        200
+      ],
+      [
+        "arming distance比較及armed damage type",
+        "scripts/utilities/attack/hit_scan.lua",
+        88,
+        109
+      ],
+      [
+        "目標命中傷害與hitmass explosion呼叫",
+        "scripts/utilities/attack/hit_scan.lua",
+        214,
+        247
+      ],
+      [
+        "穿透停止及impact explosion路徑",
+        "scripts/utilities/attack/hit_scan.lua",
+        288,
+        320
+      ],
+      [
+        "hit mass explosion條件及kill/stop template",
+        "scripts/utilities/action/ranged_action.lua",
+        86,
+        141
+      ],
+      [
+        "Mk IV boltshell kill/stop explosion基礎值",
+        "scripts/settings/equipment/weapon_templates/bolters/settings_templates/bolter_explosion_templates.lua",
+        120,
+        174
+      ],
+      [
+        "Mk VI boltshell kill/stop explosion基礎值",
+        "scripts/settings/equipment/weapon_templates/bolters/settings_templates/bolter_explosion_templates.lua",
+        204,
+        257
+      ],
+      [
+        "半徑與close radius套用generic stat",
+        "scripts/utilities/attack/explosion.lua",
+        430,
+        502
+      ],
+      [
+        "爆炸目標距離、breed半徑、掩體與falloff",
+        "scripts/extension_systems/weapon/weapon_system.lua",
+        208,
+        324
+      ],
+      [
+        "爆炸排除owner與allies",
+        "scripts/utilities/attack/explosion.lua",
+        173,
+        186
+      ],
+      [
+        "Mk IV trait import",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        16,
+        16
+      ],
+      [
+        "Mk IV trait ukeys與append",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        769,
+        771
+      ],
+      [
+        "Mk VI trait import",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        16,
+        16
+      ],
+      [
+        "Mk VI trait ukeys與append",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        769,
+        771
+      ]
+    ]
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 2,
+    "bindings": [
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/boltpistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_close_explosion",
+        "trait_item": "content/items/traits/bespoke_boltpistol_p1/close_explosion",
+        "trait_category": "bespoke_boltpistol_p1",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m1",
+          "loc_weapon_pattern_boltpistol_p1_m1",
+          "loc_weapon_mark_boltpistol_p1_m1"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771,
+        "raw_components": {
+          "loc_weapon_family_boltpistol_p1_m1": {
+            "0": [
+              {
+                "text": "Bolt Pistol",
+                "hash": "5aaa647a",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "爆彈手槍",
+                "hash": "5aaa647a",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_boltpistol_p1_m1": {
+            "0": [
+              {
+                "text": "Godwyn-Branx",
+                "hash": "f1ddb8fc",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "戈德溫–布蘭克斯",
+                "hash": "f1ddb8fc",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_boltpistol_p1_m1": {
+            "0": [
+              {
+                "text": "Mk IV",
+                "hash": "aafe90a7",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk IV",
+                "hash": "aafe90a7",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m2",
+        "metadata_item": "content/items/weapons/player/ranged/boltpistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_close_explosion",
+        "trait_item": "content/items/traits/bespoke_boltpistol_p1/close_explosion",
+        "trait_category": "bespoke_boltpistol_p1",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m2",
+          "loc_weapon_pattern_boltpistol_p1_m2",
+          "loc_weapon_mark_boltpistol_p1_m2"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771,
+        "raw_components": {
+          "loc_weapon_family_boltpistol_p1_m2": {
+            "0": [
+              {
+                "text": "Bolt Pistol",
+                "hash": "4eb1d2d5",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "爆彈手槍",
+                "hash": "4eb1d2d5",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_boltpistol_p1_m2": {
+            "0": [
+              {
+                "text": "Godwyn-Branx",
+                "hash": "8b33d353",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "戈德溫–布蘭克斯",
+                "hash": "8b33d353",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_boltpistol_p1_m2": {
+            "0": [
+              {
+                "text": "Mk VI",
+                "hash": "9e082991",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk VI",
+                "hash": "9e082991",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "refs": [
+      [
+        "爆彈手槍 戈德溫–布蘭克斯 Mk IV匯入",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        16,
+        16
+      ],
+      [
+        "爆彈手槍 戈德溫–布蘭克斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        769,
+        771
+      ],
+      [
+        "爆彈手槍 戈德溫–布蘭克斯 Mk VI匯入",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        16,
+        16
+      ],
+      [
+        "爆彈手槍 戈德溫–布蘭克斯 Mk VI接入",
+        "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        769,
+        771
+      ]
+    ],
+    "exact_name_key_metadata_items": 1,
+    "outside_exact_items": [],
+    "raw_name": {
+      "0": [
+        {
+          "text": "Lethal Proximity",
+          "hash": "9fbc423b",
+          "resource": "content/localization/items"
+        }
+      ],
+      "16": [
+        {
+          "text": "致命零距離",
+          "hash": "9fbc423b",
+          "resource": "content/localization/items"
+        }
+      ]
+    }
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 1,
+    "bound_variants": 1,
+    "bound_bindings": 2,
+    "exact_unresolved_candidates": [],
+    "exact_unbound_definition_candidates": [],
+    "exact_outside_candidates": [],
+    "related_distinct_key_candidates": [
+      {
+        "name_key": "loc_trait_bespoke_close_explosion_applies_bleed",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed",
+        "weapon_id": "ogryn_thumper_p2",
+        "relationship": "Similar prefix only; distinct RAW key/trait (Shrapnel), not an exact-key binding."
+      }
+    ],
+    "status": "One exact-name metadata item and one exact trait definition bind to the two boltpistol marks; no exact unresolved, unbound, or outside candidate in the inventory scan."
+  }
+}

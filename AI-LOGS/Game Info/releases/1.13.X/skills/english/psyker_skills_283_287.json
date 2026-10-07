@@ -1,0 +1,73 @@
+{
+  "id": "psyker_skills_283_287",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Missing display mappings only: psyker_talents.lua L376–403, L1820–1843, L582–609, L561–575 and L1414–1427. Precognition's missing second_per_weakspot value filled from talent_settings_psyker.lua L5–15. Accepted mechanism values and common formatting reused; no buff/event/calculation-chain retrace."
+  ],
+  "questions": [
+    "Precognition raw template contains {max_finesse_damage%s} without a colon. Preserved verbatim; mapped +30% is manually substituted in the explicitly unobserved reconstruction. Actual game rendering remains unconfirmed."
+  ],
+  "skills": [
+    {
+      "id": "psyker_discharge_damage_debuff",
+      "name": "Warp Rupture",
+      "name_hash": "dc5e455f",
+      "description_hash": "c5561004",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_discharge_damage_debuff.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_discharge_damage_debuff.md",
+      "commit": "72b4e9495"
+    },
+    {
+      "id": "psyker_warpfire_on_shout",
+      "name": "Creeping Flames",
+      "name_hash": "e809f338",
+      "description_hash": "8ec3e5f7",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warpfire_on_shout.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warpfire_on_shout.md",
+      "commit": "0edf224df"
+    },
+    {
+      "id": "psyker_overcharge_weakspot_kill_bonuses",
+      "name": "Precognition",
+      "name_hash": "17699256",
+      "description_hash": "492219ab",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_weakspot_kill_bonuses.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_overcharge_weakspot_kill_bonuses.md",
+      "commit": "bdca014d2"
+    },
+    {
+      "id": "psyker_overcharge_increased_movement_speed",
+      "name": "Warp Speed",
+      "name_hash": "ede1e14c",
+      "description_hash": "5f1da172",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_increased_movement_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_overcharge_increased_movement_speed.md",
+      "commit": "db47bfbf4"
+    },
+    {
+      "id": "psyker_2_tier_3_name_2",
+      "name": "Psykinetic's Aura",
+      "name_hash": "11cf3850",
+      "description_hash": "eaf79e38",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_2_tier_3_name_2.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_2_tier_3_name_2.md",
+      "commit": "3836c2fb0"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 370,
+    "from_commit": "34668196b",
+    "to_commit": "3836c2fb0",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

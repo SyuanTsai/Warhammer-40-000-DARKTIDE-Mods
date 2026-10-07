@@ -1,0 +1,29 @@
+{
+  "id": "ogryn_blitz_175",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Existing mechanism and formatting evidence reused; only the missing English display map was read. Source pointers remain in the English document.",
+  "questions": [
+    "Raw {talent_name%s} lacks a colon; expected mapped name is recorded, final game rendering unobserved."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_box_explodes",
+      "name": "Bombs Away!",
+      "name_hash": "173a91dc",
+      "description_hash": "a06fe566",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_box_explodes.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_box_explodes.md",
+      "commit": "efe34d20"
+    }
+  ]
+}

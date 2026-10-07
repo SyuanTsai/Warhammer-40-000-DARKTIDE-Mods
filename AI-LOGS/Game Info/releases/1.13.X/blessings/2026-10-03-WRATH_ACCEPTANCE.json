@@ -1,0 +1,1660 @@
+{
+  "date": "2026-10-03",
+  "blessing": "wrath",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/憤怒/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_powersword_2h_p1_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_powersword_p1_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_powersword_p2_chained_hits_increases_melee_cleave",
+    "weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave"
+  ],
+  "added_binding_count": 22,
+  "total_variants": 10,
+  "total_bindings": 22,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_variants",
+    "scope": "10 bound variants / 22 bindings independent research and primary-config cross-review",
+    "final_document_review": {
+      "schema": "wrath-agent-peer-review/v1",
+      "blessing_name_key": "loc_trait_bespoke_chained_hits_increases_cleave",
+      "reviewed_config": "AI-LOGS/Game Info/local/blessings/2026-10-03/wrath-config.json",
+      "supplementary_review": "AI-LOGS/Game Info/local/blessings/2026-10-03/wrath-agent-special-review.json",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "section_reviews": {
+        "player": {
+          "status": "accepted",
+          "note": "The trigger, one stack per hit sweep, five-stack cap, no crit/weakspot/kill or positive-damage gate, tier groups, timer and cap refresh, miss/expiry clearing, wielded-slot effect, impact distinction, sticky-hit completion, and separate push/special-activation behavior agree with the reviewed mechanics. Player prose contains no internal weapon or buff identifiers."
+        },
+        "examples": {
+          "status": "accepted",
+          "note": "The tier examples calculate correctly: ordinary III at three stacks is 2.05x; Power Sword P1 IV at five stacks is 3.50x; Saw IV at five stacks is 2.25x. The same-group additive example is 3.20x. The sticky-saw example now correctly conditions retained prior stacks on their not expiring before sticky termination."
+        },
+        "math": {
+          "status": "accepted",
+          "note": "n=clamp(raw−1,0,5) correctly removes the hidden baseline child stack. The trait tier override replaces the template's default 0.5 value; it is not an additional 0.5. B=c×n and 1+B are consistent with the additive max_hit_mass_attack modifier; max_hit_mass_impact is unchanged."
+        },
+        "mechanism": {
+          "status": "accepted",
+          "note": "The integrated explanation matches the special review: the normal non-sticky exit paths are guarded alternatives; sticky start suppresses the ordinary event, the stop helper emits once, and ActionSweep.finish avoids a duplicate. Per-instance sticky Attack.execute/tick-buff work does not send on_sweep_finish. Push uses on_push_finish, while special activation only sets the active flag."
+        },
+        "values_by_weapon": {
+          "status": "accepted",
+          "note": "All ten entries are internally consistent with the three tier groups: eight common variants at 25/30/35/40 percent per stack, powersword_p1 at 35/40/45/50, and saw_p1 at 10/15/20/25. Five-stack totals and resulting 1+B multipliers calculate correctly."
+        }
+      },
+      "variants_checked": [
+        "chainsword_2h_p1",
+        "chainsword_p1",
+        "combatsword_p1",
+        "combatsword_p2",
+        "forcesword_2h_p1",
+        "ogryn_pickaxe_2h_p1",
+        "powersword_2h_p1",
+        "powersword_p1",
+        "powersword_p2",
+        "saw_p1"
+      ],
+      "source_evidence": [
+        "scripts/extension_systems/weapon/actions/action_sweep.lua:390-429",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua:529-537",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua:616-664",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua:739-809",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua:839-869",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua:944-964",
+        "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua:64-86",
+        "scripts/extension_systems/buff/buffs/weapon_trait_activated_parent_proc_buff.lua:67-72",
+        "scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua:134-163",
+        "scripts/utilities/attack/damage_profile.lua:38-80"
+      ],
+      "note": "The peer review is read-only with respect to the primary config and source repository. Only this ignored review receipt was written.",
+      "errata_classification_review": {
+        "status": "accepted",
+        "config_errata_items": 1,
+        "formal_readme_errata_items": 1,
+        "raw_wording_check": {
+          "traditional_chinese": "在攻擊時{cleave:%s}順劈，可疊加{stacks:%s}次。",
+          "english": "{cleave:%s} Cleave on Hit. Stacks {stacks:%s} times.",
+          "localization_comparison_classification": "明確矛盾",
+          "code_gate": "active_proc_func requires params.num_hit_units > 0",
+          "conclusion": "繁中把效果寫成攻擊時發生，英文與實際門檻要求至少命中一名敵人；揮空不符合門檻並清除有效層數。"
+        },
+        "classification_boundary": "正式 README 的遊戲描述勘誤只列上述命中條件差異。LOCALIZATION_COMPARISON 中「觸發時點」「順劈結算」「揮空與逾時」「滿層刷新」「切換武器」「黏附與特殊動作」的「文件未涵蓋」標籤仍是資料覆蓋差異，沒有被列為勘誤。",
+        "references": [
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/wrath-config.json: errata",
+          "Game Info/releases/1.13.X/blessings/entries/憤怒/README.md:47-49",
+          "Game Info/releases/1.13.X/blessings/entries/憤怒/LOCALIZATION_COMPARISON.md:17-19,26-33",
+          "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua:79-81 at source commit 7e662fcda16219d775b84af50322be2e9cd9d62e"
+        ]
+      }
+    },
+    "special_event_review": {
+      "schema": "wrath-agent-special-review/v1",
+      "blessing_name_key": "loc_trait_bespoke_chained_hits_increases_cleave",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "scope": "Read-only supplement on ActionSweep exit-event routing, sticky-hit damage instances, push, and special activation. No formal/shared files or source files were changed.",
+      "verdict": "Wrath's proc event is emitted by ActionSweep._handle_exit_procs as on_sweep_finish. Normal damage-window completion dispatches through either update or finish. Sticky sweeps suppress that normal dispatch and dispatch once from _stop_hit_stickyness when sticky ends (including when finish stops a still-sticky action). Individual sticky damage instances do not emit on_sweep_finish. Push emits on_push_finish; special activation only changes the active flag. A later completed, qualifying sweep can proc Wrath.",
+      "findings": [
+        {
+          "id": "single_event_producer",
+          "conclusion": "The actual buff proc-event producer is ActionSweep._handle_exit_procs, which packages num_hit_units and other sweep summary fields and sends on_sweep_finish once per invocation. WieldableSlotScripts.on_sweep_finish is a separate callback at ActionSweep.finish, not a buff proc event. A source search across weapon action scripts found no other add_proc_event producer for on_sweep_finish.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-964",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:407-409"
+          ]
+        },
+        {
+          "id": "normal_sweep_exit",
+          "conclusion": "For a non-sticky sweep, the final damage-window update dispatches on_sweep_finish at the window exit; if finish occurs while the state is still during_damage_window, finish dispatches it instead. These are guarded alternative exit paths, and the damage-window state is advanced to after_damage_window.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:421-429",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:529-537"
+          ]
+        },
+        {
+          "id": "sticky_start_suppresses_event",
+          "conclusion": "Starting sticky hit sets is_sticky=true before its local not-currently-sticky check, so that start path does not emit on_sweep_finish. It exits the ordinary damage window while sticky processing continues.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:616-643",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:662-664"
+          ]
+        },
+        {
+          "id": "sticky_stop_dispatches_once",
+          "conclusion": "Sticky update calls _stop_hit_stickyness after the sticky duration, target death timing, stealth, or dodge/jump exit condition. The stop helper emits on_sweep_finish before clearing is_sticky. If ActionSweep.finish finds the action still sticky, it invokes that helper and its captured is_sticky value suppresses the ordinary finish dispatch, preventing a duplicate event.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:839-869",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:646-664",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:411-428"
+          ]
+        },
+        {
+          "id": "sticky_damage_instances_are_not_wrath_procs",
+          "conclusion": "Sticky damage can execute multiple Attack.execute calls inside the per-frame damage-instance loop and can add a target-side buff_to_add_tick. That loop does not call _handle_exit_procs or emit on_sweep_finish. Wrath therefore receives a sweep-finish event at the sweep exit, not one event per sticky damage instance.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:739-809",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-960"
+          ]
+        },
+        {
+          "id": "push_is_separate_event",
+          "conclusion": "Push sends on_push_finish with its hit count, not on_sweep_finish. Push may also set the weapon-special-active flag, but that does not itself produce Wrath's sweep-finish event.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_push.lua:100-113"
+          ]
+        },
+        {
+          "id": "special_activation_is_not_a_proc",
+          "conclusion": "The manual activation, toggle, and overload-special actions set the weapon-special-active flag without emitting on_sweep_finish. A subsequent qualifying ActionSweep can still produce the event through the normal sweep exit path.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_activate_special.lua:42-58",
+            "scripts/extension_systems/weapon/actions/action_toggle_weapon_special.lua:40-51",
+            "scripts/extension_systems/weapon/actions/action_overload_charge_weapon_special.lua:54-64",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-960"
+          ]
+        },
+        {
+          "id": "wrath_proc_gate",
+          "conclusion": "The shared Wrath parent listens to on_sweep_finish, requires num_hit_units > 0 for the active proc, and requires the trait item slot to be wielded. The event's hit count is the accumulated sweep hit-unit count, not the number of sticky damage instances.",
+          "refs": [
+            "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua:64-86",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-960"
+          ]
+        }
+      ],
+      "producer_search": {
+        "scope": "scripts/extension_systems/weapon/actions",
+        "pattern": "on_sweep_finish|_handle_exit_procs",
+        "result": "Only ActionSweep contains the actual buff add_proc_event(on_sweep_finish) call. The other on_sweep_finish match is the WieldableSlotScripts callback in ActionSweep.finish.",
+        "all_handle_exit_procs_call_sites": [
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:425",
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:533",
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:642",
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:655"
+        ]
+      },
+      "validation": {
+        "source_reads": "All referenced source ranges were read with git show at source_commit.",
+        "target_scope": "Only this ignored supplementary JSON was written."
+      }
+    },
+    "draft_corrections": [
+      "Primary and peer corrected full-cap refresh by reading actual WeaponTraitParentProcBuff helper: zero additions still refresh timer.",
+      "Primary verified actual 3-key UI names and ten tier overrides independently.",
+      "Sticky example requires prior stacks not to expire before sticky termination.",
+      "Document omissions remain in player rules; errata contains only the explicit Chinese attack-versus-hit wording mismatch."
+    ],
+    "parallel_execution": {
+      "groups": [
+        "wrath",
+        "executor",
+        "exorcist"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "wrath",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_168.png",
+      "attachment": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967891465",
+      "acquired_date": "2026-10-03",
+      "sha256": "40d54ec6966dbc75d847d1f417d3fc49c7a761a08d93305e84f9584278505cd1",
+      "content_type": "image/png",
+      "size": 3519,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "憤怒祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected128×128public Issue attachment pixels;source/public hash matched."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 371,
+      "tables": 304,
+      "rows": 2869,
+      "lists": 514
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1192,
+      "source_files": 358,
+      "bindings": 231,
+      "variants": 120,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1071,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 371,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 134,
+    "not_started_name_groups": 134,
+    "partial_name_groups": 0,
+    "remaining_variants": 468,
+    "remaining_bindings": 937,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "462ad751cbba5d6c2f96f8772bb2ca94c97229537d2faa0f83e295f32ad5771d"
+  },
+  "previous_local_commit": "ea8874d8c0fe837310b0c2c940412e6a450fa48a",
+  "current_blessing_formula_review": {
+    "reviewed_by": "Sol/xhigh",
+    "fixed_source_direct_read": true,
+    "all10_tiers_and_wrappers": true,
+    "trigger": "ActionSweep on_sweep_finish once at normal/sticky exit; no positive damage/crit/weakspot gate",
+    "effective_stack_cap": 5,
+    "hidden_raw_cap": 6,
+    "full_cap_refresh": "yes,actualWeaponTraitParent helper called with0added still resets timer outside loop",
+    "timer_seconds": 3.5,
+    "clear": "all effective stacks on zerohit sweep or strict elapsed>3.5 update",
+    "switch": "held proc/stat gate;timercontinues,reset callbackfalse",
+    "cleave": "additive max_hit_mass_attack_modifier, impact unchanged, parent tier overrides child .5 default",
+    "special_review": {
+      "schema": "wrath-agent-special-review/v1",
+      "blessing_name_key": "loc_trait_bespoke_chained_hits_increases_cleave",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "scope": "Read-only supplement on ActionSweep exit-event routing, sticky-hit damage instances, push, and special activation. No formal/shared files or source files were changed.",
+      "verdict": "Wrath's proc event is emitted by ActionSweep._handle_exit_procs as on_sweep_finish. Normal damage-window completion dispatches through either update or finish. Sticky sweeps suppress that normal dispatch and dispatch once from _stop_hit_stickyness when sticky ends (including when finish stops a still-sticky action). Individual sticky damage instances do not emit on_sweep_finish. Push emits on_push_finish; special activation only changes the active flag. A later completed, qualifying sweep can proc Wrath.",
+      "findings": [
+        {
+          "id": "single_event_producer",
+          "conclusion": "The actual buff proc-event producer is ActionSweep._handle_exit_procs, which packages num_hit_units and other sweep summary fields and sends on_sweep_finish once per invocation. WieldableSlotScripts.on_sweep_finish is a separate callback at ActionSweep.finish, not a buff proc event. A source search across weapon action scripts found no other add_proc_event producer for on_sweep_finish.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-964",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:407-409"
+          ]
+        },
+        {
+          "id": "normal_sweep_exit",
+          "conclusion": "For a non-sticky sweep, the final damage-window update dispatches on_sweep_finish at the window exit; if finish occurs while the state is still during_damage_window, finish dispatches it instead. These are guarded alternative exit paths, and the damage-window state is advanced to after_damage_window.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:421-429",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:529-537"
+          ]
+        },
+        {
+          "id": "sticky_start_suppresses_event",
+          "conclusion": "Starting sticky hit sets is_sticky=true before its local not-currently-sticky check, so that start path does not emit on_sweep_finish. It exits the ordinary damage window while sticky processing continues.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:616-643",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:662-664"
+          ]
+        },
+        {
+          "id": "sticky_stop_dispatches_once",
+          "conclusion": "Sticky update calls _stop_hit_stickyness after the sticky duration, target death timing, stealth, or dodge/jump exit condition. The stop helper emits on_sweep_finish before clearing is_sticky. If ActionSweep.finish finds the action still sticky, it invokes that helper and its captured is_sticky value suppresses the ordinary finish dispatch, preventing a duplicate event.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:839-869",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:646-664",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:411-428"
+          ]
+        },
+        {
+          "id": "sticky_damage_instances_are_not_wrath_procs",
+          "conclusion": "Sticky damage can execute multiple Attack.execute calls inside the per-frame damage-instance loop and can add a target-side buff_to_add_tick. That loop does not call _handle_exit_procs or emit on_sweep_finish. Wrath therefore receives a sweep-finish event at the sweep exit, not one event per sticky damage instance.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:739-809",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-960"
+          ]
+        },
+        {
+          "id": "push_is_separate_event",
+          "conclusion": "Push sends on_push_finish with its hit count, not on_sweep_finish. Push may also set the weapon-special-active flag, but that does not itself produce Wrath's sweep-finish event.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_push.lua:100-113"
+          ]
+        },
+        {
+          "id": "special_activation_is_not_a_proc",
+          "conclusion": "The manual activation, toggle, and overload-special actions set the weapon-special-active flag without emitting on_sweep_finish. A subsequent qualifying ActionSweep can still produce the event through the normal sweep exit path.",
+          "refs": [
+            "scripts/extension_systems/weapon/actions/action_activate_special.lua:42-58",
+            "scripts/extension_systems/weapon/actions/action_toggle_weapon_special.lua:40-51",
+            "scripts/extension_systems/weapon/actions/action_overload_charge_weapon_special.lua:54-64",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-960"
+          ]
+        },
+        {
+          "id": "wrath_proc_gate",
+          "conclusion": "The shared Wrath parent listens to on_sweep_finish, requires num_hit_units > 0 for the active proc, and requires the trait item slot to be wielded. The event's hit count is the accumulated sweep hit-unit count, not the number of sticky damage instances.",
+          "refs": [
+            "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua:64-86",
+            "scripts/extension_systems/weapon/actions/action_sweep.lua:944-960"
+          ]
+        }
+      ],
+      "producer_search": {
+        "scope": "scripts/extension_systems/weapon/actions",
+        "pattern": "on_sweep_finish|_handle_exit_procs",
+        "result": "Only ActionSweep contains the actual buff add_proc_event(on_sweep_finish) call. The other on_sweep_finish match is the WieldableSlotScripts callback in ActionSweep.finish.",
+        "all_handle_exit_procs_call_sites": [
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:425",
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:533",
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:642",
+          "scripts/extension_systems/weapon/actions/action_sweep.lua:655"
+        ]
+      },
+      "validation": {
+        "source_reads": "All referenced source ranges were read with git show at source_commit.",
+        "target_scope": "Only this ignored supplementary JSON was written."
+      }
+    },
+    "gameplay_test": "not run"
+  },
+  "ui_name_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "bindings": [
+      {
+        "weapon_id": "chainsword_2h_p1",
+        "model_id": "chainsword_2h_p1_m1",
+        "ui_name_components_en": [
+          "Heavy Eviscerator",
+          "Tigrus",
+          "Mk III"
+        ],
+        "ui_name_components": [
+          "重型開膛劍",
+          "泰格魯斯",
+          "Mk III"
+        ],
+        "ui_name_zh_tw": "重型開膛劍 泰格魯斯 Mk III",
+        "ui_name_keys": [
+          "loc_weapon_family_chainsword_2h_p1_m1",
+          "loc_weapon_pattern_chainsword_2h_p1_m1",
+          "loc_weapon_mark_chainsword_2h_p1_m1"
+        ],
+        "trait_category": "bespoke_chainsword_2h_p1",
+        "trait_id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_chainsword_2h_p1_m1",
+          "loc_weapon_pattern_chainsword_2h_p1_m1",
+          "loc_weapon_mark_chainsword_2h_p1_m1"
+        ],
+        "source_binding_lines": [
+          16,
+          1537,
+          1539
+        ]
+      },
+      {
+        "weapon_id": "chainsword_2h_p1",
+        "model_id": "chainsword_2h_p1_m2",
+        "ui_name_components_en": [
+          "Heavy Eviscerator",
+          "Tigrus",
+          "Mk XV"
+        ],
+        "ui_name_components": [
+          "重型開膛劍",
+          "泰格魯斯",
+          "Mk XV"
+        ],
+        "ui_name_zh_tw": "重型開膛劍 泰格魯斯 Mk XV",
+        "ui_name_keys": [
+          "loc_weapon_family_chainsword_2h_p1_m2",
+          "loc_weapon_pattern_chainsword_2h_p1_m2",
+          "loc_weapon_mark_chainsword_2h_p1_m2"
+        ],
+        "trait_category": "bespoke_chainsword_2h_p1",
+        "trait_id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_chainsword_2h_p1_m2",
+          "loc_weapon_pattern_chainsword_2h_p1_m2",
+          "loc_weapon_mark_chainsword_2h_p1_m2"
+        ],
+        "source_binding_lines": [
+          15,
+          1538,
+          1540
+        ]
+      },
+      {
+        "weapon_id": "chainsword_p1",
+        "model_id": "chainsword_p1_m1",
+        "ui_name_components_en": [
+          "Assault Chainsword",
+          "Cadia",
+          "Mk IV"
+        ],
+        "ui_name_components": [
+          "突擊鏈鋸劍",
+          "卡迪亞",
+          "Mk IV"
+        ],
+        "ui_name_zh_tw": "突擊鏈鋸劍 卡迪亞 Mk IV",
+        "ui_name_keys": [
+          "loc_weapon_family_chainsword_p1_m1",
+          "loc_weapon_pattern_chainsword_p1_m1",
+          "loc_weapon_mark_chainsword_p1_m1"
+        ],
+        "trait_category": "bespoke_chainsword_p1",
+        "trait_id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_chainsword_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_chainsword_p1_m1",
+          "loc_weapon_pattern_chainsword_p1_m1",
+          "loc_weapon_mark_chainsword_p1_m1"
+        ],
+        "source_binding_lines": [
+          15,
+          2424,
+          2426
+        ]
+      },
+      {
+        "weapon_id": "chainsword_p1",
+        "model_id": "chainsword_p1_m2",
+        "ui_name_components_en": [
+          "Assault Chainsword",
+          "Cadia",
+          "Mk XIIIg"
+        ],
+        "ui_name_components": [
+          "突擊鏈鋸劍",
+          "卡迪亞",
+          "Mk XIIIg"
+        ],
+        "ui_name_zh_tw": "突擊鏈鋸劍 卡迪亞 Mk XIIIg",
+        "ui_name_keys": [
+          "loc_weapon_family_chainsword_p1_m2",
+          "loc_weapon_pattern_chainsword_p1_m2",
+          "loc_weapon_mark_chainsword_p1_m2"
+        ],
+        "trait_category": "bespoke_chainsword_p1",
+        "trait_id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_chainsword_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_chainsword_p1_m2",
+          "loc_weapon_pattern_chainsword_p1_m2",
+          "loc_weapon_mark_chainsword_p1_m2"
+        ],
+        "source_binding_lines": [
+          14,
+          2030,
+          2032
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p1",
+        "model_id": "combatsword_p1_m1",
+        "ui_name_components_en": [
+          "\"Devil's Claw\" Sword",
+          "Catachan",
+          "Mk I"
+        ],
+        "ui_name_components": [
+          "「惡魔之爪」劍",
+          "卡塔昌",
+          "Mk I"
+        ],
+        "ui_name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk I",
+        "ui_name_keys": [
+          "loc_weapon_family_combatsword_p1_m1",
+          "loc_weapon_pattern_combatsword_p1_m1",
+          "loc_weapon_mark_combatsword_p1_m1"
+        ],
+        "trait_category": "bespoke_combatsword_p1",
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatsword_p1_m1",
+          "loc_weapon_pattern_combatsword_p1_m1",
+          "loc_weapon_mark_combatsword_p1_m1"
+        ],
+        "source_binding_lines": [
+          14,
+          1504,
+          1506
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p1",
+        "model_id": "combatsword_p1_m2",
+        "ui_name_components_en": [
+          "\"Devil's Claw\" Sword",
+          "Catachan",
+          "Mk IV"
+        ],
+        "ui_name_components": [
+          "「惡魔之爪」劍",
+          "卡塔昌",
+          "Mk IV"
+        ],
+        "ui_name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk IV",
+        "ui_name_keys": [
+          "loc_weapon_family_combatsword_p1_m2",
+          "loc_weapon_pattern_combatsword_p1_m2",
+          "loc_weapon_mark_combatsword_p1_m2"
+        ],
+        "trait_category": "bespoke_combatsword_p1",
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatsword_p1_m2",
+          "loc_weapon_pattern_combatsword_p1_m2",
+          "loc_weapon_mark_combatsword_p1_m2"
+        ],
+        "source_binding_lines": [
+          14,
+          1437,
+          1439
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p1",
+        "model_id": "combatsword_p1_m3",
+        "ui_name_components_en": [
+          "\"Devil's Claw\" Sword",
+          "Catachan",
+          "Mk VII"
+        ],
+        "ui_name_components": [
+          "「惡魔之爪」劍",
+          "卡塔昌",
+          "Mk VII"
+        ],
+        "ui_name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk VII",
+        "ui_name_keys": [
+          "loc_weapon_family_combatsword_p1_m3",
+          "loc_weapon_pattern_combatsword_p1_m3",
+          "loc_weapon_mark_combatsword_p1_m3"
+        ],
+        "trait_category": "bespoke_combatsword_p1",
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatsword_p1_m3",
+          "loc_weapon_pattern_combatsword_p1_m3",
+          "loc_weapon_mark_combatsword_p1_m3"
+        ],
+        "source_binding_lines": [
+          15,
+          1346,
+          1348
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p2",
+        "model_id": "combatsword_p2_m1",
+        "ui_name_components_en": [
+          "Heavy Sword",
+          "Turtolsky",
+          "Mk VI"
+        ],
+        "ui_name_components": [
+          "重劍",
+          "圖妥斯基",
+          "Mk VI"
+        ],
+        "ui_name_zh_tw": "重劍 圖妥斯基 Mk VI",
+        "ui_name_keys": [
+          "loc_weapon_family_combatsword_p2_m1",
+          "loc_weapon_pattern_combatsword_p2_m1",
+          "loc_weapon_mark_combatsword_p2_m1"
+        ],
+        "trait_category": "bespoke_combatsword_p2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_combatsword_p2/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatsword_p2_m1",
+          "loc_weapon_pattern_combatsword_p2_m1",
+          "loc_weapon_mark_combatsword_p2_m1"
+        ],
+        "source_binding_lines": [
+          16,
+          1597,
+          1599
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p2",
+        "model_id": "combatsword_p2_m2",
+        "ui_name_components_en": [
+          "Heavy Sword",
+          "Turtolsky",
+          "Mk VII"
+        ],
+        "ui_name_components": [
+          "重劍",
+          "圖妥斯基",
+          "Mk VII"
+        ],
+        "ui_name_zh_tw": "重劍 圖妥斯基 Mk VII",
+        "ui_name_keys": [
+          "loc_weapon_family_combatsword_p2_m2",
+          "loc_weapon_pattern_combatsword_p2_m2",
+          "loc_weapon_mark_combatsword_p2_m2"
+        ],
+        "trait_category": "bespoke_combatsword_p2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_combatsword_p2/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatsword_p2_m2",
+          "loc_weapon_pattern_combatsword_p2_m2",
+          "loc_weapon_mark_combatsword_p2_m2"
+        ],
+        "source_binding_lines": [
+          16,
+          1581,
+          1583
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p2",
+        "model_id": "combatsword_p2_m3",
+        "ui_name_components_en": [
+          "Heavy Sword",
+          "Turtolsky",
+          "Mk IX"
+        ],
+        "ui_name_components": [
+          "重劍",
+          "圖妥斯基",
+          "Mk IX"
+        ],
+        "ui_name_zh_tw": "重劍 圖妥斯基 Mk IX",
+        "ui_name_keys": [
+          "loc_weapon_family_combatsword_p2_m3",
+          "loc_weapon_pattern_combatsword_p2_m3",
+          "loc_weapon_mark_combatsword_p2_m3"
+        ],
+        "trait_category": "bespoke_combatsword_p2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_combatsword_p2/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_combatsword_p2_m3",
+          "loc_weapon_pattern_combatsword_p2_m3",
+          "loc_weapon_mark_combatsword_p2_m3"
+        ],
+        "source_binding_lines": [
+          16,
+          1669,
+          1671
+        ]
+      },
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "model_id": "forcesword_2h_p1_m1",
+        "ui_name_components_en": [
+          "Blaze Force Greatsword",
+          "Covenant",
+          "Mk VI"
+        ],
+        "ui_name_components": [
+          "烈焰力場巨劍",
+          "誓約",
+          "Mk VI"
+        ],
+        "ui_name_zh_tw": "烈焰力場巨劍 誓約 Mk VI",
+        "ui_name_keys": [
+          "loc_weapon_family_forcesword_2h_p1_m1",
+          "loc_weapon_pattern_forcesword_2h_p1_m1",
+          "loc_weapon_mark_forcesword_2h_p1_m1"
+        ],
+        "trait_category": "bespoke_forcesword_2h_p1",
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_2h_p1_m1",
+          "loc_weapon_pattern_forcesword_2h_p1_m1",
+          "loc_weapon_mark_forcesword_2h_p1_m1"
+        ],
+        "source_binding_lines": [
+          15,
+          2795,
+          2797
+        ]
+      },
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "model_id": "forcesword_2h_p1_m2",
+        "ui_name_components_en": [
+          "Blaze Force Greatsword",
+          "Covenant",
+          "Mk VIII"
+        ],
+        "ui_name_components": [
+          "烈焰力場巨劍",
+          "誓約",
+          "Mk VIII"
+        ],
+        "ui_name_zh_tw": "烈焰力場巨劍 誓約 Mk VIII",
+        "ui_name_keys": [
+          "loc_weapon_family_forcesword_2h_p1_m2",
+          "loc_weapon_pattern_forcesword_2h_p1_m2",
+          "loc_weapon_mark_forcesword_2h_p1_m2"
+        ],
+        "trait_category": "bespoke_forcesword_2h_p1",
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_2h_p1_m2",
+          "loc_weapon_pattern_forcesword_2h_p1_m2",
+          "loc_weapon_mark_forcesword_2h_p1_m2"
+        ],
+        "source_binding_lines": [
+          15,
+          2710,
+          2712
+        ]
+      },
+      {
+        "weapon_id": "ogryn_pickaxe_2h_p1",
+        "model_id": "ogryn_pickaxe_2h_p1_m1",
+        "ui_name_components_en": [
+          "Delver's Pickaxe",
+          "Branx",
+          "Mk Ia"
+        ],
+        "ui_name_components": [
+          "戴維爾戰鎬",
+          "布蘭克斯",
+          "Mk Ia"
+        ],
+        "ui_name_zh_tw": "戴維爾戰鎬 布蘭克斯 Mk Ia",
+        "ui_name_keys": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m1",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m1",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m1"
+        ],
+        "trait_category": "bespoke_ogryn_pickaxe_p1",
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m1",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m1",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m1"
+        ],
+        "source_binding_lines": [
+          16,
+          1569,
+          1571
+        ]
+      },
+      {
+        "weapon_id": "ogryn_pickaxe_2h_p1",
+        "model_id": "ogryn_pickaxe_2h_p1_m2",
+        "ui_name_components_en": [
+          "Delver's Pickaxe",
+          "Borovian",
+          "Mk III"
+        ],
+        "ui_name_components": [
+          "戴維爾戰鎬",
+          "博羅維安",
+          "Mk III"
+        ],
+        "ui_name_zh_tw": "戴維爾戰鎬 博羅維安 Mk III",
+        "ui_name_keys": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m2",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m2",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m2"
+        ],
+        "trait_category": "bespoke_ogryn_pickaxe_p1",
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m2",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m2",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m2"
+        ],
+        "source_binding_lines": [
+          16,
+          1566,
+          1568
+        ]
+      },
+      {
+        "weapon_id": "ogryn_pickaxe_2h_p1",
+        "model_id": "ogryn_pickaxe_2h_p1_m3",
+        "ui_name_components_en": [
+          "Delver's Pickaxe",
+          "Karsolas",
+          "Mk II"
+        ],
+        "ui_name_components": [
+          "戴維爾戰鎬",
+          "卡索拉斯",
+          "Mk II"
+        ],
+        "ui_name_zh_tw": "戴維爾戰鎬 卡索拉斯 Mk II",
+        "ui_name_keys": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m3",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m3",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m3"
+        ],
+        "trait_category": "bespoke_ogryn_pickaxe_p1",
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_ogryn_pickaxe_2h_p1_m3",
+          "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m3",
+          "loc_weapon_mark_ogryn_pickaxe_2h_p1_m3"
+        ],
+        "source_binding_lines": [
+          16,
+          1880,
+          1882
+        ]
+      },
+      {
+        "weapon_id": "powersword_2h_p1",
+        "model_id": "powersword_2h_p1_m1",
+        "ui_name_components_en": [
+          "Relic Blade",
+          "Munitorum",
+          "Mk X"
+        ],
+        "ui_name_components": [
+          "上古神刃",
+          "軍務部",
+          "Mk X"
+        ],
+        "ui_name_zh_tw": "上古神刃 軍務部 Mk X",
+        "ui_name_keys": [
+          "loc_weapon_family_powersword_2h_p1_m1",
+          "loc_weapon_pattern_powersword_2h_p1_m1",
+          "loc_weapon_mark_powersword_2h_p1_m1"
+        ],
+        "trait_category": "bespoke_powersword_2h_p1",
+        "trait_id": "weapon_trait_bespoke_powersword_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_powersword_2h_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_powersword_2h_p1_m1",
+          "loc_weapon_pattern_powersword_2h_p1_m1",
+          "loc_weapon_mark_powersword_2h_p1_m1"
+        ],
+        "source_binding_lines": [
+          15,
+          2302,
+          2304
+        ]
+      },
+      {
+        "weapon_id": "powersword_2h_p1",
+        "model_id": "powersword_2h_p1_m2",
+        "ui_name_components_en": [
+          "Relic Blade",
+          "Munitorum",
+          "Mk II"
+        ],
+        "ui_name_components": [
+          "上古神刃",
+          "軍務部",
+          "Mk II"
+        ],
+        "ui_name_zh_tw": "上古神刃 軍務部 Mk II",
+        "ui_name_keys": [
+          "loc_weapon_family_powersword_2h_p1_m2",
+          "loc_weapon_pattern_powersword_2h_p1_m2",
+          "loc_weapon_mark_powersword_2h_p1_m2"
+        ],
+        "trait_category": "bespoke_powersword_2h_p1",
+        "trait_id": "weapon_trait_bespoke_powersword_2h_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_powersword_2h_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_powersword_2h_p1_m2",
+          "loc_weapon_pattern_powersword_2h_p1_m2",
+          "loc_weapon_mark_powersword_2h_p1_m2"
+        ],
+        "source_binding_lines": [
+          14,
+          2455,
+          2457
+        ]
+      },
+      {
+        "weapon_id": "powersword_p1",
+        "model_id": "powersword_p1_m1",
+        "ui_name_components_en": [
+          "Power Sword",
+          "Scandar",
+          "Mk III"
+        ],
+        "ui_name_components": [
+          "動力劍",
+          "斯干達",
+          "Mk III"
+        ],
+        "ui_name_zh_tw": "動力劍 斯干達 Mk III",
+        "ui_name_keys": [
+          "loc_weapon_family_powersword_p1_m1",
+          "loc_weapon_pattern_powersword_p1_m1",
+          "loc_weapon_mark_powersword_p1_m1"
+        ],
+        "trait_category": "bespoke_powersword_p1",
+        "trait_id": "weapon_trait_bespoke_powersword_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_powersword_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_powersword_p1_m1",
+          "loc_weapon_pattern_powersword_p1_m1",
+          "loc_weapon_mark_powersword_p1_m1"
+        ],
+        "source_binding_lines": [
+          12,
+          1266,
+          1268
+        ]
+      },
+      {
+        "weapon_id": "powersword_p1",
+        "model_id": "powersword_p1_m2",
+        "ui_name_components_en": [
+          "Power Sword",
+          "Achlys",
+          "Mk VI"
+        ],
+        "ui_name_components": [
+          "動力劍",
+          "阿克利斯",
+          "Mk VI"
+        ],
+        "ui_name_zh_tw": "動力劍 阿克利斯 Mk VI",
+        "ui_name_keys": [
+          "loc_weapon_family_powersword_p1_m2",
+          "loc_weapon_pattern_powersword_p1_m2",
+          "loc_weapon_mark_powersword_p1_m2"
+        ],
+        "trait_category": "bespoke_powersword_p1",
+        "trait_id": "weapon_trait_bespoke_powersword_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_powersword_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_powersword_p1_m2",
+          "loc_weapon_pattern_powersword_p1_m2",
+          "loc_weapon_mark_powersword_p1_m2"
+        ],
+        "source_binding_lines": [
+          12,
+          1624,
+          1626
+        ]
+      },
+      {
+        "weapon_id": "powersword_p2",
+        "model_id": "powersword_p2_m1",
+        "ui_name_components_en": [
+          "Power Falchion",
+          "Aridin",
+          "Mk I"
+        ],
+        "ui_name_components": [
+          "動力彎刀",
+          "阿里丁",
+          "Mk I"
+        ],
+        "ui_name_zh_tw": "動力彎刀 阿里丁 Mk I",
+        "ui_name_keys": [
+          "loc_weapon_family_powersword_p2_m1",
+          "loc_weapon_pattern_powersword_p2_m1",
+          "loc_weapon_mark_powersword_p2_m1"
+        ],
+        "trait_category": "bespoke_powersword_p2",
+        "trait_id": "weapon_trait_bespoke_powersword_p2_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_powersword_p2/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_powersword_p2_m1",
+          "loc_weapon_pattern_powersword_p2_m1",
+          "loc_weapon_mark_powersword_p2_m1"
+        ],
+        "source_binding_lines": [
+          11,
+          1741,
+          1743
+        ]
+      },
+      {
+        "weapon_id": "powersword_p2",
+        "model_id": "powersword_p2_m2",
+        "ui_name_components_en": [
+          "Power Falchion",
+          "Lawbringer",
+          "Mk IIb"
+        ],
+        "ui_name_components": [
+          "動力彎刀",
+          "執法者",
+          "Mk IIb"
+        ],
+        "ui_name_zh_tw": "動力彎刀 執法者 Mk IIb",
+        "ui_name_keys": [
+          "loc_weapon_family_powersword_p2_m2",
+          "loc_weapon_pattern_powersword_p2_m2",
+          "loc_weapon_mark_powersword_p2_m2"
+        ],
+        "trait_category": "bespoke_powersword_p2",
+        "trait_id": "weapon_trait_bespoke_powersword_p2_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_powersword_p2/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_powersword_p2_m2",
+          "loc_weapon_pattern_powersword_p2_m2",
+          "loc_weapon_mark_powersword_p2_m2"
+        ],
+        "source_binding_lines": [
+          11,
+          2023,
+          2025
+        ]
+      },
+      {
+        "weapon_id": "saw_p1",
+        "model_id": "saw_p1_m1",
+        "ui_name_components_en": [
+          "Bone Saw",
+          "Chirurgeon's",
+          "Mk IV"
+        ],
+        "ui_name_components": [
+          "骨鋸",
+          "外科醫師",
+          "型號4"
+        ],
+        "ui_name_zh_tw": "骨鋸 外科醫師 型號4",
+        "ui_name_keys": [
+          "loc_weapon_family_saw_p1_m1",
+          "loc_weapon_pattern_saw_p1_m1",
+          "loc_weapon_mark_saw_p1_m1"
+        ],
+        "trait_category": "bespoke_saw_p1",
+        "trait_id": "weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave",
+        "trait_item": "content/items/traits/bespoke_saw_p1/chained_hits_increases_cleave",
+        "template_file": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_saw_p1_m1",
+          "loc_weapon_pattern_saw_p1_m1",
+          "loc_weapon_mark_saw_p1_m1"
+        ],
+        "source_binding_lines": [
+          14,
+          1833,
+          1835
+        ]
+      }
+    ],
+    "source_refs": [
+      [
+        "chainsword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        16,
+        16
+      ],
+      [
+        "chainsword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        1537,
+        1537
+      ],
+      [
+        "chainsword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        1539,
+        1539
+      ],
+      [
+        "chainsword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        15,
+        15
+      ],
+      [
+        "chainsword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        1538,
+        1538
+      ],
+      [
+        "chainsword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        1540,
+        1540
+      ],
+      [
+        "chainsword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        15,
+        15
+      ],
+      [
+        "chainsword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        2424,
+        2424
+      ],
+      [
+        "chainsword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        2426,
+        2426
+      ],
+      [
+        "chainsword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        14,
+        14
+      ],
+      [
+        "chainsword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        2030,
+        2030
+      ],
+      [
+        "chainsword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        2032,
+        2032
+      ],
+      [
+        "combatsword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        14,
+        14
+      ],
+      [
+        "combatsword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        1504,
+        1504
+      ],
+      [
+        "combatsword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        1506,
+        1506
+      ],
+      [
+        "combatsword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        14,
+        14
+      ],
+      [
+        "combatsword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        1437,
+        1437
+      ],
+      [
+        "combatsword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        1439,
+        1439
+      ],
+      [
+        "combatsword_p1_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        15,
+        15
+      ],
+      [
+        "combatsword_p1_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        1346,
+        1346
+      ],
+      [
+        "combatsword_p1_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        1348,
+        1348
+      ],
+      [
+        "combatsword_p2_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        16,
+        16
+      ],
+      [
+        "combatsword_p2_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        1597,
+        1597
+      ],
+      [
+        "combatsword_p2_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        1599,
+        1599
+      ],
+      [
+        "combatsword_p2_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        16,
+        16
+      ],
+      [
+        "combatsword_p2_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        1581,
+        1581
+      ],
+      [
+        "combatsword_p2_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        1583,
+        1583
+      ],
+      [
+        "combatsword_p2_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        16,
+        16
+      ],
+      [
+        "combatsword_p2_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        1669,
+        1669
+      ],
+      [
+        "combatsword_p2_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        1671,
+        1671
+      ],
+      [
+        "forcesword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        15,
+        15
+      ],
+      [
+        "forcesword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        2795,
+        2795
+      ],
+      [
+        "forcesword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        2797,
+        2797
+      ],
+      [
+        "forcesword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        15,
+        15
+      ],
+      [
+        "forcesword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        2710,
+        2710
+      ],
+      [
+        "forcesword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        2712,
+        2712
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        16,
+        16
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        1569,
+        1569
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        1571,
+        1571
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        16,
+        16
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        1566,
+        1566
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        1568,
+        1568
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        16,
+        16
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        1880,
+        1880
+      ],
+      [
+        "ogryn_pickaxe_2h_p1_m3 template trait binding",
+        "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        1882,
+        1882
+      ],
+      [
+        "powersword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        15,
+        15
+      ],
+      [
+        "powersword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        2302,
+        2302
+      ],
+      [
+        "powersword_2h_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        2304,
+        2304
+      ],
+      [
+        "powersword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        14,
+        14
+      ],
+      [
+        "powersword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        2455,
+        2455
+      ],
+      [
+        "powersword_2h_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        2457,
+        2457
+      ],
+      [
+        "powersword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        12,
+        12
+      ],
+      [
+        "powersword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        1266,
+        1266
+      ],
+      [
+        "powersword_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        1268,
+        1268
+      ],
+      [
+        "powersword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        12,
+        12
+      ],
+      [
+        "powersword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        1624,
+        1624
+      ],
+      [
+        "powersword_p1_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        1626,
+        1626
+      ],
+      [
+        "powersword_p2_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        11,
+        11
+      ],
+      [
+        "powersword_p2_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        1741,
+        1741
+      ],
+      [
+        "powersword_p2_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        1743,
+        1743
+      ],
+      [
+        "powersword_p2_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        11,
+        11
+      ],
+      [
+        "powersword_p2_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        2023,
+        2023
+      ],
+      [
+        "powersword_p2_m2 template trait binding",
+        "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        2025,
+        2025
+      ],
+      [
+        "saw_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        14,
+        14
+      ],
+      [
+        "saw_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        1833,
+        1833
+      ],
+      [
+        "saw_p1_m1 template trait binding",
+        "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        1835,
+        1835
+      ]
+    ],
+    "raw_records_verified": 136,
+    "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+    "all_exact_metadata_items_bound": true
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 10,
+    "bound_variants": 10,
+    "bound_bindings": 22,
+    "same_name_candidates": [],
+    "unbound_definition_candidates": [],
+    "unresolved_exact_key_candidates": [],
+    "related_but_distinct_outside_definitions": [
+      {
+        "trait_id": "weapon_trait_bespoke_crowbar_p1_chained_hits_increases_power",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+          "line": 10
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_forcestaff_p1_faster_charge_on_chained_secondary_attacks",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+          "line": 402
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_increased_attack_cleave_on_multiple_hits",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+          "line": 235
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+          "line": 421
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_powersword_p2_infinite_melee_cleave_on_crit",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+          "line": 291
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_powersword_p2_chained_hits_increases_crit_chance",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+          "line": 615
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_shotgun_p3_cleave_on_crit",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+          "line": 399
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_cleave_on_crit",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+          "line": 399
+        }
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_chained_weakspot_hits_increases_power",
+        "source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+          "line": 288
+        }
+      }
+    ],
+    "related_but_distinct_unresolved_traits": [
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/bolter_p1_m1",
+        "trait": "weapon_trait_bespoke_bolter_p1_cleave_and_no_explode_on_unarmored"
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/bolter_p1_m1",
+        "trait": "weapon_trait_bespoke_bolter_p1_power_bonus_on_chained_hits_on_single_target"
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/bolter_p1_m2",
+        "trait": "weapon_trait_bespoke_bolter_p1_cleave_and_no_explode_on_unarmored"
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/bolter_p1_m2",
+        "trait": "weapon_trait_bespoke_bolter_p1_power_bonus_on_chained_hits_on_single_target"
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m1",
+        "trait": "weapon_trait_bespoke_ogryn_heavystubber_p1_armor_rend_on_chained_hits"
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m2",
+        "trait": "weapon_trait_bespoke_ogryn_heavystubber_p1_armor_rend_on_chained_hits"
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m3",
+        "trait": "weapon_trait_bespoke_ogryn_heavystubber_p1_armor_rend_on_chained_hits"
+      }
+    ],
+    "inventory_boundary": "105 definitions outside intersection and 58 unresolved rows were checked in the 2026-10-03 snapshot; none share the exact Wrath name key or its exact trait asset path.",
+    "status": "All ten exact loc_trait_bespoke_chained_hits_increases_cleave metadata assets are in the bound intersection. No exact outside or unresolved candidate."
+  }
+}

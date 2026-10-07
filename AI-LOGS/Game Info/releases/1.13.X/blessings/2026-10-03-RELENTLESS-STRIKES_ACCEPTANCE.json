@@ -1,0 +1,557 @@
+{
+  "date": "2026-10-06",
+  "blessing": "relentless-strikes",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/持續打擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power",
+    "weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power",
+    "weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power",
+    "weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power"
+  ],
+  "added_binding_count": 8,
+  "total_variants": 4,
+  "total_bindings": 8,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "relentless-strikes",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-formal-peer-scope.json",
+    "scope_sha256": "32f8c37ad416a008ebf19dd57741f425f5f426774bf55c45b14488eac5ece5a9",
+    "reviewed_file_count": 88,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-agent-config.json": "09feba34dee48c7c4b517efe639c92cf0bfa59899dfbf7a152216df60181b352",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-agent-draft.md": "43ae9b54ca721e2c9cf209effe37c813f4f642653180035c4c7cadad11161fa3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-agent-evidence.json": "5b38d494fc3244f4b6bf845e76968b603b290474678433637b3d10bd70c27053",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-config.json": "cf6a8c084ba511e5d7be71eeacf066627e33c084924a5a06155acf5cf20af03b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-extension-draft.json": "ce0c251e0d18de30d23f8748fc61cc6990c50f843f0887021b78b40040eb21db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/action-source-blocks.json": "dba55685802dda825458f8b0fc339580ccc8782b6772dc2307b9e4f42b135285",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/action-source-files.json": "5fd1355889b32934378221bec89e39c9561589270ea29c992467aa2e4460048e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/assemble_package.py": "15ac714f3377294759b5851e844c4110c03197a1096ca2c6a96fb9bd99a88f49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/assemble_research.py": "d1edffb722a531e42d815af945a5a58697704141132297f95a813aa4bde59772",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/association-snapshot.json": "5448a9f5d6e53453626ad146426b9a6765bd2e75918367dd0350190985c957cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/attack-matrix-generated.json": "8851652d65757351573de3021c5155105dfeecf755728a2aa5b84f7c93431650",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/collect_research.py": "b891042c0f0f9a45cbed2e85f4fa876f7d12b848475e27ee6c68502465ebdbee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/content-fields.json": "c47bd5e184b073d2d194b46b6aac72ad516a547a68b6eea71911a786ae3827bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/coverage.json": "4cc6c29f4f900af1d8a5356e4c6740723781e4b1b49a0c6a26b8e43792a4ae12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/draft.md": "43ae9b54ca721e2c9cf209effe37c813f4f642653180035c4c7cadad11161fa3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/examples.md": "225f15248e4482e5f2b3850dd5ed5516cbe62ffd3fd89aed9d666896343078a7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-image.json": "253ee02f2ee016344289061bd1357ab1171ac2a84c585932d18838435a4494d0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-own-tier-wrapper-target-lifecycle-material-review.json": "adf77f672f5191059fd45f615e3e352e650cd0ee6e58b50ae532775e37f53ff9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-raw-verification.json": "740b1f1415e1b9561155ae7abfc33348fa42bd2d7d3c8734818154d6be5cd164",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-ui-raw-verification.json": "c7e8db4ef2c973fba95700b1333308fea8403cde9c00e77951a550c0468e7322",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-ui-review.json": "853a5fc7372d5b04fa21dac9dd457534ba053ab551700b43be6866ac8440789f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inventory-relentless-strikes.json": "f16347c2cdeb032c4a37c4a4b301134fc196d0f70a8c98723a4a325158fb5f31",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/math.md": "ac9bf5d72642401acd902793a5c89f764e486e5465ab75ecc6f51af037be9e89",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/mechanism.md": "34ceeaef78e890a4b9ae6ad4e5f6c40f7d8f266b8bc48f4687576b8f3de89383",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/patch_push.py": "b0ecbe9d92dd34979726a07d15a62167b4a663e276c77da6ec59becf923be00e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/patch_text.py": "69408cc42b93e3f02179d8f72f18638b905287296210e71d571fcec347998d76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/player.md": "e05153895b29a8a30a9bdada5846aded2d78b633f88313f87081a70477f2ff92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/reconstruction.md": "cbf03a5cf22c517faf546fc92ecc1309ce70d468748da7ab1f2fc3bab2c1ac62",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-actual-preview-receipt-001.json": "c485a456c435a58da12c2d612acbf9c10ab24bb455fbf6f400a0311f5e2e0a22",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-actual-preview-receipt-002.json": "97564362be0c090c880410e4ceca6bddf6aefef7f8a272d004e560fb6b2a0fb2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-agent-config.json": "09feba34dee48c7c4b517efe639c92cf0bfa59899dfbf7a152216df60181b352",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-agent-draft.md": "43ae9b54ca721e2c9cf209effe37c813f4f642653180035c4c7cadad11161fa3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-agent-evidence.json": "5b38d494fc3244f4b6bf845e76968b603b290474678433637b3d10bd70c27053",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-selfcheck.json": "032b8a34bee229c1fdf585f5a6d412e600a17d27f4ed996e6bf29e5f1579069f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/review.md": "b8143ac59883d8b01cd1ee9a49d81cf980a89a72095de5c003ba446d2daa593d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/source-blocks.json": "97074ce6bb72c2d2eaf2709596643fe502f29ccd031010c499514a23487a7d5b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/source-file-hashes.json": "0fed64d00f377da1869c2048c32f39773255fbd69d082c57f0374d491bcfabaf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-image.json": "253ee02f2ee016344289061bd1357ab1171ac2a84c585932d18838435a4494d0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-final-content-delta-review.json": "892c64bf8d7c1e8fbb7e4246913fa9556b0ede209a1ccd9250be1f71c84b2557",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-focused-checks.json": "5463b1084f461edb278d074b07747a66b0670805cdc3e8ea0894b83b3a1bee56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-frozen-source-verification.json": "be9c569506294a88098886fc13a08f9f8ccebe90f8fd010dc6e0474acd071b76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-own-tier-wrapper-target-lifecycle-material-review.json": "adf77f672f5191059fd45f615e3e352e650cd0ee6e58b50ae532775e37f53ff9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-raw-verification.json": "740b1f1415e1b9561155ae7abfc33348fa42bd2d7d3c8734818154d6be5cd164",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-resume-review.json": "9404f2374dcf8e4f648310f3ac2f26ce4406f025fb211ab17bbd015d4e53d902",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-ui-raw-verification.json": "c7e8db4ef2c973fba95700b1333308fea8403cde9c00e77951a550c0468e7322",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-ui-review.json": "853a5fc7372d5b04fa21dac9dd457534ba053ab551700b43be6866ac8440789f",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-raw-verification.json": "740b1f1415e1b9561155ae7abfc33348fa42bd2d7d3c8734818154d6be5cd164",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b473af5d073817178f9cbd38983627d49f55a440d66756d0d591a19a62c9a9ce",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/DAMAGE_PERCENTAGE_REVIEW.md": "a0f8869772928240b98ba7526bb858391e1d5cde0b60f20e4c41266d23e7de75",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/LOCALIZATION_COMPARISON.md": "7ee32bacfd1cb655ef9fce3bd5a8cccc0ef02ec4a4d407878f6a357cfd88a3fb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/README.md": "2e409ae258e7f80ecf2002e557f5fc3a885e72a5cf99a2b4216688ca027ec942",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/SOURCE_INDEX.md": "31aa729bd18a483bf00bfef778fdb010f82563b3f2dd71c3faef07dffa3bd035",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/TIER_VALUES.md": "abbd6fbaa6111b9b19cceb28b5f474d402775548d74c095c5ba96bd1560d7e5a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/WEAPON_COMPATIBILITY.md": "23f09c909ec17e03ef45cc20ccf793afde02a81bad27bf73490b25d32f536854",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power.md": "4ab9cae4c512a8fbe38a0a4eb4a97c1dbab7813ec8319778308de8e596f1d5d4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power.md": "800879ca0f1f825f9f53416cdf3608909d34ef08479716cac668338a208d210c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power.md": "70937bf3f0e54ba2f9100ff099136520a4b4853a101fce83a729a4607f5527b3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power.md": "07ecc81d7141cbb2746109fe3fb250a7e1adae9a2cee3af2a7dea3f7f3c00b03",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/melee/README.md": "d3b635bdcde6111da1e351e77c172ee8c8518d76917db48e2e0e1cee634dd4ab",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/README.md": "879e7f3ca595ef9a9bb9b8f9670f4f658cc3a5a5a78d83687de9ac664cb794fb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "5a220dd679a61b59d515919e967c347f8f978fa2de5bbaeed1202ae14f27094a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "f2a65b783f3fb611ba99c6b196b0f26cbd5f0e6c7231a282e38809baa68b2e9d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "bf42fc7d6ed045f952814d34303b42780ac2da4467b4005726e09048512b8f0b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "0f6cd725efbc14e6abe795e89ed03093ef5038f3bf35b6e86d116a337e86381d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "57c6aa91f583a656a6c709cb7f2b3372b759df4aed5697685c32334a3aa4cf8b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/own-association-snapshot.json": "bcf9cb146c2f0924ecbaa617179c167f1b5bee32661d4ec5e0a59365a3c1f9a3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/actual-preview-002/Referneces/Translation.md": "a3738b6048f52ebbcf2d2136f009613eff762066fe0cb18d291233901d9077fb",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b473af5d073817178f9cbd38983627d49f55a440d66756d0d591a19a62c9a9ce",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/DAMAGE_PERCENTAGE_REVIEW.md": "a0f8869772928240b98ba7526bb858391e1d5cde0b60f20e4c41266d23e7de75",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/LOCALIZATION_COMPARISON.md": "7ee32bacfd1cb655ef9fce3bd5a8cccc0ef02ec4a4d407878f6a357cfd88a3fb",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/README.md": "2e409ae258e7f80ecf2002e557f5fc3a885e72a5cf99a2b4216688ca027ec942",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/SOURCE_INDEX.md": "2f79355fdca5b59bbe45e3502312f9e9bcd817691e5375703134d296665b2963",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/TIER_VALUES.md": "abbd6fbaa6111b9b19cceb28b5f474d402775548d74c095c5ba96bd1560d7e5a",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/WEAPON_COMPATIBILITY.md": "23f09c909ec17e03ef45cc20ccf793afde02a81bad27bf73490b25d32f536854",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power.md": "4ab9cae4c512a8fbe38a0a4eb4a97c1dbab7813ec8319778308de8e596f1d5d4",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power.md": "800879ca0f1f825f9f53416cdf3608909d34ef08479716cac668338a208d210c",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power.md": "70937bf3f0e54ba2f9100ff099136520a4b4853a101fce83a729a4607f5527b3",
+      "Game Info/releases/1.13.X/blessings/entries/持續打擊/weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power.md": "07ecc81d7141cbb2746109fe3fb250a7e1adae9a2cee3af2a7dea3f7f3c00b03",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "d3b635bdcde6111da1e351e77c172ee8c8518d76917db48e2e0e1cee634dd4ab",
+      "Game Info/releases/1.13.X/blessings/README.md": "879e7f3ca595ef9a9bb9b8f9670f4f658cc3a5a5a78d83687de9ac664cb794fb",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "5a220dd679a61b59d515919e967c347f8f978fa2de5bbaeed1202ae14f27094a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "f2a65b783f3fb611ba99c6b196b0f26cbd5f0e6c7231a282e38809baa68b2e9d",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "bf42fc7d6ed045f952814d34303b42780ac2da4467b4005726e09048512b8f0b",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "0f6cd725efbc14e6abe795e89ed03093ef5038f3bf35b6e86d116a337e86381d",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "57c6aa91f583a656a6c709cb7f2b3372b759df4aed5697685c32334a3aa4cf8b",
+      "Referneces/Translation.md": "a3738b6048f52ebbcf2d2136f009613eff762066fe0cb18d291233901d9077fb"
+    },
+    "reviewed_content": [
+      "Reviewed the 10 blessing pages and item/weapon associations in the fixed 88-file scope; the four implementations cover eight bindings: Atrox tactical axe Mk II/IV/VII, Maccabian duelling sword Mk II/IV/V, Branx Mk III Arbites shock maul, and Chirurgeon Mk IV bone saw.",
+      "The four own tier tables consistently provide melee_power_level_modifier .04/.06/.08/.10 and a two-second child duration. Parent/child offset -1 leaves five effective layers; formatter and the four reconstructed RAW tier strings agree on +4/+6/+8/+10%, two seconds, and five stacks.",
+      "The actual parent checks held slot, exact source item and on_hit with the same-target helper. The first qualifying hit on a different target records that target and clears prior layers without updating last_hit_time; subsequent hits on that target add one layer and refresh the shared timer. At cap, another qualifying same-target event refreshes; expiry removes child stacks on a later parent update.",
+      "Attack damage is calculated before stagger/on_hit event handling, and the new layer contributes only after the later stat-cache update. The melee power modifier enters the melee Power pool; both examples state normalized post-curve inputs and do not promise equal final health damage.",
+      "Actual routing differences are represented: bound ordinary/light/heavy/sweep and push profiles use their real per-Mark routes; pure push may advance the hit tracker but does not consume melee_power_level_modifier. Branx Mk III special is a direct melee sweep with a separate stun primer and no imported explosion. Chirurgeon Mk IV initial sticky hit is an ordinary melee event; both delayed rip profiles use current melee power but skip on-hit proc, so they do not add or refresh stacks. Mode setup and saw coating toggle are not hit events.",
+      "Switching away suppresses held-gated contribution and new source-item procs while the existing timer continues; switching back before expiry can restore remaining stacks. True removal destroys the parent and its externally controlled child stacks. The RAW comparison classifies omitted held/item/special/push details as not covered, not as contradictions.",
+      "The verified image receipt points to actual icon weapon_trait_183, 128x128, matching public hash and attachment. Own reverse links and the eight-item map/binding associations are present in the fixed scope."
+    ],
+    "source_review_reuse": [
+      {
+        "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+        "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+        "applicability": "Reused only the accepted parent/child stack, timer, held-slot, source-item and cache lifecycle records after confirming the four actual wrappers inherit the pinned base and the own conditions/target-number behavior."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-own-tier-wrapper-target-lifecycle-material-review.json",
+        "sha256": "adf77f672f5191059fd45f615e3e352e650cd0ee6e58b50ae532775e37f53ff9",
+        "applicability": "Own tier/wrapper/target timer and eight actual bindings."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-final-content-delta-review.json",
+        "sha256": "892c64bf8d7c1e8fbb7e4246913fa9556b0ede209a1ccd9250be1f71c84b2557",
+        "applicability": "Final player, examples, RAW, actual-mode and lifecycle conclusions."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-image.json",
+        "sha256": "253ee02f2ee016344289061bd1357ab1171ac2a84c585932d18838435a4494d0",
+        "applicability": "Actual icon 183; original/public image hash and display receipt."
+      }
+    ],
+    "hash_verification": {
+      "checked": 88,
+      "missing": 0,
+      "mismatched": 0,
+      "method": "SHA-256 over exact file bytes from the pinned scope map; deep paths read using the repository-approved long-path preamble."
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "relentless-strikes",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_183",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_183.png",
+      "attachment": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6009591557",
+      "acquired_date": "2026-10-06",
+      "sha256": "ab049ed708d4a2188bc1c9f47d53a7f80ee12f1d5be2932d4fbed4969689b1e6",
+      "content_type": "image/png",
+      "size": 6597,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "持續打擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_note": "Root visually inspected the actual public-download original 128x128 pale native exported tile; preserved original pixels and did not invent a glyph or replace the image."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 20,
+      "rows": 654,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 168,
+      "source_files": 35,
+      "bindings": 1045,
+      "variants": 537,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 35,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1349,
+      "remote_references": 611,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 42,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-041-full-scan.json",
+        "sha256": "698b670fe1fde7129b1b64d244d8dfa0ab2977174c29ae717f53db3652ba0633",
+        "trigger": "round-041"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 11,
+    "not_started_name_groups": 11,
+    "partial_name_groups": 0,
+    "remaining_variants": 68,
+    "remaining_bindings": 140,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "2419799ff0403d653f159f3bbfc152a9148db37c1a2884549d1af63084f514bf"
+  },
+  "previous_local_commit": "c00baa8bc12b2a5491980bb4bbecf75c17b8dd6e",
+  "outside_intersection_review": {
+    "status": "exact current inventory intersection verified",
+    "name_key": "loc_trait_bespoke_power_bonus_on_same_enemy_attacks",
+    "binding_count": 8,
+    "variant_count": 4
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-final-content-delta-review.json",
+      "sha256": "892c64bf8d7c1e8fbb7e4246913fa9556b0ede209a1ccd9250be1f71c84b2557"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-focused-checks.json",
+      "sha256": "5463b1084f461edb278d074b07747a66b0670805cdc3e8ea0894b83b3a1bee56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-frozen-source-verification.json",
+      "sha256": "be9c569506294a88098886fc13a08f9f8ccebe90f8fd010dc6e0474acd071b76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-own-tier-wrapper-target-lifecycle-material-review.json",
+      "sha256": "adf77f672f5191059fd45f615e3e352e650cd0ee6e58b50ae532775e37f53ff9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-raw-verification.json",
+      "sha256": "740b1f1415e1b9561155ae7abfc33348fa42bd2d7d3c8734818154d6be5cd164"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-resume-review.json",
+      "sha256": "9404f2374dcf8e4f648310f3ac2f26ce4406f025fb211ab17bbd015d4e53d902"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-ui-raw-verification.json",
+      "sha256": "c7e8db4ef2c973fba95700b1333308fea8403cde9c00e77951a550c0468e7322"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-ui-review.json",
+      "sha256": "853a5fc7372d5b04fa21dac9dd457534ba053ab551700b43be6866ac8440789f"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-config.json",
+    "sha256": "cf6a8c084ba511e5d7be71eeacf066627e33c084924a5a06155acf5cf20af03b"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/action-source-blocks.json",
+      "sha256": "dba55685802dda825458f8b0fc339580ccc8782b6772dc2307b9e4f42b135285"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/action-source-files.json",
+      "sha256": "5fd1355889b32934378221bec89e39c9561589270ea29c992467aa2e4460048e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/assemble_package.py",
+      "sha256": "15ac714f3377294759b5851e844c4110c03197a1096ca2c6a96fb9bd99a88f49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/assemble_research.py",
+      "sha256": "d1edffb722a531e42d815af945a5a58697704141132297f95a813aa4bde59772"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/association-snapshot.json",
+      "sha256": "5448a9f5d6e53453626ad146426b9a6765bd2e75918367dd0350190985c957cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/attack-matrix-generated.json",
+      "sha256": "8851652d65757351573de3021c5155105dfeecf755728a2aa5b84f7c93431650"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/collect_research.py",
+      "sha256": "b891042c0f0f9a45cbed2e85f4fa876f7d12b848475e27ee6c68502465ebdbee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/content-fields.json",
+      "sha256": "c47bd5e184b073d2d194b46b6aac72ad516a547a68b6eea71911a786ae3827bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/coverage.json",
+      "sha256": "4cc6c29f4f900af1d8a5356e4c6740723781e4b1b49a0c6a26b8e43792a4ae12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/draft.md",
+      "sha256": "43ae9b54ca721e2c9cf209effe37c813f4f642653180035c4c7cadad11161fa3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/examples.md",
+      "sha256": "225f15248e4482e5f2b3850dd5ed5516cbe62ffd3fd89aed9d666896343078a7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-image.json",
+      "sha256": "253ee02f2ee016344289061bd1357ab1171ac2a84c585932d18838435a4494d0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-own-tier-wrapper-target-lifecycle-material-review.json",
+      "sha256": "adf77f672f5191059fd45f615e3e352e650cd0ee6e58b50ae532775e37f53ff9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-raw-verification.json",
+      "sha256": "740b1f1415e1b9561155ae7abfc33348fa42bd2d7d3c8734818154d6be5cd164"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-ui-raw-verification.json",
+      "sha256": "c7e8db4ef2c973fba95700b1333308fea8403cde9c00e77951a550c0468e7322"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inputs/relentless-strikes-primary-ui-review.json",
+      "sha256": "853a5fc7372d5b04fa21dac9dd457534ba053ab551700b43be6866ac8440789f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/inventory-relentless-strikes.json",
+      "sha256": "f16347c2cdeb032c4a37c4a4b301134fc196d0f70a8c98723a4a325158fb5f31"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/math.md",
+      "sha256": "ac9bf5d72642401acd902793a5c89f764e486e5465ab75ecc6f51af037be9e89"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/mechanism.md",
+      "sha256": "34ceeaef78e890a4b9ae6ad4e5f6c40f7d8f266b8bc48f4687576b8f3de89383"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/patch_push.py",
+      "sha256": "b0ecbe9d92dd34979726a07d15a62167b4a663e276c77da6ec59becf923be00e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/patch_text.py",
+      "sha256": "69408cc42b93e3f02179d8f72f18638b905287296210e71d571fcec347998d76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/player.md",
+      "sha256": "e05153895b29a8a30a9bdada5846aded2d78b633f88313f87081a70477f2ff92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/reconstruction.md",
+      "sha256": "cbf03a5cf22c517faf546fc92ecc1309ce70d468748da7ab1f2fc3bab2c1ac62"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-agent-config.json",
+      "sha256": "09feba34dee48c7c4b517efe639c92cf0bfa59899dfbf7a152216df60181b352"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-agent-draft.md",
+      "sha256": "43ae9b54ca721e2c9cf209effe37c813f4f642653180035c4c7cadad11161fa3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/review.md",
+      "sha256": "b8143ac59883d8b01cd1ee9a49d81cf980a89a72095de5c003ba446d2daa593d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/source-blocks.json",
+      "sha256": "97074ce6bb72c2d2eaf2709596643fe502f29ccd031010c499514a23487a7d5b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/source-file-hashes.json",
+      "sha256": "0fed64d00f377da1869c2048c32f39773255fbd69d082c57f0374d491bcfabaf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-actual-preview-receipt-002.json",
+      "sha256": "97564362be0c090c880410e4ceca6bddf6aefef7f8a272d004e560fb6b2a0fb2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "879e7f3ca595ef9a9bb9b8f9670f4f658cc3a5a5a78d83687de9ac664cb794fb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "5a220dd679a61b59d515919e967c347f8f978fa2de5bbaeed1202ae14f27094a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "b473af5d073817178f9cbd38983627d49f55a440d66756d0d591a19a62c9a9ce"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "a0f8869772928240b98ba7526bb858391e1d5cde0b60f20e4c41266d23e7de75"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "7ee32bacfd1cb655ef9fce3bd5a8cccc0ef02ec4a4d407878f6a357cfd88a3fb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\README.md",
+      "sha256": "2e409ae258e7f80ecf2002e557f5fc3a885e72a5cf99a2b4216688ca027ec942"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\SOURCE_INDEX.md",
+      "sha256": "31aa729bd18a483bf00bfef778fdb010f82563b3f2dd71c3faef07dffa3bd035"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\TIER_VALUES.md",
+      "sha256": "abbd6fbaa6111b9b19cceb28b5f474d402775548d74c095c5ba96bd1560d7e5a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "23f09c909ec17e03ef45cc20ccf793afde02a81bad27bf73490b25d32f536854"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "sha256": "4ab9cae4c512a8fbe38a0a4eb4a97c1dbab7813ec8319778308de8e596f1d5d4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "sha256": "800879ca0f1f825f9f53416cdf3608909d34ef08479716cac668338a208d210c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "sha256": "70937bf3f0e54ba2f9100ff099136520a4b4853a101fce83a729a4607f5527b3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續打擊\\weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "sha256": "07ecc81d7141cbb2746109fe3fb250a7e1adae9a2cee3af2a7dea3f7f3c00b03"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "d3b635bdcde6111da1e351e77c172ee8c8518d76917db48e2e0e1cee634dd4ab"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰術斧\\README.md",
+      "sha256": "f2a65b783f3fb611ba99c6b196b0f26cbd5f0e6c7231a282e38809baa68b2e9d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\決鬥劍\\README.md",
+      "sha256": "bf42fc7d6ed045f952814d34303b42780ac2da4467b4005726e09048512b8f0b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚\\README.md",
+      "sha256": "0f6cd725efbc14e6abe795e89ed03093ef5038f3bf35b6e86d116a337e86381d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\骨鋸\\README.md",
+      "sha256": "57c6aa91f583a656a6c709cb7f2b3372b759df4aed5697685c32334a3aa4cf8b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\Referneces\\Translation.md",
+      "sha256": "a3738b6048f52ebbcf2d2136f009613eff762066fe0cb18d291233901d9077fb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-raw-verification.json",
+      "sha256": "740b1f1415e1b9561155ae7abfc33348fa42bd2d7d3c8734818154d6be5cd164"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\relentless-strikes-group\\actual-preview-002\\own-association-snapshot.json",
+      "sha256": "bcf9cb146c2f0924ecbaa617179c167f1b5bee32661d4ec5e0a59365a3c1f9a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-actual-preview-receipt-001.json",
+      "sha256": "c485a456c435a58da12c2d612acbf9c10ab24bb455fbf6f400a0311f5e2e0a22"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-agent-evidence.json",
+      "sha256": "5b38d494fc3244f4b6bf845e76968b603b290474678433637b3d10bd70c27053"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-group/relentless-strikes-selfcheck.json",
+      "sha256": "032b8a34bee229c1fdf585f5a6d412e600a17d27f4ed996e6bf29e5f1579069f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-agent-config.json",
+      "sha256": "09feba34dee48c7c4b517efe639c92cf0bfa59899dfbf7a152216df60181b352"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-agent-evidence.json",
+      "sha256": "5b38d494fc3244f4b6bf845e76968b603b290474678433637b3d10bd70c27053"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-agent-draft.md",
+      "sha256": "43ae9b54ca721e2c9cf209effe37c813f4f642653180035c4c7cadad11161fa3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-final-content-delta-review.json",
+      "sha256": "892c64bf8d7c1e8fbb7e4246913fa9556b0ede209a1ccd9250be1f71c84b2557"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-frozen-source-verification.json",
+      "sha256": "be9c569506294a88098886fc13a08f9f8ccebe90f8fd010dc6e0474acd071b76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-own-tier-wrapper-target-lifecycle-material-review.json",
+      "sha256": "adf77f672f5191059fd45f615e3e352e650cd0ee6e58b50ae532775e37f53ff9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-raw-verification.json",
+      "sha256": "740b1f1415e1b9561155ae7abfc33348fa42bd2d7d3c8734818154d6be5cd164"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-ui-raw-verification.json",
+      "sha256": "c7e8db4ef2c973fba95700b1333308fea8403cde9c00e77951a550c0468e7322"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-primary-ui-review.json",
+      "sha256": "853a5fc7372d5b04fa21dac9dd457534ba053ab551700b43be6866ac8440789f"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/relentless-strikes-formal-peer-scope.json",
+    "sha256": "32f8c37ad416a008ebf19dd57741f425f5f426774bf55c45b14488eac5ece5a9",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

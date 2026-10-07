@@ -1,0 +1,46 @@
+{
+  "id": "shared_completion",
+  "date": "2026-10-04",
+  "status": "accepted_with_caveats",
+  "release": "1.13.1",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "source_pointer": "FILE_MAP.json",
+  "English_entry": "Game Info/releases/1.13.X/skills/README.en.md",
+  "accepted_mechanisms": 646,
+  "accepted_files": 690,
+  "mapped_files_by_scope": {
+    "shared": 2,
+    "Arbites": 97,
+    "Ogryn": 99,
+    "Psyker": 87,
+    "Scum": 121,
+    "Skitarii": 107,
+    "Veteran": 89,
+    "Zealot": 88
+  },
+  "shared_pages": [
+    "Game Info/releases/1.13.X/skills/README.en.md",
+    "Game Info/releases/1.13.X/skills/TALENT_CHANGES_1.13.0_TO_1.13.1.en.md"
+  ],
+  "checks": {
+    "shared_local_references": 22,
+    "errors": 0,
+    "changed_Markdown": "Both English pages and the Chinese language switch passed marked parsing and git diff whitespace checks. Full changed diff read once.",
+    "mapped_file_presence": "All 690 existing mapping targets present; accepted class checks reused without repeating content acceptance.",
+    "source_links": "Every existing version-difference source URL retained; no new source investigation."
+  },
+  "timing": {
+    "shared_pages_commit_interval_seconds": 132,
+    "from_commit": "468d103ee",
+    "to_commit": "60e00049a",
+    "classification": "Shared-page translation/closeout, separate from mechanism translation and final metadata/PR synchronization."
+  },
+  "retained_caveats": [
+    "Existing unresolved implementation/display questions and missing exact text pairs remain explicitly documented; no in-game tests.",
+    "Confirmed Chinese correction follow-ups retained in FILE_MAP.json for separate Chinese revision; outside this completed English translation scope."
+  ],
+  "branch": "codex/skills-english",
+  "pull_request": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/192",
+  "publication": "User authorized same-branch push and PR; no merge."
+}

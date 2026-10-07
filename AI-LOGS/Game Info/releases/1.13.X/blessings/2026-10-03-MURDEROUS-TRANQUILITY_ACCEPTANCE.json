@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-05",
+  "blessing": "murderous-tranquility",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcesword_2h_p1_vent_warp_charge_on_multiple_hits"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "murderous-tranquility",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope peer review with gpt-6-luna/max settings.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file": "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\murderous-tranquility-formal-peer-scope.json",
+      "sha256": "0324c3fbaef533f4ea207dcb7b79ebc0d677fa82516ca43adc474a74b8ee31a4",
+      "files": 29,
+      "review": "Fixed 29-file formal and evidence scope; every listed SHA256 was independently recomputed before receipt."
+    },
+    "reviewed_associations": [
+      "The seven blessing entry pages agree on name, I–IV values, actual melee variant, two bindings, and the shared effect summary.",
+      "The blessing map, global/melee listings, source indexes, and both force-sword reverse rows point to the same two marks and summary.",
+      "Canonical config and extension draft agree on the full trait ID, marks, RAW keys/hashes, icon attachment/path, and real newline-separated variant notes. Frozen agent trio and root own-tier/UI/RAW/image/routing/deferred-update evidence remain at the scoped hashes."
+    ],
+    "reviewed_deltas": [
+      "Own I–IV values .02/.03/.04/.05 replace the wrapper fallback .01; formatter presents +2/+3/+4/+5%, and the exact full trait ID is bound to forcesword_2h_p1_m1 and _m2.",
+      "The predicate is an eligible melee on_hit with current target_number >= 3, where ActionSweep supplies a current sweep ordinal. It is not a cumulative three-hit or three-positive-damage counter; event dispatch gates still apply.",
+      "Proc storage is one boolean flag per event-processing batch. The buff extension updates buffs before proc events, so a successful event is consumed on the next Buff.update; multiple same-batch events coalesce, and no extra cooldown, stack, or timer is added.",
+      "The held-slot condition is checked when the event is processed. A pending flag already set survives switching out before the next update; switching before the event check prevents creation.",
+      "The consumer subtracts the tier fraction from current normalized peril and clamps to [0,1], returning to idle. IV gives 70%→65% (5 percentage points, 7.14% relative reduction), same-batch later ordinals still yield one decrement, a later batch can yield 65%→60%, and 3% clamps to 0%.",
+      "Ordinary and powered melee ActionSweep hits can qualify; push itself is excluded while a follow-up sweep may qualify. For both marks, the separate Wind Slash extra attack is dispatched as ranged without target_number, and fling uses ActionDamageTarget ranged without target_number. Special toggle events themselves are not the blessing on_hit; the documented Wind Slash path is separately classified.",
+      "RAW EN/ZH name and description keys and hashes match. All four static tier reconstructions preserve the source sentences with formatter values; errata is empty because the RAW wording is broader than the implementation rather than contradictory.",
+      "The exploding-state consumer has an ability-interruption branch; the player text does not promise survival. UI names use the family/pattern/mark metadata for Mk VI and Mk VIII, and the verified image attachment is consistently referenced."
+    ],
+    "configuration_consistency": {
+      "id": "murderous-tranquility",
+      "kind": "melee",
+      "variant_count": 1,
+      "binding_count": 2,
+      "variant_ids_are_exact_traits": true,
+      "bound_mark_ids": [
+        "forcesword_2h_p1_m1",
+        "forcesword_2h_p1_m2"
+      ],
+      "raw_en_zh_hash_pair_verified": true,
+      "variant_notes_have_actual_newlines": true,
+      "errata_empty": true,
+      "all_29_scoped_hashes_match": true,
+      "source_commit_matches": true
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-agent-config.json": "8c4cb348157bb4747e5ab8c5567ae82fdcdf10ef6d3f483906fc9f26e8538074",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-agent-draft.md": "b3b5ac5d0851b69f05aec2c9ed57fc7ce41f7261aa664cf1a5a7ef8a44387563",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-agent-evidence.json": "22675427547f402b5b3d31d98f6f0f4a16dee3d1372e3ac9b534a179cd05a37f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-config.json": "3701db5eba39ec03ebd378053c305fcb892a95a9422c84503cf90a31b8c8a395",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-extension-draft.json": "9e51948db4387120fd9044bc716eb069db691396a5494aae514c00b2d20a6d3c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-image.json": "202cec53bc9ee9aeb58d5d0bfa67d076e1300c84c46ab75ebf639094c7b4f4d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-deferred-vent-review.json": "234000b6112f4568f57283dec428f26764c9b3dfee5dac3872f9930be0ea7b75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-focused-checks.json": "301e12ee901cf24bb9673c1bf9f482d729ebf52332f65eafbf8ca7cc5d7b5160",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-frozen-source-verification.json": "b6a3fe72655446a51b3edfbb15e2cabc700d1faa6755c2c6296a871b5771d809",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-own-tier-diff.json": "dd6af000c262ba3f8a3c846da4e42dd8cc02de42faa0037791c01cde5f794e13",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-resume-review.json": "a9677fad3588258d7ab88fb182cdc8779cf9e40ee44a1e642cfff8395767004d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-special-routing-review.json": "20c39432c45ffc8f9337c70897ee7453745f87064bad4a1967969a32add5a9df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-traits-review.json": "6e686e52e1154019d1cc68d38df004eec014082434848068f50e6ca65d926e7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-ui-raw-verification.json": "bace95315c2bc0aee332b1f0964b7d1a05690e7759d96d67b777c4a5c3d4f19c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-ui-review.json": "150a136c2cfbcac4d04ad1aa59d145e2bcaa94ea7bb415d26c3853a39d56ef7f",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7c2de0f7831980d88483e8c2df282ed08662fea9e8bbab7e54a3ba5c705b04cc",
+      "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/DAMAGE_PERCENTAGE_REVIEW.md": "c5c6d6b34a940c919e1ad763a3a657a307c927e6a636ac2ff8d207cfde5bb4fe",
+      "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/LOCALIZATION_COMPARISON.md": "af4d1ced5592e9566dd5759b4035628c8d4acd6e9b85148d5a7ce145eafb9092",
+      "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/README.md": "a8006576ac81bb670545ae86eab5b24b42f1ad32e2361e47deb4beb1c56af782",
+      "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/SOURCE_INDEX.md": "05006cfa19f90fa9b7deef1aa9bd3ad37a19fb5bf3e73b9b816734c9dc5dbc4c",
+      "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/TIER_VALUES.md": "6d214401297e4d24e14ba1500dd762385e300ec9df68113ede1031e2bb1e9c9d",
+      "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/WEAPON_COMPATIBILITY.md": "4cc9145722c5ea7ae8619d08dc86ff1d81fb7bc59020e756077e4d27e2571ee6",
+      "Game Info/releases/1.13.X/blessings/entries/凶殘之寧/weapon_trait_bespoke_forcesword_2h_p1_vent_warp_charge_on_multiple_hits.md": "1b8e89b49abf394c92b628490a7d11cd89fb1fce005c597d1a52861b035eaf17",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "3de5e50d97c5499ec283e65585d933894497a4ae439a770d999dadfb1859ccfe",
+      "Game Info/releases/1.13.X/blessings/README.md": "701e00dcbcaf7e5830b2d1a525ff67ca4811dbdfcc5bf15bff1033aba54c95d7",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "3896ee9ec724b996f4678b66fc158a560a1380ea3ce64270cd7286c86ce2b645",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "5a78c7bbcd14a4bdda3ca866c44d60b8029621532a76ccba0a21ce3f1b3dedb9",
+      "Referneces/Translation.md": "d7a1494d2fed3d19656d183921ece24485b786876c9392a6022bc8567a4f32d4"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/be8c86da-c7a2-49b0-a25f-93df4bb03455",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "murderous-tranquility",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_220",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_220.png",
+      "attachment": "https://github.com/user-attachments/assets/be8c86da-c7a2-49b0-a25f-93df4bb03455",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5982077828",
+      "acquired_date": "2026-10-05",
+      "sha256": "bdd260c95a8ed94d4c58392a023326d6ebbb387f13cb676d28af764c1e2a53d3",
+      "content_type": "image/png",
+      "size": 6345,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "凶殘之寧祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": {
+        "source_and_public_originals_viewed": true,
+        "alpha_channel_visualization_viewed": true,
+        "observation": "128x128 white flame outline, central curved notch and surrounding lightning/shard forms; source and public attachment agree.",
+        "original_bytes_unmodified": true,
+        "diagnostics": "TEMP alpha-channel QA only; not uploaded and not committed."
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 269,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 38,
+      "source_files": 21,
+      "bindings": 508,
+      "variants": 264,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 21,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 705,
+      "remote_references": 305,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 19,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-018-full-scan.json",
+        "sha256": "50537572ac4176f44ef9c60075cbfc71e4ae549998bbd778254c4d8e89cd52fa",
+        "trigger": "round-018"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 81,
+    "not_started_name_groups": 81,
+    "partial_name_groups": 0,
+    "remaining_variants": 341,
+    "remaining_bindings": 677,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "877bd0bfcfb3ec33b75b8e7cca997b0c907740d035f117d6df111193255a1175"
+  },
+  "previous_local_commit": "0147ec19081ab2a27a04c1b05e00619377ea8929",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-deferred-vent-review.json",
+      "sha256": "234000b6112f4568f57283dec428f26764c9b3dfee5dac3872f9930be0ea7b75"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-focused-checks.json",
+      "sha256": "301e12ee901cf24bb9673c1bf9f482d729ebf52332f65eafbf8ca7cc5d7b5160"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-frozen-source-verification.json",
+      "sha256": "b6a3fe72655446a51b3edfbb15e2cabc700d1faa6755c2c6296a871b5771d809"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-own-tier-diff.json",
+      "sha256": "dd6af000c262ba3f8a3c846da4e42dd8cc02de42faa0037791c01cde5f794e13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-resume-review.json",
+      "sha256": "a9677fad3588258d7ab88fb182cdc8779cf9e40ee44a1e642cfff8395767004d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-special-routing-review.json",
+      "sha256": "20c39432c45ffc8f9337c70897ee7453745f87064bad4a1967969a32add5a9df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-traits-review.json",
+      "sha256": "6e686e52e1154019d1cc68d38df004eec014082434848068f50e6ca65d926e7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-ui-raw-verification.json",
+      "sha256": "bace95315c2bc0aee332b1f0964b7d1a05690e7759d96d67b777c4a5c3d4f19c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-primary-ui-review.json",
+      "sha256": "150a136c2cfbcac4d04ad1aa59d145e2bcaa94ea7bb415d26c3853a39d56ef7f"
+    }
+  ],
+  "primary_review_method": "Own4 tier/wrapper held predicate/RAW/UI/icon220 verified; fixed frozen source and shared cache45 reused under own applicability. Direct differences: boolean coalescing, next playerfixedupdate consumption, pendingflag after unwield, absolute fraction subtraction/clamp and exploding state. Additional actual windslash/2Markfling ranged routes excluded with exact9 source ranges; no mechanical hash-only review.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-config.json",
+    "sha256": "3701db5eba39ec03ebd378053c305fcb892a95a9422c84503cf90a31b8c8a395"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "8c4cb348157bb4747e5ab8c5567ae82fdcdf10ef6d3f483906fc9f26e8538074",
+    "evidence.json": "22675427547f402b5b3d31d98f6f0f4a16dee3d1372e3ac9b534a179cd05a37f",
+    "draft.md": "b3b5ac5d0851b69f05aec2c9ed57fc7ce41f7261aa664cf1a5a7ef8a44387563"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/murderous-tranquility-formal-peer-scope.json",
+    "sha256": "0324c3fbaef533f4ea207dcb7b79ebc0d677fa82516ca43adc474a74b8ee31a4",
+    "final_content_hashes_unchanged": true
+  }
+}

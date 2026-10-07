@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-04",
+  "status": "accepted",
+  "reason": "Current actual UI family/pattern/mark names differ from the earlier item display_name labels in Shred pages. Mechanism, tiers, bindings and images unchanged.",
+  "blessing": "shred",
+  "replacements": {
+    "西福爾穿音速刀刃": "穿音速雙刀 布蘭克斯 Mk XI",
+    "馬卡比安Mk II決鬥劍": "決鬥劍 馬卡比安 Mk II",
+    "馬卡比安Mk IV決鬥劍": "決鬥劍 馬卡比安 Mk IV",
+    "馬卡比安Mk V決鬥劍": "決鬥劍 馬卡比安 Mk V"
+  },
+  "source_receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-review.json",
+  "count_as_new_completed_blessing": false,
+  "scope": "Only Shred player/compatibility/trait/source labels; preserve mechanics and prior acceptance history.",
+  "changed_files": [
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/粉碎/README.md",
+      "before_sha256": "2b1e8b04cfab9d7c97bbdc74e47e67a4a90921f87b7d3dc695ae6d806b565a03",
+      "after_sha256": "5ea7e11cacfda162e189e1a5c8a8a8e371d84533541500a34ab16b0793ee1e64"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/粉碎/SOURCE_INDEX.md",
+      "before_sha256": "3603ca03f74eafdba64d583c071c170a109e4ff082065e2870e30073c7ed1d6b",
+      "after_sha256": "f6086ed15ed01ddc310113d7a9f5ca37dfe8d1b8b826fd8b0a1ab1c57cec0878"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/粉碎/WEAPON_COMPATIBILITY.md",
+      "before_sha256": "e16f4bbd4b4fc0d63efcfe7a937c10d9d2cff1a5b373aa83db6c8fd05065cf80",
+      "after_sha256": "5a310181ecfffab787752524dc727d26b741342ffa82e5001a1dac1c1932fda7"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/粉碎/weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance.md",
+      "before_sha256": "40ddcb3d02c9d09a104efc0656fb1bfb68a8976d76cca02b393f3441c75ab335",
+      "after_sha256": "0c0e56058f791a835b003a15b007b19fa17713034ea02b9bf8826fdf9ef578fe"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/blessings/entries/粉碎/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance.md",
+      "before_sha256": "552f99b27cef5cd4c07a49b2f7d2d770583005d4738a99d439d70e0a6defca63",
+      "after_sha256": "33a30ee15224486c8876accf0937cbbdd7e75775a613dc0b0d65e7fb859462ca"
+    }
+  ],
+  "counts_unchanged": true,
+  "mechanisms_unchanged": true,
+  "image_receipt_reused": true,
+  "previous_commit": "9d904ba80b8c75877d124422088c6a20c0d0e04f",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "primary_review": "The five current files exactly equal HEAD after only the four verified name substitutions. All source URLs, tiers, mechanisms, trait/mark relations and image URLs are unchanged.",
+  "source_name_evidence": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-review.json",
+    "sha256": "4f82ebf4cf42d6921392b601e607b81e4d74705616350070ce82070780bc8480"
+  },
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "document_branch": "codex/blessings-translation",
+    "document_head": "9d904ba80b8c75877d124422088c6a20c0d0e04f",
+    "scope": "Independent name-only peer review of the five Shred Markdown files against the UI family/pattern/mark evidence. No blessing mechanism re-review.",
+    "findings": [
+      "The five Markdown diffs contain only the four exact Shred weapon-name replacements recorded in the correction draft; each current file SHA-256 matches its draft after_sha256. No mechanism, tier, binding, or image content changed.",
+      "The locale-16 RAW family, pattern, and mark values at the fixed source commit compose exactly to each replacement label: 決鬥劍 馬卡比安 Mk II; 決鬥劍 馬卡比安 Mk IV; 決鬥劍 馬卡比安 Mk V; 穿音速雙刀 布蘭克斯 Mk XI.",
+      "The shared blessing map is unchanged in the current branch diff."
+    ],
+    "verified_ui_names": [
+      {
+        "weapon_id": "combatsword_p3_m1",
+        "family": "決鬥劍",
+        "pattern": "馬卡比安",
+        "mark": "Mk II",
+        "composed_name": "決鬥劍 馬卡比安 Mk II"
+      },
+      {
+        "weapon_id": "combatsword_p3_m2",
+        "family": "決鬥劍",
+        "pattern": "馬卡比安",
+        "mark": "Mk IV",
+        "composed_name": "決鬥劍 馬卡比安 Mk IV"
+      },
+      {
+        "weapon_id": "combatsword_p3_m3",
+        "family": "決鬥劍",
+        "pattern": "馬卡比安",
+        "mark": "Mk V",
+        "composed_name": "決鬥劍 馬卡比安 Mk V"
+      },
+      {
+        "weapon_id": "transonic_sword_transonic_knife_p1_m1",
+        "family": "穿音速雙刀",
+        "pattern": "布蘭克斯",
+        "mark": "Mk XI",
+        "composed_name": "穿音速雙刀 布蘭克斯 Mk XI"
+      }
+    ],
+    "raw_evidence": {
+      "resource": "content/localization/items",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "locale": 16
+    },
+    "count_as_new_completed_blessing": false,
+    "inventory_count_changed": false,
+    "scope_note": "This is only a UI weapon-name correction. It is not a newly completed blessing and does not increment the blessing inventory count.",
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/README.md": "5ea7e11cacfda162e189e1a5c8a8a8e371d84533541500a34ab16b0793ee1e64",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/SOURCE_INDEX.md": "f6086ed15ed01ddc310113d7a9f5ca37dfe8d1b8b826fd8b0a1ab1c57cec0878",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/WEAPON_COMPATIBILITY.md": "5a310181ecfffab787752524dc727d26b741342ffa82e5001a1dac1c1932fda7",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance.md": "0c0e56058f791a835b003a15b007b19fa17713034ea02b9bf8826fdf9ef578fe",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance.md": "33a30ee15224486c8876accf0937cbbdd7e75775a613dc0b0d65e7fb859462ca",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7e20bc7f2a2730b586b0f8ec2389aabe3ac46e89b36029f6e193ba81c1e3b947",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shred-ui-name-correction-draft.json": "8d7a7e6c263f36627e5fc46d6c700a740b4330bdbc1ea6f6979b27ebc783c93d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-review.json": "4f82ebf4cf42d6921392b601e607b81e4d74705616350070ce82070780bc8480"
+    }
+  },
+  "counts": {
+    "blessings": 48,
+    "variants": 184,
+    "bindings": 352
+  },
+  "validation": {
+    "source_mapping": "94 ranges in56 fixed-source cached files; global map consistency passed",
+    "markdown": "5 files,4tables125rows9lists parsed",
+    "links": "61local170remote,0newerrors",
+    "image": "Previously accepted unchanged Shred attachment reused; no image files changed",
+    "global_unique_partition": "Unchanged map and remaining-tasks from accepted Riposte commit; exact partition preserved",
+    "final_focused_checks": {
+      "source": {
+        "source_ranges_verified": 94,
+        "source_files": 56,
+        "bindings": 352,
+        "variants": 184,
+        "formula_checks": "passed",
+        "scope": "focused",
+        "markdown_files": 5,
+        "source_object_cache": {
+          "cache_hits": 56,
+          "git_objects_read": 0
+        },
+        "global_shared_map_consistency": true
+      },
+      "markdown": {
+        "files": 7,
+        "tables": 4,
+        "rows": 125,
+        "lists": 13,
+        "scope": "focused"
+      },
+      "links": {
+        "scope": "focused",
+        "markdown_files": 7,
+        "local_references": 202,
+        "remote_references": 170,
+        "errors": [],
+        "existing_errors": 0,
+        "new_errors": []
+      }
+    }
+  },
+  "peer_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shred-ui-name-correction-peer.json",
+    "sha256": "405444ff2d432c466808bd9ccf1432c2e5c05293d11c06d5428590c1c4f4efca"
+  }
+}

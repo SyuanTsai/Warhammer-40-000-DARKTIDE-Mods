@@ -1,0 +1,583 @@
+{
+  "date": "2026-10-06",
+  "blessing": "cavalcade",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/接連不斷/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autopistol_p1_stacking_crit_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_bolter_p1_stacking_crit_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_dual_autopistols_p1_stacking_crit_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_ogryn_rippergun_p1_stacking_crit_bonus_on_continuous_fire"
+  ],
+  "added_binding_count": 10,
+  "total_variants": 5,
+  "total_bindings": 10,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "cavalcade",
+    "review_type": "non_author_formal_peer",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-formal-peer-scope.json",
+    "scope_sha256": "78b5691eb0b17d8190688e84f0ca5a8b844c59a1ededca4b8aec21f5ec1d09c4",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-agent-config.json": "1977f432e801db10d0a4e37c7b38c82581f189b6bd6dc1d8f6dbc9fccf3fa6d7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-agent-draft.md": "ae101a627ef857d036916bcc6dbe92b1c3be72516c63a8496e6ce2980b981a70",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-agent-evidence.json": "071abbf40acb80a83b6d10f9e3db45ef32525617c100db5884f68982dbcf2614",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-config.json": "922bc8c0788cd0ae944883cd0cf9f5f3f1ff8be32caae7e7ff18ef8acef87009",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-extension-draft.json": "96203b0cafb76a18a2a22704d05573b373baa6224b9a2738790370be36d8b687",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-001.json": "823356148ba882ca3fdd88d70827d143152ed0ddcb77ebd7ca858ce428265fdb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-002.json": "b8c6845787510884678c1a27f0f7f6dec4fec8703805fbb6f211933bbafa9632",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-003.json": "6db00a5657a6d15a6c15985ec881532c2f9844ae49344bad99e08ddce5a175ed",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-004.json": "30872f86ada2f90916b58549bf394f8783a605715ad99778a05be9d87d87a583",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-005.json": "262cd56e91da76847e18ad93ee52b7141acb79c2b43e017f36e2a19bf461fb9b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-config.json": "1977f432e801db10d0a4e37c7b38c82581f189b6bd6dc1d8f6dbc9fccf3fa6d7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-coverage.json": "54d30cdc865ef2d580aa30a8275777476e0b14a1d89fcae39a4bb65d207ff296",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-draft.md": "ae101a627ef857d036916bcc6dbe92b1c3be72516c63a8496e6ce2980b981a70",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-evidence.json": "071abbf40acb80a83b6d10f9e3db45ef32525617c100db5884f68982dbcf2614",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-clear-timer-proof.json": "c8fb38da51a7a8749d5c2293d8b69db3ed846d297d284065e1e5801ca883c2da",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/hit-and-run-activated-formal-nonauthor-review.json": "6806835ad75040a8ad13c67ebe810921d95bba74c167cc743ac08b7cb5093c85",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/powderburn-formal-nonauthor-review.json": "203d6720438fa125253472944a2fded4468f1c4cf797525b16ed3f5231e13712",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-image.json": "e20a46c8f835c8bfc68f2f240e3307cfe6b3baf9bd21295bf7cabcacacd50dfa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-final-content-delta-review.json": "9d7238357b325e0069f66381f49957a9e62ef3697272f4c75b89acf7294ddca1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-focused-checks.json": "313cc77f0a8215249761e79cedac586a1f3d5e0d280edf91d3f9d821be37b96e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-frozen-source-verification.json": "3c7ff759335ef33c2e1b44d7e1c1e3bbd81e5072bd2967ec7268f6146cdece2b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-own-tier-wrapper-step-crit-material-review.json": "0bcdda9320f1e24c49ec325e50936dcf9040949c505b8eaf1a0d786adad2ffe8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-resume-review.json": "8682d6d2d9aca097110b1ff5fa7b90861a232afeda3d750e3574b0c0d24e068a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-special-melee-crit-consumer-difference-review.json": "a8efc8344b989b6d790e2b2d82966757254f6a81509ff583387502f7a6076d35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-traits-review.json": "fa3713e1865be405e2603ffe1a9531b580b6c02317f28697cfc8fc61036c179e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-ui-raw-verification.json": "f02eb7acc0a52c96cb333eaa556e7fb255f0b0eff9376cc807a10a8d65acef98",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-ui-review.json": "c33ef493cec5f5dc0d3e373f2d4206f5555a9d9b0d6a65860538b8b40541577e",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-raw-verification.json": "9e6706ac6b1dbaac4536aa42964aae62b903ee0eaeb3056a21555c38534532ad",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ae0674d29dbd6a17d5388f092f3dec9e9ae6b0794ca74073fc81fc772a3aee2c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/DAMAGE_PERCENTAGE_REVIEW.md": "206575d346a1b5c10d58a0e4154c7aeb6f98520b2b5297c18faa768916ea0757",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/LOCALIZATION_COMPARISON.md": "a8d0db0ba68e111452d87e6453bb841444d4ed5624c05b39735b4c32890e9885",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/README.md": "a5665048289ede55414c41f30b3ef39b78221d3a61cecbe2102294e79082e027",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/SOURCE_INDEX.md": "730ec2cf63dc44157dcd8414a5ad4c61b02f7bf466bf4f33422eed048fc51390",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/TIER_VALUES.md": "83f802e538dff635d4262b49f4cf80db695af321aae666cd3bd6e357e70ef573",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/WEAPON_COMPATIBILITY.md": "162ff322c4ad0dbb81324769b6b8c5c00ad1eee1c9993e6627c310d30b5e513d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_autopistol_p1_stacking_crit_bonus_on_continuous_fire.md": "57051507c6895d04c679f5aec2c5152c533590662b5850e70a92034f01b33da5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_bolter_p1_stacking_crit_bonus_on_continuous_fire.md": "6a2bbdae9942f6bf564346fe342295c6caf61cbddc0ee2e5c3d20526176612c7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_dual_autopistols_p1_stacking_crit_bonus_on_continuous_fire.md": "4e7c1ebbb01438c93272c423a2b46f59a71a091db17b2131ce0b6a73160bcfe6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_bonus_on_continuous_fire.md": "94162e059479b1e082332145501e1eb410300df42a15ca4557c0d6756184d128",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_ogryn_rippergun_p1_stacking_crit_bonus_on_continuous_fire.md": "08dfe56c1e4d492824d160b0d9c0a2a78fef2d68dcf8f1040014f02c482495f4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/ranged/README.md": "53775f79fea23d85b7a909bcad2a77715c66476c9dfb6b54f5d79735142a3538",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "e9b263047a7eb264172747629b6e613ebd2600618a9a2e0170f54b52d73c6181",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "511aad37a9be8e485d2e8acebae9f148759d41fe15e834a52b1806ee2d6fc76b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂槍/README.md": "264a748ca97263b91e289801e38c90d35107dd3a380811e31e98b66b9ef6a7cd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "a78ccf931507b1f2e604d9ea6c94ebf70a5e17007397104822157e8312ec0966",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/矛頭爆矢槍/README.md": "7deadc6c63dc2ffd0d6bb27031141fceec306a5ed26caa473e1527f583e9acf0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "6d0c1631e38bca6de32c4b82d093fe96e4b75f5d64cf53282d32eec2b8dfe453",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "31bb014500988703f393dcfbe3476312ecf147d52e5d5242240fd8a2bbd8d908",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/own-association-snapshot.json": "0bb11dd86bb90852e07e9d09a12475d07940678b09d7f05463ce7bf3de5e8a6d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/actual-preview-005/Referneces/Translation.md": "149f8c290d59d23f6fa7747cd31512df0846c92ffdcd9e96be82bc2b12aadd88",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-005.json": "262cd56e91da76847e18ad93ee52b7141acb79c2b43e017f36e2a19bf461fb9b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-config.json": "1977f432e801db10d0a4e37c7b38c82581f189b6bd6dc1d8f6dbc9fccf3fa6d7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-coverage.json": "54d30cdc865ef2d580aa30a8275777476e0b14a1d89fcae39a4bb65d207ff296",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-draft.md": "ae101a627ef857d036916bcc6dbe92b1c3be72516c63a8496e6ce2980b981a70",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-clear-timer-proof.json": "c8fb38da51a7a8749d5c2293d8b69db3ed846d297d284065e1e5801ca883c2da",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/inputs/BLESSING_WEAPON_MAP-003.json": "a6a49d266032b76f9c3338f3fd1221e3b2748c8e9b0acce2b18b9d256aad5b63",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/inputs/cavalcade-baseline-003.json": "8867f6353550b3c89a000bbe87031b816b3a6e8e68524240c462f3372e23991f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/inputs/remaining-tasks-003.json": "eae91db3f50b34c6dacbe9b9916a436bb763aa16f632c5d816c41c6e96d6667f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-special-melee-crit-consumer-difference-review.json": "a8efc8344b989b6d790e2b2d82966757254f6a81509ff583387502f7a6076d35",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ae0674d29dbd6a17d5388f092f3dec9e9ae6b0794ca74073fc81fc772a3aee2c",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/DAMAGE_PERCENTAGE_REVIEW.md": "206575d346a1b5c10d58a0e4154c7aeb6f98520b2b5297c18faa768916ea0757",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/LOCALIZATION_COMPARISON.md": "a8d0db0ba68e111452d87e6453bb841444d4ed5624c05b39735b4c32890e9885",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/README.md": "a5665048289ede55414c41f30b3ef39b78221d3a61cecbe2102294e79082e027",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/SOURCE_INDEX.md": "730ec2cf63dc44157dcd8414a5ad4c61b02f7bf466bf4f33422eed048fc51390",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/TIER_VALUES.md": "83f802e538dff635d4262b49f4cf80db695af321aae666cd3bd6e357e70ef573",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/WEAPON_COMPATIBILITY.md": "162ff322c4ad0dbb81324769b6b8c5c00ad1eee1c9993e6627c310d30b5e513d",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_autopistol_p1_stacking_crit_bonus_on_continuous_fire.md": "57051507c6895d04c679f5aec2c5152c533590662b5850e70a92034f01b33da5",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_bolter_p1_stacking_crit_bonus_on_continuous_fire.md": "6a2bbdae9942f6bf564346fe342295c6caf61cbddc0ee2e5c3d20526176612c7",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_dual_autopistols_p1_stacking_crit_bonus_on_continuous_fire.md": "4e7c1ebbb01438c93272c423a2b46f59a71a091db17b2131ce0b6a73160bcfe6",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_bonus_on_continuous_fire.md": "94162e059479b1e082332145501e1eb410300df42a15ca4557c0d6756184d128",
+      "Game Info/releases/1.13.X/blessings/entries/接連不斷/weapon_trait_bespoke_ogryn_rippergun_p1_stacking_crit_bonus_on_continuous_fire.md": "08dfe56c1e4d492824d160b0d9c0a2a78fef2d68dcf8f1040014f02c482495f4",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "53775f79fea23d85b7a909bcad2a77715c66476c9dfb6b54f5d79735142a3538",
+      "Game Info/releases/1.13.X/blessings/README.md": "e9b263047a7eb264172747629b6e613ebd2600618a9a2e0170f54b52d73c6181",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "511aad37a9be8e485d2e8acebae9f148759d41fe15e834a52b1806ee2d6fc76b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂槍/README.md": "264a748ca97263b91e289801e38c90d35107dd3a380811e31e98b66b9ef6a7cd",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "a78ccf931507b1f2e604d9ea6c94ebf70a5e17007397104822157e8312ec0966",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/矛頭爆矢槍/README.md": "7deadc6c63dc2ffd0d6bb27031141fceec306a5ed26caa473e1527f583e9acf0",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "6d0c1631e38bca6de32c4b82d093fe96e4b75f5d64cf53282d32eec2b8dfe453",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "31bb014500988703f393dcfbe3476312ecf147d52e5d5242240fd8a2bbd8d908",
+      "Referneces/Translation.md": "149f8c290d59d23f6fa7747cd31512df0846c92ffdcd9e96be82bc2b12aadd88"
+    },
+    "scope_verification": {
+      "file_count": 94,
+      "matched": 94,
+      "mismatched": 0
+    },
+    "reviewed_content": [
+      "Reviewed the complete 11-page item set: the main player page, five actual implementation variants, RAW comparison, tier table, formula review, source index, and weapon compatibility mapping. The Traditional Chinese effect and English/Traditional Chinese RAW templates retain the pinned resource/hash and formatter output for all four tiers.",
+      "The five actual trait implementations bind to ten Marks across the five listed weapon families. The global map and actual-preview-005 association snapshot agree on all five variant IDs and all ten (weapon, mark, variant, trait item) tuples; the five scoped reverse weapon pages include the corresponding Cavalcade association.",
+      "The own tier rows are +3.5/+4/+4.5/+5 percentage points per step, with a five-step cap. Four families format a 10% magazine step and the Ripper P1 formats 8%; its helper likewise uses floor(max magazine capacity times .08) with a one-round minimum. The Heavy Stubber IIa example yields S=4, k=2, and +8 percentage points at tier II; the Ripper II example yields S=1 across M=12–24, k=5, and +22.5 points at tier III. Both examples distinguish additive crit-chance input from realized crit frequency and damage.",
+      "The fixed source receipts support the shared player firing counter increment before hit resolution, one increment per shot rather than per pellet or target, and threshold updates only when the stat cache recalculates. Reload/no-valid-slot returns no contribution. The idle spread/movement clearing timers use strict expiry and vary by actual Mark; switching slots alone does not clear the player-shared counter, and true unequip removes the on-equip trait buff.",
+      "The special-route claims match the fixed weapon profiles: the two Bolter action_push special bindings are Sweep actions; Dual Autopistols pistol-whip and Ripper stab are also Sweep melee actions that run the melee critical check and can read current generic crit chance without incrementing the firing counter. Flashlight toggles do not attack; a pure push does not provide the critical result. Independent follow-up attacks are evaluated through their own attack path.",
+      "The image receipt identifies the actual weapon_trait_125 icon and the GitHub attachment URL separately, with the fixed 128x128 PNG hash, public-download verification, and display verification. The shared map and reverse references preserve the same image and actual binding association."
+    ],
+    "reused_evidence_with_scope_conditions": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-own-tier-wrapper-step-crit-material-review.json",
+        "sha256": "0bcdda9320f1e24c49ec325e50936dcf9040949c505b8eaf1a0d786adad2ffe8",
+        "condition": "Applies to the five listed actual Cavalcade traits and their same-key own tier overrides / per-family magazine-step helpers."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-special-melee-crit-consumer-difference-review.json",
+        "sha256": "a8efc8344b989b6d790e2b2d82966757254f6a81509ff583387502f7a6076d35",
+        "condition": "Applies only to the exact Bolter P1 M1/M2, Dual Autopistols P1 M1, and Ripper P1 M1/M2/M3 special action profiles named in the proof."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-image.json",
+        "sha256": "e20a46c8f835c8bfc68f2f240e3307cfe6b3baf9bd21295bf7cabcacacd50dfa",
+        "condition": "Applies to this Cavalcade page and all five variants sharing actual icon weapon_trait_125."
+      },
+      {
+        "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+        "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+        "condition": "Reused only for the relevant firing counter, stepped-stat, generic critical-chance, held-slot, cache update, and switch/unequip mechanics as scoped in the Cavalcade source index."
+      }
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/7656fac7-2c30-4d51-9551-48872fc96a1c",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "cavalcade",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_125",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_125.png",
+      "attachment": "https://github.com/user-attachments/assets/7656fac7-2c30-4d51-9551-48872fc96a1c",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6008147540",
+      "acquired_date": "2026-10-06",
+      "sha256": "eb12eea0f4ad2f002f2a34fd9bd9b55538dfdeed9fcebd82782170e9c8575b67",
+      "content_type": "image/png",
+      "size": 7292,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "接連不斷祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": {
+        "reviewer": "Root Sol xhigh",
+        "public_original_viewed": true,
+        "result": "Public128 square matches acquired source SHA256, original pixels retained; grayscale blocky central dark-gray shapes against pale-gray tile and white surrounding margin."
+      }
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 19,
+      "rows": 617,
+      "lists": 96,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 134,
+      "source_files": 41,
+      "bindings": 1022,
+      "variants": 526,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 41,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 1426,
+      "remote_references": 588,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 42,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-041-full-scan.json",
+        "sha256": "698b670fe1fde7129b1b64d244d8dfa0ab2977174c29ae717f53db3652ba0633",
+        "trigger": "round-041"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 13,
+    "not_started_name_groups": 13,
+    "partial_name_groups": 0,
+    "remaining_variants": 79,
+    "remaining_bindings": 163,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "23a2f82e5ca47f3c3e09d00cbd5d39f372ab994c56ec38ad3b7cd39458943a71"
+  },
+  "previous_local_commit": "496070020fee68f418e7ea273e05f229aa9222b4",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-final-content-delta-review.json",
+      "sha256": "9d7238357b325e0069f66381f49957a9e62ef3697272f4c75b89acf7294ddca1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-focused-checks.json",
+      "sha256": "313cc77f0a8215249761e79cedac586a1f3d5e0d280edf91d3f9d821be37b96e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-frozen-source-verification.json",
+      "sha256": "3c7ff759335ef33c2e1b44d7e1c1e3bbd81e5072bd2967ec7268f6146cdece2b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-own-tier-wrapper-step-crit-material-review.json",
+      "sha256": "0bcdda9320f1e24c49ec325e50936dcf9040949c505b8eaf1a0d786adad2ffe8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-resume-review.json",
+      "sha256": "8682d6d2d9aca097110b1ff5fa7b90861a232afeda3d750e3574b0c0d24e068a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-special-melee-crit-consumer-difference-review.json",
+      "sha256": "a8efc8344b989b6d790e2b2d82966757254f6a81509ff583387502f7a6076d35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-traits-review.json",
+      "sha256": "fa3713e1865be405e2603ffe1a9531b580b6c02317f28697cfc8fc61036c179e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-ui-raw-verification.json",
+      "sha256": "f02eb7acc0a52c96cb333eaa556e7fb255f0b0eff9376cc807a10a8d65acef98"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-ui-review.json",
+      "sha256": "c33ef493cec5f5dc0d3e373f2d4206f5555a9d9b0d6a65860538b8b40541577e"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-config.json",
+    "sha256": "922bc8c0788cd0ae944883cd0cf9f5f3f1ff8be32caae7e7ff18ef8acef87009"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\cavalcade-actual-preview-receipt-005.json",
+      "sha256": "262cd56e91da76847e18ad93ee52b7141acb79c2b43e017f36e2a19bf461fb9b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\cavalcade-agent-config.json",
+      "sha256": "1977f432e801db10d0a4e37c7b38c82581f189b6bd6dc1d8f6dbc9fccf3fa6d7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\cavalcade-agent-coverage.json",
+      "sha256": "54d30cdc865ef2d580aa30a8275777476e0b14a1d89fcae39a4bb65d207ff296"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\cavalcade-agent-draft.md",
+      "sha256": "ae101a627ef857d036916bcc6dbe92b1c3be72516c63a8496e6ce2980b981a70"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\cavalcade-clear-timer-proof.json",
+      "sha256": "c8fb38da51a7a8749d5c2293d8b69db3ed846d297d284065e1e5801ca883c2da"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\inputs\\BLESSING_WEAPON_MAP-003.json",
+      "sha256": "a6a49d266032b76f9c3338f3fd1221e3b2748c8e9b0acce2b18b9d256aad5b63"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\inputs\\cavalcade-baseline-003.json",
+      "sha256": "8867f6353550b3c89a000bbe87031b816b3a6e8e68524240c462f3372e23991f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\inputs\\remaining-tasks-003.json",
+      "sha256": "eae91db3f50b34c6dacbe9b9916a436bb763aa16f632c5d816c41c6e96d6667f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-primary-special-melee-crit-consumer-difference-review.json",
+      "sha256": "a8efc8344b989b6d790e2b2d82966757254f6a81509ff583387502f7a6076d35"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\releases\\1.13.X\\blessings\\2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "e9b263047a7eb264172747629b6e613ebd2600618a9a2e0170f54b52d73c6181"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "511aad37a9be8e485d2e8acebae9f148759d41fe15e834a52b1806ee2d6fc76b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "ae0674d29dbd6a17d5388f092f3dec9e9ae6b0794ca74073fc81fc772a3aee2c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "206575d346a1b5c10d58a0e4154c7aeb6f98520b2b5297c18faa768916ea0757"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\LOCALIZATION_COMPARISON.md",
+      "sha256": "a8d0db0ba68e111452d87e6453bb841444d4ed5624c05b39735b4c32890e9885"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\README.md",
+      "sha256": "a5665048289ede55414c41f30b3ef39b78221d3a61cecbe2102294e79082e027"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\SOURCE_INDEX.md",
+      "sha256": "730ec2cf63dc44157dcd8414a5ad4c61b02f7bf466bf4f33422eed048fc51390"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\TIER_VALUES.md",
+      "sha256": "83f802e538dff635d4262b49f4cf80db695af321aae666cd3bd6e357e70ef573"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\WEAPON_COMPATIBILITY.md",
+      "sha256": "162ff322c4ad0dbb81324769b6b8c5c00ad1eee1c9993e6627c310d30b5e513d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\weapon_trait_bespoke_autopistol_p1_stacking_crit_bonus_on_continuous_fire.md",
+      "sha256": "57051507c6895d04c679f5aec2c5152c533590662b5850e70a92034f01b33da5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\weapon_trait_bespoke_bolter_p1_stacking_crit_bonus_on_continuous_fire.md",
+      "sha256": "6a2bbdae9942f6bf564346fe342295c6caf61cbddc0ee2e5c3d20526176612c7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\weapon_trait_bespoke_dual_autopistols_p1_stacking_crit_bonus_on_continuous_fire.md",
+      "sha256": "4e7c1ebbb01438c93272c423a2b46f59a71a091db17b2131ce0b6a73160bcfe6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_bonus_on_continuous_fire.md",
+      "sha256": "94162e059479b1e082332145501e1eb410300df42a15ca4557c0d6756184d128"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\接連不斷\\weapon_trait_bespoke_ogryn_rippergun_p1_stacking_crit_bonus_on_continuous_fire.md",
+      "sha256": "08dfe56c1e4d492824d160b0d9c0a2a78fef2d68dcf8f1040014f02c482495f4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "53775f79fea23d85b7a909bcad2a77715c66476c9dfb6b54f5d79735142a3538"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\撕裂槍\\README.md",
+      "sha256": "264a748ca97263b91e289801e38c90d35107dd3a380811e31e98b66b9ef6a7cd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\撕裂者自動手槍\\README.md",
+      "sha256": "a78ccf931507b1f2e604d9ea6c94ebf70a5e17007397104822157e8312ec0966"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\矛頭爆矢槍\\README.md",
+      "sha256": "7deadc6c63dc2ffd0d6bb27031141fceec306a5ed26caa473e1527f583e9acf0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重伐木槍\\README.md",
+      "sha256": "6d0c1631e38bca6de32c4b82d093fe96e4b75f5d64cf53282d32eec2b8dfe453"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\雙持自動手槍\\README.md",
+      "sha256": "31bb014500988703f393dcfbe3476312ecf147d52e5d5242240fd8a2bbd8d908"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "149f8c290d59d23f6fa7747cd31512df0846c92ffdcd9e96be82bc2b12aadd88"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-raw-verification.json",
+      "sha256": "9e6706ac6b1dbaac4536aa42964aae62b903ee0eaeb3056a21555c38534532ad"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\cavalcade-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "0bb11dd86bb90852e07e9d09a12475d07940678b09d7f05463ce7bf3de5e8a6d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-001.json",
+      "sha256": "823356148ba882ca3fdd88d70827d143152ed0ddcb77ebd7ca858ce428265fdb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-002.json",
+      "sha256": "b8c6845787510884678c1a27f0f7f6dec4fec8703805fbb6f211933bbafa9632"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-003.json",
+      "sha256": "6db00a5657a6d15a6c15985ec881532c2f9844ae49344bad99e08ddce5a175ed"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-004.json",
+      "sha256": "30872f86ada2f90916b58549bf394f8783a605715ad99778a05be9d87d87a583"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-actual-preview-receipt-005.json",
+      "sha256": "262cd56e91da76847e18ad93ee52b7141acb79c2b43e017f36e2a19bf461fb9b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-config.json",
+      "sha256": "1977f432e801db10d0a4e37c7b38c82581f189b6bd6dc1d8f6dbc9fccf3fa6d7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-coverage.json",
+      "sha256": "54d30cdc865ef2d580aa30a8275777476e0b14a1d89fcae39a4bb65d207ff296"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-draft.md",
+      "sha256": "ae101a627ef857d036916bcc6dbe92b1c3be72516c63a8496e6ce2980b981a70"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-agent-evidence.json",
+      "sha256": "071abbf40acb80a83b6d10f9e3db45ef32525617c100db5884f68982dbcf2614"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/cavalcade-clear-timer-proof.json",
+      "sha256": "c8fb38da51a7a8749d5c2293d8b69db3ed846d297d284065e1e5801ca883c2da"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/hit-and-run-activated-formal-nonauthor-review.json",
+      "sha256": "6806835ad75040a8ad13c67ebe810921d95bba74c167cc743ac08b7cb5093c85"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/powderburn-formal-nonauthor-review.json",
+      "sha256": "203d6720438fa125253472944a2fded4468f1c4cf797525b16ed3f5231e13712"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-agent-config.json",
+      "sha256": "1977f432e801db10d0a4e37c7b38c82581f189b6bd6dc1d8f6dbc9fccf3fa6d7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-agent-evidence.json",
+      "sha256": "071abbf40acb80a83b6d10f9e3db45ef32525617c100db5884f68982dbcf2614"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-agent-draft.md",
+      "sha256": "ae101a627ef857d036916bcc6dbe92b1c3be72516c63a8496e6ce2980b981a70"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-final-content-delta-review.json",
+      "sha256": "9d7238357b325e0069f66381f49957a9e62ef3697272f4c75b89acf7294ddca1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-frozen-source-verification.json",
+      "sha256": "3c7ff759335ef33c2e1b44d7e1c1e3bbd81e5072bd2967ec7268f6146cdece2b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-own-tier-wrapper-step-crit-material-review.json",
+      "sha256": "0bcdda9320f1e24c49ec325e50936dcf9040949c505b8eaf1a0d786adad2ffe8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-special-melee-crit-consumer-difference-review.json",
+      "sha256": "a8efc8344b989b6d790e2b2d82966757254f6a81509ff583387502f7a6076d35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-traits-review.json",
+      "sha256": "fa3713e1865be405e2603ffe1a9531b580b6c02317f28697cfc8fc61036c179e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-ui-raw-verification.json",
+      "sha256": "f02eb7acc0a52c96cb333eaa556e7fb255f0b0eff9376cc807a10a8d65acef98"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-primary-ui-review.json",
+      "sha256": "c33ef493cec5f5dc0d3e373f2d4206f5555a9d9b0d6a65860538b8b40541577e"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-formal-peer-scope.json",
+    "sha256": "78b5691eb0b17d8190688e84f0ca5a8b844c59a1ededca4b8aec21f5ec1d09c4",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

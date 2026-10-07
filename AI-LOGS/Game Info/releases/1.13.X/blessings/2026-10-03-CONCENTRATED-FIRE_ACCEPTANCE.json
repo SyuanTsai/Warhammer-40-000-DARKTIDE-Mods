@@ -1,0 +1,528 @@
+{
+  "date": "2026-10-04",
+  "blessing": "concentrated-fire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/集中火力/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance",
+    "weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 2,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "corrections": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "review_scope": "Frozen review of all eight formal Concentrated Fire pages, root config and extension draft, fixed-SHA trait/wrapper, event, firing-mode and UI/RAW receipts, image receipt, shared map/navigation, and affected weapon indexes. Reused the established common-mechanism cache and prior fixed-SHA evidence.",
+    "verified_summary": {
+      "formal_markdown_count": 8,
+      "variant_count": 2,
+      "binding_count": 3,
+      "tier_rows": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "per_effective_stack_percentage_points": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "maximum_effective_stacks": 5,
+      "maximum_total_percentage_points": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "trigger": "Each eligible on_shoot event with any target weakspot true adds one effective stack after the shot's hit/critical processing; false resets accrued stacks, and one multi-target hit-scan result adds at most one. There is no time decay.",
+      "stat_application": "Adds generic critical_strike_chance. The parent tier override replaces the child's conditional base 5% key with the selected 2/3/4/5% value before effective stacks are applied; it is not an extra 5%. The conditional bonus applies only while the attached pistol is wielded. Switching away pauses the bonus and preserves stacks; off-slot shots do not add or reset them.",
+      "supported_modes": "Accatran MG Mk II ordinary/aimed hitscan and Branx MkVI/MKII ordinary/aimed/chemical hitscan feed the weakspot result event. Chemical dart direct hits use the shot critical flag; generated chemical explosions are fixed noncritical and do not create another on_shoot event. Poison ticks do not independently produce this trait event. Laspistol ordinary/Psyker pushes are outside the shot event and fixed noncritical.",
+      "arithmetic": "Craw = C0 + n*d, then critical chance is clamped. At IV and five stacks, 20% becomes 45% (+25 percentage points, +125% relative); 80% plus the same bonus clamps from 105% to 100%.",
+      "localization": {
+        "name": "Concentrated Fire / 集中火力",
+        "name_hash": "cc0b463d",
+        "description_hash": "4c483691",
+        "raw_description": "Up to {crit_chance:%s} Critical Chance on Chained Ranged Weak Spot Hit (Any Target).",
+        "note": "Static interpolation presents per-stack values, not the five-stack runtime cap; the player erratum supplies total I–IV caps."
+      },
+      "current_ui_bindings": [
+        {
+          "weapon_id": "laspistol_p1",
+          "mark_id": "laspistol_p1_m1",
+          "display_name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+          "metadata_restriction": [
+            "laspistol_p1_m1"
+          ],
+          "template_import_line": 16,
+          "ukeys_line": 858,
+          "append_line": 860
+        },
+        {
+          "weapon_id": "needlepistol_p1",
+          "mark_id": "needlepistol_p1_m1",
+          "display_name_zh_tw": "針彈手槍 布蘭克斯 MkVI",
+          "metadata_restriction": [
+            "needlepistol_p1"
+          ],
+          "template_import_line": 17,
+          "ukeys_line": 791,
+          "append_line": 793
+        },
+        {
+          "weapon_id": "needlepistol_p1",
+          "mark_id": "needlepistol_p1_m2",
+          "display_name_zh_tw": "針彈手槍 布蘭克斯 MKII",
+          "metadata_restriction": [
+            "needlepistol_p1"
+          ],
+          "template_import_line": 17,
+          "ukeys_line": 788,
+          "append_line": 790
+        }
+      ],
+      "outside_intersection": "Two exact variant definitions and three metadata/UI/template bindings; no exact matching extra candidate in the reviewed definitions-not-bound or unresolved intersection. This is an exact join boundary, not a global unused claim.",
+      "image": {
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_110",
+        "display_verified": true,
+        "hash_verified": true
+      },
+      "shared_indexes": [
+        "Game Info/releases/1.13.X/blessings/README.md",
+        "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/ranged/README.md",
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md"
+      ],
+      "rules_comparison": "Trigger and any-target rules are consistent. The RAW wording/static per-stack value does not state the five-stack total and is documented as a mismatch with a player erratum. Reset/decay and mode/switch details are correctly classified as not covered by RAW."
+    },
+    "source_refs": [
+      {
+        "claim": "Laspistol and needlepistol I–IV tier definitions",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start": 421,
+        "end": 470
+      },
+      {
+        "claim": "Laspistol and needlepistol I–IV tier definitions",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start": 359,
+        "end": 408
+      },
+      {
+        "claim": "Laspistol wrapper",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start": 21,
+        "end": 23
+      },
+      {
+        "claim": "Needlepistol wrapper",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start": 16,
+        "end": 18
+      },
+      {
+        "claim": "Shared event, stack and conditional setup",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+        "start": 188,
+        "end": 219
+      },
+      {
+        "claim": "No child duration and reset update is false",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+        "start": 52,
+        "end": 62
+      },
+      {
+        "claim": "Parent event and active proc",
+        "path": "scripts/extension_systems/buff/buffs/weapon_trait_activated_parent_proc_buff.lua",
+        "start": 18,
+        "end": 99
+      },
+      {
+        "claim": "Child placeholder/lifecycle and tier override",
+        "path": "scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua",
+        "start": 10,
+        "end": 163
+      },
+      {
+        "claim": "Inherited stat override replaces matching child key",
+        "path": "scripts/extension_systems/buff/buffs/buff.lua",
+        "start": 145,
+        "end": 184
+      },
+      {
+        "claim": "Effective stack offset calculation",
+        "path": "scripts/extension_systems/buff/buffs/buff.lua",
+        "start": 397,
+        "end": 429
+      },
+      {
+        "claim": "Tier override application to conditional stats",
+        "path": "scripts/extension_systems/buff/buffs/buff.lua",
+        "start": 689,
+        "end": 747
+      },
+      {
+        "claim": "Held-slot conditional",
+        "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+        "start": 43,
+        "end": 59
+      },
+      {
+        "claim": "Shot event after hit processing",
+        "path": "scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua",
+        "start": 145,
+        "end": 220
+      },
+      {
+        "claim": "Multi-target weakspot aggregation",
+        "path": "scripts/utilities/attack/hit_scan.lua",
+        "start": 215,
+        "end": 243
+      },
+      {
+        "claim": "Generic critical chance aggregation and clamp",
+        "path": "scripts/utilities/attack/critical_strike.lua",
+        "start": 13,
+        "end": 39
+      },
+      {
+        "claim": "Laspistol M1 normal and aimed shots",
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "start": 203,
+        "end": 335
+      },
+      {
+        "claim": "Laspistol push action outside on_shoot",
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "start": 498,
+        "end": 515
+      },
+      {
+        "claim": "Needlepistol M1 normal/aimed/chemical actions",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "start": 228,
+        "end": 393
+      },
+      {
+        "claim": "Needlepistol M2 normal/aimed/chemical actions",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "start": 228,
+        "end": 393
+      },
+      {
+        "claim": "Generated hit-mass explosion critical flag",
+        "path": "scripts/utilities/action/ranged_action.lua",
+        "start": 86,
+        "end": 139
+      },
+      {
+        "claim": "Needlepistol direct hit and generated explosion routes",
+        "path": "scripts/utilities/attack/hit_scan.lua",
+        "start": 226,
+        "end": 321
+      },
+      {
+        "claim": "Push attack default critical behavior",
+        "path": "scripts/utilities/attack/push_attack.lua",
+        "start": 80,
+        "end": 87
+      },
+      {
+        "claim": "Attack defaults for omitted critical flag",
+        "path": "scripts/utilities/attack/attack.lua",
+        "start": 45,
+        "end": 114
+      },
+      {
+        "claim": "Current UI family/pattern/mark name composition",
+        "path": "scripts/utilities/items.lua",
+        "start": 315,
+        "end": 327
+      },
+      {
+        "claim": "Current UI naming fields",
+        "path": "scripts/utilities/items.lua",
+        "start": 378,
+        "end": 426
+      },
+      {
+        "claim": "Laspistol M1 import and append",
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "start": 16,
+        "end": 860
+      },
+      {
+        "claim": "Needlepistol M1 import and append",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "start": 17,
+        "end": 793
+      },
+      {
+        "claim": "Needlepistol M2 import and append",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "start": 17,
+        "end": 790
+      },
+      {
+        "claim": "Static percentage interpolation and automatic precision",
+        "path": "scripts/utilities/trait_value_parser.lua",
+        "start": 8,
+        "end": 228
+      }
+    ],
+    "receipt_refs": {
+      "root_config": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-config.json",
+      "extension_draft": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-extension-draft.json",
+      "primary_tiers_and_parent": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-traits-parent-review.json",
+      "primary_modes": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-shot-special-review.json",
+      "primary_ui": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-ui-review.json",
+      "primary_raw": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-ui-raw-verification.json",
+      "agent_config": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-agent-config.json",
+      "agent_evidence": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-agent-evidence.json",
+      "image": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-image.json",
+      "common_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/README.md": "86fd72cf9432950bde44e6083729fbf701aecce0dca140934f8347654f41029e",
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/SOURCE_INDEX.md": "a629e398cab4b0a52fa54e6e949184339152500152d586d262ef2f4b6683c27c",
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/TIER_VALUES.md": "b7576125941a7711ae14f6620411615e5606640035448f32ad176cb6c8177e20",
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/WEAPON_COMPATIBILITY.md": "096100a12f5fa3c6e6ccc0dc84e1e129c4ca3d32e1a7ea1686dbe7cb11b45876",
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/LOCALIZATION_COMPARISON.md": "5706789739177cb0a05e0d3eccbb4e70a008e605cb05f467cd0dca7693bed2f4",
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/DAMAGE_PERCENTAGE_REVIEW.md": "f393bd090c8171b69bdee732676af519db856e2d2e9af3848b77a25c5a84c7bf",
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance.md": "5fca68901420fcb03effe2aab9d5c7e6beed3e16752ec9b43484ca809c449d5b",
+      "Game Info/releases/1.13.X/blessings/entries/集中火力/weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance.md": "dc208fa58e78aab422d4c0dee4a20dbe74c332d5ed91a8eb385e2c01bbb9734e",
+      "Game Info/releases/1.13.X/blessings/README.md": "db0cd370626e4c76b09023acce838fbbf9bf5e2cf4c84f33f7fd888a84053c31",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "5bf88a438c96a68b8b7c33551e9a2e7fa3d91580c985b833e0c0a649e5862a65",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "c4367c6ba209747abc5ad498b276714491e3a25e8cb341c1984b8e09b3daaa44",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "74e59bcf5d67c807ed8a6b49c91b9d830a88986bdde41a8c2e5a7b6eb6157501",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md": "6733909ef152a3d5c4bdd9b684920e61da7d9f1ab299ce060e65d2372f9035d0",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "256df5760eeba943d3c004cfb6e16b7eaa63e08b363189b8956a85db15b6eb44",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-config.json": "625cd969841c9fca42933e6b2bbdc029e871d89a07059525f80947836d135544",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-extension-draft.json": "88463385a132c96a37d2fe4657db75f5a29ba4a84a3b251d8349c5c0f3def0c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-extension-raw-verification.json": "3cd87d1723c08bd1a9ab3b40e4365defcd60ef65ef56ea6a6f511ded49c184c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-raw-verification.json": "7782e05de0a859dbae116e736f47ac610366994c5183b92787d057b7a5ff26a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-agent-config.json": "74693181e8a9004954386fc004adbe2106c5f7bd48106446df509e39679220d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-agent-evidence.json": "7d2507f24e33f85d9b524e2180a6fcda4aee878fc92b43117ed50c80271e1087",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-traits-parent-review.json": "4794129fc370f3b78fd3f95ba32a270e37daa64d3d1a101035f9600b6246baec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-shot-special-review.json": "29a3fad5484fbee68e209b4b8a56f31a39a2bc34a90214eef804554936a16b5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-ui-review.json": "56ad68d5de152bec8c6db50644d05f7fad0f77c5439172bea608430bc25c6986",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-ui-raw-verification.json": "1b42b2e8613faea7f044e4195128f91311c804e59f7c78b0db2465ba98bb553e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-image.json": "69d415ba3ce4f0f522e7d63478cf914cabd615ccf444346ea694c0e5293fc71c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-image-upload-journal.json": "f3b2bedec2c5eca0167d486a67e23e650da7e75c809d702d3e692fd528a9af6e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-focused-manifest.json": "8a9ddbff22e1e985c40ecc4ab7d635bea90d27053b0e8b424e6ed75e01d0a949",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "a410ab9d1fe38aefaec309b04abb4c9b3fe037a5c916a8b18ab4c7b99f15fb00",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "3c1014b10071592d999c48757d8b4e0fda9cdcb0e24cdcffd75bf1a9a6a57ed1"
+    },
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "concentrated-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_110",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_110.png",
+      "attachment": "https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5973041495",
+      "acquired_date": "2026-10-04",
+      "sha256": "0a07386cc7899f0d5ad203901b5c9c5333606ed079c3191487800a1a0deeb481",
+      "content_type": "image/png",
+      "size": 6371,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "集中火力祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "primary_visual_review": "Sol inspected the original 128px transparent PNG and dark-background QA enlargement; intact concentric reticle and horizontal bars, no clipping, original file unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 211,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 61,
+      "source_files": 24,
+      "bindings": 330,
+      "variants": 173,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 24,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 474,
+      "remote_references": 292,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 5,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-commit-completeness-guard-full-scan.json",
+        "sha256": "276ab672c4b14457cabc29592878ed271e6ba63e808bd5c736a3ee081a9af21b",
+        "trigger": "desperado-commit-completeness-guard"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 121,
+    "not_started_name_groups": 121,
+    "partial_name_groups": 0,
+    "remaining_variants": 432,
+    "remaining_bindings": 855,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "a410ab9d1fe38aefaec309b04abb4c9b3fe037a5c916a8b18ab4c7b99f15fb00"
+  },
+  "previous_local_commit": "1f7aadc73ea3d3ed3f503bce34f12055157fd402",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "root_agent_input": {
+      "config_sha256": "74693181e8a9004954386fc004adbe2106c5f7bd48106446df509e39679220d3",
+      "evidence_sha256": "7d2507f24e33f85d9b524e2180a6fcda4aee878fc92b43117ed50c80271e1087"
+    },
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-traits-parent-review.json",
+        "sha256": "4794129fc370f3b78fd3f95ba32a270e37daa64d3d1a101035f9600b6246baec"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-shot-special-review.json",
+        "sha256": "29a3fad5484fbee68e209b4b8a56f31a39a2bc34a90214eef804554936a16b5e"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-ui-review.json",
+        "sha256": "56ad68d5de152bec8c6db50644d05f7fad0f77c5439172bea608430bc25c6986"
+      }
+    ],
+    "examples_verified": 7,
+    "known_ui_name_correction": "M2 uses exact RAW MKII; combined inventory MKIV is legacy",
+    "conditional_override_verified": "Child conditional key is replaced by inherited parent stat override; no extra base5%",
+    "special_mode_scope": "Needle chemical direct shots are eligible, generated explosions fixed noncritical; exact laspistol ordinary/Psyker push fixed noncritical",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-extension-draft.json",
+      "sha256": "88463385a132c96a37d2fe4657db75f5a29ba4a84a3b251d8349c5c0f3def0c8"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/concentrated-fire-primary-ui-review.json",
+      "sha256": "56ad68d5de152bec8c6db50644d05f7fad0f77c5439172bea608430bc25c6986"
+    },
+    "bindings": [
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m1",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m1",
+          "loc_weapon_pattern_needlepistol_p1_m1",
+          "loc_weapon_mark_needlepistol_p1_m1"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MkVI",
+        "name_en": "Needle Pistol Branx MkVI",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 791,
+        "append_line": 793,
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance"
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m2",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m2",
+          "loc_weapon_pattern_needlepistol_p1_m2",
+          "loc_weapon_mark_needlepistol_p1_m2"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MKII",
+        "name_en": "Needle Pistol Branx MKII",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 788,
+        "append_line": 790,
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance"
+      },
+      {
+        "weapon_id": "laspistol_p1",
+        "mark_id": "laspistol_p1_m1",
+        "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 858,
+        "append_line": 860,
+        "loc_ids": [
+          "loc_weapon_family_laspistol_p1_m1",
+          "loc_weapon_pattern_laspistol_p1_m1",
+          "loc_weapon_mark_laspistol_p1_m1"
+        ],
+        "name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+        "name_en": "Heavy Laspistol Accatran MG Mk II",
+        "trait_id": "weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance"
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "inventory_counts": {
+      "weapon_patterns": 70,
+      "weapon_marks": 134,
+      "display_name_groups": 167,
+      "trait_definitions_bound": 605,
+      "mark_bindings": 1185,
+      "unresolved": 58
+    },
+    "exact_name_key_bound_bindings": 3,
+    "exact_name_key_variants": 2,
+    "exact_name_key_metadata_items": 2,
+    "exact_outside_metadata_items": 0,
+    "exact_unbound_trait_ids": [],
+    "exact_unresolved_candidates": [],
+    "boundary": "僅交叉核對固定SHA inventory 的 exact name_key bindings、exact metadata、definitions_not_bound中與這兩個trait ID相同的定義，以及unresolved中同ID候選；不宣稱範圍外不存在其他定義。",
+    "source_only_assessment": "在此固定SHA cache中，三個exact name_key bindings連到兩個trait ID，exact metadata只有對應兩項，definitions_not_bound與unresolved中沒有這兩個ID的候選。trait來源檔不直接寫localized name_key，因此不以字串搜尋推論不存在其他未索引定義；此結果僅限明列的inventory/metadata交集。"
+  }
+}

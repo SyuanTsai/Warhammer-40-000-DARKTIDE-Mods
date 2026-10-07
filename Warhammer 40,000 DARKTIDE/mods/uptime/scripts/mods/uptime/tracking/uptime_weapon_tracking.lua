@@ -1,4 +1,4 @@
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 local weapon_tracking = {}
 
 function mod:start_weapon_tracking()

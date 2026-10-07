@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-05",
+  "blessing": "syphon",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/虹吸/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_bespoke_powersword_2h_p1_regain_toughness_on_multiple_hits_by_weapon_special"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "syphon",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope Syphon formal peer review with gpt-6-luna/max settings.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-formal-peer-scope.json",
+      "sha256": "6826253123e3437cede4cfc4606787e4e8dc28c99cfc47e0901e4c2bf4b610a0",
+      "files": 29,
+      "review": "All 29 scoped files were independently rehashed before content review and match the supplied fixed scope."
+    },
+    "reviewed_associations": [
+      "The seven formal Syphon pages consistently document one melee variant, the exact full double-bespoke trait ID, and two bindings for Powersword Munitorum Mk X and Mk II. The entry, compatibility table, catalog, melee reverse index, weapon reverse page, and map retain the same actual ID, names, classification, icon and shared four-tier values.",
+      "The canonical config and extension-draft configuration are structurally equal. Both retain the exact inventory trait ID, actual buff template/source path, 1-variant/2-binding counts, per-weapon restriction, icon ID/path/attachment separation, and unverified/disabled FASTER state. The frozen agent config/draft/evidence hashes remain unchanged.",
+      "The RAW name/description keys and hashes agree with the bilingual fixed-resource receipt. Localization comparison preserves the exact English and Traditional Chinese templates and reconstructs all four formatter outputs (+10%, +12%, +14%, +16%) from the own-tier values; it labels reconstruction as static rather than captured gameplay.",
+      "The image 240 receipt matches the formal icon path and public attachment; its recorded PNG SHA-256, 128×128 dimensions, public-byte verification and visual review are consistent."
+    ],
+    "reviewed_deltas": [
+      "The exact variant ID intentionally contains repeated bespoke and matches its actual wrapper. Own tiers use toughness_fixed_percentage=.10/.12/.14/.16; wrapper .15 is only a fallback replaced by tier data, not an added bonus.",
+      "The current eligible melee Attack.on_hit payload is tested with target_number>=3. This is the current sweep target ordinal, not an accumulation of three earlier eligible on_hit events; the first two ordinals need not each dispatch on_hit. ActionSweep increments its local ordinal before resolution, while its persistent enemy count has a narrower alive-character branch. The documents do not equate the ordinal with three positive-damage enemies and preserve candidate/Attack gates without globalizing breakable behavior.",
+      "The wrapper latches special_active at on_sweep_start and requires the held slot and exact item. When the current qualifying target-number event passes, it clears can_activate before calling recover_percentage_toughness. Thus a full toughness bar or state-gated recovery rejection does not restore the one-per-sweep attempt; the next sweep re-reads eligibility.",
+      "Recovery requests current max toughness × tier fraction and caps actual restore at missing toughness. ignore_stat_buffs=true bypasses only the replenish stat multiplier. The docs retain downed/dead/prohibited-state checks and the force_assist exception; examples compute 16 requested/16 restored from 100 max and 60 current, and 16 requested/4 restored from 96 current.",
+      "Actual ordinary light/heavy/sprint and push-follow paths use sweep; ordinary push is push-kind. M1/M2 special-toggle actions map to the toggle executors and WeaponSpecialCharging; the cited 66–81 handler changes charge_template and is not a qualifying hit action. SOURCE_INDEX includes exact M1/M2 action ranges, both executor ranges, and the special-class range.",
+      "The map summary, reverse pages and formal player text use the same ordinal/attempt wording and 10/12/14/16% requested-recovery values. The special toggle itself is not documented as an attack or recovery trigger."
+    ],
+    "configuration_consistency": {
+      "id": "syphon",
+      "kind": "melee",
+      "variant_count": 1,
+      "binding_count": 2,
+      "variant_ids_are_exact_inventory_traits": true,
+      "actual_weapon_keys": [
+        "powersword_2h_p1"
+      ],
+      "actual_marks": [
+        "powersword_2h_p1_m1",
+        "powersword_2h_p1_m2"
+      ],
+      "canonical_configuration_matches_extension": true,
+      "map_binding_count": 2,
+      "map_variant_count": 1,
+      "map_effect_matches_canonical": true,
+      "faster_status": "not_verified",
+      "open_issues": 0
+    },
+    "supporting_receipt_hashes": {
+      "syphon-primary-own-tier-diff.json": "9f60052976892d4224c867846ccda3936a66c67e65e763461e5de8ab7c751ea7",
+      "syphon-primary-ui-review.json": "e22a40a168804b368f3ce4c92aac9bedb542ba63bf0666047b83fdd753f4ab2a",
+      "syphon-primary-ui-raw-verification.json": "6ebfe39ada6c7946f8114507fc5fc2e3541821d62d5c185f9177d51e90ed8991",
+      "syphon-primary-target-ordinal-review.json": "3aa78431d70624afe6566a2a47853119a6bcacf5d0e65953eee530318b17625b",
+      "syphon-primary-special-toggle-review.json": "d9931c605ca0c67ee7784675b4c16e9868b4faa078002da8ddc6a58f634dc0cb",
+      "syphon-primary-focused-checks.json": "99115f8e7ab3ef07f5535e9e1871db379c2187a32a861eb3bb83829229deeb56",
+      "syphon-image.json": "c5e6b3e34b28722e9ef23172406c578ca5cc400855e0e7fd42f9e01ab54880cc"
+    },
+    "source_boundary": {
+      "fixed_source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "own_tier_and_wrapper_reviewed": true,
+      "current_target_ordinal_and_attack_gates_reviewed": true,
+      "special_toggle_and_charging_class_sources_reviewed": true,
+      "raw_and_formatter_pair_consistent": true,
+      "common_cache_path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "common_cache_sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "cache_reuse_limited_to_verified_applicability": true,
+      "gameplay_test_performed": false
+    },
+    "validation": {
+      "scope_hash_matches": true,
+      "all_29_scoped_hashes_match": true,
+      "canonical_configuration_matches_extension": true,
+      "source_commit_matches": true,
+      "double_bespoke_inventory_trait_wrapper_match_checked": true,
+      "own_tier_override_and_fallback_checked": true,
+      "target_ordinal_not_prior_on_hit_count_checked": true,
+      "latch_consumed_before_recovery_checked": true,
+      "max_toughness_missing_cap_and_force_assist_checked": true,
+      "ordinary_sweep_push_follow_and_special_toggle_routes_checked": true,
+      "raw_four_tier_static_reconstruction_checked": true,
+      "map_reverse_links_glossary_and_image_checked": true,
+      "focused_source_links_gfm_receipt_checked": true,
+      "faster_unverified_not_claimed": true
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-agent-config.json": "8e7a6bd22c71be78976bda3cab562a625c6465f4c822730faa87850fe7556cd3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-agent-draft.md": "8eaf9b5fcaaddf3043eda57a21d50dfe3fb18e1e1a6a550be71970a32d6fc136",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-agent-evidence.json": "522cc3f6b6d2f80b338064e218e89e1220a8bf5ec1601a9a501755598332d176",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-config.json": "d373b9a534c98d4b1d2085dec2cc2f50b431fd141af1fcdaad506a07c14f7659",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-extension-draft.json": "b9ca310b2c3dbeecd103030c70609bc5b1379c051ce621f55f2260d8e56846c3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-image.json": "c5e6b3e34b28722e9ef23172406c578ca5cc400855e0e7fd42f9e01ab54880cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-focused-checks.json": "99115f8e7ab3ef07f5535e9e1871db379c2187a32a861eb3bb83829229deeb56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-frozen-source-verification.json": "b15e259a47e03502f52042ee9eb58a0c9c36e74d9d0b3d1a0075de8500f32047",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-own-tier-diff.json": "9f60052976892d4224c867846ccda3936a66c67e65e763461e5de8ab7c751ea7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-resume-review.json": "05339d60b4c68398b1c01bed5519ec220f046af33bd56a3259bff218c368261e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-special-toggle-review.json": "d9931c605ca0c67ee7784675b4c16e9868b4faa078002da8ddc6a58f634dc0cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-target-ordinal-review.json": "3aa78431d70624afe6566a2a47853119a6bcacf5d0e65953eee530318b17625b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-traits-review.json": "b6caca26d01320231c95055767e51913da98bbb256558f1ebfbaf66548459be2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-ui-raw-verification.json": "6ebfe39ada6c7946f8114507fc5fc2e3541821d62d5c185f9177d51e90ed8991",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-ui-review.json": "e22a40a168804b368f3ce4c92aac9bedb542ba63bf0666047b83fdd753f4ab2a",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "0d18cebe7d179af66774fa05479aee78b0ad0b846ff7184f90a8ba5e4145d01f",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "7262b03e06f2fa86acad0264aebdbdc72ce60505a5cc24667b04654c35e4271c",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7317ffe7aa483d36d81be092d4ffeff2ce8f99cdf5efaba4c5426ef6e637c2a5",
+      "Game Info/releases/1.13.X/blessings/entries/虹吸/DAMAGE_PERCENTAGE_REVIEW.md": "29a51574efd74b707b411032429b63c2b0b014df3d342d436efd665a12d1aabb",
+      "Game Info/releases/1.13.X/blessings/entries/虹吸/LOCALIZATION_COMPARISON.md": "6b11476fae1e1e5c991d8774d17fb1e064411ed3f884d979eab0999052a7396d",
+      "Game Info/releases/1.13.X/blessings/entries/虹吸/README.md": "5e2bfc8ec9c9e02491b0d869836ea8a0fd7c2ad83442278da0544db1bd231c7a",
+      "Game Info/releases/1.13.X/blessings/entries/虹吸/SOURCE_INDEX.md": "d07dfc3d35c08989abfb83ac6710b86c5d554fbbf87f78ee7c2604deb137f4d9",
+      "Game Info/releases/1.13.X/blessings/entries/虹吸/TIER_VALUES.md": "54890e1674391c697cb1049f0e0f7b944f0980551c05a9ed65189453ff6401e8",
+      "Game Info/releases/1.13.X/blessings/entries/虹吸/WEAPON_COMPATIBILITY.md": "234af76e4e1998d00b6c86902e20f64105cb9da9e3a9f31a08772c2036268b83",
+      "Game Info/releases/1.13.X/blessings/entries/虹吸/weapon_trait_bespoke_bespoke_powersword_2h_p1_regain_toughness_on_multiple_hits_by_weapon_special.md": "a6dff0f9da6482a4ff3f4cbf236208381a9edd9b7f2c59f518fde77e3dce057d",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "2794d2a33b1935597fec4bc60cbafac9e05fec7bf237561a635757c863f80627",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/上古神刃/README.md": "343df9977dacf38a21ff41ae57c2fc4cfc87b3b54dd6505152b186283dd67f0d",
+      "Referneces/Translation.md": "d49118dcbd68fa029e014ab7fd997a49c14d25eb74d7f9b989bc6ec0b98e79b7"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/167e264e-36c8-4869-bf55-23dc1b42e6d7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "syphon",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_240",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_240.png",
+      "attachment": "https://github.com/user-attachments/assets/167e264e-36c8-4869-bf55-23dc1b42e6d7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5981411065",
+      "acquired_date": "2026-10-04",
+      "sha256": "0ec236b56d4bfc3df4420ef0ef4a5a1f6c89f49f31da53bd06a4216908207b1c",
+      "content_type": "image/png",
+      "size": 5913,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "虹吸祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": {
+        "source_and_public_originals_viewed": true,
+        "alpha_diagnostics_viewed": true,
+        "same_icon": true,
+        "original_bytes_preserved": true,
+        "description": "Skull in a notched vertical shape above three layered sweeping blade lines; source/public original and alpha identity match."
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 255,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 30,
+      "source_files": 14,
+      "bindings": 503,
+      "variants": 261,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 14,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 693,
+      "remote_references": 295,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 18,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-017-full-scan.json",
+        "sha256": "7148f9b0ed9552ef6bdd029dfe4ba2a99f8e75c0803187373a5205e323d8c1b5",
+        "trigger": "round-017"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 84,
+    "not_started_name_groups": 84,
+    "partial_name_groups": 0,
+    "remaining_variants": 344,
+    "remaining_bindings": 682,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "59c674619b2fa2789d5b5bc7b7118706eed25a29446acadbb6ab816c9581c839"
+  },
+  "previous_local_commit": "24b3992ea910ce8375975be87fdbb843e4dad117",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-focused-checks.json",
+      "sha256": "99115f8e7ab3ef07f5535e9e1871db379c2187a32a861eb3bb83829229deeb56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-frozen-source-verification.json",
+      "sha256": "b15e259a47e03502f52042ee9eb58a0c9c36e74d9d0b3d1a0075de8500f32047"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-own-tier-diff.json",
+      "sha256": "9f60052976892d4224c867846ccda3936a66c67e65e763461e5de8ab7c751ea7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-resume-review.json",
+      "sha256": "05339d60b4c68398b1c01bed5519ec220f046af33bd56a3259bff218c368261e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-special-toggle-review.json",
+      "sha256": "d9931c605ca0c67ee7784675b4c16e9868b4faa078002da8ddc6a58f634dc0cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-target-ordinal-review.json",
+      "sha256": "3aa78431d70624afe6566a2a47853119a6bcacf5d0e65953eee530318b17625b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-traits-review.json",
+      "sha256": "b6caca26d01320231c95055767e51913da98bbb256558f1ebfbaf66548459be2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-ui-raw-verification.json",
+      "sha256": "6ebfe39ada6c7946f8114507fc5fc2e3541821d62d5c185f9177d51e90ed8991"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-primary-ui-review.json",
+      "sha256": "e22a40a168804b368f3ce4c92aac9bedb542ba63bf0666047b83fdd753f4ab2a"
+    }
+  ],
+  "primary_review_method": "Fullown4tier/wrapper/UI/RAW/image240;23frozenranges/inputstable. Differencefocused targetordinal directlyreviewed andexactspecialtoggle/executor added; held/item/proc/toughnesscommonconsumers reusedonlyunderexactconditions.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-config.json",
+    "sha256": "d373b9a534c98d4b1d2085dec2cc2f50b431fd141af1fcdaad506a07c14f7659"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "8e7a6bd22c71be78976bda3cab562a625c6465f4c822730faa87850fe7556cd3",
+    "evidence.json": "522cc3f6b6d2f80b338064e218e89e1220a8bf5ec1601a9a501755598332d176",
+    "draft.md": "8eaf9b5fcaaddf3043eda57a21d50dfe3fb18e1e1a6a550be71970a32d6fc136"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/syphon-formal-peer-scope.json",
+    "sha256": "6826253123e3437cede4cfc4606787e4e8dc28c99cfc47e0901e4c2bf4b610a0",
+    "final_content_hashes_unchanged": true
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-05",
+  "blessing": "machine-spirit-resurgent",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/機魂再臨/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_p3_refund_charge_on_weapon_special_weakspot_kill"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "機魂再臨 / Machine Spirit Resurgent",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-formal-peer-scope.json",
+    "scope_sha256": "fe76972c13f768f44fa22160cb2c50b71239b95966dff94a0b0bbb24c8f9b45a",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-config.json": "1f01c44108918b8a4de0816359b0d5c25b8eb36ad8bed150d15abd314658a419",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-draft.md": "cfc9afa358410ea07995f30fa5d3d4c9b2f18fe575a103cdf8b87788496d04fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-evidence.json": "ca754f56218e9d8819e830192150d254a722db2198d194e26c2be802b6c66ef4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-special-profile-addendum.json": "c9578d751b2d224002edac8725fb4e03d7b24402d2bf0fcfcb354f9d22888baa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-config.json": "7d4d93182181265e6bfd2cfaf316dc01aa9c63ca52ca5508264d5163ba9de022",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-extension-draft.json": "92dd0cb4352903b8b667fc7c90b5da4492d83f055498c6d5d6c1e06db93ea836",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-image.json": "d9f49fc03e1e540a238cc170014a72ec13c5dab2abb2c8597caabefe59bd2fa9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-focused-checks.json": "3074dd196a1fbbf9f909e87f5564a419b6aef1edae63595378005bfc69daff34",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-frozen-source-verification.json": "fa8ecaaf9c4e59a917a79df04f904e54e915eca9f847b8e9f55111d8e71f80e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-inactive-callback-review.json": "4ff53e8d67074b1173013797f1bb23aebb84a6b097ddb6232cf93c1451a01af8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-native-charge-review.json": "2a2c0e7beaf19f732ffb32c86eb33ac37b11f61c4122fad156ac177a887582c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-own-tier-diff.json": "a02cd870c736b0774bdfb101eae226bc11bfd5204205d53638d5f1ada6c29c29",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-resume-review.json": "09b74e8c2214d7b2e6b8e1b1c2a6f90b48ba6a482ff1c2c41c1b3e7f355d0627",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-traits-review.json": "dd505d6d53a2a04b1fd92bea6f14d6b9569990d79e30f5019620022a0013b456",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-ui-raw-verification.json": "590664861aabdd563b3133c8fcd89ee8fcf37922faaeab5d99276a833f00ef17",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-ui-review.json": "f1b1356da8367a145ee14533189c28108bdcfa81bfb478c25810a36b1e80a000",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "79902687219acf97a8403766467580db27ab0b3a99506daea61c406548223c73",
+      "Game Info/releases/1.13.X/blessings/entries/機魂再臨/DAMAGE_PERCENTAGE_REVIEW.md": "4ad417b46b19fcb009d878bed4d240b68f1f79f161670f0bca65da522ba75921",
+      "Game Info/releases/1.13.X/blessings/entries/機魂再臨/LOCALIZATION_COMPARISON.md": "620525804c93fc2865d605e99ba9ce6a1ac292fefa3e4db7d71932e759d3ed72",
+      "Game Info/releases/1.13.X/blessings/entries/機魂再臨/README.md": "5a5871131a2427fe72f6829be93b109312d53fbdbc1cf77467bbc605006595cb",
+      "Game Info/releases/1.13.X/blessings/entries/機魂再臨/SOURCE_INDEX.md": "4ba7e5736c6c200c79070cf4ee26b62d407aed53bab7bd6824b417f451e99c7f",
+      "Game Info/releases/1.13.X/blessings/entries/機魂再臨/TIER_VALUES.md": "88e38b4579b642e6f41244c6d5dfa1a7623a57292d5e20e477064ec0915dcd93",
+      "Game Info/releases/1.13.X/blessings/entries/機魂再臨/WEAPON_COMPATIBILITY.md": "a74b7947aa73fcd36476252316ac655797311b07a05a03584c9dbcbbd09a970f",
+      "Game Info/releases/1.13.X/blessings/entries/機魂再臨/weapon_trait_bespoke_powersword_p3_refund_charge_on_weapon_special_weakspot_kill.md": "0f40da75379364363cc2d234483fa91fc4b2b885cef4e0e5825d7199b6808324",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "bcbe81c940856e118001539ea2a85cc540e2f2999c790f65b944c2a228f32772",
+      "Game Info/releases/1.13.X/blessings/README.md": "c816f8be3fc74459825da4684b0df6c47488055385519b579629a9f03219bc56",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "9fee9eccbad3c94731587016d69f3a00c713ab59c89e5ccd433b394bdbf9d53b",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "2dad877d9a187253e0b99284633f44a8cb377e8c50f851dc0e5a3c3f9e5d4118",
+      "Referneces/Translation.md": "8c7ed52855e755c31e77bc523b406e3fe995bf423cb35dfd7d0bf32daf016655"
+    },
+    "review_summary": [
+      "All 30 frozen scope file hashes match the scope exactly; the six active P3 profile definitions and eight action/profile links are included and match the addendum evidence.",
+      "The one binding is powersword_p3 / powersword_p3_m1 with the exact bespoke trait and item restriction; UI display is 機械神教動力劍 布蘭克斯 Mk VI. Kind, map/reverse relation, and shared blessing rows agree.",
+      "Own I-IV cooldowns are 5.5/4.5/3.5/2.5 seconds. The on-kill wrapper requires weakspot, active-special profile flag, exact attacking item and held slot. First eligible event can proc; the refund is +1 capped at 6 and a proc at cap still starts cooldown when the event is processed.",
+      "Every activation consumes one charge and reschedules native recovery to activation time + 4s active duration + 1s native cooldown; later missing charges recover one per second. Refund and deactivation do not reset the native clock.",
+      "The P3 inactive callback closes special mode while short-circuiting generic unwield charge clearing; offhand recovery and blessing cooldown continue, while held/item gates prevent other-weapon procs. Actual unequip removes the on-equip source.",
+      "The four bilingual RAW reconstructions preserve the exact sentence and tier placeholder values. The previously reported duplicated reconstruction note was removed; canonical config, extension draft, resume receipt and final localization page are synchronized. Icon path, icon id and attachment URL remain separate and match the verified image receipt."
+    ],
+    "delta_review": {
+      "resolved_issue": "Removed the duplicate static-reconstruction note and malformed punctuation from LOCALIZATION_COMPARISON.md; preserved all four EN/ZH tier reconstructions.",
+      "canonical_config_sha256": "7d4d93182181265e6bfd2cfaf316dc01aa9c63ca52ca5508264d5163ba9de022",
+      "extension_draft_sha256": "92dd0cb4352903b8b667fc7c90b5da4492d83f055498c6d5d6c1e06db93ea836",
+      "resume_review_sha256": "09b74e8c2214d7b2e6b8e1b1c2a6f90b48ba6a482ff1c2c41c1b3e7f355d0627",
+      "formal_localization_comparison_sha256": "620525804c93fc2865d605e99ba9ce6a1ac292fefa3e4db7d71932e759d3ed72",
+      "mechanism_or_value_change": false
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/47fbf600-586e-4ed1-90de-36afbd08a350",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "machine-spirit-resurgent",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_251",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_251.png",
+      "attachment": "https://github.com/user-attachments/assets/47fbf600-586e-4ed1-90de-36afbd08a350",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5984396945",
+      "acquired_date": "2026-10-05",
+      "sha256": "5ff2e9859c1e517e09ba1988e77bcd33b61b38a1ac6e83f6d8580c90c8657dfd",
+      "content_type": "image/png",
+      "size": 9259,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "機魂再臨祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Original/public bytes identical. Visually inspected actual low-contrast grey/white central emblem with a white rectangular outer frame and transparent margins; full 128x128 image without additional crop. No inference of fine details from this low-contrast source."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 272,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 35,
+      "source_files": 14,
+      "bindings": 541,
+      "variants": 278,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 14,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 723,
+      "remote_references": 303,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 20,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-019-full-scan.json",
+        "sha256": "bc0dad144cdfb6fdefa851c7c927ee3cc726e7f83e18c9eb3335797fe62cc4d6",
+        "trigger": "round-019"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 76,
+    "not_started_name_groups": 76,
+    "partial_name_groups": 0,
+    "remaining_variants": 327,
+    "remaining_bindings": 644,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "d752b319300e6cf24d88bc2bc6de0f4e1ebe7f522d817b3be1a4a88e7e11fafe"
+  },
+  "previous_local_commit": "7169f74801e2a3aa7a03932d5b3746f97cb3e30c",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-focused-checks.json",
+      "sha256": "3074dd196a1fbbf9f909e87f5564a419b6aef1edae63595378005bfc69daff34"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-frozen-source-verification.json",
+      "sha256": "fa8ecaaf9c4e59a917a79df04f904e54e915eca9f847b8e9f55111d8e71f80e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-inactive-callback-review.json",
+      "sha256": "4ff53e8d67074b1173013797f1bb23aebb84a6b097ddb6232cf93c1451a01af8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-native-charge-review.json",
+      "sha256": "2a2c0e7beaf19f732ffb32c86eb33ac37b11f61c4122fad156ac177a887582c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-own-tier-diff.json",
+      "sha256": "a02cd870c736b0774bdfb101eae226bc11bfd5204205d53638d5f1ada6c29c29"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-resume-review.json",
+      "sha256": "09b74e8c2214d7b2e6b8e1b1c2a6f90b48ba6a482ff1c2c41c1b3e7f355d0627"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-traits-review.json",
+      "sha256": "dd505d6d53a2a04b1fd92bea6f14d6b9569990d79e30f5019620022a0013b456"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-ui-raw-verification.json",
+      "sha256": "590664861aabdd563b3133c8fcd89ee8fcf37922faaeab5d99276a833f00ef17"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-ui-review.json",
+      "sha256": "f1b1356da8367a145ee14533189c28108bdcfa81bfb478c25810a36b1e80a000"
+    }
+  ],
+  "primary_review_method": "Reuse own full tier/wrapper/UI/RAW and applicable common event/ProcBuff timers; review actual six profile/eight action connections, P3 native charge scheduling and custom inactive short-circuit as differences; no full duplicate study",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-config.json",
+    "sha256": "7d4d93182181265e6bfd2cfaf316dc01aa9c63ca52ca5508264d5163ba9de022"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-config.json",
+      "sha256": "1f01c44108918b8a4de0816359b0d5c25b8eb36ad8bed150d15abd314658a419"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-evidence.json",
+      "sha256": "ca754f56218e9d8819e830192150d254a722db2198d194e26c2be802b6c66ef4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-draft.md",
+      "sha256": "cfc9afa358410ea07995f30fa5d3d4c9b2f18fe575a103cdf8b87788496d04fc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-special-profile-addendum.json",
+      "sha256": "c9578d751b2d224002edac8725fb4e03d7b24402d2bf0fcfcb354f9d22888baa"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-formal-peer-scope.json",
+    "sha256": "fe76972c13f768f44fa22160cb2c50b71239b95966dff94a0b0bbb24c8f9b45a",
+    "final_content_hashes_unchanged": true
+  }
+}

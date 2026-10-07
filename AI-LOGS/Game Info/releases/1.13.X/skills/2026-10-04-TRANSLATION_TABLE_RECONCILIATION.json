@@ -1,0 +1,1105 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "scope": "1.13.X skill English-name reconciliation",
+  "source_pin": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "comparison_source_pin": "0f0cb45991e9305ef4a7b925370792d7d6035f95",
+  "english_text": {
+    "build": 25606770,
+    "version": "1.13.1",
+    "resource": "ui",
+    "language": "en",
+    "sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668"
+  },
+  "official_patch_notes": "https://forums.fatsharkgames.com/t/patch-1-13-0-patch-notes/125866",
+  "counts": {
+    "pending": 55,
+    "new_in_1_13": 13,
+    "inventory_gap": 42,
+    "previous_provisional_skill_rows": 43,
+    "new_english_rows": 13,
+    "retained_english_spelling_correction": 2,
+    "removed_named_talents": 5,
+    "obsolete_small_node_terms": 7,
+    "missing_active_english_names": 0
+  },
+  "pending": [
+    {
+      "id": "psyker_increased_warp_damage",
+      "key": "loc_talent_psyker_increased_warp_damage",
+      "en": "Focused Warp",
+      "source": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "line": 2648,
+      "class_name": "Psyker",
+      "category": "1.13新增"
+    },
+    {
+      "id": "psyker_weapon_attacks_peril_equilibrium",
+      "key": "loc_talent_psyker_weapon_attacks_peril_equilibrium",
+      "en": "Peril Equilibrium",
+      "source": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "line": 2628,
+      "class_name": "Psyker",
+      "category": "1.13新增"
+    },
+    {
+      "id": "psyker_increased_blitz_damage",
+      "key": "loc_talent_psyker_increased_blitz_damage",
+      "en": "Psykinetic Grip",
+      "source": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "line": 2672,
+      "class_name": "Psyker",
+      "category": "1.13新增"
+    },
+    {
+      "id": "zealot_reduced_damage_from_ranged",
+      "key": "loc_talent_zealot_reduced_damage_from_ranged",
+      "en": "Wait in Line",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3230,
+      "class_name": "Zealot",
+      "category": "1.13新增"
+    },
+    {
+      "id": "zealot_weapon_special_damage",
+      "key": "loc_talent_zealot_weapon_special_damage",
+      "en": "Holy Tools",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3268,
+      "class_name": "Zealot",
+      "category": "1.13新增"
+    },
+    {
+      "id": "zealot_melee_kills_restore_toughness_to_target",
+      "key": "loc_talent_zealot_melee_kills_restore_toughness_to_target",
+      "en": "Got Your Back",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3249,
+      "class_name": "Zealot",
+      "category": "1.13新增"
+    },
+    {
+      "id": "zealot_dmg_vs_burning_electrocuted",
+      "key": "loc_talent_zealot_dmg_vs_burning_electrocuted",
+      "en": "Purifying Hatred",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3214,
+      "class_name": "Zealot",
+      "category": "1.13新增"
+    },
+    {
+      "id": "zealot_resist_death_ability",
+      "key": "loc_talent_zealot_resist_death_ability",
+      "en": "Zealous Pilgrim",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3288,
+      "class_name": "Zealot",
+      "category": "1.13新增"
+    },
+    {
+      "id": "zealot_resist_death_golden_toughness",
+      "key": "loc_talent_zealot_resist_death_recuperate",
+      "en": "Risen",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3429,
+      "class_name": "Zealot",
+      "category": "1.13新增"
+    },
+    {
+      "id": "zealot_resist_death_fire",
+      "key": "loc_talent_zealot_resist_death_fire",
+      "en": "Fire and Fury",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3331,
+      "class_name": "Zealot",
+      "category": "1.13新增"
+    },
+    {
+      "id": "ogryn_free_reload_after_ability",
+      "key": "loc_talent_ogryn_free_reload_after_ability",
+      "en": "Found Some More",
+      "source": "scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua",
+      "line": 2753,
+      "class_name": "Ogryn",
+      "category": "1.13新增"
+    },
+    {
+      "id": "veteran_base_ranged_damage",
+      "key": "loc_talent_veteran_base_ranged_damage",
+      "en": "Guardsman",
+      "source": "scripts/settings/ability/archetype_talents/talents/veteran_talents.lua",
+      "line": 1400,
+      "class_name": "Veteran",
+      "category": "1.13新增"
+    },
+    {
+      "id": "veteran_survivalist_passive",
+      "key": "loc_talent_veteran_survivalist_passive",
+      "en": "Practiced Efficiency",
+      "source": "scripts/settings/ability/archetype_talents/talents/veteran_talents.lua",
+      "line": 1417,
+      "class_name": "Veteran",
+      "category": "1.13新增"
+    },
+    {
+      "id": "base_ranged_damage_node_buff_medium_1",
+      "key": "loc_talent_ranged_damage_medium",
+      "en": "Ranged Damage Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 1637,
+      "class_name": "Arbites",
+      "previous_line": "- Ranged Damage Boost - 遠程傷害增幅（沿用本機繁中名稱，待使用者確認；`base_ranged_damage_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1637-L1660)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "base_cleave_node_buff_medium_1",
+      "key": "loc_talent_cleave_boost_medium",
+      "en": "Cleave Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 1013,
+      "class_name": "Arbites",
+      "previous_line": "- Cleave Boost - 順劈加成（沿用本機繁中名稱，待使用者確認；`base_cleave_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1013-L1036)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "base_impact_node_buff_medium_1",
+      "key": "loc_talent_impact_boost_medium",
+      "en": "Impact Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 989,
+      "class_name": "Arbites",
+      "previous_line": "- Impact Boost - 衝擊加成（沿用本機繁中名稱，待使用者確認；`base_impact_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L989-L1012)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "base_crit_chance_node_buff_low_1",
+      "key": "loc_talent_crit_chance_low",
+      "en": "Critical Chance Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 2622,
+      "class_name": "Scum",
+      "previous_line": "- Critical Chance Boost - 爆擊機率增幅（沿用本機繁中名稱，待使用者確認；`base_crit_chance_node_buff_low_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L2622-L2645)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "base_toxin_power_boost_1",
+      "key": "loc_talent_toxin_damage_boost",
+      "en": "Potent Tox",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 1757,
+      "class_name": "Scum",
+      "previous_line": "- Potent Tox - 強效毒藥（沿用本機繁中名稱，待使用者確認；`base_toxin_power_boost_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1757-L1781)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "broker_stimm_activation_talent",
+      "key": "loc_talent_broker_stimm_activation_talent",
+      "en": "Equip Cartel Special",
+      "source": "scripts/settings/ability/archetype_talents/talents/broker_talents.lua",
+      "line": 3187,
+      "class_name": "Scum",
+      "previous_line": "- Equip Cartel Special - 裝備財閥特殊裝備（沿用本機繁中名稱，待使用者確認；`broker_stimm_activation_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L3187-L3191)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_1",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 499,
+      "class_name": "Scum",
+      "previous_line": "- Spur I - 激勵 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L499-L507)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_2",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 508,
+      "class_name": "Scum",
+      "previous_line": "- Spur II - 激勵 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L508-L522)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_3",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur III",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 523,
+      "class_name": "Scum",
+      "previous_line": "- Spur III - 激勵 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L523-L533)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_4",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur IV",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 534,
+      "class_name": "Scum",
+      "previous_line": "- Spur IV - 激勵 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L534-L544)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_5b",
+      "key": "loc_talent_broker_stimm_celerity_b",
+      "en": "Reflex",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 550,
+      "class_name": "Scum",
+      "previous_line": "- Reflex - 反射（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L550-L557)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_5c",
+      "key": "loc_talent_broker_stimm_celerity_c",
+      "en": "Fervor",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 558,
+      "class_name": "Scum",
+      "previous_line": "- Fervor - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L558-L580)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_4c",
+      "key": "loc_talent_broker_stimm_combat_c",
+      "en": "Vultoprene I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 632,
+      "class_name": "Scum",
+      "previous_line": "- Vultoprene I - 獵鷹蕈劑 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_4c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L632-L640)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_5c",
+      "key": "loc_talent_broker_stimm_combat_c",
+      "en": "Vultoprene II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 641,
+      "class_name": "Scum",
+      "previous_line": "- Vultoprene II - 獵鷹蕈劑 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L641-L649)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_1",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 733,
+      "class_name": "Scum",
+      "previous_line": "- Kalma I - 抗焦慮藥 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L733-L737)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_2",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 738,
+      "class_name": "Scum",
+      "previous_line": "- Kalma II - 抗焦慮藥 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L738-L742)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_3",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma III",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 743,
+      "class_name": "Scum",
+      "previous_line": "- Kalma III - 抗焦慮藥 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L743-L747)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_4",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma IV",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 748,
+      "class_name": "Scum",
+      "previous_line": "- Kalma IV - 抗焦慮藥 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L748-L752)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_5a",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma V",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 753,
+      "class_name": "Scum",
+      "previous_line": "- Kalma V - 抗焦慮藥 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L753-L757)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "broker_passive_improved_sprint_dodge",
+      "key": "loc_talent_broker_passive_improved_sprint_dodge",
+      "en": "Like the Wind",
+      "source": "scripts/settings/ability/archetype_talents/talents/broker_talents.lua",
+      "line": 29,
+      "class_name": "Scum",
+      "previous_line": "- Like the Wind - 迅如疾風（沿用本機繁中名稱，待使用者確認；`broker_passive_improved_sprint_dodge`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L65-L67)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "broker_stimm_description_talent",
+      "key": "loc_talent_broker_stimm",
+      "en": "Cartel Special",
+      "source": "scripts/settings/ability/archetype_talents/talents/broker_talents.lua",
+      "line": 3172,
+      "class_name": "Scum",
+      "previous_line": "- Cartel Special - 財閥專員（沿用本機繁中名稱，待使用者確認；`broker_stimm_description_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L35-L89)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_1",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 650,
+      "class_name": "Scum",
+      "previous_line": "- Barrage I - 彈幕 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L650-L666)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_2",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 667,
+      "class_name": "Scum",
+      "previous_line": "- Barrage II - 彈幕 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L667-L683)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_3",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage III",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 684,
+      "class_name": "Scum",
+      "previous_line": "- Barrage III - 彈幕 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L684-L700)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_4",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage IV",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 701,
+      "class_name": "Scum",
+      "previous_line": "- Barrage IV - 彈幕 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L701-L717)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_5a",
+      "key": "loc_talent_broker_stimm_durability_b",
+      "en": "Tank",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 718,
+      "class_name": "Scum",
+      "previous_line": "- Tank - 坦克（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L718-L722)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_5b",
+      "key": "loc_talent_broker_stimm_durability_c",
+      "en": "Regain",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 723,
+      "class_name": "Scum",
+      "previous_line": "- Regain - 恢復（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L723-L732)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_5a",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur V",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 545,
+      "class_name": "Scum",
+      "previous_line": "- Spur V - 激勵 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L545-L549)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_5b",
+      "key": "loc_talent_broker_stimm_concentration_b",
+      "en": "Hypex",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 758,
+      "class_name": "Scum",
+      "previous_line": "- Hypex - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L758-L768)）",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_5c",
+      "key": "loc_talent_broker_stimm_concentration_c",
+      "en": "Klay",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 769,
+      "class_name": "Scum",
+      "previous_line": "- Klay - 集中藥（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L769-L781)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "cryptic_passive_cooldown_regen",
+      "key": "loc_talent_cryptic_passive_cooldown_regen",
+      "en": "Motive Engine",
+      "source": "scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua",
+      "line": 1531,
+      "class_name": "Skitarii",
+      "previous_line": "- Motive Engine - 動力引擎（沿用本機繁中名稱，待使用者確認；`cryptic_passive_cooldown_regen`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L1-L17)）",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "psyker_peril_passive",
+      "key": "loc_talent_psyker_peril_passive",
+      "en": "Perils of the Warp",
+      "source": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "line": 2606,
+      "class_name": "Psyker",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "ogryn_base_tank_passive",
+      "key": "loc_talent_ogryn_2_base_3",
+      "en": "Thick Skin",
+      "source": "scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua",
+      "line": 467,
+      "class_name": "Ogryn",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "ogryn_dodge_stagger",
+      "key": "loc_talent_ogryn_dodge_stagger",
+      "en": "Outta My Way!",
+      "source": "scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua",
+      "line": 2212,
+      "class_name": "Ogryn",
+      "category": "盤點補缺"
+    },
+    {
+      "id": "veteran_supression_immunity",
+      "key": "loc_talent_veteran_supression_immunity",
+      "en": "Determined",
+      "source": "scripts/settings/ability/archetype_talents/talents/veteran_talents.lua",
+      "line": 1390,
+      "class_name": "Veteran",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_1",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "en": "Wildfire I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 581,
+      "class_name": "Scum",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_2",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "en": "Wildfire II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 586,
+      "class_name": "Scum",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_3",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "en": "Wildfire III",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 591,
+      "class_name": "Scum",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_4a",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "en": "Wildfire IV",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 596,
+      "class_name": "Scum",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_5a",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "en": "Wildfire V",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 605,
+      "class_name": "Scum",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_4b",
+      "key": "loc_talent_broker_stimm_combat_b",
+      "en": "Fury I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 614,
+      "class_name": "Scum",
+      "category": "盤點補缺"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_5b",
+      "key": "loc_talent_broker_stimm_combat_b",
+      "en": "Fury II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 623,
+      "class_name": "Scum",
+      "category": "盤點補缺"
+    }
+  ],
+  "removed_named_talents": [
+    {
+      "class_name": "Psyker",
+      "en": "Tranquility Through Slaughter",
+      "id": "psyker_ranged_crits_vent"
+    },
+    {
+      "class_name": "Zealot",
+      "en": "Punishment",
+      "id": "zealot_multi_hits_grant_impact_and_uninterruptible"
+    },
+    {
+      "class_name": "Zealot",
+      "en": "Impassible",
+      "id": "zealot_block_dodging_synergy"
+    },
+    {
+      "class_name": "Zealot",
+      "en": "Grievous Wounds",
+      "id": "zealot_increased_stagger_on_weakspot_melee"
+    },
+    {
+      "class_name": "Skitarii",
+      "en": "Readiness Doctrines",
+      "id": "cryptic_precision_stance_reload_speed_delayed"
+    }
+  ],
+  "obsolete_small_node_terms": [
+    "Peril Resistance",
+    "Movement Speed Boost",
+    "Reload Boost",
+    "Rending Boost",
+    "Stamina Boost",
+    "Stamina Regeneration Boost",
+    "Suppression Boost"
+  ],
+  "previous_provisional_rows": [
+    {
+      "id": "psyker_increased_warp_damage",
+      "key": "loc_talent_psyker_increased_warp_damage",
+      "en": "Focused Warp",
+      "source": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "line": 2648,
+      "class_name": "Psyker",
+      "previous_line": "- Focused Warp - 聚焦亞空間（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_increased_warp_damage`；本機遊戲繁中名稱為「聚焦次元」，暫定譯名沿用詞表的亞空間用詞；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2648-L2671)）"
+    },
+    {
+      "id": "psyker_weapon_attacks_peril_equilibrium",
+      "key": "loc_talent_psyker_weapon_attacks_peril_equilibrium",
+      "en": "Peril Equilibrium",
+      "source": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "line": 2628,
+      "class_name": "Psyker",
+      "previous_line": "- Peril Equilibrium - 反噬平衡（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_weapon_attacks_peril_equilibrium`；本機遊戲繁中名稱為「危險平衡」，暫定譯名沿用詞表的反噬用詞；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2628-L2647)）"
+    },
+    {
+      "id": "psyker_increased_blitz_damage",
+      "key": "loc_talent_psyker_increased_blitz_damage",
+      "en": "Psykinetic Grip",
+      "source": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "line": 2672,
+      "class_name": "Psyker",
+      "previous_line": "- Psykinetic Grip - 念力之握（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_increased_blitz_damage`；沿用本機遊戲繁中名稱；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2672-L2700)）"
+    },
+    {
+      "id": "zealot_reduced_damage_from_ranged",
+      "key": "loc_talent_zealot_reduced_damage_from_ranged",
+      "en": "Wait in Line",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3230,
+      "class_name": "Zealot",
+      "previous_line": "- Wait in Line - 排隊等候（沿用本機繁中名稱，待使用者確認；`zealot_reduced_damage_from_ranged`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3230-L3248)）"
+    },
+    {
+      "id": "zealot_weapon_special_damage",
+      "key": "loc_talent_zealot_weapon_special_damage",
+      "en": "Holy Tools",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3268,
+      "class_name": "Zealot",
+      "previous_line": "- Holy Tools - 神聖工具（沿用本機繁中名稱，待使用者確認；`zealot_weapon_special_damage`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3268-L3287)）"
+    },
+    {
+      "id": "zealot_melee_kills_restore_toughness_to_target",
+      "key": "loc_talent_zealot_melee_kills_restore_toughness_to_target",
+      "en": "Got Your Back",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3249,
+      "class_name": "Zealot",
+      "previous_line": "- Got Your Back - 為您撐腰（沿用本機繁中名稱，待使用者確認；`zealot_melee_kills_restore_toughness_to_target`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3249-L3267)）"
+    },
+    {
+      "id": "zealot_dmg_vs_burning_electrocuted",
+      "key": "loc_talent_zealot_dmg_vs_burning_electrocuted",
+      "en": "Purifying Hatred",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3214,
+      "class_name": "Zealot",
+      "previous_line": "- Purifying Hatred - 淨化仇恨（沿用本機繁中名稱，待使用者確認；`zealot_dmg_vs_burning_electrocuted`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3214-L3229)）"
+    },
+    {
+      "id": "zealot_resist_death_ability",
+      "key": "loc_talent_zealot_resist_death_ability",
+      "en": "Zealous Pilgrim",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3288,
+      "class_name": "Zealot",
+      "previous_line": "- Zealous Pilgrim - 狂熱朝聖者（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_ability`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3288-L3330)）"
+    },
+    {
+      "id": "zealot_resist_death_golden_toughness",
+      "key": "loc_talent_zealot_resist_death_recuperate",
+      "en": "Risen",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3429,
+      "class_name": "Zealot",
+      "previous_line": "- Risen - 復活（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_golden_toughness`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3429-L3453)）"
+    },
+    {
+      "id": "zealot_resist_death_fire",
+      "key": "loc_talent_zealot_resist_death_fire",
+      "en": "Fire and Fury",
+      "source": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "line": 3331,
+      "class_name": "Zealot",
+      "previous_line": "- Fire and Fury - 烈焰與怒火（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_fire`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3331-L3345)）"
+    },
+    {
+      "id": "ogryn_free_reload_after_ability",
+      "key": "loc_talent_ogryn_free_reload_after_ability",
+      "en": "Found Some More",
+      "source": "scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua",
+      "line": 2753,
+      "class_name": "Ogryn",
+      "previous_line": "- Found Some More - 發現更多（沿用本機繁中名稱，待使用者確認；`ogryn_free_reload_after_ability`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2753-L2771)）"
+    },
+    {
+      "id": "base_ranged_damage_node_buff_medium_1",
+      "key": "loc_talent_ranged_damage_medium",
+      "en": "Ranged Damage Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 1637,
+      "class_name": "Arbites",
+      "previous_line": "- Ranged Damage Boost - 遠程傷害增幅（沿用本機繁中名稱，待使用者確認；`base_ranged_damage_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1637-L1660)）"
+    },
+    {
+      "id": "base_cleave_node_buff_medium_1",
+      "key": "loc_talent_cleave_boost_medium",
+      "en": "Cleave Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 1013,
+      "class_name": "Arbites",
+      "previous_line": "- Cleave Boost - 順劈加成（沿用本機繁中名稱，待使用者確認；`base_cleave_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1013-L1036)）"
+    },
+    {
+      "id": "base_impact_node_buff_medium_1",
+      "key": "loc_talent_impact_boost_medium",
+      "en": "Impact Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 989,
+      "class_name": "Arbites",
+      "previous_line": "- Impact Boost - 衝擊加成（沿用本機繁中名稱，待使用者確認；`base_impact_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L989-L1012)）"
+    },
+    {
+      "id": "base_crit_chance_node_buff_low_1",
+      "key": "loc_talent_crit_chance_low",
+      "en": "Critical Chance Boost",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 2622,
+      "class_name": "Scum",
+      "previous_line": "- Critical Chance Boost - 爆擊機率增幅（沿用本機繁中名稱，待使用者確認；`base_crit_chance_node_buff_low_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L2622-L2645)）"
+    },
+    {
+      "id": "base_toxin_power_boost_1",
+      "key": "loc_talent_toxin_damage_boost",
+      "en": "Potent Tox",
+      "source": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "line": 1757,
+      "class_name": "Scum",
+      "previous_line": "- Potent Tox - 強效毒藥（沿用本機繁中名稱，待使用者確認；`base_toxin_power_boost_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1757-L1781)）"
+    },
+    {
+      "id": "broker_stimm_activation_talent",
+      "key": "loc_talent_broker_stimm_activation_talent",
+      "en": "Equip Cartel Special",
+      "source": "scripts/settings/ability/archetype_talents/talents/broker_talents.lua",
+      "line": 3187,
+      "class_name": "Scum",
+      "previous_line": "- Equip Cartel Special - 裝備財閥特殊裝備（沿用本機繁中名稱，待使用者確認；`broker_stimm_activation_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L3187-L3191)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_1",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 499,
+      "class_name": "Scum",
+      "previous_line": "- Spur I - 激勵 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L499-L507)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_2",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 508,
+      "class_name": "Scum",
+      "previous_line": "- Spur II - 激勵 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L508-L522)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_3",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur III",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 523,
+      "class_name": "Scum",
+      "previous_line": "- Spur III - 激勵 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L523-L533)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_4",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur IV",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 534,
+      "class_name": "Scum",
+      "previous_line": "- Spur IV - 激勵 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L534-L544)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_5b",
+      "key": "loc_talent_broker_stimm_celerity_b",
+      "en": "Reflex",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 550,
+      "class_name": "Scum",
+      "previous_line": "- Reflex - 反射（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L550-L557)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_5c",
+      "key": "loc_talent_broker_stimm_celerity_c",
+      "en": "Fervor",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 558,
+      "class_name": "Scum",
+      "previous_line": "- Fervor - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L558-L580)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_4c",
+      "key": "loc_talent_broker_stimm_combat_c",
+      "en": "Vultoprene I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 632,
+      "class_name": "Scum",
+      "previous_line": "- Vultoprene I - 獵鷹蕈劑 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_4c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L632-L640)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_combat_5c",
+      "key": "loc_talent_broker_stimm_combat_c",
+      "en": "Vultoprene II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 641,
+      "class_name": "Scum",
+      "previous_line": "- Vultoprene II - 獵鷹蕈劑 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L641-L649)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_1",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 733,
+      "class_name": "Scum",
+      "previous_line": "- Kalma I - 抗焦慮藥 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L733-L737)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_2",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 738,
+      "class_name": "Scum",
+      "previous_line": "- Kalma II - 抗焦慮藥 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L738-L742)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_3",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma III",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 743,
+      "class_name": "Scum",
+      "previous_line": "- Kalma III - 抗焦慮藥 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L743-L747)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_4",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma IV",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 748,
+      "class_name": "Scum",
+      "previous_line": "- Kalma IV - 抗焦慮藥 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L748-L752)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_5a",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "en": "Kalma V",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 753,
+      "class_name": "Scum",
+      "previous_line": "- Kalma V - 抗焦慮藥 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L753-L757)）"
+    },
+    {
+      "id": "broker_passive_improved_sprint_dodge",
+      "key": "loc_talent_broker_passive_improved_sprint_dodge",
+      "en": "Like the Wind",
+      "source": "scripts/settings/ability/archetype_talents/talents/broker_talents.lua",
+      "line": 29,
+      "class_name": "Scum",
+      "previous_line": "- Like the Wind - 迅如疾風（沿用本機繁中名稱，待使用者確認；`broker_passive_improved_sprint_dodge`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L65-L67)）"
+    },
+    {
+      "id": "broker_stimm_description_talent",
+      "key": "loc_talent_broker_stimm",
+      "en": "Cartel Special",
+      "source": "scripts/settings/ability/archetype_talents/talents/broker_talents.lua",
+      "line": 3172,
+      "class_name": "Scum",
+      "previous_line": "- Cartel Special - 財閥專員（沿用本機繁中名稱，待使用者確認；`broker_stimm_description_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L35-L89)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_1",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage I",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 650,
+      "class_name": "Scum",
+      "previous_line": "- Barrage I - 彈幕 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L650-L666)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_2",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage II",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 667,
+      "class_name": "Scum",
+      "previous_line": "- Barrage II - 彈幕 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L667-L683)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_3",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage III",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 684,
+      "class_name": "Scum",
+      "previous_line": "- Barrage III - 彈幕 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L684-L700)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_4",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "en": "Barrage IV",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 701,
+      "class_name": "Scum",
+      "previous_line": "- Barrage IV - 彈幕 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L701-L717)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_5a",
+      "key": "loc_talent_broker_stimm_durability_b",
+      "en": "Tank",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 718,
+      "class_name": "Scum",
+      "previous_line": "- Tank - 坦克（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L718-L722)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_durability_5b",
+      "key": "loc_talent_broker_stimm_durability_c",
+      "en": "Regain",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 723,
+      "class_name": "Scum",
+      "previous_line": "- Regain - 恢復（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L723-L732)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_celerity_5a",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "en": "Spur V",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 545,
+      "class_name": "Scum",
+      "previous_line": "- Spur V - 激勵 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L545-L549)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_5b",
+      "key": "loc_talent_broker_stimm_concentration_b",
+      "en": "Hypex",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 758,
+      "class_name": "Scum",
+      "previous_line": "- Hypex - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L758-L768)）"
+    },
+    {
+      "class": "Scum",
+      "id": "broker_stimm_concentration_5c",
+      "key": "loc_talent_broker_stimm_concentration_c",
+      "en": "Klay",
+      "source": "scripts/settings/talent/talent_settings_broker.lua",
+      "line": 769,
+      "class_name": "Scum",
+      "previous_line": "- Klay - 集中藥（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L769-L781)）"
+    },
+    {
+      "id": "cryptic_toughness_on_damage_taken",
+      "key": "loc_talent_cryptic_toughness_on_damage_taken",
+      "en": "Kinetic Energy Distributors",
+      "source": "scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua",
+      "line": 2318,
+      "class_name": "Skitarii",
+      "previous_line": "- Kinetic Energy Distributors - 動能分配器（沿用本機繁中名稱，待使用者確認；`cryptic_toughness_on_damage_taken`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L2318-L2340)）"
+    },
+    {
+      "id": "cryptic_passive_cooldown_regen",
+      "key": "loc_talent_cryptic_passive_cooldown_regen",
+      "en": "Motive Engine",
+      "source": "scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua",
+      "line": 1531,
+      "class_name": "Skitarii",
+      "previous_line": "- Motive Engine - 動力引擎（沿用本機繁中名稱，待使用者確認；`cryptic_passive_cooldown_regen`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L1-L17)）"
+    }
+  ],
+  "source_file_hashes": {
+    "scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua": "38c600a3a4b6e5c78f2739e961402c16faf6d7bbfbcb0c273b66b1f69b526856",
+    "scripts/settings/archetype/archetypes/psyker_archetype.lua": "ad31a872ce9ef586366b8902678545d4e8ad8af3fac83f3ea956a089120d2244",
+    "scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua": "b041e1bf0ac1076383064bc0b0f54e4d77bbface690911f6dfe859d57fd1058e",
+    "scripts/settings/archetype/archetypes/ogryn_archetype.lua": "0474bb32641fe55d7585e035187ec94c3a279ea0e7584edc1023bcad3fc00dac",
+    "scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua": "9c55bc3395e001a0b80ea676400e0596f412475b57184cc909beaa49acc87903",
+    "scripts/settings/archetype/archetypes/zealot_archetype.lua": "22b889783975be1fd2665acf033ad35fd565689324961774037c07489bf85cae",
+    "scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua": "b8352a4713b9f7c74f3d481287a0d241527b441c8608b1d71c22f4d277002000",
+    "scripts/settings/archetype/archetypes/veteran_archetype.lua": "3f9dfbacb4c869350f6ba3efea4659fa1b7b477a5a3c1e18b8d5165710244c5a",
+    "scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua": "3fc61622c52d918a1fa8de115c7e323ecaffca069d62e7780d51353e769d63cc",
+    "scripts/settings/archetype/archetypes/adamant_archetype.lua": "62e4590d2fa83f89996040a4ca0d69a690cc65146e0cdeb0d061a7aee982fa4d",
+    "scripts/ui/views/talent_builder_view/layouts/broker_tree.lua": "fd3c6fe84da9443c38713f2823f3264e267ece687a0b17aebe43c462bef90f9e",
+    "scripts/settings/archetype/archetypes/broker_archetype.lua": "d644c0f955454fc051c95baed793efdcc8f4ea0e98a2acf5feda2fde95d559ab",
+    "scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua": "a81a3c4603f92edeb52ca915e32fb89eca3cb3edbc40952577244159d55c2e97",
+    "scripts/settings/archetype/archetypes/cryptic_archetype.lua": "afc0c60c04406325b758fdc2a7ae12cd120ae81a01a2c0fa2862dff726de5a87",
+    "scripts/settings/ability/archetype_talents/talents/base_talents.lua": "ff9ad34d2c8e4745f5a08276d8f19e9cc9847cf0835f1343f349ed9976c81eb3",
+    "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua": "30579fbf2807c1e3ca9bb6fff71aaa11b16c304776d388dde9398d58d7e87cca",
+    "scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua": "55d14253a43538c42dd18e8b91a34128018ed65c33e3a47de2a9586b7b387415",
+    "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua": "3396e92746db8a363347f86894e87b7b9b74d964e41df1097910d31810988195",
+    "scripts/settings/ability/archetype_talents/talents/veteran_talents.lua": "9639b400cae6fd622fd7845dc58ac69f6aee6dad1c807ae957df84b5bb40a152",
+    "scripts/settings/ability/archetype_talents/talents/adamant_talents.lua": "31c014d2ab60956b0c830b144a823be81b377f7c000d1f9efe3c101a592efc55",
+    "scripts/settings/ability/archetype_talents/talents/broker_talents.lua": "984fa9c5dbcf47626fa3b35f776005ede4cd47486f57d5f5b435861b41909b38",
+    "scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua": "ab6f14ac95f75237d4cccf6dfd1ff0ee5b99dac73567202a09a81972a4338be8",
+    "scripts/settings/talent/talent_settings_broker.lua": "851f6f9a3161d22a18044825133e084829c969c0b423565798b34ad0d5fb99a6"
+  },
+  "active_tree_talent_counts": {
+    "Psyker": 81,
+    "Ogryn": 86,
+    "Zealot": 82,
+    "Veteran": 77,
+    "Arbites": 86,
+    "Scum": 79,
+    "Skitarii": 97
+  },
+  "coverage": "current seven-class talent trees, archetype base talents, and all 29 generated Scum stimm talents; not_selected excluded as a UI sentinel",
+  "checks": {
+    "active_display_name_keys_resolved": true,
+    "active_english_name_coverage": true,
+    "pending_english_matches_same_build_name_keys": true,
+    "removed_named_talents_absent_from_current_tree_and_base": true,
+    "obsolete_small_node_terms_absent_from_all_current_trees": true,
+    "existing_curated_chinese_preserved": true
+  },
+  "files": {
+    "translation": {
+      "path": "Referneces/Translation.md",
+      "before_sha256": "98e36270b3dde4888fcc3ad0cfb919466c1c3e4e5e552adde04323bfd27bedef",
+      "after_sha256": "87e9fa5d187eecc59b912f21f259273974ef016cd696aa57f9e1f198556f7309"
+    },
+    "candidates": {
+      "path": "Darktide Translation Workspace/Term Candidates.md",
+      "before_sha256": "9cc68958ef3692d7bf8e3b02b4f59dc4a42215402148ff6ebb7a483df48da187",
+      "after_sha256": "d3c45bec69a4e0e7b4172ae1901098c5bb642a82b5720ae368c36164d99c6245"
+    }
+  },
+  "validation_results": {
+    "translation_references": {
+      "markdown_files": 3,
+      "local_references": 55,
+      "remote_references": 84,
+      "errors": []
+    },
+    "candidate_workspace_references": {
+      "markdown_files": 58,
+      "local_references": 2,
+      "remote_references": 1,
+      "errors": []
+    },
+    "pending_rows_in_translation": 55,
+    "pending_rows_in_review_list": 55,
+    "stimm_recipe_names": 29,
+    "file_hashes_match": true,
+    "index_entry_unique_and_paths_exist": true,
+    "git_diff_check_passed": true
+  }
+}

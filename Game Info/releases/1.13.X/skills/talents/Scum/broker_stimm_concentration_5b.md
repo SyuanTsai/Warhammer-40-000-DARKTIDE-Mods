@@ -1,5 +1,7 @@
 # 狂熱(Hypex)：原始碼依據
 
+[English](en/broker_stimm_concentration_5b.md)
+
 [返回玩家說明](README.md#broker_stimm_concentration_5b)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_stimm_concentration_5b)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -30,7 +32,7 @@
 
 ## 算例條件與待確認事項
 
-- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
+- **恢復算例**：前置抗焦慮藥I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
 - 藥效結束會移除觸發器；已經取得的1秒內部Buff依自身時間到期，不保證同時瞬間清除。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

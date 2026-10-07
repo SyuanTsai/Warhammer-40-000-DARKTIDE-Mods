@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_499_503",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: cryptic_talents.lua L1292-L1304 (Critical Power Overload), L1314-L1323 (Invigorating Overload), L1333-L1372 (Static Capacitor Drain), L1188-L1198 (Servo-Sinew Surge), L1171-L1176 (Honed Dissector). Existing numeric values and English Capacitance keyword reused. No mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction. Static Capacitor Drain: existing evidence confirms no timed expiry and passive-stop cleanup, but not the complete death-reset process; until-death wording remains Cannot confirm. Other omitted details are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_overload_keystone_bigger_explosion",
+      "name": "Critical Power Overload",
+      "name_hash": "bee5e91f",
+      "description_hash": "4bcf4f12",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_bigger_explosion.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_bigger_explosion.md",
+      "commit": "7c3d7354c"
+    },
+    {
+      "id": "cryptic_overload_keystone_toughness_stamina",
+      "name": "Invigorating Overload",
+      "name_hash": "cbfe10b4",
+      "description_hash": "7c6a74c0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_toughness_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_toughness_stamina.md",
+      "commit": "5b9c32a85"
+    },
+    {
+      "id": "cryptic_overload_keystone_permastack",
+      "name": "Static Capacitor Drain",
+      "name_hash": "273f2585",
+      "description_hash": "c193a6c8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_permastack.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_permastack.md",
+      "commit": "510f2bace"
+    },
+    {
+      "id": "cryptic_dissector_crit_attack_speed",
+      "name": "Servo-Sinew Surge",
+      "name_hash": "a5d94f72",
+      "description_hash": "7ddcfcd5",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_crit_attack_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_crit_attack_speed.md",
+      "commit": "f55bde8e0"
+    },
+    {
+      "id": "cryptic_dissector_max_stacks",
+      "name": "Honed Dissector",
+      "name_hash": "a5e601c2",
+      "description_hash": "52304209",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_max_stacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_max_stacks.md",
+      "commit": "ce7fa059a"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 372,
+    "from_commit": "995a766ce",
+    "to_commit": "ce7fa059a",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

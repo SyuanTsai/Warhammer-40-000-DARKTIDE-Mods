@@ -1,0 +1,917 @@
+{
+  "date": "2026-10-04",
+  "blessing": "crucian-roulette",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+    "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+    "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 3,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "corrections": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "review_scope": "Current nine formal Crucian Roulette Markdown files, root config and extension draft, exact three-variant/six-binding UI and RAW receipts, tier/mode/core/clip/backblast evidence, icon receipt, current blessing map/shared entry links, and exact remaining-task partition. Unchanged common fixed-SHA mechanics were checked for applicability through the accepted common-cache receipt, not re-read in full. The remaining record retains the dual-stub exact-metadata candidate as unbound/unresolved and the shotpistol-shield no-metadata source-only candidate; neither is folded into the completed bound group.",
+    "verified_summary": {
+      "formal_markdown_count": 9,
+      "variant_count": 3,
+      "binding_count": 6,
+      "tiers_selected_by_user": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "tier_rows": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "source_available_tiers_null_is_backend_metadata_only": true,
+      "percentage_points_per_missing_round": {
+        "autogun_p3": [
+          0.45,
+          0.5,
+          0.55,
+          0.6
+        ],
+        "phosphor_pistol_p1": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "stubrevolver_p1": [
+          4.5,
+          5,
+          5.5,
+          6.0
+        ]
+      },
+      "trigger": "While wielding the blessed weapon, the current missing rounds across clips in use determine a generic critical-strike-chance stat; reloading or a fully empty clip returns the bonus to zero. No duration, stack buildup or cooldown.",
+      "recalculation": "The pre-shot chance applies to the shot; consuming the last round makes the subsequent empty-clip bonus zero. Switching out removes the held-slot stat; switching back recalculates from the current clip state.",
+      "critical_scope": "The tier override replaces the entire base conditional-stat table, so the bonus is generic critical_strike_chance rather than an added ranged-only 5%; autogun butt strikes and pistol melee attacks can use it. Phosphor backblast passes is_critical_strike=false.",
+      "crit_math": "Generic, attack-type and handling chance are summed and clamped to [0,1]; ordinary chance rounds to two decimals before PRD. Per-round percentage-point increments therefore do not guarantee the same rounded threshold movement at each step.",
+      "examples": "Arithmetic checked: revolver IV with M=5/A=1 gives 24 pp; A=0 gives 0; phosphor IV M=6/A=1 gives 30 pp; 20% baseline +24 pp =44%, a 120% relative increase; 90%+24 pp clamps to 100%.",
+      "localization": {
+        "name_en": "Crucian Roulette",
+        "name_zh_tw": "克魯錫安輪盤",
+        "name_hash": "4b48aa5c",
+        "description_hash": "b19fe517",
+        "description_en": "{crit_chance:%s} Critical Chance for each expended round in your weapon (resets on reload).",
+        "description_zh_tw": "每消耗武器中一發彈藥，你的暴擊幾率增加{crit_chance:%s}（換彈時重置）。",
+        "resource": "content/localization/items",
+        "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+        "raw_build": "Steam Build25606770 / 1.13.1"
+      },
+      "metadata": "Six exact bound rows across three variants. Each trait has the matching weapon-family restriction and no weapon-template restriction; each row retains its actual family/pattern/mark localization IDs and source import/ukeys/append lines.",
+      "bindings": [
+        {
+          "weapon_id": "autogun_p3",
+          "mark_id": "autogun_p3_m1",
+          "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+          "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+          "loc_ids": [
+            "loc_weapon_family_autogun_p3_m1",
+            "loc_weapon_pattern_autogun_p3_m1",
+            "loc_weapon_mark_autogun_p3_m1"
+          ],
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+          "import_line": 17,
+          "ukeys_line": 1031,
+          "append_line": 1033
+        },
+        {
+          "weapon_id": "autogun_p3",
+          "mark_id": "autogun_p3_m2",
+          "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+          "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+          "loc_ids": [
+            "loc_weapon_family_autogun_p3_m2",
+            "loc_weapon_pattern_autogun_p3_m2",
+            "loc_weapon_mark_autogun_p3_m2"
+          ],
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+          "import_line": 17,
+          "ukeys_line": 1094,
+          "append_line": 1096
+        },
+        {
+          "weapon_id": "autogun_p3",
+          "mark_id": "autogun_p3_m3",
+          "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+          "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+          "loc_ids": [
+            "loc_weapon_family_autogun_p3_m3",
+            "loc_weapon_pattern_autogun_p3_m3",
+            "loc_weapon_mark_autogun_p3_m3"
+          ],
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+          "import_line": 17,
+          "ukeys_line": 1039,
+          "append_line": 1041
+        },
+        {
+          "weapon_id": "phosphor_pistol_p1",
+          "mark_id": "phosphor_pistol_p1_m1",
+          "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+          "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+          "loc_ids": [
+            "loc_weapon_family_phosphor_pistol_p1_m1",
+            "loc_weapon_pattern_phosphor_pistol_p1_m1",
+            "loc_weapon_mark_phosphor_pistol_p1_m1"
+          ],
+          "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+          "import_line": 16,
+          "ukeys_line": 1141,
+          "append_line": 1143
+        },
+        {
+          "weapon_id": "stubrevolver_p1",
+          "mark_id": "stubrevolver_p1_m1",
+          "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+          "name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+          "loc_ids": [
+            "loc_weapon_family_stubrevolver_p1_m1",
+            "loc_weapon_pattern_stubrevolver_p1_m1",
+            "loc_weapon_mark_stubrevolver_p1_m1"
+          ],
+          "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+          "import_line": 16,
+          "ukeys_line": 982,
+          "append_line": 984
+        },
+        {
+          "weapon_id": "stubrevolver_p1",
+          "mark_id": "stubrevolver_p1_m2",
+          "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+          "name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+          "loc_ids": [
+            "loc_weapon_family_stubrevolver_p1_m2",
+            "loc_weapon_pattern_stubrevolver_p1_m2",
+            "loc_weapon_mark_stubrevolver_p1_m2"
+          ],
+          "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+          "import_line": 15,
+          "ukeys_line": 885,
+          "append_line": 887
+        }
+      ],
+      "variant_values": {
+        "autogun_p3": {
+          "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+          "source_tiers": [
+            "I",
+            "II",
+            "III",
+            "IV"
+          ],
+          "stat_per_missing_round": [
+            0.0045,
+            0.005,
+            0.0055,
+            0.006
+          ],
+          "percentage_points_per_missing_round": [
+            0.45,
+            0.5,
+            0.55,
+            0.6
+          ],
+          "tier_source": {
+            "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+            "lines": [
+              10,
+              49
+            ]
+          },
+          "wrapper_source": {
+            "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+            "lines": [
+              8,
+              8
+            ]
+          }
+        },
+        "phosphor_pistol_p1": {
+          "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+          "source_tiers": [
+            "I",
+            "II",
+            "III",
+            "IV"
+          ],
+          "stat_per_missing_round": [
+            0.045,
+            0.05,
+            0.055,
+            0.06
+          ],
+          "percentage_points_per_missing_round": [
+            4.5,
+            5,
+            5.5,
+            6
+          ],
+          "tier_source": {
+            "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+            "lines": [
+              10,
+              49
+            ]
+          },
+          "wrapper_source": {
+            "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+            "lines": [
+              16,
+              16
+            ]
+          }
+        },
+        "stubrevolver_p1": {
+          "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+          "source_tiers": [
+            "I",
+            "II",
+            "III",
+            "IV"
+          ],
+          "stat_per_missing_round": [
+            0.045,
+            0.05,
+            0.055,
+            0.06
+          ],
+          "percentage_points_per_missing_round": [
+            4.5,
+            5,
+            5.5,
+            6.0
+          ],
+          "tier_source": {
+            "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+            "lines": [
+              248,
+              287
+            ]
+          },
+          "wrapper_source": {
+            "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+            "lines": [
+              22,
+              22
+            ]
+          }
+        }
+      },
+      "outside_candidates": {
+        "exact_metadata_outside": [
+          {
+            "item": "content/items/traits/bespoke_dual_stubpistols_p1/crit_chance_based_on_ammo_left",
+            "weapon_item": "content/items/weapons/player/ranged/dual_stubpistols_p1_m1",
+            "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_crit_chance_based_on_ammo_left",
+            "restriction": [
+              "dual_stubpistols_p1"
+            ],
+            "classification": "trait_not_imported / metadata_without_bound_intersection",
+            "source_definition": {
+              "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_crit_chance_based_on_ammo_left",
+              "source": {
+                "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_stubpistols_p1.lua",
+                "start": 505,
+                "end": 546,
+                "content_sha256": "78a974dfa50c991ba955c7b82624c6d7d8219c843ddcfe35f01bf0f66f16544e"
+              },
+              "metadata_items": [
+                "content/items/traits/bespoke_dual_stubpistols_p1/crit_chance_based_on_ammo_left"
+              ],
+              "classification": "metadata_without_bound_intersection"
+            },
+            "decision": "Exact metadata exists but weapon template has not imported/bound it; outside this 3-variant/6-mark group."
+          }
+        ],
+        "source_only_no_matching_trait_metadata": [
+          {
+            "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_based_on_ammo_left",
+            "source_definition": {
+              "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_based_on_ammo_left",
+              "source": {
+                "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+                "start": 248,
+                "end": 287,
+                "content_sha256": "43fa342065359bf572abe78741af27e70d39aca8d7cd474e1e7df042d2742395"
+              },
+              "metadata_items": [],
+              "classification": "no_matching_trait_metadata"
+            },
+            "wrapper": {
+              "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+              "line": 24
+            },
+            "metadata_items": [],
+            "decision": "Already in source-only catalog, with no matching trait metadata. Do not infer RAW key or expand group."
+          }
+        ]
+      },
+      "image": {
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_114",
+        "sha256": "39f357d7115375f7fb231b2b956084da53cdef01770d7691dbf109a6d717591f",
+        "attachment": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true
+      },
+      "map_and_shared_entry": {
+        "blessing_row_count": 1,
+        "variant_row_count": 3,
+        "binding_row_count": 6,
+        "map_effect_matches_player_summary": true,
+        "shared_links_verified": true,
+        "shared_entry_paths": [
+          "Game Info/releases/1.13.X/blessings/README.md",
+          "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md",
+          "Game Info/releases/1.13.X/blessings/ranged/README.md"
+        ]
+      },
+      "remaining_partition": {
+        "counts": {
+          "name_groups": 124,
+          "not_started_name_groups": 124,
+          "partial_name_groups": 0,
+          "remaining_variants": 436,
+          "remaining_bindings": 860,
+          "unresolved": 58,
+          "definitions_outside_intersection": 88
+        },
+        "target_key_remaining_groups": 0,
+        "remaining_sha256_matches_draft": true,
+        "dual_stubpistols_exact_metadata_but_unbound": "Kept separate as exact metadata outside; not included in this 3-variant/6-binding group.",
+        "shotpistol_shield": "Existing source-only definition with no matching trait metadata; not assigned a RAW key or group.",
+        "bound_intersection": {
+          "completed_group_absent_from_remaining_bound_groups": true,
+          "bound_variant_count": 3,
+          "bound_binding_count": 6,
+          "remaining_sha256_matches_draft": true
+        },
+        "outside_candidates_retained": {
+          "exact_metadata_same_raw_name_and_description": "Dual stub pistol: trait_not_imported; exact trait metadata uses loc_trait_bespoke_crit_chance_based_on_ammo_left and its _desc key, restriction dual_stubpistols_p1; remains in unresolved and definitions_outside_intersection, outside the current three-variant/six-binding bound group.",
+          "source_only_without_matching_metadata": "Shotpistol shield source definition and wrapper are retained in the existing source-only catalog with no matching trait metadata; no RAW key or current-group binding is inferred."
+        }
+      },
+      "errata": "No explicit RAW-versus-code contradiction found; undocumented edge cases are presented as implementation details, not errata."
+    },
+    "reviewed_bindings": [
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+        "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m1",
+          "loc_weapon_pattern_autogun_p3_m1",
+          "loc_weapon_mark_autogun_p3_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1031,
+        "append_line": 1033
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+        "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m2",
+          "loc_weapon_pattern_autogun_p3_m2",
+          "loc_weapon_mark_autogun_p3_m2"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1094,
+        "append_line": 1096
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+        "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m3",
+          "loc_weapon_pattern_autogun_p3_m3",
+          "loc_weapon_mark_autogun_p3_m3"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1039,
+        "append_line": 1041
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "mark_id": "phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+        "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "loc_ids": [
+          "loc_weapon_family_phosphor_pistol_p1_m1",
+          "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "loc_weapon_mark_phosphor_pistol_p1_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1141,
+        "append_line": 1143
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m1",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+        "name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m1",
+          "loc_weapon_pattern_stubrevolver_p1_m1",
+          "loc_weapon_mark_stubrevolver_p1_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 982,
+        "append_line": 984
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m2",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+        "name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m2",
+          "loc_weapon_pattern_stubrevolver_p1_m2",
+          "loc_weapon_mark_stubrevolver_p1_m2"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 885,
+        "append_line": 887
+      }
+    ],
+    "verified_source_refs": [
+      {
+        "claim": "autogun_p3 complete I-IV trait override",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start": 10,
+        "end": 49
+      },
+      {
+        "claim": "autogun_p3 buff wrapper clone, with no additional override",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start": 8,
+        "end": 8
+      },
+      {
+        "claim": "phosphor_pistol_p1 complete I-IV trait override",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start": 10,
+        "end": 49
+      },
+      {
+        "claim": "phosphor_pistol_p1 buff wrapper clone, with no additional override",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "claim": "stubrevolver_p1 complete I-IV trait override",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start": 248,
+        "end": 287
+      },
+      {
+        "claim": "stubrevolver_p1 buff wrapper clone, with no additional override",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start": 22,
+        "end": 22
+      },
+      {
+        "claim": "shared ammo-left base; held-slot checks, reload/empty handling and bonus step",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+        "start": 2814,
+        "end": 2850,
+        "content_sha256": "2d5fce0abd6cdf129ae5c047e04f82a9ad2d1d25cafe6cbf68d9c8ea9c11cdc2"
+      },
+      {
+        "claim": "scripts/utilities/ammo.lua",
+        "path": "scripts/utilities/ammo.lua",
+        "start": 180,
+        "end": 242,
+        "content_sha256": "5e7a9beb56c2cf988c3c44383d58d49f67b7f5f27129f01485c4d7f7bd530234"
+      },
+      {
+        "claim": "scripts/utilities/attack/hit_scan.lua",
+        "path": "scripts/utilities/attack/hit_scan.lua",
+        "start": 312,
+        "end": 321,
+        "content_sha256": "e6069663293fea306283e248e35b8c0f694c96f515e268cdac6004b5fe717cf2"
+      },
+      {
+        "claim": "scripts/settings/equipment/weapon_templates/phosphor_pistol/settings_templates/phosphor_pistol_hitscan_templates.lua",
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/settings_templates/phosphor_pistol_hitscan_templates.lua",
+        "start": 11,
+        "end": 35,
+        "content_sha256": "c2ed9e49068179fd200b798a8171cd03a009777bd46d68d20b3051fefebad4df"
+      },
+      {
+        "claim": "scripts/settings/equipment/weapon_templates/phosphor_pistol/settings_templates/phosphor_pistol_explosion_templates.lua",
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/settings_templates/phosphor_pistol_explosion_templates.lua",
+        "start": 12,
+        "end": 35,
+        "content_sha256": "daf4351033096364f793ff9a2379e5c83965f23e573674182ae2b0a650b66040"
+      },
+      {
+        "claim": "scripts/utilities/attack/explosion.lua",
+        "path": "scripts/utilities/attack/explosion.lua",
+        "start": 57,
+        "end": 59,
+        "content_sha256": "6d386fb25aa1fe736e3205bd2fee227a51b49bf88975ebd8aa17315d65f00f98"
+      }
+    ],
+    "receipt_refs": {
+      "config": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-config.json",
+      "extension_draft": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-extension-draft.json",
+      "traits": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-traits-review.json",
+      "ui": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-ui-review.json",
+      "ui_raw": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-ui-raw-verification.json",
+      "modes": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-mode-fields-review.json",
+      "core": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-core-review.json",
+      "clip_backblast": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-clip-backblast-review.json",
+      "raw": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-extension-raw-verification.json",
+      "image": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-image.json",
+      "common_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "faster_enabled": false,
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/DAMAGE_PERCENTAGE_REVIEW.md": "9c6e07788e1edabb918f1b03ba5930c4b21c62adfdb00c0ef70bcfa51f33cfc3",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/LOCALIZATION_COMPARISON.md": "64289dd77aab9be55455230c5fb53c5b4ddf36109c8e2f40d4425b3c2d64a4f6",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/README.md": "9d478935f59e6dddafde7aef4aab5367a60c8a6e068f8bb28a2de81a0ea18dda",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/SOURCE_INDEX.md": "bbc9799732ad0125ebefd4e465972be170f1754b24c9bbf29d2515884a813a6b",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/TIER_VALUES.md": "1d862e1b47c925ce7e3be86377d460e0aaa1a813fe35137aa3799fcd31ed531e",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/WEAPON_COMPATIBILITY.md": "0b2fd19ba00f09506ef37f9fd780a7c7875cefb6962b50e1c8bf917ce27c83a6",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left.md": "68a733558510a95cd19eeacb48ccc2bf4384dd39c0a40d5f2bba104a984ffcef",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left.md": "90681487f17bafd106dfcc756b405f8f2f20216e658eb1953327052fb52a66e4",
+      "Game Info/releases/1.13.X/blessings/entries/克魯錫安輪盤/weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left.md": "d66222e4ffb7bf6232b41bf73bc72a62e7ba6138e0b7974e763353a761654bd2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-config.json": "6f77adf0b489bb9a116059cdcbc81f576679f1c12551666267fc3d7167285072",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-extension-draft.json": "18100fca083eec8d82727f440509ad2117cb6e06ad2aa995fdd9c3082532d526",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-agent-config.json": "0a0cead63a33e10739b0c97fd320bf99d829fb61f519e9aa15c6ff81965795c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-agent-evidence.json": "6fd68d94416eeccc3f13b667523ef9c84026f5f274b74c54c83a31df561bc30e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-traits-review.json": "e85b268f394fa9d9621124d1cda48134e20cc2917918c8898e38f870dcf03632",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-ui-review.json": "d0a7421d1ed98e6b673f2161446273227f8b781ea2e3989129f2a097e92047a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-ui-raw-verification.json": "6ce8e38b05b2d9c8517fe8ace7253ec28bfac5f1f024d5cb3cf8fcc2e8b25688",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-mode-fields-review.json": "48aa68428d42c6e8d2bb90d04fc1c5e4b957a1bf937179371afdf2ee963065d2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-core-review.json": "f8a0a3ac511a8f97b2ab0acd30bf36b21aba5a354f48557f7f44e6df622442fe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-clip-backblast-review.json": "d354f6b45821521944f2e73453aa91ca6292cd6ea1423a423abcc91059f45179",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-extension-raw-verification.json": "e6a1bed1e1554d5aa5e601f4b9385d963bc1ddf00cb1404e275e204bab1a1455",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-raw-verification.json": "6ce8e38b05b2d9c8517fe8ace7253ec28bfac5f1f024d5cb3cf8fcc2e8b25688",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-image.json": "5c582cf23b43cf5f80477b5fe0d111d0afb19760464d7e2ee40944354b12ca23",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-image-upload-journal.json": "bb89216f6aca7d359a42ba053de04f01f9f6fa8cdc2609aeeba51e53d2696628",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "131cfa782d2e1e91bf358c37c603b21b2cefe1fdd9dc7b65af52064fb199f7a8",
+      "Game Info/releases/1.13.X/blessings/README.md": "affe2a61ecb5152fc2e26f0a4fae84c556bcd4f011f0be54e310de6f98667f8c",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "0fc417b55e7404487802f89fe1db7364bc4e37c0049fd799d8697dbd6296e3ef",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "b69f5918ce4e631d22bf7ac3252c2a506a5b7c4d08f606227fd29a43466ab6b6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "9a592798f49dc5840fb787c40a5d3e84b5241d0d39e0dc4ec52d2a95263f5542",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "3a5ba5322e20e0f7a47ee640698631fbade4e439d245c198160f99c0ccb24aa0"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "crucian-roulette",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_114",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_114.png",
+      "attachment": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5970473438",
+      "acquired_date": "2026-10-03",
+      "sha256": "39f357d7115375f7fb231b2b956084da53cdef01770d7691dbf109a6d717591f",
+      "content_type": "image/png",
+      "size": 4302,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "克魯錫安輪盤祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Sol inspected the public original icon on a dark inspection background: intact transparent circular aiming mark surrounding a magazine/ammunition glyph."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 16,
+      "tables": 15,
+      "rows": 178,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 56,
+      "source_files": 25,
+      "bindings": 325,
+      "variants": 169,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 25,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 461,
+      "remote_references": 286,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 3,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-002-full-scan.json",
+        "sha256": "f852197153f38f4b1ac331191607201d611aec881b008d3d23267729975e1a97",
+        "trigger": "round-002"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 124,
+    "not_started_name_groups": 124,
+    "partial_name_groups": 0,
+    "remaining_variants": 436,
+    "remaining_bindings": 860,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "9a592798f49dc5840fb787c40a5d3e84b5241d0d39e0dc4ec52d2a95263f5542"
+  },
+  "previous_local_commit": "b31ee4731a3170353d67e91f5224d6ec243af36f",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "3 complete own tier/wrappers, 6 RAW/UI/item/template bindings; own held generic table replacement, 40 modes, clip calculator/reload/empty/runtime capacity, backblast signature/false crit and complete current examples",
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-traits-review.json",
+        "sha256": "e85b268f394fa9d9621124d1cda48134e20cc2917918c8898e38f870dcf03632"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-ui-review.json",
+        "sha256": "d0a7421d1ed98e6b673f2161446273227f8b781ea2e3989129f2a097e92047a0"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-core-review.json",
+        "sha256": "f8a0a3ac511a8f97b2ab0acd30bf36b21aba5a354f48557f7f44e6df622442fe"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-mode-fields-review.json",
+        "sha256": "48aa68428d42c6e8d2bb90d04fc1c5e4b957a1bf937179371afdf2ee963065d2"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-clip-backblast-review.json",
+        "sha256": "d354f6b45821521944f2e73453aa91ca6292cd6ea1423a423abcc91059f45179"
+      }
+    ],
+    "agent_research_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-agent-config.json",
+        "sha256": "0a0cead63a33e10739b0c97fd320bf99d829fb61f519e9aa15c6ff81965795c6"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-agent-evidence.json",
+        "sha256": "6fd68d94416eeccc3f13b667523ef9c84026f5f274b74c54c83a31df561bc30e"
+      }
+    ],
+    "common_cache_reuse": {
+      "conditions": "held-slot-condition: own base both stepped/stat gates",
+      "steps": "stepped-stat-count, buff-stack-offset: own class/offset, whole-table generic override",
+      "consumer": "critical-chance-consumer, critical-prd-rounding: own actual modes and backblast fixed false",
+      "ammo": "active-clip-current-and-capacity: own slot/runtime/current flags"
+    },
+    "cache_receipt": {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "3a5ba5322e20e0f7a47ee640698631fbade4e439d245c198160f99c0ccb24aa0"
+    },
+    "numeric_check": {
+      "auto_10_missing_pp": [
+        4.5,
+        5,
+        5.5,
+        6
+      ],
+      "revolver_IV_M5_A1_pp": 24,
+      "revolver_IV_A0_pp": 0,
+      "phosphor_IV_M6_A1_pp": 30,
+      "base20_revolver_IV_M5_A1_percent": 44,
+      "relative_increase_percent": 120
+    },
+    "previously_accepted_map_prefixes_preserved": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-extension-draft.json",
+      "sha256": "18100fca083eec8d82727f440509ad2117cb6e06ad2aa995fdd9c3082532d526"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 6,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-ui-review.json",
+      "sha256": "d0a7421d1ed98e6b673f2161446273227f8b781ea2e3989129f2a097e92047a0"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m1",
+          "loc_weapon_pattern_autogun_p3_m1",
+          "loc_weapon_mark_autogun_p3_m1"
+        ],
+        "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+        "name_en": "Vigilant Autogun Columnus Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1031,
+        "append_line": 1033
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m2",
+          "loc_weapon_pattern_autogun_p3_m2",
+          "loc_weapon_mark_autogun_p3_m2"
+        ],
+        "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+        "name_en": "Vigilant Autogun Graia Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1094,
+        "append_line": 1096
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m3",
+          "loc_weapon_pattern_autogun_p3_m3",
+          "loc_weapon_mark_autogun_p3_m3"
+        ],
+        "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+        "name_en": "Vigilant Autogun Agripinaa Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1039,
+        "append_line": 1041
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "mark_id": "phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+        "loc_ids": [
+          "loc_weapon_family_phosphor_pistol_p1_m1",
+          "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "loc_weapon_mark_phosphor_pistol_p1_m1"
+        ],
+        "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "name_en": "Phosphor Blast Pistol Branx Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1141,
+        "append_line": 1143
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m1",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m1",
+          "loc_weapon_pattern_stubrevolver_p1_m1",
+          "loc_weapon_mark_stubrevolver_p1_m1"
+        ],
+        "name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+        "name_en": "Quickdraw Stub Revolver Zarona Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 982,
+        "append_line": 984
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m2",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m2",
+          "loc_weapon_pattern_stubrevolver_p1_m2",
+          "loc_weapon_mark_stubrevolver_p1_m2"
+        ],
+        "name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+        "name_en": "Quickdraw Stub Revolver Agripinaa Mk XIV",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 885,
+        "append_line": 887
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "exact_metadata_outside": [
+      {
+        "item": "content/items/traits/bespoke_dual_stubpistols_p1/crit_chance_based_on_ammo_left",
+        "weapon_item": "content/items/weapons/player/ranged/dual_stubpistols_p1_m1",
+        "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_crit_chance_based_on_ammo_left",
+        "restriction": [
+          "dual_stubpistols_p1"
+        ],
+        "classification": "trait_not_imported / metadata_without_bound_intersection",
+        "source_definition": {
+          "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_crit_chance_based_on_ammo_left",
+          "source": {
+            "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_stubpistols_p1.lua",
+            "start": 505,
+            "end": 546,
+            "content_sha256": "78a974dfa50c991ba955c7b82624c6d7d8219c843ddcfe35f01bf0f66f16544e"
+          },
+          "metadata_items": [
+            "content/items/traits/bespoke_dual_stubpistols_p1/crit_chance_based_on_ammo_left"
+          ],
+          "classification": "metadata_without_bound_intersection"
+        },
+        "decision": "Exact metadata exists but weapon template has not imported/bound it; outside this 3-variant/6-mark group."
+      }
+    ],
+    "source_only_no_matching_trait_metadata": [
+      {
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_based_on_ammo_left",
+        "source_definition": {
+          "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_based_on_ammo_left",
+          "source": {
+            "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+            "start": 248,
+            "end": 287,
+            "content_sha256": "43fa342065359bf572abe78741af27e70d39aca8d7cd474e1e7df042d2742395"
+          },
+          "metadata_items": [],
+          "classification": "no_matching_trait_metadata"
+        },
+        "wrapper": {
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+          "line": 24
+        },
+        "metadata_items": [],
+        "decision": "Already in source-only catalog, with no matching trait metadata. Do not infer RAW key or expand group."
+      }
+    ],
+    "catalog_reconciliation": {
+      "definition_count": 693,
+      "counts": {
+        "bound_intersection": 605,
+        "metadata_without_bound_intersection": 21,
+        "no_matching_trait_metadata": 67
+      },
+      "original_outside_partition_exact_match": true,
+      "definitions_not_bound_is_dict": true,
+      "shotpistol_already_present_in_inventory": true,
+      "no_inventory_correction_claim": true
+    }
+  },
+  "execution_batch_started_on": "2026-10-03"
+}

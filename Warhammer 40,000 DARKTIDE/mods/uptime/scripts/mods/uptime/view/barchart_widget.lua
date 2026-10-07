@@ -1,4 +1,4 @@
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
 
 function get_widget(uptime_view, scene_graph_id, width, height, percentage_per_stack)

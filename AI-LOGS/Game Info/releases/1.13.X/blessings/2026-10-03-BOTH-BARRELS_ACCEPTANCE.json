@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-05",
+  "blessing": "both-barrels",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/雙管齊發/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_shotgun_p2_reload_speed_on_ranged_weapon_special_kill"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "both-barrels",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-formal-peer-scope.json",
+    "scope_sha256": "70fcbf89db39925336cee108d0277d0555b8f275e2d5c4198a685ce94cd68cb6",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-agent-config.json": "03a70c783bb3c61bf30ff3968cbccdb9b97ecb0be87ff76a5a8e52bc1f58837c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-agent-draft.md": "d18af546abd334fdd845522552aff4b863b3030f5dab59ad94a642498c35c1a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-agent-evidence.json": "5490d9b69f62a7e76597699cafa6367c183f0c0b07b2f28ecbec702ed5b2b546",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-config.json": "425270b378dede7d1e1102ed55c1e369e8586766497e52e8aa2611aaa69fdb78",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-extension-draft.json": "e02de848e8aabd576b52ec1ac907c6bb22f511513a491a72b7a58cab558ea97e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-image.json": "b9d6631495697083544fc27d031da06b4a4f18650db6ccb8f37b69636561647c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-focused-checks.json": "4e1b21b35a85da64e9aada2c5d96c9cdce020066c2b3b23078ce19b8f93b6e90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-frozen-source-verification.json": "140dbc2ae0ae7d96e516cfeb0b6c889e05b7b4d91975bc999a4c013f34551e4e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-live-flag-review.json": "80ef7043246c25c3df7fa5dd164b8508e048890305e8f565b1dad6f50620bff2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-own-tier-diff.json": "a5f40e9a2308f1985e3e7cc27e3c6b415858cd3c0236238bfa9984cc28b2daae",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-reload-bash-review.json": "6b33880953ffdc817b6ca62864664baaee3ca32b53564920341be15bbab679b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-resume-review.json": "6bac6b6df5a6a797e5db4a7bd1d9a60f346a8eeb76cbb582622781e96021bc83",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-traits-review.json": "51f1ae77692144c803200db71ebf625e22262230e94f5b5e789ff262ebb5d1cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-ui-raw-verification.json": "d37f6ca6a50782fb2c050c418d86f97661f723e208a03fe747aa7b2a34fbc7e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-ui-review.json": "ba90d0b65179567e43a0ca4dce73b650f26fc5644c50165052941f80c945b13c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "73a5779f03a4fe14755144dd573d900e700443e181ac6c09fbb46f5a99c3bfa1",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "7eea8fa52c38de1d4fd197fd536c3162efa9face489502dd67547fed849ee715",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "29a72951949402fe4ca0d17697d92a9a7168dc9900b83c23ad7175381c7200af",
+      "Game Info/releases/1.13.X/blessings/entries/雙管齊發/DAMAGE_PERCENTAGE_REVIEW.md": "9769b90783c1055efec7c82440cccdc60b5fe417c77fc1709908fb38f314f033",
+      "Game Info/releases/1.13.X/blessings/entries/雙管齊發/LOCALIZATION_COMPARISON.md": "6e7828a9235ec6a09cb484c6d1db9f18a4f9587ed0dd684552ae3a4d74e021eb",
+      "Game Info/releases/1.13.X/blessings/entries/雙管齊發/README.md": "235a5d842e095e8a67706784592e7380b22ac2da60314eca69881c8361601792",
+      "Game Info/releases/1.13.X/blessings/entries/雙管齊發/SOURCE_INDEX.md": "eb832a77f8590785bbb314602df66b1d7e9245b63d59372ae94faf15185bd40f",
+      "Game Info/releases/1.13.X/blessings/entries/雙管齊發/TIER_VALUES.md": "89a886c9b6c3bd0eaaec74a34d38a5a3ff7254f7b64d72e76994d9b552a7ec96",
+      "Game Info/releases/1.13.X/blessings/entries/雙管齊發/WEAPON_COMPATIBILITY.md": "c986218726049a09a5e8f8f339929c911851a631d53e5ebd1a62e4457290ec9b",
+      "Game Info/releases/1.13.X/blessings/entries/雙管齊發/weapon_trait_bespoke_shotgun_p2_reload_speed_on_ranged_weapon_special_kill.md": "e770ccf024c7b3518a85d1ccbd815d0676d91fb5307708effb677baf7a3cff2f",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "9ec1f4770e0df30af8afed1eaa10b318df0e70f926a4393d9c079a1a7ad48208",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙管霰彈槍/README.md": "04f220073dd50c8f4ec5f6dd0ab4acc777acde54417e4d04569a6ad59cdee13e",
+      "Referneces/Translation.md": "3d111bf5278afdd1401b9364487074422bbb6951e52f843d2c321c53422a00d2"
+    },
+    "reviewed_deltas": [
+      {
+        "topic": "Inventory and actual UI",
+        "result": "PASS: one trait variant and exactly two shotgun_p2 bindings; Mk XI Crucis and Mk IV Krourk names, template imports/append points, restriction, and item.icon identity match the source receipts."
+      },
+      {
+        "topic": "Dual-shot and kill event",
+        "result": "PASS: Mk XI aimed and Mk IV hipfire activate the two-shell special route; low-ammo fallback is not special. The ranged-kill predicate excludes the actual melee butt bash: Sweep uses melee attack_type, and the full 1910–2003 profile has is_push but no count_as_ranged_attack."
+      },
+      {
+        "topic": "Live special flag",
+        "result": "PASS: ProcBuff reads weapon_action.special_active_at_start when the queued event is handled. shot_complete turns off inventory_slot_component.special_active but does not clear that action component; the next action start may write a new snapshot. The formal wording does not promise every queued kill procs after that rewrite."
+      },
+      {
+        "topic": "Effect lifetime and first-use timing",
+        "result": "PASS: on_reload at the refill function point marks the child done; it remains through the three reload action kinds and exits afterward. An already-started reload keeps its sampled time_scale after child removal; a new action reads the updated stat cache. No fixed TTL or stacking is claimed."
+      },
+      {
+        "topic": "Tier override and calculation",
+        "result": "PASS: own conditional reload_speed .4/.5/.6/.7 overrides the same-key .5 fallback once. Examples correctly distinguish speed from time reduction: IV is 41.18% less refill time; with existing q=.20, relative additional time reduction is 36.84%."
+      },
+      {
+        "topic": "RAW and formatter",
+        "result": "PASS: localized EN/ZH use matching resource and hashes; all four static tier sentences match the percentage formatter with '+' prefix. Omitted mode, event-order, and refill semantics are classified as documentation gaps rather than proven translation errors."
+      },
+      {
+        "topic": "Icon and bidirectional references",
+        "result": "PASS: weapon_trait_216 resource path is separate from the verified public attachment; the shared map has one variant/two bindings, and the ranged index and shotgun reverse page point to the formal entry with matching per-Mark notes."
+      },
+      {
+        "topic": "Scope integrity",
+        "result": "PASS: all 30 current files exactly match the fixed scope hashes; unchanged common mechanics were reused only where the item-specific wrapper/template conditions match."
+      }
+    ],
+    "icon_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-image.json",
+      "sha256": "b9d6631495697083544fc27d031da06b4a4f18650db6ccb8f37b69636561647c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_216",
+      "attachment": "https://github.com/user-attachments/assets/6d2d415f-b370-43ef-a384-3c4da0f579f3",
+      "png_sha256": "22a195872ca0bca4c3d9df8128ce74db5967bb88c0003d109712251737ca1a10"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/6d2d415f-b370-43ef-a384-3c4da0f579f3",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "both-barrels",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_216",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_216.png",
+      "attachment": "https://github.com/user-attachments/assets/6d2d415f-b370-43ef-a384-3c4da0f579f3",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5981324639",
+      "acquired_date": "2026-10-04",
+      "sha256": "22a195872ca0bca4c3d9df8128ce74db5967bb88c0003d109712251737ca1a10",
+      "content_type": "image/png",
+      "size": 7884,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "雙管齊發祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": {
+        "source_and_public_originals_viewed": true,
+        "alpha_diagnostics_viewed": true,
+        "same_icon": true,
+        "original_bytes_preserved": true,
+        "description": "Round two-arrow reload loop with diagonal dash in a toothed outer ring; source/public originals and alpha match."
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 12,
+      "rows": 294,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 25,
+      "bindings": 505,
+      "variants": 262,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 25,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 725,
+      "remote_references": 329,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 18,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-017-full-scan.json",
+        "sha256": "7148f9b0ed9552ef6bdd029dfe4ba2a99f8e75c0803187373a5205e323d8c1b5",
+        "trigger": "round-017"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 83,
+    "not_started_name_groups": 83,
+    "partial_name_groups": 0,
+    "remaining_variants": 343,
+    "remaining_bindings": 680,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "79dac755e65a6c9c992f7549766a023fa2cce941efdb026af6413fb407183e08"
+  },
+  "previous_local_commit": "3e599f5d87e979a39eca965796429368b2a633fd",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-focused-checks.json",
+      "sha256": "4e1b21b35a85da64e9aada2c5d96c9cdce020066c2b3b23078ce19b8f93b6e90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-frozen-source-verification.json",
+      "sha256": "140dbc2ae0ae7d96e516cfeb0b6c889e05b7b4d91975bc999a4c013f34551e4e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-live-flag-review.json",
+      "sha256": "80ef7043246c25c3df7fa5dd164b8508e048890305e8f565b1dad6f50620bff2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-own-tier-diff.json",
+      "sha256": "a5f40e9a2308f1985e3e7cc27e3c6b415858cd3c0236238bfa9984cc28b2daae"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-reload-bash-review.json",
+      "sha256": "6b33880953ffdc817b6ca62864664baaee3ca32b53564920341be15bbab679b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-resume-review.json",
+      "sha256": "6bac6b6df5a6a797e5db4a7bd1d9a60f346a8eeb76cbb582622781e96021bc83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-traits-review.json",
+      "sha256": "51f1ae77692144c803200db71ebf625e22262230e94f5b5e789ff262ebb5d1cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-ui-raw-verification.json",
+      "sha256": "d37f6ca6a50782fb2c050c418d86f97661f723e208a03fe747aa7b2a34fbc7e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-primary-ui-review.json",
+      "sha256": "ba90d0b65179567e43a0ca4dce73b650f26fc5644c50165052941f80c945b13c"
+    }
+  ],
+  "primary_review_method": "Full own4 tier/wrapper/UI/RAW/image216; 40 frozen ranges/inputs stable. Root differences live component flag/equip/child exit and full bash profile/actual Melee/time-scale math directly reviewed; common Buff/cache/formatter reused when applicable.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-config.json",
+    "sha256": "425270b378dede7d1e1102ed55c1e369e8586766497e52e8aa2611aaa69fdb78"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "03a70c783bb3c61bf30ff3968cbccdb9b97ecb0be87ff76a5a8e52bc1f58837c",
+    "evidence.json": "5490d9b69f62a7e76597699cafa6367c183f0c0b07b2f28ecbec702ed5b2b546",
+    "draft.md": "d18af546abd334fdd845522552aff4b863b3030f5dab59ad94a642498c35c1a8"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/both-barrels-formal-peer-scope.json",
+    "sha256": "70fcbf89db39925336cee108d0277d0555b8f275e2d5c4198a685ce94cd68cb6",
+    "final_content_hashes_unchanged": true
+  }
+}

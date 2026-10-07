@@ -1,0 +1,113 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "+20% Damage (Ogryns & Monstrosities).",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Bring it Down! dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:1075-1101, display field only"
+  ],
+  "reused_evidence": [
+    "Existing 0.20 target-damage value, Ogryn-or-Monster category check and ordinary melee/ranged scope",
+    "Accepted shared additive stage, subsequent settlement, buff-value lookup, custom percentage conversion and optional-colon interpolation evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 6894 bytes, SHA256 559456c8fa0fbd37c985378aca05eb2f9b4f3b24125e061cefd357dd57faf671",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "read-only draft checked exact pairs, category tags rather than size, ordinary attack scope, additive examples and special-source limit; primary confirmed + prefix and custom abs-times-100 display conversion and reviewed final text"
+  },
+  "static_examples": {
+    "additive_stage_baseline_damage": 100,
+    "qualifying_target_alone_damage": 120,
+    "existing_15_percent_before_damage": 115,
+    "existing_15_percent_after_damage": 135,
+    "relative_gain_over_115_percent": 17.391304347826086,
+    "neither_target_tag_damage": 100
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Individual special damage sources and enemy variants beyond the established shared-path/category evidence.",
+    "Final game UI and in-game complete damage outcomes."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game damage/UI measurements"
+  ],
+  "id": "veteran_big_game_hunter",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Bring it Down!",
+  "name_key": "loc_talent_veteran_big_game_hunter",
+  "name_hash": "3fd6b675",
+  "description_key": "loc_talent_veteran_big_game_hunter_description",
+  "description_hash": "d17359f1",
+  "raw_template": "{damage%s} Damage (Ogryns & Monstrosities).",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 107,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 149,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 310,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 41,
+      "comparison_rows": 5,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/bring-it-down-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_big_game_hunter.md",
+  "commit": "0ad9a8a1a246f53d8e76e1ddece8407eab32a4d7"
+}

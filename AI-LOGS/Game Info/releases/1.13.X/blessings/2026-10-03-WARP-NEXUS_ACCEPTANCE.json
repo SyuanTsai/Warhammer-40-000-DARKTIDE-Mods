@@ -1,0 +1,403 @@
+{
+  "date": "2026-10-05",
+  "blessing": "warp-nexus",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcestaff_p1_warp_charge_critical_strike_chance_bonus",
+    "weapon_trait_bespoke_forcestaff_p2_warp_charge_critical_strike_chance_bonus",
+    "weapon_trait_bespoke_forcestaff_p3_warp_charge_critical_strike_chance_bonus",
+    "weapon_trait_bespoke_forcestaff_p4_warp_charge_critical_strike_chance_bonus"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 4,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "warp-nexus-formal-nonauthor-review",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-formal-peer-scope.json",
+    "scope_sha256": "bec528ee2d78516a0bd27291ab9850523542b3e03faa118429e6396263555b27",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-agent-config.json": "d5a6a94de3578f8a89da71459d8b2715dc82d3b024c11d89219d12756f4177a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-agent-draft.md": "992fa15053c3bbe2fdcf0e274372c3190359336d4ff4a5e5b10bc2e64703a29c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-agent-evidence.json": "d19a733dd713dab1b8532bf5383634a28e631cab812ff6e1ef8a44327e9efa90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-config.json": "52eca4e7b4bf02ae2bd384abcac7477d558d37ad1a4022c94fc860fc7aa11d1e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-extension-draft.json": "024c1a3e98317517860d7ee44f4b300d92bd0fa117d22d68e826b938a3931074",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-action-scan.json": "39325388f4f29d3071b7bbe04feb8ecae295fe26f84cc3d46540fac1cc381633",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-actual-preview-receipt-004.json": "a540fa89efb0a210d015c3ddbb2f774020f32a041062660362905f0f8708e49d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-agent-config.json": "d5a6a94de3578f8a89da71459d8b2715dc82d3b024c11d89219d12756f4177a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-agent-draft.md": "992fa15053c3bbe2fdcf0e274372c3190359336d4ff4a5e5b10bc2e64703a29c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-agent-evidence.json": "d19a733dd713dab1b8532bf5383634a28e631cab812ff6e1ef8a44327e9efa90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-association-snapshot.json": "b813309811b696d3aba80ffc05da54ea83ce160d8c6148d10705365c632d5714",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-candidate-page.md": "81bdd1dbe181783d373448d4abbe3269eac3d38d6bbd47bf4835544673f0cfdf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-coverage.json": "7fd7f23d30bf03647d431386bf5ffd4cfbd339c65bb6d6b89e77230782945c9a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-selfcheck.json": "1e3888d1473ce00e53f816e34219c661fd2ae468c3ed959f9d41c05d42f692eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-source-ranges.json": "aae7f22c422620e1c70411044cc7865dccd8eca8c1b5c6a6e8e09bc76c6a81b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-image.json": "c6db9d01db4a582cbe12c5043c7ad2a04d56bea6f32fbd7f9675b9f884f9356d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-attack-consumer-delta-content-review.json": "095b650505bd2de6a679373392f6accf7c0f47cd7bfdd81cb05388aa69b7453a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-focused-checks.json": "e821c4126e3499e86714109e14727f8e29de06e3acf2fdf6af2ac407dc6fcb65",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-frozen-source-verification.json": "96dd474403dac1ef05f42902a2d87fb34581a52b611a4c22aeda6e72cbd70533",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-own-tier-wrapper-review.json": "756b06a6e360e97ed4499143a586e7412bed254f081f10b41eec23dcd7196b58",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-resume-review.json": "c21c81c43d50527aaa2b89f4a3821142851a0b802a1ffcef4dedb62252d79a51",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-traits-review.json": "3a458625aaaffd867778a6355c4703fc13a861948db46aadb38d28df0c568941",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-UI-display-content-review.json": "0e5937a094804f76ef02a4a86d28ca08fb13f10e0aac6d34547c518574521d78",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-ui-raw-verification.json": "94f4eed392184ad8fd8c6659a22367f92395a2a670a5ff41913974ed3d810e9c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-ui-review.json": "4f2b5d3762a7fbda61827ef48d0986e89c929516882e6e7226d05d9de76cc537",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-raw-verification.json": "1d825d48f9559972571be08923c0a6704d460171f535af9a6388b0b8c84c7d69",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "285ff4744ae3aeaea938c72022281fb44bfc7f2f4429c1538e049621fbb347b8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/DAMAGE_PERCENTAGE_REVIEW.md": "ae0ede5320d31353fb47d3df13015a1965f692572480b9178e7485ab51c0c115",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/LOCALIZATION_COMPARISON.md": "1d17c2fe82d93e800587f2a064b9f2f75e0c21f16e5b50823218b422f0c166de",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/README.md": "055f77578108d99b4b44b5a54e4c681f16255ce4913c041e22b359ea55d15b03",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/SOURCE_INDEX.md": "5ae7996749972484d69461b90c090ef102a9c399e883a3f7a384c4327c924cd2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/TIER_VALUES.md": "8944c89764e6cdc29bd4b08756450c75ad737def25695ecf08465c8781c661c1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/WEAPON_COMPATIBILITY.md": "6c082344bec7d27caef5de350d20a68dae159733482f164d0cca63c4a79e0c51",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md": "9dbb2dcf2881080e650011bc50a3914a1d3a5e09c228e95c22908a3d65acf65f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "7a2590c3cb210bfc95cdb6fe27eb608b2b097e3b2e53b2f5f36f827f9c09485e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "709d931a697bba6261c677db0ebe9ecd7a5d5673c0d31f46dc1a5291d11b319e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md": "43c171f026a23f8e7998eae92773249960d8f4e03d53023e754a354505b7bf3e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "521ab4bb2e107e2a38f88ba87ac06ce85eb2e846834a49674f3269b8b38f5143",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "104f6ce76fa417e36f05a41f63891d697dd8ef362893b2bfe747f4b5815258b6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "269a0b268acf7eb9e887d80f9f974e3a22ec557b2547817280f70120e7b451de",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/own-association-snapshot.json": "1dab60c3206227dee037ec2cf72b08730b967578c9ac78b5b3b60ee1704ac3d5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/actual-preview-004/Referneces/Translation.md": "0c47c5623e065ee250ad3155992043e5f4bfba88763497f1a94d7603abb9d1be",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "285ff4744ae3aeaea938c72022281fb44bfc7f2f4429c1538e049621fbb347b8",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/DAMAGE_PERCENTAGE_REVIEW.md": "ae0ede5320d31353fb47d3df13015a1965f692572480b9178e7485ab51c0c115",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/LOCALIZATION_COMPARISON.md": "1d17c2fe82d93e800587f2a064b9f2f75e0c21f16e5b50823218b422f0c166de",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/README.md": "055f77578108d99b4b44b5a54e4c681f16255ce4913c041e22b359ea55d15b03",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/SOURCE_INDEX.md": "5ae7996749972484d69461b90c090ef102a9c399e883a3f7a384c4327c924cd2",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/TIER_VALUES.md": "8944c89764e6cdc29bd4b08756450c75ad737def25695ecf08465c8781c661c1",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/WEAPON_COMPATIBILITY.md": "6c082344bec7d27caef5de350d20a68dae159733482f164d0cca63c4a79e0c51",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p1_warp_charge_critical_strike_chance_bonus.md": "6b87d448c5cd53f8e482ec7dd76ee5e0241fc64c13f3470c5c84e7f7b3ca5c00",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p2_warp_charge_critical_strike_chance_bonus.md": "6f24459d82c049a1417f56534398f8d3ab612f215ebafd4e2b9f4e8ead281f5f",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p3_warp_charge_critical_strike_chance_bonus.md": "c78a11e06c8eff382601306298c127cf9ff6cc8f6162a8a04d0f1f9a102f5377",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p4_warp_charge_critical_strike_chance_bonus.md": "37b2c2d91266a9528d87f4a59b8ef11fa4db31a2079fc8e25afd4a0bce546bed",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "9dbb2dcf2881080e650011bc50a3914a1d3a5e09c228e95c22908a3d65acf65f",
+      "Game Info/releases/1.13.X/blessings/README.md": "7a2590c3cb210bfc95cdb6fe27eb608b2b097e3b2e53b2f5f36f827f9c09485e",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "709d931a697bba6261c677db0ebe9ecd7a5d5673c0d31f46dc1a5291d11b319e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md": "43c171f026a23f8e7998eae92773249960d8f4e03d53023e754a354505b7bf3e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "521ab4bb2e107e2a38f88ba87ac06ce85eb2e846834a49674f3269b8b38f5143",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "104f6ce76fa417e36f05a41f63891d697dd8ef362893b2bfe747f4b5815258b6",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "269a0b268acf7eb9e887d80f9f974e3a22ec557b2547817280f70120e7b451de",
+      "Referneces/Translation.md": "0c47c5623e065ee250ad3155992043e5f4bfba88763497f1a94d7603abb9d1be"
+    },
+    "reviewed_findings": [
+      "Reviewed all 10 finalized pages, four variants and four actual bindings. The formal names use the verified current UI family/pattern/mark composition; the four map variants and bindings match those same IDs and reverse weapon pages. The blessing is ranged and the image receipt separates icon path from attachment URL, with the approved 064 asset validation.",
+      "I–IV provide 3.5/4/4.5/5 percentage points of critical chance per peril step, with four-step caps 14/16/18/20 pp. The four tier stat values override the wrappers’ same-key 0.02 conditional fallback; no extra stepped table or additive 0.02 is claimed. The formatter’s minimum and maximum values reconstruct the shared English/Traditional Chinese RAW template at all four tiers.",
+      "The player rule uses n=min(4,floor(raw current_percentage/0.20)), with no benefit below the first full 20% threshold and no promise based on a rounded HUD value. The controlled 73% / Tier III example yields 3 steps and +13.5 pp; the 80% / Tier II example yields 4 steps and +16 pp. Both specify that the recalc/cache state is already current and do not present the bonus as final crit chance or damage.",
+      "The passive contribution is held-item gated and is refreshed by attribute/stat recomputation; weapon switch-out removes it when recomputed, and switching back derives the current tier from the then-current peril. It has no hit proc, stack counter, duration, or cooldown; already completed critical rolls are not retroactively changed.",
+      "The action coverage is correctly bounded to actual critical-check paths: P1 projectile plus charged trigger-explosion and special sweep; P2 ordinary gas burst and charged continuous flame through ActionShoot, with weapon-specific critical burn-stack behavior and no separate proc from burn ticks; P3 projectile/charged chain uses one action critical result rather than per-link checks; P4 ordinary and charged projectile routes plus special sweep. Pure push, vent, and slot switching are not critical-check attacks.",
+      "The RAW comparison classifies the unlisted 20% steps as documentation-not-covered rather than a translation error. The source index and consumer page correctly separate chance-point changes from final chance, and the focused receipts show 69 source ranges/38 files, passing local links, GFM, and shared-map consistency."
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "warp-nexus",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_064.png",
+      "attachment": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5992772804",
+      "acquired_date": "2026-10-05",
+      "sha256": "91c4bc123fbfed4fa82510aba04d75cf6861f8b637b346e0b581e13d29124dc2",
+      "content_type": "image/png",
+      "size": 4210,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "亞空間樞紐祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_verification": "Root viewed actual public128x128 PNG; white central beveled block with sloping side edges on black background. Original pixels preserved."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 18,
+      "rows": 424,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 69,
+      "source_files": 38,
+      "bindings": 828,
+      "variants": 418,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 38,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1040,
+      "remote_references": 430,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 29,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author-preview-private-io-long-path-repair-full-scan.json",
+        "sha256": "a86b838b43725984c7813e7ed94a149a7ec68c62edc02d2ca5f30e4a1feb47c0",
+        "trigger": "author-preview-private-io-long-path-repair"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 50,
+    "not_started_name_groups": 50,
+    "partial_name_groups": 0,
+    "remaining_variants": 187,
+    "remaining_bindings": 357,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "e327f8837ffa4e1402861c6f338ac484f18a1e36f09b17f79be25376522d821c"
+  },
+  "previous_local_commit": "6fca914dc35e84c2576eaba45d775ea09a0f633c",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "primary UI receipt confirms exact four bound items; outside_exact_items is empty.",
+    "outside_exact_items": []
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-attack-consumer-delta-content-review.json",
+      "sha256": "095b650505bd2de6a679373392f6accf7c0f47cd7bfdd81cb05388aa69b7453a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-focused-checks.json",
+      "sha256": "e821c4126e3499e86714109e14727f8e29de06e3acf2fdf6af2ac407dc6fcb65"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-frozen-source-verification.json",
+      "sha256": "96dd474403dac1ef05f42902a2d87fb34581a52b611a4c22aeda6e72cbd70533"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-own-tier-wrapper-review.json",
+      "sha256": "756b06a6e360e97ed4499143a586e7412bed254f081f10b41eec23dcd7196b58"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-resume-review.json",
+      "sha256": "c21c81c43d50527aaa2b89f4a3821142851a0b802a1ffcef4dedb62252d79a51"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-traits-review.json",
+      "sha256": "3a458625aaaffd867778a6355c4703fc13a861948db46aadb38d28df0c568941"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-UI-display-content-review.json",
+      "sha256": "0e5937a094804f76ef02a4a86d28ca08fb13f10e0aac6d34547c518574521d78"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-ui-raw-verification.json",
+      "sha256": "94f4eed392184ad8fd8c6659a22367f92395a2a670a5ff41913974ed3d810e9c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-ui-review.json",
+      "sha256": "4f2b5d3762a7fbda61827ef48d0986e89c929516882e6e7226d05d9de76cc537"
+    }
+  ],
+  "primary_review_method": "Content review centered on actual own full tiers/wrapper/formatter/native producer+consumer and difference applicability; common held/event/cache/lifetime mechanisms unchanged and reused. Original frozen author trio remains separate. Single approved canonical generates formal pages and shared indexes; formal nonauthor peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-config.json",
+    "sha256": "52eca4e7b4bf02ae2bd384abcac7477d558d37ad1a4022c94fc860fc7aa11d1e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-traits-review.json",
+      "sha256": "3a458625aaaffd867778a6355c4703fc13a861948db46aadb38d28df0c568941"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-ui-review.json",
+      "sha256": "4f2b5d3762a7fbda61827ef48d0986e89c929516882e6e7226d05d9de76cc537"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-ui-raw-verification.json",
+      "sha256": "94f4eed392184ad8fd8c6659a22367f92395a2a670a5ff41913974ed3d810e9c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-image.json",
+      "sha256": "c6db9d01db4a582cbe12c5043c7ad2a04d56bea6f32fbd7f9675b9f884f9356d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-source-ranges.json",
+      "sha256": "aae7f22c422620e1c70411044cc7865dccd8eca8c1b5c6a6e8e09bc76c6a81b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-action-scan.json",
+      "sha256": "39325388f4f29d3071b7bbe04feb8ecae295fe26f84cc3d46540fac1cc381633"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-actual-preview-receipt-004.json",
+      "sha256": "a540fa89efb0a210d015c3ddbb2f774020f32a041062660362905f0f8708e49d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "7a2590c3cb210bfc95cdb6fe27eb608b2b097e3b2e53b2f5f36f827f9c09485e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "709d931a697bba6261c677db0ebe9ecd7a5d5673c0d31f46dc1a5291d11b319e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "285ff4744ae3aeaea938c72022281fb44bfc7f2f4429c1538e049621fbb347b8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間樞紐\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "ae0ede5320d31353fb47d3df13015a1965f692572480b9178e7485ab51c0c115"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間樞紐\\LOCALIZATION_COMPARISON.md",
+      "sha256": "1d17c2fe82d93e800587f2a064b9f2f75e0c21f16e5b50823218b422f0c166de"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間樞紐\\README.md",
+      "sha256": "055f77578108d99b4b44b5a54e4c681f16255ce4913c041e22b359ea55d15b03"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間樞紐\\SOURCE_INDEX.md",
+      "sha256": "5ae7996749972484d69461b90c090ef102a9c399e883a3f7a384c4327c924cd2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間樞紐\\TIER_VALUES.md",
+      "sha256": "8944c89764e6cdc29bd4b08756450c75ad737def25695ecf08465c8781c661c1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\亞空間樞紐\\WEAPON_COMPATIBILITY.md",
+      "sha256": "6c082344bec7d27caef5de350d20a68dae159733482f164d0cca63c4a79e0c51"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "9dbb2dcf2881080e650011bc50a3914a1d3a5e09c228e95c22908a3d65acf65f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\烈焰力場法杖\\README.md",
+      "sha256": "43c171f026a23f8e7998eae92773249960d8f4e03d53023e754a354505b7bf3e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\虛空打擊力場法杖\\README.md",
+      "sha256": "521ab4bb2e107e2a38f88ba87ac06ce85eb2e846834a49674f3269b8b38f5143"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\虛空爆破力場法杖\\README.md",
+      "sha256": "104f6ce76fa417e36f05a41f63891d697dd8ef362893b2bfe747f4b5815258b6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電流力場法杖\\README.md",
+      "sha256": "269a0b268acf7eb9e887d80f9f974e3a22ec557b2547817280f70120e7b451de"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\Referneces\\Translation.md",
+      "sha256": "0c47c5623e065ee250ad3155992043e5f4bfba88763497f1a94d7603abb9d1be"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "1dab60c3206227dee037ec2cf72b08730b967578c9ac78b5b3b60ee1704ac3d5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-nexus-raw-verification.json",
+      "sha256": "1d825d48f9559972571be08923c0a6704d460171f535af9a6388b0b8c84c7d69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-agent-config.json",
+      "sha256": "d5a6a94de3578f8a89da71459d8b2715dc82d3b024c11d89219d12756f4177a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-agent-draft.md",
+      "sha256": "992fa15053c3bbe2fdcf0e274372c3190359336d4ff4a5e5b10bc2e64703a29c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-agent-evidence.json",
+      "sha256": "d19a733dd713dab1b8532bf5383634a28e631cab812ff6e1ef8a44327e9efa90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-association-snapshot.json",
+      "sha256": "b813309811b696d3aba80ffc05da54ea83ce160d8c6148d10705365c632d5714"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-candidate-page.md",
+      "sha256": "81bdd1dbe181783d373448d4abbe3269eac3d38d6bbd47bf4835544673f0cfdf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-coverage.json",
+      "sha256": "7fd7f23d30bf03647d431386bf5ffd4cfbd339c65bb6d6b89e77230782945c9a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-group/warp-nexus-selfcheck.json",
+      "sha256": "1e3888d1473ce00e53f816e34219c661fd2ae468c3ed959f9d41c05d42f692eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-agent-config.json",
+      "sha256": "d5a6a94de3578f8a89da71459d8b2715dc82d3b024c11d89219d12756f4177a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-agent-evidence.json",
+      "sha256": "d19a733dd713dab1b8532bf5383634a28e631cab812ff6e1ef8a44327e9efa90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-agent-draft.md",
+      "sha256": "992fa15053c3bbe2fdcf0e274372c3190359336d4ff4a5e5b10bc2e64703a29c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-attack-consumer-delta-content-review.json",
+      "sha256": "095b650505bd2de6a679373392f6accf7c0f47cd7bfdd81cb05388aa69b7453a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-frozen-source-verification.json",
+      "sha256": "96dd474403dac1ef05f42902a2d87fb34581a52b611a4c22aeda6e72cbd70533"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-own-tier-wrapper-review.json",
+      "sha256": "756b06a6e360e97ed4499143a586e7412bed254f081f10b41eec23dcd7196b58"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-UI-display-content-review.json",
+      "sha256": "0e5937a094804f76ef02a4a86d28ca08fb13f10e0aac6d34547c518574521d78"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-formal-peer-scope.json",
+    "sha256": "bec528ee2d78516a0bd27291ab9850523542b3e03faa118429e6396263555b27",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

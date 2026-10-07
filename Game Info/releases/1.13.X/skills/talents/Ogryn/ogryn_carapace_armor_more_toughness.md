@@ -1,5 +1,7 @@
 # 最堅韌！(Toughest!)：原始碼依據
 
+[English](en/ogryn_carapace_armor_more_toughness.md)
+
 [返回玩家說明](README.md#ogryn_carapace_armor_more_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_carapace_armor_more_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

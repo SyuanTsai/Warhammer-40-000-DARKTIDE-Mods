@@ -1,0 +1,177 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for display parameters and their values.",
+  "static_reconstruction": "+100% Cooldown Regeneneration for 3s on Specialist Enemy Kill.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name and full description records",
+    "Existing icon audit",
+    "veteran_talents.lua:746-774 and talent_settings_veteran.lua:54-58 (display parameters/values only)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese dossier for special-kill gating, discrete one-unit recovery ticks, three-second duration, terminal-frame update order, single-instance duration refresh, unchanged tick cadence and ability-resource limits. Accepted percentage formatter and multiple-use capacity evidence reused. No full cooldown, buff lifecycle or resource implementation analysis repeated.",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Exact fixed-frame tick/end timing.",
+    "Repeated-kill refresh and saturation measured in game."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full cooldown/buff/resource implementation analysis (outside clarified review scope)"
+  ],
+  "id": "veteran_elite_kills_reduce_cooldown",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Tactical Awareness",
+  "name_key": "loc_talent_veteran_elite_kills_reduce_cooldown",
+  "name_hash": "3a17b4f8",
+  "name_entry_index": 3761,
+  "description_key": "loc_talent_veteran_elite_kills_reduce_cooldown_alt_desc",
+  "description_hash": "83519bd4",
+  "description_entry_index": 8536,
+  "raw_template": "{regen:%s} Cooldown Regeneneration for {time:%s}s on Specialist Enemy Kill.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
+      "result": "passed",
+      "pairs": 2
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 911,
+      "unique_source_ranges": 214,
+      "source_files": 42
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 721,
+      "local_references": 6641,
+      "remote_references": 9833,
+      "errors": []
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 17,
+        "scroll": false
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 7,
+        "scroll": false
+      },
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 4,
+          "scroll": false
+        },
+        {
+          "columns": 3,
+          "rows": 4,
+          "scroll": false
+        }
+      ],
+      "all_player_icons_loaded": 34,
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "primary visual inspection of player, examples and template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 5492,
+      "sha256": "aacde15273c12e77ef8bf14e3e58f9f694829a2915e2b0dff931345de8141373",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "signed percentage/three-second reconstruction and raw source spelling",
+      "result": "passed",
+      "regen_percent": 100,
+      "duration_seconds": 3,
+      "source_spelling_preserved": "Regeneneration"
+    },
+    {
+      "check": "four static cooldown/refresh/capacity examples",
+      "result": "passed",
+      "initial_remaining_seconds": 25,
+      "after_three_seconds": 19,
+      "natural_only_remaining_seconds": 22,
+      "refresh_at_seconds": 1.5,
+      "refreshed_expiry_seconds": 4.5,
+      "extra_ticks_counted": 4,
+      "remaining_after_refreshed_example_seconds": 16.5,
+      "capped_return_units": 0.4,
+      "discarded_units": 0.6,
+      "two_use_missing_units_after_extra_tick": 19
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 19,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed",
+      "accepted_skills": 17
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/tactical-awareness-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md",
+  "commit": "1bb86c71cc78fba81eb6213138bcd2816e51b2b2",
+  "corrections": [
+    {
+      "date": "2026-10-03",
+      "change": "Expanded the combined number/percentage/name formatter citation to lines 379-427, including the percentage function. Values, descriptions and comparison verdicts are unchanged.",
+      "source": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua:379-427",
+      "checks": [
+        "targeted fixed-SHA source read",
+        "Game Info links/anchors",
+        "Git diff whitespace"
+      ],
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md"
+    }
+  ]
+}

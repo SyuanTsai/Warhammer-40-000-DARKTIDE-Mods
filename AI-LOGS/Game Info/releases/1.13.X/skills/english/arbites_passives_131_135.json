@@ -1,0 +1,65 @@
+{
+  "id": "arbites_passives_131_135",
+  "date": "2026-10-04",
+  "scope": "Arbites",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display mappings. Mechanism, numerical, shared formatting and image evidence reused. Source pointers are in each English document.",
+  "questions": [
+    "Final game UI and runtime behavior were not observed."
+  ],
+  "skills": [
+    {
+      "id": "adamant_armor",
+      "name": "Arbitrator Armour",
+      "name_hash": "05ef79d6",
+      "description_hash": "0604ced3",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_armor.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_armor.md",
+      "commit": "7e6e843c"
+    },
+    {
+      "id": "adamant_ammo_belt",
+      "name": "Ammo Belt",
+      "name_hash": "3d362bb3",
+      "description_hash": "76199c1c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_ammo_belt.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_ammo_belt.md",
+      "commit": "90fbb992"
+    },
+    {
+      "id": "adamant_rebreather",
+      "name": "Rebreather",
+      "name_hash": "bad9764c",
+      "description_hash": "0e416297",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_rebreather.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_rebreather.md",
+      "commit": "b628c8e5"
+    },
+    {
+      "id": "adamant_hitting_multiple_gives_tdr",
+      "name": "Suppression Protocols",
+      "name_hash": "9f1031c7",
+      "description_hash": "2e6f11ec",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_hitting_multiple_gives_tdr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_hitting_multiple_gives_tdr.md",
+      "commit": "e629df93"
+    },
+    {
+      "id": "base_ranged_damage_node_buff_medium_1",
+      "name": "Ranged Damage Boost",
+      "name_hash": "4530d417",
+      "description_hash": "d752c671",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/base_ranged_damage_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_ranged_damage_node_buff_medium_1.md",
+      "commit": "2bef634c"
+    }
+  ]
+}

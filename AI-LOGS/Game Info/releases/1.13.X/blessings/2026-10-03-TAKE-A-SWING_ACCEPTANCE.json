@@ -1,0 +1,603 @@
+{
+  "date": "2026-10-06",
+  "blessing": "take-a-swing",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p3_increased_weakspot_damage_on_push",
+    "weapon_trait_bespoke_crowbar_p1_increased_weakspot_damage_on_push",
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_increased_weakspot_damage_on_push"
+  ],
+  "added_binding_count": 5,
+  "total_variants": 3,
+  "total_bindings": 5,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "take-a-swing",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true,
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-formal-peer-scope.json",
+    "scope_sha256": "4b3bb70ac7f88bed59b5221c3cb3285ea777d49e63a7e6fb3b4cb8004b1ac622",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-agent-config.json": "577f91ce861957d9bf9bbde1e1728650bec224b08d0ac6103639d96209a3f84f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-agent-draft.md": "ea00a3ef7b69b87e5209ed5a2e63f651b26236b50b71b4d302cb9b1ec23e0ba3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-agent-evidence.json": "fd08980e57825cf0a81c95604433279b564834adbcc5eeff39a97d17a4250ca4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-config.json": "f2491d1ca2cd1bb2bdc1a7a3b0ed2ad40985d244c1eac59baf7810ad32afb74f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-extension-draft.json": "485ab71b63767b9044871321269e3237765f9e1c23620dda44cdf970ede50c30",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/association-snapshot-003.json": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/association-snapshot-004.json": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/association-snapshot-006.json": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/attack-coverage.json": "673cd3684750a7279b936a883d8e0b6f8fd27d0cbbfce96994135568a5a90291",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/binding-inventory.json": "b19678ce1bdf87d1f1a2b6290262648df5a9c881622d64c72614ce98c33c7f99",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/build_take_a_swing.py": "9deb041db8c98f655d50514f80ba4e355c652026ec71969dd458f891965b6556",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-page-preview-003.md": "3684e97bc83973c0aec1a3f1b30538f57e8cb6edf1a263be15e7eaffb4781bb1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-page-preview-004.md": "9a89e57c3d2a6e487977b2640e13bbe8a52530d5f1cf056c32ea9ad62aa032a6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-page-preview-006.md": "a2407fe0f778aabd5aaa45290ac312a6e468b8292c5b65b8cb80d2c3d1471f12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-preview-manifest-003.json": "7e4aecd8e380b354054c4e27e376e2ecee19a1c8af7420856eea638d1e135d98",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-preview-manifest-004.json": "3f24b806623df8a0fb3da775f3466c75e371052db4d8313199c35d3d130ce863",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-preview-manifest-006.json": "9bf2fa59f06f78f159d55f47e1cb5588d8ca69e24744c0a035fffcfb562e7574",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/draft.md": "ea00a3ef7b69b87e5209ed5a2e63f651b26236b50b71b4d302cb9b1ec23e0ba3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-agent-config.json": "01b9b2a694953c24b77c19b2c48b5405c56a8edead7fd927f269fbb2c5ca07e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-attack-matrix.json": "a5c10386a94fd25061b0c9a71649a8f44a3ff17c18f2b7d00fb23404419b4355",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-generated-action-audit.json": "609734e1cdfe811b912595492d5ba0fc694c40cd8d093414d68e634e0458c824",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-generated-action-coverage-review.json": "30f61c5e6fda8abbb131aa3a35082ee6f0de4191a8fece97adcaae314e47785a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/source-hash-reconciliation.json": "944407f3e5daebbe46c15e878af0c3c56d6991036d06d258f7e95fc1f3ea3d1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-action-matrix.json": "52c80da2a1047861f3ab17233179479105d8279ce7a5c9adb2969606dd826256",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-image.json": "e5e947b504f7abb037a9484eb45a5bb1fc64989f9d38576dec1f04ab9918d9f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-own-tier-wrapper-held-finesse-material-review.json": "372e19722f830abea2f73881d6c2540297af33f201ff2b88eeab728a6238674b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-traits-review.json": "537b717aee00387fd74e303c97fc30c4752c67d209b4f3d5deccd773a8e2096d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-ui-raw-verification.json": "0438bd9ce52d7c435913538814f1ef5213dbe487c1ae7c1b946a2bc864b4de74",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-ui-review.json": "9037d6e8e38334bfdd13b6c246fcb9cac824fe9ca3e4d42344ebc6ce39e0954b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/Translation.md": "929ebfda09924433019b9495d130e95ac6f1c0444349277005dc16fd65a35390",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/raw-verification-preview-003.json": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/raw-verification-preview-004.json": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/raw-verification-preview-006.json": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/selfcheck.json": "938045e813d7232df5d6e431bb4f19f338a28c4b4200fc78a12802cd7b78fd72",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/source-hash-reconciliation.json": "944407f3e5daebbe46c15e878af0c3c56d6991036d06d258f7e95fc1f3ea3d1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-001.json": "62302a44e8415c2ad35b0855c67103b1229dd0a14baa651dad4970ed4b8bcb4c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-002.json": "553053faee746ec38bd81f52acbb9fe51694781b96f8c8b344a39f37675bd553",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-003.json": "bd9eb76b92658d842dcd889827dd486f55cdae909291170d0876ffa687c52bee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-004.json": "1222b30377b9ce961e0ba189e80f8e3af6896c7c25726d41beb3195f54fe77ec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-005.json": "82030a33e35e9f607be7cff647190222713d3759ea831b83844f279ab7dea61b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-006.json": "2868f918c09ee6c544639f738f42ec5c5163b39bf89d31ed9dd8df9ff4e468d7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-agent-config.json": "577f91ce861957d9bf9bbde1e1728650bec224b08d0ac6103639d96209a3f84f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-agent-draft.md": "ea00a3ef7b69b87e5209ed5a2e63f651b26236b50b71b4d302cb9b1ec23e0ba3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-agent-evidence.json": "fd08980e57825cf0a81c95604433279b564834adbcc5eeff39a97d17a4250ca4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-image.json": "e5e947b504f7abb037a9484eb45a5bb1fc64989f9d38576dec1f04ab9918d9f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-final-content-delta-review.json": "e547168c3cb62f6f4fa676d026e1fe4c5a8ec63cf91eb012a9754cc7c0b38167",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-focused-checks.json": "1d27625248d5f83cca8f9a616cbef7ca9136078ec93eff2820ea358e460e3e1d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-frozen-source-verification.json": "f0b0922584f2434ea6cd5a01462ea442b785f180955191e6b903dcdeb73758f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-own-tier-wrapper-held-finesse-material-review.json": "372e19722f830abea2f73881d6c2540297af33f201ff2b88eeab728a6238674b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-resume-review.json": "31dcdd85717d3d98d4866367bf7844d17fe8bd7533d5f507aadc8df632c0dd0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-traits-review.json": "537b717aee00387fd74e303c97fc30c4752c67d209b4f3d5deccd773a8e2096d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-ui-raw-verification.json": "0438bd9ce52d7c435913538814f1ef5213dbe487c1ae7c1b946a2bc864b4de74",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-ui-review.json": "9037d6e8e38334bfdd13b6c246fcb9cac824fe9ca3e4d42344ebc6ce39e0954b",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-raw-verification.json": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "037e3640017fa2bb514f26e08bbec7b2a4d0e0fe54bfe29330de9337369cfbb0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/DAMAGE_PERCENTAGE_REVIEW.md": "aa3fe80b824ff08b80887296618496036280de879b9e9d0eaedd9c54874b19c0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/LOCALIZATION_COMPARISON.md": "c9b0767f3adcc4b532e3c5df4111a9ff2df711e469ab1f17d739e17ecd8b429f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/README.md": "a2407fe0f778aabd5aaa45290ac312a6e468b8292c5b65b8cb80d2c3d1471f12",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/SOURCE_INDEX.md": "fc8c8f76f953580517e58f05c1fe9e8871a00de88f4d6c6fa2ac524df072e22a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/TIER_VALUES.md": "358e125d0070cd37d8a2b334307c088ed9dc03f80478a675a1e929a8d0c98561",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/WEAPON_COMPATIBILITY.md": "b4f97d3a22127c70da35b54050c3ccef4e37e1858fba8da8726d7adff8e3ce1f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/weapon_trait_bespoke_combataxe_p3_increased_weakspot_damage_on_push.md": "3c20fbdaae6e08019b5ec40012704d51e8b8e9cfad7b56b2f986a669137d48b4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/weapon_trait_bespoke_crowbar_p1_increased_weakspot_damage_on_push.md": "8d898b44f3f02ecc2836505a2679231cb4f3957bfdbfdb81e3688473e3583346",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/揮拳出擊/weapon_trait_bespoke_ogryn_hammer_2h_p1_increased_weakspot_damage_on_push.md": "a462b58bc2e525bc80b8355b7d1b61d838a2dd361beef99c0aee2cfe3996bc51",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/melee/README.md": "c6708de2b292d837b51864b50f4b3dff25a98de919d78c8853ffcd6960f984b0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/README.md": "2ac45462bf93136c1d80909550b8313d048ae2be0f36c92af9b331f5a53f342c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "154e14839b1817d1e3503041f6f6d389eb9ee3a1dd526908cb0133aa508872d4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "c6fbc6b4c6474bc59443f45b0ed07626e496a0c1803038caf6ce0b7c8e67b546",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "5cab79bb04625121d81030e2c19b32dc199fbe558c011ae8d0f5cac69de4dc56",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "a0235e8eb6a596f29268cb03a884821b82e4d67a33111ed07ad294fb8f98abcb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/own-association-snapshot.json": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/actual-preview-006/Referneces/Translation.md": "9ba1bdd3894f8585f02e821c923fcc8d3a95c1c529553759a61ffe5d72daac0a",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "273b19c7240e756c55c9bd32754d3ec36fdf4168c04f6e2fd7029035471fdd5e",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/DAMAGE_PERCENTAGE_REVIEW.md": "aa3fe80b824ff08b80887296618496036280de879b9e9d0eaedd9c54874b19c0",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/LOCALIZATION_COMPARISON.md": "c9b0767f3adcc4b532e3c5df4111a9ff2df711e469ab1f17d739e17ecd8b429f",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/README.md": "a2407fe0f778aabd5aaa45290ac312a6e468b8292c5b65b8cb80d2c3d1471f12",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/SOURCE_INDEX.md": "49486541db0a49031acd72a953050e4afbcc458349dbaedf645934e4db6ffe95",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/TIER_VALUES.md": "358e125d0070cd37d8a2b334307c088ed9dc03f80478a675a1e929a8d0c98561",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/WEAPON_COMPATIBILITY.md": "b4f97d3a22127c70da35b54050c3ccef4e37e1858fba8da8726d7adff8e3ce1f",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/weapon_trait_bespoke_combataxe_p3_increased_weakspot_damage_on_push.md": "3c20fbdaae6e08019b5ec40012704d51e8b8e9cfad7b56b2f986a669137d48b4",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/weapon_trait_bespoke_crowbar_p1_increased_weakspot_damage_on_push.md": "8d898b44f3f02ecc2836505a2679231cb4f3957bfdbfdb81e3688473e3583346",
+      "Game Info/releases/1.13.X/blessings/entries/揮拳出擊/weapon_trait_bespoke_ogryn_hammer_2h_p1_increased_weakspot_damage_on_push.md": "a462b58bc2e525bc80b8355b7d1b61d838a2dd361beef99c0aee2cfe3996bc51",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "c6708de2b292d837b51864b50f4b3dff25a98de919d78c8853ffcd6960f984b0",
+      "Game Info/releases/1.13.X/blessings/README.md": "e510dbb81eea5a43ca8a16ee6aaad39322bac77d214dc8da014f40f6cf2b6b5c",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "e3bbf5bfe9b440fd843a9d6fd7b973f02728417a22bbc08a3bd532616212bef9",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "c6fbc6b4c6474bc59443f45b0ed07626e496a0c1803038caf6ce0b7c8e67b546",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "5cab79bb04625121d81030e2c19b32dc199fbe558c011ae8d0f5cac69de4dc56",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "a0235e8eb6a596f29268cb03a884821b82e4d67a33111ed07ad294fb8f98abcb",
+      "Referneces/Translation.md": "032b77a90d421f0f3469d5ed6e7cd478343f1ebeb5dc9340eb8eaa8bee16ce62"
+    },
+    "review_basis": {
+      "root_canonical_config_sha256": "f2491d1ca2cd1bb2bdc1a7a3b0ed2ad40985d244c1eac59baf7810ad32afb74f",
+      "root_final_content_delta_sha256": "e547168c3cb62f6f4fa676d026e1fe4c5a8ec63cf91eb012a9754cc7c0b38167",
+      "author_actual_preview": "006",
+      "author_trio_sha256": {
+        "config": "577f91ce861957d9bf9bbde1e1728650bec224b08d0ac6103639d96209a3f84f",
+        "draft": "ea00a3ef7b69b87e5209ed5a2e63f651b26236b50b71b4d302cb9b1ec23e0ba3",
+        "evidence": "fd08980e57825cf0a81c95604433279b564834adbcc5eeff39a97d17a4250ca4",
+        "preview": "a2407fe0f778aabd5aaa45290ac312a6e468b8292c5b65b8cb80d2c3d1471f12",
+        "preview_receipt": "2868f918c09ee6c544639f738f42ec5c5163b39bf89d31ed9dd8df9ff4e468d7"
+      }
+    },
+    "findings": {
+      "official_page_delta": "Eight of nine own pages are byte-identical to preview 006; SOURCE_INDEX is the only changed page.",
+      "source_index": "All 136 unique canonical source references are present and use the pinned source commit. The formal SOURCE_INDEX adds exactly 85 references over preview 006; every added reference belongs to the canonical reference set, with no unexpected additions. Five unchanged UI/item utility context references remain.",
+      "association_rows": {
+        "blessings": {
+          "formal_count": 1,
+          "preview_count": 1,
+          "exact_match": true
+        },
+        "variants": {
+          "formal_count": 3,
+          "preview_count": 3,
+          "exact_match": true
+        },
+        "bindings": {
+          "formal_count": 5,
+          "preview_count": 5,
+          "exact_match": true
+        }
+      },
+      "scope_hashes_verified": 95,
+      "focused_checks": "The fixed scope confirms the own 3 implementation/5 binding partition; focused sources, links, GFM, and global consistency checks passed."
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/f65d27d9-85f5-45c6-a5e1-253f85ba8ea9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "take-a-swing",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_192",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_192.png",
+      "attachment": "https://github.com/user-attachments/assets/f65d27d9-85f5-45c6-a5e1-253f85ba8ea9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6008243267",
+      "acquired_date": "2026-10-06",
+      "sha256": "da27f1f75aa65a75298de1c91f5734e10d4d89af21ba91ca5b1f3fef3e0e407c",
+      "content_type": "image/png",
+      "size": 3527,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "揮拳出擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": {
+        "reviewer": "Root Sol xhigh",
+        "public_original_viewed": true,
+        "result": "Public original128x128 matches acquired source SHA256, pixels retained; white/light-gray central tile with stepped outer silhouette and shaded lower edge."
+      }
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 16,
+      "tables": 18,
+      "rows": 602,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 141,
+      "source_files": 24,
+      "bindings": 1012,
+      "variants": 521,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 24,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 1261,
+      "remote_references": 561,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 41,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-040-full-scan.json",
+        "sha256": "3811f8f8fa53b557012261acc066c31e97df8bd80428d89ee03696baeba7fbe9",
+        "trigger": "round-040"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 14,
+    "not_started_name_groups": 14,
+    "partial_name_groups": 0,
+    "remaining_variants": 84,
+    "remaining_bindings": 173,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "050dbaa4e989cc293a617f08a97a3eb9b5bb811fda40f83adb730c1696d5d83d"
+  },
+  "previous_local_commit": "1bee1b2b57ac423430c577c3582214a275978ad3",
+  "outside_intersection_review": {
+    "status": "checked_actual_bindings_only",
+    "actual_variant_ids": [
+      "weapon_trait_bespoke_combataxe_p3_increased_weakspot_damage_on_push",
+      "weapon_trait_bespoke_crowbar_p1_increased_weakspot_damage_on_push",
+      "weapon_trait_bespoke_ogryn_hammer_2h_p1_increased_weakspot_damage_on_push"
+    ],
+    "actual_bindings": 5,
+    "outside_exact_items": [],
+    "boundary": "Only the three actual bound trait variants/five inventory bindings are included."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-final-content-delta-review.json",
+      "sha256": "e547168c3cb62f6f4fa676d026e1fe4c5a8ec63cf91eb012a9754cc7c0b38167"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-focused-checks.json",
+      "sha256": "1d27625248d5f83cca8f9a616cbef7ca9136078ec93eff2820ea358e460e3e1d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-frozen-source-verification.json",
+      "sha256": "f0b0922584f2434ea6cd5a01462ea442b785f180955191e6b903dcdeb73758f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-own-tier-wrapper-held-finesse-material-review.json",
+      "sha256": "372e19722f830abea2f73881d6c2540297af33f201ff2b88eeab728a6238674b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-resume-review.json",
+      "sha256": "31dcdd85717d3d98d4866367bf7844d17fe8bd7533d5f507aadc8df632c0dd0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-traits-review.json",
+      "sha256": "537b717aee00387fd74e303c97fc30c4752c67d209b4f3d5deccd773a8e2096d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-ui-raw-verification.json",
+      "sha256": "0438bd9ce52d7c435913538814f1ef5213dbe487c1ae7c1b946a2bc864b4de74"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-ui-review.json",
+      "sha256": "9037d6e8e38334bfdd13b6c246fcb9cac824fe9ca3e4d42344ebc6ce39e0954b"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-config.json",
+    "sha256": "f2491d1ca2cd1bb2bdc1a7a3b0ed2ad40985d244c1eac59baf7810ad32afb74f"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/Translation.md",
+      "sha256": "929ebfda09924433019b9495d130e95ac6f1c0444349277005dc16fd65a35390"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-agent-config.json",
+      "sha256": "01b9b2a694953c24b77c19b2c48b5405c56a8edead7fd927f269fbb2c5ca07e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-attack-matrix.json",
+      "sha256": "a5c10386a94fd25061b0c9a71649a8f44a3ff17c18f2b7d00fb23404419b4355"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-generated-action-audit.json",
+      "sha256": "609734e1cdfe811b912595492d5ba0fc694c40cd8d093414d68e634e0458c824"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/all-or-nothing-generated-action-coverage-review.json",
+      "sha256": "30f61c5e6fda8abbb131aa3a35082ee6f0de4191a8fece97adcaae314e47785a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/source-hash-reconciliation.json",
+      "sha256": "944407f3e5daebbe46c15e878af0c3c56d6991036d06d258f7e95fc1f3ea3d1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-action-matrix.json",
+      "sha256": "52c80da2a1047861f3ab17233179479105d8279ce7a5c9adb2969606dd826256"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-image.json",
+      "sha256": "e5e947b504f7abb037a9484eb45a5bb1fc64989f9d38576dec1f04ab9918d9f7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-own-tier-wrapper-held-finesse-material-review.json",
+      "sha256": "372e19722f830abea2f73881d6c2540297af33f201ff2b88eeab728a6238674b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-traits-review.json",
+      "sha256": "537b717aee00387fd74e303c97fc30c4752c67d209b4f3d5deccd773a8e2096d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-ui-raw-verification.json",
+      "sha256": "0438bd9ce52d7c435913538814f1ef5213dbe487c1ae7c1b946a2bc864b4de74"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/inputs/take-a-swing-primary-ui-review.json",
+      "sha256": "9037d6e8e38334bfdd13b6c246fcb9cac824fe9ca3e4d42344ebc6ce39e0954b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/source-hash-reconciliation.json",
+      "sha256": "944407f3e5daebbe46c15e878af0c3c56d6991036d06d258f7e95fc1f3ea3d1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/attack-coverage.json",
+      "sha256": "673cd3684750a7279b936a883d8e0b6f8fd27d0cbbfce96994135568a5a90291"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/build_take_a_swing.py",
+      "sha256": "9deb041db8c98f655d50514f80ba4e355c652026ec71969dd458f891965b6556"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-006.json",
+      "sha256": "2868f918c09ee6c544639f738f42ec5c5163b39bf89d31ed9dd8df9ff4e468d7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-final-content-delta-review.json",
+      "sha256": "e547168c3cb62f6f4fa676d026e1fe4c5a8ec63cf91eb012a9754cc7c0b38167"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "2ac45462bf93136c1d80909550b8313d048ae2be0f36c92af9b331f5a53f342c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "154e14839b1817d1e3503041f6f6d389eb9ee3a1dd526908cb0133aa508872d4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "037e3640017fa2bb514f26e08bbec7b2a4d0e0fe54bfe29330de9337369cfbb0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "aa3fe80b824ff08b80887296618496036280de879b9e9d0eaedd9c54874b19c0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "c9b0767f3adcc4b532e3c5df4111a9ff2df711e469ab1f17d739e17ecd8b429f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\README.md",
+      "sha256": "a2407fe0f778aabd5aaa45290ac312a6e468b8292c5b65b8cb80d2c3d1471f12"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\SOURCE_INDEX.md",
+      "sha256": "fc8c8f76f953580517e58f05c1fe9e8871a00de88f4d6c6fa2ac524df072e22a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\TIER_VALUES.md",
+      "sha256": "358e125d0070cd37d8a2b334307c088ed9dc03f80478a675a1e929a8d0c98561"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "b4f97d3a22127c70da35b54050c3ccef4e37e1858fba8da8726d7adff8e3ce1f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\weapon_trait_bespoke_combataxe_p3_increased_weakspot_damage_on_push.md",
+      "sha256": "3c20fbdaae6e08019b5ec40012704d51e8b8e9cfad7b56b2f986a669137d48b4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\weapon_trait_bespoke_crowbar_p1_increased_weakspot_damage_on_push.md",
+      "sha256": "8d898b44f3f02ecc2836505a2679231cb4f3957bfdbfdb81e3688473e3583346"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\揮拳出擊\\weapon_trait_bespoke_ogryn_hammer_2h_p1_increased_weakspot_damage_on_push.md",
+      "sha256": "a462b58bc2e525bc80b8355b7d1b61d838a2dd361beef99c0aee2cfe3996bc51"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "c6708de2b292d837b51864b50f4b3dff25a98de919d78c8853ffcd6960f984b0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\工兵鏟\\README.md",
+      "sha256": "c6fbc6b4c6474bc59443f45b0ed07626e496a0c1803038caf6ce0b7c8e67b546"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\撬棍\\README.md",
+      "sha256": "5cab79bb04625121d81030e2c19b32dc199fbe558c011ae8d0f5cac69de4dc56"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碎骨者\\README.md",
+      "sha256": "a0235e8eb6a596f29268cb03a884821b82e4d67a33111ed07ad294fb8f98abcb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\Referneces\\Translation.md",
+      "sha256": "9ba1bdd3894f8585f02e821c923fcc8d3a95c1c529553759a61ffe5d72daac0a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-raw-verification.json",
+      "sha256": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\take-a-swing-group\\actual-preview-006\\own-association-snapshot.json",
+      "sha256": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/association-snapshot-003.json",
+      "sha256": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/association-snapshot-004.json",
+      "sha256": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/association-snapshot-006.json",
+      "sha256": "6a138dcc9f114cfa990563fb15904948dae86bf4c2e2ea3900716eb1b9e7bdec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/binding-inventory.json",
+      "sha256": "b19678ce1bdf87d1f1a2b6290262648df5a9c881622d64c72614ce98c33c7f99"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-page-preview-003.md",
+      "sha256": "3684e97bc83973c0aec1a3f1b30538f57e8cb6edf1a263be15e7eaffb4781bb1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-page-preview-004.md",
+      "sha256": "9a89e57c3d2a6e487977b2640e13bbe8a52530d5f1cf056c32ea9ad62aa032a6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-page-preview-006.md",
+      "sha256": "a2407fe0f778aabd5aaa45290ac312a6e468b8292c5b65b8cb80d2c3d1471f12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-preview-manifest-003.json",
+      "sha256": "7e4aecd8e380b354054c4e27e376e2ecee19a1c8af7420856eea638d1e135d98"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-preview-manifest-004.json",
+      "sha256": "3f24b806623df8a0fb3da775f3466c75e371052db4d8313199c35d3d130ce863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/candidate-preview-manifest-006.json",
+      "sha256": "9bf2fa59f06f78f159d55f47e1cb5588d8ca69e24744c0a035fffcfb562e7574"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/draft.md",
+      "sha256": "ea00a3ef7b69b87e5209ed5a2e63f651b26236b50b71b4d302cb9b1ec23e0ba3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/raw-verification-preview-003.json",
+      "sha256": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/raw-verification-preview-004.json",
+      "sha256": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/raw-verification-preview-006.json",
+      "sha256": "073f893fc8e6529b1efbebf49b48773f3becfdabaa59d61bd7462e17e952ba90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/selfcheck.json",
+      "sha256": "938045e813d7232df5d6e431bb4f19f338a28c4b4200fc78a12802cd7b78fd72"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-001.json",
+      "sha256": "62302a44e8415c2ad35b0855c67103b1229dd0a14baa651dad4970ed4b8bcb4c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-002.json",
+      "sha256": "553053faee746ec38bd81f52acbb9fe51694781b96f8c8b344a39f37675bd553"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-003.json",
+      "sha256": "bd9eb76b92658d842dcd889827dd486f55cdae909291170d0876ffa687c52bee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-004.json",
+      "sha256": "1222b30377b9ce961e0ba189e80f8e3af6896c7c25726d41beb3195f54fe77ec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-actual-preview-receipt-005.json",
+      "sha256": "82030a33e35e9f607be7cff647190222713d3759ea831b83844f279ab7dea61b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-agent-config.json",
+      "sha256": "577f91ce861957d9bf9bbde1e1728650bec224b08d0ac6103639d96209a3f84f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-agent-draft.md",
+      "sha256": "ea00a3ef7b69b87e5209ed5a2e63f651b26236b50b71b4d302cb9b1ec23e0ba3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-group/take-a-swing-agent-evidence.json",
+      "sha256": "fd08980e57825cf0a81c95604433279b564834adbcc5eeff39a97d17a4250ca4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-agent-config.json",
+      "sha256": "577f91ce861957d9bf9bbde1e1728650bec224b08d0ac6103639d96209a3f84f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-agent-evidence.json",
+      "sha256": "fd08980e57825cf0a81c95604433279b564834adbcc5eeff39a97d17a4250ca4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-agent-draft.md",
+      "sha256": "ea00a3ef7b69b87e5209ed5a2e63f651b26236b50b71b4d302cb9b1ec23e0ba3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-frozen-source-verification.json",
+      "sha256": "f0b0922584f2434ea6cd5a01462ea442b785f180955191e6b903dcdeb73758f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-own-tier-wrapper-held-finesse-material-review.json",
+      "sha256": "372e19722f830abea2f73881d6c2540297af33f201ff2b88eeab728a6238674b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-traits-review.json",
+      "sha256": "537b717aee00387fd74e303c97fc30c4752c67d209b4f3d5deccd773a8e2096d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-ui-raw-verification.json",
+      "sha256": "0438bd9ce52d7c435913538814f1ef5213dbe487c1ae7c1b946a2bc864b4de74"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-primary-ui-review.json",
+      "sha256": "9037d6e8e38334bfdd13b6c246fcb9cac824fe9ca3e4d42344ebc6ce39e0954b"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/take-a-swing-formal-peer-scope.json",
+    "sha256": "4b3bb70ac7f88bed59b5221c3cb3285ea777d49e63a7e6fb3b4cb8004b1ac622",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

@@ -1,0 +1,801 @@
+{
+  "date": "2026-10-03",
+  "blessing": "shrapnel",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/破片四濺/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "delegation_scope": "one separate blessing group: Shrapnel; three different blessings in parallel",
+    "peer_review": {
+      "id": "shrapnel-agent-peer-review",
+      "subject": "破片四濺 / Shrapnel",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "review_summary": "已唯讀複核主控 config、extension draft、正式祝福頁、RAW/UI/traits/projectile/image 收據及固定 SHA 原始碼。玩家描述與技術資料一致，沒有需阻擋接受的修正。",
+      "evidence_checks": {
+        "tier_values_I_to_IV_are_1_2_3_4": true,
+        "bleed_1_5_seconds_is_refresh_duration": true,
+        "bleed_ticks_every_0_5_seconds_and_removes_one_layer_after_expiry": true,
+        "bleed_formula_power_inputs_4_layers_78_125_16_layers_500": true,
+        "held_slot_only_gates_new_proc_existing_bleed_persists": true,
+        "first_projectile_collision_impact_explosion_is_suppressed": true,
+        "close_blast_hit_uses_explosion_center_enemy_explosion_radius_or_sticking": true,
+        "four_checkproc_function_references_are_not_invoked": true,
+        "restriction_key_alias_ogryn_thumper_p2_to_thumper_p2_is_correct": true,
+        "separate_raw_shrapnel_zh_tw_is_榴霰彈": true,
+        "image_receipt_hash_and_display_check_pass": true
+      },
+      "reviewed_files": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-config.json",
+          "sha256": "7917acbccb022246a8fde9dae34cece4d4818fac66c29587ad6329513815705a"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-extension-draft.json",
+          "sha256": "71f17245d2b20bc282879d62be874ad5013028eb338ec7957cc179e1b438131d"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-primary-ui-review.json",
+          "sha256": "f993556266ea337a61348f61b392494defc5a0d91776b761d030720038f38fd8"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-primary-ui-raw-verification.json",
+          "sha256": "fd27a8bcd1f73fad9a9dd383c6c25db5b80f61f1aba6b3dcd308aa1d4ba7a922"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-primary-traits-review.json",
+          "sha256": "a183d7c6f6defb5b6058bcf08c4df222a49859c82cdbcc16fc13be369f5fdfdb"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-primary-projectile-source-review.json",
+          "sha256": "48245d5768338e2f706ee1a7841b9e86f140a92a36ed30350082be815d546b1b"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-image.json",
+          "sha256": "ce67e9aab779c7ca2d976ba0cf9cdd0022dc2fee5038ded7266df8c81d9ac108"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+          "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+          "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+          "sha256": "2738f50b628ef48dbf6ff0bab1512bb4a2810e88ee2d5b103517ffe687160ccd"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+          "sha256": "dd3ff55aeb596e8dff798cabe683ebc8a1418a60766af320f507e3246db5af9c"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/破片四濺/DAMAGE_PERCENTAGE_REVIEW.md",
+          "sha256": "a697788f003043ab34eb987f2f3ff029fdac65bed6f8ff7c6a509ef279601b41"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/破片四濺/LOCALIZATION_COMPARISON.md",
+          "sha256": "8f1ee426ef51a079a3091ea841c24e46ded2db0d8f14805042a3da69d933ceb6"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/破片四濺/README.md",
+          "sha256": "f98247b656f800984f7d02391de04a9080f763b6ce41d274c7f147fcafb214e1"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/破片四濺/SOURCE_INDEX.md",
+          "sha256": "50b42cd0492bd733400ff15f70a7ac130cf7518d185a6a716966c7091187287a"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/破片四濺/TIER_VALUES.md",
+          "sha256": "b79468544eea8bb467f5d6e85ade9224c7940d51166c42d014bbcfb7f4c28a40"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/破片四濺/WEAPON_COMPATIBILITY.md",
+          "sha256": "0a4a0f7c409178ad488c445791925621279e4bdd4c59f5c39d8c934fb7233401"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/破片四濺/weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed.md",
+          "sha256": "657b383f941b1fa5cd3d712cfe5ab92891b9ed87af7bd23f1dc2ee4a1d901978"
+        }
+      ],
+      "source_refs": [
+        {
+          "claim": "I–IV tier stack overrides",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+          "start": 292,
+          "end": 330
+        },
+        {
+          "claim": "on_hit wrapper, held conditional, exact close-profile gate; four helper references lack invocation parentheses",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+          "start": 31,
+          "end": 70
+        },
+        {
+          "claim": "ProcBuff evaluates held condition before custom check and proc",
+          "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+          "start": 304,
+          "end": 339
+        },
+        {
+          "claim": "is_item_slot_wielded compares the trait slot with current wielded slot",
+          "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+          "start": 43,
+          "end": 59
+        },
+        {
+          "claim": "target-alive check, stack addition and owner/source passed only when creating the debuff",
+          "path": "scripts/settings/buff/buff_utils.lua",
+          "start": 37,
+          "end": 90
+        },
+        {
+          "claim": "Attack on_hit payload contains damage_profile and dispatches per attacked unit",
+          "path": "scripts/utilities/attack/attack.lua",
+          "start": 577,
+          "end": 620
+        },
+        {
+          "claim": "bleed has duration 1.5, interval 0.5, cap 16, refresh-on-stack, and smoothstep power",
+          "path": "scripts/settings/buff/weapon_buff_templates.lua",
+          "start": 235,
+          "end": 260
+        },
+        {
+          "claim": "interval tick runs before post-expiry stack-removal scheduling; interval removal prevents immediate finished removal",
+          "path": "scripts/extension_systems/buff/buffs/interval_buff.lua",
+          "start": 17,
+          "end": 64
+        },
+        {
+          "claim": "existing bleed stacks by template name and refreshes start time on stack",
+          "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+          "start": 434,
+          "end": 455
+        },
+        {
+          "claim": "full-cap bleed refreshes without adding a stack",
+          "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+          "start": 560,
+          "end": 590
+        },
+        {
+          "claim": "removing a stack only refreshes duration when the template explicitly enables it",
+          "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+          "start": 650,
+          "end": 662
+        },
+        {
+          "claim": "bleed removal-refresh default comes from template and is absent for bleed",
+          "path": "scripts/extension_systems/buff/buffs/buff.lua",
+          "start": 589,
+          "end": 596
+        },
+        {
+          "claim": "hip and aimed projectile share fuse and impact explosion template; direct impact uses separate profile",
+          "path": "scripts/settings/projectile/player_projectile_templates.lua",
+          "start": 65,
+          "end": 143
+        },
+        {
+          "claim": "fuse start uses min_lifetime branch and timer; avoid fixed after-impact timing claim",
+          "path": "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+          "start": 232,
+          "end": 279
+        },
+        {
+          "claim": "fuse explosion is created from its configured template",
+          "path": "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+          "start": 321,
+          "end": 362
+        },
+        {
+          "claim": "first impact suppresses the impact explosion; later eligible impact path can create it",
+          "path": "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+          "start": 633,
+          "end": 660
+        },
+        {
+          "claim": "instant explosion selects close profile versus general profile",
+          "path": "scripts/settings/damage/explosion_templates/player_weapon_explosion_templates.lua",
+          "start": 83,
+          "end": 100
+        },
+        {
+          "claim": "close radius measures from explosion source and subtracts target breed explosion_radius; sticking target is also close",
+          "path": "scripts/extension_systems/weapon/weapon_system.lua",
+          "start": 250,
+          "end": 263
+        },
+        {
+          "claim": "close profile is passed to Attack.execute for each explosion target",
+          "path": "scripts/extension_systems/weapon/weapon_system.lua",
+          "start": 288,
+          "end": 316
+        },
+        {
+          "claim": "on_non_kill helper is a function, but wrapper only references it",
+          "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+          "start": 76,
+          "end": 82
+        },
+        {
+          "claim": "on_explosion_hit helper is a function, but wrapper only references it",
+          "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+          "start": 434,
+          "end": 436
+        },
+        {
+          "claim": "on_damaging_hit helper is a function, but wrapper only references it",
+          "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+          "start": 465,
+          "end": 467
+        },
+        {
+          "claim": "attacked_unit_is_minion helper is a function, but wrapper only references it",
+          "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+          "start": 606,
+          "end": 608
+        },
+        {
+          "claim": "current UI name is assembled from family, pattern, and mark localization IDs",
+          "path": "scripts/utilities/items.lua",
+          "start": 315,
+          "end": 327
+        },
+        {
+          "claim": "live item display-name fields read family/pattern/mark keys",
+          "path": "scripts/utilities/items.lua",
+          "start": 378,
+          "end": 426
+        },
+        {
+          "claim": "weapon imports trait definitions and appends enumerated keys",
+          "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+          "start": 16,
+          "end": 16
+        },
+        {
+          "claim": "weapon trait ukeys enumeration and append",
+          "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+          "start": 853,
+          "end": 857
+        }
+      ],
+      "checked_conclusions": [
+        "The 1.5-second value is the bleed refresh duration. Existing tick scheduling remains; once the duration expires, an interval tick deals damage using current stacks and then removes one stack. The remaining-stack lifetime formula and 4/16-stack power examples are correct.",
+        "The smoothstep inputs are power_level values, not fixed health damage: 4 stacks produce 78.125 and 16 stacks produce 500.",
+        "The held-slot condition is checked for new proc events. It does not clear the target's existing shared bleed when the weapon is switched away.",
+        "The first projectile impact does not immediately create an impact explosion. Fuse and any later eligible impact explosions use the instant template; only close-hit targets receive the close profile required by this blessing.",
+        "Close hit is measured from the explosion source, adjusted by the target breed explosion_radius, with a sticking target also treated as close.",
+        "The four CheckProcFunctions identifiers in the wrapper are truthy function references without calls, so their apparent damaging-hit, non-kill, explosion-type, and minion tests are not gates. The effective custom gate is the exact close damage-profile name.",
+        "Metadata restriction `thumper_p2` correctly maps the inventory/UI weapon identifier `ogryn_thumper_p2`; the item metadata category is `bespoke_thumper_p2`.",
+        "The other localized RAW entry uses English Shrapnel / Traditional Chinese 榴霰彈 on a different key and hash; it is not this blessing. The blessing's exact RAW is 破片四濺."
+      ],
+      "image_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-image.json",
+        "icon": "content/ui/textures/icons/traits/weapon_trait_219",
+        "sha256": "d7b2cd8667c5d91238c893525990f8b3a983ec05612391e65e0def4a9331d44e",
+        "display_verified": true
+      }
+    },
+    "peer_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shrapnel-agent-peer-review.json",
+    "peer_review_sha256": "d6114c78af5e8ec56c80395cf1a35a24bdc63b64f5cdee2716c63f3796a3124f",
+    "primary_reviewer": "Sol / xhigh",
+    "required_corrections": [],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "shrapnel",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_219",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_219.png",
+      "attachment": "https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5968847748",
+      "acquired_date": "2026-10-03",
+      "sha256": "d7b2cd8667c5d91238c893525990f8b3a983ec05612391e65e0def4a9331d44e",
+      "content_type": "image/png",
+      "size": 5308,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "破片四濺祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Sol directly inspected the public 128×128 attachment; source and public SHA-256 match. Authentic pale icon mask retained."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 431,
+      "tables": 348,
+      "rows": 3508,
+      "lists": 613
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1489,
+      "source_files": 385,
+      "bindings": 261,
+      "variants": 137,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1131,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 431,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 127,
+    "not_started_name_groups": 127,
+    "partial_name_groups": 0,
+    "remaining_variants": 451,
+    "remaining_bindings": 907,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "dd3ff55aeb596e8dff798cabe683ebc8a1418a60766af320f507e3246db5af9c"
+  },
+  "previous_local_commit": "aaba01e09bf617bb9dd6b823709b1b73725ca2ee",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "primary_reviewer": "Sol / xhigh",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "all_trait_and_wrapper_sources": {
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "name_key": "loc_trait_bespoke_close_explosion_applies_bleed",
+      "variant_count": 1,
+      "records": [
+        {
+          "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed",
+          "weapon_id": "ogryn_thumper_p2",
+          "tier_source": {
+            "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+            "start": 292,
+            "end": 330,
+            "lines": [
+              "templates.weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed = {",
+              "\tformat_values = {",
+              "\t\tstacks = {",
+              "\t\t\tformat_type = \"number\",",
+              "\t\t\tfind_value = {",
+              "\t\t\t\tbuff_template_name = \"weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed\",",
+              "\t\t\t\tfind_value_type = \"trait_override\",",
+              "\t\t\t\tpath = {",
+              "\t\t\t\t\t\"target_buff_data\",",
+              "\t\t\t\t\t\"num_stacks_on_proc\",",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t},",
+              "\t},",
+              "\tbuffs = {",
+              "\t\tweapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed = {",
+              "\t\t\t{",
+              "\t\t\t\ttarget_buff_data = {",
+              "\t\t\t\t\tnum_stacks_on_proc = 1,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t\t{",
+              "\t\t\t\ttarget_buff_data = {",
+              "\t\t\t\t\tnum_stacks_on_proc = 2,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t\t{",
+              "\t\t\t\ttarget_buff_data = {",
+              "\t\t\t\t\tnum_stacks_on_proc = 3,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t\t{",
+              "\t\t\t\ttarget_buff_data = {",
+              "\t\t\t\t\tnum_stacks_on_proc = 4,",
+              "\t\t\t\t},",
+              "\t\t\t},",
+              "\t\t},",
+              "\t},",
+              "}"
+            ]
+          },
+          "buff_source": {
+            "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+            "start": 31,
+            "end": 70,
+            "lines": [
+              "templates.weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed = {",
+              "\tclass_name = \"proc_buff\",",
+              "\tpredicted = false,",
+              "\tstart_func = BuffUtils.add_debuff_on_hit_start,",
+              "\tproc_func = BuffUtils.add_debuff_on_hit_proc,",
+              "\tproc_events = {",
+              "\t\t[proc_events.on_hit] = 1,",
+              "\t},",
+              "\tcheck_proc_func = function (params, template_data, template_context)",
+              "\t\tif not CheckProcFunctions.on_damaging_hit then",
+              "\t\t\treturn false",
+              "\t\tend",
+              "",
+              "\t\tif not CheckProcFunctions.on_non_kill then",
+              "\t\t\treturn false",
+              "\t\tend",
+              "",
+              "\t\tif not CheckProcFunctions.on_explosion_hit then",
+              "\t\t\treturn false",
+              "\t\tend",
+              "",
+              "\t\tif not CheckProcFunctions.attacked_unit_is_minion then",
+              "\t\t\treturn false",
+              "\t\tend",
+              "",
+              "\t\tlocal damage_profile = params.damage_profile",
+              "",
+              "\t\tif not damage_profile or damage_profile.name ~= \"ogryn_thumper_p1_m2_close_instant\" then",
+              "\t\t\treturn false",
+              "\t\tend",
+              "",
+              "\t\treturn true",
+              "\tend,",
+              "\ttarget_buff_data = {",
+              "\t\tinternal_buff_name = \"bleed\",",
+              "\t\tmax_stacks = 31,",
+              "\t\tnum_stacks_on_proc = 1,",
+              "\t},",
+              "\tconditional_proc_func = ConditionalFunctions.is_item_slot_wielded,",
+              "}"
+            ]
+          },
+          "refs": [
+            [
+              "I–IV完整定義",
+              "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+              292,
+              330
+            ],
+            [
+              "Buff完整覆寫",
+              "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+              31,
+              70
+            ]
+          ]
+        }
+      ],
+      "fixed_Git_object_ranges_extracted": true
+    },
+    "fixed_source_references_directly_reviewed": [
+      [
+        "變體tier覆寫",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        292,
+        330
+      ],
+      [
+        "完整wrapper與實際profile gate",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        31,
+        70
+      ],
+      [
+        "ProcBuff條件及check順序",
+        "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        304,
+        339
+      ],
+      [
+        "持用條件",
+        "scripts/settings/buff/helper_functions/conditional_functions.lua",
+        43,
+        59
+      ],
+      [
+        "CheckProc helper definitions",
+        "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+        434,
+        436
+      ],
+      [
+        "傷害與目標類型helper definitions",
+        "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+        465,
+        467
+      ],
+      [
+        "目標存活、層數及owner/source傳遞",
+        "scripts/settings/buff/buff_utils.lua",
+        37,
+        90
+      ],
+      [
+        "Attack on_hit事件與damage_profile參數",
+        "scripts/utilities/attack/attack.lua",
+        577,
+        620
+      ],
+      [
+        "bleed template層數、時間與tick公式",
+        "scripts/settings/buff/weapon_buff_templates.lua",
+        235,
+        260
+      ],
+      [
+        "interval tick與到期逐層移除",
+        "scripts/extension_systems/buff/buffs/interval_buff.lua",
+        17,
+        64
+      ],
+      [
+        "stack-cap檢查",
+        "scripts/extension_systems/buff/buff_extension_base.lua",
+        384,
+        405
+      ],
+      [
+        "同名stack instance疊加及刷新",
+        "scripts/extension_systems/buff/buff_extension_base.lua",
+        434,
+        455
+      ],
+      [
+        "滿cap刷新而不加層",
+        "scripts/extension_systems/buff/buff_extension_base.lua",
+        560,
+        590
+      ],
+      [
+        "stack移除路徑",
+        "scripts/extension_systems/buff/buff_extension_base.lua",
+        650,
+        662
+      ],
+      [
+        "weapon template trait import",
+        "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        16,
+        16
+      ],
+      [
+        "traits ukeys與append接入",
+        "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        853,
+        857
+      ],
+      [
+        "腰射/瞄準projectile、fuse及impact設定",
+        "scripts/settings/projectile/player_projectile_templates.lua",
+        65,
+        143
+      ],
+      [
+        "fuse與impact爆炸更新路徑",
+        "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+        232,
+        279
+      ],
+      [
+        "fuse explosion建立",
+        "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+        321,
+        362
+      ],
+      [
+        "first impact suppression及impact explosion",
+        "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+        633,
+        660
+      ],
+      [
+        "instant爆炸close與一般profile",
+        "scripts/settings/damage/explosion_templates/player_weapon_explosion_templates.lua",
+        83,
+        100
+      ],
+      [
+        "close hit選profile",
+        "scripts/extension_systems/weapon/weapon_system.lua",
+        257,
+        263
+      ],
+      [
+        "close profile傳入Attack.execute",
+        "scripts/extension_systems/weapon/weapon_system.lua",
+        288,
+        316
+      ],
+      [
+        "on_non_kill helper definition",
+        "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+        76,
+        82
+      ],
+      [
+        "attacked-unit-is-minion helper definition",
+        "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+        606,
+        608
+      ],
+      [
+        "first bash sweep and melee damage profile",
+        "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        448,
+        557
+      ],
+      [
+        "second bash sweep and melee damage profile",
+        "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        558,
+        668
+      ]
+    ],
+    "operative_gate_exact_close_profile": true,
+    "uninvoked_helper_references_not_added_as_gates": true,
+    "first_collision_does_not_immediately_impact_explode": true,
+    "actual_bleed_cap": 16,
+    "full_cap_refreshes": true,
+    "tick_precedes_post_expiry_layer_removal": true,
+    "switch_does_not_clear_existing_bleed": true,
+    "verified_examples": "- **群體命中前提**：持用IV級震盪槍，爆炸內圈命中三名存活敵人，各自原本沒有流血。\n\n- **群體命中結果**：每名敵人各獲得4層，彼此分開計算；不是三人共分4層。\n\n- **上限算例**：IV級命中已有14層的敵人，結果為16層並刷新時間；不會疊至18層。\n\n- **傷害算例**：4層流血送入傷害計算的威力為78.125，16層為500；兩者都是威力輸入，實際生命傷害還會依流血傷害設定與目標防禦結算。",
+    "power_example_4_stacks": 78.125
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "bindings": [
+      {
+        "weapon_id": "ogryn_thumper_p2",
+        "mark_id": "ogryn_thumper_p1_m2",
+        "metadata_item": "content/items/weapons/player/ranged/ogryn_thumper_p1_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed",
+        "trait_item": "content/items/traits/bespoke_thumper_p2/close_explosion_applies_bleed",
+        "trait_category": "bespoke_thumper_p2",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_thumper_p1_m2",
+          "loc_weapon_pattern_ogryn_thumper_p1_m2",
+          "loc_weapon_mark_ogryn_thumper_p1_m2"
+        ],
+        "name_zh_tw": "震盪槍 洛倫茲 Mk VI",
+        "name_en": "Rumbler Lorenz Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 855,
+        "append_line": 857,
+        "raw_components": {
+          "loc_weapon_family_ogryn_thumper_p1_m2": {
+            "0": [
+              {
+                "text": "Rumbler",
+                "hash": "48061ef6",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "震盪槍",
+                "hash": "48061ef6",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_ogryn_thumper_p1_m2": {
+            "0": [
+              {
+                "text": "Lorenz",
+                "hash": "4708bbf3",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "洛倫茲",
+                "hash": "4708bbf3",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_ogryn_thumper_p1_m2": {
+            "0": [
+              {
+                "text": "Mk VI",
+                "hash": "17d7eda2",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk VI",
+                "hash": "17d7eda2",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "refs": [
+      [
+        "震盪槍 洛倫茲 Mk VI匯入",
+        "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        16,
+        16
+      ],
+      [
+        "震盪槍 洛倫茲 Mk VI接入",
+        "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        855,
+        857
+      ]
+    ],
+    "exact_name_key_metadata_items": 1,
+    "outside_exact_items": [],
+    "raw_name": {
+      "0": [
+        {
+          "text": "Shrapnel",
+          "hash": "151b51b2",
+          "resource": "content/localization/items"
+        }
+      ],
+      "16": [
+        {
+          "text": "破片四濺",
+          "hash": "151b51b2",
+          "resource": "content/localization/items"
+        }
+      ]
+    }
+  },
+  "outside_intersection_review": {
+    "status": "no exact outside metadata item and no exact unresolved candidate",
+    "exact_bound_metadata_count": 1,
+    "exact_outside_metadata_count": 0,
+    "exact_unresolved_candidate_count": 0,
+    "exact_inventory_binding_count": 1,
+    "exact_definitions_not_bound_candidate": false,
+    "inventory_boundary": "Ignored inventory and remaining-tasks data for 2026-10-03; absence in these generated records is not a claim that a runtime definition is unused.",
+    "separate_english_name_record": {
+      "name_en": "Shrapnel",
+      "different_name_key": "loc_trait_bespoke_crit_chance_on_aoe_hits",
+      "hash": "1d2b7bc7",
+      "assessment": "Different localization key and hash; not a variant or binding for this exact blessing.",
+      "zh_tw_raw": "榴霰彈"
+    }
+  }
+}

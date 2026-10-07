@@ -1,0 +1,72 @@
+{
+  "id": "psyker_skills_328_332",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L1555–1560 and L2246–2258; base_talents.lua L259–272 and L282–296.",
+    "Toughness Damage Reduction reuses the accepted Ogryn shared mapping at base_talents.lua L437–463 and existing −0.1 value. Maximum-Toughness amounts, formulas and shared tier-aware formatting reused; no Buff or mechanism retracing."
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "psyker_block_costs_warp_charge",
+      "name": "Kinetic Deflection",
+      "name_hash": "bb19c517",
+      "description_hash": "136ee48b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_block_costs_warp_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_block_costs_warp_charge.md",
+      "commit": "48fc2861a"
+    },
+    {
+      "id": "base_toughness_node_buff_medium_5",
+      "name": "Toughness Boost",
+      "name_hash": "65a72c01",
+      "description_hash": "329702b6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/base_toughness_node_buff_medium_5.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/base_toughness_node_buff_medium_5.md",
+      "commit": "6de61da53"
+    },
+    {
+      "id": "base_toughness_node_buff_medium_4",
+      "name": "Toughness Boost",
+      "name_hash": "65a72c01",
+      "description_hash": "329702b6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/base_toughness_node_buff_medium_4.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/base_toughness_node_buff_medium_4.md",
+      "commit": "a9b5e1760"
+    },
+    {
+      "id": "base_toughness_damage_reduction_node_buff_medium_1",
+      "name": "Toughness Damage Reduction",
+      "name_hash": "4cf5defc",
+      "description_hash": "1272bcc0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "commit": "88ce530a4"
+    },
+    {
+      "id": "psyker_melee_attack_speed",
+      "name": "Lightning Speed",
+      "name_hash": "a84b3095",
+      "description_hash": "10f28165",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_melee_attack_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_melee_attack_speed.md",
+      "commit": "a1df5fb64"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 316,
+    "from_commit": "8cb9212d0",
+    "to_commit": "a1df5fb64",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

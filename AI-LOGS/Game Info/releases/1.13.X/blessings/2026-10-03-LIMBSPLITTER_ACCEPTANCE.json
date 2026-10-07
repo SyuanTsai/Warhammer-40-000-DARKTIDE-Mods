@@ -1,0 +1,614 @@
+{
+  "date": "2026-10-06",
+  "blessing": "limbsplitter",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/斷肢者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack",
+    "weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack",
+    "weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack",
+    "weapon_trait_bespoke_crowbar_p1_power_bonus_on_first_attack",
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_on_first_attack",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack",
+    "weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack"
+  ],
+  "added_binding_count": 15,
+  "total_variants": 7,
+  "total_bindings": 15,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "limbsplitter",
+    "display_name": "斷肢者",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_sha256": "d3591acd2304ca26bec1c138f64bc1d0c0e55dabb0d45ae59944d76d964ca6e2",
+    "scope_file_count": 102,
+    "hash_verification": {
+      "matched": 102,
+      "mismatches": []
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-agent-config.json": "bdbfffd2eedf6bb9c1bf7ea3b82bdb343f5b08ceb0e6e6f75a80f63bfa46dd0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-agent-draft.md": "9307862974ea319b400215c416836e072799ea122fcb31fd1ba68261837526bd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-agent-evidence.json": "c017ac21ab392c7122b7e43178a469b1f1cac740fa79b19bea05d8e37378a57c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-config.json": "e339057383ba7a924d7604a9f58425d55eb2273059d25389b9b34e614ef62540",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-extension-draft.json": "9351271cc35c96411bd3272614a644bf37753086c40c5f382505b75ababb254e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/action_coverage.json": "e10f2baf32095b9bda5b46a468ca4de34b4685f32d9cc67d726d4e8280380d45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/blessing_map.snapshot.json": "a6a49d266032b76f9c3338f3fd1221e3b2748c8e9b0acce2b18b9d256aad5b63",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/common_mechanism_cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/image_receipt.json": "2ac7cd0738f56eb6135138458c12bbf029fe9c1da15dc2c42402b01f45d777cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/inventory.snapshot.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/item_metadata.snapshot.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/localized_keys.snapshot.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/own_tier_wrapper_review.json": "72938230c7b2db1def8bbf7e3182c7cc34859afa52f2f2deef4848af124f2b0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/raw_verification.json": "73a06b4f554ccc95ad078f4703b32f7722fba6e1806907623d90f6eb90650880",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/remaining-tasks.snapshot.json": "eae91db3f50b34c6dacbe9b9916a436bb763aa16f632c5d816c41c6e96d6667f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/runtime_source_ranges.json": "5713efabbaaa6e495f9ae8b79dcba15b972dc26c5ef586270647100fad863b3a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/snapshot-provenance.json": "713b0d28097e1169d04f8698aca731e11aa6c5e1ba8bcd323cfc48c8eb230008",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/Translation.snapshot.md": "1689f0e5614b3355402a3d7ce393b979c22b911c725ad71fe18901e4ee48fc43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-action-coverage.json": "6ecca6931ed6c9d5e45989aefda0d101236a65bde7e4b729d1e31b6f6d5b9b3b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-001.json": "44d35bafca3d58c7aa59f77c10ec6b36e877dc8f588957281e68dd5a56698901",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-002.json": "1d15bc4d0a58f1e6afa10ecd462b2b52c96c30df916335a14abb424bbe19c9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-003.json": "dce3f0ec0ecd9148fbfecbc9198b1723941294ee3824ca3081f2a04c36a7ab6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-004.json": "4cb1261293f268a89e1bcdec14fb36ba3f2d0e3ce21444a6d987d8389cc19502",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-005.json": "475c45e7b369e2a36cdbed28a88053544f732d53bdaf8260c6f0fee0b825e7bb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-config.json": "bdbfffd2eedf6bb9c1bf7ea3b82bdb343f5b08ceb0e6e6f75a80f63bfa46dd0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-draft.md": "9307862974ea319b400215c416836e072799ea122fcb31fd1ba68261837526bd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-evidence.json": "c017ac21ab392c7122b7e43178a469b1f1cac740fa79b19bea05d8e37378a57c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-selfcheck.json": "7ea3efc31e19b797fec2b93b72bbbace067d529ab88567660d0df2c0826f2373",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-runtime-source-ranges.json": "5713efabbaaa6e495f9ae8b79dcba15b972dc26c5ef586270647100fad863b3a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/overwhelming-fire-formal-nonauthor-review-revision-001.json": "978b57c584a9e18f51c3597938c893feb7c14175fda05a602fc641ff8322a5b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/overwhelming-fire-formal-nonauthor-review-revision-002.json": "e5be876df0baf18577f5bf6ea936bf4d3d2ed95d639c59d69bcbce878db6fa5c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-image.json": "2ac7cd0738f56eb6135138458c12bbf029fe9c1da15dc2c42402b01f45d777cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-final-content-delta-review.json": "a568e862e5ba1320ebd9624ea8db8cc98e35cec7d62ff77548e8a3e75a109000",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-focused-checks.json": "ca60a3a78e7de514ce7260c6ad9d8379acbae790657bd6ba9c2f75625dee4353",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-frozen-source-verification.json": "c67e67d8c2fbb8e6f1278b8fef7c9dbda3ec6f144153cd3c0759555d93bde835",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-own-tier-wrapper-switch-timer-material-review.json": "72938230c7b2db1def8bbf7e3182c7cc34859afa52f2f2deef4848af124f2b0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-raw-verification.json": "73a06b4f554ccc95ad078f4703b32f7722fba6e1806907623d90f6eb90650880",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-resume-review.json": "7b02f3da1f8653820bd58b2163daea9ea76330e94bc0ec9c9ee3e0e77917e453",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-ui-raw-verification.json": "3de689416cba9ee1c8a139e3a4eb23172fa392d8383f3e05f5d3a3f2cbcd2649",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-ui-review.json": "db9aeb0a6625d88a4293c7c17adbf90327a90d37cd67750b6934ccedd128db68",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-raw-verification.json": "73a06b4f554ccc95ad078f4703b32f7722fba6e1806907623d90f6eb90650880",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "c7a061c6089eea969bca6a487a52cf059938907715549e67c3643ac9f1adb222",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/DAMAGE_PERCENTAGE_REVIEW.md": "40a406c1a4679f8fea7f94259c4157e0474d34ff3944c7b7f60cec69d5f914b1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/LOCALIZATION_COMPARISON.md": "284eec2d8233dfe97325dbdb2ec0fb00a7b7c97f153a3e4cb941822b47fedca0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/README.md": "79b99b2a5685f7f07a4d2ebc61674b5983861a66e0d52a0aff1c2e48b9d0cab0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/SOURCE_INDEX.md": "b25712afcea45e031bbb01c4ca78351117480251e74c5be9475f677947220524",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/TIER_VALUES.md": "8e1ccdeea45d784bea88dd7b7b80af0d9e437b17d247c3c4c853d277dd65d272",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/WEAPON_COMPATIBILITY.md": "45f83eb6c1e7e7f7189f8d068a3f8fbc8b2104341cbd0106c65cce25f164d832",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack.md": "eb563f0ecbfbda5ff9e0c2df2871148b95adcbcd3de58aae2885685b1cc0448e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack.md": "63841d39c6df5492f669ab3c53eae7b47d6e4cde3758fdf63eaa32c22a021bc8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack.md": "5c169d6bd8b81fd075ae6908e5d7821052780fc466d70bc19018d9efedff4ae1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_crowbar_p1_power_bonus_on_first_attack.md": "61f1505049347869c5916cd3124332935278a8ab6cf2eb657487b919664932e2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_on_first_attack.md": "e3ebf2e401b2b1b0a90bcec4bf5685062c1fdef1efcb7721146892249267a899",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack.md": "fa7b37bad4250d8c322a8340b6728cc79f7b3e23196fdbc43da492b9b021866f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack.md": "a5fa60eaa482fdc3b60033a076e63e8b8d37d4ecaa417f85138059ced194b031",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/melee/README.md": "844a75a86b998eaf0dfc6fff75f45a8230cec958be76f7b9161b4ce5c70531ab",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "0f394a43f11843fcc98553db9b3b570658ac65e168bb1f8685582387cb10b490",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a8b1cf80014469dc24be6409ce6096ddcf5286827e0e0a627a8a91ef04c6aca1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "bbd14bf7b2bcdeb7b250b3d084f95d1fcfdd84a16a3171eef9bcaa940fd581cd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "ca4eb752fb66ac842a51248ef437db3416be80810cc350b7dd65107de3c262fc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "8fed8f0bd769a448022cb9035673b296bcbe4499823098a7c0ae2f7873b9cc2a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "6812c07b36aab5ecb7387f931bc07c94255e47c24d908b38cbdb6debb1d9a9e7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "9ca0bd8993647b13d3494e60c56edde4ba482fb81b040c5a9505dac183f9022a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "32ca2a5d6f5fa948b09f4f973c512c27e8f23f1a42672954abae54c2373beb9d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "70d27c7c90f80071c36c1346e6290c496253a925170647acb4487a0e6e9791af",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/own-association-snapshot.json": "e2c9d08ec259aa0de917f0e609cb0598b5abd693c1b1cd992062e243f7907f2a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/actual-preview-005/Referneces/Translation.md": "4fc6ed83aa090c66db7d450d247a2c344ca9fb311aaebe73730ffe9f44adf4db",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "391f7ff24e5dce439565ebe8fefb78d2e8aee88a0779a8545d6fc3a6f70d4924",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/DAMAGE_PERCENTAGE_REVIEW.md": "40a406c1a4679f8fea7f94259c4157e0474d34ff3944c7b7f60cec69d5f914b1",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/LOCALIZATION_COMPARISON.md": "284eec2d8233dfe97325dbdb2ec0fb00a7b7c97f153a3e4cb941822b47fedca0",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/README.md": "79b99b2a5685f7f07a4d2ebc61674b5983861a66e0d52a0aff1c2e48b9d0cab0",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/SOURCE_INDEX.md": "b25712afcea45e031bbb01c4ca78351117480251e74c5be9475f677947220524",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/TIER_VALUES.md": "cbc907cd03a60cd83f5bc20d9bd1410d84f9b137bec59603face30e5f4c2fc20",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/WEAPON_COMPATIBILITY.md": "45f83eb6c1e7e7f7189f8d068a3f8fbc8b2104341cbd0106c65cce25f164d832",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack.md": "eb563f0ecbfbda5ff9e0c2df2871148b95adcbcd3de58aae2885685b1cc0448e",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack.md": "63841d39c6df5492f669ab3c53eae7b47d6e4cde3758fdf63eaa32c22a021bc8",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack.md": "5c169d6bd8b81fd075ae6908e5d7821052780fc466d70bc19018d9efedff4ae1",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_crowbar_p1_power_bonus_on_first_attack.md": "61f1505049347869c5916cd3124332935278a8ab6cf2eb657487b919664932e2",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_on_first_attack.md": "e3ebf2e401b2b1b0a90bcec4bf5685062c1fdef1efcb7721146892249267a899",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack.md": "fa7b37bad4250d8c322a8340b6728cc79f7b3e23196fdbc43da492b9b021866f",
+      "Game Info/releases/1.13.X/blessings/entries/斷肢者/weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack.md": "a5fa60eaa482fdc3b60033a076e63e8b8d37d4ecaa417f85138059ced194b031",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "844a75a86b998eaf0dfc6fff75f45a8230cec958be76f7b9161b4ce5c70531ab",
+      "Game Info/releases/1.13.X/blessings/README.md": "dabea0a98ca20da4b7984b26fbe8a7823c829e7c542c669e2e901c45e800dfe8",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "7942d2a11928ae2b613443afb3d20ef3be0eb6e7e98dfa522f769a78f57d3070",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "bbd14bf7b2bcdeb7b250b3d084f95d1fcfdd84a16a3171eef9bcaa940fd581cd",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "ca4eb752fb66ac842a51248ef437db3416be80810cc350b7dd65107de3c262fc",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "8fed8f0bd769a448022cb9035673b296bcbe4499823098a7c0ae2f7873b9cc2a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "6812c07b36aab5ecb7387f931bc07c94255e47c24d908b38cbdb6debb1d9a9e7",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "9ca0bd8993647b13d3494e60c56edde4ba482fb81b040c5a9505dac183f9022a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "32ca2a5d6f5fa948b09f4f973c512c27e8f23f1a42672954abae54c2373beb9d",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "70d27c7c90f80071c36c1346e6290c496253a925170647acb4487a0e6e9791af",
+      "Referneces/Translation.md": "0962b11c87e40ae696ff07dd9cec233109dff796433095ad7e1e2046d8c1b06b"
+    },
+    "candidate_preparation": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/cavalcade-group/limbsplitter-nonauthor-preparation.json",
+      "sha256": "4b7a74905f9d2910b3c1d8274bd58ea88d1b33aa5cef0a2dceb47554a4781117"
+    },
+    "reviewed_formal_content": {
+      "own_entry_pages": 13,
+      "variants": 7,
+      "bindings": 15,
+      "map_blessing_records": 1,
+      "map_variant_records": 7,
+      "map_binding_records": 15,
+      "actual_tier_table": "First row uses the actual family names 戰鬥斧／戰術斧／工兵鏟、撬棍、戴維爾戰鎬、骨鋸 and 近戰威力; six families are +60% I–IV. Hammer is separate at +17.5/+20/+22.5/+25% and 2 seconds.",
+      "root_label_delta": {
+        "fields": [
+          "tiers",
+          "tier_table"
+        ],
+        "old": "戰鬥斧 P1／P2／P3、撬棍 P1、歐格林雙手鎬 P1：melee power",
+        "new": "戰鬥斧／戰術斧／工兵鏟、撬棍、戴維爾戰鎬、骨鋸：近戰威力",
+        "values_or_mechanics_changed": false,
+        "proof": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-final-content-delta-review.json",
+        "proof_sha256": "a568e862e5ba1320ebd9624ea8db8cc98e35cec7d62ff77548e8a3e75a109000"
+      },
+      "mechanism": "Initial deadline 0 and first eligible stat-cache update permit the first applicable attack to consume the melee-power modifier. Damage is resolved using the currently selected held/cache value; the matching source-item + held + melee on_hit gate resets the deadline after damage. Six families use +60% and 5/4.5/4/3.5s; Cruncher Krourk Mk IIa uses +17.5/+20/+22.5/+25% and 2s. Pure push is not the melee consumer/reset. On the Saw, direct sticky hits can reset; delayed rip profiles skip the hit trigger but may read the current held/cache melee-power value when the delayed damage is resolved.",
+      "switching": "Switching leaves the deadline running while held-slot disables the source stat. Switching back can restore contribution if the deadline has expired and cache updated. Unequipping the source weapon removes its on-equip source buff.",
+      "math": "B=500,q=0 examples yield 800 for a +60% family and 625 for Hammer IV +25%; these are power-stage inputs, not final HP damage. At t=10 a qualifying IV hit sets 13.5s after its damage; a hit at t=12 is ineligible for the stat but still resets to 15.5s.",
+      "raw": "Four-tier static reconstructions preserve the paired English/Traditional Chinese RAW and formatter output; value/time format and prefix match. Conditions, event timing, switching, and delayed-rip profile behavior are omissions rather than RAW contradictions.",
+      "image": "The actual icon 188 image receipt is included in scope and records the supplied attachment/public-copy hash and visual verification."
+    },
+    "checks": {
+      "candidate_receipt": "005 passed",
+      "generated_own_formal_pages": 13,
+      "source_mapping": "121 ranges / 45 source files",
+      "focused_links": "24 Markdown files; 0 new errors",
+      "gfm": "24 files / 23 tables",
+      "whitespace": "13 own pages; 0 trailing whitespace errors",
+      "association": "7 variants / 15 bindings, exact and unique",
+      "formal_scope": "102/102 exact SHA-256 values matched"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "limbsplitter",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_188.png",
+      "attachment": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6008903539",
+      "acquired_date": "2026-10-06",
+      "sha256": "7cc1bd004cbaf7dc751542f3d833ef1562f77dfa99c96c466f7676631d8cf0ad",
+      "content_type": "image/png",
+      "size": 5238,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "斷肢者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed publicly downloaded actual item.icon188 128PNG; pale gray original tile on transparent/black surround retained; no invented pictogram or replacement."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 24,
+      "tables": 23,
+      "rows": 636,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 121,
+      "source_files": 45,
+      "bindings": 1037,
+      "variants": 533,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 23,
+      "source_object_cache": {
+        "cache_hits": 45,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 26,
+      "local_references": 1480,
+      "remote_references": 613,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 42,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-041-full-scan.json",
+        "sha256": "698b670fe1fde7129b1b64d244d8dfa0ab2977174c29ae717f53db3652ba0633",
+        "trigger": "round-041"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 12,
+    "not_started_name_groups": 12,
+    "partial_name_groups": 0,
+    "remaining_variants": 72,
+    "remaining_bindings": 148,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "620dbd59c1faa0874a21d76127f87668b2375267ef9b473900dc142bdbc70d9e"
+  },
+  "previous_local_commit": "701dbd33af6c222a9d57d5db6e7b741edf3ce736",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Inventory intersection fixed at 7 variants/15 bindings; no additional same-name candidates are claimed."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-final-content-delta-review.json",
+      "sha256": "a568e862e5ba1320ebd9624ea8db8cc98e35cec7d62ff77548e8a3e75a109000"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-focused-checks.json",
+      "sha256": "ca60a3a78e7de514ce7260c6ad9d8379acbae790657bd6ba9c2f75625dee4353"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-frozen-source-verification.json",
+      "sha256": "c67e67d8c2fbb8e6f1278b8fef7c9dbda3ec6f144153cd3c0759555d93bde835"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-own-tier-wrapper-switch-timer-material-review.json",
+      "sha256": "72938230c7b2db1def8bbf7e3182c7cc34859afa52f2f2deef4848af124f2b0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-raw-verification.json",
+      "sha256": "73a06b4f554ccc95ad078f4703b32f7722fba6e1806907623d90f6eb90650880"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-resume-review.json",
+      "sha256": "7b02f3da1f8653820bd58b2163daea9ea76330e94bc0ec9c9ee3e0e77917e453"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-ui-raw-verification.json",
+      "sha256": "3de689416cba9ee1c8a139e3a4eb23172fa392d8383f3e05f5d3a3f2cbcd2649"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-ui-review.json",
+      "sha256": "db9aeb0a6625d88a4293c7c17adbf90327a90d37cd67750b6934ccedd128db68"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-config.json",
+    "sha256": "e339057383ba7a924d7604a9f58425d55eb2273059d25389b9b34e614ef62540"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json",
+      "sha256": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/inventory.snapshot.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/item_metadata.snapshot.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/localized_keys.snapshot.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/remaining-tasks.snapshot.json",
+      "sha256": "eae91db3f50b34c6dacbe9b9916a436bb763aa16f632c5d816c41c6e96d6667f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/blessing_map.snapshot.json",
+      "sha256": "a6a49d266032b76f9c3338f3fd1221e3b2748c8e9b0acce2b18b9d256aad5b63"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/Translation.snapshot.md",
+      "sha256": "1689f0e5614b3355402a3d7ce393b979c22b911c725ad71fe18901e4ee48fc43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/common_mechanism_cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/snapshot-provenance.json",
+      "sha256": "713b0d28097e1169d04f8698aca731e11aa6c5e1ba8bcd323cfc48c8eb230008"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/own_tier_wrapper_review.json",
+      "sha256": "72938230c7b2db1def8bbf7e3182c7cc34859afa52f2f2deef4848af124f2b0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/raw_verification.json",
+      "sha256": "73a06b4f554ccc95ad078f4703b32f7722fba6e1806907623d90f6eb90650880"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/image_receipt.json",
+      "sha256": "2ac7cd0738f56eb6135138458c12bbf029fe9c1da15dc2c42402b01f45d777cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/action_coverage.json",
+      "sha256": "e10f2baf32095b9bda5b46a468ca4de34b4685f32d9cc67d726d4e8280380d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/inputs/runtime_source_ranges.json",
+      "sha256": "5713efabbaaa6e495f9ae8b79dcba15b972dc26c5ef586270647100fad863b3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-action-coverage.json",
+      "sha256": "6ecca6931ed6c9d5e45989aefda0d101236a65bde7e4b729d1e31b6f6d5b9b3b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-runtime-source-ranges.json",
+      "sha256": "5713efabbaaa6e495f9ae8b79dcba15b972dc26c5ef586270647100fad863b3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-own-tier-wrapper-switch-timer-material-review.json",
+      "sha256": "72938230c7b2db1def8bbf7e3182c7cc34859afa52f2f2deef4848af124f2b0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-raw-verification.json",
+      "sha256": "73a06b4f554ccc95ad078f4703b32f7722fba6e1806907623d90f6eb90650880"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-image.json",
+      "sha256": "2ac7cd0738f56eb6135138458c12bbf029fe9c1da15dc2c42402b01f45d777cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-ui-review.json",
+      "sha256": "db9aeb0a6625d88a4293c7c17adbf90327a90d37cd67750b6934ccedd128db68"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-ui-raw-verification.json",
+      "sha256": "3de689416cba9ee1c8a139e3a4eb23172fa392d8383f3e05f5d3a3f2cbcd2649"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-005.json",
+      "sha256": "475c45e7b369e2a36cdbed28a88053544f732d53bdaf8260c6f0fee0b825e7bb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "0f394a43f11843fcc98553db9b3b570658ac65e168bb1f8685582387cb10b490"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "a8b1cf80014469dc24be6409ce6096ddcf5286827e0e0a627a8a91ef04c6aca1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "c7a061c6089eea969bca6a487a52cf059938907715549e67c3643ac9f1adb222"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "40a406c1a4679f8fea7f94259c4157e0474d34ff3944c7b7f60cec69d5f914b1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\LOCALIZATION_COMPARISON.md",
+      "sha256": "284eec2d8233dfe97325dbdb2ec0fb00a7b7c97f153a3e4cb941822b47fedca0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\README.md",
+      "sha256": "79b99b2a5685f7f07a4d2ebc61674b5983861a66e0d52a0aff1c2e48b9d0cab0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\SOURCE_INDEX.md",
+      "sha256": "b25712afcea45e031bbb01c4ca78351117480251e74c5be9475f677947220524"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\TIER_VALUES.md",
+      "sha256": "8e1ccdeea45d784bea88dd7b7b80af0d9e437b17d247c3c4c853d277dd65d272"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\WEAPON_COMPATIBILITY.md",
+      "sha256": "45f83eb6c1e7e7f7189f8d068a3f8fbc8b2104341cbd0106c65cce25f164d832"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack.md",
+      "sha256": "eb563f0ecbfbda5ff9e0c2df2871148b95adcbcd3de58aae2885685b1cc0448e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack.md",
+      "sha256": "63841d39c6df5492f669ab3c53eae7b47d6e4cde3758fdf63eaa32c22a021bc8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack.md",
+      "sha256": "5c169d6bd8b81fd075ae6908e5d7821052780fc466d70bc19018d9efedff4ae1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\weapon_trait_bespoke_crowbar_p1_power_bonus_on_first_attack.md",
+      "sha256": "61f1505049347869c5916cd3124332935278a8ab6cf2eb657487b919664932e2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_on_first_attack.md",
+      "sha256": "e3ebf2e401b2b1b0a90bcec4bf5685062c1fdef1efcb7721146892249267a899"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack.md",
+      "sha256": "fa7b37bad4250d8c322a8340b6728cc79f7b3e23196fdbc43da492b9b021866f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\斷肢者\\weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack.md",
+      "sha256": "a5fa60eaa482fdc3b60033a076e63e8b8d37d4ecaa417f85138059ced194b031"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "844a75a86b998eaf0dfc6fff75f45a8230cec958be76f7b9161b4ce5c70531ab"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\工兵鏟\\README.md",
+      "sha256": "bbd14bf7b2bcdeb7b250b3d084f95d1fcfdd84a16a3171eef9bcaa940fd581cd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰術斧\\README.md",
+      "sha256": "ca4eb752fb66ac842a51248ef437db3416be80810cc350b7dd65107de3c262fc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰鬥斧\\README.md",
+      "sha256": "8fed8f0bd769a448022cb9035673b296bcbe4499823098a7c0ae2f7873b9cc2a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戴維爾戰鎬\\README.md",
+      "sha256": "6812c07b36aab5ecb7387f931bc07c94255e47c24d908b38cbdb6debb1d9a9e7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\撬棍\\README.md",
+      "sha256": "9ca0bd8993647b13d3494e60c56edde4ba482fb81b040c5a9505dac183f9022a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碎骨者\\README.md",
+      "sha256": "32ca2a5d6f5fa948b09f4f973c512c27e8f23f1a42672954abae54c2373beb9d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\骨鋸\\README.md",
+      "sha256": "70d27c7c90f80071c36c1346e6290c496253a925170647acb4487a0e6e9791af"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "4fc6ed83aa090c66db7d450d247a2c344ca9fb311aaebe73730ffe9f44adf4db"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-raw-verification.json",
+      "sha256": "73a06b4f554ccc95ad078f4703b32f7722fba6e1806907623d90f6eb90650880"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\limbsplitter-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "e2c9d08ec259aa0de917f0e609cb0598b5abd693c1b1cd992062e243f7907f2a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-001.json",
+      "sha256": "44d35bafca3d58c7aa59f77c10ec6b36e877dc8f588957281e68dd5a56698901"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-002.json",
+      "sha256": "1d15bc4d0a58f1e6afa10ecd462b2b52c96c30df916335a14abb424bbe19c9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-003.json",
+      "sha256": "dce3f0ec0ecd9148fbfecbc9198b1723941294ee3824ca3081f2a04c36a7ab6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-actual-preview-receipt-004.json",
+      "sha256": "4cb1261293f268a89e1bcdec14fb36ba3f2d0e3ce21444a6d987d8389cc19502"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-config.json",
+      "sha256": "bdbfffd2eedf6bb9c1bf7ea3b82bdb343f5b08ceb0e6e6f75a80f63bfa46dd0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-draft.md",
+      "sha256": "9307862974ea319b400215c416836e072799ea122fcb31fd1ba68261837526bd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-evidence.json",
+      "sha256": "c017ac21ab392c7122b7e43178a469b1f1cac740fa79b19bea05d8e37378a57c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/limbsplitter-agent-selfcheck.json",
+      "sha256": "7ea3efc31e19b797fec2b93b72bbbace067d529ab88567660d0df2c0826f2373"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/overwhelming-fire-formal-nonauthor-review-revision-001.json",
+      "sha256": "978b57c584a9e18f51c3597938c893feb7c14175fda05a602fc641ff8322a5b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/overwhelming-fire-formal-nonauthor-review-revision-002.json",
+      "sha256": "e5be876df0baf18577f5bf6ea936bf4d3d2ed95d639c59d69bcbce878db6fa5c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-agent-config.json",
+      "sha256": "bdbfffd2eedf6bb9c1bf7ea3b82bdb343f5b08ceb0e6e6f75a80f63bfa46dd0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-agent-evidence.json",
+      "sha256": "c017ac21ab392c7122b7e43178a469b1f1cac740fa79b19bea05d8e37378a57c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-agent-draft.md",
+      "sha256": "9307862974ea319b400215c416836e072799ea122fcb31fd1ba68261837526bd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-final-content-delta-review.json",
+      "sha256": "a568e862e5ba1320ebd9624ea8db8cc98e35cec7d62ff77548e8a3e75a109000"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-primary-frozen-source-verification.json",
+      "sha256": "c67e67d8c2fbb8e6f1278b8fef7c9dbda3ec6f144153cd3c0759555d93bde835"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-formal-peer-scope.json",
+    "sha256": "d3591acd2304ca26bec1c138f64bc1d0c0e55dabb0d45ae59944d76d964ca6e2",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}

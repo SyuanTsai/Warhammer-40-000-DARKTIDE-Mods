@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-03",
+  "blessing": "shred",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/粉碎/README.md",
+  "variants": [
+    "weapon_trait_bespoke_combataxe_p1_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_combataxe_p2_chained_hits_increases_crit_chance"
+  ],
+  "binding_count": 6,
+  "primary_review": "Sol直接核對固定Git物件、所有等級、核心觸發、結算與算例；Luna/max協助本項唯讀證據複核。FASTER無可用設定欄位。",
+  "validation": {
+    "gfm_parse": {
+      "files": 23,
+      "tables": 19,
+      "rows": 130,
+      "lists": 9
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 57,
+      "source_files": 28,
+      "bindings": 12,
+      "variants": 4,
+      "formula_checks": "passed"
+    },
+    "gameplay_test": "not run",
+    "available_tiers": null,
+    "game-info": {
+      "markdown_files": 723,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 32,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 3,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 23,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "formulas": "5%+5×4%=25%; existing10pp:35%; no conversion/guaranteed crit"
+  },
+  "image": {
+    "id": "shred",
+    "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_169.png",
+    "icon_path": "content/ui/textures/icons/traits/weapon_trait_169",
+    "sha256": "f5c199b1d5a37a8f8e10eaab12e46887d4aab471ae356cc7878ea83df0f9b59f",
+    "size": 3951,
+    "content_type": "image/png",
+    "width": 128,
+    "height": 128,
+    "attachment": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+    "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+    "public_download_status": 200,
+    "hash_verified": true,
+    "display": "original and public attachment inspected"
+  },
+  "limitations": [
+    "MasterItems138291 Steam Build association unverified",
+    "Backend available tiers remain null",
+    "Other same-name variants not reviewed",
+    "No in-game tests"
+  ],
+  "previous_local_commit": "89a51a7debd60a67561bfce3af00370010e411de",
+  "localization_review": "繁中省略Hit命中條件，分類文件未涵蓋，未將不完整描述當明確勘誤。"
+}

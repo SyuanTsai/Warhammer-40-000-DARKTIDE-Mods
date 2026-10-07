@@ -1,0 +1,465 @@
+{
+  "date": "2026-10-05",
+  "blessing": "devastating-strike",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit",
+    "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+    "weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit",
+    "weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit"
+  ],
+  "added_binding_count": 11,
+  "total_variants": 5,
+  "total_bindings": 11,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "devastating-strike-formal-nonauthor-review",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-formal-peer-scope.json",
+    "scope_sha256": "3a624fa9915aa94531661c496b8e4d968cced4d81f662ea810426a05c49741e2",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-agent-config.json": "aaf3cacc48a3749cc698b9650cb6b17e0779aec5566099f97fe33612e3c00416",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-agent-draft.md": "0000cf4f723e7da5235c916bf02cc825a7dffe897dddc30af8bc22adc5b26c3e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-agent-evidence.json": "31275802610b5ba1535146595df5d42cd685e9f298ec382b0dbbd59f345cf26f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-chainsword-p1-image.json": "56aede334b43d437498be857cf3a796200123f48fee0101563f3fbc9091af356",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-config.json": "e68d1cfd7440a455ac422a718b1e15126fd3ee151e7c63866d1e5fba4cbd8e34",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-extension-draft.json": "492e5b2506368c1ef0e63837db06d0d0abcf680644a59a30aaa15dce8a6ff9f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-config.json": "aaf3cacc48a3749cc698b9650cb6b17e0779aec5566099f97fe33612e3c00416",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-coverage.json": "9fd1c110ab411421869317f74df941ee587668cf2a87baab68f468eefc34348a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-draft.md": "0000cf4f723e7da5235c916bf02cc825a7dffe897dddc30af8bc22adc5b26c3e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-evidence.json": "31275802610b5ba1535146595df5d42cd685e9f298ec382b0dbbd59f345cf26f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-preflight.json": "3eb2d56c09a4cb22b354560828d8e1f32e39fccf32198f55637aafe9a6b9eece",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-association-snapshot.json": "5d8acfe3ca56d566c7bdc3664007255ca3fc2637c63991cbdd26fe583a01159b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-candidate-preview.md": "500d95198765fff9137899309eb75753f333a817b00c6aadb87c46f7449f35d5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-map-baseline-5bd12ed.json": "26fe1ce22d735c4454e6618ea146a65654951fcc6fa28b445c70493fc8cd5b3c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-image.json": "360bf66dc839b3b5cf89fedc3c44883afdd84deb30eec5b40fc11c0ed50f469f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-ogryn-combatblade-p1-image.json": "087f3175f537242904d98cf2757c3fbcf760748ef31e158bf1931dd75f69c582",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-focused-checks.json": "c983ce07fdf4c0af92e06f6844aa3a8df1b5f4b49d8b678ba3371aa0f46be827",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-frozen-source-verification.json": "8704da8fd9af498caf9961477d38a967f6cc5f23cf52ede4b64032c11e94f7fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-own-tier-wrapper-content-review.json": "324a2464296736c36a887eb2daeec76895eb240ac7295c235db113b48e0a8cd8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-pre-tier-layout-preserved.json": "c5f18da2fa504aab116d425736e58603d7b3c7ffa36e5c79cceecbff6193acb4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-resume-review.json": "ba79610c8939a412535eb687521b0292d6801b3080cc0e116e6a195922779bd4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-traits-review.json": "8bbe944a7abef5c2c0320cedbc7e7d38878c8f3ae9b8a483aa5e826b31d63d94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-raw-verification.json": "d1251a2692f83a6e6e566ce74d81276ba98f9e31948e84b6b7d695807ac87ace",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-review.json": "4ccc322a8e45cdf328bfee265ff0ab054b4e221f25c1783c6e894ea0942d5d38",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-coverage.json": "81623ac79d9ddd7c90902e3dd19124c3aeefdc2eb544c8f6a7f219de084893e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5fddd6b49e116a3a0fc99704b529b54e94129f2b049d3a472be1abe71e13e22e",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/DAMAGE_PERCENTAGE_REVIEW.md": "7513657b120259c9808a13688c171f3f65fe6a7b4f8c2e7789995b8f04b1c19b",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/LOCALIZATION_COMPARISON.md": "2bfbf19c2408c9f88f6b2c00510a4471fa2f664c72056492c7b8af9dc80ca9e6",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/README.md": "d6a86b36518274773d983e9e8c88200ef56062cc6d40d2c9deaf73af85fc5013",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/SOURCE_INDEX.md": "af78a89e82278d9d4f1e1fe5ccc7be356ad5c390cf343ab59986b0964646cfc8",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/TIER_VALUES.md": "3cc46f7c7061e29e05854c88090a2dfaf6e0e32480e86f00fda1b22e5168a11d",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/WEAPON_COMPATIBILITY.md": "9a096802d4ef7f2125f1c209d9a24e7c95d91ed0cd14680953f3eb88de5bad53",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit.md": "c24e2e3ba006ce6ef3e0d5494d9e332a434250344fed648ebe6469ceca491706",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit.md": "fee64139f7a5c212d854dda3dfbf214263ebf4878ccfb1d30a464c2b5b097889",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit.md": "2853aed0c56b0c79b17e5d126754bb679245724957129551aec1ce38e1dc4777",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit.md": "1ec34101151f1662dd0b31e93a06c11c9ab9b5a131b2be0836d8c9ea09754019",
+      "Game Info/releases/1.13.X/blessings/entries/毀滅打擊/weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit.md": "b7db1de5ac3de4faa8219cc771009064e53dde1f553507f3b44ad868a4978a82",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "625cca004ef16ade6638fcdd99e00ca3d66be5be0a75387a435171860e7dfb60",
+      "Game Info/releases/1.13.X/blessings/README.md": "fe06c58e12c723b4984bfef6ab73aa37e0d82b1cff3f7ecba74f642b1882d7a1",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "1b148cc2fda74f83451648af56c9271fab421b4d1ef52aa19251f4aa539abbae",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "4ad160a11faedfad1bf1edf8363932b6a1014ec4cbc767e84951b6963cfe2f5e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/上古神刃/README.md": "b0c438f6df3041a01b90f7f3c35fadea94d6052c090bd32544e3349f04c87f8c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "7884395968e3076fc4d52fecc8536e6f87712ea81693de1be1bc2fb3415f6800",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "69c90b7c97a9cbc590643c90521a7e113ddb0ded0f69eed830e967310dc354ad",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈鋸劍/README.md": "a4eead87c7a393ed06fca1df738a39ac0c3480d112efcbeed2d35989e4e347ed",
+      "Referneces/Translation.md": "a37108e642ff0ae0659258429852c3027e91b51c15979a749c04f7125812c51e"
+    },
+    "verified_scope_file_count": 53,
+    "all_scope_hashes_match": true,
+    "canonical_config_sha256": "e68d1cfd7440a455ac422a718b1e15126fd3ee151e7c63866d1e5fba4cbd8e34",
+    "reviewed_findings": [
+      "The final main page and five implementation pages match the five actual trait variants and eleven UI/inventory bindings. Each variant trait ID appears in its matching reverse weapon index; the compatibility table and shared blessing map agree with the actual binding set.",
+      "The own-tier proof confirms I–IV attack-side max-hit-mass modifier values .65/.70/.75/.80, percentage formatter prefix +, and five wrappers with one assignment each. The formal tier table and four-level EN/ZH reconstruction match those values and the 5-second common buff duration.",
+      "The trigger statement is limited to same-item, held-weapon, positive-damage melee critical events; it does not add kill or stagger requirements. A valid event refreshes one 5-second active window without stacking. Switching weapons suspends the held contribution while the timer continues, and unequipping removes the installed effect.",
+      "The direct/special sweep notes preserve the material chainsword distinction: Mk XIIIg direct sweep profiles do not skip on_hit while its four separate sticky follow-up profiles do; Mk IV has only the stated partial sticky-profile exception. The other three implementation pages accurately identify their actual sweep/push-follow-up and special routes.",
+      "The first-effect text correctly states that a sweep snapshots max hit mass at start and that the triggering hit/event cannot raise that in-progress sweep limit; a later sweep after event processing and stat-cache update can read the new value.",
+      "The formulas distinguish attack-side from impact-side maximum hit mass and use M=max(A,I). Both controlled examples are correct (10×1.65=16.5 with impact 8; 10×1.80=18 while impact 20 remains the selected limit). The write-up does not present the bonus as damage, a target count, or unlimited cleave.",
+      "The paired EN/ZH RAW keys and hash match the verification receipt; formatter prefix and tier reconstruction are consistent. The description does not claim unlimited cleave, and omitted runtime conditions are classified as not covered rather than translation errors.",
+      "All three icon attachment receipts correspond to the formal image URLs and actual icon IDs 072, 076, and 086; each receipt records public 200/hash/dimension/display verification."
+    ],
+    "validation_receipts": {
+      "focused_checks_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-focused-checks.json",
+      "focused_checks_sha256": "c983ce07fdf4c0af92e06f6844aa3a8df1b5f4b49d8b678ba3371aa0f46be827",
+      "verified_source_ranges": 107,
+      "verified_source_files": 39,
+      "actual_variant_count": 5,
+      "actual_binding_count": 11,
+      "global_shared_map_consistency": true,
+      "new_link_errors": 0,
+      "gfm_passed": true,
+      "own_tier_wrapper_proof_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-own-tier-wrapper-content-review.json",
+      "own_tier_wrapper_proof_sha256": "324a2464296736c36a887eb2daeec76895eb240ac7295c235db113b48e0a8cd8",
+      "ui_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-review.json",
+      "ui_review_sha256": "4ccc322a8e45cdf328bfee265ff0ab054b4e221f25c1783c6e894ea0942d5d38",
+      "raw_verification_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-raw-verification.json",
+      "raw_verification_sha256": "d1251a2692f83a6e6e566ce74d81276ba98f9e31948e84b6b7d695807ac87ace",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "image_receipts": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-image.json",
+          "sha256": "360bf66dc839b3b5cf89fedc3c44883afdd84deb30eec5b40fc11c0ed50f469f"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-chainsword-p1-image.json",
+          "sha256": "56aede334b43d437498be857cf3a796200123f48fee0101563f3fbc9091af356"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-ogryn-combatblade-p1-image.json",
+          "sha256": "087f3175f537242904d98cf2757c3fbcf760748ef31e158bf1931dd75f69c582"
+        }
+      ]
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "devastating-strike",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_072.png",
+      "attachment": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5991654807",
+      "acquired_date": "2026-10-05",
+      "sha256": "35d65a2b29922fb66cc5a286f3eab8b7171c4c616d28876a703c56e711145499",
+      "content_type": "image/png",
+      "size": 4154,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "毀滅打擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": "已目視原附件像素：中央灰白寬面板、兩側截角、白色上方方塊及中央縱向細條，透明黑底。"
+    },
+    "additional_variant_images": [
+      {
+        "id": "devastating-strike-chainsword-p1",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_076",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_076.png",
+        "attachment": "https://github.com/user-attachments/assets/4b5a4b99-a917-4442-87f2-efe241c4049a",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5991771844",
+        "acquired_date": "2026-10-05",
+        "sha256": "400e90fc18c446ac985e4e4985e1c2b9bf850e8fe3c34754eaf53443d375a032",
+        "content_type": "image/png",
+        "size": 6031,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "毀滅打擊祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_acceptance": "已目視原附件像素：中央灰白寬面板、白色上方長塊、右側短凸齒及中間縱向分段細條，透明黑底。",
+        "display": "public attachment inspected"
+      },
+      {
+        "id": "devastating-strike-ogryn-combatblade-p1",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_086",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_086.png",
+        "attachment": "https://github.com/user-attachments/assets/fd584eb5-b5c8-4dfa-aa0b-37472808ac06",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5991778492",
+        "acquired_date": "2026-10-05",
+        "sha256": "b90cdd0950df8b80cc2013954b7b9d043525a53de03528bab7e451dbd79b8e42",
+        "content_type": "image/png",
+        "size": 4146,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "毀滅打擊祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_acceptance": "已目視原附件像素：中央灰白寬面板、兩側截角、上方白色短塊及中間不規則窄條與下方折角，透明黑底。",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_076",
+        "attachment": "https://github.com/user-attachments/assets/4b5a4b99-a917-4442-87f2-efe241c4049a",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
+        "attachment": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_086",
+        "attachment": "https://github.com/user-attachments/assets/fd584eb5-b5c8-4dfa-aa0b-37472808ac06",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
+        "attachment": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
+        "attachment": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+        "verified_binding_count": 1
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 20,
+      "tables": 19,
+      "rows": 480,
+      "lists": 96,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 107,
+      "source_files": 39,
+      "bindings": 804,
+      "variants": 405,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 39,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 1111,
+      "remote_references": 502,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 28,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-exact-wrapper-generator-boundary-full-scan.json",
+        "sha256": "4ee8ea1265f8127ec7368ca643e8b18aadfe867706b9dacf6ca3d9081357b446",
+        "trigger": "thunderous-exact-wrapper-generator-boundary"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 52,
+    "not_started_name_groups": 52,
+    "partial_name_groups": 0,
+    "remaining_variants": 200,
+    "remaining_bindings": 381,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "18c5045d4f02f0ee56269b9ac8a66c2f279ab9b19271b57c9d9c24ed8388455e"
+  },
+  "previous_local_commit": "e4daf398411e6abb8c9e8a01c7cadb2aa2dd7720",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-focused-checks.json",
+      "sha256": "c983ce07fdf4c0af92e06f6844aa3a8df1b5f4b49d8b678ba3371aa0f46be827"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-frozen-source-verification.json",
+      "sha256": "8704da8fd9af498caf9961477d38a967f6cc5f23cf52ede4b64032c11e94f7fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-own-tier-wrapper-content-review.json",
+      "sha256": "324a2464296736c36a887eb2daeec76895eb240ac7295c235db113b48e0a8cd8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-pre-tier-layout-preserved.json",
+      "sha256": "c5f18da2fa504aab116d425736e58603d7b3c7ffa36e5c79cceecbff6193acb4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-resume-review.json",
+      "sha256": "ba79610c8939a412535eb687521b0292d6801b3080cc0e116e6a195922779bd4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-traits-review.json",
+      "sha256": "8bbe944a7abef5c2c0320cedbc7e7d38878c8f3ae9b8a483aa5e826b31d63d94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-raw-verification.json",
+      "sha256": "d1251a2692f83a6e6e566ce74d81276ba98f9e31948e84b6b7d695807ac87ace"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-review.json",
+      "sha256": "4ccc322a8e45cdf328bfee265ff0ab054b4e221f25c1783c6e894ea0942d5d38"
+    }
+  ],
+  "primary_review_method": "Content review centered on actual own full tiers/wrapper/formatter/native producer+consumer and difference applicability; common held/event/cache/lifetime mechanisms unchanged and reused. Original frozen author trio remains separate. Single approved canonical generates formal pages and shared indexes; formal nonauthor peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-config.json",
+    "sha256": "e68d1cfd7440a455ac422a718b1e15126fd3ee151e7c63866d1e5fba4cbd8e34"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-chainsword-p1-image.json",
+      "sha256": "56aede334b43d437498be857cf3a796200123f48fee0101563f3fbc9091af356"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-config.json",
+      "sha256": "aaf3cacc48a3749cc698b9650cb6b17e0779aec5566099f97fe33612e3c00416"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-coverage.json",
+      "sha256": "9fd1c110ab411421869317f74df941ee587668cf2a87baab68f468eefc34348a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-draft.md",
+      "sha256": "0000cf4f723e7da5235c916bf02cc825a7dffe897dddc30af8bc22adc5b26c3e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-preflight.json",
+      "sha256": "3eb2d56c09a4cb22b354560828d8e1f32e39fccf32198f55637aafe9a6b9eece"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-association-snapshot.json",
+      "sha256": "5d8acfe3ca56d566c7bdc3664007255ca3fc2637c63991cbdd26fe583a01159b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-candidate-preview.md",
+      "sha256": "500d95198765fff9137899309eb75753f333a817b00c6aadb87c46f7449f35d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-map-baseline-5bd12ed.json",
+      "sha256": "26fe1ce22d735c4454e6618ea146a65654951fcc6fa28b445c70493fc8cd5b3c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-image.json",
+      "sha256": "360bf66dc839b3b5cf89fedc3c44883afdd84deb30eec5b40fc11c0ed50f469f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-ogryn-combatblade-p1-image.json",
+      "sha256": "087f3175f537242904d98cf2757c3fbcf760748ef31e158bf1931dd75f69c582"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-own-tier-wrapper-content-review.json",
+      "sha256": "324a2464296736c36a887eb2daeec76895eb240ac7295c235db113b48e0a8cd8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-traits-review.json",
+      "sha256": "8bbe944a7abef5c2c0320cedbc7e7d38878c8f3ae9b8a483aa5e826b31d63d94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-raw-verification.json",
+      "sha256": "d1251a2692f83a6e6e566ce74d81276ba98f9e31948e84b6b7d695807ac87ace"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-ui-review.json",
+      "sha256": "4ccc322a8e45cdf328bfee265ff0ab054b4e221f25c1783c6e894ea0942d5d38"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-coverage.json",
+      "sha256": "81623ac79d9ddd7c90902e3dd19124c3aeefdc2eb544c8f6a7f219de084893e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-group/devastating-strike-agent-evidence.json",
+      "sha256": "31275802610b5ba1535146595df5d42cd685e9f298ec382b0dbbd59f345cf26f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-agent-config.json",
+      "sha256": "aaf3cacc48a3749cc698b9650cb6b17e0779aec5566099f97fe33612e3c00416"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-agent-evidence.json",
+      "sha256": "31275802610b5ba1535146595df5d42cd685e9f298ec382b0dbbd59f345cf26f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-agent-draft.md",
+      "sha256": "0000cf4f723e7da5235c916bf02cc825a7dffe897dddc30af8bc22adc5b26c3e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-frozen-source-verification.json",
+      "sha256": "8704da8fd9af498caf9961477d38a967f6cc5f23cf52ede4b64032c11e94f7fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-primary-pre-tier-layout-preserved.json",
+      "sha256": "c5f18da2fa504aab116d425736e58603d7b3c7ffa36e5c79cceecbff6193acb4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/devastating-strike-formal-peer-scope.json",
+    "sha256": "3a624fa9915aa94531661c496b8e4d968cced4d81f662ea810426a05c49741e2",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

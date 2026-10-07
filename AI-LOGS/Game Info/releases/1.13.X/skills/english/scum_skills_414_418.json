@@ -1,0 +1,80 @@
+{
+  "id": "scum_skills_414_418",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Display mappings only: broker_talents.lua L2155-L2179, L2180-L2239, L2015-L2037, L3117-L3171 and L1395-L1410. Existing mechanism, glossary and formatter evidence reused."
+  ],
+  "questions": [
+    "Toxic Renewal: knocked-down recovery remains unverified in the existing evidence; bare {max_enemies} is substituted only in the marked static reconstruction."
+  ],
+  "skills": [
+    {
+      "id": "broker_passive_melee_attacks_apply_toxin",
+      "name": "Coated Weaponry",
+      "name_hash": "eed42f4b",
+      "description_hash": "4108cdaa",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_attacks_apply_toxin.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_melee_attacks_apply_toxin.md",
+      "commit": "2a3020d87"
+    },
+    {
+      "id": "broker_passive_blitz_inflicts_toxin",
+      "name": "Pocket Toxin",
+      "name_hash": "9f79e627",
+      "description_hash": "8757c0f2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_blitz_inflicts_toxin.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_blitz_inflicts_toxin.md",
+      "commit": "24ff78542"
+    },
+    {
+      "id": "broker_passive_reduced_damage_by_toxined",
+      "name": "Targeted Toxin",
+      "name_hash": "78d6f9f3",
+      "description_hash": "615c771b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_reduced_damage_by_toxined.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_reduced_damage_by_toxined.md",
+      "commit": "a6d848b9c"
+    },
+    {
+      "id": "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
+      "name": "Toxic Renewal",
+      "name_hash": "c7a7a696",
+      "description_hash": "c1d98f78",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md",
+      "commit": "293e1a2c7"
+    },
+    {
+      "id": "broker_passive_extended_mag",
+      "name": "Ammo Jack",
+      "name_hash": "5fc69f62",
+      "description_hash": "414a3799",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_extended_mag.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_extended_mag.md",
+      "commit": "cb04bc269"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 358,
+    "from_commit": "e32b9c34a",
+    "to_commit": "cb04bc269",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  },
+  "related_corrections": [
+    {
+      "id": "broker_passive_toxin_spread_on_kills",
+      "commit": "c3f4111bc",
+      "result": "Preserved neurotoxin_interval_buff3 as the Buff identifier; removed unsupported 3s interpretation from the newly translated technical/comparison text."
+    }
+  ]
+}

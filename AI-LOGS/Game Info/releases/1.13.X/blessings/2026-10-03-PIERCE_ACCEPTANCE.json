@@ -1,0 +1,601 @@
+{
+  "date": "2026-10-05",
+  "blessing": "pierce",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/穿透/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special",
+    "weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special",
+    "weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 3,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-formal-peer-scope.json",
+    "scope_sha256": "85435ca23686a3bd7b5cb2b6a50ebebcf0cc7784618497fb053780fb47d49a3c",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file_count": 94,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-agent-config.json": "8e61ee83f75217ea111e0fcc42acd2aded7387038262c920d186b1978bb1ea22",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-agent-draft.md": "c34baff767515994071ce6bafd2d937d6388dbc08decb45ba7af534c62cf3475",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-agent-evidence.json": "ef5514dbdf17a2a91aa003efe7236caa40bc8095b8ddc7b66b9b653b38dbea13",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-config.json": "8e61ee83f75217ea111e0fcc42acd2aded7387038262c920d186b1978bb1ea22",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-extension-draft.json": "5d1f262e47c7a9cbdb8afe38ddbb981e150d91e9f109ade8954d684e57943c82",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-association-snapshot.json": "d5bd57ebd31fd221d3e1ceb858dad1cf8647b6fa3deb67773b9a13c70537791c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/association-snapshot.json": "199c95a7524b69f5a95d5bcda35d71f7337cf49bd5a663888338e56077fa457c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/binding-inventory.json": "e92120726d45ca05f282dca30129e810db58a11573f8080fd4bf118c502b8b24",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/DAMAGE_PERCENTAGE_REVIEW.md": "11b1d87e293388fe86d32884de919ab374036d68423a4ff4077f0ed012ac9245",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/LOCALIZATION_COMPARISON.md": "026bf2d75846bf14c2dd01399be569a2157ead005f47fa766fcf8bb797c53840",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/README.md": "2af66f0bf6b92ff5a0f4113624ee4976605c197a264d18fb38deedc58b18d1b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/SOURCE_INDEX.md": "2a7c78fe662e3a10e7ed3a1269d7b34b7d756851d03cb87868e440837d308747",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/TIER_VALUES.md": "53814cfde1cf1587b2076848bcede84cec06810bc92a328f3510fe9de2678dfc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/WEAPON_COMPATIBILITY.md": "ea903f264ba0943d6f6351d1d7f564398b0236b62b88703f1476369588706807",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md": "b47fd68c5ed1809991dad34e63261afeec11585a2b91c30a10a739c2e2039b82",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special.md": "448862b34582a7830063881f7e5ab354f77a2fd949223d1972e1d1effe5b4205",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special.md": "84927c3d404dd1c84e76c8442c8a277549d0bfc2fa1f0b4e1e1832348e302b9a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-page.md": "2af66f0bf6b92ff5a0f4113624ee4976605c197a264d18fb38deedc58b18d1b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-preview-manifest.json": "2a8685e72ec3285a4ba6b44d2d5007e3225fc420eea1eca1684623caee7c6148",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/coverage.json": "c0989877c6e16a0822c2f5f1f1ec09954b11066bf97bc888bff961e16ed5aed1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/finalize_pierce.py": "7edd3d8ec8cdc6030a705d0920ddb845849d47d6bcffcfbab70618d4257f915e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/fix_pierce.py": "e9ce23d6e6c981d81202c273d8ded893cf94601186efb2163fe8aca79c17a853",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/localization-snapshot.json": "ab9ba84c97bf0edec790916d5f1dd36cfc71f208f22bdcc3cd0d7edd003b0bd9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-001.json": "ad954692bd4c9b5c8723a07ca6155e4daff618a6c9e3eecb8a75580c83e980ef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-002.json": "e94753599c3532c21089ac3b4903a5b931d12cf130d9d3dc7497b9c9e3cc7162",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-003.json": "e687ef76bf841b535d7b5adcc1afedaa847ff2f8f858ad094549a72fc5e82ce7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-004.json": "fa4220c3dd606f76997697106b6786a1d0ddec28cb4236dddad36b91ff8a85c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-005.json": "9685a27a7ac7e3446bc7724bef2c5c8ef2f2fbe24afa23dca6013acdb49ebb37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-agent-config.json": "8e61ee83f75217ea111e0fcc42acd2aded7387038262c920d186b1978bb1ea22",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-agent-draft.md": "c34baff767515994071ce6bafd2d937d6388dbc08decb45ba7af534c62cf3475",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-agent-evidence.json": "ef5514dbdf17a2a91aa003efe7236caa40bc8095b8ddc7b66b9b653b38dbea13",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-freeze.json": "d39afa9bc357342e5e6d50b2a91922e5fffa4850456d91c8bd25cb542cb025a7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-selfcheck-results.json": "362adaf2dde9e9d99dcf207e1a359fbf943987ad4c5c974eb98f5c518c13a350",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/prepare_pierce.py": "e8646c956d9c7d8cde7b215875032ce754a0f420d38ba1c5a8898c2d66e4c07b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/projectile-hitmass-search.json": "e271678efa54c4d568eb9b467ef7c13fd6c6d7e82b60a5fcec00dff8d0ed27e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/source-ranges.json": "9b608f5fd71ab8edf6bb193a7c03362cb170ab25003f0365da350db59ad14907",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/tweak_pierce.py": "b903c90bcd81437f4c3ed694f1713224bde0a739bf573b57eb18550abb25bb1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-image.json": "d3361dcc877dbee2837117a25a46e2ab596579830ba28e1ed88146bf929c8499",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-final-content-math-raw-mode-review.json": "f519b3e9adf01db5d957099aa055f926eb50c316bee510d6c4631305c18c4c37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-focused-checks.json": "ce04cde10f0b313b68207ab85c254254a7c75ce7fd2a4454d084aad63fc75608",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-frozen-source-verification.json": "6823261d560f02a9fba42eafdfc1831bec0e6b579d8604487c02110756759216",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-hit-mass-armor-consumer-delta-review.json": "bcb9a9ab6694ef5be6aa57b84d8a8c1fc929de007eb2637b4bdda553245c2e69",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-own-tier-wrapper-content-review.json": "078dca69e2e7ea97c4d91d88189023d89c9130d4bbff5b718ea2661771ec8182",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-resume-review.json": "43a1d2825a8170ec37795fcdc5c474a9053c78951216690649b2323bcd95b946",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-traits-review.json": "b2da5abcb438aa898d4326b9d9b775ca2234da07f3cd5fb23a56fd646f1c612e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-ui-raw-verification.json": "19028ee9dfa405798e16cc796427ffcdd12e68925e0fcdd2e190676736f2d8af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-ui-review.json": "71b602204e74d9f83b5b703c8794bfe2432c5569ec549b66c9365e9a7ab42980",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-raw-verification.json": "95522ad4f3afb67944e1757cb4f6d37510c899c4718cec5def8c65e7f2534547",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9d6f7d0ce7f06d0b8f2995a27ebd0b0b46361c578140bd7e0f042570bb2cd49b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/DAMAGE_PERCENTAGE_REVIEW.md": "11b1d87e293388fe86d32884de919ab374036d68423a4ff4077f0ed012ac9245",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/LOCALIZATION_COMPARISON.md": "026bf2d75846bf14c2dd01399be569a2157ead005f47fa766fcf8bb797c53840",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/README.md": "2af66f0bf6b92ff5a0f4113624ee4976605c197a264d18fb38deedc58b18d1b8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/SOURCE_INDEX.md": "2a7c78fe662e3a10e7ed3a1269d7b34b7d756851d03cb87868e440837d308747",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/TIER_VALUES.md": "53814cfde1cf1587b2076848bcede84cec06810bc92a328f3510fe9de2678dfc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/WEAPON_COMPATIBILITY.md": "ea903f264ba0943d6f6351d1d7f564398b0236b62b88703f1476369588706807",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md": "b47fd68c5ed1809991dad34e63261afeec11585a2b91c30a10a739c2e2039b82",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special.md": "448862b34582a7830063881f7e5ab354f77a2fd949223d1972e1d1effe5b4205",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special.md": "84927c3d404dd1c84e76c8442c8a277549d0bfc2fa1f0b4e1e1832348e302b9a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/ranged/README.md": "9c4575129867d122679760dc68580abdafe8c6fd1be87e3e098f21c04416e930",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "e9d2f0abb9f4b3c46ea6cb3cfb5661c10f39c81e9329d0cc85546693b8725252",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8bd3236817400ceef60cf182b6d8b7bf8d0509d96cdec01afbcb89787c74fb78",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "2597c513338c96451c650708ed320218a92bdfd05f46df8c486c19bb7069839e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "e37651b91352085bec4716e13cb98b0d4f0ae4942538b16593bd5a9a8038f79e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "a69c4f57345a474bf6bbbfe6cb3b7e9ef4fcc797a7a744e24808f3d0d10aeaf8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/own-association-snapshot.json": "d5bd57ebd31fd221d3e1ceb858dad1cf8647b6fa3deb67773b9a13c70537791c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-preview-005/Referneces/Translation.md": "12407b2268fb4950f7f5a276e95087f50980a7dd9423ff94027692bf58dd519c",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9d6f7d0ce7f06d0b8f2995a27ebd0b0b46361c578140bd7e0f042570bb2cd49b",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/DAMAGE_PERCENTAGE_REVIEW.md": "11b1d87e293388fe86d32884de919ab374036d68423a4ff4077f0ed012ac9245",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/LOCALIZATION_COMPARISON.md": "026bf2d75846bf14c2dd01399be569a2157ead005f47fa766fcf8bb797c53840",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/README.md": "2af66f0bf6b92ff5a0f4113624ee4976605c197a264d18fb38deedc58b18d1b8",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/SOURCE_INDEX.md": "2a7c78fe662e3a10e7ed3a1269d7b34b7d756851d03cb87868e440837d308747",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/TIER_VALUES.md": "53814cfde1cf1587b2076848bcede84cec06810bc92a328f3510fe9de2678dfc",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/WEAPON_COMPATIBILITY.md": "ea903f264ba0943d6f6351d1d7f564398b0236b62b88703f1476369588706807",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md": "b47fd68c5ed1809991dad34e63261afeec11585a2b91c30a10a739c2e2039b82",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special.md": "448862b34582a7830063881f7e5ab354f77a2fd949223d1972e1d1effe5b4205",
+      "Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special.md": "84927c3d404dd1c84e76c8442c8a277549d0bfc2fa1f0b4e1e1832348e302b9a",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "9c4575129867d122679760dc68580abdafe8c6fd1be87e3e098f21c04416e930",
+      "Game Info/releases/1.13.X/blessings/README.md": "e9d2f0abb9f4b3c46ea6cb3cfb5661c10f39c81e9329d0cc85546693b8725252",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8bd3236817400ceef60cf182b6d8b7bf8d0509d96cdec01afbcb89787c74fb78",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "2597c513338c96451c650708ed320218a92bdfd05f46df8c486c19bb7069839e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "e37651b91352085bec4716e13cb98b0d4f0ae4942538b16593bd5a9a8038f79e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "a69c4f57345a474bf6bbbfe6cb3b7e9ef4fcc797a7a744e24808f3d0d10aeaf8",
+      "Referneces/Translation.md": "12407b2268fb4950f7f5a276e95087f50980a7dd9423ff94027692bf58dd519c"
+    },
+    "reviewed_findings": [
+      "All 94 fixed-scope file hashes match the current files using Windows extended-length paths for deep snapshots.",
+      "Reviewed the six shared formal pages and all three implementation pages. The actual bindings are exactly P1/M1 Kickback Lorenz Mk V, P2/M2 Rumbler Lorenz Mk VI, and P3/M3 Thugshot Lorenz Mk VII; weapon ids, mark ids, trait ids, RAW UI names, and template import/append records match the three-item UI receipt and current global map.",
+      "The player guide distinguishes melee impact from damage, explains first cache update, held/equip/switch behavior, finite HitMass budget and breed abort limits, and excludes P2 projectile/explosion from HitMass reduction. Both examples state their assumptions and limit results to intermediate stagger power or hit-mass budget.",
+      "I–IV values are 0.10/0.15/0.20/0.25 and all three wrappers/traits agree. Formatter reconstruction uses the matching English/zh-TW RAW key/hash and + percentage prefix; it does not promise final stagger strength or time.",
+      "The localization comparison table has ten rows, five cells in each row, and correctly orders RAW text, source behavior with script paths/methods/ranges, comparison result, and reason. Its rows exactly match both canonical config and extension-draft rules.",
+      "The icon receipt identifies weapon_trait_133 separately from its attachment URL; README and current map use that same attachment. The three weapon reverse indexes link back to the Pierce entry.",
+      "The row-38 entry in Pierce LOCALIZATION_COMPARISON.md is the held/equip/cache rule; the prior Combatblade concern was a mistaken cross-task recollection and does not occur anywhere in Pierce scope."
+    ],
+    "supporting_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-final-content-math-raw-mode-review.json",
+        "sha256": "f519b3e9adf01db5d957099aa055f926eb50c316bee510d6c4631305c18c4c37"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-hit-mass-armor-consumer-delta-review.json",
+        "sha256": "bcb9a9ab6694ef5be6aa57b84d8a8c1fc929de007eb2637b4bdda553245c2e69"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-own-tier-wrapper-content-review.json",
+        "sha256": "078dca69e2e7ea97c4d91d88189023d89c9130d4bbff5b718ea2661771ec8182"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-ui-review.json",
+        "sha256": "71b602204e74d9f83b5b703c8794bfe2432c5569ec549b66c9365e9a7ab42980"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-image.json",
+        "sha256": "d3361dcc877dbee2837117a25a46e2ab596579830ba28e1ed88146bf929c8499"
+      }
+    ],
+    "reverse_index_pages": [
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md"
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "pierce",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_133",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_133.png",
+      "attachment": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5995243162",
+      "acquired_date": "2026-10-05",
+      "sha256": "c5ae6b46e6d99ef8fd735feb5f02a9c0b7bef370ddd562893c543abdccc40c91",
+      "content_type": "image/png",
+      "size": 6055,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "穿透祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Root viewed public downloaded original PNG, actual item.icon 133; pale gray original preserved"
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 16,
+      "rows": 430,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 65,
+      "source_files": 28,
+      "bindings": 863,
+      "variants": 435,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 28,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 1028,
+      "remote_references": 424,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 31,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-030-full-scan.json",
+        "sha256": "25943f52efd67fd459cb760bd70a006dd9ee356340a0ccea9620905b622cf9ec",
+        "trigger": "round-030"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 45,
+    "not_started_name_groups": 45,
+    "partial_name_groups": 0,
+    "remaining_variants": 170,
+    "remaining_bindings": 322,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "e97468d2056c2669d471ca633a571bb0c301ff1dae255585441ca6b0412afc58"
+  },
+  "previous_local_commit": "9aed3386913f9d74a1f4bbe2df5c193105264060",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in exact inventory/UI intersection"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-final-content-math-raw-mode-review.json",
+      "sha256": "f519b3e9adf01db5d957099aa055f926eb50c316bee510d6c4631305c18c4c37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-focused-checks.json",
+      "sha256": "ce04cde10f0b313b68207ab85c254254a7c75ce7fd2a4454d084aad63fc75608"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-frozen-source-verification.json",
+      "sha256": "6823261d560f02a9fba42eafdfc1831bec0e6b579d8604487c02110756759216"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-hit-mass-armor-consumer-delta-review.json",
+      "sha256": "bcb9a9ab6694ef5be6aa57b84d8a8c1fc929de007eb2637b4bdda553245c2e69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-own-tier-wrapper-content-review.json",
+      "sha256": "078dca69e2e7ea97c4d91d88189023d89c9130d4bbff5b718ea2661771ec8182"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-resume-review.json",
+      "sha256": "43a1d2825a8170ec37795fcdc5c474a9053c78951216690649b2323bcd95b946"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-traits-review.json",
+      "sha256": "b2da5abcb438aa898d4326b9d9b775ca2234da07f3cd5fb23a56fd646f1c612e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-ui-raw-verification.json",
+      "sha256": "19028ee9dfa405798e16cc796427ffcdd12e68925e0fcdd2e190676736f2d8af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-ui-review.json",
+      "sha256": "71b602204e74d9f83b5b703c8794bfe2432c5569ec549b66c9365e9a7ab42980"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-config.json",
+    "sha256": "8e61ee83f75217ea111e0fcc42acd2aded7387038262c920d186b1978bb1ea22"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-traits-review.json",
+      "sha256": "b2da5abcb438aa898d4326b9d9b775ca2234da07f3cd5fb23a56fd646f1c612e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-ui-review.json",
+      "sha256": "71b602204e74d9f83b5b703c8794bfe2432c5569ec549b66c9365e9a7ab42980"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-ui-raw-verification.json",
+      "sha256": "19028ee9dfa405798e16cc796427ffcdd12e68925e0fcdd2e190676736f2d8af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-own-tier-wrapper-content-review.json",
+      "sha256": "078dca69e2e7ea97c4d91d88189023d89c9130d4bbff5b718ea2661771ec8182"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-hit-mass-armor-consumer-delta-review.json",
+      "sha256": "bcb9a9ab6694ef5be6aa57b84d8a8c1fc929de007eb2637b4bdda553245c2e69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-image.json",
+      "sha256": "d3361dcc877dbee2837117a25a46e2ab596579830ba28e1ed88146bf929c8499"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/prepare_pierce.py",
+      "sha256": "e8646c956d9c7d8cde7b215875032ce754a0f420d38ba1c5a8898c2d66e4c07b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/fix_pierce.py",
+      "sha256": "e9ce23d6e6c981d81202c273d8ded893cf94601186efb2163fe8aca79c17a853"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/tweak_pierce.py",
+      "sha256": "b903c90bcd81437f4c3ed694f1713224bde0a739bf573b57eb18550abb25bb1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/finalize_pierce.py",
+      "sha256": "7edd3d8ec8cdc6030a705d0920ddb845849d47d6bcffcfbab70618d4257f915e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/binding-inventory.json",
+      "sha256": "e92120726d45ca05f282dca30129e810db58a11573f8080fd4bf118c502b8b24"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/localization-snapshot.json",
+      "sha256": "ab9ba84c97bf0edec790916d5f1dd36cfc71f208f22bdcc3cd0d7edd003b0bd9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/source-ranges.json",
+      "sha256": "9b608f5fd71ab8edf6bb193a7c03362cb170ab25003f0365da350db59ad14907"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/coverage.json",
+      "sha256": "c0989877c6e16a0822c2f5f1f1ec09954b11066bf97bc888bff961e16ed5aed1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/association-snapshot.json",
+      "sha256": "199c95a7524b69f5a95d5bcda35d71f7337cf49bd5a663888338e56077fa457c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/actual-association-snapshot.json",
+      "sha256": "d5bd57ebd31fd221d3e1ceb858dad1cf8647b6fa3deb67773b9a13c70537791c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/projectile-hitmass-search.json",
+      "sha256": "e271678efa54c4d568eb9b467ef7c13fd6c6d7e82b60a5fcec00dff8d0ed27e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-agent-config.json",
+      "sha256": "8e61ee83f75217ea111e0fcc42acd2aded7387038262c920d186b1978bb1ea22"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-agent-draft.md",
+      "sha256": "c34baff767515994071ce6bafd2d937d6388dbc08decb45ba7af534c62cf3475"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-page.md",
+      "sha256": "2af66f0bf6b92ff5a0f4113624ee4976605c197a264d18fb38deedc58b18d1b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-preview-manifest.json",
+      "sha256": "2a8685e72ec3285a4ba6b44d2d5007e3225fc420eea1eca1684623caee7c6148"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-selfcheck-results.json",
+      "sha256": "362adaf2dde9e9d99dcf207e1a359fbf943987ad4c5c974eb98f5c518c13a350"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-freeze.json",
+      "sha256": "d39afa9bc357342e5e6d50b2a91922e5fffa4850456d91c8bd25cb542cb025a7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-005.json",
+      "sha256": "9685a27a7ac7e3446bc7724bef2c5c8ef2f2fbe24afa23dca6013acdb49ebb37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/README.md",
+      "sha256": "2af66f0bf6b92ff5a0f4113624ee4976605c197a264d18fb38deedc58b18d1b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/SOURCE_INDEX.md",
+      "sha256": "2a7c78fe662e3a10e7ed3a1269d7b34b7d756851d03cb87868e440837d308747"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/WEAPON_COMPATIBILITY.md",
+      "sha256": "ea903f264ba0943d6f6351d1d7f564398b0236b62b88703f1476369588706807"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/TIER_VALUES.md",
+      "sha256": "53814cfde1cf1587b2076848bcede84cec06810bc92a328f3510fe9de2678dfc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/LOCALIZATION_COMPARISON.md",
+      "sha256": "026bf2d75846bf14c2dd01399be569a2157ead005f47fa766fcf8bb797c53840"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "11b1d87e293388fe86d32884de919ab374036d68423a4ff4077f0ed012ac9245"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md",
+      "sha256": "b47fd68c5ed1809991dad34e63261afeec11585a2b91c30a10a739c2e2039b82"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special.md",
+      "sha256": "448862b34582a7830063881f7e5ab354f77a2fd949223d1972e1d1effe5b4205"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/穿透/weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special.md",
+      "sha256": "84927c3d404dd1c84e76c8442c8a277549d0bfc2fa1f0b4e1e1832348e302b9a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "e9d2f0abb9f4b3c46ea6cb3cfb5661c10f39c81e9329d0cc85546693b8725252"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "8bd3236817400ceef60cf182b6d8b7bf8d0509d96cdec01afbcb89787c74fb78"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "9d6f7d0ce7f06d0b8f2995a27ebd0b0b46361c578140bd7e0f042570bb2cd49b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "11b1d87e293388fe86d32884de919ab374036d68423a4ff4077f0ed012ac9245"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\LOCALIZATION_COMPARISON.md",
+      "sha256": "026bf2d75846bf14c2dd01399be569a2157ead005f47fa766fcf8bb797c53840"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\README.md",
+      "sha256": "2af66f0bf6b92ff5a0f4113624ee4976605c197a264d18fb38deedc58b18d1b8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\SOURCE_INDEX.md",
+      "sha256": "2a7c78fe662e3a10e7ed3a1269d7b34b7d756851d03cb87868e440837d308747"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\TIER_VALUES.md",
+      "sha256": "53814cfde1cf1587b2076848bcede84cec06810bc92a328f3510fe9de2678dfc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\WEAPON_COMPATIBILITY.md",
+      "sha256": "ea903f264ba0943d6f6351d1d7f564398b0236b62b88703f1476369588706807"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md",
+      "sha256": "b47fd68c5ed1809991dad34e63261afeec11585a2b91c30a10a739c2e2039b82"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special.md",
+      "sha256": "448862b34582a7830063881f7e5ab354f77a2fd949223d1972e1d1effe5b4205"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\穿透\\weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special.md",
+      "sha256": "84927c3d404dd1c84e76c8442c8a277549d0bfc2fa1f0b4e1e1832348e302b9a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "9c4575129867d122679760dc68580abdafe8c6fd1be87e3e098f21c04416e930"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\反衝者\\README.md",
+      "sha256": "2597c513338c96451c650708ed320218a92bdfd05f46df8c486c19bb7069839e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\惡棍槍\\README.md",
+      "sha256": "e37651b91352085bec4716e13cb98b0d4f0ae4942538b16593bd5a9a8038f79e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\震盪槍\\README.md",
+      "sha256": "a69c4f57345a474bf6bbbfe6cb3b7e9ef4fcc797a7a744e24808f3d0d10aeaf8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "12407b2268fb4950f7f5a276e95087f50980a7dd9423ff94027692bf58dd519c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-raw-verification.json",
+      "sha256": "95522ad4f3afb67944e1757cb4f6d37510c899c4718cec5def8c65e7f2534547"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pierce-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "d5bd57ebd31fd221d3e1ceb858dad1cf8647b6fa3deb67773b9a13c70537791c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-001.json",
+      "sha256": "ad954692bd4c9b5c8723a07ca6155e4daff618a6c9e3eecb8a75580c83e980ef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-002.json",
+      "sha256": "e94753599c3532c21089ac3b4903a5b931d12cf130d9d3dc7497b9c9e3cc7162"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-003.json",
+      "sha256": "e687ef76bf841b535d7b5adcc1afedaa847ff2f8f858ad094549a72fc5e82ce7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-actual-preview-receipt-004.json",
+      "sha256": "fa4220c3dd606f76997697106b6786a1d0ddec28cb4236dddad36b91ff8a85c8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-group/pierce-agent-evidence.json",
+      "sha256": "ef5514dbdf17a2a91aa003efe7236caa40bc8095b8ddc7b66b9b653b38dbea13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-agent-config.json",
+      "sha256": "8e61ee83f75217ea111e0fcc42acd2aded7387038262c920d186b1978bb1ea22"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-agent-evidence.json",
+      "sha256": "ef5514dbdf17a2a91aa003efe7236caa40bc8095b8ddc7b66b9b653b38dbea13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-agent-draft.md",
+      "sha256": "c34baff767515994071ce6bafd2d937d6388dbc08decb45ba7af534c62cf3475"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-final-content-math-raw-mode-review.json",
+      "sha256": "f519b3e9adf01db5d957099aa055f926eb50c316bee510d6c4631305c18c4c37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-primary-frozen-source-verification.json",
+      "sha256": "6823261d560f02a9fba42eafdfc1831bec0e6b579d8604487c02110756759216"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pierce-formal-peer-scope.json",
+    "sha256": "85435ca23686a3bd7b5cb2b6a50ebebcf0cc7784618497fb053780fb47d49a3c",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

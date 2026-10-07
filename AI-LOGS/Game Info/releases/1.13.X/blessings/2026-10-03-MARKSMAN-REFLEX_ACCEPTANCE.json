@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-05",
+  "blessing": "marksman-reflex",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/迅雷反射/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p2_weakspot_projectile_hit_increases_reload_speed"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "marksman-reflex",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-formal-peer-scope.json",
+    "scope_sha256": "27a2addb966b08393f615822d50ac788db4c1d52ae097c5a93c46a0078a07b95",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_count": 30,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-config.json": "dc2249e1d874261c0259aa6a1fba660b5ca3361f5a066d94255bbcd752bb212a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-draft.md": "18197df9a3ab72f12b8faec5cb9cbe540e188bb72f0448b0070f965549d85983",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-evidence.json": "5c4b66c7c26628e1267d0c54a094f5997de3e0b027fa1e7a50514572ae905d8d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-projectile-addendum.json": "52a6c1c8fba4011a66fbf62bcf48166eabfd93f003e3762216d7d3dc3aac8c85",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-config.json": "b7f784ea4763dbe746dc80fdcd9a3bf9bd77e22c222a74b96c9a0af8525b1e7e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-extension-draft.json": "50f11ca572815badf4d122e693bf93b2ef213cb46eb640a2483d99b26979f554",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-image.json": "1fe6e93e8448587a3c1a11ab42d5373b34d365031bfce5fe860b32f051596870",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-focused-checks.json": "140cd321c4cc54d7cbbb04c88083ee39f96748d9593ff4872c0afc3d70762670",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-frozen-source-verification.json": "11c0699af2b5989835a51673790e8b588955ad92d36cfb4cdb424973c7f98816",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-own-tier-diff.json": "626a1ac0ad75c702aa78ad6d5d84986916ad2391e84539cd7c682e5ccc68b33e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-projectile-routing-review.json": "4e35b2ac79b8bccef097e2ec63b8085f5589edf8e6362a33e25b53c607cbb0ee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-reload-sampling-review.json": "0ec8a956c874a6059ab7fa8dcf3801e59fb001bade996478262bf99894cf1685",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-resume-review.json": "cee55df3d7b979a4b95b1c6f850751b69fe149c3a6fcfaa60e7e9bc2f4ab0e07",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-traits-review.json": "9be68dcadb9cbe0204c47a16313d9019812f950630dad3f2b1fadef6f6077408",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-ui-raw-verification.json": "e2dfed3c3cc4abb27179d1c0fb24f66bb6ccf17bfe97ffa51d5970d58c5580a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-ui-review.json": "f275d99c489a9164b2720baf0318fb0c54c26265ca63d7a02cf0695b4a748d94",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "40fd6f65ab7774374d5dbbe4c842fb00396b058de6a5bae0a9cdcc59f5235e49",
+      "Game Info/releases/1.13.X/blessings/entries/迅雷反射/DAMAGE_PERCENTAGE_REVIEW.md": "67e369861bdb8c826172ef5685370ac10abfffaae236b690447c4461650a6e31",
+      "Game Info/releases/1.13.X/blessings/entries/迅雷反射/LOCALIZATION_COMPARISON.md": "810b8e1ba3239ede3484b705de0816b466467afb6f50df6adf38cd3c4f78ae3a",
+      "Game Info/releases/1.13.X/blessings/entries/迅雷反射/README.md": "8af5d1ca70a42e0b0b31a63be90fe5575a66f36ffaabdd4a29c8a2f43a6d0f42",
+      "Game Info/releases/1.13.X/blessings/entries/迅雷反射/SOURCE_INDEX.md": "6bd625f0c09c879fab4e62fba4b822ead8c4fc2abd583361f7821f104398662d",
+      "Game Info/releases/1.13.X/blessings/entries/迅雷反射/TIER_VALUES.md": "43c9b1e5ea8dfb968b9863041b999c51772413c8bf5396507ff3203225357134",
+      "Game Info/releases/1.13.X/blessings/entries/迅雷反射/WEAPON_COMPATIBILITY.md": "1b3890bb3d3f5216fd8d951c8c4487839902821b8bc37b18aec4862c24dbd94b",
+      "Game Info/releases/1.13.X/blessings/entries/迅雷反射/weapon_trait_bespoke_ogryn_thumper_p2_weakspot_projectile_hit_increases_reload_speed.md": "0ab711101c21c58d3a4a2296485de4fb9d1cdf36dff015832e83333adc9a3358",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "1b56da6e460400f8f4aadab70e1f33597f732bd5d9617bc37d380439ee6dab1d",
+      "Game Info/releases/1.13.X/blessings/README.md": "e5d44d3b06e871393a0700b0b766b327bfc9eee16d1f70bb7affee3a0153105f",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "32da37f44062e2358f08926b5d9a9ae374d0052689966be1fc00a37d37c1db6b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "0c84e23aaaf32593fc1932e46c06f8f898c94c9f8b713fd45853c35a5c3df4e9",
+      "Referneces/Translation.md": "35e7101743a6fda43308c72dc450445e89412000412d13ce2943594579b1bbc9"
+    },
+    "review_findings": [
+      "Verified all 30 scoped paths exist and match their expected SHA-256; fixed source commit and the frozen research trio/addendum are unchanged.",
+      "The own 7 formal pages, one trait implementation/one actual binding (ogryn_thumper_p2 on ogryn_thumper_p1_m2), shared map, reverse weapon page, catalog, and glossary are consistent.",
+      "I–IV values and exact bilingual RAW/formatted strings match the own trait and formatter; the projectile-only RAW wording is explicitly compared with the broader generic hit_weakspot implementation, without misclassifying omitted duration units or stacking details as errors.",
+      "Direct projectile impact resolves the actual hit actor zone; area explosions select and resolve each target’s center-mass actor zone rather than forcing torso or making every AoE hit a weakspot. Both actual bash sweeps and the full profile/filter evidence are consistent with the conditional wording.",
+      "First proc/cache timing, three-second expiry/refresh, no stacking/cooldown, on_equip versus wield-switch lifecycle, player-global reload stat, and action-start reload sampling align with the cited source. The 2.333/1.30 example is correctly limited to one action segment and states its neutral-modifier/clamp assumptions.",
+      "The icon attachment is correctly separated from the in-game icon path/id and agrees with the scoped verified image receipt; per-weapon values and null available_tiers are consistent across canonical, extension draft, map, and formal pages."
+    ],
+    "verification": "Source-focused and GFM/link checks in the fixed scope were reviewed as recorded; no remaining substantive discrepancy was found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/51ba138d-a251-4d0f-9e71-557dc791caee",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "marksman-reflex",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_234",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_234.png",
+      "attachment": "https://github.com/user-attachments/assets/51ba138d-a251-4d0f-9e71-557dc791caee",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5985112536",
+      "acquired_date": "2026-10-05",
+      "sha256": "ca73bfc79b86ee0435a7754ccef2c5e0901df5b79c20be2413e3d4dd5791f323",
+      "content_type": "image/png",
+      "size": 3516,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "迅雷反射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": "Root viewed exact public128x128 PNG: very low contrast light-grey/white central block shape against transparent/light margin; no fine emblem details inferred. Public/original hashes matched."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 306,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 47,
+      "source_files": 26,
+      "bindings": 543,
+      "variants": 280,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 26,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 778,
+      "remote_references": 343,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 21,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-020-full-scan.json",
+        "sha256": "ea1f2d22dab98fffd677eceba82ef817a98252023f59ac0d331292071ec880c8",
+        "trigger": "round-020"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 74,
+    "not_started_name_groups": 74,
+    "partial_name_groups": 0,
+    "remaining_variants": 325,
+    "remaining_bindings": 642,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "cf28bf0df2fdc57823e87ff6ff89a018a9b34a9713e59207df9f4de2accb19b4"
+  },
+  "previous_local_commit": "3382779064876342449517ce95cd430e5f12b1b6",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in actual inventory and primary UI exact-name definition check"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-focused-checks.json",
+      "sha256": "140cd321c4cc54d7cbbb04c88083ee39f96748d9593ff4872c0afc3d70762670"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-frozen-source-verification.json",
+      "sha256": "11c0699af2b5989835a51673790e8b588955ad92d36cfb4cdb424973c7f98816"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-own-tier-diff.json",
+      "sha256": "626a1ac0ad75c702aa78ad6d5d84986916ad2391e84539cd7c682e5ccc68b33e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-projectile-routing-review.json",
+      "sha256": "4e35b2ac79b8bccef097e2ec63b8085f5589edf8e6362a33e25b53c607cbb0ee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-reload-sampling-review.json",
+      "sha256": "0ec8a956c874a6059ab7fa8dcf3801e59fb001bade996478262bf99894cf1685"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-resume-review.json",
+      "sha256": "cee55df3d7b979a4b95b1c6f850751b69fe149c3a6fcfaa60e7e9bc2f4ab0e07"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-traits-review.json",
+      "sha256": "9be68dcadb9cbe0204c47a16313d9019812f950630dad3f2b1fadef6f6077408"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-ui-raw-verification.json",
+      "sha256": "e2dfed3c3cc4abb27179d1c0fb24f66bb6ccf17bfe97ffa51d5970d58c5580a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-primary-ui-review.json",
+      "sha256": "f275d99c489a9164b2720baf0318fb0c54c26265ca63d7a02cf0695b4a748d94"
+    }
+  ],
+  "primary_review_method": "Reuse fixed common ProcBuff active/refresh/event/cache and equip/stat mechanisms under verified no cooldown/no conditional held gate. Primary independently checks own full tiers/wrapper/UI/RAW, generic weakspot helper/stat predicate, action-start reload sampling; only new actual projectile/explosion actor routing and complete profile parent differences expanded.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-config.json",
+    "sha256": "b7f784ea4763dbe746dc80fdcd9a3bf9bd77e22c222a74b96c9a0af8525b1e7e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-config.json",
+      "sha256": "dc2249e1d874261c0259aa6a1fba660b5ca3361f5a066d94255bbcd752bb212a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-evidence.json",
+      "sha256": "5c4b66c7c26628e1267d0c54a094f5997de3e0b027fa1e7a50514572ae905d8d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-draft.md",
+      "sha256": "18197df9a3ab72f12b8faec5cb9cbe540e188bb72f0448b0070f965549d85983"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-agent-projectile-addendum.json",
+      "sha256": "52a6c1c8fba4011a66fbf62bcf48166eabfd93f003e3762216d7d3dc3aac8c85"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/marksman-reflex-formal-peer-scope.json",
+    "sha256": "27a2addb966b08393f615822d50ac788db4c1d52ae097c5a93c46a0078a07b95",
+    "final_content_hashes_unchanged": true
+  }
+}

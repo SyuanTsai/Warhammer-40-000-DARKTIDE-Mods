@@ -1,4 +1,4 @@
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 local TalentSettings = mod:original_require("scripts/settings/talent/talent_settings")
 
 local max_stacks = {
@@ -16,11 +16,17 @@ local max_stacks = {
     -- https://github.com/Aussiemon/Darktide-Source-Code/blob/bb5ee8f4309f1bc9bf9327d2ef59a088ca1aa5d4/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3002C1-L3003C1
     zealot_offensive_vs_many = TalentSettings.zealot.zealot_offensive_vs_many.max_stack,
 
-    -- https://github.com/Aussiemon/Darktide-Source-Code/blob/bb5ee8f4309f1bc9bf9327d2ef59a088ca1aa5d4/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1544
-    zealot_toughness_regen_in_melee = 6,
+    -- Matches zealot_toughness_regen_in_melee.max_num_extra_enemies, which is also the
+    -- highest value that the buff's visual_stack_count function can report.
+    zealot_toughness_regen_in_melee = math.ceil(
+        (TalentSettings.zealot.zealot_toughness_in_melee.max_percentage_toughness
+            - TalentSettings.zealot.zealot_toughness_in_melee.initial_percentage_toughness)
+        / TalentSettings.zealot.zealot_toughness_in_melee.percentage_toughness_per_enemy
+    ),
 
     -- https://github.com/Aussiemon/Darktide-Source-Code/blob/bb5ee8f4309f1bc9bf9327d2ef59a088ca1aa5d4/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1137
-    zealot_preacher_melee_increase_next_melee_proc = TalentSettings.zealot_3.zealot_preacher_melee_increase_next_melee_proc,
+    zealot_preacher_melee_increase_next_melee_proc = TalentSettings.zealot_3
+        .zealot_preacher_melee_increase_next_melee_proc,
 
     -- https://github.com/Aussiemon/Darktide-Source-Code/blob/bb5ee8f4309f1bc9bf9327d2ef59a088ca1aa5d4/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2956
     veteran_improved_tag = TalentSettings.veteran.veteran_tag.max_stacks

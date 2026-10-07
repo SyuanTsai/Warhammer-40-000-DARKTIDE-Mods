@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-05",
+  "blessing": "headtaker",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/奪顱者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_increase_power_on_hit",
+    "weapon_trait_bespoke_combataxe_p1_increase_power_on_hit",
+    "weapon_trait_bespoke_combataxe_p2_increase_power_on_hit",
+    "weapon_trait_bespoke_combatsword_p2_increase_power_on_hit",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_hit",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit"
+  ],
+  "added_binding_count": 16,
+  "total_variants": 6,
+  "total_bindings": 16,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "accepted": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reasoning_effort": "max",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-formal-peer-scope.json",
+    "scope_sha256": "d4e69a3adedf1457c842b3254e8544a4df0d7243b56f6de50b83e6cede503816",
+    "complete": true,
+    "reviewed_file_count": 56,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "findings": [
+      "Verified every one of the 56 fixed-scope files against its recorded SHA-256; the 12 Headtaker formal pages and their current shared/index relations are stable.",
+      "The six supported weapon families map to six trait variants and 16 actual bindings. Current weapon-family/pattern/mark labels, reverse pages, map rows, trait/item restrictions, template attachments, and the icon path/attachment identity agree; the combataxe_p1 label update is limited to names and does not alter mechanics or values.",
+      "The six own tier/wrapper records support the listed per-stack melee-power values: five families use 3.5/4/4.5/5 percent and the heavy-sword family uses 6.5/7/7.5/8 percent. The matching melee_power_level_modifier replaces the child fallback; the child has five effective stacks, and the shared 3.5-second inactivity window clears all effective stacks while accepted capped hits refresh that window.",
+      "The player text and action matrix correctly distinguish eligible melee hits from pure push, document actual direct-special follow-ups, and exclude all nine verified chainaxe sticky profiles that set skip_on_hit_proc. The first qualifying hit resolves before its event and cache update, so it cannot benefit retroactively; later actions use the updated cache. Switching pauses the held-gated contribution while the shared timer continues; actual unequip/removal clears the effect.",
+      "The tier reconstruction uses the exact paired RAW keys and formatter behavior for all eight family/tier rows. Tier numbers, five stacks, and 3.5 seconds agree with implementation; mechanics omitted by RAW are classified as 「文件未涵蓋」. The README no longer contains an empty or generalized errata section, and the localization comparison retains the RAW-versus-implementation classification with the corrected reconstruction punctuation.",
+      "The power examples define B after the weapon power-type curve and before the merged additive modifier. Results 625, 700, and 725 (with q=20 percent) are arithmetically correct and are explicitly power-input results, not claims of fixed final damage.",
+      "The restored first-effect recovery receipt is narrowly scoped to the first-hit/cache-order question and does not claim restoration of the missing historical Opening Salvo addendum; the config and draft preserve that provenance."
+    ],
+    "content_checks": {
+      "formal_pages": 12,
+      "weapon_families": 6,
+      "trait_variants": 6,
+      "bindings": 16,
+      "raw_tier_rows": 8,
+      "current_shared_map_and_reverse_relations": true,
+      "ui_name_delta_only": true,
+      "readme_errata_section_removed": true,
+      "localization_comparison_tail_checked": true,
+      "power_examples_checked": true,
+      "image_identity_checked": true,
+      "frozen_agent_trio_unchanged": true
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-agent-config.json": "54d0f84abc0b317ea87676891254323bcf2ffe3d68220526dca9ba802046178c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-agent-draft.md": "db3866a455bc8aa67a47463525704b77f842dbccc165423675a78c9fff667087",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-agent-evidence.json": "a936674b494d372d5ca20e1af098aa762410e9c61432c81742a9644c19ceb9de",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-agent-first-effect-recovery.json": "dbc4c95988dbceb9be477dc7a3eecee2baf192a2cdf87931c0c0fc39a87b5675",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-config.json": "784aa430fd2336fb43a4bccc32ed3bd2c49136d81eedc27ebe5f241518e08910",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-extension-draft.json": "09d4467859fce8f1e843e8b4babdb4ad0a6a205eef9e065f3acb356ff44a4652",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-image.json": "f72d7ac4f8ab16c067776521bce2143bd1890f63ce5879a38cd7476e3fd5ba84",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-curve-removal-review.json": "9491c72accdfe3e535d3d8640c62aa3e76d131f326b5f2f83b86b3861ce341c3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-focused-checks.json": "17273c5b1b89d17cdbd0bf2e868b28a68c018e12719cb7bb333353a333822f29",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-frozen-source-verification.json": "17f0861abfa943570be97930f59a325c5172d52b80cb479264514889bfc4d1a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-index-recovery-repair.json": "de91932891c79ede628b456b0b70b0ca5f5715ce356a229121e923738fd14968",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-own-tier-diff.json": "9170ce99513cea0b1d53a73f2e68ba452b2f94393044cfe9e19bce4d8c87af09",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-resume-review.json": "487903d5b7068e9cd406219f95a422a3dcbb9a015906a394e3d42103d56f445a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-stack-timer-diff.json": "264771ada17747f22d8bd8f75a81cdea13e19b6c3e5cd54388f792b67c6fa649",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-sticky-proc-review.json": "df56de67ca9cffda1b8f94df7b642ebd1eae2b971b898e1458cacdd3058fa92e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-traits-review.json": "05722516cf36aca6be9e1a280e0170f4ea3ba5a63e804ce839bcd5ce164fd5bf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-ui-delta-review.json": "cd936b2609db3de650fdd866a347680bf540704310198b291793595628d1a5d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-ui-raw-verification.json": "681b6c08f183d46b2eb104d1c800590f32cdb186ba60e81d1850f4c1fc861940",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-ui-review.json": "4d18fdfb0efcdbaf2d35518ea864d2c69ebc97995e3ef83ad107fc66c5af3902",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e824c9a332252d3321e9c4a56a1d457dfddf751e61815db9e72b9c6e8c2faa55",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/DAMAGE_PERCENTAGE_REVIEW.md": "d80fe059cc718393fcfcda63869b4f400baaf7e02de2ffb07ec3ed6326b2e11c",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/LOCALIZATION_COMPARISON.md": "d1d8bab4d51a7b2964c9bf0883fcb3413b09504329af62c03953dbff08860edd",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/README.md": "d9fe81c1df3b7c3de0f588ed24d5dc8842c2019b320362a733e259ad2d793e4c",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/SOURCE_INDEX.md": "0930e3a8b541d0a250ccd86269f1cfe3a39acef15f500ca61e78c1544619517b",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/TIER_VALUES.md": "3c155da3116cef42ef2e3d13e731a496d0c28d5b74906af6ed63b50c5a066d9e",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/WEAPON_COMPATIBILITY.md": "3f93de7f4d6fc94faeced57d7fb143e15ba4f10961ff953e6e56bb81ecc35da8",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/weapon_trait_bespoke_chainaxe_p1_increase_power_on_hit.md": "637b3382b3532ac4c7e0b4ce0cc0ee3006f93619242ab987a84cb3af84752d41",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/weapon_trait_bespoke_combataxe_p1_increase_power_on_hit.md": "b492a5817b8970d47afcc0136c3da346f052b6afad0e6bfa789266759f1f41a6",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/weapon_trait_bespoke_combataxe_p2_increase_power_on_hit.md": "97940109320c0cf6e9c1c4e6967c42609a6121c02a4157fc88e9438c5aca4b3d",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/weapon_trait_bespoke_combatsword_p2_increase_power_on_hit.md": "8a91ce19fccd176a00bf1a8d12067a81f957eaef3869742f28984970fc913e6e",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_hit.md": "0002041190de2c35c379d6d4acb5c2feee15032b9a6da0d99207d89e8f862cc4",
+      "Game Info/releases/1.13.X/blessings/entries/奪顱者/weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit.md": "7840ee75289cb26dd5bce77e3fd253fd2785b5d4be5cd4bac2543129f10eac71",
+      "Game Info/releases/1.13.X/blessings/entries/屠戮者/README.md": "f43149379bd8ecabbc115c28af8f4de882dc94d371dbe63f15b0e8dc81753c49",
+      "Game Info/releases/1.13.X/blessings/entries/屠戮者/SOURCE_INDEX.md": "c10c45a0390e0c13ecaee14d4b43a1b5a1fbe6ef38a2fb45c56b2786ca5fb944",
+      "Game Info/releases/1.13.X/blessings/entries/屠戮者/WEAPON_COMPATIBILITY.md": "117b5231d63b53437fbd043882a95ea263ddb2e6c29997178c6c90fb56581cd7",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/README.md": "81196f96802a7a2aaa4b0e3911ad91f31f1d3c7fa48c5003fbcedca40e0a6b7e",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/SOURCE_INDEX.md": "dc2c021a45ca80a7d6096f0632c14d14e8f132132b64612cdb907f11f1665493",
+      "Game Info/releases/1.13.X/blessings/entries/粉碎/WEAPON_COMPATIBILITY.md": "e72f04876a64ed2ba6d6dbc65b50521d36f28d3c34845518c8a23c4e300f0ada",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻攻勢/README.md": "82d965824f3049a2f97ace63897dae8485887fdc494dae5b4972e2e972ec4ce1",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻攻勢/SOURCE_INDEX.md": "01f83151aadad6aca982986e7c88959e1e84ce786b0d1af3dc8b9736d54905bd",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻攻勢/WEAPON_COMPATIBILITY.md": "e8c4560abb182dd30d84227b8f4a0e7eed69559c87a71d40ef6bbbc96a0b0f32",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "f4872cc2b86fe6cc0073723f8f0d9f251617ca8be2850dd815ec8c63e8b26ec2",
+      "Game Info/releases/1.13.X/blessings/README.md": "0b1713cc1cb0ea181561aadecad10142d21612557c3cfc076b7cb57cfd29bcf6",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "cb8aad5e90d397957b341f298f0bde105f97d067819b44276d8a7d1b7b56f5e4",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "388f03bd678346783da2a4d6d7acc3a1347ec5988f4e1eecaa35876eec70d687",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "e2a4c1dc81c058fe7560c82a83e2043e5dc95c9e97af714844674ef0764b7154",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "2b737cf1138e2b953f952b605b2a3b43703be669c7725b02faeb79e4388d9d43",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈斧/README.md": "5e16b20f78d1a1c039eeb72ee72c21a027417de08d72f0416894cb99b3b1440e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "96f18e12cccde80af1f0d7068cfe7df2c4ff16e46847aa0b952cf36d9edb5acd",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "4cd1f349979d42ac4e04132d828ecccb6c21de4595c9c78cafb27ce20e2845e7",
+      "Game Info/releases/1.13.X/blessings/weapons/README.md": "43394996778630232b0ff71c0acdad71cd008ec93e5bb6a0653e71578b930f86",
+      "Referneces/Translation.md": "3ae971167fb200c2aeb389f68d4359725d66e9b95a91dcbb746b2ec7e2b7d9e6"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/5b4b4b01-18ea-447d-99d6-e73dd2ebdcfd",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "headtaker",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_176",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_176.png",
+      "attachment": "https://github.com/user-attachments/assets/5b4b4b01-18ea-447d-99d6-e73dd2ebdcfd",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5982743792",
+      "acquired_date": "2026-10-05",
+      "sha256": "167e939c1bc499c9a7b7a3db989f0a1c174f76f4d3c565ff1dccef9a8a8462a5",
+      "content_type": "image/png",
+      "size": 7032,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "奪顱者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "主控目視原圖與公開下載原檔一致；中央同心圓及尖錐，外圈放射碎片。TEMP alpha診斷僅供目視，不改附件原圖。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 32,
+      "tables": 36,
+      "rows": 799,
+      "lists": 111,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 320,
+      "source_files": 115,
+      "bindings": 527,
+      "variants": 271,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 31,
+      "source_object_cache": {
+        "cache_hits": 115,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 34,
+      "local_references": 1043,
+      "remote_references": 834,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 19,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-index-recovery-repair-full-scan.json",
+        "sha256": "6c2d64a59a88437bed33517527330e8249c9f89eacc10d7ee83ef50f74a9f9b4",
+        "trigger": "headtaker-index-recovery-repair"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 79,
+    "not_started_name_groups": 79,
+    "partial_name_groups": 0,
+    "remaining_variants": 334,
+    "remaining_bindings": 658,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "31730132b9c280e3d65330f7204c4a79558545cffe3140b010672f3fa64c5245"
+  },
+  "previous_local_commit": "f50979530680ba51bf3ecff7cfb42ee7ef992342",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-curve-removal-review.json",
+      "sha256": "9491c72accdfe3e535d3d8640c62aa3e76d131f326b5f2f83b86b3861ce341c3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-focused-checks.json",
+      "sha256": "17273c5b1b89d17cdbd0bf2e868b28a68c018e12719cb7bb333353a333822f29"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-frozen-source-verification.json",
+      "sha256": "17f0861abfa943570be97930f59a325c5172d52b80cb479264514889bfc4d1a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-index-recovery-repair.json",
+      "sha256": "de91932891c79ede628b456b0b70b0ca5f5715ce356a229121e923738fd14968"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-own-tier-diff.json",
+      "sha256": "9170ce99513cea0b1d53a73f2e68ba452b2f94393044cfe9e19bce4d8c87af09"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-resume-review.json",
+      "sha256": "487903d5b7068e9cd406219f95a422a3dcbb9a015906a394e3d42103d56f445a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-stack-timer-diff.json",
+      "sha256": "264771ada17747f22d8bd8f75a81cdea13e19b6c3e5cd54388f792b67c6fa649"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-sticky-proc-review.json",
+      "sha256": "df56de67ca9cffda1b8f94df7b642ebd1eae2b971b898e1458cacdd3058fa92e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-traits-review.json",
+      "sha256": "05722516cf36aca6be9e1a280e0170f4ea3ba5a63e804ce839bcd5ce164fd5bf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-ui-delta-review.json",
+      "sha256": "cd936b2609db3de650fdd866a347680bf540704310198b291793595628d1a5d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-ui-raw-verification.json",
+      "sha256": "681b6c08f183d46b2eb104d1c800590f32cdb186ba60e81d1850f4c1fc861940"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-ui-review.json",
+      "sha256": "4d18fdfb0efcdbaf2d35518ea864d2c69ebc97995e3ef83ad107fc66c5af3902"
+    }
+  ],
+  "primary_review_method": "Difference-focused own6fulltiers/wrapper redirects; placeholder1/5effective stacks3.5sharedtimer and expiry5;9sticky profiles excluded; exact55actualspecialprofiles plusparentclosure;119fixedsource ranges and all current root receipts verified. Newly reconstructed14ranges of first-hit damage/queue/cache/ordered systems read and content-reviewed; missing historical58range addendum not claimed restored. Exact16UI/RAW/bindings and original176image receipt retained. No gameplay execution; FASTER unverified disabled.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-config.json",
+    "sha256": "784aa430fd2336fb43a4bccc32ed3bd2c49136d81eedc27ebe5f241518e08910"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "54d0f84abc0b317ea87676891254323bcf2ffe3d68220526dca9ba802046178c",
+    "draft.md": "db3866a455bc8aa67a47463525704b77f842dbccc165423675a78c9fff667087",
+    "evidence.json": "a936674b494d372d5ca20e1af098aa762410e9c61432c81742a9644c19ceb9de"
+  },
+  "previous_map_objects_unchanged": false,
+  "previous_weapon_ui_label_delta": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-primary-ui-delta-review.json",
+    "sha256": "cd936b2609db3de650fdd866a347680bf540704310198b291793595628d1a5d3",
+    "mechanisms_unchanged": true
+  },
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headtaker-formal-peer-scope.json",
+    "sha256": "d4e69a3adedf1457c842b3254e8544a4df0d7243b56f6de50b83e6cede503816",
+    "final_content_hashes_unchanged": true
+  }
+}

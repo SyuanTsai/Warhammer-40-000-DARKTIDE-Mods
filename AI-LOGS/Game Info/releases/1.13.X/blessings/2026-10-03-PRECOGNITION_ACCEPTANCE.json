@@ -1,0 +1,523 @@
+{
+  "date": "2026-10-04",
+  "blessing": "precognition",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/未卜先知/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus",
+    "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+    "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus",
+    "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus",
+    "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus"
+  ],
+  "added_binding_count": 13,
+  "total_variants": 6,
+  "total_bindings": 13,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": {
+      "entry_pages": [
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/DAMAGE_PERCENTAGE_REVIEW.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/LOCALIZATION_COMPARISON.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/README.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/TIER_VALUES.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/WEAPON_COMPATIBILITY.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus.md",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus.md"
+      ],
+      "related_artifacts": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-extension-draft.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-resume-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-ui-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-global-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-image.json",
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+        "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md"
+      ],
+      "counts": {
+        "formal_entry_pages": 12,
+        "variants": 6,
+        "weapon_bindings": 13,
+        "reverse_weapon_pages": 6,
+        "hashed_files": 26
+      }
+    },
+    "findings": [
+      "Formal player/evidence prose matches the verified dodge trigger, 2-second duration, Finesse-component scope, first activation/refresh, tier-specific values, switch/expiration behavior, and per-attack applicability; it does not claim a total-hit multiplier or increased crit chance.",
+      "The six weapon variants and thirteen actual mark bindings agree across the finalized map and extension draft. The six reverse weapon pages link their matching variant/mark, and the shared blessing index points to the finalized entry.",
+      "Tier values are .45/.50/.55/.60 for combatknife_p1, combatsword_p3, forcesword_2h_p1, and forcesword_p1; .30/.35/.40/.45 for dual_shivs_p1 and transonic_sword_transonic_knife_p1. Each has active_duration=2. The six localized formatters use the active weapon tier; LOCALIZATION_COMPARISON.md line 27 correctly records the RAW formatter result as 一致.",
+      "The reviewed examples separate the Finesse component from the unchanged base hit and compare the new modifier against existing same-stage bonus before/after. RAW-only description omissions are described as 文件未涵蓋, not a source contradiction.",
+      "The weapon-specific pages cover normal/charged/special damage, separate push and follow-up damage, force fling weakspot eligibility, wind attacks reading current player buffs per hit, and thrown-shiv launch-time stat-buff snapshots. Poison application layers are scoped to qualifying applications; tick damage is not attributed to this blessing.",
+      "Icon metadata remains distinct: icon identity/path is content/ui/textures/icons/traits/weapon_trait_182, while the attachment is the separate image URL in the image receipt. The formal pages do not claim gameplay testing or FASTER activation.",
+      "Validated 147 four-column source references, nine five-string rules, six string variant notes, six variants and thirteen bindings; local relative links resolve across the twelve entry pages, six reverse pages, and shared index."
+    ],
+    "resolved_findings": [
+      {
+        "file": "Game Info/releases/1.13.X/blessings/entries/未卜先知/LOCALIZATION_COMPARISON.md",
+        "line": 21,
+        "detail": "The duplicate full stop after 皆2秒 was removed. The finalized page, root config reconstruction, and extension-draft configuration now agree; the revised tier formatter row remains 一致."
+      }
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-config.json": "09601f7f449c1d4a2ba26fb60a2fc444b0c3b7ec1ac733ae918f7e18a611a391",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-extension-draft.json": "d2390e8062105b8e5a2f863f0c6101c97c6604feed3b731f13c79d4ee6061ebd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-image.json": "e3728b0adf5507e435497907b2e480ef1cefe233c5034ea55c3c15163164e2e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-global-review.json": "aa10e328ac5718f9ce021392a91eed729ddd180fc06ab8c62b28e6bcd3ee7d50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-resume-review.json": "750ff89a86cd501c1abcc33734c1e62042b0564624164a36642d363df7bc5611",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-ui-review.json": "eebd4806f133d96cd51a2b9f0ddbfb55502d75dc242c5d80b75758ee9c1b305a",
+      "Game Info/releases/1.13.X/blessings/README.md": "1dbb78392fa567d5eb09bbec8d824c3d681b9b70bf5a8a86518d72c54e27c33b",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6f50ce8dfad5976586d37a8034f7adb939214a53bf77eaf76dee4c5801c73dbb",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "892c37493efd0e2b50ec5f69196eebec4762a59e243787efe8f4386da37f66aa",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/DAMAGE_PERCENTAGE_REVIEW.md": "6187bb645294fea144a8cc22c8a65a96364cf2a123e2b108d59de1a72a367b1f",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/LOCALIZATION_COMPARISON.md": "d6e2e077b02d9dad18cfb8e91932173e36f06f6191e1dc3e9697abf83017f9c4",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/README.md": "00a6114cbeac254991eec7df3d3b82496c92cad1e753a515e09a2bbb79d3d5dc",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/SOURCE_INDEX.md": "784489510e54ef58839cf916945c586ab7415d2ebfb61ae82016cb07b6002347",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/TIER_VALUES.md": "07b14c9bb35f153fa378bdf480b7d12403552d4bb5cddb50b133372ff4747853",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/WEAPON_COMPATIBILITY.md": "b3986cfcce87dd567c1ed680530bf6d0757f341aa6153b88ea5d3c72ef3d39e2",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus.md": "ef57329d9aba589ea2e666fe0592e99386aa598d38ed06f9a7a5d71393d1bfd4",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus.md": "5a98df1de18e829959673ab369ae96bbeb1ab9a4ba512a3003377c0f8c548208",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus.md": "977d02d4444102092c0ad8a28ea92c097ecb6d5a39f9b69c82ab210d747cc6ed",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus.md": "1acfab38bfd6a6b9f664dc1f117757edd6cac995a49546083e434840087a0190",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus.md": "6a97516ba625fb2b3fb77d0dea7655f683290b6415624edd4cb66663bd757841",
+      "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus.md": "b19128ba1300a4db16e8169b874018a8058415a730df3fb6f245f8791454ddf4",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "0ff02959f15920041730ef16dbc67443d43c6851dd2943d80ff39abe01b34cf9",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "42b1e588bac80b8661bbfca5110b5c7fd781ef150092bf08d1d0ccaef2cb4b4e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "47fae7e513b117c93f7306b1cb5a7325eef257c6c099c82d6cefa00a29b8960c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "de503b3e54eb10bf8107c9b968dbce655d024ad79bc94f86f61772c7d59b8213",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "553a9828916b67284dbb8f181a41d2e6b4aab6b1f1deab009e7d815914b8db32",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "bacd6d232fe3dca332935742e6263ab713d3e030abeb04aac34cfcdbe8ec1c3b",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "f2076308436648a111a51e5d61a7b8687b2cca5a3ec2b0ce3e4178ae8910d97d"
+    },
+    "original_receipt_baseline": {
+      "receipt_sha256": "e2afb2fe971ab152b911282c7de5c64458bc120051f5f1c4fa3e9088735ed838",
+      "file_sha256": {
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-config.json": "96605ae9bc661bdefdcd7ab76798d442f3b794a2947f2252adf6e2ac2711e890",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-extension-draft.json": "8b834a43aac2a3bf2d2811ef50e841144921ab300053fc05444bc9f05d479eb6",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-image.json": "e3728b0adf5507e435497907b2e480ef1cefe233c5034ea55c3c15163164e2e3",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-global-review.json": "aa10e328ac5718f9ce021392a91eed729ddd180fc06ab8c62b28e6bcd3ee7d50",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-resume-review.json": "750ff89a86cd501c1abcc33734c1e62042b0564624164a36642d363df7bc5611",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-ui-review.json": "eebd4806f133d96cd51a2b9f0ddbfb55502d75dc242c5d80b75758ee9c1b305a",
+        "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6f50ce8dfad5976586d37a8034f7adb939214a53bf77eaf76dee4c5801c73dbb",
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "fd8ea799a6ba76e4202d53c53a0072d153d65130ee2c1bc738dbaff34612b7f4",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/DAMAGE_PERCENTAGE_REVIEW.md": "6187bb645294fea144a8cc22c8a65a96364cf2a123e2b108d59de1a72a367b1f",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/LOCALIZATION_COMPARISON.md": "d6e2e077b02d9dad18cfb8e91932173e36f06f6191e1dc3e9697abf83017f9c4",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/README.md": "00a6114cbeac254991eec7df3d3b82496c92cad1e753a515e09a2bbb79d3d5dc",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/SOURCE_INDEX.md": "784489510e54ef58839cf916945c586ab7415d2ebfb61ae82016cb07b6002347",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/TIER_VALUES.md": "07b14c9bb35f153fa378bdf480b7d12403552d4bb5cddb50b133372ff4747853",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/WEAPON_COMPATIBILITY.md": "b3986cfcce87dd567c1ed680530bf6d0757f341aa6153b88ea5d3c72ef3d39e2",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus.md": "ef57329d9aba589ea2e666fe0592e99386aa598d38ed06f9a7a5d71393d1bfd4",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus.md": "5a98df1de18e829959673ab369ae96bbeb1ab9a4ba512a3003377c0f8c548208",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus.md": "977d02d4444102092c0ad8a28ea92c097ecb6d5a39f9b69c82ab210d747cc6ed",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus.md": "1acfab38bfd6a6b9f664dc1f117757edd6cac995a49546083e434840087a0190",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus.md": "6a97516ba625fb2b3fb77d0dea7655f683290b6415624edd4cb66663bd757841",
+        "Game Info/releases/1.13.X/blessings/entries/未卜先知/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus.md": "b19128ba1300a4db16e8169b874018a8058415a730df3fb6f245f8791454ddf4",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "42b1e588bac80b8661bbfca5110b5c7fd781ef150092bf08d1d0ccaef2cb4b4e",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "47fae7e513b117c93f7306b1cb5a7325eef257c6c099c82d6cefa00a29b8960c",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "de503b3e54eb10bf8107c9b968dbce655d024ad79bc94f86f61772c7d59b8213",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "553a9828916b67284dbb8f181a41d2e6b4aab6b1f1deab009e7d815914b8db32",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "bacd6d232fe3dca332935742e6263ab713d3e030abeb04aac34cfcdbe8ec1c3b",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "f2076308436648a111a51e5d61a7b8687b2cca5a3ec2b0ce3e4178ae8910d97d"
+      }
+    },
+    "summary_delta_review": {
+      "accepted": true,
+      "changed_scope_files": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-extension-draft.json",
+        "Game Info/releases/1.13.X/blessings/README.md",
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+        "Game Info/releases/1.13.X/blessings/melee/README.md"
+      ],
+      "summary_text": "成功閃避後，2秒內提高暴擊或弱點命中的靈巧額外傷害：戰刃、決鬥劍、烈焰力場巨劍與烈焰力場劍 I–IV 為45／50／55／60%；短刀與穿音速雙刀為30／35／40／45%。",
+      "conclusion": "The summary now states the successful-dodge trigger, 2-second window, qualifying crit/weakspot Finesse-component scope, all four .45/.50/.55/.60 weapon families, and the .30/.35/.40/.45 Dual Shivs and Transonic families. The exact wording matches the already accepted detailed effect and adds no new mechanism claim.",
+      "checks": {
+        "config_effect_matches": true,
+        "extension_draft_effect_matches": true,
+        "map_blessing_effect_matches": true,
+        "both_directory_summary_rows_match": true,
+        "previously_hashed_other_files_unchanged": true,
+        "updated_hash_count": 28
+      }
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "precognition",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_182",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_182.png",
+      "attachment": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5974352170",
+      "acquired_date": "2026-10-04",
+      "sha256": "5acfb82e1bcec84495138e66b194ae5a4c05f6b0497bf6393916b2b3222c1b6a",
+      "content_type": "image/png",
+      "size": 5790,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "未卜先知祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Primary visually inspected original and publicly downloaded PNG side by side: same white nearly-square tapered/corner-cut form with subtle gray gradient, transparent background; no substitution or edit."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 24,
+      "tables": 21,
+      "rows": 390,
+      "lists": 107,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 158,
+      "source_files": 54,
+      "bindings": 371,
+      "variants": 193,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 21,
+      "source_object_cache": {
+        "cache_hits": 54,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 24,
+      "local_references": 622,
+      "remote_references": 470,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 7,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-006-full-scan.json",
+        "sha256": "8505ff10afb71662367b9647383133573da8608b07a168914853cf206a3e0506",
+        "trigger": "round-006"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "old_accepted_map_objects_unchanged": true
+  },
+  "remaining_counts": {
+    "name_groups": 116,
+    "not_started_name_groups": 116,
+    "partial_name_groups": 0,
+    "remaining_variants": 412,
+    "remaining_bindings": 814,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "0771b59fb8788cee090c94b39af62247188c30bbc99d7f3901720a5025a683b3"
+  },
+  "previous_local_commit": "861b87660d4c638bd4e444fff0a9db8a45d3cd11",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_variant_count": 6,
+    "own_binding_count": 13,
+    "scope": "All own tiers/wrappers and same-SHA generic Finesse consumer applicability, projectile snapshot vs wind current buffs, push/followup differences",
+    "primary_receipt": "precognition-primary-resume-review.json",
+    "relative_whole_hit_examples_verified": true,
+    "same_stage_existing_bonus_before_after_verified": true,
+    "raw_pair_formatter_verified": true,
+    "no_false_erratum": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-extension-draft.json",
+      "sha256": "d2390e8062105b8e5a2f863f0c6101c97c6604feed3b731f13c79d4ee6061ebd"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 13,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-ui-review.json",
+      "sha256": "eebd4806f133d96cd51a2b9f0ddbfb55502d75dc242c5d80b75758ee9c1b305a"
+    },
+    "bindings": [
+      {
+        "weapon_id": "combatknife_p1",
+        "mark_id": "combatknife_p1_m1",
+        "trait_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1434,
+        "append_line": 1436,
+        "name_zh_tw": "戰刃 卡塔昌 Mk III",
+        "name_en": "Combat Blade Catachan Mk III",
+        "loc_ids": [
+          "loc_weapon_family_combatknife_p1_m1",
+          "loc_weapon_pattern_combatknife_p1_m1",
+          "loc_weapon_mark_combatknife_p1_m1"
+        ]
+      },
+      {
+        "weapon_id": "combatknife_p1",
+        "mark_id": "combatknife_p1_m2",
+        "trait_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1524,
+        "append_line": 1526,
+        "name_zh_tw": "戰刃 卡塔昌 Mk VI",
+        "name_en": "Combat Blade Catachan Mk VI",
+        "loc_ids": [
+          "loc_weapon_family_combatknife_p1_m2",
+          "loc_weapon_pattern_combatknife_p1_m2",
+          "loc_weapon_mark_combatknife_p1_m2"
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m1",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1688,
+        "append_line": 1690,
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk II",
+        "name_en": "Duelling Sword Maccabian Mk II",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m1",
+          "loc_weapon_pattern_combatsword_p3_m1",
+          "loc_weapon_mark_combatsword_p3_m1"
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1499,
+        "append_line": 1501,
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk IV",
+        "name_en": "Duelling Sword Maccabian Mk IV",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m2",
+          "loc_weapon_pattern_combatsword_p3_m2",
+          "loc_weapon_mark_combatsword_p3_m2"
+        ]
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m3",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "ukeys_line": 1473,
+        "append_line": 1475,
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk V",
+        "name_en": "Duelling Sword Maccabian Mk V",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m3",
+          "loc_weapon_pattern_combatsword_p3_m3",
+          "loc_weapon_mark_combatsword_p3_m3"
+        ]
+      },
+      {
+        "weapon_id": "dual_shivs_p1",
+        "mark_id": "dual_shivs_p1_m1",
+        "trait_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1500,
+        "append_line": 1502,
+        "name_zh_tw": "短刀 臨時拼湊 型號1",
+        "name_en": "Shivs Improvised Mk I",
+        "loc_ids": [
+          "loc_weapon_family_dual_shivs_p1_m1",
+          "loc_weapon_pattern_dual_shivs_p1_m1",
+          "loc_weapon_mark_dual_shivs_p1_m1"
+        ]
+      },
+      {
+        "weapon_id": "dual_shivs_p1",
+        "mark_id": "dual_shivs_p1_m2",
+        "trait_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "ukeys_line": 1579,
+        "append_line": 1581,
+        "name_zh_tw": "短刀 臨時拼湊 型號3",
+        "name_en": "Shivs Improvised Mk III",
+        "loc_ids": [
+          "loc_weapon_family_dual_shivs_p1_m2",
+          "loc_weapon_pattern_dual_shivs_p1_m2",
+          "loc_weapon_mark_dual_shivs_p1_m2"
+        ]
+      },
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "mark_id": "forcesword_2h_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 2795,
+        "append_line": 2797,
+        "name_zh_tw": "烈焰力場巨劍 誓約 Mk VI",
+        "name_en": "Blaze Force Greatsword Covenant Mk VI",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_2h_p1_m1",
+          "loc_weapon_pattern_forcesword_2h_p1_m1",
+          "loc_weapon_mark_forcesword_2h_p1_m1"
+        ]
+      },
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "mark_id": "forcesword_2h_p1_m2",
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 2710,
+        "append_line": 2712,
+        "name_zh_tw": "烈焰力場巨劍 誓約 Mk VIII",
+        "name_en": "Blaze Force Greatsword Covenant Mk VIII",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_2h_p1_m2",
+          "loc_weapon_pattern_forcesword_2h_p1_m2",
+          "loc_weapon_mark_forcesword_2h_p1_m2"
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "mark_id": "forcesword_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1745,
+        "append_line": 1747,
+        "name_zh_tw": "烈焰力場劍 朦朧 Mk II",
+        "name_en": "Blaze Force Sword Obscurus Mk II",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_p1_m1",
+          "loc_weapon_pattern_forcesword_p1_m1",
+          "loc_weapon_mark_forcesword_p1_m1"
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "mark_id": "forcesword_p1_m2",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1671,
+        "append_line": 1673,
+        "name_zh_tw": "烈焰力場劍 戴莫斯 Mk IV",
+        "name_en": "Blaze Force Sword Deimos Mk IV",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_p1_m2",
+          "loc_weapon_pattern_forcesword_p1_m2",
+          "loc_weapon_mark_forcesword_p1_m2"
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "mark_id": "forcesword_p1_m3",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 1539,
+        "append_line": 1541,
+        "name_zh_tw": "烈焰力場劍 伊利斯 Mk V",
+        "name_en": "Blaze Force Sword Illisi Mk V",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_p1_m3",
+          "loc_weapon_pattern_forcesword_p1_m3",
+          "loc_weapon_mark_forcesword_p1_m3"
+        ]
+      },
+      {
+        "weapon_id": "transonic_sword_transonic_knife_p1",
+        "mark_id": "transonic_sword_transonic_knife_p1_m1",
+        "trait_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus",
+        "template_file": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 3177,
+        "append_line": 3179,
+        "name_zh_tw": "穿音速雙刀 布蘭克斯 Mk XI",
+        "name_en": "Paired Transonic Blades Branx Mk XI",
+        "loc_ids": [
+          "loc_weapon_family_transonic_sword_transonic_knife_p1_m1",
+          "loc_weapon_pattern_transonic_sword_transonic_knife_p1_m1",
+          "loc_weapon_mark_transonic_sword_transonic_knife_p1_m1"
+        ]
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "status": "exact name-key intersection verified",
+    "name_key": "loc_trait_bespoke_dodge_grants_finesse_bonus",
+    "variant_count": 6,
+    "binding_count": 13,
+    "variant_ids": [
+      "weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus",
+      "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+      "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus",
+      "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus",
+      "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+      "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus"
+    ],
+    "weapon_ids": [
+      "combatknife_p1",
+      "combatsword_p3",
+      "dual_shivs_p1",
+      "forcesword_2h_p1",
+      "forcesword_p1",
+      "transonic_sword_transonic_knife_p1"
+    ],
+    "exclusion_rule": "Only exact name-key variants and their exact inventory mark bindings are included."
+  },
+  "primary_detailed_reviews": {
+    "precognition-primary-resume-review.json": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-resume-review.json",
+      "sha256": "750ff89a86cd501c1abcc33734c1e62042b0564624164a36642d363df7bc5611"
+    },
+    "precognition-primary-own-tier-diff.json": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-own-tier-diff.json",
+      "sha256": "738c8634e34c157e4ac2eef6b26991f785304f86dae02e6e02b6e05104b286e2"
+    },
+    "precognition-primary-global-review.json": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/precognition-primary-global-review.json",
+      "sha256": "aa10e328ac5718f9ce021392a91eed729ddd180fc06ab8c62b28e6bcd3ee7d50"
+    }
+  },
+  "primary_review_method": "Own six complete tiers/wrappers, exact13 bindings, same-hash RAW and formatter; same-SHA common mechanisms reused after applicability review. New projectile impact/snapshot getter, wind current-stat, actual push/profile and followup differences, whole-hit/extra-damage and existing-bonus examples independently reviewed."
+}

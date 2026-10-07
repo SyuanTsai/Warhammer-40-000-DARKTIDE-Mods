@@ -1,5 +1,7 @@
 # 精確瞄準(True Aim)：原始碼依據
 
+[English](en/psyker_guaranteed_crit_on_multiple_weakspot_hits.md)
+
 [返回玩家說明](README.md#psyker_guaranteed_crit_on_multiple_weakspot_hits)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_guaranteed_crit_on_multiple_weakspot_hits)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
