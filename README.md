@@ -841,6 +841,13 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 檔案名稱：HavocPeek 1228 1 2026-08-26T13-05Z pRus3Ro4C
 - 手動維護最後下載日期：2026-09-07
 
+### [FpsDoctor_LuaMemoryCleaner](https://www.nexusmods.com/warhammer40kdarktide/mods/932)
+    效能監控與記憶體清理
+- MOD 網站最後更新日期：Last updated 26 August 2026, 9:05PM
+- MOD 版本：9
+- MOD 檔案名稱：HavocPeek 1228 1 2026-08-26T13-05Z pRus3Ro4C
+- 手動維護最後下載日期：2026-10-07
+
 ---
 # 遊戲內操作相關MOD
 
