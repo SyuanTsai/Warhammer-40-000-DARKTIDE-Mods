@@ -16,6 +16,7 @@ table.unpack = table.unpack or unpack
 local persistent_yellow_rings = {}
 local known_crushers = {}
 local pending_cleave_indicators = {}
+local pending_persistent_rings = {}
 
 local crusher_attack_states = {}
 
@@ -84,7 +85,7 @@ local function get_attack_color()
 end
 
 local function is_enabled()
-    return get_setting("enabled")
+    return mod:is_enabled() and get_setting("enabled")
 end
 
 local function show_persistent_yellow()
@@ -93,6 +94,29 @@ end
 
 local function clear_settings_cache()
     table.clear(settings_cache)
+end
+
+local function is_world_valid(world)
+    if not world then
+        return false
+    end
+
+    local world_manager = Managers and Managers.world
+    if not world_manager or not world_manager.world_name or not world_manager.has_world then
+        return false
+    end
+
+    local world_name = world_manager:world_name(world)
+    return world_name ~= nil and world_manager:has_world(world_name)
+end
+
+local function destroy_owned_decal(decal)
+    if not decal or not is_world_valid(decal.world) or not Unit.alive(decal.unit) then
+        return
+    end
+
+    World.unlink_unit(decal.world, decal.unit, true)
+    World.destroy_unit(decal.world, decal.unit)
 end
 
 local function is_crusher_unit(unit)
@@ -107,7 +131,7 @@ local function is_crusher_unit(unit)
 end
 
 local function create_cleave_indicator(unit, world, color_type)
-    if not Managers or not Managers.package then
+    if not Managers or not Managers.package or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) then
         return nil
     end
     
@@ -156,20 +180,31 @@ local function create_cleave_indicator(unit, world, color_type)
 end
 
 local function attempt_create_cleave_indicator(unit, world, color_type)
+    if not Managers or not Managers.package or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) then
+        pending_cleave_indicators[unit] = nil
+        return nil
+    end
+
     if not Managers.package:has_loaded(package_path) then
-        pending_cleave_indicators[unit] = {
+        local pending = {
             unit = unit,
             world = world,
             color_type = color_type,
             attempt_time = get_gameplay_time()
         }
+        pending_cleave_indicators[unit] = pending
         
         Managers.package:load(package_path, "crusher_attack_indicator", function()
-            local pending = pending_cleave_indicators[unit]
-            if pending then
-                create_cleave_indicator(pending.unit, pending.world, pending.color_type)
-                pending_cleave_indicators[unit] = nil
+            if pending_cleave_indicators[unit] ~= pending then
+                return
             end
+
+            pending_cleave_indicators[unit] = nil
+            if get_gameplay_time() - pending.attempt_time > 5.0 or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) then
+                return
+            end
+
+            create_cleave_indicator(unit, world, color_type)
         end)
         return nil
     else
@@ -180,25 +215,21 @@ end
 local function destroy_cleave_indicator(unit)
     local decal = decals[unit]
     if decal then
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
+        destroy_owned_decal(decal)
         decals[unit] = nil
     end
     pending_cleave_indicators[unit] = nil
 end
 
 local function get_persistent_ring(unit, world)
-    if not Managers or not Managers.package then
+    if not Managers or not Managers.package or not is_enabled() or not show_persistent_yellow() or not Unit.alive(unit) or not is_world_valid(world) then
         return nil
     end
     
     local decal = persistent_yellow_rings[unit]
     
-    if decal and (not Unit.alive(decal.unit) or not Unit.alive(unit)) then
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
+    if decal and (not Unit.alive(decal.unit) or not Unit.alive(unit) or not is_world_valid(decal.world)) then
+        destroy_owned_decal(decal)
         persistent_yellow_rings[unit] = nil
         decal = nil
     end
@@ -207,9 +238,28 @@ local function get_persistent_ring(unit, world)
     
     if should_show and decal == nil then
         if not Managers.package:has_loaded(package_path) then
-            Managers.package:load(package_path, "crusher_attack_indicator", function()
-                get_persistent_ring(unit, world)
-            end)
+            local pending = pending_persistent_rings[unit]
+            if not pending or pending.world ~= world then
+                pending = {
+                    unit = unit,
+                    world = world,
+                    attempt_time = get_gameplay_time()
+                }
+                pending_persistent_rings[unit] = pending
+
+                Managers.package:load(package_path, "crusher_attack_indicator", function()
+                    if pending_persistent_rings[unit] ~= pending then
+                        return
+                    end
+
+                    pending_persistent_rings[unit] = nil
+                    if get_gameplay_time() - pending.attempt_time > 5.0 or not is_enabled() or not show_persistent_yellow() or not Unit.alive(unit) or not is_world_valid(world) then
+                        return
+                    end
+
+                    get_persistent_ring(unit, world)
+                end)
+            end
             return nil
         end
 
@@ -218,8 +268,13 @@ local function get_persistent_ring(unit, world)
             return nil
         end
 
+        local decal_unit = World.spawn_unit_ex(world, decal_path, nil, unit_position)
+        if not Unit.alive(decal_unit) then
+            return nil
+        end
+
         decal = {
-            unit = World.spawn_unit_ex(world, decal_path, nil, unit_position),
+            unit = decal_unit,
             parent_unit = unit,
             radius = get_setting("ring_radius") or 4.0,
             show = should_show,
@@ -254,7 +309,7 @@ local function get_persistent_ring(unit, world)
 end
 
 local function show_persistent_ring(unit, world)
-    if not show_persistent_yellow() then
+    if not is_enabled() or not show_persistent_yellow() then
         return
     end
     
@@ -267,10 +322,41 @@ end
 
 local function hide_persistent_ring(unit)
     local decal = persistent_yellow_rings[unit]
-    if decal and Unit.alive(decal.unit) then
+    if decal and is_world_valid(decal.world) and Unit.alive(decal.unit) then
         decal.active = false
         Unit.set_scalar_for_material(decal.unit, "projector", "color_multiplier", 0)
     end
+end
+
+local function destroy_persistent_ring(unit)
+    local decal = persistent_yellow_rings[unit]
+    if decal then
+        destroy_owned_decal(decal)
+        persistent_yellow_rings[unit] = nil
+    end
+    pending_persistent_rings[unit] = nil
+end
+
+local function cleanup_unit(unit)
+    destroy_cleave_indicator(unit)
+    destroy_persistent_ring(unit)
+    known_crushers[unit] = nil
+    crusher_attack_states[unit] = nil
+end
+
+local function cleanup_all()
+    for _, decal in pairs(decals) do
+        destroy_owned_decal(decal)
+    end
+    for _, decal in pairs(persistent_yellow_rings) do
+        destroy_owned_decal(decal)
+    end
+    table.clear(decals)
+    table.clear(persistent_yellow_rings)
+    table.clear(pending_cleave_indicators)
+    table.clear(pending_persistent_rings)
+    table.clear(crusher_attack_states)
+    table.clear(known_crushers)
 end
 
 function mod:on_crusher_sound(sound_name, unit_or_position)
@@ -344,7 +430,7 @@ function mod:on_crusher_sound(sound_name, unit_or_position)
 end
 
 function mod.find_nearby_crushers()
-    if not Managers.state or not Managers.state.side then
+    if not is_enabled() or not Managers or not Managers.state or not Managers.state.side then
         return
     end
     
@@ -371,20 +457,29 @@ function mod.find_nearby_crushers()
 end
 
 function mod.update(dt)
-    if not Managers or not Managers.time then
+    if not is_enabled() or not Managers or not Managers.time then
         return
     end
     
     local current_time = get_gameplay_time()
     
     for unit, pending in pairs(pending_cleave_indicators) do
-        if current_time - pending.attempt_time > 5.0 or not Unit.alive(unit) then
+        if current_time - pending.attempt_time > 5.0 or not Unit.alive(unit) or not is_world_valid(pending.world) then
             pending_cleave_indicators[unit] = nil
+        end
+    end
+
+    for unit, pending in pairs(pending_persistent_rings) do
+        if current_time - pending.attempt_time > 5.0 or not Unit.alive(unit) or not is_world_valid(pending.world) then
+            pending_persistent_rings[unit] = nil
         end
     end
     
     for unit, decal in pairs(decals) do
-        if decal and decal.is_cleave and Unit.alive(decal.unit) then
+        if decal and (not Unit.alive(unit) or not Unit.alive(decal.unit) or not is_world_valid(decal.world)) then
+            destroy_cleave_indicator(unit)
+            crusher_attack_states[unit] = "idle"
+        elseif decal and decal.is_cleave then
             if decal.color_type == "warning" then
                 if current_time - decal.spawn_time > 3.0 then
                     destroy_cleave_indicator(unit)
@@ -405,14 +500,7 @@ function mod.update(dt)
     
     for unit, last_seen in pairs(known_crushers) do
         if current_time - last_seen > 15.0 or not Unit.alive(unit) then
-            known_crushers[unit] = nil
-            crusher_attack_states[unit] = nil
-            destroy_cleave_indicator(unit)
-            local decal = persistent_yellow_rings[unit]
-            if decal and Unit.alive(decal.unit) then
-                World.destroy_unit(decal.world, decal.unit)
-            end
-            persistent_yellow_rings[unit] = nil
+            cleanup_unit(unit)
         end
     end
     
@@ -461,13 +549,12 @@ mod.on_setting_changed = function(setting_id)
     settings_cache[setting_id] = new_val
     
     if setting_id == "persistent_yellow" and not new_val then
-        for unit, decal in pairs(persistent_yellow_rings) do
-            if Unit.alive(decal.unit) then
-                World.destroy_unit(decal.world, decal.unit)
-            end
+        for unit in pairs(persistent_yellow_rings) do
+            destroy_persistent_ring(unit)
         end
         table.clear(persistent_yellow_rings)
-    elseif setting_id == "persistent_yellow" and new_val then
+        table.clear(pending_persistent_rings)
+    elseif setting_id == "persistent_yellow" and new_val and is_enabled() then
         for unit, _ in pairs(known_crushers) do
             if Unit.alive(unit) and not decals[unit] and crusher_attack_states[unit] == "idle" then
                 local world = Unit.world(unit)
@@ -475,14 +562,7 @@ mod.on_setting_changed = function(setting_id)
             end
         end
     elseif setting_id == "enabled" and not new_val then
-        for unit, decal in pairs(decals) do
-            if Unit.alive(decal.unit) then
-                World.destroy_unit(decal.world, decal.unit)
-            end
-        end
-        table.clear(decals)
-        table.clear(pending_cleave_indicators)
-        table.clear(crusher_attack_states)
+        cleanup_all()
     end
 end
 
@@ -491,66 +571,31 @@ mod.on_enabled = function(_)
 end
 
 mod.on_disabled = function(_)
-    for unit, decal in pairs(decals) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-    end
-    for unit, decal in pairs(persistent_yellow_rings) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-    end
-    table.clear(decals)
-    table.clear(persistent_yellow_rings)
-    table.clear(pending_cleave_indicators)
-    table.clear(crusher_attack_states)
-    table.clear(known_crushers)
+    cleanup_all()
 end
 
 mod:hook_safe("HealthExtension", "kill", function(self)
-    local unit = self._unit
-    destroy_cleave_indicator(unit)
-    known_crushers[unit] = nil
-    crusher_attack_states[unit] = nil
-    local decal = persistent_yellow_rings[unit]
-    if decal and Unit.alive(decal.unit) then
-        World.destroy_unit(decal.world, decal.unit)
-    end
-    persistent_yellow_rings[unit] = nil
+    cleanup_unit(self._unit)
 end)
 
 mod:hook_safe("MinionDeathManager", "set_dead", function(_, unit)
-    destroy_cleave_indicator(unit)
-    known_crushers[unit] = nil
-    crusher_attack_states[unit] = nil
-    local decal = persistent_yellow_rings[unit]
-    if decal and Unit.alive(decal.unit) then
-        World.destroy_unit(decal.world, decal.unit)
-    end
-    persistent_yellow_rings[unit] = nil
+    cleanup_unit(unit)
 end)
 
 mod:hook_safe("UIManager", "cb_on_game_state_change", function()
-    for unit, decal in pairs(decals) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
+    cleanup_all()
+end)
+
+mod:hook("UnitSpawnerManager", "_world_delete_units", function(previous_hook, self, units_list, num_units)
+    for i = 1, num_units do
+        cleanup_unit(units_list[i])
     end
-    for unit, decal in pairs(persistent_yellow_rings) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-    end
-    table.clear(decals)
-    table.clear(persistent_yellow_rings)
-    table.clear(pending_cleave_indicators)
-    table.clear(crusher_attack_states)
-    table.clear(known_crushers)
+
+    return previous_hook(self, units_list, num_units)
 end)
 
 mod:hook_safe("HealthExtension", "init", function(_, extension_init_context, unit)
-    if is_crusher_unit(unit) then
+    if is_enabled() and is_crusher_unit(unit) then
         known_crushers[unit] = get_gameplay_time()
         
         if show_persistent_yellow() then
