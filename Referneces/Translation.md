@@ -757,12 +757,15 @@
 - Penetration of the Soul - 靈魂穿透
 - Crystalline Will - 結晶意志
 - Warp Ghost - 亞空間幽魂
-- Tranquility Through Slaughter - 殺無赦，心祥和（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Surety of Arms - 武器在手，信心我有。
 - Focused Warp - 聚焦次元（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_warp_damage`；名稱 hash `32fd96aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md)）
 - Peril Equilibrium - 危險平衡（1.13.1 遊戲繁中名稱；1.13新增；`psyker_weapon_attacks_peril_equilibrium`；名稱 hash `63ed565b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md)）
 - Psykinetic Grip - 念力之握（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_blitz_damage`；名稱 hash `4ac15b0d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_blitz_damage.md)）
 - Perils of the Warp - 次元危險（1.13.1 遊戲繁中名稱；盤點補缺；`psyker_peril_passive`；名稱 hash `dafbc14a`；[來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2606)）
+
+##### 一般天賦(過時)
+
+- Tranquility Through Slaughter - 殺無赦，心祥和（過時：1.13 移除；保留歷史譯名）
 
 ### Ogryn - 歐格林
 
@@ -951,7 +954,6 @@
 - Holy Revenant - 吊命聖徒
 - Thy Wrath be Swift - 勃然大怒
 - Desperation - 背水一戰
-- Punishment - 懲罰（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Against the Odds - 逆境而上
 - Shield of Contempt - 輕蔑之盾
 - Unseen Blade - 無形之刃
@@ -959,12 +961,10 @@
 - Faithful Frenzy - 信仰狂亂
 - Providence - 神恩庇護
 - Good Balance - 四平八穩
-- Impassible - 不可逾越（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Retaliatory Defence - 反制護盾
 - Abolish Blasphemers - 弒除瀆者
 - The Master's Retribution - 大師的反擊
 - Dance of Death - 死亡之舞
-- Grievous Wounds - 重傷（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Scourge - 天災
 - Enduring Faith - 堅韌信仰
 - Punish Impiety - 褻瀆必懲
@@ -984,6 +984,12 @@
 - Holy Tools - 神聖工具（1.13.1 遊戲繁中名稱；1.13新增；`zealot_weapon_special_damage`；名稱 hash `af1ee73d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_weapon_special_damage.md)）
 - Got Your Back - 為您撐腰（1.13.1 遊戲繁中名稱；1.13新增；`zealot_melee_kills_restore_toughness_to_target`；名稱 hash `28db6608`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_kills_restore_toughness_to_target.md)）
 - Purifying Hatred - 淨化仇恨（1.13.1 遊戲繁中名稱；1.13新增；`zealot_dmg_vs_burning_electrocuted`；名稱 hash `9b5165a8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_dmg_vs_burning_electrocuted.md)）
+
+##### 一般天賦(過時)
+
+- Punishment - 懲罰（過時：1.13 移除；保留歷史譯名）
+- Impassible - 不可逾越（過時：1.13 移除；保留歷史譯名）
+- Grievous Wounds - 重傷（過時：1.13 移除；保留歷史譯名）
 
 ### Veteran - 老兵
 
@@ -1718,7 +1724,6 @@
 - Restoration Protocol - 修復協定
 - Writ of Ammunition Enumeration - 彈藥盤點之旨
 - Calculated Priority - 精算順序
-- Readiness Doctrines - 備戰教條（過時：1.13 已移除獨立子節點；效果整合至 Advanced Combat Doctrines）
 - Piercing Sight - 洞察之眼
 - Capacitor Reclamation Loop - 電容回收迴路
 - Augmented Power-Cycle - 強化能量循環
@@ -1797,6 +1802,10 @@
 - Hydraulic Impact - 液壓衝擊
 - Motive Engine - 動力引擎（1.13.1 遊戲繁中名稱；盤點補缺；`cryptic_passive_cooldown_regen`；名稱 hash `f57f4b1c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md)）
 
+##### 一般天賦(過時)
+
+- Readiness Doctrines - 備戰教條（過時：1.13 已移除獨立子節點；效果整合至 Advanced Combat Doctrines）
+
 ##### 敵人 / 單位
 
 - Dreg Vanguard - 渣滓先鋒
@@ -1828,16 +1837,21 @@
 
 ### 天賦相關 (小型節點)
 
-- Peril Resistance - 反噬抗性（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
+##### 一般天賦
+
 - Melee Damage Boost - 近戰增幅
-- Movement Speed Boost - 移動速度增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Reload Boost - 換彈速度增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Rending Boost - 撕裂增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Stamina Boost - 耐力增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Stamina Regeneration Boost - 耐力恢復增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Suppression Boost - 壓制增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
 - Toughness Boost - 韌性增幅
 - Toughness Damage Reduction - 韌性減傷
+
+##### 一般天賦(過時)
+
+- Peril Resistance - 反噬抗性（過時：1.13 移除；保留歷史譯名）
+- Movement Speed Boost - 移動速度增幅（過時：1.13 移除；保留歷史譯名）
+- Reload Boost - 換彈速度增幅（過時：1.13 移除；保留歷史譯名）
+- Rending Boost - 撕裂增幅（過時：1.13 移除；保留歷史譯名）
+- Stamina Boost - 耐力增幅（過時：1.13 移除；保留歷史譯名）
+- Stamina Regeneration Boost - 耐力恢復增幅（過時：1.13 移除；保留歷史譯名）
+- Suppression Boost - 壓制增幅（過時：1.13 移除；保留歷史譯名）
 
 ### 職業核心詞
 
