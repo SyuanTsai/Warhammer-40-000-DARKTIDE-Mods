@@ -4,7 +4,7 @@
 
 ## 正式方向與基準
 
-[Jira SYP-273](https://syuantsai.atlassian.net/browse/SYP-273) 是 SYP-271 的後續改善單，Epic SYP-274、SYP Sprint 9（108）。保留第一階段紀錄。第一階段基準 `0c565dc4b0ac4b91e99a641e4af855b5530cd5f0`；遊戲來源 `7e662fcda16219d775b84af50322be2e9cd9d62e`，commit 訊息為 Version 1.13.1。本單使用獨立 managed worktree 與 `codex/syp-273-aupm-phase2`，未修復或修改舊 SYP-271 worktree。
+[Jira SYP-273](https://syuantsai.atlassian.net/browse/SYP-273) 是 SYP-271 的後續改善單，Epic SYP-274、SYP Sprint 9（108）。保留第一階段紀錄。第一階段基準 `0c565dc4b0ac4b91e99a641e4af855b5530cd5f0`；遊戲來源 `7e662fcda16219d775b84af50322be2e9cd9d62e`，commit 訊息為 Version 1.13.1。本單使用獨立 managed worktree 與 `FIX/AUPM-Phase2-20261007`，未修復或修改舊 SYP-271 worktree。
 
 規劃與最終 production 變更：先用有效 `self._player` 降低逐幀 owner／pcall 查詢，失配時保留既有備援；每幀 charge／cooldown 與公開顯示合約不變。只在重現父面板短暫隱藏後未立即刷新時，加兩個子面板的 visibility hooks 失效呈現狀態。未新增永久 unit、identity、game-mode 或 cooldown 快取，也未重寫原有 throttle。
 
