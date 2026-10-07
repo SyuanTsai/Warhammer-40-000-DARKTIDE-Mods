@@ -841,6 +841,24 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 檔案名稱：HavocPeek 1228 1 2026-08-26T13-05Z pRus3Ro4C
 - 手動維護最後下載日期：2026-09-07
 
+### [FpsDoctor_LuaMemoryCleaner](https://www.nexusmods.com/warhammer40kdarktide/mods/932)
+    效能監控與記憶體清理
+- MOD 網站最後更新日期：Last updated 23 August 2026, 11:33PM（Nexus 頁面顯示；UTC：2026-08-23T23:33:54Z；Asia/Taipei：2026-08-24 07:33:54）
+- MOD 版本：9（Nexus Main file 版本；ZIP 內 FpsDoctor.mod 版本：1.6.5）
+- MOD 檔案名稱：FpsDoctor(FreezeFixesMemOptionsNewDmfFix) 932 9 2026-08-23T23-33Z mz1PFzZKs.zip
+- 手動維護最後下載日期：2026-10-07
+- Nexus MOD ID: 932
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/932
+- Nexus page version: 9
+- Nexus last updated: 2026-08-23T23:33:54Z
+- Main file ID: 7722
+- Main file version: 9
+- Main file uploaded at UTC: 2026-08-23T23:33:54Z
+- Archive filename: FpsDoctor(FreezeFixesMemOptionsNewDmfFix) 932 9 2026-08-23T23-33Z mz1PFzZKs.zip
+- Archive size bytes: 73052
+- Archive SHA-256: 7a7381cf0dbce5a9ace156a67a9fca022d3cfda5d6858a06ae412c502868938f
+- Acquisition method: manual-queue
+
 ---
 # 遊戲內操作相關MOD
 
