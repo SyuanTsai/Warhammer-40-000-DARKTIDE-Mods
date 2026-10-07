@@ -38,6 +38,7 @@ HudElementRKPM = class("HudElementRKPM", "HudElementBase")
 
 function HudElementRKPM:init(parent, draw_layer, start_scale)
   	HudElementRKPM.super.init(self, parent, draw_layer, start_scale, definitions)
+	mod.kpm_invalidate_display()
 	if Managers and Managers.state and Managers.state.game_mode then
 		local game_mode_name = Managers.state.game_mode:game_mode_name()
 		self.is_in_hub = game_mode_name == "hub"
@@ -46,39 +47,17 @@ end
 
 HudElementRKPM.update = function(self, dt, t, ui_renderer, render_settings, input_service)
 	HudElementRKPM.super.update(self, dt, t, ui_renderer, render_settings, input_service)
-	if Managers and Managers.state and Managers.state.game_mode then
-		local game_mode_name = Managers.state.game_mode:game_mode_name()
-		if game_mode_name == "hub" then
-			self._widgets_by_name.rkpm_text.content.rkpm = ""
-			return
-		end
+
+	local widget = self._widgets_by_name.rkpm_text
+	local text = mod.kpm_display_for("r", t)
+	if widget.content.rkpm ~= text then
+		widget.content.rkpm = text
 	end
-	if not mod:get("show_rkpm") then
-		self._widgets_by_name.rkpm_text.content.rkpm = ""
-		return
+
+	local offset = mod.kpm_display_position("r")
+	if widget.style.rkpm.offset[1] ~= offset then
+		widget.style.rkpm.offset[1] = offset
 	end
-	if not mod:get("show_mkpm") and mod:get("show_skpm") then
-		self._widgets_by_name.rkpm_text.style.rkpm.offset[1] = -150
-	elseif mod:get("show_mkpm") and not mod:get("show_skpm") then
-		self._widgets_by_name.rkpm_text.style.rkpm.offset[1] = 150
-	end
-	if not Managers or not Managers.time then
-		self._widgets_by_name.rkpm_text.content.rkpm = "RKPM: N/A"
-		return
-	end
-	local mission_timer = Managers.time:time("gameplay") / 60.0
-	if not mission_timer or mission_timer <= 0 then
-		self._widgets_by_name.rkpm_text.content.rkpm = "RKPM: N/A"
-		return
-	end
-	if not mod.record or mod.record.ranged_kills == nil then
-		self._widgets_by_name.rkpm_text.content.rkpm = "RKPM: N/A"
-		return
-	end
-	local ranged_kills = mod.record.ranged_kills
-	local rkpm = ranged_kills / mission_timer
-	local msg = string.format("RKPM: %.3f", rkpm)
-	self._widgets_by_name.rkpm_text.content.rkpm = msg
 end
 
 return HudElementRKPM

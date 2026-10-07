@@ -38,6 +38,7 @@ HudElementMKPM = class("HudElementMKPM", "HudElementBase")
 
 function HudElementMKPM:init(parent, draw_layer, start_scale)
   	HudElementMKPM.super.init(self, parent, draw_layer, start_scale, definitions)
+	mod.kpm_invalidate_display()
 	if Managers and Managers.state and Managers.state.game_mode then
 		local game_mode_name = Managers.state.game_mode:game_mode_name()
 		self.is_in_hub = game_mode_name == "hub"
@@ -46,39 +47,17 @@ end
 
 HudElementMKPM.update = function(self, dt, t, ui_renderer, render_settings, input_service)
 	HudElementMKPM.super.update(self, dt, t, ui_renderer, render_settings, input_service)
-	if Managers and Managers.state and Managers.state.game_mode then
-		local game_mode_name = Managers.state.game_mode:game_mode_name()
-		if game_mode_name == "hub" then
-			self._widgets_by_name.mkpm_text.content.mkpm = ""
-			return
-		end
+
+	local widget = self._widgets_by_name.mkpm_text
+	local text = mod.kpm_display_for("m", t)
+	if widget.content.mkpm ~= text then
+		widget.content.mkpm = text
 	end
-	if not mod:get("show_mkpm") then
-		self._widgets_by_name.mkpm_text.content.mkpm = ""
-		return
+
+	local offset = mod.kpm_display_position("m")
+	if widget.style.mkpm.offset[1] ~= offset then
+		widget.style.mkpm.offset[1] = offset
 	end
-	if mod:get("show_rkpm") and mod:get("show_skpm") then
-		self._widgets_by_name.mkpm_text.style.mkpm.offset[1] = -300
-	elseif mod:get("show_rkpm") or mod:get("show_skpm") then
-		self._widgets_by_name.mkpm_text.style.mkpm.offset[1] = -150
-	end
-	if not Managers or not Managers.time then
-		self._widgets_by_name.mkpm_text.content.mkpm = "MKPM: N/A"
-		return
-	end
-	local mission_timer = Managers.time:time("gameplay") / 60.0
-	if not mission_timer or mission_timer <= 0 then
-		self._widgets_by_name.mkpm_text.content.mkpm = "MKPM: N/A"
-		return
-	end
-	if not mod.record or mod.record.melee_kills == nil then
-		self._widgets_by_name.mkpm_text.content.mkpm = "MKPM: N/A"
-		return
-	end
-	local melee_kills = mod.record.melee_kills
-	local mkpm = melee_kills / mission_timer
-	local msg = string.format("MKPM: %.3f", mkpm)
-	self._widgets_by_name.mkpm_text.content.mkpm = msg
 end
 
 return HudElementMKPM
