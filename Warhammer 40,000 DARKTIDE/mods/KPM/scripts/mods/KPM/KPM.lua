@@ -125,8 +125,9 @@ end
 local function refresh_display()
 	local mission_minutes
 
-	if Managers and Managers.time then
-		local gameplay_seconds = Managers.time:time("gameplay")
+	local time_manager = Managers and Managers.time
+	if time_manager and time_manager.has_timer and time_manager:has_timer("gameplay") then
+		local gameplay_seconds = time_manager:time("gameplay")
 		if type(gameplay_seconds) == "number" and gameplay_seconds > 0 then
 			mission_minutes = gameplay_seconds / 60.0
 		end

@@ -181,6 +181,10 @@ local function new_environment(source_set, instrument_formats)
 			},
 		},
 		time = {
+			has_timer = function(_self, name)
+				assert(name == "gameplay")
+				return true
+			end,
 			time = function(_self, name)
 				assert(name == "gameplay")
 				env.calls.timers = env.calls.timers + 1

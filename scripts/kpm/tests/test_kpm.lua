@@ -94,6 +94,7 @@ local function make_environment(options)
 		},
 		game_mode = options.game_mode or "mission",
 		gameplay_time = options.gameplay_time == nil and 120 or options.gameplay_time,
+		gameplay_timer_exists = true,
 		breed_name = options.breed_name or "cultist_berzerker",
 		is_minion = options.is_minion ~= false,
 		extension_available = options.extension_available ~= false,
@@ -204,8 +205,13 @@ local function make_environment(options)
 			},
 		},
 		time = {
+			has_timer = function(_self, key)
+				assert_equal(key, "gameplay", "gameplay clock name")
+				return env.gameplay_timer_exists
+			end,
 			time = function(_self, key)
 				assert_equal(key, "gameplay", "gameplay clock name")
+				assert_true(env.gameplay_timer_exists, "missing gameplay timer must not be read")
 				env.calls.timer_queries = env.calls.timer_queries + 1
 				return env.gameplay_time
 			end,
@@ -704,6 +710,26 @@ test("UnitT90_NilZeroAndNegativeTimersRenderNa", "The gameplay timer has nil, ze
 		for _, key in ipairs({ "m", "r", "s" }) do update_widget(widgets[key], t) end
 		assert_all_na(case.label .. " timer")
 	end
+end)
+
+-- Scenario: the HUD updates while TimeManager exists but the gameplay timer has been destroyed, then a new mission creates it.
+-- Purpose: avoid calling TimeManager:time on a missing timer and resume normal kills-per-minute display after the timer returns.
+test("UnitT92_MissingGameplayTimerRendersNaUntilRecreated", "The gameplay timer is absent during a HUD update and later becomes available.", "Keep HUD updates safe across timer lifecycle transitions.", function()
+	local env = make_environment()
+	env.gameplay_timer_exists = false
+	env.kpm.record.melee_kills = 2
+	local _, _, update_widget, widgets = create_hud(env)
+	for _, key in ipairs({ "m", "r", "s" }) do
+		update_widget(widgets[key], 0)
+		assert_equal(text_of(widgets[key], key), LABELS[key] .. ": N/A", "missing timer " .. key)
+	end
+	assert_equal(env.calls.timer_queries, 0, "missing timer reads")
+
+	env.gameplay_timer_exists = true
+	env.gameplay_time = 60
+	for _, key in ipairs({ "m", "r", "s" }) do update_widget(widgets[key], 0.11) end
+	assert_equal(text_of(widgets.m, "m"), "MKPM: 2.000", "recreated timer text")
+	assert_equal(env.calls.timer_queries, 1, "recreated timer reads")
 end)
 
 -- Scenario: the game enters the hub, returns to a mission, and then enters a new gameplay state.
