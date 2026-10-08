@@ -1,6 +1,7 @@
 -- Compact replacement for the native mission squad name text. All borrowed
 -- content and renderer fields are restored before returning to the game.
 local Nameplates = {}
+local FRIEND_ICON_GREEN = {255,57,255,20}
 -- Use replicated max/visual-max values for both local and remote players.
 local function read_toughness(extension,name)
         if not extension or type(extension[name])~="function" then return end
@@ -50,7 +51,9 @@ end
 function Nameplates.install(mod,renderer,is_active)
  local BarStyle=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/bar_style")
  local FriendIcon=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/friend_icon")
- local friends=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/darktide_friends").new()
+ local friends=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/darktide_friends").new(function(message)
+  if mod.get and mod:get("performance_diagnostics_enabled")==true then pcall(mod.info,mod,message) end
+ end)
  local self={}
  local function option(key) return not mod.get or mod:get(key)~=false end
  function self:clear()
@@ -62,7 +65,9 @@ function Nameplates.install(mod,renderer,is_active)
  local function draw_marker(marker,camera,ui,t)
   local widget,player,unit=marker.widget,marker.data,marker.unit
   if marker.type~="nameplate_party" or not marker.draw or marker.remove or marker.deleted
-   or not widget or not widget.content or widget.content.is_clamped
+   -- Native clamp uses player_name/safe-area bounds; our actual head projection
+   -- below determines whether this overlay is on screen, without an LOS test.
+   or not widget or not widget.content
    or not player or player.__deleted or player==marker.my_player
    or not unit or not Unit.alive(unit) or not Unit.has_node(unit,"j_head") then return false end
   local health=ScriptUnit.has_extension(unit,"health_system")
@@ -128,9 +133,10 @@ function Nameplates.install(mod,renderer,is_active)
     end
    end
   end
-  if option("teammate_friend_icon_enabled") and friends:is_friend(player,t) then
+  local is_friend = option("teammate_friend_icon_enabled") and friends:is_friend(player,t)
+  if is_friend or option("teammate_squadmate_icon_enabled") then
    local top=option("teammate_names_enabled") and ty+cached.by or y-1
-   FriendIcon.draw(renderer,ui,x-12,top-(warning_drawn and 54 or 24),27,24)
+   FriendIcon.draw(renderer,ui,x-16,top-(warning_drawn and 70 or 38),27,32,is_friend and FRIEND_ICON_GREEN or nil)
   end
   return true
  end
@@ -151,8 +157,9 @@ function Nameplates.install(mod,renderer,is_active)
    local ok,drawn=pcall(draw_marker,marker,camera,ui,t)
    if ok and drawn then
     local content=marker.widget.content
-    hidden[#hidden+1]={content=content,text=content.header_text}
+    hidden[#hidden+1]={content=content,text=content.header_text,clamped=content.is_clamped}
     content.header_text=""
+    content.is_clamped=false
    elseif not ok and not self.reported then
     self.reported=true
     pcall(mod.info,mod,"Field Awareness [teammate nameplate]: "..tostring(drawn))
@@ -160,7 +167,7 @@ function Nameplates.install(mod,renderer,is_active)
   end
   ui.scale,ui.inverse_scale=scale,inverse
   local result=pack(pcall(next_call,hud,dt,t,input,ui,...))
-  for _,saved in ipairs(hidden) do saved.content.header_text=saved.text end
+  for _,saved in ipairs(hidden) do saved.content.header_text=saved.text;saved.content.is_clamped=saved.clamped end
   if not result[1] then error(result[2],0) end
   return unpack_values(result,2,result.n)
  end)

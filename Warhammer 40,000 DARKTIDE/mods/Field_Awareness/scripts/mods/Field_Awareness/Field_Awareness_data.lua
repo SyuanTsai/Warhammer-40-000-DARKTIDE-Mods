@@ -2257,5 +2257,6 @@ local pulse, pulse_index = find(debuffs.sub_widgets, "debuff_pulse_enabled")
 table.remove(debuffs.sub_widgets, pulse_index)
 table.insert(debuffs.sub_widgets, 2, pulse)
 local team = find(data.options.widgets, "section_team").sub_widgets[1]
+team.sub_widgets[#team.sub_widgets+1] = {type="checkbox", setting_id="teammate_squadmate_icon_enabled", default_value=true}
 team.sub_widgets[#team.sub_widgets+1] = {type="checkbox", setting_id="teammate_friend_icon_enabled", default_value=true}
 return data

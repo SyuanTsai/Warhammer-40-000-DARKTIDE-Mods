@@ -1,4 +1,8 @@
-Field Awareness 1.4.7
+Field Awareness 1.5.1
+2026-10-07: On-screen teammate bars/emblems no longer inherit native safe-area clamping from a different anchor.
+2026-10-07: Separate default-On squadmate (blue) and Darktide friend (bright green #39FF14) toggles. Green wins at the same approved 32-pixel position for accepted unblocked Darktide friends. Bots/nonfriends can show blue. Friends-only native lookup restored.
+2026-10-07: TEMPORARY sizing preview: the existing Darktide friend icon toggle displays the approved blue circle/clasp on all remote teammates, including bots. Friend-only filtering and social-list fetching are paused for this preview; size and artwork unchanged.
+2026-10-06: Blue upright clasped-hands friend emblem with a thick circle. Native geometry is derived from the approved master; no external artwork dependency. Friend-list startup refresh and bounded retries; asynchronous completion clears stale negative cache. Live confirmation on the other computer pending.
 2026-10-01: Put Maximum-stack flashing second below Debuff stack numbers. Menu order only; defaults and runtime rendering retained. Prepared while user tests 1.4.6; not installed or published.
 2026-10-01: All Field defaults approved for the first-install test; main 45%, Light 25%, behind-wall Off, brittleness/vulnerability Off. Outline switches hide their dependent controls. Prepared only; installation/publication pending review.
 2026-10-01: Green crosshair moved to HUD; separate 0-100% enemy outline intensity, default 100%; behind-wall Light 66% unchanged. Test build; defaults review and gameplay validation pending.

@@ -1,44 +1,129 @@
--- Small original clasped-hands silhouette; native rectangles need no texture.
+-- Approved blue raised clasp, rendered natively without a texture dependency.
+-- Geometry sampled from assets/friend_icons/darktide_friend_blue.png.
 local Icon = {}
-local rows = {
-    "........................",
-    "....BBBB....GGGG........",
-    "...BBBBBWWWWGGGGG.......",
-    "..BBBBWWWWWWWWGGGG......",
-    ".BBBBWWWWWWWWWWGGGG.....",
-    "BBBBWWWWWWWWWWWWGGGG....",
-    "BBBBWWWWW..WWWWWWGGGG...",
-    "BBBBWWWW.WWWWWWWWWGGGG..",
-    "BBBB.WW.WWWWWWWWWWWGGGG.",
-    ".....WWWW.WWWWWWWWW.GGGG",
-    "......WWWW.WWWWWWW..GGGG",
-    ".......WWWW.WWWWW.......",
-    "........WWWW.WWW........",
-    ".........WWWW.W.........",
-    "..........WWWW..........",
-    "...........WW...........",
+local blue = {255,65,155,245}
+local rectangles = {
+ {20,2,8,1},
+ {16,3,16,1},
+ {14,4,6,1},
+ {28,4,6,1},
+ {12,5,4,1},
+ {32,5,4,1},
+ {11,6,3,1},
+ {34,6,3,1},
+ {9,7,4,1},
+ {35,7,4,1},
+ {8,8,3,1},
+ {22,8,2,1},
+ {25,8,2,1},
+ {37,8,3,1},
+ {7,9,3,1},
+ {22,9,6,1},
+ {38,9,3,1},
+ {7,10,2,1},
+ {20,10,2,1},
+ {23,10,2,1},
+ {26,10,3,1},
+ {39,10,2,1},
+ {6,11,2,1},
+ {20,11,3,1},
+ {24,11,5,1},
+ {40,11,2,1},
+ {5,12,3,1},
+ {18,12,3,1},
+ {23,12,7,2},
+ {40,12,3,1},
+ {5,13,2,1},
+ {19,13,3,1},
+ {41,13,2,1},
+ {4,14,2,2},
+ {18,14,1,1},
+ {20,14,10,1},
+ {42,14,2,2},
+ {18,15,3,1},
+ {23,15,7,1},
+ {3,16,2,3},
+ {19,16,3,1},
+ {23,16,8,1},
+ {43,16,2,3},
+ {17,17,3,1},
+ {22,17,9,1},
+ {18,18,2,1},
+ {21,18,9,1},
+ {2,19,2,10},
+ {18,19,11,1},
+ {44,19,2,10},
+ {17,20,11,1},
+ {29,20,2,1},
+ {16,21,16,1},
+ {15,22,9,1},
+ {25,22,8,2},
+ {15,23,8,1},
+ {14,24,9,1},
+ {25,24,9,1},
+ {13,25,9,1},
+ {26,25,9,1},
+ {12,26,10,1},
+ {26,26,10,1},
+ {10,27,11,1},
+ {27,27,11,1},
+ {9,28,12,1},
+ {27,28,7,1},
+ {35,28,4,1},
+ {2,29,3,1},
+ {8,29,12,1},
+ {28,29,12,1},
+ {43,29,3,1},
+ {3,30,2,2},
+ {8,30,1,1},
+ {10,30,10,1},
+ {28,30,10,1},
+ {39,30,1,1},
+ {43,30,2,2},
+ {7,31,13,1},
+ {28,31,9,1},
+ {38,31,3,1},
+ {4,32,15,1},
+ {29,32,15,1},
+ {4,33,2,1},
+ {7,33,6,1},
+ {14,33,4,1},
+ {30,33,11,1},
+ {42,33,2,1},
+ {5,34,14,2},
+ {29,34,14,2},
+ {6,36,9,1},
+ {16,36,2,1},
+ {30,36,2,1},
+ {33,36,9,1},
+ {7,37,7,1},
+ {15,37,2,1},
+ {31,37,2,1},
+ {34,37,7,1},
+ {7,38,9,1},
+ {32,38,9,1},
+ {8,39,8,1},
+ {32,39,2,1},
+ {35,39,5,1},
+ {9,40,4,1},
+ {14,40,1,1},
+ {33,40,1,1},
+ {35,40,4,1},
+ {11,41,4,1},
+ {33,41,4,1},
+ {12,42,5,1},
+ {31,42,5,1},
+ {14,43,8,1},
+ {26,43,8,1},
+ {16,44,16,1},
+ {20,45,8,1}
 }
-local colors = {B={255,65,155,245}, G={255,80,220,140}, W={255,245,235,210}}
-local rectangles = {}
-for y, row in ipairs(rows) do
-    local x=1
-    while x<=#row do
-        local kind=row:sub(x,x)
-        local last=x
-        while last<#row and row:sub(last+1,last+1)==kind do last=last+1 end
-        if colors[kind] then rectangles[#rectangles+1]={x=x-1,y=y-1,width=last-x+1,color=colors[kind]} end
-        x=last+1
-    end
-end
-function Icon.draw(renderer, ui, x, y, z, width)
-    local scale=width/24
-    for _,r in ipairs(rectangles) do
-        renderer.draw_rect(ui,Vector3(x+r.x*scale-0.5,y+r.y*scale-0.5,z),
-            Vector2(r.width*scale+1,scale+1),{255,0,0,0})
-    end
-    for _,r in ipairs(rectangles) do
-        renderer.draw_rect(ui,Vector3(x+r.x*scale,y+r.y*scale,z+1),
-            Vector2(r.width*scale,scale),r.color)
-    end
+function Icon.draw(renderer, ui, x, y, z, width, tint)
+ local scale = width/48
+ tint = tint or blue
+ for _,r in ipairs(rectangles) do
+  renderer.draw_rect(ui,Vector3(x+r[1]*scale,y+r[2]*scale,z),
+   Vector2(r[3]*scale,r[4]*scale),tint)
+ end
 end
 return Icon

@@ -1,4 +1,33 @@
-FIELD AWARENESS 1.4.7 - DEFAULTS TEST
+UPDATING FIELD AWARENESS - KEEPING YOUR SETTINGS
+
+1. Close Darktide before replacing mod files.
+2. Extract the downloaded ZIP. Open its mods folder.
+3. Copy the Field_Awareness folder into your Darktide game's mods folder.
+4. When Windows asks about existing files, choose Replace the files in the destination.
+5. Keep the existing Field_Awareness entry in mod_load_order.txt. Start the game normally.
+
+We are attempting to preserve your settings for future updates. The current
+packages use the same mod ID, and preservation checks for existing choices have
+passed. DMF stores saved settings separately from the mod folder, in Darktide's
+user_settings.config. These downloads contain mod files only, without personal
+settings or a settings-reset installer. Existing settings, keybinds and
+character/build choices are intended to remain; defaults initialize only missing
+or newly introduced settings. Updating menu/code files does not itself reset them.
+You do not need a separate update-only download: this ZIP also supports updates.
+
+FIRST INSTALL
+Close the game, extract the ZIP, and copy its mods folder into the Darktide game
+root. With the usual DML/DMF prerequisites installed, add Field_Awareness once to
+mods/mod_load_order.txt if it is not already there. New settings receive defaults.
+
+These instructions apply to the stable public folder Field_Awareness. A versioned
+cross-computer transfer package has its own HANDOFF.txt and load-order instructions.
+
+PREVIOUS MOD NOTES
+
+Separate default-On squadmate (blue) and Darktide friend (bright green #39FF14) toggles. Green wins at the same approved 32-pixel position for accepted unblocked Darktide friends. Bots/nonfriends can show blue. Friends-only native lookup restored.
+
+FIELD AWARENESS 1.5.1 - SQUADMATE AND FRIEND ICONS
 Main colored outlines 45%; behind-wall mode Off; Light intensity 25%; orange glow Off.
 The Light slider appears only in Light mode. Main switches hide their subordinate options.
 Marker/warning, teammate, blast, ground and smoke features default On; color palette retained.
@@ -7,7 +36,11 @@ Stack numbers sit first beneath Debuff icons; Maximum-stack flashing is second. 
 Flashing follows live native effect caps, including overrides. Ordinary bleed 16,
 long bleed 18, burn and Soulblaze normally 31; lower weapon application limits differ.
 Multiple active effects flash only when every known effect is at its own maximum.
-Darktide friend icon On: original clasped hands above accepted Fatshark friends.
+Squadmate icon On: blue raised clasped-hands circle above all squadmates, including bots.
+Darktide friend icon On: the same emblem in bright green above accepted unblocked Fatshark friends.
+Independent toggles. If both are On, green replaces blue for a friend at the same 32-pixel position.
+Native geometry draws both without a PNG/texture provider.
+Friend list refreshes on mission entry with up to three attempts, five seconds apart. Record diagnostic logs reports refresh completion/failure. The other computer's original missing-icon cause remains unconfirmed.
 Steam/Xbox/PSN friendship alone does not qualify. Bots have no friend emblem.
 Diagnostics Off. Existing saved choices survive normal updates.
 Extract the individual ZIP's lowercase mods folder into the Darktide game root.
