@@ -1124,10 +1124,21 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Field_Awareness](https://www.nexusmods.com/warhammer40kdarktide/mods/1359)
     顯示特定怪物的輪廓與攻擊區域(可視範圍內)
-- MOD 網站最後更新日期：Last updated 02 October 2026, 2:39AM
-- MOD 版本：1.4.7
-- MOD 檔案名稱：SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip
-- 手動維護最後下載日期：2026-10-05
+- MOD 網站最後更新日期：Last updated 07 October 2026, 6:18PM（Nexus 頁面顯示；UTC：2026-10-07T18:18:49Z；Asia/Taipei：2026-10-08 02:18:49）
+- MOD 版本：1.5.1（Nexus 頁面與 ZIP 內版本；Nexus Main file 版本欄位：1）
+- MOD 檔案名稱：Field Awareness V1.5.1 Enemies Outlined And More 1359 1 2026-10-07T18-18Z Z1K0I1fL0.zip
+- 手動維護最後下載日期：2026-10-08
+- Nexus MOD ID: 1359
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/1359
+- Nexus page version: 1.5.1
+- Nexus last updated: 2026-10-07T18:18:49Z
+- Main file ID: 8857
+- Main file version: 1
+- Main file uploaded at UTC: 2026-10-07T18:18:49Z
+- Archive filename: Field Awareness V1.5.1 Enemies Outlined And More 1359 1 2026-10-07T18-18Z Z1K0I1fL0.zip
+- Archive size bytes: 1156645
+- Archive SHA-256: 28b864af914431bcfeffdbbc6da63f231bfe17b2ad3dce7ef5117e1d56572528
+- Acquisition method: manual-queue
 
 ### [Uptime 2 - Buff Data and Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/898)
     觀察天賦的運作狀況

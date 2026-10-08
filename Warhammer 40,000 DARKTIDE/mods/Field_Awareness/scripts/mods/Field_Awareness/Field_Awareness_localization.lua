@@ -4,14 +4,24 @@ return {
         ["zh-tw"] = "效果累積到遊戲設定的層數上限時，圖示就會閃爍，也會依照遊戲即時調整後的上限判斷：一般流血為 16 層、長效流血為 18 層，燃燒和靈魂之火通常為 31 層。武器能施加的層數可能比較低，但不代表敵人身上的效果只能累積到那個層數。如果同時有多種效果，所有已知且仍在生效的效果都達到各自的上限時才會閃爍。無法確認層數或上限時不會閃爍。",
     },
 
+    ["teammate_squadmate_icon_enabled"] = {
+        ["en"] = "Squadmate icon",
+        ["zh-tw"] = "小隊隊友圖示",
+    },
+
+    ["teammate_squadmate_icon_enabled_description"] = {
+        ["en"] = "Show the approved blue raised clasped-hands circle above all squadmates, including bots, during missions. Independent of Darktide friend icon. Green replaces blue for friends when that toggle is On. On by default.",
+        ["zh-tw"] = "任務中，會在所有小隊隊友（包含電腦隊友）頭上顯示藍色握手圓形圖示。這項功能和「Darktide 好友圖示」各自獨立。開啟好友圖示時，好友的藍色圖示會改成綠色。預設開啟。",
+    },
+
     ["teammate_friend_icon_enabled"] = {
         ["en"] = "Darktide friend icon",
         ["zh-tw"] = "Darktide 好友圖示",
     },
 
     ["teammate_friend_icon_enabled_description"] = {
-        ["en"] = "Show a clasped-hands emblem above teammates who are accepted Darktide/Fatshark friends. Checks the native social list on mission entry; Steam, Xbox or PlayStation friendship alone does not qualify. On by default.",
-        ["zh-tw"] = "如果隊友已加入你的 Darktide／Fatshark 好友名單，就會在他頭上顯示握手圖示。進入任務時會檢查遊戲內的好友名單；只有 Steam、Xbox 或 PlayStation 好友關係不算。預設開啟。",
+        ["en"] = "Show a bright-green raised clasped-hands circle above accepted, unblocked Darktide/Fatshark friends during missions. Platform friendship alone does not qualify. Independent of Squadmate icon; green takes its place at the same position when both are On. On by default.",
+        ["zh-tw"] = "任務中，會在已加入你的 Darktide／Fatshark 好友名單、且未被封鎖的隊友頭上顯示亮綠色握手圓形圖示。只有平台上的好友關係不算。這項功能和「小隊隊友圖示」各自獨立；兩者都開啟時，綠色圖示會在相同位置取代藍色圖示。預設開啟。",
     },
 
     ["aquila_circle_enabled"] = {
