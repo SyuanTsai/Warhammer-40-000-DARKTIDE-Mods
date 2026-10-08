@@ -18,7 +18,7 @@ local ScriptUnit                           = ScriptUnit
 local Managers                             = Managers
 
 -- Delay for Server Latency, Interval for Auto Mark
-local AUTO_MARK_DELAY                      = 1
+local AUTO_MARK_DELAY                      = 0.5
 local AUTO_MARK_INTERVAL                   = 0.2
 local ENEMY_TAG_DELAY                      = 3
 local PRIORITY_SWITCH_COOLDOWN             = 0.3

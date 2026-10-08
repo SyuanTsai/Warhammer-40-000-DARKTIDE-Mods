@@ -1077,16 +1077,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Auto Mark](https://www.nexusmods.com/warhammer40kdarktide/mods/736)
     自動標記 (非狗哨)
+- MOD 網站最後更新日期：Last updated 07 October 2026, 7:53PM（Nexus 頁面顯示；UTC：2026-10-07T19:53:42Z；Asia/Taipei：2026-10-08 03:53:42）
+- MOD 版本：2.5.4
+- MOD 檔案名稱：AutoMark 736 2.5.4 2026-10-07T19-53Z hUmF6UaSp.zip
+- 手動維護最後下載日期：2026-10-08
 - Nexus MOD ID: 736
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/736
-- Nexus page version: 2.5.1
-- Nexus last updated: 2026-08-20T13:05:54.0000000+00:00
-- Main file ID: 7544
-- Main file version: 2.5.1
-- Main file uploaded at UTC: 2026-08-20T13:05:54.0000000+00:00
-- Archive filename: AutoMark 736 2.5.1 2026-08-20T13-05Z QHh61HP4x.zip
-- Archive size bytes: 46076
-- Archive SHA-256: 403e47f41ee7b68227c08c57195d3afdd130505749c6ba74186b62901687e20e
+- Nexus page version: 2.5.4
+- Nexus last updated: 2026-10-07T19:53:42Z
+- Main file ID: 8861
+- Main file version: 2.5.4
+- Main file uploaded at UTC: 2026-10-07T19:53:42Z
+- Archive filename: AutoMark 736 2.5.4 2026-10-07T19-53Z hUmF6UaSp.zip
+- Archive size bytes: 45328
+- Archive SHA-256: 2cd41aa9ce48d732dae26ca7832404b1dfb2bc691479b7a71d58bbf39a1341f6
 - Acquisition method: manual-queue
 
 ### [ErrorTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/824)

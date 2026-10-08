@@ -67,7 +67,8 @@ local RANGED_ACTION_KINDS = {
 }
 mod:hook_safe(CLASS.ActionHandler, "start_action",
     function(self, id, action_objects, action_name, action_params, action_settings, used_input, t, transition_type, condition_func_params, automatic_input, reset_combo_override)
-        if self._unit_data_extension._player.viewport_name ~= 'player1' then
+        local unit_data_extension = self._unit_data_extension
+        if unit_data_extension._player.viewport_name ~= 'player1' or unit_data_extension.is_resimulating then
             return
         end
 
