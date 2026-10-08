@@ -29,6 +29,7 @@ local Unit_node                            = Unit.node
 local Unit_world_position                  = Unit.world_position
 local PhysicsWorld_raycast                 = PhysicsWorld.raycast
 local PhysicsWorld_make_raycast            = PhysicsWorld.make_raycast
+local PhysicsWorld_linear_sphere_sweep     = PhysicsWorld.linear_sphere_sweep
 local Raycast_cast                         = Raycast.cast
 local ScriptUnit_extension                 = ScriptUnit.extension
 local math_abs                             = math.abs
@@ -38,11 +39,13 @@ local math_rad                             = math.rad
 local Vector3_dot                          = Vector3.dot
 local Vector3_normalize                    = Vector3.normalize
 local Vector3_length                       = Vector3.length
+local Vector3_distance                     = Vector3.distance
 local Vector3_distance_squared             = Vector3.distance_squared
+local Vector3_flat                         = Vector3.flat
 local Matrix4x4_right                      = Matrix4x4.right
 local Matrix4x4_forward                    = Matrix4x4.forward
-local Matrix4x4_translation                = Matrix4x4.translation
-local table_clear                          = table.clear
+local Quaternion_forward                   = Quaternion.forward
+local Quaternion_up                        = Quaternion.up
 
 -- Constants
 local INDEX_POSITION                       = 1
@@ -52,6 +55,12 @@ local INDEX_ACTOR                          = 4
 local COLLISION_FILTER                     = "filter_player_ping_target_selection"
 local EMPTY_TABLE                          = {}
 local MAX_VISIBILITY_CHECKS_PER_FRAME      = 10
+local VIEW_CHECK_MIN_DISTANCE              = 3
+local VIEW_CHECK_MIN_DOT                   = 0.75
+local AIM_CHECK_FILTER                     = "filter_player_ping_target_validation"
+local AIM_CHECK_MAX_HITS                   = 128
+local AIM_CHECK_MIN_RADIUS                 = 1
+local AIM_CHECK_RADIUS_PER_METER           = 0.052
 
 -- Params
 local visibility_raycast_object            = nil
@@ -282,6 +291,17 @@ local function has_enough_capacitance(breed_settings, breed_data, max_ability_ch
     return remaining_capacitance >= capacitance_retention_threshold
 end
 
+local function get_remaining_ability_capacitance()
+    local player_ability_extension = context.player_ability_extension
+    if not player_ability_extension then
+        return 0
+    end
+
+    local remaining_ability_resource = player_ability_extension:remaining_ability_resource("combat_ability")
+    local resource_cost_per_charge   = player_ability_extension:get_ability_resource_cost_per_charge("combat_ability")
+    return remaining_ability_resource / resource_cost_per_charge
+end
+
 function mod:has_enough_capacitance(target_unit)
     local unit_data_extension = ScriptUnit_extension(target_unit, "unit_data_system")
     local breed_data = unit_data_extension and unit_data_extension._breed
@@ -289,7 +309,7 @@ function mod:has_enough_capacitance(target_unit)
     local breed_settings = noospheric_command_breed_settings[breed_name]
     local player_ability_extension = context.player_ability_extension
     local max_ability_charges = player_ability_extension and player_ability_extension:max_ability_charges("combat_ability")
-    local remaining_capacitance = player_ability_extension and player_ability_extension:remaining_ability_capacitance("combat_ability")
+    local remaining_capacitance = get_remaining_ability_capacitance()
     return has_enough_capacitance(breed_settings, breed_data, max_ability_charges, remaining_capacitance)
 end
 
@@ -342,6 +362,62 @@ local function is_servo_skull_tag_target_valid(target_unit, target_tag, target_b
     return true
 end
 
+local function is_sticky_targeting(tag_name, tag_context, breed_name, breed_data)
+    if tag_name == TAG_NAMES.COMPANION_TAG then
+        if not mod_settings.companion_mark_sticky_targeting then
+            return false
+        end
+
+        if not tag_context.pounce_start_time then
+            return false
+        end
+
+        if not breed_data then
+            return false
+        end
+
+        local breed_settings = companion_cancel_mark_breed_settings[breed_name]
+        if breed_settings and breed_settings.override then
+            return breed_settings.sticky_targeting
+        end
+
+        if breed_data.is_boss then
+            return mod_settings.companion_mark_sticky_targeting_boss
+        elseif breed_data.tags.special then
+            return mod_settings.companion_mark_sticky_targeting_special
+        else
+            return mod_settings.companion_mark_sticky_targeting_elite
+        end
+    elseif tag_name == TAG_NAMES.SERVO_SKULL_TAG then
+        if not mod_settings.servo_skull_mark_sticky_targeting then
+            return false
+        end
+
+        if not tag_context.shoot_start_time then
+            return false
+        end
+
+        if not breed_data then
+            return false
+        end
+
+        local breed_settings = noospheric_command_breed_settings[breed_name]
+        if breed_settings and breed_settings.override then
+            return breed_settings.sticky_targeting
+        end
+
+        if breed_data.is_boss then
+            return mod_settings.servo_skull_mark_sticky_targeting_boss
+        elseif breed_data.tags.special then
+            return mod_settings.servo_skull_mark_sticky_targeting_special
+        else
+            return mod_settings.servo_skull_mark_sticky_targeting_elite
+        end
+    else
+        return false
+    end
+end
+
 local function is_target_visible(ray_origin, up, target_unit_center_pos, half_height, target_unit, fixed_frame)
     if not visibility_raycast_object then
         return false
@@ -371,78 +447,6 @@ local function is_target_visible(ray_origin, up, target_unit_center_pos, half_he
     visibility_cache[target_unit] = not hit_center
     visibility_check_frame[target_unit] = fixed_frame
     return not hit_center
-end
-
-local EPSILON = 1e-05
-local FORCE_FIELD_HEIGHT = 3.5
-local FORCE_FIELD_RADIUS_SQUARED = 36
-local WALL_ORDER = { 4, 3, 2, 1, 5, 6, 7 }
-local function check_force_field_los(source_position, target_position)
-    local force_field_system = context.force_field_system
-    if not force_field_system then
-        return false
-    end
-
-    local to_target = target_position - source_position
-    local unit_to_extension_map = force_field_system._unit_to_extension_map
-    local distance_to_target_squared = Vector3_dot(to_target, to_target)
-    local to_target_x, to_target_y = target_position.x - source_position.x, target_position.y - source_position.y
-    for _, force_field_extension in pairs(unit_to_extension_map) do
-        if force_field_extension.__class_name ~= "PsykerForceFieldUnitExtension" then
-            goto continue
-        end
-
-        if force_field_extension._sphere_shield then
-            local force_field_position = force_field_extension._position:unbox()
-            local to_force_field = force_field_position - source_position
-            local distance_to_force_field_squared = Vector3_dot(to_force_field, to_force_field)
-            if distance_to_force_field_squared < FORCE_FIELD_RADIUS_SQUARED then
-                return true
-            end
-
-            local dot = Vector3_dot(to_force_field, to_target)
-            if dot <= 0 then
-                goto continue
-            end
-
-            local closest_point_to_force_field
-            if distance_to_target_squared <= dot then
-                closest_point_to_force_field = target_position
-            else
-                local t = dot / distance_to_target_squared
-                closest_point_to_force_field = source_position + t * to_target
-            end
-
-            local distance_line_to_force_field_squared = Vector3_distance_squared(closest_point_to_force_field, force_field_position)
-            if distance_line_to_force_field_squared < FORCE_FIELD_RADIUS_SQUARED then
-                return true
-            end
-        else
-            local force_field_position_z = force_field_extension._position:unbox().z
-            local points = force_field_extension._points
-            for i = 1, #WALL_ORDER - 1 do
-                local point_a = points[WALL_ORDER[i]]:unbox()
-                local point_b = points[WALL_ORDER[i + 1]]:unbox()
-                local wall_x, wall_y = point_b.x - point_a.x, point_b.y - point_a.y
-                local source_to_point_x, source_to_point_y = point_a.x - source_position.x, point_a.y - source_position.y
-                local denom = to_target_x * wall_y - to_target_y * wall_x
-                if math.abs(denom) > EPSILON then
-                    local t = (source_to_point_x * wall_y - source_to_point_y * wall_x) / denom
-                    local u = (source_to_point_x * to_target_y - source_to_point_y * to_target_x) / denom
-
-                    if t >= 0 and t <= 1 and u >= 0 and u <= 1 then
-                        local los_z = source_position.z + t * (target_position.z - source_position.z)
-                        if los_z >= force_field_position_z and los_z <= force_field_position_z + FORCE_FIELD_HEIGHT then
-                            return true
-                        end
-                    end
-                end
-            end
-        end
-        ::continue::
-    end
-
-    return false
 end
 
 local function is_cyber_mastiff_target_visible(ray_origin, up, target_unit_center_pos, half_height, target_unit, fixed_frame, target_tag, target_unit_marked_by_execution_order)
@@ -498,24 +502,62 @@ function mod:is_servo_skull_target_visible(target_unit, fixed_frame, force_check
     return is_servo_skull_target_visible(servo_skull_ray_origin, target_unit, fixed_frame, force_check)
 end
 
-local broadphase_result = {}
-local function broadphase_units(player_unit, player_position, max_range)
-    local broadphase_system = context.broadphase_system
-    local broadphase = broadphase_system and broadphase_system.broadphase
-    if not broadphase then
-        return nil, 0
+local function is_target_pingable(eye_position, forward, flat_forward, target_unit, target_position, to_target, physics_world)
+    local flat_to_target = Vector3_flat(to_target)
+    local flat_distance = Vector3_length(flat_to_target)
+    if flat_distance < VIEW_CHECK_MIN_DISTANCE then
+        return true
     end
 
-    local side_system = context.side_system
-    local side = side_system and side_system.side_by_unit[player_unit]
-    if not side then
-        return nil, 0
+    local dot = Vector3_dot(Vector3_normalize(flat_forward), Vector3_normalize(flat_to_target))
+    if dot < VIEW_CHECK_MIN_DOT then
+        return false
     end
 
-    table_clear(broadphase_result)
-    local enemy_side_names = side:relation_side_names("enemy")
-    local enemies_in_radius = broadphase:query(player_position, max_range, broadphase_result, enemy_side_names)
-    return broadphase_result, enemies_in_radius
+    local eye_distance = Vector3_distance(eye_position, target_position)
+    local radius = math_max(AIM_CHECK_MIN_RADIUS, eye_distance * AIM_CHECK_RADIUS_PER_METER)
+    local to_position = eye_position + forward * (eye_distance + radius)
+    local hits = PhysicsWorld_linear_sphere_sweep(physics_world, eye_position, to_position, radius, AIM_CHECK_MAX_HITS, "types", "both", "collision_filter", AIM_CHECK_FILTER, "report_initial_overlap", true)
+
+    for i = 1, hits and #hits or 0 do
+        if Actor_unit(hits[i].actor) == target_unit then
+            return true
+        end
+    end
+
+    return false
+end
+
+function mod:is_target_pingable(target_unit)
+    local player = context.player
+    local player_unit = player and player.player_unit
+    if not player_unit then
+        return false
+    end
+
+    local first_person_extension = context.first_person_extension
+    local first_person_unit = first_person_extension and first_person_extension:first_person_unit()
+    if not first_person_unit then
+        return false
+    end
+
+    local first_person_component = context.first_person_component
+    if not first_person_component then
+        return false
+    end
+
+    local smart_targeting_extension = context.smart_targeting_extension
+    local physics_world = smart_targeting_extension and smart_targeting_extension._physics_world
+    if not physics_world then
+        return false
+    end
+
+    local eye_position = Unit_world_position(first_person_unit, 1)
+    local forward = Quaternion_forward(first_person_component.rotation)
+    local flat_forward = Vector3_flat(forward)
+    local target_position = Unit_world_position(target_unit, 1)
+    local to_target = target_position - Unit_world_position(player_unit, 1)
+    return is_target_pingable(eye_position, forward, flat_forward, target_unit, target_position, to_target, physics_world)
 end
 
 local IGNORE_EXECUTION_ORDER_FORCE_MARK_BREED_NAMES = {
@@ -533,25 +575,30 @@ local IGNORE_THREAT_PRIORITY_BREED_NAMES = {
     cultist_ritualist = true,
     chaos_mutator_ritualist = true,
 }
-function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_name, tag_context, class_settings, marked_tag)
+function mod:find_auto_mark_target_unit(min_range, max_range, tag_name, tag_context, class_settings, marked_tag)
     local player = context.player
     local player_unit = player and player.player_unit
     local smart_targeting_extension = context.smart_targeting_extension
+    local physics_world = smart_targeting_extension and smart_targeting_extension._physics_world
     local smart_tag_system = context.smart_tag_system
-    if not player_unit or not smart_targeting_extension or not smart_tag_system then
+    local first_person_extension = context.first_person_extension
+    local first_person_component = context.first_person_component
+    if not player_unit or not smart_targeting_extension or not physics_world or not smart_tag_system or not first_person_extension or not first_person_component then
         return
     end
 
     -- raycast for hit unit list
-    local hits, num_hits
-    local use_angle_limit = max_angle > 0
-    local ray_origin, forward, right, up = smart_targeting_extension:_targeting_parameters()
-    if use_angle_limit then
-        hits, num_hits = broadphase_units(player_unit, ray_origin, max_range)
-    else
-        hits, num_hits = PhysicsWorld_raycast(smart_targeting_extension._physics_world, ray_origin, forward, max_range, "all", "collision_filter", COLLISION_FILTER)
-    end
-
+    local first_person_unit = first_person_extension:first_person_unit()
+    local eye_position      = Unit_world_position(first_person_unit, 1)
+    local rotation          = first_person_component.rotation
+    local forward           = Quaternion_forward(rotation)
+    local flat_forward      = Vector3_flat(forward)
+    local up                = Quaternion_up(rotation)
+    -- local hits, num_hits    = PhysicsWorld_raycast(physics_world, eye_position, forward, max_range, "all", "collision_filter", COLLISION_FILTER)
+    local radius            = math_max(AIM_CHECK_MIN_RADIUS, max_range * AIM_CHECK_RADIUS_PER_METER)
+    local to_position       = eye_position + forward * (max_range + radius)
+    local hits              = PhysicsWorld_linear_sphere_sweep(physics_world, eye_position, to_position, radius, 256, "types", "dynamics", "collision_filter", AIM_CHECK_FILTER, "report_initial_overlap", true)
+    local num_hits          = hits and #hits or 0
     if not hits or num_hits <= 0 then
         return
     end
@@ -561,8 +608,6 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
     local unit_spawner_manager = Managers.state.unit_spawner
     local get_game_object_id = unit_spawner_manager.game_object_id
     -- cache params
-    local finite_angle = max_angle < 180
-    local min_cosine = math_cos(math_rad(max_angle))
     local fixed_frame = smart_targeting_extension._latest_fixed_frame
     local canceled_units = tag_context and tag_context.canceled_units or EMPTY_TABLE
     local removed_units = tag_context and tag_context.removed_units or EMPTY_TABLE
@@ -573,7 +618,7 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
         local companion_spawner_extension = context.companion_spawner_extension
         local companion_units = companion_spawner_extension and companion_spawner_extension:companion_units()
         local companion_unit = companion_units and companion_units[1]
-        companion_position = companion_unit and (POSITION_LOOKUP[companion_unit] or Unit_world_position(companion_unit, 1))
+        companion_position = companion_unit and Unit_world_position(companion_unit, 1)
     elseif tag_name == TAG_NAMES.SERVO_SKULL_TAG then
         local companion_spawner_extension = context.companion_spawner_extension
         local servo_skull_unit = companion_spawner_extension and companion_spawner_extension:spawned_unit_lookup(special_rules.cryptic_servo_skull_hack)
@@ -581,12 +626,13 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
         companion_position = servo_skull_los_node and Unit_world_position(servo_skull_unit, servo_skull_los_node)
         local player_ability_extension = context.player_ability_extension
         max_ability_charges = player_ability_extension and player_ability_extension:max_ability_charges("combat_ability")
-        remaining_capacitance = player_ability_extension and player_ability_extension:remaining_ability_capacitance("combat_ability")
+        remaining_capacitance = get_remaining_ability_capacitance()
     end
     local threat_priority = tag_name == TAG_NAMES.COMPANION_TAG and mod_settings.companion_mark_threat_priority or tag_name == TAG_NAMES.SERVO_SKULL_TAG and mod_settings.servo_skull_mark_threat_priority
     local execution_order_priority = tag_name == TAG_NAMES.COMPANION_TAG and mod_settings.execution_order_priority and context.has_execution_order
     local execution_order_force_mark = tag_name == TAG_NAMES.COMPANION_TAG and mod_settings.execution_order_force_mark and context.has_execution_order
     local player_unit_id = get_game_object_id(unit_spawner_manager, player_unit)
+    local player_position = Unit_world_position(player_unit, 1)
     -- init best unit for switch logic
     local best_unit = nil
     local best_unit_tag = nil
@@ -595,6 +641,7 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
     local best_unit_is_attacking_player = false
     local best_unit_is_dormant_daemonhost = false
     local best_unit_marked_by_execution_order = false
+    local best_unit_is_sticky_targeting = false
     local marked_unit = marked_tag and marked_tag._target_unit
     if marked_unit then
         best_unit = marked_unit
@@ -606,22 +653,17 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
         best_unit_priority, best_unit_is_dormant_daemonhost = get_breed_priority(best_unit_breed_name, best_unit_breed_data, breed_priorities, best_unit_attacking_unit_id)
         best_unit_marked_by_execution_order = execution_order_units[best_unit]
         best_unit_is_attacking_player = best_unit_attacking_unit_id == player_unit_id
+        best_unit_is_sticky_targeting = is_sticky_targeting(tag_name, tag_context, best_unit_breed_name, best_unit_breed_data)
     end
 
     for i = 1, num_hits do
-        local hit_unit, hit_actor
-        if use_angle_limit then
-            hit_unit = hits[i]
-        else
-            local hit = hits[i]
-            hit_actor = hit[INDEX_ACTOR]
-            if not hit_actor then
-                goto continue
-            end
-
-            hit_unit = Actor_unit(hit_actor)
+        local hit = hits[i]
+        local hit_actor = hit.actor or hit[INDEX_ACTOR]
+        if not hit_actor then
+            goto continue
         end
 
+        local hit_unit = Actor_unit(hit_actor)
         -- ignore player unit, already marked unit and dead unit
         if hit_unit == player_unit or hit_unit == marked_unit or canceled_units[hit_unit] or not HEALTH_ALIVE[hit_unit] then
             goto continue
@@ -635,11 +677,14 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
         end
 
         local hit_unit_breed_name = hit_unit_breed_data.name
+        if best_unit_is_sticky_targeting and hit_unit_breed_name ~= "renegade_netgunner" then
+            goto continue
+        end
+
         local hit_unit_game_object_id = get_game_object_id(unit_spawner_manager, hit_unit)
         local hit_unit_attacking_unit_id = get_game_object_field(game_session, hit_unit_game_object_id, "target_unit_id")
         local hit_unit_priority, hit_unit_is_dormant_daemonhost = get_breed_priority(hit_unit_breed_name, hit_unit_breed_data, breed_priorities, hit_unit_attacking_unit_id)
         local hit_unit_marked_by_execution_order = execution_order_units[hit_unit]
-        local hit_unit_is_attacking_player = hit_unit_attacking_unit_id == player_unit_id
         -- filter unit by type and priority
         if hit_unit_priority <= 0 or not is_breed_group_valid(hit_unit_breed_data, class_settings) then
             if not execution_order_force_mark
@@ -649,6 +694,11 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
             then
                 goto continue
             end
+        end
+
+        local hit_unit_is_attacking_player = hit_unit_attacking_unit_id == player_unit_id
+        if best_unit_is_sticky_targeting and not hit_unit_is_attacking_player then
+            goto continue
         end
 
         local hit_unit_score = hit_unit_priority
@@ -667,29 +717,16 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
             goto continue
         end
 
-        local hit_unit_center_pos
-        if use_angle_limit then
-            local hit_unit_pose, _ = Unit_box(hit_unit, true)
-            hit_unit_center_pos = Matrix4x4_translation(hit_unit_pose)
-        else
-            hit_unit_center_pos = Actor_world_bounds(hit_actor)
-        end
-        local to_hit_unit_center = hit_unit_center_pos - ray_origin
-        local distance = Vector3_length(to_hit_unit_center)
+        local hit_unit_position = Unit_world_position(hit_unit, 1)
+        local to_hit_unit = hit_unit_position - player_position
+        local distance = Vector3_length(to_hit_unit)
         -- filter unit by range
         if distance < min_range or distance > max_range then
             goto continue
         end
 
-        if use_angle_limit and finite_angle then
-            local hit_direction = Vector3_normalize(to_hit_unit_center)
-            local hit_dot = Vector3_dot(forward, hit_direction)
-            if hit_dot < min_cosine then
-                goto continue
-            end
-        end
-
         local hit_unit_tag = smart_tag_system:unit_tag(hit_unit)
+        local hit_unit_center_pos = Actor_world_bounds(hit_actor)
         if tag_name == TAG_NAMES.ENEMY_TAG then
             if hit_unit_tag then
                 goto continue
@@ -719,13 +756,17 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
             visible = is_servo_skull_target_visible(companion_position, hit_unit, fixed_frame)
         elseif tag_name == TAG_NAMES.COMPANION_TAG then
             local half_height = Breed_height(hit_unit, hit_unit_breed_data) * 0.5
-            visible = is_cyber_mastiff_target_visible(ray_origin, up, hit_unit_center_pos, half_height, hit_unit, fixed_frame, hit_unit_tag, hit_unit_marked_by_execution_order)
+            visible = is_cyber_mastiff_target_visible(eye_position, up, hit_unit_center_pos, half_height, hit_unit, fixed_frame, hit_unit_tag, hit_unit_marked_by_execution_order)
         else
             local half_height = Breed_height(hit_unit, hit_unit_breed_data) * 0.5
-            visible = is_target_visible(ray_origin, up, hit_unit_center_pos, half_height, hit_unit, fixed_frame)
+            visible = is_target_visible(eye_position, up, hit_unit_center_pos, half_height, hit_unit, fixed_frame)
         end
 
         if not visible then
+            goto continue
+        end
+
+        if not is_target_pingable(eye_position, forward, flat_forward, hit_unit, hit_unit_position, to_hit_unit, physics_world) then
             goto continue
         end
 
@@ -736,6 +777,7 @@ function mod:find_auto_mark_target_unit(min_range, max_range, max_angle, tag_nam
         best_unit_is_attacking_player = hit_unit_is_attacking_player
         best_unit_is_dormant_daemonhost = hit_unit_is_dormant_daemonhost
         best_unit_marked_by_execution_order = hit_unit_marked_by_execution_order
+        best_unit_is_sticky_targeting = false
 
         ::continue::
     end

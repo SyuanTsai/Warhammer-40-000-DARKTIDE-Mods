@@ -776,14 +776,14 @@ local widgets = {
                 unit_text       = "meter",
                 decimals_number = 0
             },
-            {
-                setting_id      = "max_angle",
-                type            = "numeric",
-                default_value   = 0,
-                range           = { 0, 180 },
-                unit_text       = "degree",
-                decimals_number = 0
-            },
+            -- {
+            --     setting_id      = "max_angle",
+            --     type            = "numeric",
+            --     default_value   = 0,
+            --     range           = { 0, 180 },
+            --     unit_text       = "degree",
+            --     decimals_number = 0
+            -- },
             {
                 setting_id = "override_manual",
                 type = "checkbox",

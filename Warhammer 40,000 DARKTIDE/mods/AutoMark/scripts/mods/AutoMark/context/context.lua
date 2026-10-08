@@ -33,6 +33,11 @@ local function get_player_ability_extension()
     return player and ScriptUnit.extension(player.player_unit, "ability_system")
 end
 
+local function get_first_person_extension()
+    local player = Managers.player:local_player_safe(1)
+    return player and ScriptUnit.extension(player.player_unit, "first_person_system")
+end
+
 -- Track Player
 local function init_player()
     local player = Managers.player:local_player_safe(1)
@@ -55,13 +60,15 @@ local function init_player_components(player_data_extension)
     context.talent_resource_component = player_data_extension:read_component("talent_resource")
     context.disabled_character_state_component = player_data_extension:read_component("disabled_character_state")
     context.locomotion_component = player_data_extension:read_component("locomotion")
-    mod:print_debug("Init talent_resource_component")
+    context.first_person_component = player_data_extension:read_component("first_person")
+    mod:print_debug("Init components")
 end
 
 local function destroy_player_components()
     context.talent_resource_component = nil
     context.disabled_character_state_component = nil
     context.locomotion_component = nil
+    context.first_person_component = nil
 end
 
 -- Track Player Extensions
@@ -77,6 +84,10 @@ local function init_player_extensions()
     local player_ability_extension = get_player_ability_extension()
     if player_ability_extension then
         context.player_ability_extension = player_ability_extension
+    end
+    local first_person_extension = get_first_person_extension()
+    if first_person_extension then
+        context.first_person_extension = first_person_extension
     end
 end
 
@@ -293,6 +304,22 @@ mod:hook_safe(CLASS.PlayerUnitAbilityExtension, "delete",
         if self._player.viewport_name == "player1" then
             mod:print_debug("Delete PlayerUnitAbilityExtension")
             context.player_ability_extension = nil
+        end
+    end)
+
+mod:hook_safe(CLASS.PlayerUnitFirstPersonExtension, "init",
+    function(self)
+        if self._player.viewport_name == "player1" then
+            mod:print_debug("Init PlayerUnitFirstPersonExtension")
+            context.first_person_extension = self
+        end
+    end)
+
+mod:hook_safe(CLASS.PlayerUnitFirstPersonExtension, "destroy",
+    function(self)
+        if self._player.viewport_name == "player1" then
+            mod:print_debug("Destroy PlayerUnitFirstPersonExtension")
+            context.first_person_extension = nil
         end
     end)
 
