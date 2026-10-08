@@ -130,7 +130,7 @@ local function _enemy_marker_display_tooltip(localization_key)
         ja = enemy_name .. " のマーカーをレーダー上でどう表示するかを選択します: アイコンのみ、マーク付きアイコン、または無効。",
         ko = "레이더에서 " .. enemy_name .. " 마커를 어떻게 표시할지 선택합니다: 아이콘만, 표시된 아이콘 또는 비활성화.",
         ["zh-cn"] = "选择雷达上 " .. enemy_name .. " 标记的显示方式: 仅图标、已标记图标或禁用。",
-        ["zh-tw"] = "選擇雷達上 " .. enemy_name .. " 標記的顯示方式：僅圖示、已標記圖示或停用。",
+        ["zh-tw"] = "選擇雷達上 " .. enemy_name .. " 標記的顯示方式：僅圖示、帶標記圖示或停用。",
     }
 end
 
@@ -914,7 +914,7 @@ local _color_tooltip_texts = {
         ja = "このマーカーの周囲に描かれるフレームの ARGB 色を設定します。不透明度はアルファチャンネルです。",
         ko = "이 마커 주위에 그려지는 프레임의 ARGB 색상을 설정합니다. 불투명도는 알파 채널입니다.",
         ["zh-cn"] = "设置此标记周围边框的 ARGB 颜色。不透明度是 Alpha 通道。",
-        ["zh-tw"] = "設定此標記周圍邊框的 ARGB 顏色。不透明度是 Alpha 通道。",
+        ["zh-tw"] = "設定此標記周圍邊框的 ARGB 顏色，Alpha 通道控制不透明度。",
     },
     marker_plate = {
         en = "Sets the ARGB color of the plate drawn behind this marker's frame. Opacity is the alpha channel.",
@@ -928,7 +928,7 @@ local _color_tooltip_texts = {
         ja = "このマーカーのフレームの背後に描かれるプレートの ARGB 色を設定します。不透明度はアルファチャンネルです。",
         ko = "이 마커의 프레임 뒤에 그려지는 판의 ARGB 색상을 설정합니다. 불투명도는 알파 채널입니다.",
         ["zh-cn"] = "设置此标记边框后方底板的 ARGB 颜色。不透明度是 Alpha 通道。",
-        ["zh-tw"] = "設定此標記邊框後方底板的 ARGB 顏色。不透明度是 Alpha 通道。",
+        ["zh-tw"] = "設定此標記邊框後方底板的 ARGB 顏色，Alpha 通道控制不透明度。",
     },
     enemy_marker = {
         en = "Adjust the configured ARGB enemy marker color. Opacity is the alpha channel.",
@@ -4204,7 +4204,7 @@ return {
         ja = "スティム供給",
         ko = "스팀 보급",
         ["zh-cn"] = "兴奋剂补给 (已部署)",
-        ["zh-tw"] = "興奮劑補給 (已部署)",
+        ["zh-tw"] = "化學性依賴 (已部署)",
     },
 
     enemies_group = {
@@ -4686,7 +4686,7 @@ return {
         ja = "練習マーカーを通常のレーダーには出さず、任務全体が収まるオーバービューでのみ表示します。",
         ko = "연습 마커를 일반 레이더에는 표시하지 않고, 임무 전체가 들어가는 오버뷰에서만 표시합니다.",
         ["zh-cn"] = "让练习标记不出现在普通雷达上，只在能容纳整个任务的总览模式中显示。",
-        ["zh-tw"] = "讓練習標記不出現在普通雷達上，只在能容納整個任務的總覽模式中顯示。",
+        ["zh-tw"] = "讓練習標記不出現在普通雷達上，只在能容納整個任務的概覽模式中顯示。",
     },
     respawn_icon_scale_tooltip = {
         en = "Adjust the icon size for respawn awareness markers as a percentage.",
@@ -4742,7 +4742,7 @@ return {
         ja = "分岐点で任務が残す道を、SafeRoute モッドの SAFE ROUTE マーカーから取得して表示します。SafeRoute のガイドドットは表示されません。SafeRoute がインストールされ有効になっている必要があります。",
         ko = "갈림길에서 임무가 유지하는 길을 SafeRoute 모드의 SAFE ROUTE 마커에서 가져와 표시합니다. SafeRoute의 안내 점은 표시되지 않습니다. SafeRoute가 설치되어 활성화되어 있어야 합니다.",
         ["zh-cn"] = "显示任务在岔路口保留的道路，取自 SafeRoute 模组的 SAFE ROUTE 标记。不显示 SafeRoute 的引导点。需要安装并启用 SafeRoute。",
-        ["zh-tw"] = "顯示任務在岔路口保留的道路，取自 SafeRoute 模組的 SAFE ROUTE 標記。不顯示 SafeRoute 的引導點。需要安裝並啟用 SafeRoute。",
+        ["zh-tw"] = "顯示岔路口中本次任務可通行的道路，與 SafeRoute 模組的 SAFE ROUTE 標記同步。不顯示 SafeRoute 的引導點。需要安裝並啟用 SafeRoute。",
     },
     show_saferoute_wrong_tooltip = {
         en = "Shows the roads the mission did not keep at a branching path, mirrored from the SafeRoute mod's WRONG WAY markers. Requires SafeRoute to be installed and active, with its \"Mark wrong roads\" setting on.",
@@ -4756,7 +4756,7 @@ return {
         ja = "分岐点で任務が残さなかった道を、SafeRoute モッドの WRONG WAY マーカーから取得して表示します。SafeRoute がインストールされ有効で、その \"Mark wrong roads\" 設定がオンになっている必要があります。",
         ko = "갈림길에서 임무가 유지하지 않은 길을 SafeRoute 모드의 WRONG WAY 마커에서 가져와 표시합니다. SafeRoute가 설치되어 활성화되어 있고 \"Mark wrong roads\" 설정이 켜져 있어야 합니다.",
         ["zh-cn"] = "显示任务在岔路口未保留的道路，取自 SafeRoute 模组的 WRONG WAY 标记。需要安装并启用 SafeRoute，且开启其 \"Mark wrong roads\" 设置。",
-        ["zh-tw"] = "顯示任務在岔路口未保留的道路，取自 SafeRoute 模組的 WRONG WAY 標記。需要安裝並啟用 SafeRoute，且開啟其 \"Mark wrong roads\" 設定。",
+        ["zh-tw"] = "顯示岔路口中本次任務未開放的道路，與 SafeRoute 模組的 WRONG WAY 標記同步。需要安裝並啟用 SafeRoute，且開啟其 \"Mark wrong roads\" 設定。",
     },
     saferoute_icon_scale_tooltip = {
         en = "Adjust the icon size for SafeRoute route markers as a percentage.",
@@ -6676,7 +6676,7 @@ return {
         ja = "設置されたスティム供給と効果範囲をレーダーに表示します。",
         ko = "배치된 스팀 보급과 효과 범위를 레이더에 표시합니다.",
         ["zh-cn"] = "在雷达上显示已部署的兴奋剂补给及其效果范围。",
-        ["zh-tw"] = "在雷達上顯示已部署的興奮劑補給及其效果範圍。",
+        ["zh-tw"] = "在雷達上顯示巢都渣滓已部署的化學性依賴補給，以及其效果範圍。",
     },
     enemies_icon_scale_tooltip = {
         en = "Adjust the icon size for all enemy markers as a percentage.",
