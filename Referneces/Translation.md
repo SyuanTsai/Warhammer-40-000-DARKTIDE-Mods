@@ -472,7 +472,7 @@
 - Damage vs Specialists - 對專家傷害
 - Stamina - 耐力
 - Weakspot damage - 弱點傷害
-- Block Efficiency - 格檔效率
+- Block Efficiency - 格擋效率
 - Cost for Sprinting - 衝刺體力消耗
 
 ### 近戰武器屬性 - Melee Weapon
@@ -490,7 +490,7 @@
 - Damage vs Specialists - 專家
 - Stamina - 耐力
 - Weakspot damage - 弱點傷害
-- Block Efficiency - 格檔效率
+- Block Efficiency - 格擋效率
 - Cost for Sprinting - 衝刺體力消耗
 
 ### 遠程武器屬性 - Ranged Weapon
@@ -521,7 +521,7 @@
 #### 靈能者專有名詞
 
 - Peril - 靈能反噬、反噬
-- Damage wrap - 靈能傷害
+- Damage wrap - 亞空間傷害
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
 - Warp Charge - 亞空間充能
@@ -797,7 +797,7 @@
 - Martyrdom - 殉道
 - I Shall Not Fall - 不滅意志
 - On the Brink - 危境之際
-- Maniac - 狂燥之心
+- Maniac - 狂躁之心
 - Restorative Verses - 治癒詩頌
 - Martyr's Purpose - 殉道者之願
 - Inexorable Judgement - 命定審判
@@ -845,7 +845,7 @@
 - Hubris - 傲慢
 - Blinded by Blood - 血色迷障
 - Prime Target - 頭號目標
-- No Respite - 刻不容緩
+- No Respite - 不留餘地
 - Unfaltering - 不屈之志
 - Faith's Fortitude - 信仰之勇
 - Restoring Faith - 恢復信仰
@@ -931,7 +931,7 @@
 - One Motion - 行雲流水
 - Tactical Reload - 戰術裝填
 - Close Order Drill - 密集隊形訓練
-- Superiority Complex - 優越情節
+- Superiority Complex - 優越情結
 - Iron Will - 鋼鐵意志
 - Trench Fighter Drill - 戰壕兵訓練
 - Field Improvisation - 臨場發揮
@@ -943,7 +943,7 @@
 - Grenadier - 擲彈兵/轟炸者
 - Demolition Stockpile - 炸藥儲備
 - Grenade Tinkerer - 手雷專家
-- Precision Strikes - 堅定不移
+- Precision Strikes - 精準打擊
 - Deadshot - 死亡射手
 - Born Leader - 天生領袖
 - Leave No One Behind - 不拋棄不放棄
@@ -1011,7 +1011,7 @@
 - Go Get 'Em! - 往前進攻！
 - Execution Order - 處刑命令
 - Efficient Killer - 效率殺手
-- Malocator - 生化武器關
+- Malocator - 生化武器官
 - No Lenience - 罪不可赦
 - Keeping Protocol - 殺戮協議
 - Not Far Behind - 不落人後
@@ -1112,9 +1112,9 @@
 - Focused Resolve - 專注凝神
 - Rampage! - 橫衝直撞！
 - Channelled Aggression - 凝聚殺意
-- Boiling Blood - 碎骨打擊
-- Forge's Bellow - 沸騰之血
-- Pulverising Strikes - 熔爐怒吼
+- Boiling Blood - 沸騰之血
+- Forge's Bellow - 熔爐怒吼
+- Pulverising Strikes - 碎骨打擊
 - Stimm Supply - 化學性依賴
 - Practiced Deployment - 熟練部署
 - Booby Trap - 毒性陷阱
@@ -1148,7 +1148,7 @@
 - Calling for a Time Out - 請求暫停
 - Burst of Energy - 能量爆發
 - Sticky Hands - 黏黏手
-- A Tertium Welcome - 特提恩是迎賓
+- A Tertium Welcome - 特提恩式迎賓
 - Speedloader - 快速裝填
 - Float Like a Butterfly - 翩翩蝶舞
 - Regained Posture - 恢復姿態
@@ -1164,7 +1164,7 @@
 - Hive City Brawler - 巢都格鬥家
 - Cheap Shots - 趁人之危
 - Battering Strikes - 猛烈劈擊
-- Coated Weaponry - 塗讀武裝
+- Coated Weaponry - 塗毒武裝
 - Ammo Jack - 軍火商
 - Pickpocket - 順手牽羊
 - Hyper-Critical - 心狠手辣
@@ -1319,7 +1319,7 @@
 - Superior Tracking Litanies - 卓越追蹤聖歌
 - Omnissian Recharge Litany - 歐姆尼賽亞充能聖歌
 - Residual Current Buffer - 剩餘電流緩衝
-- Power Redistribution Uplink - 能量載分配鏈路
+- Power Redistribution Uplink - 能量再分配鏈路
 - Binary Ballistics Protocol - 二元彈道協議
 - Threat Detection Imperative - 威脅偵測指令
 - Assassination Protocols - 暗殺協議
