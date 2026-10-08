@@ -146,13 +146,9 @@
 - Celerity Stimm - 敏捷興奮劑
 - Stimm - 興奮劑
 - Hive Scum Stimm - 巢都敗類興奮劑
-
 - Boost Stimm - 專注興奮劑
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
 - Power Stimm - 戰鬥興奮劑
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
 - Speed Stimm - 敏捷興奮劑
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
 
 ### 怪物相關
 
@@ -205,7 +201,6 @@
 - Armored Groaner - 重甲呻吟者
 
 
-
 ### 遊戲詞條相關
 
 - Enhanced Blitz - 閃擊強化
@@ -220,9 +215,7 @@
 - Enraging Elites - 背水一戰(狂暴)
 
 - Marked Healers - 蔓生花園(回血)
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
 - The Encroaching Garden - 蔓生花園(回血)
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
 
 ## 武器
 
@@ -285,312 +278,182 @@
 
 ### 近戰武器祝福
 
-- Opportunist - Оппортунист - 機會主義者
+- Opportunist - 機會主義者
 - Bloodletter - 放血者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_activated_hit`，hash `08b71eb1`；英文／繁中RAW配對確認。
 - Bloodthirsty - 嗜血
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill`，hash `0afad738`；英文／繁中RAW配對確認。
 - Headtaker - 奪顱者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_hit`，hash `c9a0bfb2`；英文／繁中RAW配對確認。
 - Slaughterer - 殺戮者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_kill`，hash `cee6f091`；英文／繁中RAW配對確認。
-- Rev it up -提速
+- Rev it Up - 提速
 - Thrust - 推進
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_based_on_charge_time`，hash `080e50bd`；英文／繁中RAW配對確認。
 - Thunderous - 雷鳴
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_targets_receive_rending_debuff`，hash `f3d437f2`；英文／繁中RAW配對確認。
 - Wrath - 憤怒
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_cleave`，hash `fd5eeb07`；英文／繁中RAW配對確認。
 - Shred - 粉碎
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_crit_chance`，hash `39e910d6`；英文／繁中RAW配對確認。
 - Savage Sweep - 野蠻橫掃
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_attack_cleave_on_multiple_hits`，hash `82900835`；英文／繁中RAW配對確認。
 - Rampage - 暴走
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_melee_damage_on_multiple_hits`，hash `ab832d02`；英文／繁中RAW配對確認。
 - Devastating Strike - 毀滅打擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_melee_cleave_on_crit`，hash `1a966f66`；英文／繁中RAW配對確認。
 - Decimator - 屠戮者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_power`，hash `77cc5d18`；英文／繁中RAW配對確認。
 - Brutal Momentum - 野蠻攻勢
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_cleave_on_weakspot_kill`，hash `4ae27066`；英文／繁中RAW配對確認。
 - Limbsplitter - 斷肢者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_first_attack`，hash `0bc02d91`；英文／繁中RAW配對確認。
 - All or Nothing - 孤注一擲
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_scaled_on_stamina`，hash `c92a8c2a`；英文／繁中RAW配對確認。
 - Decapitator - 斬首者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_rending_on_one_hit_kills`，hash `fc38d118`；英文／繁中RAW配對確認。
 - Agile - 敏捷
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_dodge_count_reset_on_weakspot_hit`，hash `c9f41884`；英文／繁中RAW配對確認。
 - Slaughter Spree - 殺戮狂潮
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill`，hash `20186e73`；英文／繁中RAW配對確認。
 - Relentless Strikes - 持續打擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_same_enemy_attacks`，hash `adffdaf9`；英文／繁中RAW配對確認。
 - Flesh Tearer - 血肉撕裂者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_crit_melee`，hash `6f0bf4f9`；英文／繁中RAW配對確認。
 - Lacerate - 撕碎
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_non_weakspot_hit`，hash `d83d803a`；英文／繁中RAW配對確認。
 - Executor - 行刑者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_weakspot_hits_increases_power`，hash `dd9dc2c9`；英文／繁中RAW配對確認。
 - Riposte - 還擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_dodge_grants_crit_chance`，hash `ce5b71c4`；英文／繁中RAW配對確認。
 - Precognition - 未卜先知
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_dodge_grants_finesse_bonus`，hash `621fe25c`；英文／繁中RAW配對確認。
 - Haymaker - 強力一擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_heavy_chained_hits_increases_killing_blow_chance`，hash `e93686b2`；英文／繁中RAW配對確認。
 - Smackdown - 擊倒
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_after_punching_staggered_enemy`，hash `90a360d3`；英文／繁中RAW配對確認。
 - Mercy Killer - 仁慈殺手
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_weakspot_damage_on_bleeding`，hash `5214e0db`；英文／繁中RAW配對確認。
 - Ruthless Backstab - 無情背刺
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_rending_on_backstabs`，hash `3c7c59e5`；英文／繁中RAW配對確認。
 - Uncanny Strike - 詭異打擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_rending_on_weakspot`，hash `64521001`；英文／繁中RAW配對確認。
 - Trauma - 創傷
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_consecutive_hits_increases_stagger`，hash `af38ab6e`；英文／繁中RAW配對確認。
-- Vicious Slice - 凶狠切割
+- Vicious Slice - 兇狠切割
 - Hammerblow - 錘擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_increase_impact_on_hit`，hash `64e377e2`；英文／繁中RAW配對確認。
-- Skullcrusher - 粉碎者
+- Skullcrusher - 碎顱者
 - Thunderstrike - 雷霆打擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_staggered_targets_receive_increased_stagger_debuff`，hash `a6a674f9`；英文／繁中RAW配對確認。
 - Chained Deathblow - 致命連擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_on_weakspot_kill`，hash `5beacc86`；英文／繁中RAW配對確認。
 - Deathblow - 致命一擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill`，hash `7d810db1`；英文／繁中RAW配對確認。
 - Perfect Strike - 完美一擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_pass_past_armor_on_crit`，hash `0893680f`；英文／繁中RAW配對確認。
 - Bladed Momentum - 利刃攻勢
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_rending_on_cleave`，hash `2112d795`；英文／繁中RAW配對確認。
 - Deflector - 偏轉
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_can_block_ranged`，hash `40ed157d`；英文／繁中RAW配對確認。
 - Momentum - 勢頭
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_recovery_on_multiple_hits`，hash `e4cb3efd`；英文／繁中RAW配對確認。
-- Murderous Tranquility - 兇殘之寧
+- Murderous Tranquility - 凶殘之寧
 - Blazing Spirit - 燃燒靈魂
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_warp_burninating_on_crit`，hash `f33675ec`；英文／繁中RAW配對確認。
+- Blazing Spirit - 燃燒靈魂（靈能法杖與雙手力場劍）
 - Unstable Power - 不穩定能量
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_warp_charge_power_bonus`，hash `2410af29`；英文／繁中RAW配對確認。
 - Warp Slice - 亞空間斬
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_wind_slash_crits`，hash `d4193c5e`；英文／繁中RAW配對確認。
 - Exorcist - 驅魔者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge`，hash `e6a1baba`；英文／繁中RAW配對確認。
-- Superiority - 優勢
+- Superiority - 優勢（近戰力量）
+- Superiority - 優勢（通用力量）
 - Lightning Reflexes - 閃電反射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_block_has_chance_to_stun`，hash `c728ed68`；英文／繁中RAW配對確認。
 - High Voltage - 高壓電
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_damage_bonus_vs_electrocuded`，hash `7c8a57a6`；英文／繁中RAW配對確認。
 - Falter - 踉蹌
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_negate_stagger_reduction_on_weakspot`，hash `98c4c535`；英文／繁中RAW配對確認。
 - Overwhelming Force - 壓倒性的武力
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_staggering_hits_has_chance_to_stun`，hash `8c6306ed`；英文／繁中RAW配對確認。
 - Counterattack - 反擊
-  - 本體1.13.1名稱鍵 `loc_attack_speed_on_perfect_block`，hash `26defa8a`；英文／繁中RAW配對確認。
 - Cranial Grounding - 顱骨落地
-  - 本體1.13.1名稱鍵 `loc_chained_weakspot_hits_increase_finesse_and_reduce_overheat`，hash `96f66ae3`；英文／繁中RAW配對確認。
 - Overload - 超載
-  - 本體1.13.1名稱鍵 `loc_explosion_on_overheat_lockout`，hash `1809b21c`；英文／繁中RAW配對確認。
 - Energy Leakage - 能量洩漏
-  - 本體1.13.1名稱鍵 `loc_power_bonus_scaled_on_heat`，hash `b56e85e7`；英文／繁中RAW配對確認。
 - Heatsink - 散熱器
-  - 本體1.13.1名稱鍵 `loc_reduce_fixed_overheat_amount`，hash `1a699330`；英文／繁中RAW配對確認。
 - Syphon - 虹吸
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_regain_toughness_on_multiple_hits_by_weapon_special`，hash `bcf9c4be`；英文／繁中RAW配對確認。
 - Energy Transfer - 能量轉換
-  - 本體1.13.1名稱鍵 `loc_slower_heat_buildup_on_perfect_block`，hash `c5793ef5`；英文／繁中RAW配對確認。
 - Shock & Awe / Shock and Awe - 震懾
 - Take a Swing - 揮拳出擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_weakspot_damage_bonus_on_pushed_enemies`，hash `78bd4e86`；英文／繁中RAW配對確認。
 - Supercharge - 超級充能
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rend_on_activated_attacks`，hash `ede57171`；英文／繁中RAW配對確認。
 - Power Cycler - 能量循環
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_extended_activation_duration_on_chained_attacks`，hash `739921c8`；英文／繁中RAW配對確認。
 - Sunder - 破甲
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_armor_cleave_on_activated_attacks`，hash `c2ba97f2`；英文／繁中RAW配對確認。
 - Sucker Punch - 突然襲擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_after_punch`，hash `e6773a0a`；英文／繁中RAW配對確認。
 - Confident Strike - 堅定打擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_recovery_on_chained_attacks`，hash `a38b21e9`；英文／繁中RAW配對確認。
 - No Guts, No Glory - 不入虎穴，焉得虎子
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_regen_on_punching_elites`，hash `5da2fc91`；英文／繁中RAW配對確認。
 - Bash - 猛撞
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_push`，hash `71cd141b`；英文／繁中RAW配對確認。
 - Tenderiser - 肉槌
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_power_on_weapon_special_follow_up_hits`，hash `b746cc13`；英文／繁中RAW配對確認。
 - Unstoppable Force - 勢不可擋
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_pass_past_armor_on_heavy_attack`，hash `281bde35`；英文／繁中RAW配對確認。
 - Torment - 凌遲
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_weapon_special_hit`，hash `6c7642c3`；英文／繁中RAW配對確認。
 - Slow and Steady - 緩慢而確實
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_hit_based_on_charge_time`，hash `5fafa09d`；英文／繁中RAW配對確認。
 - Power Surge - 能量湧動
 - Last Guard - 最後防線
-  - 本體1.13.1名稱鍵 `loc_trait_block_break_pushes`，hash `9825f3c4`；英文／繁中RAW配對確認。
 - Offensive Defence - 反守為攻
-  - 本體1.13.1名稱鍵 `loc_trait_damage_bonus_on_block`，hash `a2a3e589`；英文／繁中RAW配對確認。
-- Shock & Awe / Shock and Awe - 震懾
+- Voltagheist Overload - 電靈超載
+- Can Opener - 開罐器
+- Deadly Frequencies - 致命頻率
+- Machine Spirit Resurgent - 機魂再臨
+- Refined Lethality - 精煉殺意
+- Enhanced Voltaic Arcs - 強化電流弧
+- Hit & Run - 遊擊（特殊攻擊命中）
 
 ### 遠程武器祝福
 
 - Raking Fire - 掃射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_allow_flanking_and_increased_damage_when_flanking`，hash `955b61e0`；英文／繁中RAW配對確認。
 - Dumdum - 達姆彈
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_consecutive_hits_increases_close_damage`，hash `ad18b72c`；英文／繁中RAW配對確認。
-- Hit & Run /  Hit and Run - 游擊
+- Hit & Run /  Hit and Run - 遊擊
 - Sustained Fire - 持續射擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_followup_shots_ranged_damage`，hash `a4047175`；英文／繁中RAW配對確認。
 - Punishing Salvo - 懲罰齊射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_followup_shots_ranged_weakspot_damage`，hash `dbf6f0e3`；英文／繁中RAW配對確認。
 - Fire Frenzy - 烈火熱焰
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_close_damage_on_close_kill`，hash `41f0c1d1`；英文／繁中RAW配對確認。
 - Deathspitter - 死亡噴吐
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_close_kill`，hash `00d6e1d9`；英文／繁中RAW配對確認。
 - Stripped Down - 輕裝
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_sprint_speed`，hash `05774d98`；英文／繁中RAW配對確認。
 - Speedload - 快速裝彈
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_slide`，hash `f4aa4527`；英文／繁中RAW配對確認。
 - Terrifying Barrage - 恐怖阻擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_suppression_on_close_kill`，hash `1978bbc9`；英文／繁中RAW配對確認。
 - Roaring Advance - 咆哮突進
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_movement_speed_on_continuous_fire`，hash `3b53eda2`；英文／繁中RAW配對確認。
 - Ceaseless Barrage - 持續阻擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_suppression_on_continuous_fire`，hash `99f3b21e`；英文／繁中RAW配對確認。
 - Inspiring Barrage - 振奮彈幕
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire`，hash `ee616ba9`；英文／繁中RAW配對確認。
 - Ghost - 幽靈
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot`，hash `b358bc4e`；英文／繁中RAW配對確認。
 - Surgical - 精確打擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_based_on_aim_time`，hash `6abd0dd5`；英文／繁中RAW配對確認。
 - Crucian Roulette - 克魯錫安輪盤
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_based_on_ammo_left`，hash `4b48aa5c`；英文／繁中RAW配對確認。
 - Deadly Accurate - 致命精準
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_weakspot_finesse`，hash `6b6877ef`；英文／繁中RAW配對確認。
 - No Respite - 刻不容緩
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stagger_count_bonus_damage`，hash `0d7da51d`；英文／繁中RAW配對確認。
 - Opening Salvo - 開啟齊射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_first_shot`，hash `ea6a5633`；英文／繁中RAW配對確認。
 - Headhunter - 獵頭者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_weakspot_stacking_crit_chance`，hash `ddb302e2`；英文／繁中RAW配對確認。
 - Between the Eyes - 正中眉心
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_suppression_negation_on_weakspot`，hash `d3144a13`；英文／繁中RAW配對確認。
 - Blaze Away - 連續發射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_continuous_fire`，hash `f52898c5`；英文／繁中RAW配對確認。
+- Blaze Away - 連續發射（射擊連段）
 - Powderburn - 火藥灼傷
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills`，hash `f5213560`；英文／繁中RAW配對確認。
 - Cavalcade - 接連不斷
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_crit_bonus_on_continuous_fire`，hash `0915b223`；英文／繁中RAW配對確認。
 - Pinning Fire - 鉗制射擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies`，hash `3ce9bdc4`；英文／繁中RAW配對確認。
 - Run 'n' Gun - Run and Gun - 連跑帶打
 - Puncture - 出血穿透
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_ranged`，hash `312743c2`；英文／繁中RAW配對確認。
 - Lethal Proximity - 致命零距離
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_close_explosion`，hash `9fbc423b`；英文／繁中RAW配對確認。
 - Point Blank - 近身平射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_bonus_on_melee_kills`，hash `92eda1aa`；英文／繁中RAW配對確認。
 - Execution - 處決
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_damage_vs_stagger`，hash `2e42e848`；英文／繁中RAW配對確認。
 - Gloryhunter - 榮耀獵手
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_elite_kills`，hash `e31c381b`；英文／繁中RAW配對確認。
 - Surge - 湧動
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_double_shot_on_crit`，hash `7873018f`；英文／繁中RAW配對確認。
 - Warp Flurry - 亞空間亂舞
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_faster_charge_on_chained_secondary_attacks`，hash `4cf5de54`；英文／繁中RAW配對確認。
 - Warp Nexus - 亞空間樞紐
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_scaled_on_peril`，hash `847eaa2c`；英文／繁中RAW配對確認。
 - Transfer Peril - 轉移反噬
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_peril_vent_on_weakspot_hit`，hash `ad0c7fb2`；英文／繁中RAW配對確認。
 - Rending Shockwave - 撕扯震盪
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_rend_armor_on_aoe_charge`，hash `8af2f9ee`；英文／繁中RAW配對確認。
 - Focused Channelling - 專注引導
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_uninterruptable_while_charging`，hash `768a0f8c`；英文／繁中RAW配對確認。
-- Blazing Spirit - 燃燒靈魂
+- Blazing Spirit - 燃燒靈魂（靈能法杖與雙手力場劍）
 - Penetrating Flame - 穿透火焰
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_from_dot_burning`，hash `e02d8784`；英文／繁中RAW配對確認。
 - Showstopper - 歎為觀止
-  - 既有詞表異體拼字「嘆為觀止」；同hash本體RAW使用「歎為觀止」。
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chance_to_explode_elites_on_kill`，hash `2fb3b568`；英文／繁中RAW配對確認。
 - Infernus - 煉獄
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_burninating_on_crit`，hash `fa25b219`；英文／繁中RAW配對確認。
 - Efficiency - 效率
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_first_shot_ammo_cost_reduction`，hash `18073829`；英文／繁中RAW配對確認。
 - Concentrated Fire - 集中火力
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_chained_weakspot_hits`，hash `cc0b463d`；英文／繁中RAW配對確認。
 - Desperado - 亡命之徒
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_successful_dodge`，hash `54cd474d`；英文／繁中RAW配對確認。
 - Reassuringly Accurate - 慰藉精準
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_crit_kills`，hash `f59c278d`；英文／繁中RAW配對確認。
 - Flechette - 飛鏢彈
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_crit_ranged`，hash `d1d03cff`；英文／繁中RAW配對確認。
 - Man-Stopper - 大口徑彈藥
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_cleave_on_crit`，hash `69135934`；英文／繁中RAW配對確認。
 - Scattershot - 散彈
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot`，hash `83faa1f6`；英文／繁中RAW配對確認。
 - Full Bore - 全孔射擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all`，hash `adf6c70b`；英文／繁中RAW配對確認。
 - Both Barrels - 雙管齊發
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_ranged_weapon_special_kill`，hash `5ea2e09a`；英文／繁中RAW配對確認。
 - Trickshooter - 狡猾射手
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_chained_weakspot_hits`，hash `91af0d57`；英文／繁中RAW配對確認。
 - Hand-Cannon - 手銃
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_rending_on_crit`，hash `1391c6e5`；英文／繁中RAW配對確認。
 - Shattering Impact - 破碎衝擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rend_on_projectile_hit`，hash `36f31112`；英文／繁中RAW配對確認。
 - Everlasting Flame - 永燃烈焰
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_ammo_spent_from_reserve_on_crit`，hash `fc0e6843`；英文／繁中RAW配對確認。
 - Quickflame - 迅捷火焰
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_faster_reload_on_empty_clip`，hash `13547a5e`；英文／繁中RAW配對確認。
 - Fan the Flames - 煽風點火
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_ignore_stagger_reduction_with_primary_on_burning`，hash `0037e44e`；英文／繁中RAW配對確認。
 - Overpressure - 超壓
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_scales_with_clip_percentage`，hash `568c86d7`；英文／繁中RAW配對確認。
 - Hot-Shot - 激射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_cleave_on_weakspot_hits`，hash `83870716`；英文／繁中RAW配對確認。
 - Weight of Fire - 猛攻
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_faster_charge_on_chained_attacks`，hash `85a809fe`；英文／繁中RAW配對確認。
 - Armourbane - 護甲之禍
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_rend_armor_on_charged_shots`，hash `c3565b9b`；英文／繁中RAW配對確認。
 - Power Blast - 聚能爆發
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time`，hash `3d2ff140`；英文／繁中RAW配對確認。
 - Gets Hot! - 燃起來！
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_scaled_on_heat`，hash `0ecf6094`；英文／繁中RAW配對確認。
 - Volatile - 熱力震盪
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_lower_overheat_gives_faster_charge`，hash `da057b0d`；英文／繁中RAW配對確認。
-- Blaze Away - 連續發射
 - Rising Heat - 升溫
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_scaled_on_heat`，hash `d4f69cb8`；英文／繁中RAW配對確認。
 - Optimised Cooling - 優化冷卻
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_reduced_heat_on_continuous_charge`，hash `4e05ef2d`；英文／繁中RAW配對確認。
 - Focused Cooling - 專注冷卻
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_reduced_overheat_on_crits`，hash `cf4040c3`；英文／繁中RAW配對確認。
 - Gauntlet Momentum - 交叉動量
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_chained_melee`，hash `b3541eaf`；英文／繁中RAW配對確認。
-- Pulverise - 粉碎
+- Pulverise - 粉碎（Pulverise）
 - Disruptive - 顛覆性力量
 - Explosive Offensive - 爆炸使我強大
 - Pinpointing target - 精確定位
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_based_on_charge_time_ranged`，hash `e44ee018`；英文／繁中RAW配對確認。
 - Charmed Reload - 魔力彈藥
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_ammo_refill_from_reserve_on_crit`，hash `0c513155`；英文／繁中RAW配對確認。
 - Overwhelming Fire - 壓倒性火力
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_chained_hits_on_single_target`，hash `8e60a921`；英文／繁中RAW配對確認。
-- Can opener - 開罐器
-- Born in blood - 浴血而生
+- Can Opener - 開罐器
+- Born in Blood - 浴血而生
 - Pierce - 穿透
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_pass_trough_armor_on_weapon_special`，hash `6c818ab6`；英文／繁中RAW配對確認。
 - Punishing Fire - 懲罰射擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_shot_power_bonus_after_weapon_special_cleave`，hash `e215d96e`；英文／繁中RAW配對確認。
 - Inspiring Barrage - 激勵彈幕
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire_alternative`，hash `02d303b6`；英文／繁中RAW配對確認。
-  - 保留替代名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire_alternative`，hash `02d303b6`；本次雙鏈重型機槍項目使用非alternative鍵 `ee616ba9`，故玩家頁採「振奮彈幕」。兩筆均由1.13.1中英RAW精確配對，不據同名英文合併項目。
 - Expansive - 擴展性
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_weapon_special_power_bonus_after_one_shots`，hash `e639c6a3`；英文／繁中RAW配對確認。
-- Shrapnel - 破片四射
+- Shrapnel - 破片四濺
 - Blast Zone - 狂轟猛炸
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_explosion_radius_bonus_on_continuous_fire`，hash `d72f3677`；英文／繁中RAW配對確認。
 - Adhesive Charge - 黏著炸藥
-  - 文件譯名；本體1.13.1繁中仍為「粘性炸藥」。名稱鍵 `loc_trait_bespoke_grenades_stick_to_monsters`，hash `d10e33b3`；保留同hash中英RAW原文與文件翻譯分層。
 - Marksman's Reflex - 迅雷反射
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_weakspot_projectile_hit_increases_reload_speed`，hash `fd4fa8f4`；英文／繁中RAW配對確認。
+- Telescopic Sight - 千里眼
+- Bug Out - 開溜
+- Punisher - 懲罰者
+- Quickloader - 快速裝填
+- Enhanced Voltaic Arcs - 強化電流弧
 
 ## 裝備屬性
 
@@ -609,7 +472,7 @@
 - Damage vs Specialists - 對專家傷害
 - Stamina - 耐力
 - Weakspot damage - 弱點傷害
-- Block Efficiency - 格檔效率
+- Block Efficiency - 格擋效率
 - Cost for Sprinting - 衝刺體力消耗
 
 ### 近戰武器屬性 - Melee Weapon
@@ -627,7 +490,7 @@
 - Damage vs Specialists - 專家
 - Stamina - 耐力
 - Weakspot damage - 弱點傷害
-- Block Efficiency - 格檔效率
+- Block Efficiency - 格擋效率
 - Cost for Sprinting - 衝刺體力消耗
 
 ### 遠程武器屬性 - Ranged Weapon
@@ -651,16 +514,19 @@
 
 1.13 新增及盤點補缺名稱已按 Steam Build 25606770 的英文／繁中相同名稱鍵與 hash 配對，直接採用遊戲繁中名稱。標記「過時」的詞條保留歷史譯名。[完整名稱對照清單](../Darktide%20Translation%20Workspace/Term%20Candidates.md)｜[文本配對紀錄](../AI-LOGS/Game%20Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING.json)。
 
+本次新增及盤點補缺共 55 項直接採用 1.13.1／Steam Build 25606770 的 zh-tw 名稱，包含 13 項本版新增與 42 項既有盤點補缺。興奮劑配方依同版格式參數代入羅馬數字等級；名稱鍵、hash 與原始模板見文本配對紀錄。
+
 ### Psyker - 靈能者
 
 #### 靈能者專有名詞
 
 - Peril - 靈能反噬、反噬
-- Damage wrap - 靈能傷害
+- Damage wrap - 亞空間傷害
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
 - Warp Charge - 亞空間充能
 - Warp Resistance - 反噬抗性
+- Precision - 精準
 
 #### 靈能者天賦
 
@@ -755,12 +621,23 @@
 - Penetration of the Soul - 靈魂穿透
 - Crystalline Will - 結晶意志
 - Warp Ghost - 亞空間幽魂
-- Tranquility Through Slaughter - 殺無赦，心祥和（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Surety of Arms - 武器在手，信心我有。
+- Focused Warp - 聚焦次元
+- Peril Equilibrium - 危險平衡
+- Psykinetic Grip - 念力之握
+- Perils of the Warp - 次元危險
+
+##### 一般天賦(過時)
+
+- Tranquility Through Slaughter - 殺無赦，心祥和（過時：1.13 移除；保留歷史譯名）
 
 ### Ogryn - 歐格林
 
 #### 歐格林專有名詞
+
+- Feel No Pain - 麻木
+- Lucky Bullet - 幸運子彈
+- Trample - 踐踏
 
 #### 歐格林天賦
 
@@ -866,12 +743,19 @@
 - Won't Give In - 絕不屈服
 - Spray and Slay - 射盡殺戮
 - Lucky Streak - 好運連連
+- Found Some More - 發現更多
+- Thick Skin - 厚實表皮
+- Outta My Way! - 滾吧你！
 
 ### Zealot - 狂信徒
 
 #### 狂信徒專有名詞
+
 - Holy Relic - 聖物
 - Fury Faithful - 有信者之怒
+- Momentum - 勢能
+- Stealth - 隱身
+- Fury - 狂怒
 
 #### 狂信徒天賦
 
@@ -913,7 +797,7 @@
 - Martyrdom - 殉道
 - I Shall Not Fall - 不滅意志
 - On the Brink - 危境之際
-- Maniac - 狂燥之心
+- Maniac - 狂躁之心
 - Restorative Verses - 治癒詩頌
 - Martyr's Purpose - 殉道者之願
 - Inexorable Judgement - 命定審判
@@ -921,6 +805,9 @@
 - Inebriate's Poise - 飄忽身形
 - Eternal - 永恆
 - Pious Cut-Throat - 虔誠刺客
+- Zealous Pilgrim - 狂熱朝聖者
+- Risen - 復活
+- Fire and Fury - 烈焰與怒火
 
 ##### 一般天賦
 
@@ -939,7 +826,6 @@
 - Holy Revenant - 吊命聖徒
 - Thy Wrath be Swift - 勃然大怒
 - Desperation - 背水一戰
-- Punishment - 懲罰（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Against the Odds - 逆境而上
 - Shield of Contempt - 輕蔑之盾
 - Unseen Blade - 無形之刃
@@ -947,12 +833,10 @@
 - Faithful Frenzy - 信仰狂亂
 - Providence - 神恩庇護
 - Good Balance - 四平八穩
-- Impassible - 不可逾越（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Retaliatory Defence - 反制護盾
 - Abolish Blasphemers - 弒除瀆者
 - The Master's Retribution - 大師的反擊
 - Dance of Death - 死亡之舞
-- Grievous Wounds - 重傷（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Scourge - 天災
 - Enduring Faith - 堅韌信仰
 - Punish Impiety - 褻瀆必懲
@@ -961,349 +845,32 @@
 - Hubris - 傲慢
 - Blinded by Blood - 血色迷障
 - Prime Target - 頭號目標
-- No Respite - 刻不容緩
+- No Respite - 不留餘地
 - Unfaltering - 不屈之志
 - Faith's Fortitude - 信仰之勇
 - Restoring Faith - 恢復信仰
 - Behind the Lines - 敵後行動
 - Relentless Fervor - 狂熱不懈
 - Riposte - 靈活還擊
+- Wait in Line - 排隊等候
+- Holy Tools - 神聖工具
+- Got Your Back - 為您撐腰
+- Purifying Hatred - 淨化仇恨
+
+##### 一般天賦(過時)
+
+- Punishment - 懲罰（過時：1.13 移除；保留歷史譯名）
+- Impassible - 不可逾越（過時：1.13 移除；保留歷史譯名）
+- Grievous Wounds - 重傷（過時：1.13 移除；保留歷史譯名）
 
 ### Veteran - 老兵
 
 #### 老兵專有名詞
 
-- `loc_talent_veteran_ability_marksman` / `veteran_increased_weakspot_power_after_combat_ability` - 鷹眼
-  - 英文對應：Marksman。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_survivalist_passive` / `veteran_survivalist_passive` - 實踐效率
-  - 英文正式名稱：Practiced Efficiency。繁中名稱已按 1.13.1 同鍵／hash 文本配對（`55ea75f0`）；舊盤點功能標題：Survivalist Passive。
-  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1417-L1436)。
-
-- `loc_talent_veteran_base_ranged_damage` / `veteran_base_ranged_damage` - 衛兵
-  - 英文正式名稱：Guardsman。繁中名稱已按 1.13.1 同鍵／hash 文本配對（`0c3fe87c`）；舊盤點功能標題：Increased Ranged Damage。
-  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1400-L1416)。
-
-- `loc_talent_veteran_supression_immunity` / `veteran_supression_immunity` - 堅定不移
-  - 英文正式名稱：Determined。繁中名稱已按 1.13.1 同鍵／hash 文本配對（`829e5480`）；舊盤點功能標題：Suppression Immunity。
-  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1390-L1399)。
-
-- `loc_talent_veteran_cover_peeking` / `veteran_cover_peeking` - Low Profile
-  - 英文正式名稱：Low Profile。1.13.1 的 zh-tw 同鍵／hash 項目（`da809230`）仍標記 `[Not Translated]`，保留原始英文名稱；舊盤點功能標題：Cover Peeking。
-  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2575-L2584)。
-
-- `loc_talent_veteran_elite_kills_grant_ammo_coop` / `veteran_aura_gain_ammo_on_elite_kill` - 拾荒者
-  - 英文對應：Scavenger。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
-  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L646-L666)。
-
-- `loc_ability_frag_grenade` / `veteran_frag_grenade` - 破片手雷
-  - 英文對應：Frag Grenade。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
-  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L33-L42)。
-
-- `loc_talent_ranger_volley_fire_big_game_hunter` / `veteran_combat_ability_ogryn_outlines` - 敵人越大...
-  - 英文對應：The Bigger they Are ...。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L373-L405)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_ability_assault` / `veteran_increased_close_damage_after_combat_ability` - 肉搏戰
-  - 英文對應：Close Quarters Killzone。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1303-L1344)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency` / `veteran_combat_ability_increase_and_restore_toughness_to_coherency` - 責任與榮譽
-  - 英文對應：Duty and Honour。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L480-L517)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_combat_ability_revives` / `veteran_combat_ability_revive_nearby_allies` - 只有死亡，職責才會終結
-  - 英文對應：Only In Death Does Duty End。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L565-L605)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_combat_ability_stagger_nearby_enemies` / `veteran_combat_ability_stagger_nearby_enemies` - 發號施令
-  - 英文對應：Voice of Command。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L538-L564)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_elite_kills_reduce_cooldown` / `veteran_elite_kills_reduce_cooldown` - 戰術意識
-  - 英文對應：Tactical Awareness。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L746-L774)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_toughness_bonus_leaving_invisibility` / `veteran_toughness_bonus_leaving_invisibility` - 獵手決意
-  - 英文對應：Hunter's Resolve。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2155-L2195)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_combat_ability_ranged_enemies_outlines` / `veteran_combat_ability_ranged_roamer_outlines` - 火力反擊
-  - 英文對應：Counter-Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L353-L372)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_combat_ability_coherency_outlines` / `veteran_combat_ability_coherency_outlines` - 目標引導增強
-  - 英文對應：Enhanced Target Priority。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L406-L429)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_improved_tag_more_damage` / `veteran_improved_tag_more_damage` - 集中火力
-  - 英文對應：Focused Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3075-L3096)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_improved_tag_dead_coherency_bonus` / `veteran_improved_tag_dead_coherency_bonus` - 轉移火力！
-  - 英文對應：Redirect Fire!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3041-L3074)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_improved_tag_dead_bonus` / `veteran_improved_tag_dead_bonus` - 目標擊倒！
-  - 英文對應：Target Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3021-L3040)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_improved_tag` / `veteran_improved_tag` - 鎖定目標
-  - 英文對應：Focus Target!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2978-L3020)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_weapon_switch_replenish_stamina` / `veteran_weapon_switch_replenish_stamina` - 活力煥發
-  - 英文對應：Invigorated。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2827-L2872)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_weapon_switch_replenish_ammo` / `veteran_weapon_switch_replenish_ammo` - 有備無患
-  - 英文對應：Always Prepared。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2873-L2888)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_weapon_switch_replenish_toughness` / `veteran_weapon_switch_replenish_toughness` - 時刻警覺
-  - 英文對應：On Your Toes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_weapon_switch` / `veteran_weapon_switch_passive` - 武器專家
-  - 英文對應：Weapons Specialist。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2717-L2826)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_allies_share_toughness` / `veteran_allies_in_coherency_share_toughness_gain` - 天生領袖
-  - 英文對應：Born Leader。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2341-L2361)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_ammo_increase` / `veteran_ammo_increase` - 全副武裝
-  - 英文對應：Fully Loaded。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2503-L2526)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_increased_ranged_cleave` / `veteran_increased_ranged_cleave` - 凋零烈焰
-  - 英文對應：Withering Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit` / `veteran_no_ammo_consumption_on_lasweapon_crit` - 突擊隊
-  - 英文對應：Shock Trooper。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1628-L1637)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_bonus_crit_chance_on_ammo` / `veteran_bonus_crit_chance_on_ammo` - 首輪齊射
-  - 英文對應：Opening Salvo。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1588-L1627)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_replenish_toughness_outside_melee` / `veteran_replenish_toughness_outside_melee` - 喘息片刻
-  - 英文對應：Catch a Breath。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2379-L2402)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_continous_hits_apply_rending` / `veteran_continous_hits_apply_rending` - 猛攻
-  - 英文對應：Onslaught。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1136-L1179)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_attack_speed` / `veteran_attack_speed` - 戰壕兵訓練
-  - 英文對應：Trench Fighter Drill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2551-L2574)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_hits_cause_bleed` / `veteran_hits_cause_bleed` - 鋸齒刀刃
-  - 英文對應：Serrated Blade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1772-L1827)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_kill_grants_damage_to_other_slot` / `veteran_kill_grants_damage_to_other_slot` - 靈活接敵
-  - 英文對應：Agile Engagement。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1828-L1870)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_combat_ability_elite_and_special_outlines` / `veteran_combat_ability_elite_and_special_outlines` - 處決者姿態
-  - 英文對應：Executioner's Stance。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L290-L352)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_reduced_threat_after_combat_ability` / `veteran_reduced_threat_after_combat_ability` - 低調
-  - 英文對應：Low Profile。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1268-L1302)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_invisibility_on_combat_ability` / `veteran_invisibility_on_combat_ability` - 滲透
-  - 英文對應：Infiltrate。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2032-L2113)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_2_combat_ability` / `veteran_combat_ability_stance` - 火力齊射
-  - 英文對應：Volley Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L247)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_snipers_focus_increased_stacks` / `veteran_snipers_focus_increased_stacks` - 遠程刺客
-  - 英文對應：Long Range Assassin。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2697-L2716)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_snipers_focus_toughness_bonus` / `veteran_snipers_focus_toughness_bonus` - 視野狹窄
-  - 英文對應：Tunnel Vision。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2656-L2676)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_snipers_focus_rending_bonus` / `veteran_snipers_focus_rending_bonus` - 滲透盔甲
-  - 英文對應：Chink in their Armour。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2627-L2655)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_snipers_focus` / `veteran_snipers_focus` - 狙擊專注
-  - 英文對應：Marksman's Focus。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2585-L2626)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_dodging_grants_crit` / `veteran_dodging_grants_crit` - 互惠互利
-  - 英文對應：Reciprocity。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1180-L1224)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_rending_bonus` / `veteran_rending_bonus` - 裂擊
-  - 英文對應：Rending Strikes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2433-L2456)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_movement_speed_towards_downed` / `veteran_movement_speed_towards_downed` - 不拋棄不放棄
-  - 英文對應：Leave No One Behind。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1709-L1749)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_crits_rend` / `veteran_crits_apply_rending` - 趁火打劫
-  - 英文對應：Exploit Weakness。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1102-L1135)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_damage_damage_after_sprinting` / `veteran_increase_damage_after_sprinting` - 遊擊者
-  - 英文對應：Skirmisher。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L943-L986)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_all_kills_replenish_toughness` / `veteran_all_kills_replenish_toughness` - 嗜血
-  - 英文對應：Out for Blood。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1457-L1479)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse` / `veteran_increased_melee_crit_chance_and_melee_finesse` - 亡命之徒
-  - 英文對應：Desperado。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1925-L1966)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_increased_weakspot_damage` / `veteran_increased_weakspot_damage` - 堅定不移
-  - 英文對應：Precision Strikes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1004-L1020)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_reload_speed_on_elite_kill` / `veteran_reload_speed_on_elite_kill` - 齊射能手
-  - 英文對應：Volley Adept。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L987-L1003)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_ranger_reload_speed_empty_mag` / `veteran_faster_reload_on_non_empty_clips` - 戰術裝填
-  - 英文對應：Tactical Reload。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2362-L2378)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_grenade_apply_bleed` / `veteran_grenade_apply_bleed` - 粉碎者破片手雷
-  - 英文對應：Shredder Frag Grenade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1021-L1074)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_elite_kills_grant_ammo_coop_improved` / `veteran_aura_gain_ammo_on_elite_kill_improved` - 生存專家
-  - 英文對應：Survivalist。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L667-L695)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_better_deployables` / `veteran_better_deployables` - 臨場發揮
-  - 英文對應：Field Improvisation。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1967-L1987)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_ability_krak_grenade` / `veteran_krak_grenade` - 穿甲手雷
-  - 英文對應：Krak Grenade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L43-L64)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_improved_grenades` / `veteran_improved_grenades` - 手雷專家
-  - 英文對應：Grenade Tinkerer。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L128-L205)；此來源證明識別鍵與天賦關係。
-
-- `loc_ability_smoke_grenade` / `veteran_smoke_grenade` - 煙霧手雷
-  - 英文對應：Smoke Grenade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L65-L84)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_replenish_toughness_and_boost_allies` / `veteran_replenish_toughness_and_boost_allies` - 火力掩護
-  - 英文對應：Covering Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2273-L2301)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_ally_kills_increase_damage` / `veteran_ally_kills_increase_damage` - 求勝心
-  - 英文對應：Competitive Urge。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L775-L830)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_toughness_on_elite_kill` / `veteran_elite_kills_replenish_toughness` - 擊殺紀錄
-  - 英文對應：Confirmed Kill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1480-L1503)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_ranger_grenade_on_elite_kills_coop` / `veteran_aura_elite_kills_restore_grenade` - 爆破小隊
-  - 英文對應：Demolition Team。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2196-L2211)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_ranger_ads_drains_stamina_boost` / `veteran_ads_drain_stamina` - 死亡射手
-  - 英文對應：Deadshot。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L248-L278)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_increased_damage_based_on_range` / `veteran_increased_damage_based_on_range` - 遠射
-  - 英文對應：Longshot。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L831-L865)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_ranger_stamina_on_ranged_dodge` / `veteran_dodging_grants_stamina` - 靈活應對
-  - 英文對應：Duck and Dive。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1750-L1771)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_2_tier_1_name_3` / `veteran_increased_damage_when_flanking` - 秘密特工
-  - 英文對應：Covert Operative。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3113-L3135)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_2_tier_2_name_2` / `veteran_clip_size` - 荷槍實彈
-  - 英文對應：Lock and Load。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3097-L3112)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_toughness_damage_reduction_per_ally` / `veteran_reduced_toughness_damage_in_coherency` - 密集隊形訓練
-  - 英文對應：Close Order Drill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1437-L1456)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_block_break_gives_tdr` / `veteran_tdr_on_high_toughness` - 鋼鐵意志
-  - 英文對應：Iron Will。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2245-L2272)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_big_game_hunter` / `veteran_big_game_hunter` - 幹掉它！
-  - 英文對應：Bring it Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1075-L1101)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_increase_suppression` / `veteran_increase_suppression` - 讓他們全趴下！
-  - 英文對應：Keep Their Heads Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L866-L892)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_reduce_swap_time` / `veteran_reduce_swap_time` - 行雲流水
-  - 英文對應：One Motion。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1898-L1924)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_toughness_damage_reduction_medium` / `base_toughness_damage_reduction_node_buff_medium_1` - 韌性減傷
-  - 英文對應：Toughness Damage Reduction。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L437-L463)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_melee_damage_boost_medium` / `base_melee_damage_node_buff_high_2` - 近戰傷害提升
-  - 英文對應：Melee Damage Boost。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1181-L1204)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_toughness_boost_medium` / `base_toughness_node_buff_medium_2` - 韌性提升
-  - 英文對應：Toughness Boost。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L206-L229)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_movement_speed_coherency` / `veteran_movement_speed_coherency` - 抵近殺敵
-  - 英文對應：Close and Kill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L721-L745)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_damage_coherency` / `veteran_increased_damage_coherency` - 火力小分隊
-  - 英文對應：Fire Team。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L696-L720)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_extra_grenade` / `veteran_extra_grenade` - 擲彈兵
-  - 英文對應：Grenadier。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
-  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L85-L127)；此來源證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_increase_damage_vs_elites` / `veteran_increase_damage_vs_elites` - 優越情節
-  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Superiority Complex 譯名，不宣稱官方名稱。
-  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L893-L916)；來源僅證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_combat_ability_extra_charge` / `veteran_combat_ability_extra_charge` - 掩護射擊
-  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Overwatch 譯名，不宣稱官方名稱。
-  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L606-L644)；來源僅證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_toughness_on_weakspot_kill` / `veteran_replenish_toughness_on_weakspot_kill` - 振奮擊倒
-  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Exhilarating Takedown 譯名，不宣稱官方名稱。
-  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2340)；來源僅證明識別鍵與天賦關係。
-
-- `loc_talent_veteran_ranged_power_out_of_melee` / `veteran_ranged_power_out_of_melee` - 殺戮地帶
-  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Kill Zone 譯名，不宣稱官方名稱。
-  - 來源：[Release 1.13.0 talent 定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1530-L1560)；來源僅證明 key 與 talent 關係。
-
-- `loc_talent_ranger_replenish_grenade` / `veteran_replenish_grenades` - 炸藥儲備
-  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Demolition Stockpile 譯名，不宣稱官方名稱。
-  - 來源：[Release 1.13.0 talent 定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1988-L2030)。來源證明 key 與 talent 關係，不證明英文顯示名或官方繁體譯名。
+- Focus Target - 鎖定目標
+- Focus - 專注
+- Melee Specialist - 近戰專家
+- Ranged Specialist - 遠程專家
 
 #### 老兵天賦
 
@@ -1364,7 +931,7 @@
 - One Motion - 行雲流水
 - Tactical Reload - 戰術裝填
 - Close Order Drill - 密集隊形訓練
-- Superiority Complex - 優越情節
+- Superiority Complex - 優越情結
 - Iron Will - 鋼鐵意志
 - Trench Fighter Drill - 戰壕兵訓練
 - Field Improvisation - 臨場發揮
@@ -1376,7 +943,7 @@
 - Grenadier - 擲彈兵/轟炸者
 - Demolition Stockpile - 炸藥儲備
 - Grenade Tinkerer - 手雷專家
-- Precision Strikes - 堅定不移
+- Precision Strikes - 精準打擊
 - Deadshot - 死亡射手
 - Born Leader - 天生領袖
 - Leave No One Behind - 不拋棄不放棄
@@ -1397,6 +964,9 @@
 - Bring it Down! - 幹掉它！
 - Onslaught - 猛攻
 - Exploit Weakness - 趁火打劫
+- Guardsman - 衛兵
+- Practiced Efficiency - 實踐效率
+- Determined - 堅定不移
 
 ### Arbites - 法務官
 
@@ -1441,7 +1011,7 @@
 - Go Get 'Em! - 往前進攻！
 - Execution Order - 處刑命令
 - Efficient Killer - 效率殺手
-- Malocator - 生化武器關
+- Malocator - 生化武器官
 - No Lenience - 罪不可赦
 - Keeping Protocol - 殺戮協議
 - Not Far Behind - 不落人後
@@ -1502,6 +1072,9 @@
 - Monstrosity Hunter - 巨獸獵人
 - Strike Down - 毀滅打擊
 - True Grit - 堅忍不拔
+- Ranged Damage Boost - 遠程傷害增幅
+- Cleave Boost - 順劈加成
+- Impact Boost - 衝擊加成
 
 ### Hive Scum - 巢都渣滓
 
@@ -1539,9 +1112,9 @@
 - Focused Resolve - 專注凝神
 - Rampage! - 橫衝直撞！
 - Channelled Aggression - 凝聚殺意
-- Boiling Blood - 碎骨打擊
-- Forge's Bellow - 沸騰之血
-- Pulverising Strikes - 熔爐怒吼
+- Boiling Blood - 沸騰之血
+- Forge's Bellow - 熔爐怒吼
+- Pulverising Strikes - 碎骨打擊
 - Stimm Supply - 化學性依賴
 - Practiced Deployment - 熟練部署
 - Booby Trap - 毒性陷阱
@@ -1575,7 +1148,7 @@
 - Calling for a Time Out - 請求暫停
 - Burst of Energy - 能量爆發
 - Sticky Hands - 黏黏手
-- A Tertium Welcome - 特提恩是迎賓
+- A Tertium Welcome - 特提恩式迎賓
 - Speedloader - 快速裝填
 - Float Like a Butterfly - 翩翩蝶舞
 - Regained Posture - 恢復姿態
@@ -1591,7 +1164,7 @@
 - Hive City Brawler - 巢都格鬥家
 - Cheap Shots - 趁人之危
 - Battering Strikes - 猛烈劈擊
-- Coated Weaponry - 塗讀武裝
+- Coated Weaponry - 塗毒武裝
 - Ammo Jack - 軍火商
 - Pickpocket - 順手牽羊
 - Hyper-Critical - 心狠手辣
@@ -1609,6 +1182,43 @@
 - Channelled Devastation - 蓄力殲滅
 - Virulent Strain - 劇毒菌株
 - Targeted Toxin - 精準投毒
+- Critical Chance Boost - 暴擊幾率增幅
+- Potent Tox - 強效毒藥
+- Equip Cartel Special - 裝備財閥特殊裝備
+
+##### 藥劑效果
+
+- Spur I - 激勵I
+- Spur II - 激勵II
+- Spur III - 激勵III
+- Spur IV - 激勵IV
+- Reflex - 反射
+- Fervor - 狂熱
+- Vultoprene I - 獵鷹蕈劑I
+- Vultoprene II - 獵鷹蕈劑II
+- Kalma I - 抗焦慮藥I
+- Kalma II - 抗焦慮藥II
+- Kalma III - 抗焦慮藥III
+- Kalma IV - 抗焦慮藥IV
+- Kalma V - 抗焦慮藥V
+- Like the Wind - 迅如疾風
+- Cartel Special - 財閥專員
+- Barrage I - 彈幕I
+- Barrage II - 彈幕II
+- Barrage III - 彈幕III
+- Barrage IV - 彈幕IV
+- Tank - 坦克
+- Regain - 恢復
+- Spur V - 激勵V
+- Hypex - 狂熱
+- Klay - 集中藥
+- Wildfire I - 野火I
+- Wildfire II - 野火II
+- Wildfire III - 野火III
+- Wildfire IV - 野火IV
+- Wildfire V - 野火V
+- Fury I - 狂怒I
+- Fury II - 狂怒II
 
 ### Skitarius - 護教軍
 
@@ -1659,7 +1269,6 @@
 - Restoration Protocol - 修復協定
 - Writ of Ammunition Enumeration - 彈藥盤點之旨
 - Calculated Priority - 精算順序
-- Readiness Doctrines - 備戰教條（過時：1.13 已移除獨立子節點；效果整合至 Advanced Combat Doctrines）
 - Piercing Sight - 洞察之眼
 - Capacitor Reclamation Loop - 電容回收迴路
 - Augmented Power-Cycle - 強化能量循環
@@ -1710,7 +1319,7 @@
 - Superior Tracking Litanies - 卓越追蹤聖歌
 - Omnissian Recharge Litany - 歐姆尼賽亞充能聖歌
 - Residual Current Buffer - 剩餘電流緩衝
-- Power Redistribution Uplink - 能量載分配鏈路
+- Power Redistribution Uplink - 能量再分配鏈路
 - Binary Ballistics Protocol - 二元彈道協議
 - Threat Detection Imperative - 威脅偵測指令
 - Assassination Protocols - 暗殺協議
@@ -1736,6 +1345,11 @@
 - Slaughter Protocol - 屠殺協議
 - Adaptive Combat Engram - 適應性戰鬥記憶體
 - Hydraulic Impact - 液壓衝擊
+- Motive Engine - 動力引擎
+
+##### 一般天賦(過時)
+
+- Readiness Doctrines - 備戰教條（過時：1.13 已移除獨立子節點；效果整合至 Advanced Combat Doctrines）
 
 ##### 敵人 / 單位
 
@@ -1768,197 +1382,18 @@
 
 ### 天賦相關 (小型節點)
 
-- Peril Resistance - 反噬抗性（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
+##### 一般天賦
+
 - Melee Damage Boost - 近戰增幅
-- Movement Speed Boost - 移動速度增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Reload Boost - 換彈速度增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Rending Boost - 撕裂增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Stamina Boost - 耐力增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Stamina Regeneration Boost - 耐力恢復增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
-- Suppression Boost - 壓制增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
 - Toughness Boost - 韌性增幅
 - Toughness Damage Reduction - 韌性減傷
 
-### 職業核心詞
+##### 一般天賦(過時)
 
-#### 靈能者 (PSYKER)
-
-- Precision - 精準
-
-#### 歐格林 (OGRYN)
-
-- Feel No Pain - 麻木
-- Lucky Bullet - 幸運子彈
-- Trample - 踐踏
-
-#### 狂信徒 (ZEALOT)
-
-- Momentum - 勢能
-- Stealth - 隱身
-- Fury - 狂怒
-
-#### 老兵 (VETERAN)
-
-- Focus Target - 鎖定目標
-- Focus - 專注
-- Melee Specialist - 近戰專家
-- Ranged Specialist - 遠程專家
-
-### 1.13 技能名稱文本對照
-
-以下 55 項直接採用 1.13.1／Steam Build 25606770 的 zh-tw 名稱，包含 13 項本版新增與 42 項既有盤點補缺。興奮劑配方依同版格式參數代入羅馬數字等級；名稱鍵、hash 與原始模板見文本配對紀錄。
-
-#### 靈能者（遊戲繁中名稱）
-
-- Focused Warp - 聚焦次元（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_warp_damage`；名稱 hash `32fd96aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md)）
-- Peril Equilibrium - 危險平衡（1.13.1 遊戲繁中名稱；1.13新增；`psyker_weapon_attacks_peril_equilibrium`；名稱 hash `63ed565b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md)）
-- Psykinetic Grip - 念力之握（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_blitz_damage`；名稱 hash `4ac15b0d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_blitz_damage.md)）
-- Perils of the Warp - 次元危險（1.13.1 遊戲繁中名稱；盤點補缺；`psyker_peril_passive`；名稱 hash `dafbc14a`；[來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2606)）
-
-#### 歐格林（遊戲繁中名稱）
-
-- Found Some More - 發現更多（1.13.1 遊戲繁中名稱；1.13新增；`ogryn_free_reload_after_ability`；名稱 hash `e56eeef1`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_free_reload_after_ability.md)）
-- Thick Skin - 厚實表皮（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_base_tank_passive`；名稱 hash `277672aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md)）
-- Outta My Way! - 滾吧你！（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_dodge_stagger`；名稱 hash `7abf1c42`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_dodge_stagger.md)）
-
-#### 狂信徒（遊戲繁中名稱）
-
-- Wait in Line - 排隊等候（1.13.1 遊戲繁中名稱；1.13新增；`zealot_reduced_damage_from_ranged`；名稱 hash `f8ea87eb`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_from_ranged.md)）
-- Holy Tools - 神聖工具（1.13.1 遊戲繁中名稱；1.13新增；`zealot_weapon_special_damage`；名稱 hash `af1ee73d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_weapon_special_damage.md)）
-- Got Your Back - 為您撐腰（1.13.1 遊戲繁中名稱；1.13新增；`zealot_melee_kills_restore_toughness_to_target`；名稱 hash `28db6608`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_kills_restore_toughness_to_target.md)）
-- Purifying Hatred - 淨化仇恨（1.13.1 遊戲繁中名稱；1.13新增；`zealot_dmg_vs_burning_electrocuted`；名稱 hash `9b5165a8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_dmg_vs_burning_electrocuted.md)）
-- Zealous Pilgrim - 狂熱朝聖者（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_ability`；名稱 hash `a196609b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_ability.md)）
-- Risen - 復活（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_golden_toughness`；名稱 hash `95780e03`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_golden_toughness.md)）
-- Fire and Fury - 烈焰與怒火（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_fire`；名稱 hash `af670dea`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_fire.md)）
-
-#### 老兵（遊戲繁中名稱）
-
-- Guardsman - 衛兵（1.13.1 遊戲繁中名稱；1.13新增；`veteran_base_ranged_damage`；名稱 hash `0c3fe87c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_base_ranged_damage.md)）
-- Practiced Efficiency - 實踐效率（1.13.1 遊戲繁中名稱；1.13新增；`veteran_survivalist_passive`；名稱 hash `55ea75f0`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_survivalist_passive.md)）
-- Determined - 堅定不移（1.13.1 遊戲繁中名稱；盤點補缺；`veteran_supression_immunity`；名稱 hash `829e5480`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_supression_immunity.md)）
-
-#### 法務官（遊戲繁中名稱）
-
-- Ranged Damage Boost - 遠程傷害增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_ranged_damage_node_buff_medium_1`；名稱 hash `4530d417`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_ranged_damage_node_buff_medium_1.md)）
-- Cleave Boost - 順劈加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_cleave_node_buff_medium_1`；名稱 hash `5583cb92`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_cleave_node_buff_medium_1.md)）
-- Impact Boost - 衝擊加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_impact_node_buff_medium_1`；名稱 hash `007795f8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_impact_node_buff_medium_1.md)）
-
-#### 巢都渣滓（遊戲繁中名稱）
-
-- Critical Chance Boost - 暴擊幾率增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_crit_chance_node_buff_low_1`；名稱 hash `3ec7f5ef`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md)）
-- Potent Tox - 強效毒藥（1.13.1 遊戲繁中名稱；盤點補缺；`base_toxin_power_boost_1`；名稱 hash `d8d25992`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_toxin_power_boost_1.md)）
-- Equip Cartel Special - 裝備財閥特殊裝備（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_activation_talent`；名稱 hash `6158914f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_activation_talent.md)）
-- Spur I - 激勵I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_1`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md)）
-- Spur II - 激勵II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_2`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_2.md)）
-- Spur III - 激勵III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_3`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_3.md)）
-- Spur IV - 激勵IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_4`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_4.md)）
-- Reflex - 反射（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5b`；名稱 hash `d33a89f3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5b.md)）
-- Fervor - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5c`；名稱 hash `9b5b6688`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5c.md)）
-- Vultoprene I - 獵鷹蕈劑I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4c.md)）
-- Vultoprene II - 獵鷹蕈劑II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5c.md)）
-- Kalma I - 抗焦慮藥I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_1`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_1.md)）
-- Kalma II - 抗焦慮藥II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_2`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_2.md)）
-- Kalma III - 抗焦慮藥III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_3`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_3.md)）
-- Kalma IV - 抗焦慮藥IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_4`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_4.md)）
-- Kalma V - 抗焦慮藥V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5a`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5a.md)）
-- Like the Wind - 迅如疾風（1.13.1 遊戲繁中名稱；盤點補缺；`broker_passive_improved_sprint_dodge`；名稱 hash `9ac70c19`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_sprint_dodge.md)）
-- Cartel Special - 財閥專員（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_description_talent`；名稱 hash `7a34c61a`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_description_talent.md)）
-- Barrage I - 彈幕I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_1`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_1.md)）
-- Barrage II - 彈幕II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_2`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md)）
-- Barrage III - 彈幕III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_3`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_3.md)）
-- Barrage IV - 彈幕IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_4`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_4.md)）
-- Tank - 坦克（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5a`；名稱 hash `e3530c66`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5a.md)）
-- Regain - 恢復（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5b`；名稱 hash `3e34e34e`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5b.md)）
-- Spur V - 激勵V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5a`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5a.md)）
-- Hypex - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5b`；名稱 hash `99e5c538`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5b.md)）
-- Klay - 集中藥（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5c`；名稱 hash `f7a8d514`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5c.md)）
-- Wildfire I - 野火I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_1`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md)）
-- Wildfire II - 野火II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_2`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_2.md)）
-- Wildfire III - 野火III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_3`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_3.md)）
-- Wildfire IV - 野火IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4a.md)）
-- Wildfire V - 野火V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5a.md)）
-- Fury I - 狂怒I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4b.md)）
-- Fury II - 狂怒II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md)）
-
-#### 護教軍（遊戲繁中名稱）
-
-- Motive Engine - 動力引擎（1.13.1 遊戲繁中名稱；盤點補缺；`cryptic_passive_cooldown_regen`；名稱 hash `f57f4b1c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md)）
-
-
-- Run 'n' Gun - 連跑帶打
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_allow_hipfire_while_sprinting`，hash `168636d5`；英文／繁中RAW配對確認。
-
-- Voltagheist Overload - 電靈超載
-  - 文件譯名；本體1.13.1繁中仍為「Voltagheist Overload」。名稱鍵 `loc_trait_bespoke_arc_has_killing_blow_chance`，hash `b54f57d4`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Opportunist - 機會主義者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_penetration_against_staggered`，hash `738f6c19`；英文／繁中RAW配對確認。
-
-- Can Opener - 開罐器
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_bayonette`，hash `9011c283`；英文／繁中RAW配對確認。
-
-- Shrapnel - 破片四濺
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_close_explosion_applies_bleed`，hash `151b51b2`；英文／繁中RAW配對確認。
-
-- Hit & Run - 遊擊
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill`，hash `c20a63ba`；英文／繁中RAW配對確認。
-
-- Pulverise - 粉碎（Pulverise）
-  - 文件譯名；本體1.13.1繁中仍為「粉碎」。名稱鍵 `loc_trait_bespoke_crit_chance_on_melee_kill`，hash `2e6beae6`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Deadly Frequencies - 致命頻率
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_melee_power_on_weapon_special_follow_up_hits`，hash `e03c3c69`；英文／繁中RAW配對確認。
-
-- Telescopic Sight - 千里眼
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_zoom`，hash `215f8d62`；英文／繁中RAW配對確認。
-
-- Bug Out - 開溜
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_improved_sprint_dodge`，hash `f1dfd8b7`；英文／繁中RAW配對確認。
-
-- Punisher - 懲罰者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_damage_on_close_kill`，hash `5d0f2ffa`；英文／繁中RAW配對確認。
-
-- Born in Blood - 浴血而生
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_close_range_kills`，hash `22ea2fab`；英文／繁中RAW配對確認。
-
-- Murderous Tranquility - 凶殘之寧
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_vent_warp_charge_on_multiple_hits`，hash `558074d6`；英文／繁中RAW配對確認。
-
-- Quickloader - 快速裝填
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_dodge`，hash `10e76602`；英文／繁中RAW配對確認。
-
-- Machine Spirit Resurgent - 機魂再臨
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_refund_charge_on_weapon_special_weakspot_kill`，hash `b760a1fc`；英文／繁中RAW配對確認。
-
-- Refined Lethality - 精煉殺意
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_weakspot_damage_against_toxin_status`，hash `38e007cd`；英文／繁中RAW配對確認。
-
-- Vicious Slice - 兇狠切割
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_stagger_per_hit_in_sweep`，hash `c20ffbce`；英文／繁中RAW配對確認。
-
-- Enhanced Voltaic Arcs - 強化電流弧
-  - 文件譯名；本體1.13.1繁中仍為「Enhanced Voltaic Arcs」。名稱鍵 `loc_trait_bespoke_enhanced_arc_jumps_angle`，hash `ecc50357`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Shock & Awe - 震懾
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_hit_mass_consumption_reduction_on_kill`，hash `60f2b6ce`；英文／繁中RAW配對確認。
-
-- Rev it Up - 提速
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_movement_speed_on_activation`，hash `5d0fe023`；英文／繁中RAW配對確認。
-
-- Blazing Spirit - 燃燒靈魂（靈能法杖與雙手力場劍）
-  - 文件譯名；本體1.13.1繁中仍為「燃燒靈魂」。名稱鍵 `loc_trait_bespoke_warpfire_burn_on_crit`，hash `47a95669`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Superiority - 優勢（近戰力量）
-  - 文件譯名；本體1.13.1繁中仍為「優勢」。名稱鍵 `loc_trait_bespoke_elite_kills_grants_stackable_melee_power`，hash `8b0f014e`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Superiority - 優勢（通用力量）
-  - 文件譯名；本體1.13.1繁中仍為「優勢」。名稱鍵 `loc_trait_bespoke_elite_kills_grants_stackable_power`，hash `d2dd2363`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Hit & Run - 遊擊（特殊攻擊命中）
-  - 文件譯名；本體1.13.1繁中仍為「遊擊」。名稱鍵 `loc_trait_bespoke_movement_speed_on_activated_hit`，hash `a87d06f4`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Blaze Away - 連續發射（射擊連段）
-  - 文件譯名；本體1.13.1繁中仍為「連續發射」。名稱鍵 `loc_trait_bespoke_power_bonus_on_continuous_fire_alternative`，hash `6fc486b9`；保留同hash中英RAW原文與文件翻譯分層。
-
-- Skullcrusher - 碎顱者
-  - 本體1.13.1名稱鍵 `loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff`，hash `5fdffabc`；英文／繁中RAW配對確認。
+- Peril Resistance - 反噬抗性（過時：1.13 移除；保留歷史譯名）
+- Movement Speed Boost - 移動速度增幅（過時：1.13 移除；保留歷史譯名）
+- Reload Boost - 換彈速度增幅（過時：1.13 移除；保留歷史譯名）
+- Rending Boost - 撕裂增幅（過時：1.13 移除；保留歷史譯名）
+- Stamina Boost - 耐力增幅（過時：1.13 移除；保留歷史譯名）
+- Stamina Regeneration Boost - 耐力恢復增幅（過時：1.13 移除；保留歷史譯名）
+- Suppression Boost - 壓制增幅（過時：1.13 移除；保留歷史譯名）
