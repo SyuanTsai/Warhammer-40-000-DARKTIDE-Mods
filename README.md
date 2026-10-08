@@ -1045,20 +1045,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小地圖
-- MOD 網站最後更新日期：Last updated 29 September 2026, 9:35PM
-- MOD 版本：3.0.1
-- MOD 檔案名稱：Radar 790 3.0.1 2026-09-29T13-35Z pRus3Roxz.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：2026-10-07T23:07:40Z（Nexus API；頁面顯示時間原文未取得）
+- MOD 版本：3.1.0
+- MOD 檔案名稱：Radar 790 3.1.0 2026-10-07T23-07Z AVBg7VNY3.zip
+- 手動維護最後下載日期：2026-10-08（本機 ZIP 確認日期）
 - Nexus MOD ID: 790
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/790
-- Nexus page version: 3.0.1
-- Nexus last updated: 2026-09-29T13:35Z
-- Main file ID: 8531
-- Main file version: 3.0.1
-- Main file uploaded at UTC: 2026-09-29T13:35Z
-- Archive filename: Radar 790 3.0.1 2026-09-29T13-35Z pRus3Roxz.zip
-- Archive size bytes: 337175
-- Archive SHA-256: 3a23f316a097302ca8be33f4632fc4c38a159c232f8bd926366d6e54c9e919a7
+- Nexus page version: 3.1.0
+- Nexus last updated: 2026-10-07T23:07:40Z
+- Main file ID: 8866
+- Main file version: 3.1.0
+- Main file uploaded at UTC: 2026-10-07T23:07:40Z
+- Archive filename: Radar 790 3.1.0 2026-10-07T23-07Z AVBg7VNY3.zip
+- Archive size bytes: 346662
+- Archive SHA-256: 30b7b9ae09a1c020c28161665f5c9979caeae45a87d1157d2c807f6b2aa137d8
 - Acquisition method: manual-queue
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
