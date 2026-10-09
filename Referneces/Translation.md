@@ -152,13 +152,76 @@
 
 ### 怪物相關
 
+名稱依 1.13.1（Steam Build 25606770）的英文與繁中資源核對，譯名優先沿用本表。分類依原始碼標籤；共用名稱的變體合併。BOSS 只列種類與稱號，不收錄個別或隨機姓名。
+
+#### BOSS
+- Admonition Champion - 告誡教勇士
+- Twins - 雙子
+- Prophet of Decay - 腐朽的先知
+- Scab Captain - 血痂隊長
+- Beast of Nurgle - 納垢巨獸
+- Chaos Spawn - 混沌魔物
+- Daemonhost - 惡魔宿主（包含遊戲繁中為「大惡魔宿主」的特殊變體）
+- Hexbound Daemonhost - 魔縛惡魔宿主
+- Pack Master - 獸群領主
+- Plague Ogryn - 瘟疫歐格林
+
+#### 專家
+
+- Armoured Pox Hound - 裝甲瘟疫獵犬
+- Dreg Tox Bomber - 渣滓劇毒轟炸者
+- Dreg Tox Flamer - 渣滓毒焰噴射者
+- Mutant - 變種人
+- Pox Hound - 瘟疫獵犬
+- Poxburster - 瘟疫爆者
+- Scab Bomber - 血痂轟炸者
+- Scab Flamer - 血痂噴火者
+- Scab Sniper - 血痂狙擊手
+- Scab Trapper - 血痂陷阱兵
+
+#### 菁英
+
+- Bulwark - 堡壘
+- Crusher - 碾壓者
+- Dreg Gunner - 渣滓砲手（遊戲繁中：渣滓炮手）
+- Dreg Rager - 渣滓狂怒者
+- Dreg Shotgunner - 渣滓霰彈槍手
+- Reaper - 收割者
+- Scab Gunner - 血痂砲手（遊戲繁中：血痂炮手）
+- Scab Mauler - 血痂重錘兵
+- Scab Plasma Gunner - 血痂電漿槍手（遊戲繁中：血痂電漿炮手）
+- Scab Rager - 血痂狂暴者
+- Scab Shotgunner - 血痂霰彈槍手
+
+#### 一般兵
+
+- Armoured Groaner - 重甲呻吟者
+- Dreg Bruiser - 渣滓格鬥兵
+- Dreg Stalker - 渣滓潛行者
+- Dreg Vanguard - 渣滓先鋒 (盾兵)
+- Groaner - 呻吟者
+- Mutated Poxwalker - 變異瘟疫行者（遊戲繁中：異變瘟疫行者；內部名稱含 lesser）
+- Poxwalker - 瘟疫行者
+- Scab Bruiser - 血痂格鬥兵
+- Scab Shooter - 血痂射手
+- Scab Stalker - 血痂潛行者
+- Scab Vanguard - 血痂先鋒 (盾兵)
+- Tentacled Poxwalker - 觸手瘟疫行者
+
+#### 特殊任務單位
+
+- Dreg Ritualist - 渣滓祭司（祭司為 ritualist／minion，未標為專家或菁英）
+
+#### 待確認定義
+
+- Scab Radio Operator - 血痂無線電兵（暫譯；繁中資源保留英文；原始碼標為菁英，實際出現狀態未確認）
+
+#### 通稱、陣營與MOD名稱
+
 - Horde - 群怪
 - Gunners - 砲手
-- Reaper - 收割者
 - Sniper - 狙擊手
-- Pox Hound - 瘟疫獵犬
 - Trapper - 陷阱兵
-- Mutant - 變種人
 - Maniac - 狂熱者
 - Unyielding - 不屈敵人
 - Carapace - 甲殼
@@ -171,8 +234,6 @@
 - Scab - 血痂
 - Dreg - 渣滓
 - Shotgunners - 霰彈槍手
-- Chaos Spawn - 混沌魔物
-- Daemonhost - 惡魔宿主
 - Hex Daemonhost - 魔縛惡魔宿主
 - Tox Grenadier - 劇毒轟炸者
 - Plasma Gunner - 電漿槍手
@@ -181,25 +242,12 @@
 - Renegade Netgunner - 陷阱兵
 - Renegade Berzerker - 血痂狂暴者
 - Cultist Berzerker - 渣滓狂怒者
-- Mutated Poxwalker - 變異瘟疫行者
 - Lesser Mutated Poxwalker - 低階變異瘟疫行者
 - Ritualist - 渣滓祭司
-- Twins - 雙子
 - Flamer - 火焰兵
 - Corruptor - 腐蝕者
-- Pack Master - 獸群領主
-- Groaner - 呻吟者
-- Dreg Vanguard - 渣滓先鋒 (盾兵)
-- Dreg Bruiser - 渣滓格鬥兵
-- Dreg Stalker - 渣滓潛行者
-- Poxwalker - 瘟疫行者
-- Scab Shooter - 血痂射手
-- Scab Vanguard - 血痂先鋒 (盾兵)
-- Scab Bruiser - 血痂格鬥兵
-- Scab Stalker - 血痂潛行者
 - Mutated Poxwalker (tentacle variant) - 觸手瘟疫行者
 - Armored Groaner - 重甲呻吟者
-
 
 ### 遊戲詞條相關
 
@@ -211,22 +259,77 @@
 - Havoc - 浩劫
 - Havoc Modifier - 浩劫詞條
 - Havoc Rank - 浩劫等級
-- Blight Spreads - 瘟疫蔓延
-- Enraging Elites - 背水一戰(狂暴)
 
-- Marked Healers - 蔓生花園(回血)
-- The Encroaching Garden - 蔓生花園(回血)
+#### 特殊詞條
+
+- The Blight Spreads - 瘟疫蔓延（遊戲繁中：瘟疫散播）
+- Rotten Armour - 腐敗之鎧
+- Contaminated Stimms - 汙染興奮劑
+- Cranial Corruption - 顱骨腐敗
+- Rampaging Enemies - 蠻橫敵軍
+- Moebian 21st - 莫比亞第21師
+- Pus-hardened Skin - 硬膿皮膚
+- Bubonic Bursters - 鼠疫爆破者（保留的舊詞條定義）
+- The Garden Encroaches - 花園蔓生（保留的舊詞條定義）
+- The Final Toll - 背水一戰(狂暴)（遊戲繁中：背水一戰）
+- Heinous Rituals - 萬惡儀式
+- The Encroaching Garden - 蔓生花園(回血)（遊戲繁中：蔓生花園）
+- Shambling Pyres - 蹣跚焚屍（保留的舊詞條定義）
+- Heretical Disruption - 異端干擾（保留的舊詞條定義）
+
+#### 既有英文別名
+
+- Blight Spreads - 瘟疫蔓延（完整名稱：The Blight Spreads）
+- Enraging Elites - 背水一戰(狂暴)（對應特殊詞條：The Final Toll）
+- Marked Healers - 蔓生花園(回血)（對應特殊詞條：The Encroaching Garden）
+
 
 ## 武器
 
 ### 近戰武器 - Melee Weapon
 
+#### 武器種類完整名稱
+
+- "Devil's Claw" Sword - 「惡魔之爪」劍
+- Arbites Shock Maul - 法務官電擊鎚
+- Arc Maul - 電弧鎚
+- Assault Chainaxe - 突擊鏈斧
+- Assault Chainsword - 突擊鏈鋸劍
+- Battle Maul & Slab Shield - 作戰大錘&板盾
+- Blaze Force Greatsword - 烈焰力場巨劍
+- Blaze Force Sword - 烈焰力場劍
+- Bone Saw - 骨鋸
+- Bully Club - 惡棍棒（遊戲繁中：惡霸棍棒）
+- Cleaver - 砍刀
+- Combat Axe - 戰鬥斧
+- Combat Blade - 戰刃
+- Crowbar - 撬棍
+- Cruncher - 碎骨者
+- Crusher - 碾壓者
+- Delver's Pickaxe - 十字鎬（遊戲繁中：戴維爾戰鎬）
+- Duelling Sword - 決鬥劍
+- Heavy Eviscerator - 重型開膛劍
+- Heavy Sword - 重劍
+- Latrine Shovel - 廁所鏟
+- Mechanicus Power Sword - 機械神教動力劍
+- Paired Transonic Blades - 穿音速雙刀
+- Power Falchion - 動力彎刀
+- Power Maul - 動力錘／動力鎚（遊戲繁中：動力錘）
+- Power Sword - 動力劍
+- Relic Blade - 上古神刃
+- Sapper Shovel - 工兵鏟
+- Shivs - 短刀
+- Shock Maul - 電擊錘
+- Shock Maul and Suppression Shield - 法務官電擊鎚和鎮壓護盾
+- Tactical Axe - 戰術斧
+- Thunder Hammer - 雷鎚
+
+#### 既有英文通稱與別名
+
 - Battle Maul and Shield - 作戰大槌&板盾
 - Chainaxes - 突擊鏈斧
-- Crusher - 碾壓者
 - Eviscerators - 重型開膛劍
 - Latrine Shovels - 廁所鏟
-- Power Maul - 動力錘
 - Shock Mauls - 電擊錘
 - Chainswords - 突擊鏈鋸劍
 - Force Swords - 烈焰力場劍
@@ -241,13 +344,49 @@
 - Duelling Swords - 決鬥劍
 - Sapper Shovels - 工兵鏟
 - Devil's Claw Swords - 『惡魔之爪』劍
-- Power Maul - 動力鎚
-- Combat Blade - 戰刃
-- Force Greatsword - 烈焰力場劍
-- Blaze Force Greatsword - 烈焰力場巨劍
-- Relic Blade - 上古神刃
+- Force Greatsword - 烈焰力場劍（保留既有舊譯；完整種類名見 Blaze Force Greatsword）
 
 ### 遠程武器 - Ranged Weapon
+
+#### 武器種類完整名稱
+
+- Arc Rifle - 電弧步槍
+- Bolt Pistol - 爆彈手槍
+- Braced Autogun - 槍托自動槍
+- Combat Shotgun - 戰鬥霰彈槍
+- Double-Barrelled Shotgun - 雙管霰彈槍（人類與歐格林版本合併為同一種類）
+- Dual Autopistols - 雙持自動手槍
+- Dual Stub Pistols - 雙持實彈手槍
+- Electrokinetic Force Staff - 電流力場法杖
+- Exterminator Shotgun - 滅絕者霰彈槍
+- Galvanic Rifle - 電能步槍
+- Grenadier Gauntlet - 擲彈兵臂鎧
+- Heavy Laspistol - 重型雷射手槍（遊戲繁中：重型鐳射手槍）
+- Heavy Stubber - 重伐木槍（與 Twin-Linked Heavy Stubber 的雙鏈種類區分）
+- Helbore Lasgun - 冥潮雷射槍（遊戲繁中：冥潮鐳射槍）
+- Huntsman's Shotgun - 獵人霰彈槍
+- Infantry Autogun - 步兵自動槍
+- Infantry Lasgun - 步兵雷射槍（遊戲繁中：步兵鐳射槍）
+- Inferno Force Staff - 烈焰力場法杖
+- Kickback - 反衝者
+- Needle Pistol - 針彈手槍
+- Phosphor Blast Pistol - 磷光爆破手槍
+- Plasma Gun - 電漿槍
+- Purgation Flamer - 淨化噴火器
+- Quickdraw Stub Revolver - 快拔左輪手槍
+- Recon Lasgun - 偵查雷射槍（遊戲繁中：偵察鐳射槍）
+- Ripper Gun - 撕裂槍
+- Rumbler - 震盪槍
+- Shredder Autopistol - 撕裂者自動手槍
+- Spearhead Boltgun - 矛頭爆矢槍
+- Subductor Shotpistol and Riot Shield - 衝覆者霰彈手槍和防暴盾牌
+- Thugshot - 惡棍槍
+- Twin-Linked Heavy Stubber - 雙鏈重型機槍
+- Vigilant Autogun - 機動自動槍
+- Voidblast Force Staff - 虛空爆破力場法杖
+- Voidstrike Force Staff - 虛空打擊力場法杖
+
+#### 既有英文通稱與別名
 
 - Autopistol - 撕裂者自動手槍
 - Infantry Autoguns - 步兵自動槍
@@ -262,17 +401,12 @@
 - Voidblast Staff - 虛空爆破力場法杖
 - Voidstrike Staff - 虛空打擊力場法杖
 - Boltgun - 矛頭爆矢槍
-- Heavy Stubbers - 雙鏈重型機槍
+- Heavy Stubbers - 雙鏈重型機槍（本表舊稱對應雙鏈種類：Twin-Linked Heavy Stubber）
 - Ripper Guns - 撕裂槍
 - Infantry Lasguns - 步兵雷射槍
 - Flamer - 淨化噴火器
 - Inferno Staff - 烈焰力場法杖
 - Vigilant Autoguns - 機動自動槍
-- Kickback - 反衝者
-- Bolt Pistol - 爆彈手槍
-- Grenadier Gauntlet - 擲彈兵臂鎧
-- Plasma Gun - 電漿槍
-- Rumbler - 震盪槍
 
 ## 武器祝福
 
