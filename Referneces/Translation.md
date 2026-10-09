@@ -512,10 +512,6 @@
 
 ## 職業與天賦
 
-1.13 新增及盤點補缺名稱已按 Steam Build 25606770 的英文／繁中相同名稱鍵與 hash 配對，直接採用遊戲繁中名稱。標記「過時」的詞條保留歷史譯名。[完整名稱對照清單](../Darktide%20Translation%20Workspace/Term%20Candidates.md)｜[文本配對紀錄](../AI-LOGS/Game%20Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING.json)。
-
-本次新增及盤點補缺共 55 項直接採用 1.13.1／Steam Build 25606770 的 zh-tw 名稱，包含 13 項本版新增與 42 項既有盤點補缺。興奮劑配方依同版格式參數代入羅馬數字等級；名稱鍵、hash 與原始模板見文本配對紀錄。
-
 ### Psyker - 靈能者
 
 #### 靈能者專有名詞
