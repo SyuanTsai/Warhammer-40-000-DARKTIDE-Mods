@@ -53,15 +53,47 @@ DMF 注入與 KPM／AUPM 串接在自足 Lua fixture 中驗證，屬 mock contra
 
 ## Benchmark
 
+### 2026-10-10 平衡配對重跑
+
 執行命令：
 
 ```powershell
 C:/Python313/python.exe scripts/dpm/run_lua.py scripts/dpm/tests/benchmark_dpm.lua
 ```
 
-baseline 取自 commit `4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06`。每個 0／50／200 units × 0／100／500 attack events 組合，baseline 與修改後各做一次同 fixture、同函式 callsite warmup，再做 5 次固定 seed 268 的相同輸入。正式 Lua 載入、fixture 建立與 HUD 建立均在計時區間外；warmup 後會重設 counters、record、health table、健康值、widget 內容與顯示快取。計時用 LuaJIT FFI `QueryPerformanceCounter`，每次處理 60 個模擬 frame（60 Hz），不轉換成 FPS，也不設毫秒門檻。
+baseline 取自 commit `4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06`。本次 CSV 的共同 `run_id` 為 `20261010-150953-142006515565`。保留固定 seed 268、相同 fixture 建立方式、60 個模擬 frame（60 Hz）、LuaJIT FFI `QueryPerformanceCounter`、兩次完整 GC 後停止 GC、計數器 mock 與 workload。每個新 sample 先在同一 fixture 執行一次不計時的 workload/callsite warm-up，接著重設 workload 狀態與 counters 才計時；每個案例另為 baseline 與 after 各執行兩次完整 discarded sample warm-up，順序分別為 AB 與 BA。這兩層 warm-up 數量分開記錄，避免把 fixture 內 warm-up 誤認為額外 discarded sample。
 
-CSV 每個指標保留 5 次樣本的 avg／min／max。時間單位為 ms：
+正式量測採配對 AB／BA 交錯：每對使用相同 seed 與輸入，AB 表示 baseline 再 after，BA 表示 after 再 baseline。每個 0／50／200 units × 0／100／500 attack events 案例至少 12 對；200／500 使用 24 對。raw CSV 每列保存一筆 variant 執行，含共同 run_id、pair index/order/position、variant sample index、elapsed 與全部 13 項 metric。summary CSV 由這些逐筆結果彙總每個 variant/metric 的樣本數、avg/min/median/max，另彙總 `after - baseline` 的配對 elapsed 差值。負差值代表 after 較快。時間只有觀察用途，沒有毫秒通過門檻。
+
+兩份 CSV 先寫入同目錄的 run-id staging 檔；每次 write 與 close 都檢查結果。兩個 staging 檔完整關閉後，舊輸出先改名為本次 run-id backup，再依序發佈 raw 與 summary。若第二份發佈失敗，runner 會移除已發佈的新檔並還原舊 pair；兩份 CSV 也含相同 run_id，便於辨識非預期中斷造成的不同批次。對 write、close、第二份發佈各執行一次暫存 scratch 故障注入：runner 均以非零狀態結束、預存兩份 sentinel CSV 逐 byte 保持、staging/backup 無殘留，正式 CSV hash 未變。
+
+| 單位數 | 攻擊事件 | 配對數 | baseline avg (ms) | after avg (ms) | 配對差 avg (ms) | 配對差 median (ms) | 配對差範圍 (ms) | after 較快 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 12 | 0.1451 | 0.2273 | +0.0822 | +0.0828 | [-0.1325, +0.3255] | 3/12 |
+| 0 | 100 | 12 | 0.1981 | 0.3068 | +0.1087 | +0.1083 | [-0.1574, +0.4272] | 4/12 |
+| 0 | 500 | 12 | 0.6842 | 0.5213 | -0.1629 | -0.1529 | [-0.3426, -0.0165] | 12/12 |
+| 50 | 0 | 12 | 0.2281 | 0.2621 | +0.0340 | +0.0483 | [-0.1113, +0.1700] | 5/12 |
+| 50 | 100 | 12 | 0.6989 | 0.6365 | -0.0624 | -0.0633 | [-0.5945, +0.5159] | 9/12 |
+| 50 | 500 | 12 | 0.8356 | 0.8220 | -0.0136 | +0.0327 | [-0.4103, +0.2307] | 5/12 |
+| 200 | 0 | 12 | 0.3439 | 0.3643 | +0.0204 | +0.0588 | [-0.3631, +0.1597] | 3/12 |
+| 200 | 100 | 12 | 0.7243 | 0.8717 | +0.1474 | -0.0183 | [-0.2283, +1.7217] | 7/12 |
+| 200 | 500 | 24 | 2.3370 | 2.1730 | -0.1640 | -0.1359 | [-1.0397, +0.6415] | 16/24 |
+
+最大案例 200／500 的 baseline elapsed 為 avg 2.3370 ms、median 2.1374 ms、min 0.9988 ms、max 3.6576 ms；after 為 avg 2.1730 ms、median 2.0460 ms、min 0.8174 ms、max 4.2063 ms。24 組配對的 `after - baseline` 為 avg -0.1640 ms、median -0.1359 ms、min -1.0397 ms、max +0.6415 ms；16/24 對 after 較快。配對範圍跨越零，且歷史 10/07 序列測量在同案例曾觀察到 after 平均較慢，因此目前仍不能宣稱整體耗時改善或穩定回歸。
+
+200／500 操作數仍可逐筆核對：mock `GameSession.game_object_field` 欄位讀取 26,000 → 25,000；health extension calls 13,500 → 12,500，其中 `current_health` 維持 12,500、`damage_taken` 與 `max_health` 各 500 → 0；player-list scans 500 → 0、owner lookups 0 → 500；格式化呼叫 240 → 40；HUD rebuilds 21 → 0；清理前追蹤 200 → 200，清理後 200 → 0。`memory_delta_kb` 的 `memory_after` 是在任務離開清理已執行、`tracked_after_cleanup` 已計數之後讀取；當時 GC 仍停止，完整 GC 尚未恢復。差值涵蓋 fixture/module 建立、內部 warm-up、hot workload 及生命週期清理期間的 Lua heap 配置，不能解讀成 retained native memory。欄位／extension 計數來自 fixture mock，不是遊戲 telemetry；此合成 workload 也不能推論遊戲 FPS。
+
+完整逐筆資料與彙總分別保存在 [benchmark-results-20261010-raw.csv](benchmark-results-20261010-raw.csv) 與 [benchmark-results-20261010-summary.csv](benchmark-results-20261010-summary.csv)。獨立核對確認兩檔 run_id 相同，raw 共 240 列、summary 共 243 列；9 個案例中一般案例各 12 對、200／500 為 24 對。AB／BA 次序、每對兩個 variant 與相同輸入欄位均符合預期，並從 raw 逐項重算所有 summary 聚合值。
+
+#### 交付與驗證證據
+
+- 角色：主控 `/root`（gpt-6-sol/high）；Find `/root/find`（gpt-6-sol/high，順序偏差與熱路徑調查）；Implementer `/root/implement_benchmark`（gpt-6-luna/max，量測腳本、CSV 與故障注入）；獨立 Review `/root/review`（gpt-6-sol/high，修正 P2 CSV 截斷 finding 後複查，最終無新 finding）。
+- 功能測試 26 PASS、1 預期 SKIP；候選整合測試 27 PASS。三種故障注入（raw write、summary close、第二份 summary 發布失敗）均以 exit 2 結束，並逐 byte 保留舊 raw/summary pair。
+- 200／500 最終合成量測：baseline avg 2.3370 ms、median 2.1374 ms；after avg 2.1730 ms、median 2.0460 ms；配對差（after − baseline）avg -0.1640 ms、median -0.1359 ms，範圍 [-1.0397, +0.6415] ms，16/24 對 after 較快。此為 fixture mock benchmark，不是遊戲內通過結果；Darktide 實機與多人情境仍待驗。
+
+### 2026-10-07 歷史序列結果（保留）
+
+原始 [benchmark-results-20261007.csv](benchmark-results-20261007.csv) 維持原樣。舊 runner 先執行全部 baseline，再執行全部 after，每個案例各 5 個樣本且只留 aggregate；它沒有 AB／BA 順序平衡與逐筆輸出，故此表保留作歷史觀察，不視為平衡配對估計。尤其 200／500 的 after 平均耗時高於 baseline，是仍需保留的耗時反例。
 
 | 單位數 | 攻擊事件 | baseline avg [min, max] | 修改後 avg [min, max] |
 |---:|---:|---:|---:|
@@ -75,11 +107,11 @@ CSV 每個指標保留 5 次樣本的 avg／min／max。時間單位為 ms：
 | 200 | 100 | 0.7048 [0.4326, 0.9260] | 0.6757 [0.5612, 0.8110] |
 | 200 | 500 | 1.3897 [0.9807, 1.8008] | 1.7404 [1.6157, 1.8540] |
 
-這些合成 hot workload 的耗時沒有一致改善；最大案例中修改後均值較慢，**目前不能宣稱已證明整體執行速度或遊戲 FPS 改善**。可確認的是操作數下降：200 units／500 events 案例中，mock GameSession 欄位讀取 26,000 → 25,000，extension method calls 13,500 → 12,500，`current_health` calls 維持 12,500，`damage_taken` 與 `max_health` 各 500 → 0，player-list scans 500 → 0（owner lookup 0 → 500），文字格式化 240 → 40，HUD rebuilds 21 → 0；任務離開後 tracking table 200 → 0。50 units／100 events 的數據同樣是欄位讀取 6,400 → 6,200、格式化 240 → 40、HUD rebuilds 21 → 0、離開後 table 50 → 0。
+這些合成 hot workload 數據沒有一致方向：舊版 10/07 的 200／500 平均值 after 較慢；本次新版平衡配對在 200／500 的平均與中位數均略快，16/24 對 after 較快，但配對差值範圍跨越零。因此目前仍不能宣稱整體執行速度或遊戲 FPS 改善。新版 raw/summary 與歷史 CSV 分開保存，沒有覆寫或刪除舊耗時反例。
 
-欄位數是 fixture 的明確 mock：`current_health` 讀 health 與 damage，`damage_taken` 讀 damage，`max_health` 讀 health，並由 `GameSession.game_object_field` counter 實計；不是遊戲 telemetry。記憶體指標以兩次完整 GC 後為起點，在停止 GC 的 fixture／程式載入、warmup、hot workload、生命週期清理區間讀取差值，之後才恢復 GC 並完整收集。它包含載入、fixture／cache 暫存與整段 workload allocations，不代表遊戲穩態保留記憶體，也不支持記憶體改善主張；200／500 案例為 baseline 464.9277 KB、修改後 492.7988 KB。
+舊 CSV 的欄位數是 fixture mock：`current_health` 讀 health 與 damage，`damage_taken` 讀 damage，`max_health` 讀 health，並由 `GameSession.game_object_field` counter 實計；不是遊戲 telemetry。舊 `memory_delta_kb` 以兩次完整 GC 後為起點，在停止 GC 的 fixture／程式載入、warmup、hot workload、生命週期清理區間讀取差值，之後才恢復 GC 並完整收集。它包含載入、fixture/cache 暫存與整段 workload allocations，不代表遊戲穩態保留記憶體，也不支持記憶體改善主張；舊 200／500 案例 baseline 為 464.9277 KB、修改後為 492.7988 KB。
 
-完整 avg／min／max 與每格樣本數記錄在 [benchmark-results-20261007.csv](benchmark-results-20261007.csv)；bench script 為 [benchmark_dpm.lua](tests/benchmark_dpm.lua)，runtime runner 為 [run_lua.py](run_lua.py)。
+完整舊 avg／min／max 與每格樣本數記錄在 [benchmark-results-20261007.csv](benchmark-results-20261007.csv)；runner 為 [benchmark_dpm.lua](tests/benchmark_dpm.lua)，runtime runner 為 [run_lua.py](run_lua.py)。本輪只修改手動 benchmark 的排程與輸出，不新增自動測試：CSV 結構由實際 benchmark 執行及獨立讀檔重算驗證，功能回歸仍由既有 Lua 套件覆蓋。
 
 ## 原版缺陷與未驗證項目
 
@@ -87,4 +119,4 @@ CSV 每個指標保留 5 次樣本的 avg／min／max。時間單位為 ms：
 
 本輪使用 OBS 內既有 `lua51.dll`（LuaJIT 2.1.1736781742）搭配 `C:/Python313/python.exe` 的 ctypes runner；未安裝 runtime 或套件。三候選 mock 組合已測，但尚未在 Darktide 1.13.1 實機驗證遊戲 frame 耗時、多人網路 health/attack 時序或 DMF 實際 HUD lifecycle。尚無遊戲內 smoke 結果。
 
-主控獨立重跑預設功能套件 26/26、三候選套件 27/27 與 `git diff --check` 均通過。Benchmark 依主控最後產生的 CSV 更新本報告。本機分支為 `FIX/DPM-20261007`；最終 commit SHA 與 Jira 狀態由主控交付留言記錄。未 push 或合併，未修改遊戲安裝目錄。
+本輪功能套件 26 PASS、1 預期 SKIP，`--integration-candidates` 27 PASS，`git diff --check` 通過。Benchmark raw／summary 由本輪 Implementer 實際執行 runner 成功發佈，兩檔 run_id 為 `20261010-150953-142006515565`；本報告依據這批輸出更新。Jira 原指定分支字串為大寫 `FIX/DPM-20261007`；自 2026-10-08 後候選 worktree 的實際分支為 `Fix/DPM-20261007`，本輪未變更分支。本輪未 push、合併或修改遊戲安裝目錄；最終本機 commit 與 Jira 更新記錄於本單交接及 issue。

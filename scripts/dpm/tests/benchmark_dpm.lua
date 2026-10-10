@@ -3,12 +3,14 @@
 
 local ROOT = "Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/"
 local BASELINE_REF = "4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06"
-local SAMPLE_COUNT = 5
-local WARMUP_COUNT = 1
+local MIN_PAIR_COUNT = 12
+local MAX_PAIR_COUNT = 24
+local DISCARDED_WARMUP_PAIR_COUNT = 2
 local FRAME_COUNT = 60
 local DISPLAY_FPS = 60
 local SEED = 268
-local output_path = "scripts/dpm/benchmark-results-20261007.csv"
+local raw_output_path = "scripts/dpm/benchmark-results-20261010-raw.csv"
+local summary_output_path = "scripts/dpm/benchmark-results-20261010-summary.csv"
 local ffi = require("ffi")
 ffi.cdef[[
 	typedef long long DPM_LARGE_INTEGER;
@@ -380,6 +382,16 @@ local function run_sample(variant, unit_count, event_count, seed)
 	return metrics
 end
 
+local function median(values)
+	local ordered = {}
+	for index, value in ipairs(values) do ordered[index] = value end
+	table.sort(ordered)
+	local count = #ordered
+	if count % 2 == 1 then return ordered[(count + 1) / 2] end
+	local middle = count / 2
+	return (ordered[middle] + ordered[middle + 1]) / 2
+end
+
 local function summarize(values)
 	local total, minimum, maximum = 0, math.huge, -math.huge
 	for _, value in ipairs(values) do
@@ -387,40 +399,256 @@ local function summarize(values)
 		minimum = math.min(minimum, value)
 		maximum = math.max(maximum, value)
 	end
-	return total / #values, minimum, maximum
+	return total / #values, minimum, median(values), maximum
 end
 
-local output = assert(io.open(output_path, "w"))
-output:write("baseline_ref,seed,units,attack_events,variant,samples,warmups,metric,avg,min,max\n")
-print("DPM benchmark runtime=LuaJIT 2.1 via OBS lua51.dll; seed=" .. SEED .. "; frames=" .. FRAME_COUNT .. " at " .. DISPLAY_FPS .. " Hz")
-print("Timer: LuaJIT FFI QueryPerformanceCounter; module/fixture/HUD loading is untimed, and workload callsites warm once on the same fixture before state/counters reset.")
-print("GC condition: memory baseline follows two full collections; GC stopped from fixture creation through warmup, measurement, and cleanup; full collection after each sample.")
-print("Rows report 5 measured samples after 1 discarded warm-up; elapsed_ms is observational only and has no pass/fail threshold.")
-print("game_session_field_reads counts mocked GameSession.game_object_field calls: two per current_health call, one per damage_taken and max_health call.")
-print("memory_delta_kb spans fixture/module setup, warmup, hot workload, and cleanup until before collection; it is not retained live-mod memory.")
+local RUN_ID = os.date("%Y%m%d-%H%M%S") .. "-" .. string.format("%.0f", high_resolution_clock() * 1000000)
+local raw_staging_path = raw_output_path .. ".pending-" .. RUN_ID
+local summary_staging_path = summary_output_path .. ".pending-" .. RUN_ID
+local raw_backup_path = raw_output_path .. ".backup-" .. RUN_ID
+local summary_backup_path = summary_output_path .. ".backup-" .. RUN_ID
 
-for _, unit_count in ipairs({ 0, 50, 200 }) do
-	for _, event_count in ipairs({ 0, 100, 500 }) do
-		for _, variant in ipairs({ "baseline", "after" }) do
-			for warmup = 1, WARMUP_COUNT do
-				run_sample(variant, unit_count, event_count, SEED)
+local function number_string(value)
+	return string.format("%.9f", value)
+end
+
+local function checked_write(output, path, value)
+	local result, err = output:write(value)
+	if not result then
+		error("CSV write failed for " .. path .. ": " .. tostring(err), 2)
+	end
+end
+
+local function write_raw_sample(output, path, unit_count, event_count, pair_index, pair_order, position, variant, sample_index, metrics)
+	local columns = {
+		BASELINE_REF,
+		RUN_ID,
+		tostring(SEED),
+		tostring(unit_count),
+		tostring(event_count),
+		tostring(pair_index),
+		pair_order,
+		tostring(position),
+		variant,
+		tostring(sample_index),
+	}
+	for _, metric in ipairs(metric_names) do
+		columns[#columns + 1] = number_string(metrics[metric])
+	end
+	checked_write(output, path, table.concat(columns, ",") .. "\n")
+end
+
+local function write_summary_row(output, path, unit_count, event_count, series, variant, metric, sample_count, average, minimum, median_value, maximum)
+	checked_write(output, path, table.concat({
+		BASELINE_REF,
+		RUN_ID,
+		tostring(SEED),
+		tostring(unit_count),
+		tostring(event_count),
+		series,
+		variant,
+		metric,
+		tostring(sample_count),
+		number_string(average),
+		number_string(minimum),
+		number_string(median_value),
+		number_string(maximum),
+	}, ",") .. "\n")
+end
+
+local function file_exists(path)
+	local file = io.open(path, "r")
+	if not file then return false end
+	local closed, close_error = file:close()
+	if not closed then return nil, tostring(close_error) end
+	return true
+end
+
+local function cleanup_file(path)
+	local exists, exists_error = file_exists(path)
+	if exists == nil then return false, exists_error end
+	if not exists then return true end
+	local removed, remove_error = os.remove(path)
+	if not removed then return false, tostring(remove_error) end
+	return true
+end
+
+local function append_cleanup_error(errors, path)
+	local cleaned, err = cleanup_file(path)
+	if not cleaned then
+		errors[#errors + 1] = "could not remove temporary file " .. path .. ": " .. tostring(err)
+	end
+end
+
+local function backup_existing(path, backup_path)
+	local backup_exists, backup_exists_error = file_exists(backup_path)
+	if backup_exists == nil then return nil, "could not inspect backup path " .. backup_path .. ": " .. tostring(backup_exists_error) end
+	if backup_exists then return nil, "backup path already exists: " .. backup_path end
+	local exists, exists_error = file_exists(path)
+	if exists == nil then return nil, "could not inspect output path " .. path .. ": " .. tostring(exists_error) end
+	if not exists then return false end
+	local moved, move_error = os.rename(path, backup_path)
+	if not moved then return nil, "could not move existing output " .. path .. " to " .. backup_path .. ": " .. tostring(move_error) end
+	return true
+end
+
+local raw_stage_exists, raw_stage_error = file_exists(raw_staging_path)
+local summary_stage_exists, summary_stage_error = file_exists(summary_staging_path)
+if raw_stage_exists == nil then error("could not inspect staging path " .. raw_staging_path .. ": " .. tostring(raw_stage_error), 0) end
+if summary_stage_exists == nil then error("could not inspect staging path " .. summary_staging_path .. ": " .. tostring(summary_stage_error), 0) end
+if raw_stage_exists or summary_stage_exists then error("benchmark staging path already exists for run " .. RUN_ID, 0) end
+
+local raw_output, raw_open_error = io.open(raw_staging_path, "w")
+if not raw_output then error("could not open staging output " .. raw_staging_path .. ": " .. tostring(raw_open_error), 0) end
+local summary_output, summary_open_error = io.open(summary_staging_path, "w")
+if not summary_output then
+	local closed, close_error = raw_output:close()
+	local cleanup_ok, cleanup_error = cleanup_file(raw_staging_path)
+	local details = {}
+	if not closed then details[#details + 1] = "raw staging close failed: " .. tostring(close_error) end
+	if not cleanup_ok then details[#details + 1] = "raw staging cleanup failed: " .. tostring(cleanup_error) end
+	error("could not open staging output " .. summary_staging_path .. ": " .. tostring(summary_open_error)
+		.. (#details > 0 and ("; " .. table.concat(details, "; ")) or ""), 0)
+end
+
+local function run_measurements()
+	local raw_columns = {
+		"baseline_ref", "run_id", "seed", "units", "attack_events", "pair_index", "pair_order",
+		"position", "variant", "sample_index",
+	}
+	for _, metric in ipairs(metric_names) do raw_columns[#raw_columns + 1] = metric end
+	checked_write(raw_output, raw_staging_path, table.concat(raw_columns, ",") .. "\n")
+	checked_write(summary_output, summary_staging_path, "baseline_ref,run_id,seed,units,attack_events,series,variant,metric,samples,avg,min,median,max\n")
+
+	print("DPM benchmark runtime=LuaJIT 2.1 via OBS lua51.dll; seed=" .. SEED .. "; frames=" .. FRAME_COUNT .. " at " .. DISPLAY_FPS .. " Hz")
+	print("Timer: LuaJIT FFI QueryPerformanceCounter; module/fixture/HUD setup is untimed.")
+	print("Each fresh sample fixture runs one untimed workload callsite warm-up, then resets state and counters before the timed workload.")
+	print("Each case also discards two complete sample runs per variant before measurement; warm-up pair order is AB then BA, so both variants receive two warm-ups.")
+	print("Measured samples are paired by identical inputs; pair order alternates AB/BA. Every case has at least " .. MIN_PAIR_COUNT .. " pairs; 200 units/500 events has " .. MAX_PAIR_COUNT .. ".")
+	print("GC condition: memory baseline follows two full collections; GC stopped from fixture creation through internal warm-up, measurement, and cleanup; full collection after each sample.")
+	print("CSV rows preserve every measured variant run and all operation counters. Summary includes avg/min/median/max and paired after-minus-baseline elapsed differences.")
+	print("elapsed_ms is observational only with no pass/fail threshold. GameSession field reads count mocked game_object_field calls, not engine telemetry.")
+	print("memory_delta_kb spans fixture/module setup, internal warm-up, hot workload, and cleanup until before collection; it is not retained live-mod memory.")
+
+	for _, unit_count in ipairs({ 0, 50, 200 }) do
+		for _, event_count in ipairs({ 0, 100, 500 }) do
+			local pair_count = unit_count == 200 and event_count == 500 and MAX_PAIR_COUNT or MIN_PAIR_COUNT
+
+			for warmup_pair = 1, DISCARDED_WARMUP_PAIR_COUNT do
+				local warmup_order = warmup_pair % 2 == 1 and { "baseline", "after" } or { "after", "baseline" }
+				for _, variant in ipairs(warmup_order) do
+					run_sample(variant, unit_count, event_count, SEED)
+				end
 			end
-			local samples = {}
-			for sample = 1, SAMPLE_COUNT do
-				samples[sample] = run_sample(variant, unit_count, event_count, SEED)
+
+			local samples_by_variant = { baseline = {}, after = {} }
+			local paired_elapsed_differences = {}
+			for pair_index = 1, pair_count do
+				local pair_order = pair_index % 2 == 1 and "AB" or "BA"
+				local variants = pair_index % 2 == 1 and { "baseline", "after" } or { "after", "baseline" }
+				local pair_results = {}
+				for position, variant in ipairs(variants) do
+					local metrics = run_sample(variant, unit_count, event_count, SEED)
+					samples_by_variant[variant][pair_index] = metrics
+					pair_results[variant] = metrics
+					write_raw_sample(raw_output, raw_staging_path, unit_count, event_count, pair_index, pair_order, position, variant, pair_index, metrics)
+				end
+				paired_elapsed_differences[pair_index] = pair_results.after.elapsed_ms - pair_results.baseline.elapsed_ms
 			end
-			for _, metric in ipairs(metric_names) do
-				local values = {}
-				for sample = 1, SAMPLE_COUNT do values[sample] = samples[sample][metric] end
-				local average, minimum, maximum = summarize(values)
-				output:write(string.format(
-					"%s,%d,%d,%d,%s,%d,%d,%s,%.4f,%.4f,%.4f\n",
-					BASELINE_REF, SEED, unit_count, event_count, variant, SAMPLE_COUNT, WARMUP_COUNT,
-					metric, average, minimum, maximum))
+
+			for _, variant in ipairs({ "baseline", "after" }) do
+				for _, metric in ipairs(metric_names) do
+					local values = {}
+					for sample_index = 1, pair_count do
+						values[sample_index] = samples_by_variant[variant][sample_index][metric]
+					end
+					local average, minimum, median_value, maximum = summarize(values)
+					write_summary_row(summary_output, summary_staging_path, unit_count, event_count, "variant", variant, metric, pair_count, average, minimum, median_value, maximum)
+				end
 			end
-			print(string.format("finished units=%d events=%d variant=%s", unit_count, event_count, variant))
+
+			local average, minimum, median_value, maximum = summarize(paired_elapsed_differences)
+			write_summary_row(summary_output, summary_staging_path, unit_count, event_count, "paired_difference", "after_minus_baseline", "elapsed_ms", pair_count, average, minimum, median_value, maximum)
+			print(string.format("finished units=%d events=%d pairs=%d", unit_count, event_count, pair_count))
 		end
 	end
 end
-output:close()
-print("Wrote " .. output_path)
+
+local run_ok, run_error = xpcall(run_measurements, function(err)
+	return debug.traceback(tostring(err), 2)
+end)
+local raw_closed, raw_close_error = raw_output:close()
+local summary_closed, summary_close_error = summary_output:close()
+if not run_ok or not raw_closed or not summary_closed then
+	local failures = {}
+	if not run_ok then failures[#failures + 1] = "benchmark generation failed: " .. tostring(run_error) end
+	if not raw_closed then failures[#failures + 1] = "raw staging close failed for " .. raw_staging_path .. ": " .. tostring(raw_close_error) end
+	if not summary_closed then failures[#failures + 1] = "summary staging close failed for " .. summary_staging_path .. ": " .. tostring(summary_close_error) end
+	append_cleanup_error(failures, raw_staging_path)
+	append_cleanup_error(failures, summary_staging_path)
+	error(table.concat(failures, "\n"), 0)
+end
+
+local raw_had_original, raw_backup_error = backup_existing(raw_output_path, raw_backup_path)
+local summary_had_original, summary_backup_error = false, nil
+local raw_published, summary_published = false, false
+
+local function rollback_publication()
+	local failures = {}
+	if raw_published then
+		local removed, remove_error = cleanup_file(raw_output_path)
+		if not removed then failures[#failures + 1] = "could not remove newly published raw output: " .. tostring(remove_error) end
+	end
+	if summary_published then
+		local removed, remove_error = cleanup_file(summary_output_path)
+		if not removed then failures[#failures + 1] = "could not remove newly published summary output: " .. tostring(remove_error) end
+	end
+	if raw_had_original then
+		local restored, restore_error = os.rename(raw_backup_path, raw_output_path)
+		if not restored then failures[#failures + 1] = "could not restore raw backup " .. raw_backup_path .. ": " .. tostring(restore_error) end
+	end
+	if summary_had_original then
+		local restored, restore_error = os.rename(summary_backup_path, summary_output_path)
+		if not restored then failures[#failures + 1] = "could not restore summary backup " .. summary_backup_path .. ": " .. tostring(restore_error) end
+	end
+	return #failures == 0, table.concat(failures, "; ")
+end
+
+local function abort_publication(reason)
+	local restored, restore_error = rollback_publication()
+	local failures = { reason }
+	if not restored then
+		failures[#failures + 1] = "rollback incomplete: " .. restore_error
+		failures[#failures + 1] = "preserve any remaining backups at " .. raw_backup_path .. " and " .. summary_backup_path
+	end
+	append_cleanup_error(failures, raw_staging_path)
+	append_cleanup_error(failures, summary_staging_path)
+	error(table.concat(failures, "; "), 0)
+end
+
+if raw_had_original == nil then
+	abort_publication("could not prepare raw output backup: " .. tostring(raw_backup_error))
+end
+summary_had_original, summary_backup_error = backup_existing(summary_output_path, summary_backup_path)
+if summary_had_original == nil then
+	abort_publication("could not prepare summary output backup: " .. tostring(summary_backup_error))
+end
+
+local raw_moved, raw_move_error = os.rename(raw_staging_path, raw_output_path)
+if not raw_moved then abort_publication("could not publish raw output: " .. tostring(raw_move_error)) end
+raw_published = true
+local summary_moved, summary_move_error = os.rename(summary_staging_path, summary_output_path)
+if not summary_moved then abort_publication("could not publish summary output: " .. tostring(summary_move_error)) end
+summary_published = true
+
+if raw_had_original then
+	local removed, remove_error = cleanup_file(raw_backup_path)
+	if not removed then print("Warning: benchmark pair published, but raw backup remains at " .. raw_backup_path .. ": " .. tostring(remove_error)) end
+end
+if summary_had_original then
+	local removed, remove_error = cleanup_file(summary_backup_path)
+	if not removed then print("Warning: benchmark pair published, but summary backup remains at " .. summary_backup_path .. ": " .. tostring(remove_error)) end
+end
+
+print("Wrote " .. raw_output_path .. " run_id=" .. RUN_ID)
+print("Wrote " .. summary_output_path .. " run_id=" .. RUN_ID)
