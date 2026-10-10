@@ -25,6 +25,7 @@ local interrupted_cleave_attacks = {}
 local CRUSHER_STAGGER_EVENT_PACK = "crusher_attack_indicator_stagger"
 local crusher_stagger_animation_events = {}
 local crusher_stagger_animation_event_lookup = {}
+local crusher_stagger_animation_indices = setmetatable({}, { __mode = "k" })
 
 local crusher_executor_actions = require("scripts/settings/breed/breed_actions/chaos/chaos_ogryn_executor_actions")
 
@@ -381,6 +382,60 @@ local function on_stagger_animation_started(pack_key, _event_index, unit, _first
         show_persistent_ring(unit, Unit.world(unit))
     end
 end
+
+local function is_active_crusher_attack(unit)
+    local state = crusher_attack_states[unit]
+    return is_enabled() and Unit.alive(unit) and is_crusher_unit(unit)
+        and (state == "warning" or state == "attack") and active_cleave_tokens[unit] ~= nil
+end
+
+local function stagger_indices_for(unit)
+    local cached = crusher_stagger_animation_indices[unit]
+    if cached then
+        return cached
+    end
+    if type(Unit.index_by_animation_event) ~= "function" then
+        return nil
+    end
+
+    local indices = {}
+    for _, event_name in ipairs(crusher_stagger_animation_events) do
+        local ok, index = pcall(Unit.index_by_animation_event, unit, event_name)
+        if not ok then
+            return nil
+        end
+        if type(index) == "number" and index >= 0 and index % 1 == 0 then
+            indices[index] = true
+        end
+    end
+    crusher_stagger_animation_indices[unit] = indices
+    return indices
+end
+
+local function on_local_animation_event(extension, event_name)
+    local unit = extension and extension._unit
+    if crusher_stagger_animation_event_lookup[event_name] and unit then
+        on_stagger_animation_started(CRUSHER_STAGGER_EVENT_PACK, nil, unit, false, "minion")
+    end
+end
+
+local function on_remote_animation_event(_system, _channel_id, unit_id, event_index)
+    if type(event_index) ~= "number" or not Managers or not Managers.state or not Managers.state.unit_spawner then
+        return
+    end
+    local unit = Managers.state.unit_spawner:unit(unit_id)
+    if unit and is_active_crusher_attack(unit) then
+        local indices = stagger_indices_for(unit)
+        if indices and indices[event_index] then
+            on_stagger_animation_started(CRUSHER_STAGGER_EVENT_PACK, event_index, unit, false, "minion")
+        end
+    end
+end
+
+mod:hook_safe("MinionAnimationExtension", "anim_event", on_local_animation_event)
+mod:hook_safe("MinionAnimationExtension", "anim_event_with_variable_float", on_local_animation_event)
+mod:hook_safe("AnimationSystem", "rpc_minion_anim_event", on_remote_animation_event)
+mod:hook_safe("AnimationSystem", "rpc_minion_anim_event_variable_float", on_remote_animation_event)
 
 local function hide_persistent_ring(unit)
     local decal = persistent_yellow_rings[unit]
