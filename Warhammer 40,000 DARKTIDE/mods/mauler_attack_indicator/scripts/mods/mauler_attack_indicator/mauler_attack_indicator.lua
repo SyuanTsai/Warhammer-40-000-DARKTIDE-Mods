@@ -26,6 +26,7 @@ local next_attack_generation = 0
 local MAULER_STAGGER_ANIMATION_PACK = "mauler_attack_indicator_stagger"
 local mauler_stagger_animation_events = {}
 local mauler_stagger_animation_event_lookup = {}
+local mauler_stagger_animation_indices = setmetatable({}, { __mode = "k" })
 
 local function collect_animation_events(value)
 	if type(value) == "string" then
@@ -403,6 +404,61 @@ local function on_mauler_stagger_animation_started(event_name, _event_index, uni
 		cancel_active_attack(unit)
 	end
 end
+
+local function is_active_mauler_attack(unit)
+	local state = mauler_attack_states[unit]
+	local timer = attack_timers[unit]
+	return is_enabled() and Unit.alive(unit) and is_mauler_unit(unit) and timer
+		and (state == "warning" or state == "attack") and attack_generations[unit] == timer.generation
+end
+
+local function stagger_indices_for(unit)
+	local cached = mauler_stagger_animation_indices[unit]
+	if cached then
+		return cached
+	end
+	if type(Unit.index_by_animation_event) ~= "function" then
+		return nil
+	end
+
+	local indices = {}
+	for _, event_name in ipairs(mauler_stagger_animation_events) do
+		local ok, index = pcall(Unit.index_by_animation_event, unit, event_name)
+		if not ok then
+			return nil
+		end
+		if type(index) == "number" and index >= 0 and index % 1 == 0 then
+			indices[index] = true
+		end
+	end
+	mauler_stagger_animation_indices[unit] = indices
+	return indices
+end
+
+local function on_local_animation_event(extension, event_name)
+	local unit = extension and extension._unit
+	if mauler_stagger_animation_event_lookup[event_name] and unit then
+		on_mauler_stagger_animation_started(MAULER_STAGGER_ANIMATION_PACK, nil, unit, false, "minion")
+	end
+end
+
+local function on_remote_animation_event(_system, _channel_id, unit_id, event_index)
+	if type(event_index) ~= "number" or not Managers or not Managers.state or not Managers.state.unit_spawner then
+		return
+	end
+	local unit = Managers.state.unit_spawner:unit(unit_id)
+	if unit and is_active_mauler_attack(unit) then
+		local indices = stagger_indices_for(unit)
+		if indices and indices[event_index] then
+			on_mauler_stagger_animation_started(MAULER_STAGGER_ANIMATION_PACK, event_index, unit, false, "minion")
+		end
+	end
+end
+
+mod:hook_safe("MinionAnimationExtension", "anim_event", on_local_animation_event)
+mod:hook_safe("MinionAnimationExtension", "anim_event_with_variable_float", on_local_animation_event)
+mod:hook_safe("AnimationSystem", "rpc_minion_anim_event", on_remote_animation_event)
+mod:hook_safe("AnimationSystem", "rpc_minion_anim_event_variable_float", on_remote_animation_event)
 
 if #mauler_stagger_animation_events > 0 then
 	mod.animation_events_add_packs = {

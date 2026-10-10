@@ -44,6 +44,10 @@ local function fixture(options)
 	local live_units = {}
 	local unit_worlds = {}
 	local unit_breeds = {}
+	local unit_ids = {}
+	local animation_indices = { stagger_fwd_light_2 = 27, stagger_left_3 = 28 }
+	local animation_lookups = 0
+	local animation_plays = 0
 	local gameplay_time = options.time or 100
 	local mod_enabled = true
 	local spawned = {}
@@ -126,6 +130,7 @@ local function fixture(options)
 		time = { time = function() return gameplay_time end },
 		world = world_manager,
 		state = {
+			unit_spawner = { unit = function(_, unit_id) return unit_ids[unit_id] end },
 			side = {
 				get_side_from_name = function(_, side_name)
 					assert_equal(side_name, "enemy")
@@ -151,6 +156,11 @@ local function fixture(options)
 	_G.Unit = {
 		alive = function(unit) return live_units[unit] == true end,
 		world = function(unit) return unit_worlds[unit] end,
+		index_by_animation_event = function(_, event_name)
+			animation_lookups = animation_lookups + 1
+			return animation_indices[event_name]
+		end,
+		animation_event = function() animation_plays = animation_plays + 1 end,
 		set_local_position = function() end,
 		set_local_scale = function(_, _, scale) scales[#scales + 1] = scale end,
 		set_vector4_for_material = function() end,
@@ -221,8 +231,11 @@ local function fixture(options)
 		unit_breeds[unit] = breed_name
 		POSITION_LOOKUP[unit] = { x = 0, y = 0, z = 0 }
 		enemy_units[#enemy_units + 1] = unit
+		unit_ids[#enemy_units] = unit
 		return unit
 	end
+	function context.animation_lookup_count() return animation_lookups end
+	function context.animation_play_count() return animation_plays end
 	function context.new_mauler()
 		return context.new_unit("renegade_executor")
 	end
@@ -676,6 +689,59 @@ local tests = {
 			assert_equal(context.persistent_tables.mauler_decals[unit], nil)
 			assert_equal(#context.spawned, 1)
 			assert_equal(#context.destroyed, 1)
+		end,
+	},
+	{
+		-- Scenario: without animation_events, a local Mauler receives an ordinary animation and then a stagger.
+		-- Purpose: the MOD cancels its warning only for the exact stagger animation name.
+		"UnitT100_LocalStaggerWithoutProviderCancelsAttack",
+		function()
+			local context = fixture()
+			context.settings.persistent_yellow = false
+			local unit = context.new_mauler()
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			local hook = context.hooks["MinionAnimationExtension.anim_event"]
+			assert(type(hook) == "function", "self-contained local animation hook is required")
+			hook({ _unit = unit }, "attack_01")
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning")
+			hook({ _unit = unit }, "stagger_fwd_light_2")
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil)
+		end,
+	},
+	{
+		-- Scenario: without animation_events, a remote Mauler gets an unrelated index and then a stagger index.
+		-- Purpose: the MOD uses a cached read-only mapping and never plays a probe animation.
+		"UnitT110_RemoteStaggerWithoutProviderUsesReadOnlyLookup",
+		function()
+			local context = fixture()
+			context.settings.persistent_yellow = false
+			local unit = context.new_mauler()
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			local hook = context.hooks["AnimationSystem.rpc_minion_anim_event"]
+			assert(type(hook) == "function", "self-contained remote animation hook is required")
+			hook({}, 1, 1, 999)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning")
+			assert_equal(context.animation_lookup_count(), 2)
+			assert_equal(context.animation_play_count(), 0)
+			hook({}, 1, 1, 27)
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil)
+			assert_equal(context.animation_lookup_count(), 2)
+			assert_equal(context.animation_play_count(), 0)
+		end,
+	},
+	{
+		-- Scenario: the client has no native read-only animation index lookup.
+		-- Purpose: the MOD fails closed and preserves the current warning.
+		"UnitT120_MissingReadOnlyLookupLeavesWarningIntact",
+		function()
+			local context = fixture()
+			context.settings.persistent_yellow = false
+			local unit = context.new_mauler()
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			Unit.index_by_animation_event = nil
+			context.hooks["AnimationSystem.rpc_minion_anim_event"]({}, 1, 1, 27)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning")
+			assert_equal(context.animation_play_count(), 0)
 		end,
 	},
 }
