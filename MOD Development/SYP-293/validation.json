@@ -1,0 +1,27 @@
+{
+  "issue": "SYP-293",
+  "scope": "same-mainline tracked-directory migration",
+  "sourceFileCount": 45,
+  "byteIdenticalOriginalFiles": 31,
+  "testBehaviorChanged": false,
+  "changedSourceFiles": "command/link/output paths and README root wording only",
+  "localMarkdownLinksChecked": 39,
+  "originalCsvAndTextEvidencePreserved": true,
+  "functionalSuites": {
+    "AUPM": "31/31",
+    "KPM": "21/22; existing missing Unit mock in InterT10",
+    "DPM": "26/26",
+    "Crusher": "13/13",
+    "Mauler": "14/14"
+  },
+  "benchmarks": {
+    "AUPM": "exit 0; 30 pairs; outputs in development directory",
+    "KPM": "exit 0",
+    "DPM": "exit 0; raw 240 rows / summary 243 rows; shared run_id"
+  },
+  "historicalBenchmarkOutputsRestored": true,
+  "modInstallPayloadFiles": 1017,
+  "developmentFilesExcludedFromModInstallPayload": true,
+  "gameInstallOrInGameSmoke": "not performed",
+  "readmeHashGameInfoAndWorkflowUnchanged": true
+}

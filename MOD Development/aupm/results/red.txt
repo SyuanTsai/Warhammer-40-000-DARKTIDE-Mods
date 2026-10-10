@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "lupa/luajit21.pyx", line 441, in lupa.luajit21.LuaRuntime.execute
+  File "lupa/luajit21.pyx", line 1872, in lupa.luajit21.run_lua
+  File "lupa/luajit21.pyx", line 1886, in lupa.luajit21.call_lua
+  File "lupa/luajit21.pyx", line 1913, in lupa.luajit21.execute_lua_call
+  File "lupa/luajit21.pyx", line 1794, in lupa.luajit21.raise_lua_error
+lupa.luajit21.LuaError: scripts/aupm/tests/test_aupm.lua:7: expected 0, got 8
+stack traceback:
+	[C]: in function 'assert'
+	scripts/aupm/tests/test_aupm.lua:7: in function 'assert_equal'
+	scripts/aupm/tests/test_aupm.lua:629: in main chunk
+	[C]: in function 'dofile'
+	[string "<python>"]:1: in main chunk
+PASS UnitT00_LocalPlayerUsesNewCooldownAPI
+PASS UnitT10_TeammateUsesNewCooldownAPI
+PASS UnitT20_CurrentCooldownAPITakesPrecedence
+PASS UnitT30_LegacyCooldownAPIStillWorks
+PASS UnitT40_ChargeConsumptionAndRateRemainCorrect
+PASS UnitT50_AbilityChangesAndDisabledUpdatesDoNotCount
+PASS UnitT60_UnavailableGameplayTimeDisplaysNA
+PASS UnitT70_PlayerPanelsDisplayAndClearStatistics
+PASS UnitT80_NewGameplaySessionClearsStatistics
+FAIL UnitT90_VisibilityUpdatesOffsetsInPlace
+scripts/aupm/tests/test_aupm.lua:7: expected table: 0x01afffb3c4a8, got table: 0x01afffb49d98
+FAIL UnitT91_SettingsReloadAndHudRebuildRefreshImmediately
+scripts/aupm/tests/test_aupm.lua:377: attempt to call field 'on_all_mods_loaded' (a nil value)
+FAIL UnitT92_SettingsResetRefreshesCachedOffsets
+scripts/aupm/tests/test_aupm.lua:405: attempt to call field 'on_setting_changed' (a nil value)
+FAIL UnitT93_ReadyOwnerLookupAvoidsPlayerScan
+scripts/aupm/tests/test_aupm.lua:7: expected 1, got 0
+PASS UnitT94_OwnerLookupFallbackAndAttachedUnit
+PASS UnitT95_RespawnReplacementAndLeaveResolveFreshOwner
+FAIL UnitT96_HudFormattingIsAtMostTenHzAtCommonRates
+scripts/aupm/tests/test_aupm.lua:11: expected at most 10 Hz plus first display for player-id at 30 Hz, got 300
+FAIL UnitT97_HiddenNilAndBackwardTimeRefreshSafely
+scripts/aupm/tests/test_aupm.lua:7: expected 1, got 2
+FAIL UnitT98_UnchangedTextDoesNotRewriteOrDirty
+scripts/aupm/tests/test_aupm.lua:7: expected 2, got 26
+FAIL UnitT99_PanelHookPreservesChainedCallAndResults
+scripts/aupm/tests/test_aupm.lua:7: expected table: 0x01afffb32690, got nil
