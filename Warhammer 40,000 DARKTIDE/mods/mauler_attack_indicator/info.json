@@ -1,0 +1,7 @@
+{
+  "name": "Mauler Attack Indicator",
+  "description": "Shows yellow warning and red attack rings for Mauler overhead attacks, with an optional persistent yellow ring. Removes the attack ring when a stagger interrupts the attack.",
+  "version": "1.0.1",
+  "author": "Icetiger540",
+  "source": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods"
+}
