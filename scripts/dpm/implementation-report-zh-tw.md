@@ -89,7 +89,7 @@ baseline 取自 commit `4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06`。本次 CSV �
 
 - 角色：主控 `/root`（gpt-6-sol/high）；Find `/root/find`（gpt-6-sol/high，順序偏差與熱路徑調查）；Implementer `/root/implement_benchmark`（gpt-6-luna/max，量測腳本、CSV 與故障注入）；獨立 Review `/root/review`（gpt-6-sol/high，修正 P2 CSV 截斷 finding 後複查，最終無新 finding）。
 - 功能測試 26 PASS、1 預期 SKIP；候選整合測試 27 PASS。三種故障注入（raw write、summary close、第二份 summary 發布失敗）均以 exit 2 結束，並逐 byte 保留舊 raw/summary pair。
-- 200／500 最終合成量測：baseline avg 2.3370 ms、median 2.1374 ms；after avg 2.1730 ms、median 2.0460 ms；配對差（after − baseline）avg -0.1640 ms、median -0.1359 ms，範圍 [-1.0397, +0.6415] ms，16/24 對 after 較快。此為 fixture mock benchmark，不是遊戲內通過結果；Darktide 實機與多人情境仍待驗。
+- 200／500 最終合成量測：baseline avg 2.3370 ms、median 2.1374 ms；after avg 2.1730 ms、median 2.0460 ms；配對差（after − baseline）avg -0.1640 ms、median -0.1359 ms，範圍 [-1.0397, +0.6415] ms，16/24 對 after 較快。此為 fixture mock benchmark，不是遊戲內通過結果；三場遊戲任務日誌僅提供全遊戲 FPS 和錯誤觀察，HUD／數值實機驗收與同條件效能對照仍待完成。
 
 ### 2026-10-07 歷史序列結果（保留）
 
@@ -113,10 +113,24 @@ baseline 取自 commit `4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06`。本次 CSV �
 
 完整舊 avg／min／max 與每格樣本數記錄在 [benchmark-results-20261007.csv](benchmark-results-20261007.csv)；runner 為 [benchmark_dpm.lua](tests/benchmark_dpm.lua)，runtime runner 為 [run_lua.py](run_lua.py)。本輪只修改手動 benchmark 的排程與輸出，不新增自動測試：CSV 結構由實際 benchmark 執行及獨立讀檔重算驗證，功能回歸仍由既有 Lua 套件覆蓋。
 
+## 2026-10-10 遊戲日誌觀察
+
+檢查 `console-2026-10-10-08.24.49-bc0c9f09-5d31-4cdc-860a-92bc579bd48a.log`（日誌時間為 UTC；原檔留在使用者本機，未提交）。日誌顯示 DPM 載入、攻擊與 HUD 相關 hook 註冊，並完成三場任務；未找到指向 `DPM.lua`、`HudElementDPM.lua` 或 `[MOD][DPM]` 的錯誤。這只能支持「本次記錄沒有 DPM 錯誤」；日誌不能核對 HUD 畫面或傷害數值正確性。
+
+FpsDoctor 的每 10 秒診斷包含全遊戲 FPS 與超過 50 ms 的卡頓次數。以下排除每場進入與離開附近的約一分鐘，以每個 10 秒診斷的 `avg fps` 再取平均；它不是 DPM 函式耗時或整場的精確 1% low。
+
+| 任務 | 採樣窗口 | 10 秒平均 FPS 的平均 | >50 ms 卡頓次數 |
+|---|---:|---:|---:|
+| `dm_rise` | 140 | 41.0 | 35 |
+| `dm_stockpile` | 109 | 38.0 | 250 |
+| `hm_strain` | 129 | 40.3 | 57 |
+
+`dm_stockpile` 在 09:23:08 UTC 的單一 10 秒窗口有 47 次 >50 ms 卡頓，表示仍有明顯卡頓。日誌未提供 DPM 專屬 CPU／frame 耗時或與卡頓的呼叫關聯；本機可找到的較早 console logs 也都在修正版已安裝後，沒有改版前同條件遊戲對照。因此不能從這份日誌宣稱遊戲 FPS 改善，也沒有直接證據將卡頓歸因於 DPM。仍需玩家確認 HUD、數值與生命週期行為，並以同場景對照量測效能。
+
 ## 原版缺陷與未驗證項目
 
 已觀察的原版問題包括：每次攻擊掃描玩家清單；HUD 關閉 view 時 destroy/create 全 HUD；面板與主 HUD 每 frame 格式化；本地致死時可能殘留 enemy-health entry；生命系統移除／destroy 與 invalid unit 缺少全面清理；隱藏 widget 仍有不必要格式化；未檢查 gameplay timer 是否存在。兩玩家 `account_id` 同為 nil 時原版會把兩人判為本人，本次為保持統計口徑予以保留並加 characterization，不當作修正。`UnitT90` 另外確認未追蹤且仍在 extension update 清單中的單位不應多做 native alive check。
 
-本輪使用 OBS 內既有 `lua51.dll`（LuaJIT 2.1.1736781742）搭配 `C:/Python313/python.exe` 的 ctypes runner；未安裝 runtime 或套件。三候選 mock 組合已測，但尚未在 Darktide 1.13.1 實機驗證遊戲 frame 耗時、多人網路 health/attack 時序或 DMF 實際 HUD lifecycle。尚無遊戲內 smoke 結果。
+本輪使用 OBS 內既有 `lua51.dll`（LuaJIT 2.1.1736781742）搭配 `C:/Python313/python.exe` 的 ctypes runner；未安裝 runtime 或套件。三候選 mock 組合已測，遊戲日誌也記錄了三場實際任務且未見 DPM 錯誤；但尚未驗證 DPM 專屬 frame 耗時、多人網路 health/attack 數值正確性或 DMF 實際 HUD 畫面生命週期。玩家視覺 smoke 與同條件效能對照仍待完成。
 
-本輪功能套件 26 PASS、1 預期 SKIP，`--integration-candidates` 27 PASS，`git diff --check` 通過。Benchmark raw／summary 由本輪 Implementer 實際執行 runner 成功發佈，兩檔 run_id 為 `20261010-150953-142006515565`；本報告依據這批輸出更新。Jira 原指定分支字串為大寫 `FIX/DPM-20261007`；自 2026-10-08 後候選 worktree 的實際分支為 `Fix/DPM-20261007`，本輪未變更分支。本輪未 push、合併或修改遊戲安裝目錄；最終本機 commit 與 Jira 更新記錄於本單交接及 issue。
+本輪功能套件 26 PASS、1 預期 SKIP，`--integration-candidates` 27 PASS，`git diff --check` 通過。Benchmark raw／summary 由本輪 Implementer 實際執行 runner 成功發佈，兩檔 run_id 為 `20261010-150953-142006515565`；本報告依據這批輸出更新。Jira 原指定分支字串為大寫 `FIX/DPM-20261007`；自 2026-10-08 後候選 worktree 的實際分支為 `Fix/DPM-20261007`，本輪未變更分支。候選 DPM 已替換至遊戲安裝目錄；替換前該目錄與候選程式內容相同，僅換行格式不同，原目錄已備份。PR、commit 與 Jira 更新記錄於本單 issue；尚未合併。
