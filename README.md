@@ -73,6 +73,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2.2.7
 - MOD 檔案名稱：Skitarius 2.2.7 510 2.2.7 2026-10-02T16-41Z L8cAq8xlI.zip
 - 手動維護最後下載日期：2026-10-03
+- Nexus MOD ID: 510
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/510
+- Nexus page version: 2.2.7
+- Nexus last updated: 2026-10-02T16:41:57Z
+- Main file ID: 8705
+- Main file version: 2.2.7
+- Main file uploaded at UTC: 2026-10-02T16:41:57Z
+- Archive filename: Skitarius 2.2.7 510 2.2.7 2026-10-02T16-41Z L8cAq8xlI.zip
+- Archive size bytes: 41043
+- Archive SHA-256: 7ca6c80947a64085afc56bbe2e3375659b5eeeffb82cf1b00d7c4b84c3d9ac4a
+- Acquisition method: manual-queue
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
     自動開啟箱子並撿取物品
@@ -87,6 +98,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：26.09.29
 - MOD 檔案名稱：Healthbars 16 26.09.29 2026-09-29T15-49Z JvbS2v8s1.zip
 - 手動維護最後下載日期：2026-09-30
+- Nexus MOD ID: 16
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/16
+- Nexus page version: 未標示（頁面顯示 see-files）
+- Nexus last updated: 2026-09-29T15:49Z
+- Main file ID: 8542
+- Main file version: 26.09.29（ZIP 內 info.json）
+- Main file uploaded at UTC: 2026-09-29T15:49Z
+- Archive filename: Healthbars 16 26.09.29 2026-09-29T15-49Z JvbS2v8s1.zip
+- Archive size bytes: 43971
+- Archive SHA-256: 5efef68fbb9e14b0aec1e53f0bfa1bf2ac5b8131b466f6390fbc4e159e52d915
+- Acquisition method: manual-queue
 - GitHub :
 - Source=>  https://github.com/danreeves/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-Danreeves
@@ -104,6 +126,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.11.0（LucLeto 社群公開測試版；Nexus 正式版：1.10.3）
 - MOD 檔案名稱：true_level.zip
 - 手動維護最後下載日期：2026-10-07
+- Nexus MOD ID: 156
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/156
+- Nexus page version: 1.10.3
+- Nexus last updated: 2026-08-17T08:20:57Z
+- Main file ID: not-applicable
+- Community package version: 1.11.0
+- Main file uploaded at UTC: not-applicable
+- Archive filename: true_level.zip
+- Archive size bytes: 108924
+- Archive SHA-256: ced83cba3bd2aaf37ade552514d5a07ea1e3feeea48bf1b9388bd5239489691f
+- Acquisition method: manual-queue
 - 來源類型：LucLeto 發布的 True Level 1.11.0 社群公開測試版；版本號與 ZIP 內 info.json 一致。
 - 社群來源：[Nexus True Level 1.11.0 公開測試貼文](https://www.nexusmods.com/warhammer40kdarktide/mods/156?tab=posts#comment-176898600)
 - 社群程式來源：[LucLeto/zombine04-darktide-mods](https://github.com/LucLeto/zombine04-darktide-mods/tree/f2a7b33848bbe46ff16baca4560ee808ee31ca33/true_level)；分支 `integration/true-level-havoc`；固定提交 `f2a7b33848bbe46ff16baca4560ee808ee31ca33`。
@@ -244,6 +277,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2.15.8
 - MOD 檔案名稱：Markers Improved All-in-One 447 2.15.8 2026-10-03T22-49Z bTkWSTwFC.zip
 - 手動維護最後下載日期：2026-10-04
+- Nexus MOD ID: `447`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/447`
+- Nexus page version: `2.15.8`
+- Nexus last updated: `2026-10-03T22:49:22Z`
+- Main file ID: `8748`
+- Main file version: `2.15.8`
+- Main file uploaded at UTC: `2026-10-03T22:49:22Z`
+- Archive filename: `Markers Improved All-in-One 447 2.15.8 2026-10-03T22-49Z bTkWSTwFC.zip`
+- Archive size bytes: `111852`
+- Archive SHA-256: `e108ab3a0499a0ac4b914579e94c84b386f1eceb2bad9d195d1a100a00b8a281`
+- Acquisition method: `manual-queue`
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
     危險區域 - 顯示危險的範圍 爆桶、惡魔宿主...等
@@ -258,6 +302,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：26.10.05
 - MOD 檔案名稱：NumericUI 14 26.10.05 2026-10-05T18-36Z ndQ1mdFpc.zip
 - 手動維護最後下載日期：2026-10-06
+- Nexus MOD ID: `14`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/14`
+- Nexus page version: `26.02.08-1`
+- Nexus last updated: `2026-10-05T18:36:13Z`
+- Main file ID: `8819`
+- Main file version: `26.10.05`
+- Main file uploaded at UTC: `2026-10-05T18:36:13Z`
+- Archive filename: `NumericUI 14 26.10.05 2026-10-05T18-36Z ndQ1mdFpc.zip`
+- Archive size bytes: `47475`
+- Archive SHA-256: `7cce33c441d97eb6a1c49f75b1a6db96190e196f2edc76caa4a2463fb8bcb48a`
+- Acquisition method: `manual-queue`
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
     蜘蛛感應 - 畫面顯示特定敵人位置
@@ -265,6 +320,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：7.9.0
 - MOD 檔案名稱：Spidey Sense 7.9.0 268 7.9.0 2026-08-23T16-50Z 95Dkb5S3s.zip
 - 手動維護最後下載日期：2026-09-02
+- Nexus MOD ID: 268
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/268
+- Nexus page version: 7.9.0
+- Nexus last updated: 2026-08-23T16:50:12.0000000+00:00
+- Main file ID: 7642
+- Main file version: 7.9.0
+- Main file uploaded at UTC: 2026-08-23T16:50:12.0000000+00:00
+- Archive filename: Spidey Sense 7.9.0 268 7.9.0 2026-08-23T16-50Z 95Dkb5S3s.zip
+- Archive size bytes: 42763
+- Archive SHA-256: f7eff09ea3d20ceb3b3438e86b6c39b86cd57072e8d3837c3f8b275c15a348c5
+- Acquisition method: manual-queue
 - GitHub :
 - Source=>  https://github.com/Wobin/SpideySense
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mod-SpideySense
@@ -323,6 +389,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：26.09.30
 - MOD 檔案名稱：ChatBlock 68 26.09.30 2026-09-29T22-27Z 5gEeTgDDi.zip
 - 手動維護最後下載日期：2026-09-30
+- Nexus MOD ID: 68
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/68
+- Nexus page version: 26.02.08-1
+- Nexus last updated: 2026-09-29T22:27Z
+- Main file ID: 8585
+- Main file version: 26.09.30
+- Main file uploaded at UTC: 2026-09-29T22:27Z
+- Archive filename: ChatBlock 68 26.09.30 2026-09-29T22-27Z 5gEeTgDDi.zip
+- Archive size bytes: 5127
+- Archive SHA-256: 6c23f4ce2432648badb2ff4afc2a5b1c34be1ce297a32a65dee54e8804d9fb7c
+- Acquisition method: manual-queue
 
 ### [Inspect from Social](https://www.nexusmods.com/warhammer40kdarktide/mods/254)
     查看玩家天賦裝備
@@ -359,6 +436,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.9
 - MOD 檔案名稱：LoadoutNames 286 1.9 2026-10-05T02-24Z X0p3C0jFM.zip
 - 手動維護最後下載日期：2026-10-05
+- Nexus MOD ID: 286
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/286
+- Nexus page version: 1.9
+- Nexus last updated: 2026-10-05T02:24:26Z
+- Main file ID: 8793
+- Main file version: 1.9
+- Main file uploaded at UTC: 2026-10-05T02:24:25Z
+- Archive filename: LoadoutNames 286 1.9 2026-10-05T02-24Z X0p3C0jFM.zip
+- Archive size bytes: 5402
+- Archive SHA-256: dfec0bc073982dc65c51c9ac117ca78c751d961b9a0c4f3e28a18a4e879a8dd4
+- Acquisition method: manual-queue
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕
@@ -366,6 +454,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.4.2
 - MOD 檔案名稱：Guarantee Ability Activation 336 1.4.2 2026-10-01T17-02Z Z1K0I1fFq.zip
 - 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: 336
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/336
+- Nexus page version: 1.4.2
+- Nexus last updated: 2026-10-01T17:02Z
+- Main file ID: 8671
+- Main file version: 1.4.2
+- Main file uploaded at UTC: 2026-10-01T17:02Z
+- Archive filename: Guarantee Ability Activation 336 1.4.2 2026-10-01T17-02Z Z1K0I1fFq.zip
+- Archive size bytes: 7005
+- Archive SHA-256: 659e2f0227a18b243ecd4241f688eb493158ca42d5519f93f1ddb8eaee52487a
+- Acquisition method: manual-queue
 
 ### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/10)
     客製化UI
@@ -394,6 +493,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.14
 - MOD 檔案名稱：Perspectives 111 1.14 2026-08-23T21-05Z l24cL2qQv.zip
 - 手動維護最後下載日期：2026-08-31
+- Nexus MOD ID: 111
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/111
+- Nexus page version: 1.14
+- Nexus last updated: 2026-08-23T21:05:24.0000000+00:00
+- Main file ID: 7689
+- Main file version: 1.14
+- Main file uploaded at UTC: 2026-08-23T21:05:24.0000000+00:00
+- Archive filename: Perspectives 111 1.14 2026-08-23T21-05Z l24cL2qQv.zip
+- Archive size bytes: 11644
+- Archive SHA-256: fb08ad3387c1362a60bdd2d38d2c54b23820702438b20239936a71b454dd45b6
+- Acquisition method: manual-queue
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     浩劫詞條說明改善
@@ -411,6 +521,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - Patch 版本：1.14.1
 - MOD 檔案名稱：OvenProof's Scoreboard Plugin - Community Patch 514 1.14.1 2026-09-30T16-52Z yonmho6gN.zip
 - 手動維護最後下載日期：2026-10-01
+- Nexus MOD ID: 514
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/514
+- Nexus page version: 1.14.1
+- Nexus last updated: 2026-09-30T16:52Z
+- Main file ID: 8620
+- Main file version: 1.14.1
+- Main file uploaded at UTC: 2026-09-30T16:52Z
+- Archive filename: OvenProof's Scoreboard Plugin - Community Patch 514 1.14.1 2026-09-30T16-52Z yonmho6gN.zip
+- Archive size bytes: 39295
+- Archive SHA-256: 31e2e362440ac63e1b85a88e4afe28bb4a8462de21b8252e8c842a127333ef51
+- Acquisition method: manual-queue
 - GitHub :
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch
@@ -428,6 +549,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.6
 - MOD 檔案名稱：Better Hud Info View 511 1.6 2026-10-01T15-13Z q4A7x4GUb.zip
 - 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: 511
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/511
+- Nexus page version: 1.6
+- Nexus last updated: 2026-10-01T15:13Z
+- Main file ID: 8665
+- Main file version: 1.6
+- Main file uploaded at UTC: 2026-10-01T15:13Z
+- Archive filename: Better Hud Info View 511 1.6 2026-10-01T15-13Z q4A7x4GUb.zip
+- Archive size bytes: 8396
+- Archive SHA-256: d6c1da684017c3c5b75490c9d3899d9ce1587d0d3c2637fe7822b11bd2ab5b5d
+- Acquisition method: manual-queue
 
 ### [Recolor Boss Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/314)
     重著色BOSS血條
@@ -435,6 +567,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2.4
 - MOD 檔案名稱：Recolor Boss Health Bars 314 2.4 2026-07-19T15-18Z L8cAq8xR5.zip
 - 手動維護最後下載日期：2026-09-01
+- Nexus MOD ID: 314
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/314
+- Nexus page version: 2.4
+- Nexus last updated: 2026-07-19T15:18:00.0000000+00:00
+- Main file ID: 6659
+- Main file version: 2.4
+- Main file uploaded at UTC: 2026-07-19T15:18:00.0000000+00:00
+- Archive filename: Recolor Boss Health Bars 314 2.4 2026-07-19T15-18Z L8cAq8xR5.zip
+- Archive size bytes: 12984
+- Archive SHA-256: fb784186a0f4bf771d44c032fdbd010816b5cca7468f1d1289935e980a766ec2
+- Acquisition method: manual-queue
 ---
 - 手動維護最後下載日期：2025-07-12
 
@@ -459,6 +602,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.8
 - MOD 檔案名稱：SpecialsTracker 274 1.8 2026-07-23T19-43Z txMvExeiL.zip
 - 手動維護最後下載日期：2026-09-02
+- Nexus MOD ID: 274
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/274
+- Nexus page version: 1.8
+- Nexus last updated: 2026-07-23T19:43:11.0000000+00:00
+- Main file ID: 6807
+- Main file version: 1.8
+- Main file uploaded at UTC: 2026-07-23T19:43:11.0000000+00:00
+- Archive filename: SpecialsTracker 274 1.8 2026-07-23T19-43Z txMvExeiL.zip
+- Archive size bytes: 36793
+- Archive SHA-256: 4d8e345ec27c99d1643471701b34f590162b4c6e32a5273f3c5c7dc447c9ed7e
+- Acquisition method: manual-queue
 
 ### [Display Ping (Latency)](https://www.nexusmods.com/warhammer40kdarktide/mods/460)
     顯示延遲
@@ -487,6 +641,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.8
 - MOD 檔案名稱：BornReady 96 1.8 2026-10-05T02-24Z ke28WelNA.zip
 - 手動維護最後下載日期：2026-10-05
+- Nexus MOD ID: `96`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/96`
+- Nexus page version: `1.8`
+- Nexus last updated: `2026-10-05T02:24:26Z`
+- Main file ID: `8794`
+- Main file version: `1.8`
+- Main file uploaded at UTC: `2026-10-05T02:24:26Z`
+- Archive filename: `BornReady 96 1.8 2026-10-05T02-24Z ke28WelNA.zip`
+- Archive size bytes: `4878`
+- Archive SHA-256: `fae262e55ffb95543796762a964b8b04a36420a7357c5c94a752eb349fe328f3`
+- Acquisition method: `manual-queue`
 
 ### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     預先載入
@@ -494,12 +659,34 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.12
 - MOD 檔案名稱：MissionBrief 387 1.12 2026-08-23T21-04Z 8bwV4bcyz.zip
 - 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 387
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/387
+- Nexus page version: 1.12
+- Nexus last updated: 2026-08-23T21:04:00.0000000+00:00
+- Main file ID: 7670
+- Main file version: 1.12
+- Main file uploaded at UTC: 2026-08-23T21:04:00.0000000+00:00
+- Archive filename: MissionBrief 387 1.12 2026-08-23T21-04Z 8bwV4bcyz.zip
+- Archive size bytes: 8049
+- Archive SHA-256: f0f404f76f949c94840817256a220fd9d9596a28a9792f72058eee93acf15627
+- Acquisition method: manual-queue
 ### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
     玩家Build資訊
 - MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
 - MOD 版本：1.10
 - MOD 檔案名稱：InventoryStats 152 1.10 2026-08-23T21-04Z 8bwV4bcyi.zip
 - 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 152
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/152
+- Nexus page version: 1.10
+- Nexus last updated: 2026-08-23T21:04:00.0000000+00:00
+- Main file ID: 7666
+- Main file version: 1.10
+- Main file uploaded at UTC: 2026-08-23T21:04:00.0000000+00:00
+- Archive filename: InventoryStats 152 1.10 2026-08-23T21-04Z 8bwV4bcyi.zip
+- Archive size bytes: 11992
+- Archive SHA-256: 890be47e0ad91200386b8b4cb6eaa5a11daffb1aa411cccef88bcd0880274e16
+- Acquisition method: manual-queue
 
 ### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/517)
     煙霧輔助
@@ -529,6 +716,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.3.1
 - MOD 檔案名稱：Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
 - 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: 678
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/678
+- Nexus page version: 1.3.1
+- Nexus last updated: 2026-10-01T20:01Z
+- Main file ID: 8678
+- Main file version: 1.3.1
+- Main file uploaded at UTC: 2026-10-01T20:01Z
+- Archive filename: Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
+- Archive size bytes: 26086
+- Archive SHA-256: 032068645e1d7a0d0d69cadde02c77431d1e6a99b2cf815a9efa653de488dfe6
+- Acquisition method: manual-queue
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
@@ -557,6 +755,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：3.1
 - MOD 檔案名稱：BrokerAutoStim 655 3.1 2026-09-30T17-11Z cwrBAw7dp.zip
 - 手動維護最後下載日期：2026-10-01
+- Nexus MOD ID: 655
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/655
+- Nexus page version: 3.1
+- Nexus last updated: 2026-09-30T17:11Z
+- Main file ID: 8622
+- Main file version: 3.1
+- Main file uploaded at UTC: 2026-09-30T17:11Z
+- Archive filename: BrokerAutoStim 655 3.1 2026-09-30T17-11Z cwrBAw7dp.zip
+- Archive size bytes: 18674
+- Archive SHA-256: b697d89b90ec3a070d9a93e3f0a72b0b291324b8a72fb2e4b92ab00f16bc3e56
+- Acquisition method: manual-queue
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
     天賦UI
@@ -564,6 +773,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2026-10-07 Community Correction（社群修正識別；上游正式版：1.2.1）
 - MOD 檔案名稱：TalentUI_fixes_plus.zip
 - 手動維護最後下載日期：2026-10-07
+- Nexus MOD ID: `683`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/683`
+- Nexus page version: `1.2.1`
+- Nexus last updated: `2026-04-10T02:48:54Z`
+- Main file ID: `not-applicable`
+- Community package label / hash version: `2026-10-07 Community Correction`
+- Main file uploaded at UTC: `not-applicable`
+- Archive filename: `TalentUI_fixes_plus.zip`
+- Archive size bytes: `88360`
+- Archive SHA-256: `ecb429f7b28998eaded9d733deb61f8e9832876331325bfe5750457c55227de0`
+- Acquisition method: `manual-queue`
 - 來源類型：LucLeto 社群修正；ZIP 未提供作者發行版號，上述修正識別沿用本分支既有提交標記。
 - 社群來源：[Nexus TalentUI 社群修正貼文](https://www.nexusmods.com/warhammer40kdarktide/mods/683?tab=posts)
 - 社群程式來源：[LucLeto/rrmllnv-darktide-mods](https://github.com/LucLeto/rrmllnv-darktide-mods/tree/ec5a33ce5b4c8909feaf6523515b4b2ed178c661/TalentUI)；分支 `maintenance/talent-ui-fixes`；固定提交 `ec5a33ce5b4c8909feaf6523515b4b2ed178c661`。
@@ -631,6 +851,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：9（Nexus Main file 版本；ZIP 內 FpsDoctor.mod 版本：1.6.5）
 - MOD 檔案名稱：FpsDoctor(FreezeFixesMemOptionsNewDmfFix) 932 9 2026-08-23T23-33Z mz1PFzZKs.zip
 - 手動維護最後下載日期：2026-10-07
+- Nexus MOD ID: 932
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/932
+- Nexus page version: 9
+- Nexus last updated: 2026-08-23T23:33:54Z
+- Main file ID: 7722
+- Main file version: 9
+- Main file uploaded at UTC: 2026-08-23T23:33:54Z
+- Archive filename: FpsDoctor(FreezeFixesMemOptionsNewDmfFix) 932 9 2026-08-23T23-33Z mz1PFzZKs.zip
+- Archive size bytes: 73052
+- Archive SHA-256: 7a7381cf0dbce5a9ace156a67a9fca022d3cfda5d6858a06ae412c502868938f
+- Acquisition method: manual-queue
 
 ### [Another Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/1203)
     新型記分板
@@ -638,6 +869,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：9（Nexus Main file 版本；ZIP 內 FpsDoctor.mod 版本：1.6.5）
 - MOD 檔案名稱：FpsDoctor(FreezeFixesMemOptionsNewDmfFix) 932 9 2026-08-23T23-33Z mz1PFzZKs.zip
 - 手動維護最後下載日期：2026-10-07
+- Nexus MOD ID: 932
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/932
+- Nexus page version: 9
+- Nexus last updated: 2026-08-23T23:33:54Z
+- Main file ID: 7722
+- Main file version: 9
+- Main file uploaded at UTC: 2026-08-23T23:33:54Z
+- Archive filename: FpsDoctor(FreezeFixesMemOptionsNewDmfFix) 932 9 2026-08-23T23-33Z mz1PFzZKs.zip
+- Archive size bytes: 73052
+- Archive SHA-256: 7a7381cf0dbce5a9ace156a67a9fca022d3cfda5d6858a06ae412c502868938f
+- Acquisition method: manual-queue
 
 ---
 # 遊戲內操作相關MOD
@@ -648,6 +890,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.11
 - MOD 檔案名稱：TalentRefundBelow 216 1.11 2026-09-29T18-51Z VWLqrWBBr.zip
 - 手動維護最後下載日期：2026-09-30
+- Nexus MOD ID: 216
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/216
+- Nexus page version: 1.11
+- Nexus last updated: 2026-09-29T18:51Z
+- Main file ID: 8566
+- Main file version: 1.11
+- Main file uploaded at UTC: 2026-09-29T18:51Z
+- Archive filename: TalentRefundBelow 216 1.11 2026-09-29T18-51Z VWLqrWBBr.zip
+- Archive size bytes: 5038
+- Archive SHA-256: 8ea275d6ff3527afd4c7134e57c2889cc32042af55363ccc51a79244e0473df8
+- Acquisition method: manual-queue
 
 ### [Archivum Messelina](https://www.nexusmods.com/warhammer40kdarktide/mods/307)
     梅塞利納檔案館 - 改善苦修搜尋
@@ -673,6 +926,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2.6.10
 - MOD 檔案名稱：SoloPlay 176 2.6.10 2026-10-04T11-40Z Ci3ojiHbH.zip
 - 手動維護最後下載日期：2026-10-04
+- Nexus MOD ID: 176
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/176
+- Nexus page version: 2.6.10
+- Nexus last updated: 2026-10-04T11:40:18Z
+- Main file ID: 8769
+- Main file version: 2.6.10
+- Main file uploaded at UTC: 2026-10-04T11:40:17Z
+- Archive filename: SoloPlay 176 2.6.10 2026-10-04T11-40Z Ci3ojiHbH.zip
+- Archive size bytes: 47064
+- Archive SHA-256: 33f924b569022456025e00bc99ec2d7cd7931e353ee32bc867cdd7ae52997361
+- Acquisition method: manual-queue
 
 ### [KeepSwinging](https://www.nexusmods.com/warhammer40kdarktide/mods/88)
     自動輕擊
@@ -680,6 +944,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.13
 - MOD 檔案名稱：KeepSwinging 88 1.13 2026-08-23T21-05Z iYOupY3AS.zip
 - 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 88
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/88
+- Nexus page version: 1.13
+- Nexus last updated: 2026-08-23T21:05:00.0000000+00:00
+- Main file ID: 7686
+- Main file version: 1.13
+- Main file uploaded at UTC: 2026-08-23T21:05:00.0000000+00:00
+- Archive filename: KeepSwinging 88 1.13 2026-08-23T21-05Z iYOupY3AS.zip
+- Archive size bytes: 7190
+- Archive SHA-256: eb5ad82b750023bf8bf94c387a34b019bfceca5649cd0c4b96dada79c1a65cee
+- Acquisition method: manual-queue
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
     使用快捷鍵做遊戲標記
@@ -687,6 +962,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.5
 - MOD 檔案名稱：TagKeys 79 1.5 2026-08-23T21-04Z SDWlwDVU0.zip
 - 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 79
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/79
+- Nexus page version: 1.5
+- Nexus last updated: 2026-08-23T21:04:00.0000000+00:00
+- Main file ID: 7680
+- Main file version: 1.5
+- Main file uploaded at UTC: 2026-08-23T21:04:00.0000000+00:00
+- Archive filename: TagKeys 79 1.5 2026-08-23T21-04Z SDWlwDVU0.zip
+- Archive size bytes: 3598
+- Archive SHA-256: 012d85772379bbc9006abff5c609dbd9945628a6827ef9919abd3ace5b6cd195
+- Acquisition method: manual-queue
 
 ### [Weapon Filter](https://www.nexusmods.com/warhammer40kdarktide/mods/373)
     武器過濾
@@ -769,6 +1055,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：3.1.0
 - MOD 檔案名稱：Radar 790 3.1.0 2026-10-07T23-07Z AVBg7VNY3.zip
 - 手動維護最後下載日期：2026-10-08（本機 ZIP 確認日期）
+- Nexus MOD ID: 790
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/790
+- Nexus page version: 3.1.0
+- Nexus last updated: 2026-10-07T23:07:40Z
+- Main file ID: 8866
+- Main file version: 3.1.0
+- Main file uploaded at UTC: 2026-10-07T23:07:40Z
+- Archive filename: Radar 790 3.1.0 2026-10-07T23-07Z AVBg7VNY3.zip
+- Archive size bytes: 346662
+- Archive SHA-256: 30b7b9ae09a1c020c28161665f5c9979caeae45a87d1157d2c807f6b2aa137d8
+- Acquisition method: manual-queue
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
@@ -790,6 +1087,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2.5.4
 - MOD 檔案名稱：AutoMark 736 2.5.4 2026-10-07T19-53Z hUmF6UaSp.zip
 - 手動維護最後下載日期：2026-10-08
+- Nexus MOD ID: 736
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/736
+- Nexus page version: 2.5.4
+- Nexus last updated: 2026-10-07T19:53:42Z
+- Main file ID: 8861
+- Main file version: 2.5.4
+- Main file uploaded at UTC: 2026-10-07T19:53:42Z
+- Archive filename: AutoMark 736 2.5.4 2026-10-07T19-53Z hUmF6UaSp.zip
+- Archive size bytes: 45328
+- Archive SHA-256: 2cd41aa9ce48d732dae26ca7832404b1dfb2bc691479b7a71d58bbf39a1341f6
+- Acquisition method: manual-queue
 
 ### [ErrorTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/824)
     錯誤追蹤
@@ -812,6 +1120,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2.0.0
 - MOD 檔案名稱：SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip
 - 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: `1008`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/1008`
+- Nexus page version: `2.0.0`
+- Nexus last updated: `2026-08-25T20:39Z`
+- Main file ID: `7761`
+- Main file version: `2.0.0`
+- Main file uploaded at UTC: `2026-08-25T20:39Z`
+- Archive filename: `SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip`
+- Archive size bytes: `3691870`
+- Archive SHA-256: `6df8cd4aa91587626883aab641f954ddb7072f7926834f90f0c49e87df5f1f19`
+- Acquisition method: `manual-queue`
 
 ### [Field_Awareness](https://www.nexusmods.com/warhammer40kdarktide/mods/1359)
     顯示特定怪物的輪廓與攻擊區域(可視範圍內)
@@ -819,6 +1138,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.5.1（Nexus 頁面與 ZIP 內版本；Nexus Main file 版本欄位：1）
 - MOD 檔案名稱：Field Awareness V1.5.1 Enemies Outlined And More 1359 1 2026-10-07T18-18Z Z1K0I1fL0.zip
 - 手動維護最後下載日期：2026-10-08
+- Nexus MOD ID: 1359
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/1359
+- Nexus page version: 1.5.1
+- Nexus last updated: 2026-10-07T18:18:49Z
+- Main file ID: 8857
+- Main file version: 1
+- Main file uploaded at UTC: 2026-10-07T18:18:49Z
+- Archive filename: Field Awareness V1.5.1 Enemies Outlined And More 1359 1 2026-10-07T18-18Z Z1K0I1fL0.zip
+- Archive size bytes: 1156645
+- Archive SHA-256: 28b864af914431bcfeffdbbc6da63f231bfe17b2ad3dce7ef5117e1d56572528
+- Acquisition method: manual-queue
 
 ### [Uptime 2 - Buff Data and Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/898)
     觀察天賦的運作狀況
@@ -826,6 +1156,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：2.15
 - MOD 檔案名稱：Uptime (5) 898 2.15 2026-10-01T20-49Z l24cL2qWj.zip
 - 手動維護最後下載日期：2026-10-06
+- Nexus MOD ID: `898`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/898`
+- Nexus page version: `2.15`
+- Nexus last updated: `2026-10-01T20:49:05Z`
+- Main file ID: `8681`
+- Main file version: `2.15`
+- Main file uploaded at UTC: `2026-10-01T20:49:05Z`
+- Archive filename: `Uptime (5) 898 2.15 2026-10-01T20-49Z l24cL2qWj.zip`
+- Archive size bytes: `93419`
+- Archive SHA-256: `5b84783654b5a6d53854e87771a1ce8a4b9f7ff31560ddccfeed9923162e0f82`
+- Acquisition method: `manual-queue`
 
 # 移除的MOD
 
