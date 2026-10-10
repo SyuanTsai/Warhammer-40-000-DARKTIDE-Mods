@@ -17,3 +17,7 @@ AGENTS.md
 # 本機工具執行檔與 Python 快取
 /scripts/game-info/vendor/limn/limn.exe
 /scripts/game-info/**/__pycache__/
+
+# MOD 測試與量測產出只留本機，不納入 Git
+/MOD Development/**/results/
+/MOD Development/**/__pycache__/

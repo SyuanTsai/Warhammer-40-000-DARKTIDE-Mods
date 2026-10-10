@@ -9,8 +9,8 @@ local DISCARDED_WARMUP_PAIR_COUNT = 2
 local FRAME_COUNT = 60
 local DISPLAY_FPS = 60
 local SEED = 268
-local raw_output_path = "MOD Development/dpm/benchmark-results-20261010-raw.csv"
-local summary_output_path = "MOD Development/dpm/benchmark-results-20261010-summary.csv"
+local raw_output_path = "MOD Development/dpm/results/benchmark-results-20261010-raw.csv"
+local summary_output_path = "MOD Development/dpm/results/benchmark-results-20261010-summary.csv"
 local ffi = require("ffi")
 ffi.cdef[[
 	typedef long long DPM_LARGE_INTEGER;
