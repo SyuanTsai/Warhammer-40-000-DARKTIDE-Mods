@@ -980,6 +980,7 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.0.1
 - MOD 檔案名稱：Crusher Attack Indicator-639-1-0-1-1773969032
 - 手動維護最後下載日期：2026-03-29
+- 私人修正（非官方）：本儲存庫以原作者 1.0.1 版為基礎，加入踉蹌中斷撤圈與生命週期清理；這不是遊戲官方或 MOD 原作者發布的更新。
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
     怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
