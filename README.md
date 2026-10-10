@@ -1028,6 +1028,7 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.0.1
 - MOD 檔案名稱：Mauler Attack Indicator-638-1-0-1-1773969244
 - 手動維護最後下載日期：2026-03-29
+- 本儲存庫維護紀錄：過頂攻擊遭踉蹌中斷時，移除當次攻擊提示，並取消等待中的貼花載入與計時；詳見 [SYP-270](https://syuantsai.atlassian.net/browse/SYP-270) 與 [PR #229](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/229)。
 
 ### [Crusher Attack Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/639)
     輾壓者的攻擊範圍顯示
@@ -1035,6 +1036,7 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.0.1
 - MOD 檔案名稱：Crusher Attack Indicator-639-1-0-1-1773969032
 - 手動維護最後下載日期：2026-03-29
+- 本儲存庫維護紀錄：橫掃攻擊遭踉蹌中斷時，移除當次攻擊提示，並使等待中的貼花載入失效；詳見 [SYP-269](https://syuantsai.atlassian.net/browse/SYP-269) 與 [PR #228](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/228)。
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
     怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
