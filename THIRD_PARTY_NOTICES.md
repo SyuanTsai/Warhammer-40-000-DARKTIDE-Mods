@@ -290,3 +290,9 @@ commit, applicable license, attribution requirements, modification record,
 and permission for the specific archive or binary. If permission is absent,
 do not treat this repository as authorization to distribute it; remove it,
 stop publishing it, or obtain permission as appropriate.
+
+## Darktide Mod Framework license verification (2026-10-10)
+
+DMF's [Nexus author instructions](https://www.nexusmods.com/warhammer40kdarktide/mods/8) publish the MIT terms with the 2023 Vermintide Mod Framework copyright notice. The [official upstream LICENSE](https://github.com/Darktide-Mod-Framework/Darktide-Mod-Framework/blob/fc08c1cb772f86248c7ae9e957543e801a0dbf64/LICENSE) publishes the same terms with the 2018 notice. Both notices and the permission text are retained in `Warhammer 40,000 DARKTIDE/mods/dmf/LICENSE`; this applies only to DMF.
+
+The dormant `mutators_test.lua` example removed from the install tree matches official upstream Git blob `d2e1f8a727ad6ac9ee0ea6be8fb7d84a9dca2d0a` exactly. Its original bytes remain recoverable from Git history and the SYP-293 development archive. The runtime loader never enables its commented-out load statement. No other mod's rights or license are changed by this verification.

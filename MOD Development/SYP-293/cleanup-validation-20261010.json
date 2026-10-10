@@ -1,0 +1,37 @@
+{
+  "baseCommit": "3377b4712aaa66b1e4663e8d7de0c55832a5d35d",
+  "stagedTree": "e26b3645ed41860754127d7c28daa9a51e8bd8e3",
+  "changedPaths": 39,
+  "removedPaths": 36,
+  "unchangedModPayloadPaths": 1015,
+  "dmfOnlyRuntimeDiff": "one inactive comment deleted",
+  "readmeUnchanged": true,
+  "activeHashesUnchanged": true,
+  "gameInfoAndSyncWorkflowUnchanged": true,
+  "packageFileCount": 1017,
+  "packageExcludesModDevelopmentArtifacts": true,
+  "originalLoaderPayloadUnchanged": true,
+  "dmfSyntaxSmoke": "DMF Lua syntax smoke: 2/2 passed",
+  "benchmarkBaselinesAvailable": {
+    "aupm/tests/benchmark_aupm.lua": [
+      "0c565dc4b0ac4b91e99a641e4af855b5530cd5f0"
+    ],
+    "kpm/tests/benchmark_kpm.lua": [
+      "4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06"
+    ],
+    "dpm/tests/benchmark_dpm.lua": [
+      "4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06"
+    ]
+  },
+  "archiveFunctionalResults": {
+    "AUPM": "31/31",
+    "DPM": "26/26",
+    "Crusher": "13/13",
+    "Mauler": "14/14",
+    "KPM": "21/22; InterT10 fails because Unit mock is missing; identical failure in untouched original worktree"
+  },
+  "gameInstallOrInGameSmoke": "not performed; tar layout/syntax smoke only",
+  "fullSkillGate": "not applicable to MOD-only cleanup; deferred SYP-294 work remains canceled",
+  "finalCommit": "75af449fdabb2c94ea2aba3c811d748b06f098c8",
+  "scope": "Original release cleanup checks at commit 75af449; preservation was subsequently corrected to a tracked development branch."
+}
