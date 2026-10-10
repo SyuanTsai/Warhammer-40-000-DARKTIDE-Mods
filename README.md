@@ -975,7 +975,7 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - 手動維護最後下載日期：2026-03-29
 
 ### [Crusher Attack Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/639)
-    輾壓者的攻擊範圍顯示
+    顯示碾壓者橫掃攻擊的黃色預警圈與紅色攻擊圈；攻擊遭踉蹌中斷時會撤除當次提示，並可設定常駐黃色圓環。
 - MOD 網站最後更新日期：Last updated 20 March 2026, 9:10AM
 - MOD 版本：1.0.1
 - MOD 檔案名稱：Crusher Attack Indicator-639-1-0-1-1773969032
