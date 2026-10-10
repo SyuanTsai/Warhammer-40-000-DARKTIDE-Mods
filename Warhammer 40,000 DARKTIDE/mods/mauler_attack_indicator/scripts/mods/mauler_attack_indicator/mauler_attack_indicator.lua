@@ -20,6 +20,30 @@ local pending_persistent_rings = {}
 
 local mauler_attack_states = {}
 local attack_timers = {}
+local attack_generations = {}
+local next_attack_generation = 0
+
+local MAULER_STAGGER_ANIMATION_PACK = "mauler_attack_indicator_stagger"
+local mauler_stagger_animation_events = {}
+local mauler_stagger_animation_event_lookup = {}
+
+local function collect_animation_events(value)
+	if type(value) == "string" then
+		if not mauler_stagger_animation_event_lookup[value] then
+			mauler_stagger_animation_event_lookup[value] = true
+			mauler_stagger_animation_events[#mauler_stagger_animation_events + 1] = value
+		end
+	elseif type(value) == "table" then
+		for _, child in pairs(value) do
+			collect_animation_events(child)
+		end
+	end
+end
+
+local actions_loaded, RenegadeExecutorActions = pcall(require, "scripts/settings/breed/breed_actions/renegade/renegade_executor_actions")
+if actions_loaded and type(RenegadeExecutorActions) == "table" then
+	collect_animation_events(RenegadeExecutorActions.stagger and RenegadeExecutorActions.stagger.stagger_anims)
+end
 
 local CLEAVE_ATTACK_DATA = {
     range = 3.5,
@@ -142,8 +166,13 @@ local function destroy_persistent_ring(unit)
 	destroy_owned_decal(persistent_yellow_rings, unit)
 end
 
-local function cleanup_unit(unit)
+local function invalidate_attack(unit)
+	attack_generations[unit] = nil
 	attack_timers[unit] = nil
+end
+
+local function cleanup_unit(unit)
+	invalidate_attack(unit)
 	pending_cleave_indicators[unit] = nil
 	pending_persistent_rings[unit] = nil
 	known_maulers[unit] = nil
@@ -158,6 +187,7 @@ local function cleanup_all()
 	for unit in pairs(persistent_yellow_rings) do units[unit] = true end
 	for unit in pairs(known_maulers) do units[unit] = true end
 	for unit in pairs(attack_timers) do units[unit] = true end
+	for unit in pairs(attack_generations) do units[unit] = true end
 	for unit in pairs(pending_cleave_indicators) do units[unit] = true end
 	for unit in pairs(pending_persistent_rings) do units[unit] = true end
 	for unit in pairs(mauler_attack_states) do units[unit] = true end
@@ -216,7 +246,7 @@ local function create_cleave_indicator(unit, world, color_type)
     return decal
 end
 
-local function attempt_create_cleave_indicator(unit, world, color_type)
+local function attempt_create_cleave_indicator(unit, world, color_type, generation)
 	if not is_enabled() or not Managers or not Managers.package or not Unit.alive(unit) or not is_world_valid(world) then
 		pending_cleave_indicators[unit] = nil
 		return nil
@@ -227,12 +257,13 @@ local function attempt_create_cleave_indicator(unit, world, color_type)
             unit = unit,
             world = world,
             color_type = color_type,
-            attempt_time = get_gameplay_time()
+            attempt_time = get_gameplay_time(),
+            generation = generation,
         }
 		pending_cleave_indicators[unit] = pending
         
         Managers.package:load(package_path, "mauler_attack_indicator", function()
-			if pending_cleave_indicators[unit] == pending then
+			if pending_cleave_indicators[unit] == pending and attack_generations[unit] == pending.generation then
 				pending_cleave_indicators[unit] = nil
 				if is_enabled() and Unit.alive(pending.unit) and is_world_valid(pending.world) and get_gameplay_time() - pending.attempt_time <= 5.0 then
 					create_cleave_indicator(pending.unit, pending.world, pending.color_type)
@@ -343,6 +374,46 @@ local function hide_persistent_ring(unit)
     end
 end
 
+local function cancel_active_attack(unit)
+	local state = mauler_attack_states[unit]
+	local timer = attack_timers[unit]
+
+	if not timer or (state ~= "warning" and state ~= "attack") or attack_generations[unit] ~= timer.generation then
+		return false
+	end
+
+	invalidate_attack(unit)
+	pending_cleave_indicators[unit] = nil
+	destroy_cleave_indicator(unit)
+	mauler_attack_states[unit] = "idle"
+
+	if show_persistent_yellow() then
+		show_persistent_ring(unit, Unit.world(unit))
+	end
+
+	return true
+end
+
+local function on_mauler_stagger_animation_started(event_name, _event_index, unit, _first_person, context)
+	if event_name ~= MAULER_STAGGER_ANIMATION_PACK or context ~= "minion" or not unit or not Unit.alive(unit) then
+		return
+	end
+
+	if is_mauler_unit(unit) then
+		cancel_active_attack(unit)
+	end
+end
+
+if #mauler_stagger_animation_events > 0 then
+	mod.animation_events_add_packs = {
+		[MAULER_STAGGER_ANIMATION_PACK] = mauler_stagger_animation_events,
+	}
+
+	mod.animation_events_add_callbacks = {
+		[MAULER_STAGGER_ANIMATION_PACK] = on_mauler_stagger_animation_started,
+	}
+end
+
 function mod:on_mauler_sound(sound_name, unit_or_position)
     if not is_enabled() then 
         return 
@@ -377,6 +448,9 @@ function mod:on_mauler_sound(sound_name, unit_or_position)
     local world = Unit.world(unit)
     
     if sound_name:match("special_attack_vce") then
+        next_attack_generation = next_attack_generation + 1
+		local generation = next_attack_generation
+		attack_generations[unit] = generation
         pending_persistent_rings[unit] = nil
         if show_persistent_yellow() then
             hide_persistent_ring(unit)
@@ -384,14 +458,16 @@ function mod:on_mauler_sound(sound_name, unit_or_position)
         
         destroy_cleave_indicator(unit)
         
-        attempt_create_cleave_indicator(unit, world, "warning")
         mauler_attack_states[unit] = "warning"
         
         attack_timers[unit] = {
+            generation = generation,
             start_time = get_gameplay_time(),
             warning_end_time = get_gameplay_time() + ATTACK_TIMING.warning_duration,
             attack_end_time = get_gameplay_time() + ATTACK_TIMING.warning_duration + ATTACK_TIMING.attack_duration
         }
+
+		attempt_create_cleave_indicator(unit, world, "warning", generation)
         
     else
         local is_other_mauler_sound = false
@@ -449,19 +525,21 @@ function mod.update(dt)
     for unit, timer in pairs(attack_timers) do
 		if not Unit.alive(unit) or not is_world_valid(Unit.world(unit)) then
 			cleanup_unit(unit)
+		elseif attack_generations[unit] ~= timer.generation then
+			attack_timers[unit] = nil
         else
             local decal = decals[unit]
             
             if current_time >= timer.warning_end_time and decal and decal.color_type == "warning" then
                 destroy_cleave_indicator(unit)
-                attempt_create_cleave_indicator(unit, Unit.world(unit), "attack")
+                attempt_create_cleave_indicator(unit, Unit.world(unit), "attack", timer.generation)
                 mauler_attack_states[unit] = "attack"
             end
             
             if current_time >= timer.attack_end_time then
                 destroy_cleave_indicator(unit)
                 mauler_attack_states[unit] = "idle"
-                attack_timers[unit] = nil
+                invalidate_attack(unit)
                 
                 if show_persistent_yellow() then
                     show_persistent_ring(unit, Unit.world(unit))
@@ -486,7 +564,7 @@ function mod.update(dt)
             if current_time - decal.spawn_time > max_duration then
                 destroy_cleave_indicator(unit)
                 mauler_attack_states[unit] = "idle"
-                attack_timers[unit] = nil
+                invalidate_attack(unit)
             end
         end
     end
@@ -512,6 +590,12 @@ function mod.update(dt)
 end
 
 mod.on_all_mods_loaded = function()
+    local animation_events = get_mod("animation_events")
+	if type(animation_events) ~= "table" then
+		mod.animation_events_add_packs = nil
+		mod.animation_events_add_callbacks = nil
+	end
+
     if Managers and Managers.package then
         if not Managers.package:has_loaded(package_path) then
             Managers.package:load(package_path, "mauler_attack_indicator", function() end)

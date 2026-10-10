@@ -9,6 +9,15 @@ local function assert_empty(value, message)
 	assert(next(value) == nil, message or "expected table to be empty")
 end
 
+local function assert_contains(values, expected, message)
+	for _, value in pairs(values) do
+		if value == expected then
+			return
+		end
+	end
+	assert(false, message or ("expected table to contain " .. tostring(expected)))
+end
+
 local function fixture(options)
 	options = options or {}
 
@@ -42,7 +51,20 @@ local function fixture(options)
 	local destroyed = {}
 	local operations = {}
 	local scales = {}
+	local material_scalars = {}
 	local unlink_fails = false
+	local animation_events = options.animation_events and {} or nil
+	local breed_actions_module = "scripts/settings/breed/breed_actions/renegade/renegade_executor_actions"
+	local previous_breed_actions = package.loaded[breed_actions_module]
+	package.loaded[breed_actions_module] = options.breed_actions or {
+		stagger = {
+			stagger_anims = {
+				light = { fwd = { "stagger_fwd_light_2" } },
+				medium = { left = { "stagger_left_3" } },
+			},
+		},
+		melee = { attack_anim_events = { "attack_01" } },
+	}
 
 	local function hook_key(target, method)
 		if type(target) == "table" then
@@ -91,7 +113,10 @@ local function fixture(options)
 			value[key] = nil
 		end
 	end
-	_G.get_mod = function()
+	_G.get_mod = function(name)
+		if name == "animation_events" then
+			return animation_events
+		end
 		return mod
 	end
 	_G.WwiseWorld = { name = "WwiseWorld" }
@@ -129,7 +154,11 @@ local function fixture(options)
 		set_local_position = function() end,
 		set_local_scale = function(_, _, scale) scales[#scales + 1] = scale end,
 		set_vector4_for_material = function() end,
-		set_scalar_for_material = function() end,
+		set_scalar_for_material = function(unit, _, property, value)
+			if property == "color_multiplier" then
+				material_scalars[unit] = value
+			end
+		end,
 	}
 	_G.World = {
 		spawn_unit_ex = function(target_world)
@@ -168,6 +197,7 @@ local function fixture(options)
 	}
 
 	dofile(mod_path)
+	package.loaded[breed_actions_module] = previous_breed_actions
 
 	local context = {
 		mod = mod,
@@ -175,21 +205,26 @@ local function fixture(options)
 		settings = settings,
 		persistent_tables = persistent_tables,
 		package_callbacks = package_callbacks,
+		animation_events = animation_events,
 		spawned = spawned,
 		unlinked = unlinked,
 		destroyed = destroyed,
 		operations = operations,
 		scales = scales,
+		material_scalars = material_scalars,
 		world = world,
 	}
-	function context.new_mauler()
+	function context.new_unit(breed_name)
 		local unit = newproxy(false)
 		live_units[unit] = true
 		unit_worlds[unit] = world
-		unit_breeds[unit] = "renegade_executor"
+		unit_breeds[unit] = breed_name
 		POSITION_LOOKUP[unit] = { x = 0, y = 0, z = 0 }
 		enemy_units[#enemy_units + 1] = unit
 		return unit
+	end
+	function context.new_mauler()
+		return context.new_unit("renegade_executor")
 	end
 	function context.set_time(value)
 		gameplay_time = value
@@ -450,6 +485,197 @@ local tests = {
 			context.set_time(101.8)
 			context.mod.update(0)
 			assert_equal(context.persistent_tables.mauler_decals[unit], nil, "attack ends at 0.8 seconds after warning")
+		end,
+	},
+	{
+		-- Scenario: the optional animation-events provider reports a Mauler stagger while its warning is active.
+		-- Purpose: a true Mauler stagger clears the warning and invalidates its pending attack timer immediately.
+		"UnitT50_WarningInterruptedByMaulerStagger",
+		function()
+			-- Given a live Mauler with its persistent ring and attack warning.
+			local context = fixture({ animation_events = true })
+			local unit = context.new_mauler()
+			context.mod.find_nearby_maulers()
+			context.mod.on_all_mods_loaded()
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning")
+
+			-- When the provider reports the Mauler stagger pack.
+			local callbacks = context.mod.animation_events_add_callbacks
+			local on_stagger = callbacks and callbacks.mauler_attack_indicator_stagger
+			assert(type(on_stagger) == "function", "the optional provider should receive the Mauler stagger callback")
+			on_stagger("mauler_attack_indicator_stagger", 101, unit, false, "minion")
+
+			-- Then the warning is removed, the persistent ring returns, and the old timer cannot restore an attack.
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil, "stagger should remove the attack warning")
+			assert_equal(#context.destroyed, 1, "stagger should destroy the warning decal")
+			context.set_time(101.8)
+			context.mod.update(0)
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil, "the cancelled timer must not recreate the attack decal")
+			assert_equal(#context.spawned, 2, "the existing persistent ring should be reused after interruption")
+			assert_equal(context.material_scalars[context.spawned[1]], 0.75, "the existing persistent ring should be visible after interruption")
+		end,
+	},
+	{
+		-- Scenario: one of two Maulers is staggered during its attack phase, then receives the same event again.
+		-- Purpose: only the interrupted generation is cancelled, and duplicate events are safe.
+		"UnitT60_AttackInterruptedOnceForMatchingMauler",
+		function()
+			-- Given two Maulers with active attack decals.
+			local context = fixture({ animation_events = true })
+			local interrupted_unit = context.new_mauler()
+			local other_unit = context.new_mauler()
+			context.mod.find_nearby_maulers()
+			context.mod.on_all_mods_loaded()
+			context.mod:on_mauler_sound("special_attack_vce", interrupted_unit)
+			context.mod:on_mauler_sound("special_attack_vce", other_unit)
+			context.set_time(101.0)
+			context.mod.update(0)
+			assert_equal(context.persistent_tables.mauler_decals[interrupted_unit].color_type, "attack")
+			assert_equal(context.persistent_tables.mauler_decals[other_unit].color_type, "attack")
+
+			-- When the provider reports the first Mauler's stagger twice.
+			local on_stagger = context.mod.animation_events_add_callbacks.mauler_attack_indicator_stagger
+			on_stagger("mauler_attack_indicator_stagger", 101, interrupted_unit, false, "minion")
+			on_stagger("mauler_attack_indicator_stagger", 101, interrupted_unit, false, "minion")
+
+			-- Then only its decal is removed; the other Mauler's attack remains active.
+			assert_equal(context.persistent_tables.mauler_decals[interrupted_unit], nil)
+			assert_equal(context.persistent_tables.mauler_decals[other_unit].color_type, "attack")
+			assert_equal(#context.destroyed, 3, "the second stagger must not destroy the first unit's persistent ring or the other attack")
+		end,
+	},
+	{
+		-- Scenario: an attack warning is pending on package loading when a Mauler staggers.
+		-- Purpose: the cancelled generation cannot be revived by its late package callback or timer deadline.
+		"UnitT70_InterruptedPackageCallbackCannotRestoreWarning",
+		function()
+			-- Given a pending warning without a persistent ring.
+			local context = fixture({ animation_events = true })
+			local unit = context.new_mauler()
+			context.settings.persistent_yellow = false
+			context.mod.on_setting_changed("persistent_yellow")
+			context.mod.on_all_mods_loaded()
+			context.set_package_loaded(false)
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			local old_package_callback = context.package_callbacks[1]
+
+			-- When the Mauler staggers, then the timer deadline and package callback arrive.
+			local on_stagger = context.mod.animation_events_add_callbacks.mauler_attack_indicator_stagger
+			on_stagger("mauler_attack_indicator_stagger", 101, unit, false, "minion")
+			context.set_time(101.8)
+			context.mod.update(0)
+			context.set_package_loaded(true)
+			old_package_callback()
+
+			-- Then no old warning or attack decal can reappear.
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil)
+			assert_equal(#context.spawned, 0)
+		end,
+	},
+	{
+		-- Scenario: a new special-attack sound follows a cancelled pending attack.
+		-- Purpose: the new warning gets a fresh timer and request, while the old callback cannot claim it.
+		"UnitT80_NewAttackGetsFreshGenerationAfterStagger",
+		function()
+			-- Given attack A pending on package loading and then cancelled by a Mauler stagger.
+			local context = fixture({ animation_events = true })
+			local unit = context.new_mauler()
+			context.settings.persistent_yellow = false
+			context.mod.on_setting_changed("persistent_yellow")
+			context.mod.on_all_mods_loaded()
+			context.set_package_loaded(false)
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			local callback_a = context.package_callbacks[1]
+			local on_stagger = context.mod.animation_events_add_callbacks.mauler_attack_indicator_stagger
+			on_stagger("mauler_attack_indicator_stagger", 101, unit, false, "minion")
+
+			-- When attack B starts and both package callbacks finish.
+			context.set_time(100.5)
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			local callback_b = context.package_callbacks[2]
+			context.set_package_loaded(true)
+			callback_a()
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil, "attack A must not consume attack B's request")
+			callback_b()
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning")
+
+			-- Then B keeps its own 1.0-second warning and 0.8-second attack timing.
+			context.set_time(101.0)
+			context.mod.update(0)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning", "B must not inherit A's start time")
+			context.set_time(101.499)
+			context.mod.update(0)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning")
+			context.set_time(101.5)
+			context.mod.update(0)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "attack")
+			context.set_time(102.3)
+			context.mod.update(0)
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil)
+		end,
+	},
+	{
+		-- Scenario: callback inputs include unrelated pack names, player context, a different breed, and ordinary damage.
+		-- Purpose: only the exact Mauler stagger pack for a live Mauler with an active attack can cancel it.
+		"UnitT90_StaggerCallbackFiltersPackContextBreedAndProvider",
+		function()
+			-- Given the exact Mauler action stagger list and an active warning.
+			local context = fixture({ animation_events = true })
+			local unit = context.new_mauler()
+			context.mod.on_all_mods_loaded()
+			local pack_name = "mauler_attack_indicator_stagger"
+			local pack = context.mod.animation_events_add_packs[pack_name]
+			assert_contains(pack, "stagger_fwd_light_2")
+			assert_contains(pack, "stagger_left_3")
+			assert(not table.concat(pack, ","):match("attack_01"), "non-stagger action events must not be included")
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+			local on_stagger = context.mod.animation_events_add_callbacks[pack_name]
+
+			-- When the callback receives non-pack input, non-minion context, another breed, or ordinary damage.
+			on_stagger("stagger_fwd_light_2", 101, unit, false, "minion")
+			on_stagger(pack_name, 101, unit, false, "player")
+			on_stagger(pack_name, 101, context.new_unit("cultist_ritualist"), false, "minion")
+			context.mod:on_mauler_sound("wwise/events/minions/play_enemy_traitor_executor__hurt_vce", unit)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "warning")
+			context.set_time(101.0)
+			context.mod.update(0)
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "attack", "ordinary damage must not cancel the warning")
+			on_stagger("another_pack", 101, unit, false, "minion")
+			assert_equal(context.persistent_tables.mauler_decals[unit].color_type, "attack", "another pack must not cancel the attack")
+			on_stagger(pack_name, 101, unit, false, "minion")
+
+			-- Then absence of the optional provider disables only the callback integration.
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil)
+			local no_provider = fixture({ animation_events = false })
+			no_provider.mod.on_all_mods_loaded()
+			assert_equal(no_provider.mod.animation_events_add_packs, nil)
+			assert_equal(no_provider.mod.animation_events_add_callbacks, nil)
+		end,
+	},
+	{
+		-- Scenario: the Mauler staggers during its warning while persistent rings are disabled.
+		-- Purpose: interruption still removes the attack decal and never restores a persistent ring.
+		"UnitT95_InterruptedAttackRespectsPersistentRingSetting",
+		function()
+			-- Given a Mauler warning with persistent rings disabled.
+			local context = fixture({ animation_events = true })
+			local unit = context.new_mauler()
+			context.settings.persistent_yellow = false
+			context.mod.on_setting_changed("persistent_yellow")
+			context.mod.on_all_mods_loaded()
+			context.mod:on_mauler_sound("special_attack_vce", unit)
+
+			-- When the provider reports the Mauler stagger and the former deadline passes.
+			local on_stagger = context.mod.animation_events_add_callbacks.mauler_attack_indicator_stagger
+			on_stagger("mauler_attack_indicator_stagger", 101, unit, false, "minion")
+			context.set_time(101.8)
+			context.mod.update(0)
+
+			-- Then the warning stays removed without creating a yellow ring.
+			assert_equal(context.persistent_tables.mauler_decals[unit], nil)
+			assert_equal(#context.spawned, 1)
+			assert_equal(#context.destroyed, 1)
 		end,
 	},
 }
