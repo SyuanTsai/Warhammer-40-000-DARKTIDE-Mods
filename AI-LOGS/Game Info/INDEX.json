@@ -6,14 +6,6 @@
   "tools_root": "scripts/game-info",
   "records": [
     {
-      "id": "releases/1.13.X/skills/Ogryn/2026-10-11-GO_AGAIN_CLARIFICATION",
-      "kind": "record",
-      "scope": "releases/1.13.X/skills/Ogryn",
-      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Ogryn/2026-10-11-GO_AGAIN_CLARIFICATION.md",
-      "date": "2026-10-11",
-      "storage": "git"
-    },
-    {
       "id": "publication/2026-10-04-TREE_READER",
       "kind": "record",
       "scope": "publication/skills",

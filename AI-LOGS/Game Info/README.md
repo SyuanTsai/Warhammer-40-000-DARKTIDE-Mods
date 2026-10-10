@@ -6,8 +6,6 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
-- [再來：命中條件與冷卻算例修訂](releases/1.13.X/skills/Ogryn/2026-10-11-GO_AGAIN_CLARIFICATION.md)
-
 - [階層導覽與七職業版型](publication/2026-10-04-TREE_READER.md)
 
 - [13筆本機來源引用的狀態更正](publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION.md)
