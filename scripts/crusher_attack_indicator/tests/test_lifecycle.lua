@@ -1,5 +1,6 @@
 -- Run from the repository root: luajit scripts/crusher_attack_indicator/tests/test_lifecycle.lua
 local mod_path = "Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator.lua"
+local stagger_pack_name = "crusher_attack_indicator_stagger"
 
 local function assert_equal(actual, expected, message)
 	assert(actual == expected, message or string.format("expected %s, got %s", tostring(expected), tostring(actual)))
@@ -7,6 +8,23 @@ end
 
 local function assert_empty(value, message)
 	assert(next(value) == nil, message or "expected table to be empty")
+end
+
+local function assert_contains(values, wanted, message)
+	for _, value in ipairs(values) do
+		if value == wanted then
+			return
+		end
+	end
+	error(message or string.format("expected list to contain %s", tostring(wanted)))
+end
+
+local function assert_not_contains(values, unwanted, message)
+	for _, value in ipairs(values) do
+		if value == unwanted then
+			error(message or string.format("expected list to exclude %s", tostring(unwanted)))
+		end
+	end
 end
 
 local function fixture(options)
@@ -42,6 +60,7 @@ local function fixture(options)
 	local destroyed = {}
 	local operations = {}
 	local scales = {}
+	local scalar_updates = {}
 	local unlink_fails = false
 
 	local function hook_key(target, method)
@@ -129,7 +148,9 @@ local function fixture(options)
 		set_local_position = function() end,
 		set_local_scale = function(_, _, scale) scales[#scales + 1] = scale end,
 		set_vector4_for_material = function() end,
-		set_scalar_for_material = function() end,
+		set_scalar_for_material = function(unit, _, _, value)
+			scalar_updates[#scalar_updates + 1] = { unit = unit, value = value }
+		end,
 	}
 	_G.World = {
 		spawn_unit_ex = function(target_world)
@@ -167,7 +188,24 @@ local function fixture(options)
 		end,
 	}
 
-	dofile(mod_path)
+	local original_require = _G.require
+	_G.require = function(module_name)
+		if module_name == "scripts/settings/breed/breed_actions/chaos/chaos_ogryn_executor_actions" then
+			return {
+				stagger = {
+					stagger_anims = {
+						light = { fwd = { "executor_stagger_fwd" } },
+						heavy = { back = { "executor_stagger_back" } },
+					},
+				},
+				melee_attack = { stagger_anims = { "non_stagger_action_event" } },
+			}
+		end
+		return original_require(module_name)
+	end
+	local success, message = pcall(dofile, mod_path)
+	_G.require = original_require
+	assert(success, message)
 
 	local context = {
 		mod = mod,
@@ -180,6 +218,7 @@ local function fixture(options)
 		destroyed = destroyed,
 		operations = operations,
 		scales = scales,
+		scalar_updates = scalar_updates,
 		world = world,
 	}
 	function context.new_crusher()
@@ -200,6 +239,9 @@ local function fixture(options)
 	function context.set_unit_alive(unit, value)
 		live_units[unit] = value
 	end
+	function context.set_unit_breed(unit, breed_name)
+		unit_breeds[unit] = breed_name
+	end
 	function context.set_mod_enabled(value)
 		mod_enabled = value
 	end
@@ -217,6 +259,19 @@ local function add_indicators(context, unit)
 	context.mod.find_nearby_crushers()
 	context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
 	assert_equal(#context.spawned, 2, "expected a persistent ring and a warning decal")
+end
+
+local function invoke_stagger(context, animation_event_name, unit, animation_context, provider_pack_key)
+	local pack_key = provider_pack_key or stagger_pack_name
+	if pack_key == stagger_pack_name then
+		local event_pack = context.mod.animation_events_add_packs[pack_key]
+		assert_contains(event_pack, animation_event_name, "provider should only route registered pack events")
+	end
+	local callbacks = context.mod.animation_events_add_callbacks
+	local stagger_callback = callbacks and callbacks[stagger_pack_name]
+	assert(type(stagger_callback) == "function", "Crusher stagger callback should be published for animation_events")
+	-- animation_events passes the matched pack key, not the member animation event name.
+	stagger_callback(pack_key, 17, unit, nil, animation_context or "minion")
 end
 
 local tests = {
@@ -434,6 +489,138 @@ local tests = {
 			context.settings.persistent_yellow = true
 			context.mod.on_setting_changed("persistent_yellow")
 			assert_equal(#context.spawned, spawned_before_reenable, "persistent-yellow setting must not spawn while DMF disabled")
+		end,
+	},
+	{
+		-- Scenario: a crusher warning has an outstanding package load when a registered minion stagger animation starts.
+		-- Purpose: true stagger immediately cancels that attack generation and an orphaned swing cannot restore its decal.
+		"UnitT50_StaggerAnimationCancelsWarningAndIgnoresLateCallbacks",
+		function()
+			local context = fixture({ package_loaded = false })
+			context.settings.persistent_yellow = false
+			local unit = context.new_crusher()
+			context.mod.find_nearby_crushers()
+			assert_equal(#context.spawned, 0, "persistent-yellow disabled should not create a ring")
+			context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
+			local old_package_callback = context.package_callbacks[1]
+
+			local stagger_events = context.mod.animation_events_add_packs
+			local stagger_event_pack = stagger_events and stagger_events[stagger_pack_name]
+			assert(type(stagger_event_pack) == "table", "Crusher stagger events should be published for animation_events")
+			assert_contains(stagger_event_pack, "executor_stagger_fwd", "Crusher stagger pack should contain BreedActions.stagger.stagger_anims")
+			assert_not_contains(stagger_event_pack, "non_stagger_action_event", "unrelated action events must not be collected")
+
+			local callbacks = context.mod.animation_events_add_callbacks
+			local stagger_callback = callbacks and callbacks[stagger_pack_name]
+			assert(type(stagger_callback) == "function", "Crusher stagger callback should be published for animation_events")
+			-- Model find_pack_entries returning the Crusher pack key for this registered event.
+			stagger_callback(stagger_pack_name, 17, unit, nil, "minion")
+
+			context.set_package_loaded(true)
+			old_package_callback()
+			assert_equal(context.tables.crusher_decals[unit], nil, "stagger must invalidate the pending warning decal")
+			assert_equal(#context.spawned, 0, "late package completion must not recreate an interrupted warning")
+
+			context.mod:on_crusher_sound("play_minion_swing_2h_blunt_large_cleave", unit)
+			assert_equal(context.tables.crusher_decals[unit], nil, "the interrupted swing sound must not create an attack decal")
+			assert_equal(#context.spawned, 0, "the interrupted swing sound must remain suppressed")
+			context.mod.update(0)
+			assert_equal(#context.spawned, 0, "persistent-yellow disabled should remain without a ring after cancellation")
+		end,
+	},
+	{
+		-- Scenario: an attack decal is visible when a Crusher stagger animation is reported more than once.
+		-- Purpose: attacking-phase interruption is idempotent, suppresses the orphaned swing, and resets on the next warning.
+		"UnitT60_StaggerCancelsAttackAndNextWarningStartsANewAttack",
+		function()
+			local context = fixture()
+			context.settings.persistent_yellow = false
+			local unit = context.new_crusher()
+			context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
+			context.mod:on_crusher_sound("play_minion_swing_2h_blunt_large_cleave", unit)
+			assert_equal(context.tables.crusher_decals[unit].color_type, "attack")
+
+			invoke_stagger(context, "executor_stagger_back", unit)
+			assert_equal(context.tables.crusher_decals[unit], nil, "stagger must remove the active attack decal")
+			assert_equal(#context.destroyed, 2, "warning replacement and stagger should each destroy their own cleave decal")
+			invoke_stagger(context, "executor_stagger_back", unit)
+			assert_equal(#context.destroyed, 2, "a duplicate stagger callback must not destroy a later decal")
+
+			local spawn_count = #context.spawned
+			context.mod:on_crusher_sound("play_minion_swing_2h_blunt_large_cleave", unit)
+			assert_equal(#context.spawned, spawn_count, "the interrupted swing must stay suppressed")
+
+			context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
+			assert_equal(context.tables.crusher_decals[unit].color_type, "warning", "the next warning must begin a new token")
+			context.mod:on_crusher_sound("play_minion_swing_2h_blunt_large_cleave", unit)
+			assert_equal(context.tables.crusher_decals[unit].color_type, "attack", "the new attack must accept its swing sound")
+		end,
+	},
+	{
+		-- Scenario: warning, unrelated animation callbacks, and a real stagger callback arrive for one unit.
+		-- Purpose: only a Crusher BreedActions stagger event in minion context cancels an active Crusher attack.
+		"UnitT70_StaggerCallbackFiltersEventContextBreedAndAttackState",
+		function()
+			local context = fixture()
+			context.settings.persistent_yellow = false
+			local unit = context.new_crusher()
+			invoke_stagger(context, "executor_stagger_fwd", unit)
+			context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
+			local warning_decal = context.tables.crusher_decals[unit]
+
+			invoke_stagger(context, "unrelated_animation_event", unit, "minion", "unrelated_pack")
+			assert_equal(context.tables.crusher_decals[unit], warning_decal, "an unlisted event must leave the warning intact")
+			invoke_stagger(context, "executor_stagger_fwd", unit, "player")
+			assert_equal(context.tables.crusher_decals[unit], warning_decal, "a non-minion callback must leave the warning intact")
+			context.set_unit_breed(unit, "chaos_ogryn_bulwark")
+			invoke_stagger(context, "executor_stagger_fwd", unit)
+			assert_equal(context.tables.crusher_decals[unit], warning_decal, "another breed must leave the warning intact")
+			context.set_unit_breed(unit, "chaos_ogryn_executor")
+			invoke_stagger(context, "executor_stagger_fwd", unit)
+			assert_equal(context.tables.crusher_decals[unit], nil, "a listed Crusher minion stagger must cancel its active warning")
+		end,
+	},
+	{
+		-- Scenario: request A is canceled, its delayed package callback arrives after warning B starts, and B completes.
+		-- Purpose: stale request A must neither restore its indicator nor consume B's pending request/token.
+		"UnitT80_CanceledRequestCannotConsumeNextWarningToken",
+		function()
+			local context = fixture({ package_loaded = false })
+			context.settings.persistent_yellow = false
+			local unit = context.new_crusher()
+			context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
+			local callback_a = context.package_callbacks[1]
+
+			invoke_stagger(context, "executor_stagger_fwd", unit)
+			context.mod:on_crusher_sound("play_minion_swing_2h_blunt_large_cleave", unit)
+			context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
+			local callback_b = context.package_callbacks[2]
+
+			context.set_package_loaded(true)
+			callback_a()
+			assert_equal(#context.spawned, 0, "request A must remain canceled after warning B starts")
+			callback_b()
+			assert_equal(context.tables.crusher_decals[unit].color_type, "warning", "request B must retain ownership of its warning decal")
+			context.mod:on_crusher_sound("play_minion_swing_2h_blunt_large_cleave", unit)
+			assert_equal(context.tables.crusher_decals[unit].color_type, "attack", "B's next swing must remain eligible")
+		end,
+	},
+	{
+		-- Scenario: a persistent ring and a warning decal are visible when the warning is interrupted.
+		-- Purpose: cancellation restores only the configured persistent ring and removes the cleave decal.
+		"UnitT90_StaggerRestoresConfiguredPersistentRing",
+		function()
+			local context = fixture()
+			local unit = context.new_crusher()
+			context.mod.find_nearby_crushers()
+			assert_equal(#context.spawned, 1, "the initial persistent ring should exist")
+			context.mod:on_crusher_sound("play_shared_elite_executor_cleave_warning", unit)
+			assert_equal(context.tables.crusher_decals[unit].color_type, "warning")
+
+			invoke_stagger(context, "executor_stagger_fwd", unit)
+			assert_equal(context.tables.crusher_decals[unit], nil, "the interrupted warning should be removed")
+			assert_equal(#context.destroyed, 1, "the persistent ring should remain owned while the cleave decal is destroyed")
+			assert_equal(context.scalar_updates[#context.scalar_updates].value, 0.75, "the active persistent ring should be restored")
 		end,
 	},
 }

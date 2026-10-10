@@ -19,6 +19,31 @@ local pending_cleave_indicators = {}
 local pending_persistent_rings = {}
 
 local crusher_attack_states = {}
+local active_cleave_tokens = {}
+local interrupted_cleave_attacks = {}
+
+local CRUSHER_STAGGER_EVENT_PACK = "crusher_attack_indicator_stagger"
+local crusher_stagger_animation_events = {}
+local crusher_stagger_animation_event_lookup = {}
+
+local crusher_executor_actions = require("scripts/settings/breed/breed_actions/chaos/chaos_ogryn_executor_actions")
+
+local function collect_stagger_animation_events(value)
+    local value_type = type(value)
+
+    if value_type == "string" then
+        if not crusher_stagger_animation_event_lookup[value] then
+            crusher_stagger_animation_event_lookup[value] = true
+            crusher_stagger_animation_events[#crusher_stagger_animation_events + 1] = value
+        end
+    elseif value_type == "table" then
+        for _, child in pairs(value) do
+            collect_stagger_animation_events(child)
+        end
+    end
+end
+
+collect_stagger_animation_events(crusher_executor_actions.stagger and crusher_executor_actions.stagger.stagger_anims)
 
 local CLEAVE_ATTACK_DATA = {
     range = 4.0,
@@ -84,6 +109,19 @@ local function get_attack_color()
         get_setting("attack_color_alpha") / 100
 end
 
+local function start_cleave_attack(unit)
+    local token = {}
+    active_cleave_tokens[unit] = token
+    interrupted_cleave_attacks[unit] = nil
+    return token
+end
+
+local function finish_cleave_attack(unit, token)
+    if active_cleave_tokens[unit] == token then
+        active_cleave_tokens[unit] = nil
+    end
+end
+
 local function is_enabled()
     return mod:is_enabled() and get_setting("enabled")
 end
@@ -130,7 +168,7 @@ local function is_crusher_unit(unit)
     return breed and breed.name == "chaos_ogryn_executor"
 end
 
-local function create_cleave_indicator(unit, world, color_type)
+local function create_cleave_indicator(unit, world, color_type, attack_token)
     if not Managers or not Managers.package or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) then
         return nil
     end
@@ -172,15 +210,16 @@ local function create_cleave_indicator(unit, world, color_type)
         color_type = color_type,
         spawn_time = get_gameplay_time(),
         is_cleave = true,
-        world = world
+        world = world,
+        attack_token = attack_token
     }
     
     decals[unit] = decal
     return decal
 end
 
-local function attempt_create_cleave_indicator(unit, world, color_type)
-    if not Managers or not Managers.package or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) then
+local function attempt_create_cleave_indicator(unit, world, color_type, attack_token)
+    if not Managers or not Managers.package or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) or active_cleave_tokens[unit] ~= attack_token then
         pending_cleave_indicators[unit] = nil
         return nil
     end
@@ -190,7 +229,8 @@ local function attempt_create_cleave_indicator(unit, world, color_type)
             unit = unit,
             world = world,
             color_type = color_type,
-            attempt_time = get_gameplay_time()
+            attempt_time = get_gameplay_time(),
+            attack_token = attack_token
         }
         pending_cleave_indicators[unit] = pending
         
@@ -200,15 +240,15 @@ local function attempt_create_cleave_indicator(unit, world, color_type)
             end
 
             pending_cleave_indicators[unit] = nil
-            if get_gameplay_time() - pending.attempt_time > 5.0 or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) then
+            if pending.attack_token ~= active_cleave_tokens[unit] or get_gameplay_time() - pending.attempt_time > 5.0 or not is_enabled() or not Unit.alive(unit) or not is_world_valid(world) then
                 return
             end
 
-            create_cleave_indicator(unit, world, color_type)
+            create_cleave_indicator(unit, world, color_type, pending.attack_token)
         end)
         return nil
     else
-        return create_cleave_indicator(unit, world, color_type)
+        return create_cleave_indicator(unit, world, color_type, attack_token)
     end
 end
 
@@ -320,6 +360,28 @@ local function show_persistent_ring(unit, world)
     end
 end
 
+local function on_stagger_animation_started(pack_key, _event_index, unit, _first_person, context)
+    if pack_key ~= CRUSHER_STAGGER_EVENT_PACK or context ~= "minion" or not is_enabled() or not unit or not Unit.alive(unit) or not is_crusher_unit(unit) then
+        return
+    end
+
+    local attack_state = crusher_attack_states[unit]
+    local attack_token = active_cleave_tokens[unit]
+    if (attack_state ~= "warning" and attack_state ~= "attack") or not attack_token then
+        return
+    end
+
+    active_cleave_tokens[unit] = nil
+    pending_cleave_indicators[unit] = nil
+    interrupted_cleave_attacks[unit] = true
+    destroy_cleave_indicator(unit)
+    crusher_attack_states[unit] = "idle"
+
+    if show_persistent_yellow() then
+        show_persistent_ring(unit, Unit.world(unit))
+    end
+end
+
 local function hide_persistent_ring(unit)
     local decal = persistent_yellow_rings[unit]
     if decal and is_world_valid(decal.world) and Unit.alive(decal.unit) then
@@ -342,6 +404,8 @@ local function cleanup_unit(unit)
     destroy_persistent_ring(unit)
     known_crushers[unit] = nil
     crusher_attack_states[unit] = nil
+    active_cleave_tokens[unit] = nil
+    interrupted_cleave_attacks[unit] = nil
 end
 
 local function cleanup_all()
@@ -356,6 +420,8 @@ local function cleanup_all()
     table.clear(pending_cleave_indicators)
     table.clear(pending_persistent_rings)
     table.clear(crusher_attack_states)
+    table.clear(active_cleave_tokens)
+    table.clear(interrupted_cleave_attacks)
     table.clear(known_crushers)
 end
 
@@ -393,19 +459,26 @@ function mod:on_crusher_sound(sound_name, unit_or_position)
     local world = Unit.world(unit)
     
     if sound_name:match("cleave_warning") then
+        local attack_token = start_cleave_attack(unit)
+
         if show_persistent_yellow() then
             hide_persistent_ring(unit)
         end
         
         destroy_cleave_indicator(unit)
         
-        attempt_create_cleave_indicator(unit, world, "warning")
+        attempt_create_cleave_indicator(unit, world, "warning", attack_token)
         crusher_attack_states[unit] = "warning"
         
     elseif sound_name:match("play_minion_swing_2h_blunt_large_cleave") then
+        if interrupted_cleave_attacks[unit] then
+            return
+        end
+
+        local attack_token = active_cleave_tokens[unit] or start_cleave_attack(unit)
         destroy_cleave_indicator(unit)
         
-        attempt_create_cleave_indicator(unit, world, "attack")
+        attempt_create_cleave_indicator(unit, world, "attack", attack_token)
         crusher_attack_states[unit] = "attack"
         
     elseif sound_name:match("play_minion_swing_2h_blunt_large_sweep") then
@@ -465,7 +538,17 @@ function mod.update(dt)
     
     for unit, pending in pairs(pending_cleave_indicators) do
         if current_time - pending.attempt_time > 5.0 or not Unit.alive(unit) or not is_world_valid(pending.world) then
-            pending_cleave_indicators[unit] = nil
+            if pending_cleave_indicators[unit] == pending then
+                pending_cleave_indicators[unit] = nil
+            end
+
+            if active_cleave_tokens[unit] == pending.attack_token then
+                active_cleave_tokens[unit] = nil
+                crusher_attack_states[unit] = "idle"
+                if show_persistent_yellow() then
+                    show_persistent_ring(unit, pending.world)
+                end
+            end
         end
     end
 
@@ -478,16 +561,19 @@ function mod.update(dt)
     for unit, decal in pairs(decals) do
         if decal and (not Unit.alive(unit) or not Unit.alive(decal.unit) or not is_world_valid(decal.world)) then
             destroy_cleave_indicator(unit)
+            finish_cleave_attack(unit, decal.attack_token)
             crusher_attack_states[unit] = "idle"
         elseif decal and decal.is_cleave then
             if decal.color_type == "warning" then
                 if current_time - decal.spawn_time > 3.0 then
                     destroy_cleave_indicator(unit)
+                    finish_cleave_attack(unit, decal.attack_token)
                     crusher_attack_states[unit] = "idle"
                 end
             elseif decal.color_type == "attack" then
                 if current_time - decal.spawn_time > 2.5 then
                     destroy_cleave_indicator(unit)
+                    finish_cleave_attack(unit, decal.attack_token)
                     crusher_attack_states[unit] = "idle"
                     
                     if show_persistent_yellow() then
@@ -517,6 +603,14 @@ function mod.update(dt)
         mod.find_nearby_crushers()
     end
 end
+
+mod.animation_events_add_packs = {
+    [CRUSHER_STAGGER_EVENT_PACK] = crusher_stagger_animation_events,
+}
+
+mod.animation_events_add_callbacks = {
+    [CRUSHER_STAGGER_EVENT_PACK] = on_stagger_animation_started,
+}
 
 mod.on_all_mods_loaded = function()
     if Managers and Managers.package then
