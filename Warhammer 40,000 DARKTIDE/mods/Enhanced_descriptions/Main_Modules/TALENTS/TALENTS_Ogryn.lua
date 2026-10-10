@@ -525,16 +525,12 @@ local ogryn_localizations = {
 	},
 	--[+ ABILITY 2-3 - Go again! +]--	26.03.2026
 	["loc_talent_ogryn_taunt_stagger_cd_description"] = { -- cooldown_reduction: 2.0%, talent_name: Loyal Protector, +colors
-		en = "When a Melee Attack or Push hits a "..CKWord("Staggered", "Staggered_rgb").." Enemy:\n"
-			..Dot_green.." Reduces your {talent_name:%s} "..CKWord("Cooldown", "Cd_rgb").." by {cooldown_reduction:%s}.\n"
-			..Dot_nc.." Can only trigger once every 0.1 seconds, shared across all targets.\n"
-			..Dot_red.." Ranged Attacks, Explosions, and the Taunt itself do not trigger this effect.",
+		en = CKWord("Staggering", "Staggering_rgb").." an Enemy replenishes:\n"
+			..Dot_green.." {cooldown_reduction:%s} "..CKWord("Cooldown", "Cd_rgb").." of your {talent_name:%s}.",
 		ru = CKWord("Ошеломление", "Oshelomlenie_rgb_ru").." врага восполняет:\n"
 			..Dot_green.." {cooldown_reduction:%s} "..CKWord("восстановления способности", "vost_sposobnosti_rgb_ru").." {talent_name:%s}.", -- Давай по новой!
-		["zh-tw"] = "近戰攻擊或推擊命中"..CKWord("踉蹌", "Staggered_rgb_tw").."中的敵人時：\n"
-			..Dot_green.." {talent_name:%s} 的"..CKWord("冷卻", "Cd_rgb_tw").."時間縮短 {cooldown_reduction:%s}。\n"
-			..Dot_nc.." 每 0.1 秒最多觸發一次，所有目標共用此間隔。\n"
-			..Dot_red.." 遠程攻擊、爆炸與嘲諷本身不會觸發。",
+		["zh-tw"] = CKWord("踉蹌", "Staggering_rgb_tw").." 敵人可恢復：\n"
+			..Dot_green.." {cooldown_reduction:%s} "..CKWord("冷卻", "Cd_rgb_tw").." 的 {talent_name:%s}。",
 		-- fr = "Faire "..COLORS_KWords_fr.Staggering_rgb_fr.." un ennemi régénère {cooldown_reduction:%s} du "..COLORS_KWords_fr.Cd_rgb_fr.." de votre {talent_name:%s}.", -- Encore une fois! --..TALENTS_Enh_desc2.ED_OGR_Ability_2_3_rgb_fr
 	},
 	--[+ ABILITY 3 - Point-Blank Barrage +]--	26.03.2026

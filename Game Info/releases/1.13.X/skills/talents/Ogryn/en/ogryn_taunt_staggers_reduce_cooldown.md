@@ -6,27 +6,37 @@ Release 1.13.1; fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Talent `og
 
 ## Source-confirmed behavior and static derivation
 
-- The buff has `cooldown_reduction_percentage = 0.015`. Its `on_hit` proc first checks Stagger through `CheckProcFunctions.on_stagger_hit`, then limits `attack_type` to `melee` or `push`.
-- `next_proc_t = t + 0.1` throttles triggers. Each effective proc calls `restore_ability_charge_percentage("combat_ability", 0.015)`. The ability extension restores resource equal to the cost of one charge times that fraction, equivalent to 1.5% of a single-charge base cooldown.
+- The talent installs `ogryn_taunt_staggers_reduce_cooldown`, whose `cooldown_reduction_percentage` is `0.015` and whose proc event is `on_hit`.
+- `CheckProcFunctions.on_stagger_hit` requires a minion target for which `MinionState.is_staggered` is true at the hit check. This reads the target's stagger state, not whether the current hit caused a fresh stagger. The state helper also accepts the `count_as_staggered` keyword.
+- The proc accepts only `attack_types.melee` and `attack_types.push`. Ranged, explosion-type, and shout hits are excluded; Loyal Protector's shout uses `attack_types.shout`.
+- The successful proc sets `template_data.next_proc_t = t + 0.1`. This timestamp belongs to the player's buff instance, so every target shares the same 0.1s interval; simultaneous qualifying hits do not each restore charge.
+- Each accepted proc calls `restore_ability_charge_percentage("combat_ability", 0.015)`, restoring 1.5% of the cost of one charge, not 1.5% of the remaining cooldown. This restoration ignores generic restoration-amount stat buffs and is clamped to the ability resource cap.
 
 ## Fixed source evidence
 
+- [scripts/utilities/minion_state.lua — L57-L72](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/minion_state.lua#L57-L72)
+- [scripts/extension_systems/ability/utilities/shout_ability.lua — L164-L173](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/utilities/shout_ability.lua#L164-L173)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua — L1127-L1169](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1127-L1169)
 - [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua — L146-L172](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L146-L172)
 - [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua — L439-L470](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L439-L470)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua — L1-L120](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L1-L120)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua — L537-L541](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L537-L541)
 - [scripts/extension_systems/ability/player_unit_ability_extension.lua — L1081-L1103](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1103)
-- [scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua — L59-L74](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L59-L74)
 - [scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua — L111-L127](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L111-L127)
-- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua — L146-L172](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L146-L172)
 - [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua — L1293-L1317](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1293-L1317)
 
 ## Example assumptions and limits
 
-- **Trigger**: A melee attack or push that Staggers an enemy restores 1.5% of one combat ability charge. Triggers must be at least 0.1s apart. Ranged hits and the taunt itself do not trigger this effect.
+- **Trigger**: A melee attack or push that hits a staggered enemy restores 1.5% of one combat ability charge. Hitting an already staggered enemy also qualifies; the hit does not have to cause a fresh stagger.
 
-- **Cooldown example**: Loyal Protector has a base cooldown of 50s. One qualifying trigger restores 50 × 1.5% = 0.75s; 10 restore 7.5s, in addition to natural cooldown recovery during that time.
+- **Trigger interval**: At most one trigger every 0.1s, shared across all targets. Hitting five qualifying enemies simultaneously still counts at most once, rather than restoring 7.5%.
 
-Only qualifying melee/push Staggers count; ranged Staggers do not. The 0.1s throttle combines closely spaced hits, and restoration remains subject to the ability resource cap. English and code evidence both correspond to 1.13.1.
+- **Eligible sources**: Only melee or push hits qualify. Ranged hits, explosion-type hits, and the taunt itself do not trigger this effect. If one of those sources staggers an enemy, a subsequent melee or push hit on that enemy can still qualify.
+
+- **Cooldown example**: Assume no other cooldown or recovery modifiers. Loyal Protector has a base cooldown of 50s, so each qualifying trigger restores `50 × 1.5% = 0.75s`. Ten triggers restore `0.75 × 10 = 7.5s`; the percentage is not applied to the remaining cooldown.
+
+- **Countdown example**: Under the same assumptions, 10 qualifying triggers during the first 10s after activation leave `50 − 10 − 7.5 = 32.5s` of cooldown: 10s from natural recovery and another 7.5s from this talent.
+
+These are static source-derived examples, not in-game timing measurements. The public 1.13.1 implementation explains why an excluded attack type does not restore charge; it does not establish the behavior or bug status of a different client build. Near a full charge, the resource cap limits actual restoration.
 
 <a id="original-english-template-and-reconstruction"></a>
 
@@ -58,7 +68,7 @@ Staggering an Enemy replenishes 1.5% Cooldown of your Loyal Protector.
 
 ## English comparison
 
-The English independently requires Stagger and states 1.5% cooldown restoration for Loyal Protector. These agree with the accepted proc check and one-charge resource fraction. The melee/push restriction, exclusion of ranged/taunt triggers, 0.1s throttle, resource cap and calculation examples supplement the text. The Chinese word choice for Stagger is not used as an English contradiction. No explicit English contradiction is established.
+The English correctly states the reconstructed 1.5% restoration for Loyal Protector and mentions Stagger. It does not specify the actual hit/state check: an already staggered target can qualify without a fresh stagger from this hit. The melee/push restriction, excluded attack types, shared 0.1s interval, resource cap, and cooldown examples supplement the original description. These omissions do not establish an explicit English contradiction; actual client behavior remains untested.
 
 ## Icon source
 
