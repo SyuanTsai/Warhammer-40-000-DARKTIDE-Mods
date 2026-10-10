@@ -6,14 +6,14 @@ Release 1.13.1; fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Talent `og
 
 ## Source-confirmed behavior and static derivation
 
-- The buff has `cooldown_reduction_percentage = 0.015`. Its `on_hit` proc first checks Stagger through `CheckProcFunctions.on_stagger_hit`, then limits `attack_type` to `melee` or `push`.
+- The buff has `cooldown_reduction_percentage = 0.015`. Its `on_hit` proc first checks the target's stagger state at the hit event through `CheckProcFunctions.on_stagger_hit`, then limits `attack_type` to `melee` or `push`.
 - `next_proc_t = t + 0.1` throttles triggers. Each effective proc calls `restore_ability_charge_percentage("combat_ability", 0.015)`. The ability extension restores resource equal to the cost of one charge times that fraction, equivalent to 1.5% of a single-charge base cooldown.
 
 ## Fixed source evidence
 
 - [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua — L146-L172](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L146-L172)
 - [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua — L439-L470](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L439-L470)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua — L1-L120](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L1-L120)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua — L537-L541](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L537-L541)
 - [scripts/extension_systems/ability/player_unit_ability_extension.lua — L1081-L1103](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1103)
 - [scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua — L59-L74](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L59-L74)
 - [scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua — L111-L127](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L111-L127)
@@ -22,11 +22,13 @@ Release 1.13.1; fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Talent `og
 
 ## Example assumptions and limits
 
-- **Trigger**: A melee attack or push that Staggers an enemy restores 1.5% of one combat ability charge. Triggers must be at least 0.1s apart. Ranged hits and the taunt itself do not trigger this effect.
+- **Trigger**: A melee attack or push that hits a staggered enemy restores 1.5% of one combat ability charge. Triggers must be at least 0.1s apart. Ranged hits, explosion-type hits, and the taunt itself do not trigger this effect.
+
+- **Trigger clarification**: Already staggered enemies also qualify; a fresh stagger is not required. All targets share the 0.1s interval, so simultaneous hits on multiple enemies count only once.
 
 - **Cooldown example**: Loyal Protector has a base cooldown of 50s. One qualifying trigger restores 50 × 1.5% = 0.75s; 10 restore 7.5s, in addition to natural cooldown recovery during that time.
 
-Only qualifying melee/push Staggers count; ranged Staggers do not. The 0.1s throttle combines closely spaced hits, and restoration remains subject to the ability resource cap. English and code evidence both correspond to 1.13.1.
+Only melee/push hits on staggered enemies qualify. All targets share the 0.1s interval, and restoration remains subject to the ability resource cap. English and code evidence both correspond to 1.13.1.
 
 <a id="original-english-template-and-reconstruction"></a>
 
@@ -58,7 +60,7 @@ Staggering an Enemy replenishes 1.5% Cooldown of your Loyal Protector.
 
 ## English comparison
 
-The English independently requires Stagger and states 1.5% cooldown restoration for Loyal Protector. These agree with the accepted proc check and one-charge resource fraction. The melee/push restriction, exclusion of ranged/taunt triggers, 0.1s throttle, resource cap and calculation examples supplement the text. The Chinese word choice for Stagger is not used as an English contradiction. No explicit English contradiction is established.
+The English mentions Stagger and states 1.5% cooldown restoration for Loyal Protector. The implementation checks the target's stagger state; it does not require a fresh stagger from this hit. The melee/push restriction, exclusion of ranged/taunt triggers, 0.1s throttle, resource cap and calculation examples supplement the text. The Chinese word choice for Stagger is not used as an English contradiction. No explicit English contradiction is established.
 
 ## Icon source
 

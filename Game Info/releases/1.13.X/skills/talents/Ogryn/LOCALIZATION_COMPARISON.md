@@ -194,7 +194,7 @@
 ## 再來(Go Again!)
 
 - 描述鍵：`loc_talent_ogryn_taunt_stagger_cd_description`；hash：`7bd31d11`。
-- 結論：未見明確矛盾。繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再恢復戰鬥技能冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都概述踉蹌與冷卻恢復；實作由近戰或推擊命中踉蹌中的敵人觸發 1.5%，不必重新造成踉蹌，且所有目標共用 0.1 秒間隔。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_taunt_staggers_reduce_cooldown.md)。
 
 <a id="ogryn_special_ammo_armor_pen"></a>
