@@ -1,8 +1,10 @@
-# Psyker talents: Release 1.13.1
+# Psyker talents: Release 1.13.X
 
 [繁體中文](../README.md) | [Sources, formulas and technical index](SOURCE_INDEX.md) | [Talent classes](../../../README.en.md) | [Release information](../../../../README.md)
 
 [Archetype base effects](BASE_EFFECTS.md)
+
+Cooldown-aura progress adjustment and Assail homing turns use Release 1.13.2. Each detailed source document identifies its mechanism version. Original game text remains from 1.13.1 / Steam Build 25606770.
 
 ## Archetype base effects
 
@@ -179,6 +181,8 @@ These four pre-installed effects are separate from the 81 selectable nodes. Func
 
 - **Peril cost**: A normal throw adds 10 percentage points of Peril; an aimed throw adds 25. For example, an existing 40% becomes 50% or 65% respectively. Other Peril-generation modifiers apply separately.
 
+- **Homing turns**: Both normal and aimed shards adjust their flight speed while they are not yet aligned with the target. Each adjustment stops at the configured turning speed instead of overshooting during a large turn or delayed update.
+
 [Details](psyker_grenade_throwing_knives.md) · [Back to index](#talent-index)
 
 ---
@@ -294,6 +298,8 @@ These four pre-installed effects are separate from the 81 selectable nodes. Func
 - **Aura**: You and teammates in Coherency have 10% shorter Combat Ability cooldowns. The same aura does not stack multiple times.
 
 - **Cooldown example**: With fixed recovery speed and no other modifiers, an original 40 seconds becomes 40 × (1 − 10%) = 36 seconds; an original 60 seconds becomes 54.
+
+- **Entering or leaving the aura**: For charge-based Combat Abilities with an unchanged maximum charge count, gaining or losing a cooldown aura preserves the existing recovery proportion. For one charge with an original 40-second cooldown and 50% recovered, gaining the 10% aura changes the full cooldown to 36 seconds while keeping 50% progress: 36 × (1 − 50%) = 18 seconds remain, assuming fixed regeneration speed and no other effects.
 
 [Details](psyker_cooldown_aura_improved.md) · [Back to index](#talent-index)
 

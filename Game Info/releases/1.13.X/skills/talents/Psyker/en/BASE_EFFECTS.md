@@ -2,7 +2,7 @@
 
 [繁體中文](../BASE_EFFECTS.md) | [Player descriptions](README.md) | [Technical index](SOURCE_INDEX.md) | [Definitions not directly used](UNUSED_DEFINITIONS.md)
 
-These four effects are provided in advance by the archetype settings and do not count toward the 81 selectable nodes. Functional headings identify the effects without claiming official game names. Fixed source: Release 1.13.1 / `7e662fcda16219d775b84af50322be2e9cd9d62e`. This is static verification, without in-game testing.
+These four effects are provided in advance by the archetype settings and do not count toward the 81 selectable nodes. Functional headings identify the effects without claiming official game names. Fixed source: Release 1.13.1 / `7e662fcda16219d775b84af50322be2e9cd9d62e`. The Base Aura uses the fixed 1.13.2 evidence below. This is static verification, without in-game testing.
 
 [Archetype base list](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65). Individual icon mappings for the four base effects were not obtained; other talent icons are not substituted.
 
@@ -155,27 +155,41 @@ The charged single-enemy attack agrees. The two charging modes, Peril amounts, c
 
 ## Base Aura
 
+Mechanism source: Release 1.13.2; fixed SHA `ba6c148f3c2768ca3ce20d846a12e56e2f433f3e`.
+
 - Talent ID: `psyker_aura_ability_cooldown`.
 
 - Your and your Allies' Combat Ability cooldowns in Coherency are reduced by 7.5%; the same aura does not apply repeatedly.
 - With only this effect, 40 seconds becomes 40 × (1 − 7.5%) = 37 seconds. When Seer's Presence replaces it with 10% reduction, the result is 36 seconds; the two bonuses cannot be added together.
 
+- **Entering or leaving the aura**: For charge-based Combat Abilities with an unchanged maximum charge count, gaining or losing a cooldown aura preserves the existing recovery proportion. For one charge with an original 40-second cooldown and 50% recovered, gaining the 7.5% aura changes the full cooldown to 37 seconds while keeping 50% progress: 37 × (1 − 50%) = 18.5 seconds remain, assuming fixed regeneration speed and no other effects.
+
 ### Source-confirmed behavior and static derivation
 
 `psyker_archetype.lua` lists `psyker_aura_ability_cooldown` as a tier-1 base talent. The talent definition links it through a Coherency template. The template sets `coherency_id`, the aura category and `max_stacks = talent_settings_3.coherency.max_stacks`, and sets `combat_ability_resource_cost_per_use_modifier = -0.075`. The current maximum is one stack, reducing the cooldown resource needed for each Combat Ability use by 7.5%.
 
+### Capacity changes when entering or leaving an aura
+
+- **Source-confirmed**: A charge-based ability's resource capacity is `maximum charges × resource cost per charge`. The aura changes that cost and therefore the pool capacity. When capacity changes and neither the extra-charge grant nor the reduced-charge cap branch has already run, the shared update computes `p = clamp01(previous resource / previous capacity)`, then sets `new resource = new capacity × p`. It preserves the recovery proportion of the whole pool rather than its old resource amount.
+
+- **Static derivation**: With two charges costing 40 each, the capacity is 80. If the pool contains 39 resource, gaining the 7.5% aura changes the per-charge cost to 37 and capacity to 74. The existing proportion is `39 / 80 = 48.75%`, so the new resource is `74 × 48.75% = 36.075`. Available charges remain `floor(36.075 / 37) = 0`. At 1 resource per second, with regeneration unpaused and no other effects, the first charge returns after `37 − 36.075 = 0.925 seconds`. Keeping 39 resource while changing the cost alone would cross the 37-resource threshold; 1.13.2 rescales resource before calculating charges in the same update.
+
+- **Limits**: This proportional rule is in the `usage_cost_type == "charges"` branch. Resource-based abilities retain their separate capacity handling. Granting or capping a changed maximum charge count takes precedence, so this aura example cannot be generalized to every loadout change or respawn. Resource rounding, natural regeneration, pauses and other refunds affect the exact availability time. These are static resource-model calculations without in-game testing.
+
+- [Capacity changes and branch order](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L781-L827) | [Per-charge cost and aura modifier](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1444-L1468) | [Pool capacity](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1330-L1355) | [Natural regeneration and charge thresholds](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L848-L884).
+
 ### Fixed source evidence
 
-- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/psyker_archetype.lua#L59-L61)
-- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L850-L868)
-- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2625-L2643)
-- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L305-L309)
-- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1428-L1459)
+- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/archetype/archetypes/psyker_archetype.lua#L59-L61)
+- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L850-L868)
+- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2625-L2643)
+- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/talent/talent_settings_psyker.lua#L305-L309)
+- [Fixed source](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1435-L1466)
 
 ### Unresolved limits
 
 - This value comes from a resource-cost modifier. Charges, other ability modifiers and the actual recovery process may change the experienced cooldown.
-- Local Steam Build 25606770 corresponds to source version 1.13.1. Old source comments are not treated as verified game text.
+- Original English remains from 1.13.1 / Steam Build 25606770; the capacity-change mechanism uses 1.13.2. Same-version 1.13.2 text has not been obtained; no in-game test was performed.
 
 ### Original English template and reconstruction
 
@@ -194,7 +208,7 @@ Full raw template:
 |---|---|---|
 | `cooldown_reduction` | abs(-0.075) = 0.075 | Percentage ×100, one decimal, with `+` prefix: +7.5%. |
 
-Display mapping: [psyker_talents.lua L855-L862](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L855-L862). Values reuse verified Chinese evidence.
+Display mapping: [psyker_talents.lua L855-L862](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L855-L862). Values reuse verified Chinese evidence.
 
 Static reconstruction; not an observed game screen:
 
