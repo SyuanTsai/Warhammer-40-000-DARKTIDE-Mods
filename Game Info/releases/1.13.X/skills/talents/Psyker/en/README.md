@@ -4,7 +4,7 @@
 
 [Archetype base effects](BASE_EFFECTS.md)
 
-Cooldown-aura progress adjustment uses Release 1.13.2. Each detailed source document identifies its mechanism version. Original game text remains from 1.13.1 / Steam Build 25606770.
+Cooldown-aura progress adjustment and Assail homing turns use Release 1.13.2. Each detailed source document identifies its mechanism version. Original game text remains from 1.13.1 / Steam Build 25606770.
 
 ## Archetype base effects
 
@@ -180,6 +180,8 @@ These four pre-installed effects are separate from the 81 selectable nodes. Func
 - **Damage limits**: Hit location, target armour and penetration order affect damage; later penetrated targets cannot simply use the first enemy's damage.
 
 - **Peril cost**: A normal throw adds 10 percentage points of Peril; an aimed throw adds 25. For example, an existing 40% becomes 50% or 65% respectively. Other Peril-generation modifiers apply separately.
+
+- **Homing turns**: Both normal and aimed shards adjust their flight speed while they are not yet aligned with the target. Each adjustment stops at the configured turning speed instead of overshooting during a large turn or delayed update.
 
 [Details](psyker_grenade_throwing_knives.md) · [Back to index](#talent-index)
 

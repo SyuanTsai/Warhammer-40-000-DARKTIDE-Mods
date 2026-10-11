@@ -2,7 +2,7 @@
 
 [繁體中文](../psyker_grenade_throwing_knives.md) | [Player description](README.md#psyker_grenade_throwing_knives) | [Technical index](SOURCE_INDEX.md) | [English comparison](LOCALIZATION_COMPARISON.md#psyker_grenade_throwing_knives)
 
-Release 1.13.1; fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Talent `psyker_grenade_throwing_knives`; name key `loc_ability_psyker_blitz_throwing_knives`; description key `loc_ability_psyker_blitz_throwing_knives_description`. Node `node_35ce2086-9081-49c7-9703-f3c07eb0be86`; category Blitz; one point. Mechanisms and examples reuse verified source evidence; no in-game test was performed.
+Release 1.13.2; fixed SHA `ba6c148f3c2768ca3ce20d846a12e56e2f433f3e`. Talent `psyker_grenade_throwing_knives`; name key `loc_ability_psyker_blitz_throwing_knives`; description key `loc_ability_psyker_blitz_throwing_knives_description`. Node `node_35ce2086-9081-49c7-9703-f3c07eb0be86`; category Blitz; one point. Mechanisms use the fixed 1.13.2 source; original English templates remain from 1.13.1 / Steam Build 25606770. No in-game test was performed.
 
 ## Source-confirmed behavior and static derivation
 
@@ -10,20 +10,30 @@ Release 1.13.1; fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Talent `ps
 - The quick attack uses `smart_target_targeting` and steers the projectile toward its target; the aimed attack uses single-target selection and the aimed projectile. Their initial speeds are 20 and 40 respectively; both True Flight variants select targets through `throwing_knives_find_highest_value_target`.
 - The damage file marks these profiles as `psyker_smite` and defines attack/impact curves by armour type. For `super_armor`, the attack curve uses `lerp_0_05` and the impact curve uses `lerp_0_5`, resulting in reduced damage against that armour type. This is the armour modifier at that damage stage; it cannot be read as all enemies taking a fixed final 5% of base damage.
 
+### Homing turn-speed adjustment
+
+- **Source-confirmed**: Normal and aimed shard locomotion templates use `throwing_knives` and `throwing_knives_aimed`. Both call `smite_update_towards_position`, with `min_adjustment_speed = 15` and `on_target_acceleration = 0`. If the new direction is still not aligned with the target, speed is adjusted toward 15. In 1.13.2, the interpolation coefficient is `α = min((dt + diff) × 12, 1)`, where `diff = abs(turn angle / 2π)`. Values at or below 1 produce the same formula result as before; values above 1 are capped at 1.
+
+- **Static derivation**: Assume the shard remains unaligned, the update interval is `dt = 0.1 seconds`, the turn-angle proportion is `diff = 0.05`, and speed before adjustment is 20. Then `α = min((0.1 + 0.05) × 12, 1) = 1` and the adjusted speed is `20 + (15 − 20) × 1 = 15` game distance units per second. The old coefficient of 1.8 would give `20 + (15 − 20) × 1.8 = 11`. The new result stays between this interpolation's starting and target speeds. This does not establish a minimum speed in every flight state or imply that every throw becomes faster.
+
+- Normal/aimed initial speeds of 20/40, the 10-charge maximum, the base 3-second recovery per charge and Damage settings are unchanged from 1.13.1. This change concerns turn-speed interpolation. Actual flight times, hit rates and behavior under delayed updates have not been tested in game.
+
+- [Shard locomotion templates](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua#L376-L450) | [Both homing settings](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/projectile/true_flight_templates.lua#L60-L109) | [Direction, alignment and speed interpolation](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/extension_systems/locomotion/utilities/true_flight_functions/true_flight_smite.lua#L23-L60).
+
 ## Fixed source evidence
 
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua — L285-L316](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L285-L316)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua — L155-L184](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L155-L184)
-- [scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua — L132-L145](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L132-L145)
-- [scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua — L329-L393](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L329-L393)
-- [scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua — L458-L516](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L458-L516)
-- [scripts/settings/projectile/player_projectile_templates.lua — L567-L619](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L567-L619)
-- [scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua — L376-L434](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua#L376-L434)
-- [scripts/settings/projectile/true_flight_templates.lua — L60-L109](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/true_flight_templates.lua#L60-L109)
-- [scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua — L288-L375](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua#L288-L375)
-- [scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua — L112-L119](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua#L112-L119)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua — L155-L184](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L155-L184)
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua — L285-L316](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L285-L316)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua — L285-L316](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L285-L316)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua — L155-L184](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L155-L184)
+- [scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua — L132-L145](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L132-L145)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua — L329-L393](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L329-L393)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua — L458-L516](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L458-L516)
+- [scripts/settings/projectile/player_projectile_templates.lua — L567-L619](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/projectile/player_projectile_templates.lua#L567-L619)
+- [scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua — L376-L434](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua#L376-L434)
+- [scripts/settings/projectile/true_flight_templates.lua — L60-L109](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/projectile/true_flight_templates.lua#L60-L109)
+- [scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua — L288-L375](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua#L288-L375)
+- [scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua — L112-L119](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua#L112-L119)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua — L155-L184](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L155-L184)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua — L285-L316](https://github.com/Aussiemon/Darktide-Source-Code/blob/ba6c148f3c2768ca3ce20d846a12e56e2f433f3e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L285-L316)
 
 ## Example assumptions and limits
 
@@ -39,7 +49,7 @@ Release 1.13.1; fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Talent `ps
 
 - Recovery assumes no other recovery modifiers, 0 initial uses, no remaining recovery progress and uninterrupted regeneration: one use at second 3, two at second 6, and all 10 after `3 × 10 = 30` seconds.
 - Damage calculations require fixed target armour, hit location, normal/aimed throw, hit order and other bonuses. There is no damage value valid for every target.
-- The original game text is the 1.13.1 / Steam Build 25606770 UI resource. Text/implementation differences still require in-game comparison; omitted details are not translation errors. Mechanisms reuse the fixed-version evidence, with local Build 25606770 English text corresponding to 1.13.1. Actual presentation and behavior remain unobserved in game. Missing details are supplementary explanations.
+- Mechanism source: 1.13.2. Original English remains from 1.13.1 / Steam Build 25606770; same-version 1.13.2 text has not been obtained. Actual presentation and behavior remain unobserved in game; omitted details are supplementary explanations.
 
 <a id="original-english-template-and-reconstruction"></a>
 
