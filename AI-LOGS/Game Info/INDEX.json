@@ -6,6 +6,14 @@
   "tools_root": "scripts/game-info",
   "records": [
     {
+      "id": "releases/1.13.X/skills/2026-10-11-1.13.2_SEERS_PRESENCE",
+      "kind": "record",
+      "scope": "1.13.X/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-11-1.13.2_SEERS_PRESENCE.md",
+      "date": "2026-10-11",
+      "storage": "git"
+    },
+    {
       "id": "releases/1.13.X/skills/2026-10-11-1.13.2_BASE_AURA",
       "kind": "record",
       "scope": "1.13.X/Psyker",
