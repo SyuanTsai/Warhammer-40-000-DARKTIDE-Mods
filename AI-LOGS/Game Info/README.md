@@ -6,6 +6,8 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
+- [1.13.2：基礎冷卻光環（The Quickening）更新核對](releases/1.13.X/skills/2026-10-11-1.13.2_BASE_AURA.md)
+
 - [階層導覽與七職業版型](publication/2026-10-04-TREE_READER.md)
 
 - [13筆本機來源引用的狀態更正](publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION.md)
