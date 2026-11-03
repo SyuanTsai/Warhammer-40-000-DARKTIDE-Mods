@@ -1,5 +1,33 @@
 # Game Info維護工具
 
+## Read-only bundle strings extraction
+
+`extract_bundle_strings.py` reads only the installed game's `bundle/` files. It
+loads the game's existing `binaries/oo2core_9_win64.dll` through `ctypes` for
+Oodle decompression; it does not download, execute, rename, or write anything
+under the game directory.
+
+```powershell
+python scripts/game-info/extract_bundle_strings.py `
+  --game-dir "D:\SteamLibrary\steamapps\common\Warhammer 40,000 DARKTIDE" `
+  --output-dir "Game Info/releases/1.13.X/source/SteamBuild_26101089_1.13.4/raw"
+```
+
+By default it extracts the four localization resources (`items`, `ui`,
+`subtitles`, and `path_of_trust/ui`). Repeat `--resource <16-digit-name-hash>`
+to select one or more resources instead. The output directory contains the
+limn-compatible `*.strings` files plus `extract_manifest.json` with the Steam
+build, source bundle filename, size, SHA-256, and extraction timestamp.
+
+To decode the resulting batch, pass the directory above `raw/` to
+`decode_strings.py`:
+
+```powershell
+python scripts/game-info/decode_strings.py `
+  --data-dir "Game Info/releases/1.13.X/source/SteamBuild_26101089_1.13.4" `
+  --source-repo "F:\GitFile\Persion - Games\Darktide-Source-Code"
+```
+
 [流程入口](../../AI%20Prompt/Game-Info-Workflow.md)｜[技能流程](../../AI%20Prompt/Skill-Info-Workflow.md)｜[對話流程](../../AI%20Prompt/Dialogue-Text-Workflow.md)｜[紀錄索引與規則](../../AI-LOGS/Game%20Info/README.md)
 
 所有資料路徑由參數指定，工具不固定單一版本。原始文本在Game Info/releases/<系列>/source/，操作結果在AI-LOGS/Game Info/。
