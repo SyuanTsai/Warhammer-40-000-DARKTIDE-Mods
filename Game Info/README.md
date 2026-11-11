@@ -7,8 +7,6 @@
 ## 舊版資料（固定 commit `bbb4a7e`）
 
 - [Release 1.13.X](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/README.md)：[技能](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/skills/README.md)、[武器](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/weapons/README.md)、[祝福](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/blessings/README.md)。
-- [對話文本](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/tree/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/%E5%B0%8D%E8%A9%B1%E6%96%87%E6%9C%AC)：[對話索引與來源](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/%E5%B0%8D%E8%A9%B1%E6%96%87%E6%9C%AC/README.md)。
-- 完整文本：[文本來源與下載](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/source/README.md)｜[1.13.0 → 1.13.1文本差異](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/source/TEXT_DIFF_1.13.0_TO_1.13.1.md)｜[離線復原方式](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/source/RESTORE_TEXT.md)
 
 ## 計算與邊界
 
