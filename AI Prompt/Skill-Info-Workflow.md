@@ -4,6 +4,8 @@
 
 [返回 Game Info 流程入口](Game-Info-Workflow.md)
 
+> 狀態更新（2026-11-11，SYP-404）：技能、祝福、武器的遊戲資料與說明，現由 DarkTide-Source-Data 的固定流程（SPEC v1，Jira SYP-382）產出，入口為該 repo 的 `docs/pipeline/START.md`；Mods repo 不再保存遊戲資料。原 `Game Info/releases/1.13.X/` 已自 main 移除，舊內容見[固定 commit](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/tree/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X)。本提示詞保留作舊流程參考。
+
 將已有技能展示於 Pages 時，另使用 [Skill-Pages-Workflow.md](Skill-Pages-Workflow.md)；保留本流程的 Git 玩家主文與來源文件，網站在獨立分支與工作樹維護。
 
 ---
@@ -19,7 +21,7 @@
 - 交付 Repository：【Warhammer-40-000-DARKTIDE-Mods 的實際本機路徑】
 - 唯讀來源 Repository：【Darktide-Source-Code 的實際本機路徑】
 - 工作分支：`Feature/Skill-Reverse-engineering`
-- 輸出目錄：【例如 Game Info/releases/1.13.X】
+- 輸出目錄：【本次指定的版本資料目錄；Mods repo 不再保存遊戲資料】
 - 舊版比較基準：【完整 commit SHA；未指定則不做版本比較】
 - 主控：GPT-6 Astra／xhigh；需要委派時，協助代理使用 GPT-6 Luna／max。
 
@@ -143,7 +145,7 @@ Game Info/
 ```
 
 - 其他職業實際開始分析時才建立相應文件及來源資料夾。
-- 版本目錄採 `<主版號>.<次版號>.X`，例如 `Game Info/releases/1.13.X/`，不在名稱加日期。同系列小版本共用同一資料目錄；實際來源版本、SHA與擷取日期記錄於版本README；建檔與維護日期記錄於AI-LOGS。跨系列另建目錄並保留歷史資料，不建立 `latest/` 副本。
+- 版本目錄採 `<主版號>.<次版號>.X`，例如 `1.13.X`，不在名稱加日期。同系列小版本共用同一資料目錄；實際來源版本、SHA與擷取日期記錄於版本README；建檔與維護日期記錄於AI-LOGS。跨系列另建目錄並保留歷史資料，不建立 `latest/` 副本。
 - 逐技能來源存為 `<talent ID>.md`；基礎效果用 `BASE_EFFECTS.md`；未直接使用的定義用 `UNUSED_DEFINITIONS.md`；原文比對用 `LOCALIZATION_COMPARISON.md`；百分比盤點用 `DAMAGE_PERCENTAGE_REVIEW.md`。工作紀錄集中於AI-LOGS/Game Info/，不得放入Game Info的README或POC。未驗收內容維持待核對標示。
 - 以靈能者為例，玩家主文件為 `<版本目錄>/skills/talents/Psyker/README.md`，技術索引為同目錄的 `SOURCE_INDEX.md`，逐技能來源及子目錄也保留在該職業目錄。主文件呈現技能目錄、五類技能、圖示、條列效果、實際算例、必要例外及返回連結；不能以技術索引或待辦表替代。
 - 技能來源子文件沿用老兵內容層次：來源版本與完整 SHA、返回玩家技能連結、名稱／描述鍵與節點資料、原始碼確認與程式推導、逐項來源、算例條件與待確認事項、圖示來源；涉及原文差異時另附比對依據。必須有實際分析內容，只有標題、來源網址或「待核對」文字不算完成。
@@ -189,7 +191,7 @@ Game Info/
 - 重新固定新版本的公開 SHA。指定舊版時，比較技能樹、天賦、能力、增益效果及共用系統；未指定時明記沒有版本比較。
 - 共用結算改動可能影響表面上未改的技能，必須檢查；不要只比對技能的顯示數值。
 - 記錄新增、移除、改名、替換與行為改變，重新驗收受影響技能及覆蓋清單。
-- 同系列的小版本更新（例如1.13.0 → 1.13.1）沿用既有 `releases/1.13.X/`，更新實際來源版本、SHA及差異紀錄。日期變更不建立新目錄。跨系列（例如1.13 → 1.14）另建 `releases/1.14.X/`，保留舊系列完整資料；既有小版本修訂由 Git 歷史追溯。
+- 同系列的小版本更新（例如1.13.0 → 1.13.1）沿用既有 `1.13.X` 版本目錄，更新實際來源版本、SHA及差異紀錄。日期變更不建立新目錄。跨系列（例如1.13 → 1.14）另建 `1.14.X` 版本目錄，保留舊系列完整資料；既有小版本修訂由 Git 歷史追溯。
 - 沿用本提示詞的玩家描述規則與子文件結構，每個技能完成後立即提交；仍遵守本次指定範圍與停止條件。
 
 ## 職業專用配方樹補充
