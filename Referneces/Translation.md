@@ -581,7 +581,7 @@
 - Expansive - 擴展性
 - Shrapnel - 破片四濺
 - Blast Zone - 狂轟猛炸
-- Adhesive Charge - 黏著炸藥
+- Adhesive Charge - 粘性炸藥
 - Marksman's Reflex - 迅雷反射
 - Telescopic Sight - 千里眼
 - Bug Out - 開溜
@@ -783,7 +783,7 @@
 ##### 光環
 
 - Intimidating Presence - 威嚇氣場
-- Bonebreaker's Aura - 破骨者之環
+- Bonebreaker's Aura - 碎骨者之環
 - Stay Close! - 跟緊我！
 - Coward Culling - 優勝劣汰
 
@@ -797,7 +797,7 @@
 - Loyal Protector - 忠誠守護者
 - Valuable Distraction - 重要干擾
 - No Pain! - 一點都不痛！
-- Go again! - 再來
+- Go again! - 再來！
 - Point-Blank Barrage - 貼身火力
 - Bullet Bravado - 壯膽子彈
 - Hail of Fire - 槍林彈雨
@@ -826,7 +826,7 @@
 
 - Lynchpin - 關鍵人物
 - Heavyweight - 重量級
-- Steady Grip - 穩定握持
+- Steady Grip - 穩固握持
 - Smash 'Em! - 碾碎它們！
 - The Best Defence - 最好的防禦
 - Furious - 怒不可遏
@@ -836,12 +836,12 @@
 - Pumped Up - 士氣高昂
 - Focused Fighter - 專注鬥士
 - Strongman - 大肌肌
-- Can't Hit Me...Again - 休想再打中我......
+- Can't Hit Me...Again - 休想再打中我……
 - Keep Shooting - 射不停
 - Beat Them Back - 擊潰他們
 - Strike True - 精準打擊
 - Slam - 猛擊
-- Ammo Stash - 彈藥儲存包
+- Ammo Stash - 彈藥存儲包
 - Big Boom - 大爆炸
 - Crunch! - 嘎嘎！
 - Batter - 重毆
