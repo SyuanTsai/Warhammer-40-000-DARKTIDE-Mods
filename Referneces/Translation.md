@@ -361,12 +361,12 @@
 - Exterminator Shotgun - 滅絕者霰彈槍
 - Galvanic Rifle - 電能步槍
 - Grenadier Gauntlet - 擲彈兵臂鎧
-- Heavy Laspistol - 重型雷射手槍（遊戲繁中：重型鐳射手槍）
+- Heavy Laspistol - 重型鐳射手槍
 - Heavy Stubber - 重伐木槍（與 Twin-Linked Heavy Stubber 的雙鏈種類區分）
-- Helbore Lasgun - 冥潮雷射槍（遊戲繁中：冥潮鐳射槍）
+- Helbore Lasgun - 冥潮鐳射槍
 - Huntsman's Shotgun - 獵人霰彈槍
 - Infantry Autogun - 步兵自動槍
-- Infantry Lasgun - 步兵雷射槍（遊戲繁中：步兵鐳射槍）
+- Infantry Lasgun - 步兵鐳射槍
 - Inferno Force Staff - 烈焰力場法杖
 - Kickback - 反衝者
 - Needle Pistol - 針彈手槍
@@ -374,7 +374,7 @@
 - Plasma Gun - 電漿槍
 - Purgation Flamer - 淨化噴火器
 - Quickdraw Stub Revolver - 快拔左輪手槍
-- Recon Lasgun - 偵查雷射槍（遊戲繁中：偵察鐳射槍）
+- Recon Lasgun - 偵察鐳射槍
 - Ripper Gun - 撕裂槍
 - Rumbler - 震盪槍
 - Shredder Autopistol - 撕裂者自動手槍
