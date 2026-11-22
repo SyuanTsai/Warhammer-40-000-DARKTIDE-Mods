@@ -1166,7 +1166,7 @@
 - Up Close - 近在眉睫
 - Force of Will - 鐵血之志
 - Retaliatory Force -  還治其人之身
-- Man and Cyber-Mastiff - 電子獒犬與人(機械戰犬與人)
+- Man and Cyber-Mastiff - 機械戰犬與人
 - Walk It Off - 走一走治百病
 - Shield Plates - 盾型裝甲
 - Arbitrator Armour - 法務官之鎧
