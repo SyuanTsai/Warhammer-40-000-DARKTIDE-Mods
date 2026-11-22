@@ -1365,7 +1365,7 @@
 ##### 閃擊
 
 - Servo-Skull - 伺服頭骨
-- Artificer Servo-Skull - 匠師伺服頭骨
+- Artificer Servo-Skull - 匠師級伺服顱骨
 - Medicae Servo-Skull - 醫療伺服頭骨
 - Purgator Servo-Skull - 滌罪伺服頭骨
 - Noospheric Command - 心智網指令
@@ -1387,7 +1387,7 @@
 
 - Voltaic Expander - 電能擴張器
 - Voltaic Emitter - 電能發射器
-- Voltaic Overcharge - 電流超載
+- Voltaic Overcharge - 電流過載
 - Voltaic Motivator - 電能驅動
 - Voltaic Arcs - 電流弧
 - Chordclaw Strike - 弦爪重擊
@@ -1395,7 +1395,7 @@
 - Axial Slash - 軸向斬擊
 - Probing Strikes - 試探連擊
 - Slice and Dice - 千刀萬剮
-- Advanced Combat Doctrines - 進階戰鬥教範
+- Advanced Combat Doctrines - 進階戰鬥教條
 - Restoration Protocol - 修復協定
 - Writ of Ammunition Enumeration - 彈藥盤點之旨
 - Calculated Priority - 精算順序
@@ -1412,10 +1412,10 @@
 - Resource Optimisation Canticles - 資源最佳化聖歌
 - Capacitory Limit Override - 電容極限覆寫
 - Surge-Extension - 脈衝延伸
-- Power Overload - 能量超載
-- Critical Power Overload - 爆擊能量過載
+- Power Overload - 能量過載
+- Critical Power Overload - 暴擊能量過載
 - Invigorating Overload - 振奮過載
-- Static Capacitor Drain - 靜電電容消耗
+- Static Capacitor Drain - 靜態電容消耗
 - Powerdrive - 動力驅動
 - Flensing Protocols - 削切協議
 - Servo-Sinew Surge - 伺服肌腱湧動
@@ -1425,7 +1425,7 @@
 
 ##### 一般天賦
 
-- Overcharge Transfer Lattice - 過載轉移晶格
+- Overcharge Transfer Lattice - 過載轉移網格
 - Retribution Conduit - 報應導管
 - Kinetic Energy Distributors - 動能分配器（舊英文拼寫：Kinetic Energy Distribution；沿用既有繁中對應）
 - System Shock - 系統電擊
@@ -1436,11 +1436,11 @@
 - Shockline Breach Protocol - 電擊破壞協定
 - Galvanized Coating - 鍍鋅精密塗層
 - Electro-Strike Conduit - 電擊打擊導管
-- Data Sensor Protocol - 數據感應協定
-- Salvation Doctrine - 救贖教範
+- Data Sensor Protocol - 數據感應協議
+- Salvation Doctrine - 救贖教義
 - Precision Combat Augurs - 精準戰鬥探測儀
 - Hybrid Combat Covenant - 混合戰鬥契約
-- Auto-Repair Doctrines - 自我修復教義
+- Auto-Repair Doctrines - 自動修復教義
 - Power Overflow - 能量溢流
 - Sequenced Charge - 序列充能
 - Target Prioritization Psalms - 標記優先聖詩
@@ -1464,7 +1464,7 @@
 - Protectorate Protocol - 守護協議
 - Gunsmith - 槍械技師
 - Ammunition-Restoration Pod - 彈藥補給艙
-- Adaptive Combat Calibration - 適應性戰鬥校準
+- Adaptive Combat Calibration - 適應型戰鬥校準
 - Progressive Plating Matrix - 漸進裝甲矩陣
 - Sureshot Cogitator Sync - 精準思算機同步
 - Ablative Motion Routines - 離格動作例程
@@ -1473,7 +1473,7 @@
 - Force Distribution Actuators - 力量分配致動器
 - Sustained Assault Doctrine - 持續攻擊教義
 - Slaughter Protocol - 屠殺協議
-- Adaptive Combat Engram - 適應性戰鬥記憶體
+- Adaptive Combat Engram - 適應戰鬥記憶體
 - Hydraulic Impact - 液壓衝擊
 - Motive Engine - 動力引擎
 
