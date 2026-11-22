@@ -1206,19 +1206,19 @@
 - Cleave Boost - 順劈加成
 - Impact Boost - 衝擊加成
 
-### Hive Scum - 巢都渣滓
+### Hive Scum - 巢都敗類
 
-#### 巢都渣滓專有名詞
+#### 巢都敗類專有名詞
 
-- Hive Scum - 巢都渣滓
+- Hive Scum - 巢都敗類
 - Stimm Field - 化學性依賴
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
-- Stimm Supply - 化學性依賴
+- Stimm Supply - 興奮劑補給
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
 - Broker - 代理
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
 
-#### 巢都渣滓天賦
+#### 巢都敗類天賦
 
 ##### 閃擊
 
@@ -1245,7 +1245,7 @@
 - Boiling Blood - 沸騰之血
 - Forge's Bellow - 熔爐怒吼
 - Pulverising Strikes - 碎骨打擊
-- Stimm Supply - 化學性依賴
+- Stimm Supply - 興奮劑補給
 - Practiced Deployment - 熟練部署
 - Booby Trap - 毒性陷阱
 - Fast Acting Stimms - 速效型興奮劑
@@ -1264,7 +1264,7 @@
 - Stoked Rage - 振奮怒火
 - Adrenaline Unbound - 腎上腺素突破
 - Uncontrolled Aggression - 失控攻擊
-- Chemical Dependency - 化學性依賴
+- Chemical Dependency - 化學依賴性
 - Chem Enhanced - 化學強化
 - Chem Fortified - 化學增強
 - Maxed Out Chems - 化學藥劑全開
@@ -1282,7 +1282,7 @@
 - Speedloader - 快速裝填
 - Float Like a Butterfly - 翩翩蝶舞
 - Regained Posture - 恢復姿態
-- Tis but a Scratch - 沒甚麼，只是擦傷
+- Tis but a Scratch - 沒什麼，只是擦傷
 - Slippery Customer - 奧客
 - Ramping Backstabs - 加重背刺
 - Sample Collector - 樣本採集
