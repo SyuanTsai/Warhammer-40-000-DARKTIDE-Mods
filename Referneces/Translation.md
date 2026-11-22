@@ -683,7 +683,7 @@
 ##### 主動技能
 
 - Psykinetic's Wrath - 靈能學者之怒
-- Venting Shriek - 靈能尖嘯
+- Venting Shriek - 刺耳尖嘯
 - Warp Rupture - 亞空間爆發
 - Becalming Eruption - 平靜迸發
 - Creeping Flames - 蔓延火焰
@@ -751,7 +751,7 @@
 - Penetration of the Soul - 靈魂穿透
 - Crystalline Will - 結晶意志
 - Warp Ghost - 亞空間幽魂
-- Surety of Arms - 武器在手，信心我有。
+- Surety of Arms - 武器在手，信心我有
 - Focused Warp - 聚焦次元
 - Peril Equilibrium - 危險平衡
 - Psykinetic Grip - 念力之握
