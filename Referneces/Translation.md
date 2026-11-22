@@ -1028,7 +1028,7 @@
 - Marksman - 鷹眼
 - Voice of Command - 發號施令
 - Duty and Honour - 責任與榮耀
-- Only In Death Does Duty End - 只有死亡，職責才會終結
+- Only In Death Does Duty End - 只有在死亡時，職責才會終結
 - Infiltrate - 滲透
 - Overwatch - 掩護射擊
 - Hunter's Resolve - 獵手決意
@@ -1053,7 +1053,7 @@
 ##### 一般天賦
 
 - Exhilarating Takedown - 振奮擊倒
-- Confirmed Kill - 擊殺紀錄
+- Confirmed Kill - 擊殺記錄
 - Out for Blood - 嗜血
 - Volley Adept - 齊射能手
 - Longshot - 遠射
