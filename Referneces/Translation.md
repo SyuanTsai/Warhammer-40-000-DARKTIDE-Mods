@@ -299,14 +299,14 @@
 - Blaze Force Greatsword - 烈焰力場巨劍
 - Blaze Force Sword - 烈焰力場劍
 - Bone Saw - 骨鋸
-- Bully Club - 惡棍棒（遊戲繁中：惡霸棍棒）
+- Bully Club - 惡霸棍棒
 - Cleaver - 砍刀
 - Combat Axe - 戰鬥斧
 - Combat Blade - 戰刃
 - Crowbar - 撬棍
 - Cruncher - 碎骨者
 - Crusher - 碾壓者
-- Delver's Pickaxe - 十字鎬（遊戲繁中：戴維爾戰鎬）
+- Delver's Pickaxe - 戴維爾戰鎬
 - Duelling Sword - 決鬥劍
 - Heavy Eviscerator - 重型開膛劍
 - Heavy Sword - 重劍
