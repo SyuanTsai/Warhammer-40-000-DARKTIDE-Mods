@@ -931,7 +931,7 @@
 - Restorative Verses - 治癒詩頌
 - Martyr's Purpose - 殉道者之願
 - Inexorable Judgement - 命定審判
-- Retributor's Stance - 懲戒者姿態
+- Retributor's Stance - 懲罰者姿態
 - Inebriate's Poise - 飄忽身形
 - Eternal - 永恆
 - Pious Cut-Throat - 虔誠刺客
@@ -947,7 +947,7 @@
 - The Voice of Terra - 泰拉之音
 - Enemies Within, Enemies Without - 內憂外患
 - Blood Redemption - 鮮血救贖（1.13 改為職業內建被動）
-- Second Wind - 精力復甦
+- Second Wind - 精力復蘇
 - Vicious Offering - 惡毒贈禮
 - Purge the Unclean - 淨化不潔
 - Duellist - 決鬥者
