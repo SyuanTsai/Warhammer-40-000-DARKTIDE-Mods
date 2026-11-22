@@ -1027,7 +1027,7 @@
 - The Bigger they Are... - 敵人越大...
 - Marksman - 鷹眼
 - Voice of Command - 發號施令
-- Duty and Honour - 責任與榮譽
+- Duty and Honour - 責任與榮耀
 - Only In Death Does Duty End - 只有死亡，職責才會終結
 - Infiltrate - 滲透
 - Overwatch - 掩護射擊
@@ -1041,7 +1041,7 @@
 - Chink in their Armour - 滲透盔甲
 - Tunnel Vision - 視野狹窄
 - Long Range Assassin - 遠程刺客
-- Focus Target! - 鎖定目標
+- Focus Target! - 鎖定目標！
 - Target Down! - 目標擊倒！
 - Redirect Fire! - 轉移火力！
 - Focused Fire - 集中火力
