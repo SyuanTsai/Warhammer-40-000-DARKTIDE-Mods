@@ -1,5 +1,7 @@
 # Warhammer 40,000 DARKTIDE - 戰錘40K黑潮
 
+> 譯名後的「（範圍：…）」是適用範圍說明，不屬於譯文；翻譯時依範圍選擇對應譯名。
+
 ## 基礎名詞
 
 ### 主要 (MAIN)
@@ -51,7 +53,7 @@
 - Cleave - 順劈攻擊
 - Curios - 珍品
 - Weakspot - 弱點
-- Finesse - 靈巧
+- Finesse - 靈巧（範圍：屬性短標籤與通用加成）
 - Staggering - 踉蹌
 - Critical Melee - 近戰爆擊
 - Stacks - 疊加
@@ -93,7 +95,7 @@
 - Impact - 衝擊
 - Cleave - 順劈攻擊
 - Power - 威力
-- Finesse - 靈巧傷害
+- Finesse - 靈巧傷害（範圍：傷害增益效果）
 - Hit Mass - 順劈目標
 - Damage - 傷害
 - Weak Spot - 弱點
@@ -130,7 +132,7 @@
 
 ## 機制
 
-- Perils of the Warp - 亞空間反噬
+- Perils of the Warp - 亞空間反噬（範圍：機制）
 - Peril - 反噬
 - Damage warp - 亞空間傷害
 - Warp attack - 亞空間攻擊
@@ -208,14 +210,14 @@
 - Armoured Groaner - 重甲呻吟者
 - Dreg Bruiser - 渣滓格鬥兵
 - Dreg Stalker - 渣滓潛行者
-- Dreg Vanguard - 渣滓先鋒 (盾兵)
+- Dreg Vanguard - 渣滓先鋒 (盾兵)（範圍：敵人名稱；Field_Awareness）
 - Groaner - 呻吟者
 - Mutated Poxwalker - 變異瘟疫行者（遊戲繁中：異變瘟疫行者；內部名稱含 lesser）
 - Poxwalker - 瘟疫行者
 - Scab Bruiser - 血痂格鬥兵
 - Scab Shooter - 血痂射手
 - Scab Stalker - 血痂潛行者
-- Scab Vanguard - 血痂先鋒 (盾兵)
+- Scab Vanguard - 血痂先鋒 (盾兵)（範圍：敵人名稱；Field_Awareness）
 - Tentacled Poxwalker - 觸手瘟疫行者
 
 #### 特殊任務單位
@@ -232,7 +234,7 @@
 - Gunners - 砲手
 - Sniper - 狙擊手
 - Trapper - 陷阱兵
-- Maniac - 狂熱者
+- Maniac - 狂熱者（範圍：敵人類型）
 - Unyielding - 不屈敵人
 - Carapace - 甲殼
 - Monstrosity - 巨獸
@@ -254,7 +256,7 @@
 - Cultist Berzerker - 渣滓狂怒者
 - Lesser Mutated Poxwalker - 低階變異瘟疫行者
 - Ritualist - 渣滓祭司
-- Flamer - 火焰兵
+- Flamer - 火焰兵（範圍：敵人名稱）
 - Corruptor - 腐蝕者
 - Mutated Poxwalker (tentacle variant) - 觸手瘟疫行者
 - Armored Groaner - 重甲呻吟者
@@ -414,7 +416,7 @@
 - Heavy Stubbers - 雙鏈重型機槍（本表舊稱對應雙鏈種類：Twin-Linked Heavy Stubber）
 - Ripper Guns - 撕裂槍
 - Infantry Lasguns - 步兵雷射槍
-- Flamer - 淨化噴火器
+- Flamer - 淨化噴火器（範圍：狂信徒武器名稱）
 - Inferno Staff - 烈焰力場法杖
 - Vigilant Autoguns - 機動自動槍
 
@@ -446,8 +448,8 @@
 - Flesh Tearer - 血肉撕裂者
 - Lacerate - 撕碎
 - Executor - 行刑者
-- Riposte - 還擊
-- Precognition - 未卜先知
+- Riposte - 還擊（範圍：近戰祝福名稱；名稱待原版確認）
+- Precognition - 未卜先知（範圍：近戰祝福名稱）
 - Haymaker - 強力一擊
 - Smackdown - 擊倒
 - Mercy Killer - 仁慈殺手
@@ -463,15 +465,15 @@
 - Perfect Strike - 完美一擊
 - Bladed Momentum - 利刃攻勢
 - Deflector - 偏轉
-- Momentum - 勢頭
+- Momentum - 勢頭（範圍：近戰祝福名稱）
 - Murderous Tranquility - 凶殘之寧
-- Blazing Spirit - 燃燒靈魂
-- Blazing Spirit - 燃燒靈魂（靈能法杖與雙手力場劍）
+- Blazing Spirit - 燃燒靈魂（範圍：近戰祝福名稱；力場劍）
+- Blazing Spirit - 燃燒靈魂（範圍：近戰祝福名稱；雙手力場劍沿用靈能法杖的遠程祝福描述）
 - Unstable Power - 不穩定能量
 - Warp Slice - 亞空間斬
 - Exorcist - 驅魔者
-- Superiority - 優勢（近戰力量）
-- Superiority - 優勢（通用力量）
+- Superiority - 優勢（範圍：近戰力量效果）
+- Superiority - 優勢（範圍：通用力量效果）
 - Lightning Reflexes - 閃電反射
 - High Voltage - 高壓電
 - Falter - 踉蹌
@@ -521,17 +523,17 @@
 - Terrifying Barrage - 恐怖阻擊
 - Roaring Advance - 咆哮突進
 - Ceaseless Barrage - 持續阻擊
-- Inspiring Barrage - 振奮彈幕
+- Inspiring Barrage - 振奮彈幕（範圍：遠程祝福名稱；key loc_trait_bespoke_toughness_on_continuous_fire）
 - Ghost - 幽靈
 - Surgical - 精確打擊
 - Crucian Roulette - 克魯錫安輪盤
 - Deadly Accurate - 致命精準
-- No Respite - 刻不容緩
-- Opening Salvo - 開啟齊射
+- No Respite - 刻不容緩（範圍：遠程祝福名稱）
+- Opening Salvo - 開啟齊射（範圍：遠程祝福名稱；名稱待原版確認）
 - Headhunter - 獵頭者
 - Between the Eyes - 正中眉心
-- Blaze Away - 連續發射
-- Blaze Away - 連續發射（射擊連段）
+- Blaze Away - 連續發射（範圍：遠程祝福名稱；key loc_trait_bespoke_power_bonus_on_continuous_fire）
+- Blaze Away - 連續發射（範圍：遠程祝福名稱；射擊連段，key loc_trait_bespoke_power_bonus_on_continuous_fire_alternative）
 - Powderburn - 火藥灼傷
 - Cavalcade - 接連不斷
 - Pinning Fire - 鉗制射擊
@@ -547,7 +549,7 @@
 - Transfer Peril - 轉移反噬
 - Rending Shockwave - 撕扯震盪
 - Focused Channelling - 專注引導
-- Blazing Spirit - 燃燒靈魂（靈能法杖與雙手力場劍）
+- Blazing Spirit - 燃燒靈魂（範圍：遠程祝福名稱；靈能法杖，描述亦供雙手力場劍使用）
 - Penetrating Flame - 穿透火焰
 - Showstopper - 歎為觀止
 - Infernus - 煉獄
@@ -577,7 +579,7 @@
 - Optimised Cooling - 優化冷卻
 - Focused Cooling - 專注冷卻
 - Gauntlet Momentum - 交叉動量
-- Pulverise - 粉碎（Pulverise）
+- Pulverise - 粉碎（Pulverise）（範圍：遠程祝福名稱）
 - Disruptive - 顛覆性力量
 - Explosive Offensive - 爆炸使我強大
 - Pinpointing target - 精確定位
@@ -587,7 +589,7 @@
 - Born in Blood - 浴血而生
 - Pierce - 穿透
 - Punishing Fire - 懲罰射擊
-- Inspiring Barrage - 激勵彈幕
+- Inspiring Barrage - 激勵彈幕（範圍：遠程祝福名稱；Thumper 變體，key loc_trait_bespoke_toughness_on_continuous_fire_alternative）
 - Expansive - 擴展性
 - Shrapnel - 破片四濺
 - Blast Zone - 狂轟猛炸
@@ -603,17 +605,17 @@
 
 ### 珍品屬性 (CURIOS)
 
-- Damage vs Flak - 對防彈護甲的敵人傷害
-- Damage vs Maniacs - 對狂熱者傷害
-- Damage vs Infested - 對被感染的敵人傷害
-- Damage vs Unyielding - 對不屈的敵人傷害
-- Damage vs Carapace - 對甲殼護甲的敵人傷害
-- Damage vs Unarmoured - 對無護甲敵人傷害
+- Damage vs Flak - 對防彈護甲的敵人傷害（範圍：珍品屬性）
+- Damage vs Maniacs - 對狂熱者傷害（範圍：珍品屬性）
+- Damage vs Infested - 對被感染的敵人傷害（範圍：珍品屬性）
+- Damage vs Unyielding - 對不屈的敵人傷害（範圍：珍品屬性）
+- Damage vs Carapace - 對甲殼護甲的敵人傷害（範圍：珍品屬性）
+- Damage vs Unarmoured - 對無護甲敵人傷害（範圍：珍品屬性）
 - Crit chance - 暴擊機率
 - Crit damage - 暴擊傷害
-- Damage vs Groaners and Poxwalkers - 對呻吟者、瘟疫行者傷害
-- Damage vs Elites - 對精英傷害
-- Damage vs Specialists - 對專家傷害
+- Damage vs Groaners and Poxwalkers - 對呻吟者、瘟疫行者傷害（範圍：珍品屬性）
+- Damage vs Elites - 對精英傷害（範圍：珍品屬性）
+- Damage vs Specialists - 對專家傷害（範圍：珍品屬性）
 - Stamina - 耐力
 - Weakspot damage - 弱點傷害
 - Block Efficiency - 格擋效率
@@ -621,17 +623,17 @@
 
 ### 近戰武器屬性 - Melee Weapon
 
-- Damage vs Flak - 防彈護甲的敵人
-- Damage vs Maniacs - 狂熱者
-- Damage vs Infested - 被感染的敵人
-- Damage vs Unyielding - 不屈的敵人
-- Damage vs Carapace - 甲殼護甲的敵人
-- Damage vs Unarmoured - 無護甲敵人
+- Damage vs Flak - 防彈護甲的敵人（範圍：近戰武器屬性短標籤）
+- Damage vs Maniacs - 狂熱者（範圍：近戰武器屬性短標籤）
+- Damage vs Infested - 被感染的敵人（範圍：近戰武器屬性短標籤）
+- Damage vs Unyielding - 不屈的敵人（範圍：近戰武器屬性短標籤）
+- Damage vs Carapace - 甲殼護甲的敵人（範圍：近戰武器屬性短標籤）
+- Damage vs Unarmoured - 無護甲敵人（範圍：近戰武器屬性短標籤）
 - Crit chance - 暴擊機率
 - Crit damage - 暴擊傷害
-- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者
-- Damage vs Elites - 精英
-- Damage vs Specialists - 專家
+- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者（範圍：近戰武器屬性短標籤）
+- Damage vs Elites - 精英（範圍：近戰武器屬性短標籤）
+- Damage vs Specialists - 專家（範圍：近戰武器屬性短標籤）
 - Stamina - 耐力
 - Weakspot damage - 弱點傷害
 - Block Efficiency - 格擋效率
@@ -639,17 +641,17 @@
 
 ### 遠程武器屬性 - Ranged Weapon
 
-- Damage vs Flak - 防彈護甲的敵人
-- Damage vs Maniacs - 狂熱者
-- Damage vs Infested - 被感染的敵人
-- Damage vs Unyielding - 不屈的敵人
-- Damage vs Carapace - 甲殼護甲的敵人
-- Damage vs Unarmoured - 無護甲敵人
+- Damage vs Flak - 防彈護甲的敵人（範圍：遠程武器屬性短標籤）
+- Damage vs Maniacs - 狂熱者（範圍：遠程武器屬性短標籤）
+- Damage vs Infested - 被感染的敵人（範圍：遠程武器屬性短標籤）
+- Damage vs Unyielding - 不屈的敵人（範圍：遠程武器屬性短標籤）
+- Damage vs Carapace - 甲殼護甲的敵人（範圍：遠程武器屬性短標籤）
+- Damage vs Unarmoured - 無護甲敵人（範圍：遠程武器屬性短標籤）
 - Crit chance - 暴擊機率
 - Crit damage - 暴擊傷害
-- Damage vs Elites - 精英
-- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者
-- Damage vs Specialists - 專家
+- Damage vs Elites - 精英（範圍：遠程武器屬性短標籤）
+- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者（範圍：遠程武器屬性短標籤）
+- Damage vs Specialists - 專家（範圍：遠程武器屬性短標籤）
 - Stamina - 耐力
 - Weakspot damage - 弱點傷害
 - Reload Speed - 裝填速度
@@ -693,7 +695,7 @@
 - Telekine Dome - 念力穹頂
 - Sanctuary - 庇護所
 - Scrier's Gaze - 占卜者的注視
-- Precognition - 預知未來
+- Precognition - 預知未來（範圍：靈能者主動技能節點）
 - Warp Speed - 亞空間加速
 - Reality Anchor - 現實錨點
 - Warp Unbound - 亞空間突破
@@ -755,7 +757,7 @@
 - Focused Warp - 聚焦次元
 - Peril Equilibrium - 危險平衡
 - Psykinetic Grip - 念力之握
-- Perils of the Warp - 次元危險
+- Perils of the Warp - 次元危險（範圍：靈能者天賦名稱）
 
 ##### 一般天賦(過時)
 
@@ -793,7 +795,7 @@
 - Indomitable - 不屈不撓
 - Trample - 踐踏
 - Stomping Boots - 跺殺之靴
-- Pulverise - 粉碎
+- Pulverise - 粉碎（範圍：歐格林主動技能節點）
 - Loyal Protector - 忠誠守護者
 - Valuable Distraction - 重要干擾
 - No Pain! - 一點都不痛！
@@ -883,7 +885,7 @@
 
 - Holy Relic - 聖物
 - Fury Faithful - 有信者之怒
-- Momentum - 勢能
+- Momentum - 勢能（範圍：狂信徒疊層效果）
 - Stealth - 隱身
 - Fury - 狂怒
 
@@ -927,7 +929,7 @@
 - Martyrdom - 殉道
 - I Shall Not Fall - 不滅意志
 - On the Brink - 危境之際
-- Maniac - 狂躁之心
+- Maniac - 狂躁之心（範圍：狂信徒天賦名稱）
 - Restorative Verses - 治癒詩頌
 - Martyr's Purpose - 殉道者之願
 - Inexorable Judgement - 命定審判
@@ -975,13 +977,13 @@
 - Hubris - 傲慢
 - Blinded by Blood - 血色迷障
 - Prime Target - 頭號目標
-- No Respite - 不留餘地
+- No Respite - 不留餘地（範圍：狂信徒天賦名稱）
 - Unfaltering - 不屈之志
 - Faith's Fortitude - 信仰之勇
 - Restoring Faith - 恢復信仰
 - Behind the Lines - 敵後行動
 - Relentless Fervor - 狂熱不懈
-- Riposte - 靈活還擊
+- Riposte - 靈活還擊（範圍：狂信徒天賦名稱；名稱待原版確認）
 - Wait in Line - 排隊等候
 - Holy Tools - 神聖工具
 - Got Your Back - 為您撐腰
@@ -1066,7 +1068,7 @@
 - Trench Fighter Drill - 戰壕兵訓練
 - Field Improvisation - 臨場發揮
 - Withering Fire - 凋零烈焰
-- Opening Salvo - 首輪齊射
+- Opening Salvo - 首輪齊射（範圍：老兵天賦名稱；名稱待原版確認）
 - Covert Operative - 秘密特工
 - Serrated Blade - 鋸齒刀刃
 - Catch a Breath - 喘息片刻
@@ -1483,8 +1485,8 @@
 
 ##### 敵人 / 單位
 
-- Dreg Vanguard - 渣滓先鋒
-- Scab Vanguard - 血痂先鋒
+- Dreg Vanguard - 渣滓先鋒（範圍：敵人名稱；護教軍詞彙）
+- Scab Vanguard - 血痂先鋒（範圍：敵人名稱；護教軍詞彙）
 - Monster - 巨獸
 - Captain 連長
 - Horde/Roamer - 群怪/遊蕩
