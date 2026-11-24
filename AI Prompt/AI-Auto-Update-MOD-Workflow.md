@@ -1,5 +1,22 @@
 # AI Auto Update：DARKTIDE MOD 自主更新流程
 
+> **權威來源與適用範圍（先讀）**
+>
+> - 新的自動更新 run，以及 `schema_version` 不是 `3` 的續跑，一律使用已安裝的 `auto-update-darktide-mod` Skill（Schema 14／15，來源為 `Skill-Darktide-Translate`）。本文件是 Schema 3 的原始流程，只用於 `schema_version: 3` 的既有 run，以及理解規則由來。
+> - 讀到的 `state.json` 若 `schema_version` 不是 `3`、缺少該欄位，或 `status` 不在第 4.2 節列表內：只讀並回報，不得依本文件改寫、升級、判為失敗或重建 state。
+> - 使用者只要求手動補版本資訊並開 PR 時，改用 [AI-MOD-Info-And-PR-Workflow.md](AI-MOD-Info-And-PR-Workflow.md)。
+
+## 0. 硬性禁止
+
+不論流程進行到哪一步，都不得：
+
+- `git push --force`／`--force-with-lease`、`git reset --hard`、`git clean`、`git stash`、`git rebase`，或 amend 已推送的提交。
+- `git add .`／`git add -A`；只 stage 第 13 節列出的精確路徑。
+- `gh pr merge`、啟用 auto-merge、修改 branch protection 或 Repository 設定。最終合併一律由使用者執行。
+- 自行修改 `git config`（含 user.name／user.email）。
+- 刪除第 15 節與第 17.2 節明文允許以外的 branch、worktree 或目錄；`AI Auto Update/` 下的 `Abandoned`、`Failed`、`Reports`、`Review Baselines`、`backup-*` 等既有目錄一律唯讀。
+- 在 commit、PR、Review 回覆或 Issue 中寫入本機絕對路徑、email、憑證，或 @mention 任何人。
+
 ## 1. 目標
 
 從 `AI Auto Update` 取得 MOD 壓縮檔，自主完成：
@@ -7,10 +24,10 @@
 ```text
 盤點來源檔
 → 即時網站核對
-→ 建立獨立 worktree 與 Update/<MOD-slug> 分支
-→ 比對正式 hash 與 README metadata
+→ 比對 origin/main 的正式 hash 與 README metadata
   ├─ 已是最新 → 歸檔來源並清理，以無更新結果結束
-  └─ 需要更新 → 解壓縮與檢查新版
+  └─ 需要更新 → 建立獨立 worktree 與 Update/<MOD-slug> 分支
+     → 解壓縮與檢查新版
      → 只合併 zh-tw
      → 刪除舊 MOD 後完整安裝新版
      → 驗證、Commit 與 Push
@@ -35,7 +52,7 @@
 4. MOD 採乾淨安裝：完整移除舊目錄後，只放入新版待安裝樹與完成合併的 loc。
 5. 每個 PR 只包含一個 MOD、README 對應區段與該 MOD 的正式 `.hash`。
 6. PR 以非 Draft 建立並停在可合併狀態，由使用者執行最終合併。
-7. Review 建議先與 `Referneces/Translation.md`、原文實際使用情境及本流程維護範圍交叉查證；採用有依據的建議，其他建議則回覆判定依據並保留經查證的內容。
+7. Review 建議先與 `Referneces/Translation.md`、原文實際使用情境及本流程維護範圍交叉查證；採用有依據且屬於本次 target set 的建議。來源未變的 Key 依第 10.3 節保留，不因 Review 修改；其他不採用的建議回覆判定依據並保留經查證的內容。
 
 ### 2.1 單一 MOD 執行摘要
 
@@ -108,7 +125,7 @@ linked worktree 固定建立在上述 repository 外部目錄。需要額外檔�
 Update/<MOD-slug>
 ```
 
-slug 以精確 MOD directory 為來源：將空白與 Git ref／Windows path 的保留字元正規化為 `-`、合併連續 `-`、移除開頭/結尾的點與橫線。若結果為空，或與既有 state/branch/worktree slug 在 ordinal ignore-case 下重複，加入 `-<Nexus-ID>` 形成唯一值。slug 寫入 state 後全流程固定使用，並以指令驗證 branch：
+slug 先沿用既有正式 hash：`.hash/` 中已有檔案的 `nexus_id` 等於本 MOD 的 Nexus ID，或 `repo_directory` 等於精確 MOD directory 時，以該檔名（不含 `.hash`）作為 slug，不另建新檔。找到多個相符檔案時停止並回報。沒有既有檔時，才以精確 MOD directory 產生：將空白與 Git ref／Windows path 的保留字元正規化為 `-`、合併連續 `-`、移除開頭/結尾的點與橫線。若結果為空，或與既有 state/branch/worktree slug 在 ordinal ignore-case 下重複，加入 `-<Nexus-ID>` 形成唯一值。slug 寫入 state 後全流程固定使用，並以指令驗證 branch：
 
 ```text
 git check-ref-format --branch Update/<MOD-slug>
@@ -794,7 +811,7 @@ git -C "<worktree>" add -- README.md "Warhammer 40,000 DARKTIDE/mods/<MOD目錄>
 
 stage 操作只使用上述三個精確路徑，並從對應 worktree 執行。
 
-stage 前核對 repository Git 身份：`git config user.name` 等於 `SyuanTsai`，`git config user.email` 等於 `carsun00@gmail.com`；不一致時先在此 repository scope 修正，再建立本輪 commit。
+stage 前以 `git var GIT_AUTHOR_IDENT` 與 `git var GIT_COMMITTER_IDENT` 核對 Git 身分與該 Repository 既有提交一致；不一致時停止並回報使用者，不自行修改 `git config`。
 
 commit 前：
 
@@ -961,7 +978,7 @@ pullRequest {
    - 將 `install-manifest.candidate.txt` 與 `install-manifest.previous.txt` 比較；除了 localization 檔的 size/SHA-256 外，所有非 loc 相對路徑、大小與 SHA-256 必須完全相同。比較通過後才原子取代 `install-manifest.txt`。這項規則讓第 11 節刪除 staging 後仍能可靠驗證 Review 修正只影響 loc。
    - 重新核對 worktree 內完整 MOD 樹與新 manifest 完全一致。
    - 重跑第 12 節，並執行第 13 節的精確 stage、Codex Review、validation report、commit、push 與遠端 OID 驗證；沿用既有 PR。
-5. 對已處理或不採用的 thread 留下可追蹤理由，再解決該 thread。
+5. 對已處理或不採用的 thread 留下可追蹤理由，再解決該 thread。不採用的建議另彙整到 PR 內文的「未採用的 Review 建議」區段（thread 連結＋一句理由），讓使用者合併前不必展開已解決的 thread 也能看到。
 6. 比較處理前後 HEAD：
    - HEAD 已改變：commit 後立即更新 `head_oid`，push 並確認遠端 OID，再對新 HEAD 重新送出 Balanced Review；舊 Review 保留為歷史意見，新完成 Gate 使用新 HEAD 的 Review 證據。
    - HEAD 維持相同：完成 feedback 分類、必要回覆與 thread resolution 後，沿用同一 HEAD 已完成的 Balanced Review，直接執行第 14.4 節 Gate。
