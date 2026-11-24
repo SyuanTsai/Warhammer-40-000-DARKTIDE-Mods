@@ -109,7 +109,6 @@
 - Electrocuted - 電擊
 - Brittleness - 脆弱
 - Stun - 眩暈
-- Soulblaze -  靈能之火
 
 ### 難度 (DIFFICULTY)
 
