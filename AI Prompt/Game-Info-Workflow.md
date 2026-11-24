@@ -53,7 +53,8 @@
 
 ### 文件類流程共通事項
 
-- 本目錄流程屬文件與知識整理，不是 production code 實作計畫：不執行 instructions bootstrap，不新增只重述內容的測試，不修改 MOD Lua 或遊戲程式。`scripts/` 下的工具程式修改不在此限，依 Repository 規則處理。
+- 適用範圍：技能、技能網站、祝福、對話與公告翻譯等文件與知識整理流程。MOD 更新類流程（例如 [自動更新流程](AI-Auto-Update-MOD-Workflow.md)）依其本身規則修改與安裝 MOD Lua，不受本小節的 Lua 限制。
+- 文件與知識整理不是 production code 實作計畫：不執行 instructions bootstrap，不新增只重述內容的測試，不修改 MOD Lua 或遊戲程式。`scripts/` 下的工具程式修改不在此限，依 Repository 規則處理。
 - 驗證指令以 [共用工具 README](../scripts/game-info/README.md) 為準，流程內不另行寫死指令清單。
 
 ### 公開重製邊界（需使用者決定）
