@@ -48,12 +48,6 @@
 
 ---
 
-## W17 來源保留與退役準備
-
-W17 目前只完成唯讀去向核對，沒有刪除、移動或清理本 Repository 的任何來源。退役準備報告中的候選數量不是刪除授權；在 W16 使用者驗收完成前，原始 Mods 路徑仍須保留。請先查看 [W17 退役準備索引](https://github.com/SyuanTsai/DarkTide-Web/blob/main/docs/contracts/w17/README.md) 中的逐路徑報告摘要、混合 selector 與保留理由，再依既有 owner 流程處理。
-
-W17 前置檢查使用固定 W03/W14/W15 證據，並保留 K01/K02 與仍含 Mods selector 的來源檔。這不改變本 README 的授權、歷史維護紀錄或現有 MOD 內容。
-
 ## AUPM 私人修正（非官方）
 
 本 Repository 收錄的 [AUPM](Warhammer%2040%2C000%20DARKTIDE/mods/AUPM/) 包含針對 Darktide 1.13.0／1.13.1 的私人相容性修正。此修正為本 Repository 私人維護的非官方版本，並非遊戲官方或 AUPM 原作者發布的更新。
