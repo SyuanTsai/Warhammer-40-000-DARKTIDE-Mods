@@ -1,3 +1,5 @@
+# Warhammer-40-000-DARKTIDE-Mods
+
 > Rights boundary: this repository is a collection of independently sourced
 > mods, translations, tools, archives, and references. No repository-wide
 > license is granted. Each item keeps its original license and attribution
@@ -8,13 +10,49 @@
 > item.
 >
 
+## Overview
+
+**What it is:** A curated collection of mods, Traditional Chinese (Taiwan) translations, tools, archives, and references for Warhammer 40,000 DARKTIDE.
+
+**Problem it solves:** It gives players one place to find the mods they need to get started and mods with Traditional Chinese (Taiwan) localization.
+
+**Key features**
+
+| Feature | What you’ll find |
+| --- | --- |
+| Mod catalog | Mods grouped by what they change, with links to their Nexus Mods pages. |
+| Traditional Chinese (Taiwan) localization | Translations for selected mods. |
+| Compatibility fixes | Privately maintained, unofficial fixes for AUPM and DPM, independent of the game developer and the original mod authors. |
+
+**Quick start:** Open the [essential mods section](#基本必須安裝) and follow its Nexus Mods links for [Darktide Mod Loader](https://www.nexusmods.com/warhammer40kdarktide/mods/19?tab=description) and [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8).
+
+**Licensing and attribution:** Each item retains its original license and attribution requirements. The collection has no repository-wide license. See [LICENSE-SCOPE.md](LICENSE-SCOPE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## 概覽
+
+**這是什麼：** 精選的 Warhammer 40,000 DARKTIDE 模組、臺灣繁體中文翻譯、工具、封存檔與參考資料。
+
+**解決的問題：** 玩家可以在同一處找到入門所需的模組，以及支援臺灣繁體中文的模組。
+
+**主要特色**
+
+| 特色 | 內容 |
+| --- | --- |
+| 模組目錄 | 依模組修改的內容分類，並附上 Nexus Mods 頁面連結。 |
+| 臺灣繁體中文在地化 | 提供部分模組的翻譯。 |
+| 相容性修正 | 收錄 AUPM 與 DPM 的非官方修正，由私人維護，獨立於遊戲開發商及模組原作者。 |
+
+**快速開始：** 先查看[基本必須安裝](#基本必須安裝)，再透過該區段的 Nexus Mods 連結開啟 [Darktide Mod Loader](https://www.nexusmods.com/warhammer40kdarktide/mods/19?tab=description) 與 [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8) 的頁面。
+
+**授權與來源標示：** 各項內容保留原有授權及來源標示要求。整個儲存庫沒有統一授權。請參閱 [LICENSE-SCOPE.md](LICENSE-SCOPE.md) 與 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+---
+
 ## W17 來源保留與退役準備
 
 W17 目前只完成唯讀去向核對，沒有刪除、移動或清理本 Repository 的任何來源。退役準備報告中的候選數量不是刪除授權；在 W16 使用者驗收完成前，原始 Mods 路徑仍須保留。請先查看 [W17 退役準備索引](https://github.com/SyuanTsai/DarkTide-Web/blob/main/docs/contracts/w17/README.md) 中的逐路徑報告摘要、混合 selector 與保留理由，再依既有 owner 流程處理。
 
 W17 前置檢查使用固定 W03/W14/W15 證據，並保留 K01/K02 與仍含 Mods selector 的來源檔。這不改變本 README 的授權、歷史維護紀錄或現有 MOD 內容。
-
-# Warhammer-40-000-DARKTIDE-Mods
 
 ## AUPM 私人修正（非官方）
 
