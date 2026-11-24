@@ -1081,7 +1081,7 @@ pullRequest {
 
 ## 19. 防回歸 Gate
 
-每個 MOD 留下下列四個 gate 的可核對結果。Gate 分屬不同階段：Gate A、B 是安裝的前置條件；Gate C 的本機項目（安裝樹、cached paths、`cached_tree_oid`、`validated_oid` 等於本機 HEAD、`diff --check` 與結構驗證、工作區快照）是 push 的前置條件，遠端項目（`validated_oid` 等於遠端 HEAD、push 後遠端與本機 HEAD 一致）在 push 後立即核對；Gate C 全部通過後才可進入 Gate D，Gate D 是進入 `awaiting-user-merge` 的前置條件。尚未通過的 MOD 保留現況供續跑，其他 MOD 照常進行：
+每個 MOD 留下下列四個 gate 的可核對結果；四個 gate 全部通過時進入下一階段，尚未通過的 MOD 保留現況供續跑，其他 MOD 照常進行：
 
 ### Gate A：來源與路徑
 
