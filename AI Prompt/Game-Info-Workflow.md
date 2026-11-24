@@ -7,7 +7,7 @@
 | 內容 | 專用提示詞 | 負責範圍 | 正文位置 |
 |---|---|---|---|
 | SKILL／遊戲技能與天賦 | [Skill-Info-Workflow.md](Skill-Info-Workflow.md) | 原始碼機制分析、數值與公式、玩家說明、逐技能來源、版本更新 | DarkTide-Source-Data（SPEC v1） |
-| SKILL PAGES／技能網站展示 | [Skill-Pages-Workflow.md](Skill-Pages-Workflow.md) | 保留 Git 技能知識、逐技能網站頁、職業導覽、深色範本與預覽 | Pages Repository 的 `darktide/skills/` |
+| SKILL PAGES／技能網站展示 | [Skill-Pages-Workflow.md](Skill-Pages-Workflow.md) | 保留 Git 技能知識、逐技能網站頁、職業導覽、深色範本與預覽 | 已退役（SYP-292／SYP-551） |
 | DIALOGUE／劇情對話 | [Dialogue-Text-Workflow.md](Dialogue-Text-Workflow.md) | 官方事件與字幕配對、角色頭像、中英聊天頁、事件順序、網站導覽 | 已退役（SYP-404） |
 | BLESSINGS／武器祝福 | [Blessings-Workflow.md](Blessings-Workflow.md) | 祝福機制分析、完整玩家說明、多武器變體與雙向索引 | DarkTide-Source-Data（SPEC v1） |
 
