@@ -649,7 +649,7 @@
 
 #### 靈能者專有名詞
 
-- Peril - 靈能反噬、反噬
+- Peril - 反噬
 - Damage wrap - 亞空間傷害
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
