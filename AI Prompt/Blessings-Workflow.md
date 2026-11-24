@@ -3,7 +3,7 @@
 - 參考[Game-Info-Workflow](Game-Info-Workflow.md)，針對武器祝福建立獨立流程。
 - 複製下方提示詞並填寫執行參數，可用於指定祝福、既有文件修訂、分批續作或版本更新。
 
-> 狀態更新（2026-11-11，SYP-404）：祝福等遊戲資料與說明，現由 DarkTide-Source-Data 的固定流程（SPEC v1，Jira SYP-382）產出，入口為該 repo 的 `docs/pipeline/START.md`；Mods repo 不再保存遊戲資料。原 `Game Info/releases/1.13.X/blessings/` 已自 main 移除，舊內容見[固定 commit](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/tree/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X/blessings)。本提示詞保留作舊流程參考。
+> 狀態更新（2026-11-11，SYP-404）：祝福等遊戲資料與說明，現由 DarkTide-Source-Data 的固定流程（SPEC v1，Jira SYP-382）產出，入口為該 repo 的 `docs/pipeline/START.md`；Mods repo 不再保存遊戲資料。原 `Game Info/releases/1.13.X/blessings/` 已自 main 移除，說明已發布於網站 https://darktide.tw-syuan.com/。本提示詞保留作舊流程參考。
 
 ---
 

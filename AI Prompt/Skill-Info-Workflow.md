@@ -4,7 +4,7 @@
 
 [返回 Game Info 流程入口](Game-Info-Workflow.md)
 
-> 狀態更新（2026-11-11，SYP-404）：技能、祝福、武器的遊戲資料與說明，現由 DarkTide-Source-Data 的固定流程（SPEC v1，Jira SYP-382）產出，入口為該 repo 的 `docs/pipeline/START.md`；Mods repo 不再保存遊戲資料。原 `Game Info/releases/1.13.X/` 已自 main 移除，舊內容見[固定 commit](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/tree/bbb4a7e4bb3efed45a6c70499fa1d4f57b7bf9a3/Game%20Info/releases/1.13.X)。本提示詞保留作舊流程參考。
+> 狀態更新（2026-11-11，SYP-404）：技能、祝福、武器的遊戲資料與說明，現由 DarkTide-Source-Data 的固定流程（SPEC v1，Jira SYP-382）產出，入口為該 repo 的 `docs/pipeline/START.md`；Mods repo 不再保存遊戲資料。原 `Game Info/releases/1.13.X/` 已自 main 移除，說明已發布於網站 https://darktide.tw-syuan.com/。本提示詞保留作舊流程參考。
 
 將已有技能展示於 Pages 時，另使用 [Skill-Pages-Workflow.md](Skill-Pages-Workflow.md)；保留本流程的 Git 玩家主文與來源文件，網站在獨立分支與工作樹維護。
 
