@@ -299,14 +299,14 @@
 - Blaze Force Greatsword - 烈焰力場巨劍
 - Blaze Force Sword - 烈焰力場劍
 - Bone Saw - 骨鋸
-- Bully Club - 惡棍棒（遊戲繁中：惡霸棍棒）
+- Bully Club - 惡霸棍棒
 - Cleaver - 砍刀
 - Combat Axe - 戰鬥斧
 - Combat Blade - 戰刃
 - Crowbar - 撬棍
 - Cruncher - 碎骨者
 - Crusher - 碾壓者
-- Delver's Pickaxe - 十字鎬（遊戲繁中：戴維爾戰鎬）
+- Delver's Pickaxe - 戴維爾戰鎬
 - Duelling Sword - 決鬥劍
 - Heavy Eviscerator - 重型開膛劍
 - Heavy Sword - 重劍
@@ -361,12 +361,12 @@
 - Exterminator Shotgun - 滅絕者霰彈槍
 - Galvanic Rifle - 電能步槍
 - Grenadier Gauntlet - 擲彈兵臂鎧
-- Heavy Laspistol - 重型雷射手槍（遊戲繁中：重型鐳射手槍）
+- Heavy Laspistol - 重型鐳射手槍
 - Heavy Stubber - 重伐木槍（與 Twin-Linked Heavy Stubber 的雙鏈種類區分）
-- Helbore Lasgun - 冥潮雷射槍（遊戲繁中：冥潮鐳射槍）
+- Helbore Lasgun - 冥潮鐳射槍
 - Huntsman's Shotgun - 獵人霰彈槍
 - Infantry Autogun - 步兵自動槍
-- Infantry Lasgun - 步兵雷射槍（遊戲繁中：步兵鐳射槍）
+- Infantry Lasgun - 步兵鐳射槍
 - Inferno Force Staff - 烈焰力場法杖
 - Kickback - 反衝者
 - Needle Pistol - 針彈手槍
@@ -374,7 +374,7 @@
 - Plasma Gun - 電漿槍
 - Purgation Flamer - 淨化噴火器
 - Quickdraw Stub Revolver - 快拔左輪手槍
-- Recon Lasgun - 偵查雷射槍（遊戲繁中：偵察鐳射槍）
+- Recon Lasgun - 偵察鐳射槍
 - Ripper Gun - 撕裂槍
 - Rumbler - 震盪槍
 - Shredder Autopistol - 撕裂者自動手槍
@@ -581,7 +581,7 @@
 - Expansive - 擴展性
 - Shrapnel - 破片四濺
 - Blast Zone - 狂轟猛炸
-- Adhesive Charge - 黏著炸藥
+- Adhesive Charge - 粘性炸藥
 - Marksman's Reflex - 迅雷反射
 - Telescopic Sight - 千里眼
 - Bug Out - 開溜
@@ -683,7 +683,7 @@
 ##### 主動技能
 
 - Psykinetic's Wrath - 靈能學者之怒
-- Venting Shriek - 靈能尖嘯
+- Venting Shriek - 刺耳尖嘯
 - Warp Rupture - 亞空間爆發
 - Becalming Eruption - 平靜迸發
 - Creeping Flames - 蔓延火焰
@@ -751,7 +751,7 @@
 - Penetration of the Soul - 靈魂穿透
 - Crystalline Will - 結晶意志
 - Warp Ghost - 亞空間幽魂
-- Surety of Arms - 武器在手，信心我有。
+- Surety of Arms - 武器在手，信心我有
 - Focused Warp - 聚焦次元
 - Peril Equilibrium - 危險平衡
 - Psykinetic Grip - 念力之握
@@ -783,7 +783,7 @@
 ##### 光環
 
 - Intimidating Presence - 威嚇氣場
-- Bonebreaker's Aura - 破骨者之環
+- Bonebreaker's Aura - 碎骨者之環
 - Stay Close! - 跟緊我！
 - Coward Culling - 優勝劣汰
 
@@ -797,7 +797,7 @@
 - Loyal Protector - 忠誠守護者
 - Valuable Distraction - 重要干擾
 - No Pain! - 一點都不痛！
-- Go again! - 再來
+- Go again! - 再來！
 - Point-Blank Barrage - 貼身火力
 - Bullet Bravado - 壯膽子彈
 - Hail of Fire - 槍林彈雨
@@ -826,7 +826,7 @@
 
 - Lynchpin - 關鍵人物
 - Heavyweight - 重量級
-- Steady Grip - 穩定握持
+- Steady Grip - 穩固握持
 - Smash 'Em! - 碾碎它們！
 - The Best Defence - 最好的防禦
 - Furious - 怒不可遏
@@ -836,12 +836,12 @@
 - Pumped Up - 士氣高昂
 - Focused Fighter - 專注鬥士
 - Strongman - 大肌肌
-- Can't Hit Me...Again - 休想再打中我......
+- Can't Hit Me...Again - 休想再打中我……
 - Keep Shooting - 射不停
 - Beat Them Back - 擊潰他們
 - Strike True - 精準打擊
 - Slam - 猛擊
-- Ammo Stash - 彈藥儲存包
+- Ammo Stash - 彈藥存儲包
 - Big Boom - 大爆炸
 - Crunch! - 嘎嘎！
 - Batter - 重毆
@@ -931,7 +931,7 @@
 - Restorative Verses - 治癒詩頌
 - Martyr's Purpose - 殉道者之願
 - Inexorable Judgement - 命定審判
-- Retributor's Stance - 懲戒者姿態
+- Retributor's Stance - 懲罰者姿態
 - Inebriate's Poise - 飄忽身形
 - Eternal - 永恆
 - Pious Cut-Throat - 虔誠刺客
@@ -947,7 +947,7 @@
 - The Voice of Terra - 泰拉之音
 - Enemies Within, Enemies Without - 內憂外患
 - Blood Redemption - 鮮血救贖（1.13 改為職業內建被動）
-- Second Wind - 精力復甦
+- Second Wind - 精力復蘇
 - Vicious Offering - 惡毒贈禮
 - Purge the Unclean - 淨化不潔
 - Duellist - 決鬥者
@@ -1027,8 +1027,8 @@
 - The Bigger they Are... - 敵人越大...
 - Marksman - 鷹眼
 - Voice of Command - 發號施令
-- Duty and Honour - 責任與榮譽
-- Only In Death Does Duty End - 只有死亡，職責才會終結
+- Duty and Honour - 責任與榮耀
+- Only In Death Does Duty End - 只有在死亡時，職責才會終結
 - Infiltrate - 滲透
 - Overwatch - 掩護射擊
 - Hunter's Resolve - 獵手決意
@@ -1041,7 +1041,7 @@
 - Chink in their Armour - 滲透盔甲
 - Tunnel Vision - 視野狹窄
 - Long Range Assassin - 遠程刺客
-- Focus Target! - 鎖定目標
+- Focus Target! - 鎖定目標！
 - Target Down! - 目標擊倒！
 - Redirect Fire! - 轉移火力！
 - Focused Fire - 集中火力
@@ -1053,7 +1053,7 @@
 ##### 一般天賦
 
 - Exhilarating Takedown - 振奮擊倒
-- Confirmed Kill - 擊殺紀錄
+- Confirmed Kill - 擊殺記錄
 - Out for Blood - 嗜血
 - Volley Adept - 齊射能手
 - Longshot - 遠射
@@ -1166,7 +1166,7 @@
 - Up Close - 近在眉睫
 - Force of Will - 鐵血之志
 - Retaliatory Force -  還治其人之身
-- Man and Cyber-Mastiff - 電子獒犬與人(機械戰犬與人)
+- Man and Cyber-Mastiff - 機械戰犬與人
 - Walk It Off - 走一走治百病
 - Shield Plates - 盾型裝甲
 - Arbitrator Armour - 法務官之鎧
@@ -1206,19 +1206,19 @@
 - Cleave Boost - 順劈加成
 - Impact Boost - 衝擊加成
 
-### Hive Scum - 巢都渣滓
+### Hive Scum - 巢都敗類
 
-#### 巢都渣滓專有名詞
+#### 巢都敗類專有名詞
 
-- Hive Scum - 巢都渣滓
+- Hive Scum - 巢都敗類
 - Stimm Field - 化學性依賴
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
-- Stimm Supply - 化學性依賴
+- Stimm Supply - 興奮劑補給
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
 - Broker - 代理
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
 
-#### 巢都渣滓天賦
+#### 巢都敗類天賦
 
 ##### 閃擊
 
@@ -1245,7 +1245,7 @@
 - Boiling Blood - 沸騰之血
 - Forge's Bellow - 熔爐怒吼
 - Pulverising Strikes - 碎骨打擊
-- Stimm Supply - 化學性依賴
+- Stimm Supply - 興奮劑補給
 - Practiced Deployment - 熟練部署
 - Booby Trap - 毒性陷阱
 - Fast Acting Stimms - 速效型興奮劑
@@ -1264,7 +1264,7 @@
 - Stoked Rage - 振奮怒火
 - Adrenaline Unbound - 腎上腺素突破
 - Uncontrolled Aggression - 失控攻擊
-- Chemical Dependency - 化學性依賴
+- Chemical Dependency - 化學依賴性
 - Chem Enhanced - 化學強化
 - Chem Fortified - 化學增強
 - Maxed Out Chems - 化學藥劑全開
@@ -1282,7 +1282,7 @@
 - Speedloader - 快速裝填
 - Float Like a Butterfly - 翩翩蝶舞
 - Regained Posture - 恢復姿態
-- Tis but a Scratch - 沒甚麼，只是擦傷
+- Tis but a Scratch - 沒什麼，只是擦傷
 - Slippery Customer - 奧客
 - Ramping Backstabs - 加重背刺
 - Sample Collector - 樣本採集
@@ -1365,7 +1365,7 @@
 ##### 閃擊
 
 - Servo-Skull - 伺服頭骨
-- Artificer Servo-Skull - 匠師伺服頭骨
+- Artificer Servo-Skull - 匠師級伺服顱骨
 - Medicae Servo-Skull - 醫療伺服頭骨
 - Purgator Servo-Skull - 滌罪伺服頭骨
 - Noospheric Command - 心智網指令
@@ -1387,7 +1387,7 @@
 
 - Voltaic Expander - 電能擴張器
 - Voltaic Emitter - 電能發射器
-- Voltaic Overcharge - 電流超載
+- Voltaic Overcharge - 電流過載
 - Voltaic Motivator - 電能驅動
 - Voltaic Arcs - 電流弧
 - Chordclaw Strike - 弦爪重擊
@@ -1395,7 +1395,7 @@
 - Axial Slash - 軸向斬擊
 - Probing Strikes - 試探連擊
 - Slice and Dice - 千刀萬剮
-- Advanced Combat Doctrines - 進階戰鬥教範
+- Advanced Combat Doctrines - 進階戰鬥教條
 - Restoration Protocol - 修復協定
 - Writ of Ammunition Enumeration - 彈藥盤點之旨
 - Calculated Priority - 精算順序
@@ -1412,10 +1412,10 @@
 - Resource Optimisation Canticles - 資源最佳化聖歌
 - Capacitory Limit Override - 電容極限覆寫
 - Surge-Extension - 脈衝延伸
-- Power Overload - 能量超載
-- Critical Power Overload - 爆擊能量過載
+- Power Overload - 能量過載
+- Critical Power Overload - 暴擊能量過載
 - Invigorating Overload - 振奮過載
-- Static Capacitor Drain - 靜電電容消耗
+- Static Capacitor Drain - 靜態電容消耗
 - Powerdrive - 動力驅動
 - Flensing Protocols - 削切協議
 - Servo-Sinew Surge - 伺服肌腱湧動
@@ -1425,7 +1425,7 @@
 
 ##### 一般天賦
 
-- Overcharge Transfer Lattice - 過載轉移晶格
+- Overcharge Transfer Lattice - 過載轉移網格
 - Retribution Conduit - 報應導管
 - Kinetic Energy Distributors - 動能分配器（舊英文拼寫：Kinetic Energy Distribution；沿用既有繁中對應）
 - System Shock - 系統電擊
@@ -1436,11 +1436,11 @@
 - Shockline Breach Protocol - 電擊破壞協定
 - Galvanized Coating - 鍍鋅精密塗層
 - Electro-Strike Conduit - 電擊打擊導管
-- Data Sensor Protocol - 數據感應協定
-- Salvation Doctrine - 救贖教範
+- Data Sensor Protocol - 數據感應協議
+- Salvation Doctrine - 救贖教義
 - Precision Combat Augurs - 精準戰鬥探測儀
 - Hybrid Combat Covenant - 混合戰鬥契約
-- Auto-Repair Doctrines - 自我修復教義
+- Auto-Repair Doctrines - 自動修復教義
 - Power Overflow - 能量溢流
 - Sequenced Charge - 序列充能
 - Target Prioritization Psalms - 標記優先聖詩
@@ -1464,7 +1464,7 @@
 - Protectorate Protocol - 守護協議
 - Gunsmith - 槍械技師
 - Ammunition-Restoration Pod - 彈藥補給艙
-- Adaptive Combat Calibration - 適應性戰鬥校準
+- Adaptive Combat Calibration - 適應型戰鬥校準
 - Progressive Plating Matrix - 漸進裝甲矩陣
 - Sureshot Cogitator Sync - 精準思算機同步
 - Ablative Motion Routines - 離格動作例程
@@ -1473,7 +1473,7 @@
 - Force Distribution Actuators - 力量分配致動器
 - Sustained Assault Doctrine - 持續攻擊教義
 - Slaughter Protocol - 屠殺協議
-- Adaptive Combat Engram - 適應性戰鬥記憶體
+- Adaptive Combat Engram - 適應戰鬥記憶體
 - Hydraulic Impact - 液壓衝擊
 - Motive Engine - 動力引擎
 
