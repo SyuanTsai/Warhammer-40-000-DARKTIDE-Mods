@@ -109,7 +109,6 @@
 - Electrocuted - 電擊
 - Brittleness - 脆弱
 - Stun - 眩暈
-- Soulblaze -  靈能之火
 
 ### 難度 (DIFFICULTY)
 
@@ -128,6 +127,17 @@
 - Weapon Perks - 武器專長
 - Auspex - 占卜儀
 - Aura - 光環
+
+## 機制
+
+- Perils of the Warp - 亞空間反噬
+- Peril - 反噬
+- Damage warp - 亞空間傷害
+- Warp attack - 亞空間攻擊
+- Soulblaze - 靈魂之火
+- Warp Charge - 亞空間充能
+- Warp Resistance - 反噬抗性
+- Precision - 精準
 
 ## 遊戲內容與任務詞
 
@@ -647,16 +657,6 @@
 ## 職業與天賦
 
 ### Psyker - 靈能者
-
-#### 靈能者專有名詞
-
-- Peril - 靈能反噬、反噬
-- Damage wrap - 亞空間傷害
-- Warp attack - 亞空間攻擊
-- Soulblaze - 靈魂之火
-- Warp Charge - 亞空間充能
-- Warp Resistance - 反噬抗性
-- Precision - 精準
 
 #### 靈能者天賦
 
