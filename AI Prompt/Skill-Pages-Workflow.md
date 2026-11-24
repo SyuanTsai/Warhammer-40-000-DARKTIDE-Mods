@@ -4,6 +4,8 @@
 
 [返回 Game Info 流程入口](Game-Info-Workflow.md)
 
+> 狀態更新（2026-11-25，SYP-292／SYP-551）：本流程已退役；Pages 舊技能頁已於 SYP-292 改為跳轉，產生器 `render_skill_pages.mjs` 已於 SYP-551 移除。本文件只保留作舊流程參考，不再產生或發布技能頁。
+
 ---
 
 請保留 Mods Repository 既有技能 Markdown，依已確認的玩家說明與逐技能來源文件，在 Pages Repository 建立 Darktide 技能頁。先完成本次指定的範本或技能範圍，實際預覽後回報。
@@ -77,7 +79,7 @@ assets/css/
 
 完整網站沿用「左側可展開階層目錄、右側目前頁內容」。目錄依技能與天賦 → 職業 → 分類 → 技能展開，保留目前位置與選中項目；只輸出目前分類的鄰近技能，其他分類及大型分支連到自己的完整目錄，不在每頁重複646個技能或所有正文。桌面側欄250px，手機預設收合為「瀏覽目錄」，390px與320px不得整頁橫向溢出。使用原生details/summary與連結，停用JavaScript仍可閱讀、展開及往返。
 
-共用閱讀外框由 `render_skill_pages.mjs` 再產生；炸藥儲備特殊正文也經同一外框，重複執行不得累加目錄或刪除算例。Pages 的 `darktide-reader.css` 只共用導覽與左右版型，技能與對話的正文來源、產生器及樣式維持分離。本頁段落目錄留在右側正文之前，完整長表格與識別碼保留獨立捲動／換行。
+共用閱讀外框原由 `render_skill_pages.mjs` 產生，該產生器已於 SYP-551 移除；炸藥儲備特殊正文也經同一外框，重複執行不得累加目錄或刪除算例。Pages 的 `darktide-reader.css` 只共用導覽與左右版型，技能與對話的正文來源、產生器及樣式維持分離。本頁段落目錄留在右側正文之前，完整長表格與識別碼保留獨立捲動／換行。
 
 整合首頁與對話前先核對已交付容量工作的精確SHA、變更範圍、25筆分頁網址、語系配對、原文空白、錨點及sitemap；不從舊快照覆寫已驗收成果。未交付英文技能不自行翻譯或發布，暫緩的全面HTML精簡不因版型整合恢復。
 
@@ -92,7 +94,7 @@ assets/css/
 
 ## 機制頁與可再產生來源
 
-- `scripts/game-info/render_skill_pages.mjs` 從固定 Git 物件讀取原 Markdown，產生獨立靜態 HTML；正文仍只維護 Git Markdown，不手動編輯第二份機制結論。執行參數與 Markdown 模組版本見 [工具說明](../scripts/game-info/README.md)。
+- `scripts/game-info/render_skill_pages.mjs` 已於 SYP-551 移除；原工具從固定 Git 物件讀取原 Markdown，產生獨立靜態 HTML，正文只維護 Git Markdown，不手動編輯第二份機制結論。退役說明見 [工具說明](../scripts/game-info/README.md)。
 - 機制頁完整保留來源版本、確認／推導狀態、作用對象、計時、結算、上限、例外、顯示差異、算例、待確認事項與引用。來源文字比對以完整正文為準，不能用同一份摘要替換各技能。
 - 每頁提供返回玩家頁、固定 Git 原文件、固定 Source Code 入口；保留來源行號引用。站內 Markdown 與 README 技能錨點轉到對應網頁；尚未轉換的文件先確認固定 Commit 中存在，再使用固定 Git 連結。
 - 職業補充文件各自一頁；未使用定義明記非當前可選技能。七職業 TSV 保存識別碼、分類、原文件、來源雜湊與兩個 URL，沒有集中載入全部正文的 HTML／JSON。
@@ -113,7 +115,7 @@ assets/css/
 1. 修改前記錄具體範圍、來源及預期版面；共用 CSS 變更依適用的 production plan 流程寫精簡計畫。
 2. 這類靜態內容與版型以來源回讀、瀏覽器呈現及必要既有站點檢查驗收；不新增只比對 HTML 常數或鏡像版型的測試，也不新增技能專用 verifier／CI 步驟。若另獲授權加入計算、資料轉換或執行邏輯，依適用規則另作計畫與必要測試。
 3. 實際檢查桌面及 390px 手機版：圖示可讀、效果與算例完整、表格無裁切、導覽可點入與返回、錨點與鍵盤焦點可用；停用 JavaScript 後內容與導覽仍正常。
-4. 核對每頁顯示的版本與 Source SHA 等於該技能來源文件標頭的版本與 SHA；產生工具只支援單一版本或單一 SHA 時，停止並回報工具限制，不得以單一值覆蓋逐技能版本。核對網站數值與 Git 主文、來源文件一致，所有公開知識與 Source 連結使用存在的固定 Commit；保持原技能 Markdown 無差異。未執行的遊戲內驗證、Jekyll 建置、CI 或正式發布不得標示通過。
+4. 核對每頁顯示的版本與 Source SHA 等於該技能來源文件標頭的版本與 SHA；原產生器 `render_skill_pages.mjs` 只支援單一版本或單一 SHA，已於 SYP-551 移除；此項保留作歷史驗收說明，不再執行產生或發布。核對網站數值與 Git 主文、來源文件一致，所有公開知識與 Source 連結使用存在的固定 Commit；保持原技能 Markdown 無差異。未執行的遊戲內驗證、Jekyll 建置、CI 或正式發布不得標示通過。
 5. 純靜態 HTML 無 Front Matter 的本機 HTTP 預覽可檢查版型，但不代表完成 Jekyll 或正式 Pages 驗收。提交／推送前依目標網站 `docs/site-delivery.md` 與適用交付規範執行既有必要檢查；不自行安裝或升級環境。
 6. Commit 前以 `git var GIT_AUTHOR_IDENT` 與 `git var GIT_COMMITTER_IDENT` 核對使用者已指定的身分；兩個 Repository 各自確認，不以 noreply 或工具預設身分覆蓋。公開文件中的 Git 身分範例使用代稱，不寫私人信箱。
 7. 只精確暫存本次檔案並檢查 diff；不提交 `.agents/`、`.codex/` 等 runtime artifacts，不把 bootstrap 的本機 remediation commit 推至遠端。已發布 Commit 的身分修正需另有明確範圍與授權，不自行 force-push 或改寫歷史。
