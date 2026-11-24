@@ -654,6 +654,7 @@
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
 - Warp Charge - 亞空間充能
+- Perils of the Warp - 亞空間反噬
 - Warp Resistance - 反噬抗性
 - Precision - 精準
 
