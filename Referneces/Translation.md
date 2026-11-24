@@ -128,6 +128,10 @@
 - Auspex - 占卜儀
 - Aura - 光環
 
+## 機制
+
+- Perils of the Warp - 亞空間反噬
+
 ## 遊戲內容與任務詞
 
 ### 遊戲活動專用詞
@@ -654,7 +658,6 @@
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
 - Warp Charge - 亞空間充能
-- Perils of the Warp - 亞空間反噬
 - Warp Resistance - 反噬抗性
 - Precision - 精準
 
