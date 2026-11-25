@@ -90,8 +90,15 @@ local aiming = false
 local thrown = false
 
 local KEYBIND = {
+	-- bind flags
 	using_keybind = false,
 	throw_keybind_pressed = false,
+	throw_on_release = false,
+	-- state flags (only meaningful when throw_on_release is true)
+	hold_for_release = false, -- true = this session waits for release/abort instead of throwing immediately
+	aborted = false,          -- true once a manual interruption occurs during a hold_for_release session
+	do_throw = false,         -- true once a clean release occurs for an underhand hold_for_release session
+	overhand_charge_started = false, -- true once action_one_pressed has started being forced for an overhand charge
 }
 
 local DOG = {
@@ -122,6 +129,9 @@ mod.on_setting_changed = function(id)
 		if keybind[1] ~= nil then
 			KEYBIND.using_keybind = true
 		end
+	elseif id == "throw_on_release" then
+		local throw_on_release = mod:get("throw_on_release")
+		KEYBIND.throw_on_release = throw_on_release
 	else
 		local grenade, setting = string.match(id, "(.-)_(.*)")
 		if grenades[grenade] ~= nil then
@@ -135,6 +145,8 @@ mod.on_all_mods_loaded = function()
 	local archetype = mod.check_archetype()
 	DOG.ELIGIBLE = archetype and (archetype == "adamant" or archetype == "cryptic") or false
 	allow_override = mod:get("allow_override")
+	local throw_on_release = mod:get("throw_on_release")
+	KEYBIND.throw_on_release = throw_on_release
 	local keybind = mod:get("auto_throw_keybind")
 	if keybind[1] ~= nil then
 		KEYBIND.using_keybind = true
@@ -219,12 +231,46 @@ mod.clear_buffer = function()
 end
 
 -- Tells the mod that the throw keybind has been pressed (and in turn should throw a grenade)
-mod.throw_grenade = function()
-	-- Exit if already queued up or wielding a grenade
-	if KEYBIND.throw_keybind_pressed or mod.wielding_grenade_slot() then return end
+mod.throw_grenade = function(press_value)
+	-- press_value will be "true" while held and "false" when released
+	if not press_value then
+		-- Keybind released
+		if KEYBIND.hold_for_release and KEYBIND.throw_keybind_pressed and not KEYBIND.aborted then
+			if ready_to_throw and not thrown then
+				-- Aim/charge was active; allow the throw to proceed (meaningful for underhand -
+				-- overhand throws naturally as soon as action_one_hold stops being forced below)
+				KEYBIND.do_throw = true
+			else
+				-- Released before aim/charge was ready (a "tap") - fall back to immediate-throw behavior
+				KEYBIND.hold_for_release = false
+			end
+		end
+		KEYBIND.throw_keybind_pressed = false
+		return
+	end
+	-- Exit if already queued up
+	if KEYBIND.throw_keybind_pressed then return end
+	-- allow throwing when holding blitz using held input
+	if mod.wielding_grenade_slot() then
+		if cancel and not thrown then
+			cancel = false
+			KEYBIND.throw_keybind_pressed = true
+			-- Quick-throw blitzes cannot be held, so always ignore throw_on_release for them
+			KEYBIND.hold_for_release = KEYBIND.throw_on_release and not mod.quick_throw()
+			KEYBIND.aborted = false
+			KEYBIND.do_throw = false
+			KEYBIND.overhand_charge_started = false
+		end
+		return
+	end
 	-- Do not queue up a throw when in menus or out of grenades
 	if not Managers.ui:using_input() and mod.has_grenades() then
 		KEYBIND.throw_keybind_pressed = true
+		-- Quick-throw blitzes cannot be held, so always ignore throw_on_release for them
+		KEYBIND.hold_for_release = KEYBIND.throw_on_release and not mod.quick_throw()
+		KEYBIND.aborted = false
+		KEYBIND.do_throw = false
+		KEYBIND.overhand_charge_started = false
 	end
 end
 
@@ -654,6 +700,10 @@ end)
 -- Check if the grenade throw has completed
 mod:hook_safe(CLASS.ActionThrowGrenade, "_spawn_projectile", function(self)
 	thrown = true
+	KEYBIND.hold_for_release = false
+	KEYBIND.aborted = false
+	KEYBIND.do_throw = false
+	KEYBIND.overhand_charge_started = false
 end)
 
 -- Determine when grenade aiming begins
@@ -774,21 +824,48 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
     if action_name == "action_one_pressed" then
 		if ready_to_throw and not thrown and not cancel then
 			local allowed = mod.check_weapon()
-			if allowed then
-				if grenades[current_nade] then
-					if grenades[current_nade].throw_type == "overhand" then
+			if allowed and grenades[current_nade] then
+				local throw_type = grenades[current_nade].throw_type
+				if throw_type == "overhand" then
+					if not (KEYBIND.using_keybind and KEYBIND.hold_for_release) then
+						-- Immediate-throw mode: force the full throw as before
 						trying_to_throw_primary = true
 						return true
-					elseif grenades[current_nade].throw_type == "underhand" and aiming then
+					elseif KEYBIND.throw_keybind_pressed and not KEYBIND.aborted then
+						-- Hold-for-release mode: keep forcing action_one_pressed alongside
+						-- action_one_hold until the aim animation registers (aiming becomes true),
+						-- then stop forcing this action and let action_one_hold alone sustain the
+						-- charge. Stops immediately on release, letting the real (false) value
+						-- through to complete the natural release-throw.
+						KEYBIND.overhand_charge_started = true
 						trying_to_throw_primary = true
-						return true
-					else
-						trying_to_throw_primary = false
+						return not aiming
 					end
+				elseif throw_type == "underhand" and aiming then
+					-- Immediate mode always throws once aiming; hold-for-release mode only
+					-- throws once a clean release has set do_throw.
+					if not (KEYBIND.using_keybind and KEYBIND.hold_for_release) or KEYBIND.do_throw then
+						trying_to_throw_primary = true
+						return true
+					end
+				else
+					trying_to_throw_primary = false
 				end
 			end
 		end
     end
+	-- Overhand Charge (hold-for-release mode only; action_one_pressed above is forced every frame
+	-- alongside this action to kick off and maintain the aim animation until release or abort)
+	if action_name == "action_one_hold" then
+		if KEYBIND.using_keybind and KEYBIND.hold_for_release and KEYBIND.throw_keybind_pressed and not KEYBIND.aborted
+			and ready_to_throw and not thrown and not cancel then
+			local allowed = mod.check_weapon()
+			if allowed and grenades[current_nade] and grenades[current_nade].throw_type == "overhand" then
+				
+				return true
+			end
+		end
+	end
 	-- Aim
 	if action_name == "action_two_hold" then
 		local worker = false
@@ -798,19 +875,24 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 		for _, cb in ipairs(action_rule.callbacks) do
 			worker = combiner(worker, cb())
 		end
-        if allow_override and worker and not cancel then
+        if (allow_override or KEYBIND.throw_on_release) and worker and not cancel then
 			cancel = true
+			if KEYBIND.using_keybind and KEYBIND.hold_for_release then
+				KEYBIND.aborted = true
+			end
 		end
-		
+
 		if ready_to_throw and not thrown and not cancel then
 			local allowed = mod.check_weapon()
-			if allowed then
-				if grenades[current_nade] and grenades[current_nade].throw_type == "underhand" then
+			if allowed and grenades[current_nade] and grenades[current_nade].throw_type == "underhand" then
+				if not (KEYBIND.using_keybind and KEYBIND.hold_for_release) or not KEYBIND.aborted then
 					trying_to_throw_secondary = true
 					return true
 				else
 					trying_to_throw_secondary = false
 				end
+			else
+				trying_to_throw_secondary = false
 			end
 		end
 	end
@@ -823,9 +905,12 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 		for _, cb in ipairs(action_rule.callbacks) do
 			worker = combiner(worker, cb())
 		end
-		if allow_override and worker and not cancel then
+		if (allow_override or KEYBIND.throw_on_release) and worker == true and not cancel then
 			cancel = true
-		elseif not allow_override and ready_to_throw and not thrown and not cancel and (trying_to_throw_primary or trying_to_throw_secondary) then
+			if KEYBIND.using_keybind and KEYBIND.hold_for_release then
+				KEYBIND.aborted = true
+			end
+		elseif not (allow_override or KEYBIND.throw_on_release) and ready_to_throw and not thrown and not cancel and (trying_to_throw_primary or trying_to_throw_secondary) then
 			return false
 		end
 	end
@@ -840,8 +925,12 @@ mod:hook(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(func, self
 		if not KEYBIND.throw_keybind_pressed then
 			return func(self, slot_name, t, skip_wield_action)
 		end
-		-- If using the keybind and it was pressed, reset the keybind state
-		KEYBIND.throw_keybind_pressed = false
+		-- If using the keybind and it was pressed, reset the keybind state - but only for the
+		-- instant-throw case. While holding for release (overhand charge / underhand aim), the
+		-- flag must remain true so action_one_pressed/action_one_hold keep forcing correctly.
+		if not KEYBIND.hold_for_release then
+			KEYBIND.throw_keybind_pressed = false
+		end
 	end
 	cancel = false
 	if slot_name == "slot_grenade_ability" then
@@ -860,8 +949,17 @@ mod:hook(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(func, self
 		end
 		return func(self, slot_name, t, skip_wield_action)
 	else
-		ready_to_throw = false
-		thrown = false
+		-- If the keybind is actively driving a hold-for-release sequence, this "else" call is just
+		-- the outgoing weapon slot being un-wielded as part of swapping TO the grenade slot - do not
+		-- wipe the keybind state here, or the subsequent slot_grenade_ability call will see it already cleared.
+		if not (KEYBIND.using_keybind and KEYBIND.throw_keybind_pressed) then
+			ready_to_throw = false
+			thrown = false
+			KEYBIND.hold_for_release = false
+			KEYBIND.aborted = false
+			KEYBIND.do_throw = false
+			KEYBIND.overhand_charge_started = false
+		end
 	end
 	return func(self, slot_name, t, skip_wield_action)
 end)

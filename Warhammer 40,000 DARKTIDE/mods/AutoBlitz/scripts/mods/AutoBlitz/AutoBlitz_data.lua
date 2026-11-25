@@ -27,9 +27,15 @@ return {
 				tooltip = "auto_throw_keybind_tooltip",
 				type = "keybind",
 				default_value = {},
-				keybind_trigger = "pressed",
+				keybind_trigger = "held",
 				keybind_type = "function_call",
 				function_name = "throw_grenade"
+			},
+			{
+				setting_id = "throw_on_release",
+				tooltip = "throw_on_release_tooltip",
+				type = "checkbox",
+				default_value = false
 			},
 			{
 				setting_id = "adamant",
