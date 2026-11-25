@@ -16,9 +16,9 @@ from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
 from .gate import validate_git, validate_paths
 from .localization import Localization, LocalizationError
-from .merge import change_summary, merge_tree
+from .merge import change_summary, merge_tree, private_changes
 from .pr import branch_for, current_pr, publish, stage_raw, upstream_commit
-from .records import PENDING, insert_readme, readme_sections, update_hash, update_readme, updates
+from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
 from .report import blocked_units, cell, plain, pr_body
 from .section import DEFAULT_SECTION, choose_section, describe
 from .tree import MODS, TreeError, is_localization, locate_mod, read_tree
@@ -128,6 +128,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
     ours = new_tree if route == "new" else read_tree(repo_mod, include_localization=True)
     non_local = {path: value for path, value in new_tree.items() if not is_localization(path)}
     ours_non_local = {path: value for path, value in ours.items() if not is_localization(path)}
+    private_files = private_changes(base, ours_non_local) if base is not None else []
+    private_recorded = hash_fields.get("private_fix") == "true"
     merged, conflicts = (non_local, []) if route == "new" else merge_tree(ours_non_local, base, non_local, workspace)
     validate_paths([*(f"{mod_path}/{path}" for path in merged),
                     *(f"{mod_path}/{path}" for path in new_tree if is_localization(path)),
@@ -199,6 +201,9 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         insert_readme(readme, section, mod.name, abstract, values)
     else:
         update_readme(readme, nexus_id, values)
+        if private_files:
+            values["private_fix"] = "true"
+            mark_private_readme(readme, nexus_id)
     update_hash(root / hash_path, values, mod.directory)
     install_tree(repo_mod, ours, merged)
     if upstream_oid and merged[loc.relative] != ours[loc.relative]:
@@ -207,7 +212,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
     code_changes = change_summary(ours_non_local, {path: value for path, value in merged.items()
                                                   if not is_localization(path)}, workspace)
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
-                   nexus_id, receipt_key(receipt), route=route, section=section, classification=classification)
+                   nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
+                   private_files=private_files, private_recorded=private_recorded)
     action = {"update": "更新", "new": "新增", "hotfix": "hotfix"}[route]
     version = plain(receipt.version)
     if route != "new":

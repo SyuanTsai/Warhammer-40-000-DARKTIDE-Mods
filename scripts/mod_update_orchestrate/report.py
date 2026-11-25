@@ -27,11 +27,8 @@ def blocked_units(workset, summary):
 
 
 def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, file_id,
-            *, route="update", section=None, classification=None):
-    counters = Counter(unit["action"] for unit in workset["units"])
+            *, route="update", section=None, classification=None, private_files=(), private_recorded=False):
     binding = workset["translationBinding"]
-    classification = classification or {}
-    usage = {**(rendition.get("usage") or {}), **classification.get("usage", {})}
     route_name = {"update": "更新", "new": "新增", "hotfix": "作者 hotfix"}[route]
     result = [
         f"Closes #{number}", "", "## 摘要", "", f"- 路線：{route_name}",
@@ -44,13 +41,35 @@ def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, 
             "- 審核模式：manual。新增 MOD 的授權與來源紀錄規則尚未定案（對照 PROVENANCE.md、LICENSE-SCOPE.md）。",
             f"- 請確認 [Nexus 頁面](https://www.nexusmods.com/warhammer40kdarktide/mods/{nexus_id}) 的 Permissions。",
         ]
+    if private_files:
+        result += ["", "## 偵測到私人修正", "", *(f"- {cell(path)}" for path in private_files)]
+    elif private_recorded:
+        result += ["- 保留既有私人修正標記（private_fix=true）。"]
     result += [
-        "", "| 工作集動作 | 項數 |", "| --- | ---: |",
-        *(f"| {key} | {counters[key]} |" for key in sorted(counters)),
+        *workset_actions(workset),
         "", "## BLOCKED", "",
         *([f"- merge-conflict：{cell(conflict)}" for conflict in conflicts] or ["無"]),
-        "", "## API 用量", "",
+        *api_usage(rendition, classification),
+        "", "## 規則與版本", "",
+        f"- 規則 SHA：{binding['rulesSha256']}",
+        f"- 詞彙表 SHA：{binding['glossarySha256']}",
+        f"- Skill SHA：{SKILL_SHA}", "", "## 程式碼變更摘要", "",
+        *([f"- {cell(path)} ｜ {delta}" for path, delta in changes] or ["無"]),
+        "", f"<!-- mod-update-orchestrate:pr nexus_id={nexus_id} file_id={file_id} -->",
     ]
+    return "\n".join(result)
+
+
+def workset_actions(workset):
+    counters = Counter(unit["action"] for unit in workset["units"])
+    return ["", "| 工作集動作 | 項數 |", "| --- | ---: |",
+            *(f"| {key} | {counters[key]} |" for key in sorted(counters))]
+
+
+def api_usage(rendition, classification=None):
+    result = ["", "## API 用量", ""]
+    classification = classification or {}
+    usage = {**(rendition.get("usage") or {}), **classification.get("usage", {})}
     if usage:
         model = rendition.get("model") or classification["model"]
         cost = rendition.get("estimatedUsageUsd", 0) + classification.get("estimatedUsageUsd", 0)
@@ -60,10 +79,4 @@ def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, 
             result.append(f"- {names[role]}：輸入 {counts['input_tokens']} / 輸出 {counts['output_tokens']} tokens")
     else:
         result += ["0（未呼叫 API）"]
-    result += ["", "## 規則與版本", "",
-               f"- 規則 SHA：{binding['rulesSha256']}",
-               f"- 詞彙表 SHA：{binding['glossarySha256']}",
-               f"- Skill SHA：{SKILL_SHA}", "", "## 程式碼變更摘要", "",
-               *([f"- {cell(path)} ｜ {delta}" for path, delta in changes] or ["無"]),
-               "", f"<!-- mod-update-orchestrate:pr nexus_id={nexus_id} file_id={file_id} -->"]
-    return "\n".join(result)
+    return result

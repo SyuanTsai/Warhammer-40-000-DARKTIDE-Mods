@@ -2,6 +2,8 @@
 
 from pathlib import PurePosixPath
 
+from .tree import is_localization
+
 _ARCHIVES = {".zip", ".7z", ".rar", ".tar", ".gz", ".tgz", ".xz", ".bz2"}
 _ARTIFACTS = {"localization-workset.json", "new.lua", "merged.lua", "state.json",
               "summary.json", "summary.md"}
@@ -32,3 +34,12 @@ def validate_upstream(paths, mod_path):
     validate_paths(paths, mod_path, None)
     if not all(path.startswith(mod_path + "/") for path in paths):
         raise ValueError("Gate 限制第一個提交只能新增 MOD 目錄")
+
+
+def validate_private(paths, mod_path, hash_path, *, mark, localization):
+    validate_paths(paths, mod_path, hash_path)
+    allowed = {"README.md", hash_path} if mark else set()
+    if localization and is_localization(localization):
+        allowed.add(f"{mod_path}/{localization}")
+    if set(paths) - allowed:
+        raise ValueError("Gate 拒絕私人修正 PR 包含標記與指定本地化檔以外的路徑")

@@ -84,7 +84,7 @@ def update_hash(path, values, directory):
     if values.get("acquisition_method") == "author-hotfix":
         removed.add("drive_intake_md5")
     remaining = {key: value for key, value in values.items() if key != "downloaded"}
-    if not any(line.partition("=")[0].strip() == "repo_directory" for line in lines):
+    if directory and not any(line.partition("=")[0].strip() == "repo_directory" for line in lines):
         remaining["repo_directory"] = directory
     written = set()
     new_lines = []
@@ -136,6 +136,31 @@ def _sections(lines):
 
 def readme_sections(path):
     return [name for name, _ in _sections(path.read_bytes().decode("utf-8-sig").splitlines(keepends=True))]
+
+
+def mark_private_readme(path, nexus_id):
+    raw = path.read_bytes()
+    lines = raw.decode("utf-8-sig").splitlines(keepends=True)
+    headings = []
+    for index, line in enumerate(lines):
+        if README_REMOVED.match(line.rstrip("\r\n")):
+            break
+        if (match := README_MOD.match(line)) and int(match[2]) == nexus_id:
+            headings.append(index)
+    if len(headings) != 1:
+        raise ValueError("README 須有唯一的私人修正 MOD 條目")
+    start = headings[0]
+    end = next((index for index in range(start + 1, len(lines)) if lines[index].startswith("#")), len(lines))
+    label = "- 私人修正（非官方）："
+    if any(line.startswith(label) for line in lines[start + 1:end]):
+        return
+    while end > start + 1 and not lines[end - 1].strip():
+        end -= 1
+    newline = "\r\n" if lines[start].endswith("\r\n") else "\n"
+    if not lines[end - 1].endswith(("\r", "\n")):
+        lines[end - 1] += newline
+    lines.insert(end, label + "（待補說明）" + newline)
+    _write_readme(path, raw, lines)
 
 
 def insert_readme(path, section, name, summary, values):

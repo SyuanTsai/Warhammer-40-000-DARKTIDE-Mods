@@ -16,6 +16,7 @@ from scripts.mod_update_watch.registry import load_registry, positive_id
 from .discover import discover
 from .github import GitHub
 from .pr import current_pr, merge_check, run_git
+from .private_fix import private_fix
 from .process import process
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -46,7 +47,9 @@ def emit(message):
 
 def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     parser = argparse.ArgumentParser(description="編排 Darktide MOD 更新")
-    parser.add_argument("command", choices=("discover", "process"))
+    parser.add_argument("command", choices=("discover", "process", "private-fix"))
+    parser.add_argument("--before")
+    parser.add_argument("--after")
     parser.add_argument("--nexus-id", type=count)
     parser.add_argument("--file-id", type=count)
     parser.add_argument("--sha256", type=sha256)
@@ -86,6 +89,20 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
                 print(output)
             return 0
 
+        git = partial(run_git, root)
+        if args.command == "private-fix":
+            if not (args.before and args.after):
+                parser.error("private-fix 需要 --before、--after")
+            skill = Path(os.environ["SKILL_ROOT"]).resolve()
+            scratch = Path(os.environ.get("RUNNER_TEMP") or tempfile.gettempdir()).resolve()
+            if not skill.is_dir() or scratch.is_relative_to(root) or scratch.is_relative_to(skill):
+                raise ValueError("SKILL_ROOT 或暫存目錄無效")
+            processed = os.environ.get("GDRIVE_PROCESSED_FOLDER_ID")
+            drive = DriveClient(drive_transport) if processed and os.environ.get("GOOGLE_ACCESS_TOKEN") else None
+            private_fix(root, git, github, drive, processed, args.before, args.after, skill, scratch,
+                        max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit)
+            return 0
+
         if not (args.nexus_id and args.issue):
             parser.error("process 需要 --nexus-id、--issue")
         if args.route == "hotfix":
@@ -96,7 +113,6 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             if not args.file_id or args.sha256:
                 parser.error("Nexus MAIN 需要 --file-id")
             identity = args.file_id
-        git = partial(run_git, root)
         if args.merge_check:
             if mode == "auto":
                 options = {"route": args.route} if args.route != "update" else {}

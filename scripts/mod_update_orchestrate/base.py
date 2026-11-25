@@ -21,7 +21,8 @@ def folder_id(drive, parent, name):
     return validate_id(matches[0]["id"]) if matches else None
 
 
-def find_base(drive, processed, nexus_id, sha256, workspace, *, exclude=None, preferred_md5=None):
+def find_base(drive, processed, nexus_id, sha256, workspace, *, exclude=None, preferred_md5=None,
+              include_name=False):
     if not re.fullmatch(r"[a-fA-F0-9]{64}", sha256 or ""):
         return None
     folder = folder_id(drive, processed, str(nexus_id))
@@ -48,6 +49,6 @@ def find_base(drive, processed, nexus_id, sha256, workspace, *, exclude=None, pr
                 raise
             continue
         if digest(path) == sha256.lower():
-            return path
+            return (path, item.get("name") or "（無檔名）") if include_name else path
         path.unlink()
     return None

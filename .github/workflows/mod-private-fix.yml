@@ -1,0 +1,128 @@
+name: MOD 私人修正偵測
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Warhammer 40,000 DARKTIDE/mods/**'
+  workflow_dispatch:
+    inputs:
+      before:
+        description: 推送前的完整 Git SHA
+        type: string
+        required: true
+      after:
+        description: 推送後的完整 Git SHA
+        type: string
+        required: true
+      dry_run:
+        description: 預覽私人修正判定與翻譯用量
+        type: boolean
+        default: false
+      review_mode:
+        description: PR 審查模式
+        type: choice
+        options: ["", manual, auto]
+        default: ""
+      max_items:
+        description: 覆寫待送 API 項數上限
+        type: number
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+
+concurrency:
+  group: mod-private-fix
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUTF8: "1"
+  GIT_TERMINAL_PROMPT: "0"
+  GIT_CONFIG_COUNT: "1"
+  GIT_CONFIG_KEY_0: core.autocrlf
+  GIT_CONFIG_VALUE_0: "false"
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+        working-directory: mods
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: mods
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/checkout@v4
+        with:
+          repository: SyuanTsai/Skill-Darktide-Translate
+          ref: 215182256aa1d620b8c748afc4254453038eef3e
+          path: .skill
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 安裝 Skill 相依套件
+        env:
+          SKILL_ROOT: ${{ github.workspace }}/.skill
+        run: |
+          pwsh --version
+          python -m pip install -r "$SKILL_ROOT/packages/claude-runner/requirements.lock"
+      - name: 驗證 Drive 身分
+        if: vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '' && vars.GCP_SERVICE_ACCOUNT != '' && vars.GDRIVE_PROCESSED_FOLDER_ID != ''
+        id: gauth
+        continue-on-error: true
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/drive
+          create_credentials_file: false
+          export_environment_variables: false
+      - name: 安裝封存檔解壓工具
+        if: steps.gauth.outcome == 'success'
+        run: |
+          if ! sudo apt-get install -y 7zip; then
+            echo "::warning::7-Zip 安裝失敗，將使用 runner 既有的解壓工具。"
+          elif command -v 7z >/dev/null && ! sudo apt-get install -y 7zip-rar; then
+            echo "::warning::7-Zip 的 RAR 外掛安裝失敗，將使用 runner 既有的 RAR 解碼能力。"
+          fi
+      - uses: actions/cache/restore@v4
+        id: translation_cache
+        with:
+          path: ${{ runner.temp }}/darktide-translate-*
+          key: darktide-translate-private-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: darktide-translate-private-
+      - name: 判定私人修正並處理翻譯
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GOOGLE_ACCESS_TOKEN: ${{ steps.gauth.outputs.access_token }}
+          GDRIVE_PROCESSED_FOLDER_ID: ${{ vars.GDRIVE_PROCESSED_FOLDER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SKILL_ROOT: ${{ github.workspace }}/.skill
+          MOD_UPDATE_REVIEW_MODE: ${{ vars.MOD_UPDATE_REVIEW_MODE }}
+          REVIEW_INPUT: ${{ inputs.review_mode }}
+          MAX_ITEMS: ${{ inputs.max_items }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          BEFORE: ${{ inputs.before || github.event.before }}
+          AFTER: ${{ inputs.after || github.event.after }}
+        run: |
+          args=(--before "$BEFORE" --after "$AFTER")
+          if [[ -n "$REVIEW_INPUT" ]]; then args+=(--review-mode "$REVIEW_INPUT"); fi
+          if [[ -n "$MAX_ITEMS" && "$MAX_ITEMS" != 0 ]]; then args+=(--max-items "$MAX_ITEMS"); fi
+          if [[ "$DRY_RUN" == true ]]; then args+=(--dry-run); fi
+          python -m scripts.mod_update_orchestrate.main private-fix "${args[@]}"
+      - uses: actions/cache/save@v4
+        if: always() && inputs.dry_run != true && steps.translation_cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ runner.temp }}/darktide-translate-*
+          key: ${{ steps.translation_cache.outputs.cache-primary-key }}

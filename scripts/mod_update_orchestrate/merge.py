@@ -17,6 +17,14 @@ def _text(data):
     return True
 
 
+def private_changes(base, ours):
+    def normalize(data):
+        return data.replace(b"\r\n", b"\n") if data is not None and _text(data) else data
+
+    return [path for path in sorted(base.keys() | ours.keys())
+            if normalize(base.get(path)) != normalize(ours.get(path))]
+
+
 def _merge_file(ours, base, theirs, workspace):
     with tempfile.TemporaryDirectory(dir=workspace) as tmp:
         for name, content in zip(("ours", "base", "theirs"), (ours, base, theirs)):

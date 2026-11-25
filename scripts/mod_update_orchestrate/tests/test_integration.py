@@ -14,6 +14,7 @@ from unittest.mock import Mock, patch
 
 from scripts.mod_update_orchestrate.gate import validate_git
 from scripts.mod_update_orchestrate.localization import Localization
+from scripts.mod_update_orchestrate.private_fix import translate_private
 from scripts.mod_update_orchestrate.pr import run_git
 from scripts.mod_update_orchestrate.process import process
 from scripts.mod_update_orchestrate.tests.test_pipeline import comment, issue, marker
@@ -203,6 +204,23 @@ class SkillTests(unittest.TestCase):
         self.assertIn("穩定", self.file.read_text(encoding="utf-8"))
         shutil.rmtree(self.loc.run)
         validate_git(self.git, self.oid, self.mod, ".hash/example.hash")
+
+    # Scenario: 私人修正在推送中加入英文，真 Skill 將其送到假翻譯與審查。
+    # Purpose: 確認以 before 為基準，通過 AI_REQUIRED、Apply 和 Receipt。
+    def test_InterT25_private_fix_ai_required_to_receipt(self):
+        # Given
+        content = b'return { stable = { en = "Stable" }, added = { en = "Activate" } }\n'
+        transport = self.FakeTransport([self.respond, self.respond])
+        # When
+        name, merged, report, blocked = translate_private(
+            self.repo, self.temp, self.skill, self.mod, {self.name: content}, self.oid, 123,
+            adapter=self.run_adapter(transport))
+        # Then
+        self.assertEqual(name, self.name)
+        self.assertFalse(blocked)
+        self.assertIn("啟動", merged.decode())
+        self.assertIn("AI_REQUIRED", "\n".join(report))
+        self.assertEqual(len(transport.requests), 2)
 
     # Scenario: 兩個待送項目超過覆寫上限一項。
     # Purpose: 真轉接層回傳 2，並且不呼叫 transport、不套用。
