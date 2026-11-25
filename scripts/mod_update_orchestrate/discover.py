@@ -47,6 +47,8 @@ def latest_receipt(comments, nexus_id):
 
 
 def recorded_version(mod, receipt):
+    if receipt.source == "hotfix":
+        return None
     version = normalized_version(receipt.version)
     returning = mod and not receipt.source and getattr(mod, "acquisition_method", "") == "author-hotfix"
     if (mod and not returning and version not in {"", "未知", "unknown", "（待補）"}
