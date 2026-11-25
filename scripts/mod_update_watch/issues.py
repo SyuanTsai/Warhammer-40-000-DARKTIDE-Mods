@@ -30,6 +30,10 @@ def _mod_marker(nexus_id):
     return f"<!-- mod-update-watch:nexus_id={nexus_id} -->"
 
 
+def issue_markers(nexus_id, file_id=None):
+    return f"{_mod_marker(nexus_id)}\n<!-- mod-update-watch:latest_file_id={file_id or 'unknown'} -->"
+
+
 def _time(moment):
     return (f"{moment.astimezone(timezone.utc):%Y-%m-%d %H:%M:%S} UTC / "
             f"{moment.astimezone(TAIPEI):%Y-%m-%d %H:%M:%S} Asia/Taipei") if moment else "未知"
@@ -57,8 +61,7 @@ def render_issue(finding):
     prefix = "[MOD 更新] "
     title = prefix + mod.name[:256 - len(prefix) - len(suffix)] + suffix
     lines = [
-        _mod_marker(mod.nexus_id),
-        f"<!-- mod-update-watch:latest_file_id={file_id} -->",
+        issue_markers(mod.nexus_id, file_id),
         "",
         f"- MOD：{mod.name}",
         f"- Nexus 下載頁：{url}",
@@ -67,6 +70,8 @@ def render_issue(finding):
         "",
     ]
     if main:
+        if mod.acquisition_method == "author-hotfix":
+            lines += ["目前使用作者 hotfix，Nexus 正式版已上架", ""]
         lines += [
             "**請下載這一個（主檔 MAIN）**",
             "",
@@ -320,6 +325,10 @@ class GitHubClient:
         return f"更新 Issue #{number}", warnings
 
     def _create(self, payload):
+        issue, warnings = self._create_issue(payload)
+        return f"建立 Issue #{issue['number']}", warnings
+
+    def _create_issue(self, payload):
         url = f"{self._repo_url}/issues"
         action = "建立 Issue"
         if self.assignee:
@@ -338,4 +347,4 @@ class GitHubClient:
         warnings = []
         if self.assignee and self.assignee.casefold() not in assigned:
             warnings.append(f"Issue #{number} 指派失敗")
-        return f"建立 Issue #{number}", warnings
+        return issue, warnings

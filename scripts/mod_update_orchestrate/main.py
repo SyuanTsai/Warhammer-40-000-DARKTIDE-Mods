@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import tempfile
 from functools import cache as memoize, partial
@@ -26,6 +27,12 @@ def count(value):
     return number
 
 
+def sha256(value):
+    if not re.fullmatch(r"[a-f0-9]{64}", value):
+        raise argparse.ArgumentTypeError("必須為 64 字元的小寫 SHA-256")
+    return value
+
+
 def append(name, value):
     if path := os.environ.get(name):
         with Path(path).open("a", encoding="utf-8", newline="\n") as stream:
@@ -42,6 +49,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     parser.add_argument("command", choices=("discover", "process"))
     parser.add_argument("--nexus-id", type=count)
     parser.add_argument("--file-id", type=count)
+    parser.add_argument("--sha256", type=sha256)
+    parser.add_argument("--route", choices=("update", "new", "hotfix"), default="update")
     parser.add_argument("--issue", type=count)
     parser.add_argument("--max-items", type=count)
     parser.add_argument("--review-mode", choices=("manual", "auto"))
@@ -77,13 +86,22 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
                 print(output)
             return 0
 
-        if not all((args.nexus_id, args.file_id, args.issue)):
-            parser.error("process 需要 --nexus-id、--file-id、--issue")
+        if not (args.nexus_id and args.issue):
+            parser.error("process 需要 --nexus-id、--issue")
+        if args.route == "hotfix":
+            if not args.sha256 or args.file_id:
+                parser.error("hotfix 需要 --sha256")
+            identity = "sha256-" + args.sha256
+        else:
+            if not args.file_id or args.sha256:
+                parser.error("Nexus MAIN 需要 --file-id")
+            identity = args.file_id
         git = partial(run_git, root)
         if args.merge_check:
             if mode == "auto":
-                merge_check(git, github, args.issue, args.nexus_id, args.file_id,
-                            dry_run=args.dry_run, emit=emit)
+                options = {"route": args.route} if args.route != "update" else {}
+                merge_check(git, github, args.issue, args.nexus_id, identity,
+                            dry_run=args.dry_run, emit=emit, **options)
             else:
                 emit("目前為 manual 審查模式，略過合併檢查。")
             return 0
@@ -100,8 +118,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
         if any(path.is_relative_to(root) or path.is_relative_to(skill) for path in (scratch, cache)):
             raise ValueError("暫存與快取目錄須位於兩個 checkout 之外")
         process(root, git, github, DriveClient(drive_transport), processed,
-                args.issue, args.nexus_id, args.file_id, skill, scratch, cache,
-                max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit)
+                args.issue, args.nexus_id, identity, skill, scratch, cache,
+                max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit, route=args.route)
         return 0
     except (GitHubError, DriveError, RuntimeError) as error:
         emit(str(error))

@@ -6,17 +6,17 @@ import subprocess
 from scripts.mod_update_watch.issues import GitHubError
 from scripts.mod_update_watch.registry import positive_id
 
-from .discover import target
-from .gate import validate_paths
+from .discover import latest_receipt, matches_issue, receipt_key, target, unresolved_external_label
+from .gate import validate_paths, validate_upstream
 
-PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_id=([0-9]+)"
-                       r"(?: verified_head=([a-f0-9]{40})(?: route=(update|new))?)? -->")
+PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_id=([0-9]+|sha256-[a-f0-9]{64})"
+                       r"(?: verified_head=([a-f0-9]{40})(?: route=(update|new|hotfix))?)? -->")
 UNRESOLVED_THREADS = "暫停自動合併，PR 尚有未解決的討論串。"
 
 
-def run_git(root, *args):
+def run_git(root, *args, input=None):
     try:
-        result = subprocess.run(["git", *args], cwd=root, check=True, capture_output=True)
+        result = subprocess.run(["git", *args], cwd=root, check=True, capture_output=True, input=input)
     except (OSError, subprocess.CalledProcessError):
         raise ValueError(f"Git 操作失敗（{args[0]}）") from None
     return result.stdout.decode("utf-8").strip("\r\n")
@@ -28,8 +28,7 @@ def branch_for(nexus_id):
 
 def current_pr(pulls, nexus_id, file_id):
     return any(match.groups()[:2] == (str(nexus_id), str(file_id)) for item in pulls
-               for line in (item.get("body") or "").splitlines()
-               if (match := PR_MARKER.fullmatch(line)))
+               if (match := pr_marker(item.get("body") or "")))
 
 
 def pr_marker(body):
@@ -52,8 +51,16 @@ def remote_head(git, branch):
     return oid
 
 
-def merge_check(git, github, number, nexus_id, file_id, *, dry_run=False, emit=print):
-    if target(github.issue(number)) != (nexus_id, file_id):
+def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_run=False, emit=print):
+    issue = github.issue(number)
+    if route == "hotfix":
+        comments = github.comments(number)
+        receipt = latest_receipt(comments, nexus_id)
+        matches = (receipt and matches_issue(issue, receipt, route) and receipt_key(receipt) == file_id
+                   and not unresolved_external_label(issue, comments))
+    else:
+        matches = target(issue) == (nexus_id, file_id)
+    if not matches:
         emit(f"Issue #{number} 已關閉或目標已變更，略過合併檢查。")
         return
     branch = branch_for(nexus_id)
@@ -76,8 +83,10 @@ def merge_check(git, github, number, nexus_id, file_id, *, dry_run=False, emit=p
         reason = "PR 標記無效或與 Issue 目標不符"
     elif not (verified_head := marker[3]):
         reason = "PR 標記缺少 verified_head"
-    elif marker[4] == "new":
+    elif marker[4] == "new" or route == "new":
         reason = "PR 標記為 route=new"
+    elif (marker[4] == "hotfix") != (route == "hotfix"):
+        reason = "PR 路線與收件類型不符"
     elif head.get("sha") != verified_head or remote_head(git, branch) != verified_head:
         reason = "PR head 或遠端固定分支 head 與 verified_head 不符"
     elif not github.discussions_resolved(pull):
@@ -94,33 +103,68 @@ def merge_check(git, github, number, nexus_id, file_id, *, dry_run=False, emit=p
     emit(f"PR #{pr_number} 略過自動合併，{reason.rstrip('。')}。")
 
 
-def push(git, branch, expected):
+def push(git, branch, expected, head="HEAD"):
     ref = f"refs/heads/{branch}"
-    git("push", f"--force-with-lease={ref}:{expected}", "origin", f"HEAD:{ref}")
+    git("push", f"--force-with-lease={ref}:{expected}", "origin", f"{head}:{ref}")
+
+
+def stage_raw(git, paths):
+    # 直接把壓縮檔位元組加入 index，避免 .gitattributes 或換行轉換更動原檔。
+    names = sorted(paths)
+    hashes = git("hash-object", "-w", "--no-filters", "--stdin-paths",
+                 input=("\n".join(names) + "\n").encode("utf-8")).splitlines()
+    if len(hashes) != len(names):
+        raise ValueError("Git blob 與 MOD 檔案清單不符")
+    index = "".join(f"100644 {oid}\t{name}\0" for name, oid in zip(names, hashes))
+    git("update-index", "--add", "-z", "--index-info", input=index.encode("utf-8"))
+
+
+def commit_tree(git, parent, message):
+    return git("-c", "user.name=github-actions[bot]", "-c",
+               "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+               "commit-tree", git("write-tree"), "-p", parent, "-m", message)
+
+
+def upstream_commit(git, base_oid, mod_path, files, nexus_id):
+    names = [f"{mod_path}/{name}" for name in files]
+    validate_upstream(names, mod_path)
+    stage_raw(git, names)
+    diff = ("diff", "--cached", "--name-only", "--no-renames", "-z")
+    changes = git(*diff, base_oid, "--")
+    added = git(*diff, "--diff-filter=A", base_oid, "--")
+    if changes != added or set(filter(None, changes.split("\0"))) != set(names):
+        raise ValueError("Gate 要求第一個提交只新增完整的上游 MOD 檔案")
+    return commit_tree(git, base_oid, f"chore(mod): import Nexus MOD {nexus_id} upstream")
 
 
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
             paths, *, route="update"):
     marker = pr_marker(body)
-    if not marker or marker[1] != str(nexus_id) or marker[3]:
+    if (not marker or marker[1] != str(nexus_id) or marker[3]
+            or marker[2].startswith("sha256-") != (route == "hotfix")):
         raise ValueError("PR 內文缺少唯一且有效的更新標記")
     branch = branch_for(nexus_id)
     expected = remote_head(git, branch)
     if previous and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("PR 分支已變更，請重新執行")
-    git("-c", "core.autocrlf=false", "add", "-A", "--", *paths)
+    git("-c", "core.autocrlf=false", "add", "-A", "--", *(paths[1:] if route == "new" else paths))
     changes = git("diff", "--cached", "--name-only", "--no-renames", "-z", base_oid, "--")
     if not changes:
         raise ValueError("Git index 無候選異動")
     validate_paths(filter(None, changes.split("\0")), paths[0], paths[2])
-    git("-c", "user.name=github-actions[bot]", "-c",
-        "user.email=41898282+github-actions[bot]@users.noreply.github.com",
-        "commit", "-m", f"chore(mod): update Nexus MOD {nexus_id}")
-    head = git("rev-parse", "HEAD")
+    if route == "new":
+        if not set(paths[1:]) <= set(changes.split("\0")):
+            raise ValueError("Gate 要求第二個提交包含 README 與新增 .hash")
+        head = commit_tree(git, base_oid, f"chore(mod): translate and register Nexus MOD {nexus_id}")
+    else:
+        git("-c", "user.name=github-actions[bot]", "-c",
+            "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+            "commit", "-m", f"chore(mod): update Nexus MOD {nexus_id}")
+        head = git("rev-parse", "HEAD")
     verified_marker = (f"<!-- mod-update-orchestrate:pr nexus_id={nexus_id} file_id={marker[2]}"
                        f" verified_head={head} route={route} -->")
     body = body.replace(marker[0], verified_marker, 1)
-    push(git, branch, expected)
+    push(git, branch, expected, head if route == "new" else "HEAD")
     pull = github.write_pr(previous, branch, title, body, bool(conflicts))
     number = pull["number"]
     if (pull.get("head") or {}).get("sha") != head:

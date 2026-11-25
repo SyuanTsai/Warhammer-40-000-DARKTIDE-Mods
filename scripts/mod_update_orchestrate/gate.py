@@ -24,3 +24,11 @@ def validate_git(git, base_oid, mod_path, hash_path):
     changed = git("diff", "--name-only", "--no-renames", "-z", base_oid, "--").split("\0")
     untracked = git("ls-files", "-z", "--others", "--exclude-standard").split("\0")
     validate_paths(filter(None, changed + untracked), mod_path, hash_path)
+
+
+def validate_upstream(paths, mod_path):
+    if not paths:
+        raise ValueError("Gate 拒絕空白的上游 MOD")
+    validate_paths(paths, mod_path, None)
+    if not all(path.startswith(mod_path + "/") for path in paths):
+        raise ValueError("Gate 限制第一個提交只能新增 MOD 目錄")

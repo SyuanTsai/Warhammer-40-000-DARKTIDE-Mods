@@ -13,8 +13,8 @@ from scripts.mod_update_orchestrate.base import find_base
 from scripts.mod_update_orchestrate.discover import discover
 from scripts.mod_update_orchestrate.github import BOT, GitHub
 from scripts.mod_update_orchestrate.main import main
-from scripts.mod_update_orchestrate.pr import publish
-from scripts.mod_update_orchestrate.process import NeedsHuman, download, registry_mod
+from scripts.mod_update_orchestrate.pr import current_pr, publish
+from scripts.mod_update_orchestrate.process import NeedsHuman, download, process, registry_mod
 from scripts.mod_update_orchestrate.records import update_hash, update_readme
 from scripts.mod_update_orchestrate.report import blocked_units, pr_body
 from scripts.mod_update_watch.drive import FOLDER_MIME
@@ -74,7 +74,8 @@ class DiscoverTests(unittest.TestCase):
             with self.subTest(variable=variable, flags=flags), patch.dict(os.environ, {
                     "MOD_UPDATE_REVIEW_MODE": variable, "GITHUB_OUTPUT": ""}), patch(
                     "scripts.mod_update_orchestrate.main.GitHub", return_value=github), patch(
-                    "scripts.mod_update_orchestrate.main.load_registry", return_value=([], None)), patch(
+                    "scripts.mod_update_orchestrate.main.load_registry", return_value=(
+                        [SimpleNamespace(nexus_id=123, hash_file=None)], None)), patch(
                     "builtins.print") as printed:
                 # When
                 result = main(["discover", *flags])
@@ -83,16 +84,19 @@ class DiscoverTests(unittest.TestCase):
                 matrix = json.loads(printed.call_args.args[0])["include"]
                 self.assertEqual([item["action"] for item in matrix], actions)
 
-    # Scenario: 收件版本過期、非主檔、hotfix、或 Issue 有歧義。
+    # Scenario: 已登錄 MOD 的收件版本過期、非主檔、hotfix 資料不足或 Issue 有歧義。
     # Purpose: 跳過並提示正確原因，dry run 留言零寫入。
     def test_UnitT20_filter_and_dry_run(self):
+        # Given
         github = Mock()
         github.list_open_issues.return_value = [issue()]
+        mods = {123: SimpleNamespace(hash_file=None, baseline_version="1")}
+        # When / Then
         for received, expected in [(marker(9000), "等待主檔"),
                                    (marker(9000, "OPTIONAL"), "請上傳主檔"),
-                                   (marker(None, "UNKNOWN", source="hotfix"), "P3b")]:
+                                   (marker(None, "UNKNOWN", source="hotfix"), "hotfix 收件資料不完整")]:
             github.comments.return_value = [comment(received)]
-            matrix, notes = discover(Path.cwd(), github, {}, dry_run=True)
+            matrix, notes = discover(Path.cwd(), github, mods, dry_run=True)
             self.assertFalse(matrix)
             self.assertIn(expected, notes[0])
         github.note.assert_not_called()
@@ -113,16 +117,20 @@ class RecordedVersionTests(unittest.TestCase):
         (self.root / "Warhammer 40,000 DARKTIDE" / "mods" / "Example").mkdir(parents=True)
         self.github = Mock()
         self.github.list_open_issues.return_value = [issue()]
+        self.github.issue.return_value = issue()
+        self.github.pulls.return_value = []
 
-    def registry(self, readme_version, hash_version=None):
+    def registry(self, readme_version, hash_version=None, *, hotfix_sha256=None):
         (self.root / "README.md").write_text(
             "### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n"
             f"- MOD 版本：{readme_version}\n", encoding="utf-8")
         if hash_version is not None:
             path = self.root / ".hash" / "Example.hash"
             path.parent.mkdir(exist_ok=True)
-            path.write_text("nexus_id=123\nrepo_directory=Example\nmain_file_id=9000\n"
-                            f"version={hash_version}\n", encoding="utf-8")
+            identity = (f"main_file_id=not-applicable\nacquisition_method=author-hotfix\nsha256={hotfix_sha256}\n"
+                        if hotfix_sha256 else "main_file_id=9000\n")
+            path.write_text(f"nexus_id=123\nrepo_directory=Example\nversion={hash_version}\n{identity}",
+                            encoding="utf-8")
         mods, _ = load_registry(self.root)
         return {mod.nexus_id: mod for mod in mods}
 
@@ -196,6 +204,58 @@ class RecordedVersionTests(unittest.TestCase):
         matrix, _ = discover(self.root, self.github, mods, mode="auto", current=lambda *_: True)
         # Then
         self.assertEqual([item["action"] for item in matrix], ["merge-check"])
+
+    # Scenario: 已安裝作者 hotfix，收到沿用版本字串的新 hotfix、相同壓縮檔或已有 PR 的收件。
+    # Purpose: 驗證 discover 與 process 都依 .hash 或 PR 標記的 SHA-256 去重。
+    def test_UnitT70_same_version_hotfix_is_deduplicated_by_sha256(self):
+        # Given
+        installed_sha256, new_sha256 = "a" * 64, "b" * 64
+        mods = self.registry("2", hash_version="2", hotfix_sha256=installed_sha256)
+        for sha256, pr_sha256, should_update in ((new_sha256, installed_sha256, True),
+                                                 (installed_sha256, None, False),
+                                                 (new_sha256, new_sha256, False)):
+            self.github.comments.return_value = [comment(marker(
+                None, "UNKNOWN", source="hotfix", filename="Example.zip", sha256=sha256,
+                source_url="https://example.org/release"))]
+            pulls = []
+            if pr_sha256:
+                pulls.append({"body": f"<!-- mod-update-orchestrate:pr nexus_id=123 file_id=sha256-{pr_sha256} -->"})
+            self.github.pulls.return_value = pulls
+            with self.subTest(entrypoint="discover", sha256=sha256, pr_sha256=pr_sha256):
+                # When
+                matrix, _ = discover(self.root, self.github, mods, current=lambda *args: current_pr(pulls, *args))
+                # Then
+                self.assertEqual([(item["route"], item["action"], item["sha256"]) for item in matrix],
+                                 [("hotfix", "update", sha256)] if should_update else [])
+            with self.subTest(entrypoint="process", sha256=sha256, pr_sha256=pr_sha256):
+                # When
+                reached_download = self.process_reaches_download(f"sha256-{sha256}", route="hotfix")
+                # Then
+                self.assertEqual(reached_download, should_update)
+
+    # Scenario: Nexus 正式版收件與目前安裝版本相同，基準分別是 Nexus 正式版與作者 hotfix。
+    # Purpose: 保留正式版版本去重，以及從 hotfix 回歸同版本正式版的路徑。
+    def test_UnitT80_same_version_nexus_receipt_updates_only_from_hotfix(self):
+        for hotfix_sha256 in (None, "a" * 64):
+            with self.subTest(installed_hotfix=bool(hotfix_sha256)):
+                # Given
+                mods = self.registry("2", hash_version="2", hotfix_sha256=hotfix_sha256)
+                self.github.comments.return_value = [comment(marker(sha256="b" * 64))]
+                # When
+                matrix, _ = discover(self.root, self.github, mods)
+                reached_download = self.process_reaches_download(9001, route="update")
+                # Then
+                self.assertEqual([(item["route"], item["action"]) for item in matrix],
+                                 [("update", "update")] if hotfix_sha256 else [])
+                self.assertEqual(reached_download, bool(hotfix_sha256))
+
+    def process_reaches_download(self, file_id, *, route):
+        git = Mock(side_effect=["", "a" * 40])
+        with patch("scripts.mod_update_orchestrate.process.download",
+                   side_effect=NeedsHuman("archive", "測試在下載時停止")) as fetch_archive:
+            process(self.root, git, self.github, Mock(), "processed", 7, 123, file_id,
+                    self.root, self.root, self.root, route=route, dry_run=True, emit=Mock())
+        return fetch_archive.called
 
 
 class ArchiveTests(unittest.TestCase):

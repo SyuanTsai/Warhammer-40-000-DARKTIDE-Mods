@@ -31,6 +31,7 @@ class TrackedMod:
     baseline_uploaded_utc: datetime | None
     baseline_date: date | None
     hash_file: str | None
+    acquisition_method: str = ""
 
     @property
     def has_baseline(self):
@@ -229,15 +230,19 @@ def load_registry(root: Path):
         )
         if reason:
             unmapped.append(Unmapped(mod_id, name, reason, candidates))
+        acquisition = fields.get("acquisition_method", "")
+        nexus_time = parse_uploaded(fields.get("nexus_last_updated"))
+        uploaded = nexus_time if acquisition == "author-hotfix" else (
+            parse_uploaded(fields.get("main_file_uploaded_at_utc"))
+            or _hash_filename_uploaded(fields.get("filename", ""))
+            or (_readme_uploaded(entry) if entry else None)
+            or nexus_time
+        )
         tracked[mod_id] = TrackedMod(
             mod_id, name, directory, "override" if override and directory else "hash",
             fields.get("version") or (entry.version if entry else None),
             positive_id(fields.get("main_file_id")),
-            parse_uploaded(fields.get("main_file_uploaded_at_utc"))
-            or _hash_filename_uploaded(fields.get("filename", ""))
-            or (_readme_uploaded(entry) if entry else None)
-            or parse_uploaded(fields.get("nexus_last_updated")),
-            entry.downloaded if entry else None, path.name,
+            uploaded, entry.downloaded if entry else None, path.name, acquisition,
         )
 
     for mod_id, entry in readme.items():
