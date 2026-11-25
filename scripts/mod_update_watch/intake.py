@@ -16,7 +16,7 @@ from pathlib import Path
 from .detect import file_category, file_version, uploaded_at
 from .drive import DriveClient, DriveError, DriveSizeLimit, FOLDER_MIME, InvalidDriveText, validate_id
 from .handoff import build_received_marker, valid_source_url
-from .issues import GitHubClient, GitHubError, find_existing, issue_markers
+from .issues import GitHubClient, GitHubError, _time, find_existing, issue_markers
 from .nexus import GAME_DOMAIN, RATE_HEADERS, NexusClient, NexusError
 from .registry import _normalized_name, load_registry, parse_uploaded, positive_id
 from .safe_extract import (

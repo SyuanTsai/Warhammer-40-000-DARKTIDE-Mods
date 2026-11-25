@@ -178,7 +178,7 @@ class IntakeTests(unittest.TestCase):
 
     # Scenario: 未登錄 Nexus MAIN 收件，執行 P2。
     # Purpose: 建立可供 P3 探索的 Issue 與收件留言。
-    def test_UnitT03_untracked_main_opens_issue_and_comments(self):
+    def test_UnitT03_untracked_main_without_upload_time_opens_issue_and_comments(self):
         # Given
         self.file()
         self.match["mod"].update(mod_id=99, name="New Example")
@@ -194,7 +194,58 @@ class IntakeTests(unittest.TestCase):
         self.assertIsNotNone(find_existing([created[2]], 99))
         self.assertTrue(received[1].endswith("/issues/90/comments"))
         self.assertEqual(parse_received_markers(received[2]["body"])[0].nexus_id, 99)
+        self.assertNotIn("上傳時間", created[2]["body"])
+        self.assertNotIn("上傳時間", received[2]["body"])
+        self.assertNotIn("uploaded_at=", received[2]["body"])
         self.assertIn("Issue #90", report)
+
+    # Scenario: 未登錄 MOD 的 Nexus 主檔帶有上傳時間，正式收件後建立 Issue 並留言。
+    # Purpose: 驗證 Issue、收件留言及交接標記的完整內容，以及搬移與留言的次數。
+    def test_UnitT27_untracked_main_with_upload_time_opens_issue_and_comments(self):
+        # Given
+        digest = self.file()
+        sha256 = hashlib.sha256(self.archive).hexdigest()
+        self.match["mod"].update(
+            mod_id=99, name="New Example", version="1.1", updated_time="2026-01-02T16:00:00Z",
+        )
+        self.match["file_details"].update(
+            file_name="New-Example-99.zip", uploaded_time="2026-01-01T18:30:00Z",
+        )
+
+        # When
+        status, _ = self.invoke()
+
+        # Then
+        self.assertEqual(status, 0)
+        self.assertEqual(self.moves, [("archive", "dir-99", "upload")])
+        self.assertEqual(self.drive_writes, ["POST", "PATCH"])
+        detail = (
+            f"已收到 Nexus 原檔：Sample-42-1.zip（MD5 {digest}，file_id 12，版本 1.0，類別 主檔）；"
+            "已移到「已處理/99」\n\nNexus 檔案名稱：Nexus Sample"
+            "\n\n- 檔名：New-Example-99.zip"
+            "\n- 上傳時間：2026-01-01 18:30:00 UTC / 2026-01-02 02:30:00 Asia/Taipei"
+        )
+        issue_body = (
+            "<!-- mod-update-watch:nexus_id=99 -->\n<!-- mod-update-watch:latest_file_id=12 -->"
+            "\n\n- MOD：New Example"
+            "\n- Nexus 下載頁：https://www.nexusmods.com/warhammer40kdarktide/mods/99"
+            f"\n\n{detail}"
+        )
+        marker = (
+            f"<!-- mod-drive-intake:received v=1 nexus_id=99 file_id=12 drive_file_id=archive md5={digest}"
+            " category=MAIN version=1.0 filename=New-Example-99.zip"
+            " uploaded_at=2026-01-01T18%3A30%3A00%2B00%3A00 page_version=1.1"
+            f" page_updated_at=2026-01-02T16%3A00%3A00%2B00%3A00 sha256={sha256} mod_name=New%20Example -->"
+        )
+        self.assertEqual(self.github_writes, [
+            ("POST", "/repos/owner/repo/issues", {
+                "title": "[MOD 新增] New Example（Nexus 99）",
+                "body": issue_body,
+                "labels": ["mod-update"],
+                "assignees": ["owner"],
+            }),
+            ("POST", "/repos/owner/repo/issues/90/comments", {"body": f"{detail}\n\n{marker}"}),
+        ])
 
     # Scenario: 未登錄 MOD 已有開啟的 Issue，再收 MAIN 或選用檔。
     # Purpose: MAIN 復用 Issue，選用檔保留原來的無 Issue 行為。

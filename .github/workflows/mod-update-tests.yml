@@ -41,6 +41,10 @@ jobs:
         run: |
           pwsh --version
           python -m pip install -r "$SKILL_ROOT/packages/claude-runner/requirements.lock"
+      - name: Check for undefined Python names
+        run: |
+          python -m pip install flake8
+          python -m flake8 --select=F821 scripts/mod_update_watch scripts/mod_update_orchestrate
       - name: Run MOD update watch tests
         run: python -m unittest discover -s scripts/mod_update_watch/tests -t .
       - name: Run MOD update orchestrate tests
