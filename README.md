@@ -88,8 +88,8 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 ### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
     翻譯修正器，
 - MOD 網站最後更新日期：Last updated 08 July 2025, 1:59AM
-- MOD 版本：Version 2.2.3
-- MOD 檔案名稱：SoloPlay-176-2-2-3-1751911153
+- MOD 版本：Version 1.2.3
+- MOD 檔案名稱：WhatTheLocalization-163-1-2-3-1751911304
 - 手動維護最後下載日期：2025-07-09
 
 ### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
@@ -657,7 +657,7 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 檔案名稱：ServerPing 1221 1 2026-08-24T16-06Z SDWlwDVLT
 - 手動維護最後下載日期：2026-09-07
 
-### [Havoc Peek](https://www.nexusmods.com/warhammer40kdarktide/mods/1221)
+### [Havoc Peek](https://www.nexusmods.com/warhammer40kdarktide/mods/1228)
     浩劫(快速看野團資訊)
 - MOD 網站最後更新日期：Last updated 26 August 2026, 9:05PM
 - MOD 版本：Version 1
@@ -674,8 +674,8 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 ### [Another Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/1203)
     新型記分板
 - MOD 網站最後更新日期：Last updated 04 October 2026, 3:36AM
-- MOD 版本：9（Nexus Main file 版本；ZIP 內 FpsDoctor.mod 版本：1.6.5）
-- MOD 檔案名稱：FpsDoctor(FreezeFixesMemOptionsNewDmfFix) 932 9 2026-08-23T23-33Z mz1PFzZKs.zip
+- MOD 版本：2.0.2
+- MOD 檔案名稱：AnotherScoreboard（Nexus 公開頁面未提供完整檔名，待手動補）
 - 手動維護最後下載日期：2026-10-07
 
 ---
