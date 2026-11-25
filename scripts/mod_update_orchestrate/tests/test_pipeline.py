@@ -7,13 +7,13 @@ import unittest
 import zipfile
 from pathlib import Path
 from types import SimpleNamespace
-from unittest.mock import Mock, patch
+from unittest.mock import Mock, call, patch
 
 from scripts.mod_update_orchestrate.base import find_base
 from scripts.mod_update_orchestrate.discover import discover
 from scripts.mod_update_orchestrate.github import BOT, GitHub
 from scripts.mod_update_orchestrate.main import main
-from scripts.mod_update_orchestrate.pr import current_pr, publish
+from scripts.mod_update_orchestrate.pr import PullHeadError, current_pr, publish
 from scripts.mod_update_orchestrate.process import NeedsHuman, download, process, registry_mod
 from scripts.mod_update_orchestrate.records import update_hash, update_readme
 from scripts.mod_update_orchestrate.report import blocked_units, pr_body
@@ -461,6 +461,197 @@ class HumanAndPrTests(unittest.TestCase):
         for part in ("Closes #7", "無三方合併基準", "| NONE | 1 |", "0（未呼叫 API）",
                      "規則 SHA：rules", "詞彙表 SHA：terms", "main.lua ｜ +1 / -0"):
             self.assertIn(part, body)
+
+
+class PublishHeadTests(unittest.TestCase):
+    old_head = "a" * 40
+    new_head = "b" * 40
+    other_head = "c" * 40
+    branch = "auto/mod-update/123"
+    ref = f"refs/heads/{branch}"
+    body = "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"
+    paths = ("Warhammer 40,000 DARKTIDE/mods/Example", "README.md", ".hash/example.hash")
+
+    def setUp(self):
+        self.previous = self.pull(self.old_head)
+        self.remote_heads = iter((self.old_head, self.new_head))
+
+        def git(command, *args):
+            if command == "ls-remote":
+                return f"{next(self.remote_heads)}\t{self.ref}"
+            return {"rev-parse": self.new_head, "diff": "README.md\0"}.get(command, "")
+
+        self.git = Mock(side_effect=git)
+        self.github = Mock()
+        self.github.write_pr.return_value = self.previous
+        self.github.discussions_resolved.return_value = True
+        self.sleep = self.enterContext(patch("time.sleep"))
+
+    def pull(self, sha, **fields):
+        return {"number": 7, "head": {"sha": sha}, "draft": False, **fields}
+
+    def publish(self):
+        return publish(self.git, self.github, self.previous, 123, "標題", self.body, "auto", [],
+                       "d" * 40, self.paths)
+
+    def assert_verification_calls(self, delays, *, remote_checks=2):
+        push = call("push", f"--force-with-lease={self.ref}:{self.old_head}", "origin", f"HEAD:{self.ref}")
+        self.assertEqual([record for record in self.git.call_args_list if record.args[0] == "push"], [push])
+        remote = call("ls-remote", "--heads", "origin", self.ref)
+        self.assertEqual([record for record in self.git.call_args_list if record.args[0] == "ls-remote"],
+                         [remote] * remote_checks)
+        self.github.write_pr.assert_called_once_with(
+            self.previous, self.branch, "標題",
+            self.body.replace(" -->", f" verified_head={self.new_head} route=update -->"), False)
+        self.assertEqual(self.github.pull.call_args_list, [call(7)] * len(delays))
+        self.assertEqual(self.sleep.call_args_list, [call(delay) for delay in delays])
+
+    def assert_no_finalize(self):
+        for operation in ("set_draft", "ensure_blocked", "label", "discussions_resolved", "merge_pr", "note"):
+            getattr(self.github, operation).assert_not_called()
+
+    # Scenario: PATCH 已回傳推送後的新 SHA。
+    # Purpose: 保留直接發布的路徑，只執行一次收尾。
+    def test_UnitT10_matching_patch_skips_reads_and_waits(self):
+        # Given
+        pull = self.pull(self.new_head)
+        self.github.write_pr.return_value = pull
+        # When
+        number = self.publish()
+        # Then
+        self.assertEqual(number, 7)
+        self.assert_verification_calls([], remote_checks=1)
+        self.github.set_draft.assert_called_once_with(pull, False)
+        self.github.merge_pr.assert_called_once_with(7, self.new_head)
+
+    # Scenario: PATCH 和第一次 GET 回傳舊 SHA，第二次 GET 回傳新 SHA 和不同的草稿、標籤狀態。
+    # Purpose: 只推送及 PATCH 一次，並依新回應完成草稿、標籤與合併。
+    def test_UnitT20_stale_patch_finalizes_with_refreshed_pull(self):
+        # Given
+        pull = self.pull(self.new_head, draft=True, labels=[{"name": "blocked"}])
+        self.github.write_pr.return_value = self.pull(self.old_head, draft=True)
+        self.github.pull.side_effect = [self.previous, pull]
+        # When
+        number = self.publish()
+        # Then
+        self.assertEqual(number, 7)
+        self.assert_verification_calls([1, 2])
+        self.github.set_draft.assert_called_once_with(pull, False)
+        self.github.label.assert_called_once_with(7, "blocked", False)
+        self.github.discussions_resolved.assert_called_once_with(pull)
+        self.github.merge_pr.assert_called_once_with(7, self.new_head)
+        self.github.note.assert_not_called()
+
+    # Scenario: 三次 GET 都回傳既有 PR 的舊 SHA。
+    # Purpose: 顯示 PR 編號、SHA 和重讀次數，並停止收尾。
+    def test_UnitT30_stale_head_exhausts_three_reads(self):
+        # Given
+        self.github.pull.return_value = self.previous
+        # When
+        with self.assertRaises(PullHeadError) as raised:
+            self.publish()
+        # Then
+        self.assertRegex(str(raised.exception), rf"PR #7.*預期 {self.new_head}.*實際 {self.old_head}.*重讀 3 次")
+        self.assertNotIn("連線或回應失敗", str(raised.exception))
+        self.assert_verification_calls([1, 2, 4])
+        self.assert_no_finalize()
+
+    # Scenario: 第一次 GET 暫時失敗，第二次 GET 已可讀到新 SHA。
+    # Purpose: 傳輸失敗與指定的閘道或服務錯誤皆可重試。
+    def test_UnitT40_transient_get_error_retries(self):
+        for status in (None, 502, 503, 504):
+            with self.subTest(status=status):
+                # Given
+                self.git.reset_mock()
+                self.github.reset_mock()
+                self.sleep.reset_mock()
+                self.remote_heads = iter((self.old_head, self.new_head))
+                pull = self.pull(self.new_head)
+                self.github.pull.side_effect = [GitHubError("重讀更新 PR", status), pull]
+                # When
+                number = self.publish()
+                # Then
+                self.assertEqual(number, 7)
+                self.assert_verification_calls([1, 2])
+                self.github.set_draft.assert_called_once_with(pull, False)
+
+    # Scenario: 第一次 GET 因權限被拒絕，或最後一次 GET 仍有暫時性錯誤。
+    # Purpose: 保留原始 GitHubError，在不可重試或耗盡次數時停止。
+    def test_UnitT50_get_errors_preserve_original_error(self):
+        for status, delays in ((403, [1]), (503, [1, 2, 4])):
+            with self.subTest(status=status):
+                # Given
+                self.git.reset_mock()
+                self.github.reset_mock()
+                self.sleep.reset_mock()
+                self.remote_heads = iter((self.old_head, self.new_head))
+                error = GitHubError("重讀更新 PR", status)
+                self.github.pull.side_effect = [self.previous] * (len(delays) - 1) + [error]
+                # When
+                with self.assertRaises(GitHubError) as raised:
+                    self.publish()
+                # Then
+                self.assertIs(raised.exception, error)
+                self.assertIn(f"HTTP {status}", str(error))
+                self.assert_verification_calls(delays)
+                self.assert_no_finalize()
+
+    # Scenario: PATCH 回傳其他 SHA、缺少有效 SHA，或確認時遠端分支已不同。
+    # Purpose: 只對已確認遠端的舊 head 啟動重讀，並區分各類驗證錯誤。
+    def test_UnitT60_unexpected_patch_or_remote_head_stops_before_get(self):
+        for response, remote, checks, message in (
+            (self.pull(self.other_head), self.new_head, 1,
+             rf"PR #7.*預期 {self.new_head}.*實際 {self.other_head}.*重讀 0 次"),
+            ({"number": 7, "head": {}}, self.new_head, 1, r"PR #7.*缺少有效.*head\.sha"),
+            (self.pull("invalid"), self.new_head, 1, r"PR #7.*缺少有效.*head\.sha"),
+            (self.previous, self.other_head, 2, rf"遠端分支.*預期 {self.new_head}.*實際 {self.other_head}"),
+        ):
+            with self.subTest(response=response, remote=remote):
+                # Given
+                self.git.reset_mock()
+                self.github.reset_mock()
+                self.remote_heads = iter((self.old_head, remote))
+                self.github.write_pr.return_value = response
+                # When
+                with self.assertRaisesRegex(PullHeadError, message) as raised:
+                    self.publish()
+                # Then
+                self.assertNotIn("連線或回應失敗", str(raised.exception))
+                self.assert_verification_calls([], remote_checks=checks)
+                self.assert_no_finalize()
+
+    # Scenario: PATCH 回傳舊 SHA，但第一次 GET 回傳第三個 SHA 或缺少有效 SHA。
+    # Purpose: 遇到無法驗證的新回應時立即停止。
+    def test_UnitT70_unexpected_get_head_stops_immediately(self):
+        for response, message in (
+            (self.pull(self.other_head), rf"PR #7.*預期 {self.new_head}.*實際 {self.other_head}.*重讀 1 次"),
+            ({"number": 7, "head": "invalid"}, r"PR #7.*缺少有效.*head\.sha"),
+        ):
+            with self.subTest(response=response):
+                # Given
+                self.git.reset_mock()
+                self.github.reset_mock()
+                self.sleep.reset_mock()
+                self.remote_heads = iter((self.old_head, self.new_head))
+                self.github.pull.return_value = response
+                # When
+                with self.assertRaisesRegex(PullHeadError, message):
+                    self.publish()
+                # Then
+                self.assert_verification_calls([1])
+                self.assert_no_finalize()
+
+    # Scenario: 建立 PR 時，回應恰好含有推送前的遠端 SHA。
+    # Purpose: 只有更新既有 PR 時才可將舊 SHA 視為暫時狀態。
+    def test_UnitT80_create_response_does_not_retry_old_head(self):
+        # Given
+        self.previous = None
+        # When
+        with self.assertRaisesRegex(PullHeadError, rf"PR #7.*實際 {self.old_head}.*重讀 0 次"):
+            self.publish()
+        # Then
+        self.assert_verification_calls([], remote_checks=1)
+        self.assert_no_finalize()
 
 
 class MergeCheckTests(unittest.TestCase):
