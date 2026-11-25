@@ -83,16 +83,6 @@
 2. 將解壓縮後的檔案夾加入環境變數路徑：<https://www.computerhope.com/issues/ch000549.htm>  
    > **Reference (English):** Add the unzipped folder to your environment path.
 
-
-
-
-
-
-
-
-
-
-
 ### Game updates will automatically disable all mods. Re-run "toggle_darktide_mods.bat" to enable them again.
 
 ### This mod does not need to be added to your mod_load_order.txt file.
