@@ -2,7 +2,7 @@
 
 > **權威來源與適用範圍（先讀）**
 >
-> - 新的自動更新 run，以及 `schema_version` 不是 `3` 的續跑，一律使用已安裝的 `auto-update-darktide-mod` Skill（Schema 14／15，來源為 `Skill-Darktide-Translate`）。本文件是 Schema 3 的原始流程，只用於 `schema_version: 3` 的既有 run，以及理解規則由來。
+> - 新的自動更新 run 一律使用已安裝的 `auto-update-darktide-mod` Skill（Schema 15，來源為 `Skill-Darktide-Translate`）。既有 Schema 15 run 依同一 Skill 續跑。Schema 14 已過時。本文件只供 `schema_version: 3` 的既有 run 續跑，以及查閱規則由來。
 > - 讀到的 `state.json` 若 `schema_version` 不是 `3`、缺少該欄位，或 `status` 不在第 4.2 節列表內：只讀並回報，不得依本文件改寫、升級、判為失敗或重建 state。
 > - 使用者只要求手動補版本資訊並開 PR 時，改用 [AI-MOD-Info-And-PR-Workflow.md](AI-MOD-Info-And-PR-Workflow.md)。
 
