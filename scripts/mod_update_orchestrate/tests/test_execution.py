@@ -4,6 +4,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
+from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
 from scripts.mod_update_watch.handoff import Received
 from scripts.mod_update_watch.registry import _read_hash
@@ -156,6 +157,7 @@ class ExecutionTests(unittest.TestCase):
         # Then
         self.assertIn("偵測到私人修正", body)
         self.assertIn("Example.mod", body)
+        self.assertIn(f"- {self.loc.relative} ｜ {FALLBACK_NOTE}", body)
         saved = _read_hash(hash_file)
         self.assertEqual((saved["private_fix"], saved["private_fix_commit"]), ("true", "old"))
         self.assertNotIn("source_url", saved)

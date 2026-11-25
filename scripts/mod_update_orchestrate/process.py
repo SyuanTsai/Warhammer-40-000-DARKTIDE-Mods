@@ -17,6 +17,7 @@ from .discover import already_recorded, latest_receipt, matches_issue, receipt_k
 from .eol import FORMAT_ONLY, MIXED_EOL, default_format, repo_bytes
 from .gate import validate_git, validate_paths
 from .localization import Localization, LocalizationError
+from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
 from .pr import branch_for, current_pr, publish, stage_raw, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
@@ -185,7 +186,9 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         pending = blocked_units(document, summary)
         if pending:
             raise NeedsHuman("localization", "有未核准或 BLOCKED 項目。\n\n" + "\n".join(pending))
-        merged[loc.relative] = loc.apply(document, summary)
+        applied = loc.apply(document, summary)
+        layout_base = None if route == "new" else ours.get(loc.relative)
+        merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
 
     validate_paths((f"{mod_path}/{path}" for path in merged), mod_path, hash_path)
     endings = sorted(merged)
@@ -223,6 +226,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
     validate_git(git, upstream_oid or base_oid, mod_path, hash_path)
     code_changes = [(path, delta) for path, delta in change_summary({} if route == "new" else ours, merged, workspace)
                     if not is_localization(path) or delta == FORMAT_ONLY or MIXED_EOL in delta]
+    if layout_note:
+        code_changes.append((loc.relative, layout_note))
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
                    private_files=private_files, private_recorded=private_recorded)
