@@ -133,7 +133,7 @@ local loc = {
     },
     prioritize_other_levels_desc = {
         en = "Hide normal level if prestige level, havoc clearance or havoc assignment is available.",
-        ja = "プレステージレベルやハヴォックランクが有効な場合は、通常のレベルを非表示にします。",
+        ja = "プレステージレベルやハヴォッククリアランス、ハヴォック任務ランクが有効な場合は、通常のレベルを非表示にします。",
         ["zh-cn"] = "如果能显示声望等级或者浩劫等级，则隐藏常规等级。",
         ["zh-tw"] = "若能顯示聲望等級或浩劫等級，則隱藏一般等級。",
         ru = "Скрыть обычный уровень, если доступен уровень престижа или ранг хаоса.",
@@ -231,21 +231,21 @@ local loc = {
     },
     enable_havoc_rank = {
         en = "Show Havoc Clearance",
-        ja = "ハヴォックランクを表示する",
+        ja = "ハヴォッククリアランスを表示する",
         ["zh-cn"] = "显示浩劫等级",
         ["zh-tw"] = "顯示浩劫等級",
         ru = "Показывать ранг «Верной смерти»",
     },
     havoc_rank_icon = {
         en = "Havoc Clearance Icon",
-        ja = "ハヴォックランクアイコン",
+        ja = "ハヴォッククリアランスアイコン",
         ["zh-cn"] = "浩劫等级图标",
         ["zh-tw"] = "浩劫等級圖示",
         ru = "Значок ранга «Верной смерти»",
     },
     havoc_rank_color = {
         en = "Havoc Clearance Color",
-        ja = "ハヴォックランクの色",
+        ja = "ハヴォッククリアランスの色",
         ["zh-cn"] = "浩劫等级颜色",
         ["zh-tw"] = "浩劫等級顏色",
         ru = "Цвет ранга «Верной смерти»",
@@ -253,30 +253,27 @@ local loc = {
     enable_havoc_assignment = {
         en = "Show Havoc Assignment",
         ["zh-tw"] = "顯示浩劫任務",
+        ja = "ハヴォック任務ランクを表示する",
     },
     havoc_assignment_icon = {
         en = "Havoc Assignment Icon",
         ["zh-tw"] = "浩劫任務圖示",
+        ja = "ハヴォック任務ランクアイコン",
     },
     havoc_assignment_color = {
         en = "Havoc Assignment Color",
         ["zh-tw"] = "浩劫任務顏色",
+        ja = "ハヴォック任務ランクの色",
     },
     enable_havoc_assignment_charges = {
         en = "Show Havoc Assignment Charges",
         ["zh-tw"] = "顯示浩劫任務挑戰次數",
+        ja = "ハヴォック任務の残り回数を表示する",
     },
     havoc_assignment_charges_desc = {
-        en = "Show the remaining charges of the assignment. Other players' charges are only available if they also run True Level with \"Share Havoc Assignment\" enabled.",
-        ["zh-tw"] = "顯示任務的剩餘挑戰次數。只有其他玩家也使用 True Level 並啟用「分享浩劫任務」時，才能顯示他們的剩餘挑戰次數。",
-    },
-    share_havoc_assignment = {
-        en = "Share Havoc Assignment",
-        ["zh-tw"] = "分享浩劫任務",
-    },
-    share_havoc_assignment_desc = {
-        en = "Publishes your current Havoc assignment and its remaining charges to other players who also run True Level, so they can see your charges. Turn this off to publish nothing; you will still see the assignments of players who share theirs.",
-        ["zh-tw"] = "向同樣使用 True Level 的其他玩家分享你目前的浩劫任務與剩餘挑戰次數，讓他們查看你的剩餘挑戰次數。關閉此選項後，將不再分享任何資訊；你仍可查看其他玩家分享的任務。",
+        en = "Show the remaining charges of the assignment. Charges are not shown at assignment rank 40, where they can no longer be lost. Other players' charges are only available if they also run True Level.",
+        ["zh-tw"] = "顯示任務的剩餘挑戰次數。任務等級達到 40 時不會顯示次數，因為此時次數已不會再減少。只有其他玩家也使用 True Level 時，才能顯示他們的剩餘挑戰次數。",
+        ja = "現在の任務に挑戦可能な残り回数を表示します。ランク40では残り回数が減らないため表示されません。他のプレイヤーの残り回数は、そのプレイヤーがTrue Levelを利用している場合のみ表示されます。",
     },
     level_up = {
         en = "Level Up!",

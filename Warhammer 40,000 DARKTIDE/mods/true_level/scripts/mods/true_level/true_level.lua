@@ -2,13 +2,14 @@ local mod = get_mod("true_level")
 
 mod._info = {
     title = "True Level",
-    author = "Zombine",
-    date = "2026/10/06",
-    version = "1.11.0",
+    author = "Zombine & LucLeto",
+    date = "2026/10/09",
+    version = "1.11.5",
 }
 mod:info("Version " .. mod._info.version)
 
 local ProfileUtils = require("scripts/utilities/profile_utils")
+local UIRenderer = require("scripts/managers/ui/ui_renderer")
 
 mod._self = mod:persistent_table("self")
 mod._others = mod:persistent_table("others")
@@ -141,6 +142,7 @@ local SHARE_MAX_RANK = 99
 local HAVOC_ASSIGNMENT_TTL = 600
 local HAVOC_ASSIGNMENT_MAX_AGE = 3600
 local HAVOC_ASSIGNMENT_MAX_REQUESTS = 2
+local HAVOC_ASSIGNMENT_MAX_RANK = 40
 local EXPIRED = -math.huge
 
 local _now = function()
@@ -218,7 +220,7 @@ local _publish_havoc_assignment = function(clear)
     local value = ""
     local assignment = mod._havoc_assignment_local
 
-    if not clear and assignment and mod:get("share_havoc_assignment") then
+    if not clear and assignment then
         value = assignment.rank .. ":" .. (assignment.charges or "")
     end
 
@@ -454,10 +456,6 @@ local _get_havoc_assignment = function(account_id, ref)
 end
 
 mod.request_local_havoc_assignment = function()
-    if not mod:get("share_havoc_assignment") then
-        return
-    end
-
     local player = Managers.player:local_player_safe(1)
     local account_id = player and player:account_id()
 
@@ -629,7 +627,8 @@ local levels = {
         key = "havoc_assignment",
         symbol_key = "havoc_assignment_custom",
         color_id = "havoc_assignment_color",
-        val = ""
+        val = "",
+        merged = false
     }
 }
 
@@ -638,6 +637,7 @@ local _init_levels = function()
         local level = levels[i]
 
         level.val = ""
+        level.merged = false
     end
 end
 
@@ -651,14 +651,19 @@ local _concat_levels = function(settings)
     for i = 1, len do
         local level = levels[i]
         if level.val ~= "" then
-            local level_text = level.val .. " " .. mod.get_symbol(level.symbol_key)
+            local symbol = mod.get_symbol(level.symbol_key)
+            local level_text = level.merged and symbol or level.val .. " " .. symbol
             local color_code = settings[level.color_id]
 
             if color_code and color_code ~= "default" and Color[color_code]then
                 level_text = _apply_color_to_text(color_code, level_text)
             end
 
-            level_texts[#level_texts + 1] = level_text
+            if level.merged then
+                level_texts[#level_texts] = level_texts[#level_texts] .. " " .. level_text
+            else
+                level_texts[#level_texts + 1] = level_text
+            end
         end
     end
 
@@ -748,13 +753,16 @@ local _replace_level = function(text, true_levels, reference, need_adding)
 
         if assignment then
             local assignment_text = assignment.rank
+            local charges_symbol = nil
 
-            if settings.enable_havoc_assignment_charges then
-                local charges_symbol = HAVOC_CHARGE_SYMBOLS[assignment.charges]
+            if settings.enable_havoc_assignment_charges and assignment.rank < HAVOC_ASSIGNMENT_MAX_RANK then
+                charges_symbol = HAVOC_CHARGE_SYMBOLS[assignment.charges]
+            end
 
-                if charges_symbol then
-                    assignment_text = assignment_text .. " " .. charges_symbol
-                end
+            if charges_symbol then
+                assignment_text = assignment_text .. " " .. charges_symbol
+            else
+                levels[4].merged = tonumber(levels[3].val) == assignment.rank
             end
 
             mod._symbols.havoc_assignment_custom = settings.havoc_assignment_icon
@@ -789,6 +797,85 @@ mod.replace_level = function(text, true_levels, reference, need_adding)
     mod.debug.profile_stop("true_level_replace_level")
 
     return result
+end
+
+local SINGLE_LINE_FONT_PERCENT = 80
+local WRAP_FONT_PERCENT = 70
+local MIN_WRAP_FONT_SIZE = 10
+
+local _scaled_font_size = function(font_size, percent)
+    return math.floor(font_size * percent / 100)
+end
+
+local _text_width = function(ui_renderer, text, font_type, font_size)
+    local width = UIRenderer.text_size(ui_renderer, text, font_type, font_size)
+
+    return width
+end
+
+local _split_levels = function(text, levels_text)
+    if not levels_text or levels_text == "" then
+        return nil
+    end
+
+    local level_start, level_end = string.find(text, levels_text, 1, true)
+
+    if not level_start then
+        return nil
+    end
+
+    local before = string.gsub(string.sub(text, 1, level_start - 1), "[%s%-]+$", "")
+    local after = string.match(string.sub(text, level_end + 1), "^%s*(.-)%s*$")
+
+    if before == "" and after ~= "" then
+        return levels_text, after
+    elseif after == "" and before ~= "" then
+        return before, levels_text
+    end
+
+    return nil
+end
+
+mod.fit_name = function(ui_renderer, text, levels_text, style, max_width)
+    local default_font_size = style.tl_default_font_size or style.font_size
+    local font_type = style.font_type
+    local first_line, second_line = _split_levels(text, levels_text)
+    local min_font_size = _scaled_font_size(default_font_size, first_line and SINGLE_LINE_FONT_PERCENT or WRAP_FONT_PERCENT)
+    local font_size = default_font_size
+    local width = _text_width(ui_renderer, text, font_type, font_size)
+    local shift = 0
+
+    style.tl_default_font_size = default_font_size
+
+    while width > max_width and font_size > min_font_size do
+        font_size = font_size - 1
+        width = _text_width(ui_renderer, text, font_type, font_size)
+    end
+
+    if width > max_width and first_line then
+        font_size = _scaled_font_size(default_font_size, WRAP_FONT_PERCENT)
+
+        while font_size > MIN_WRAP_FONT_SIZE
+            and math.max(_text_width(ui_renderer, first_line, font_type, font_size), _text_width(ui_renderer, second_line, font_type, font_size)) > max_width do
+            font_size = font_size - 1
+        end
+
+        text = first_line .. "\n" .. second_line
+        shift = (2 * font_size - default_font_size) * (style.line_spacing or 1)
+    end
+
+    style.font_size = font_size
+
+    local offset = style.offset
+
+    if offset[2] ~= style.tl_offset_y then
+        style.tl_base_offset_y = offset[2]
+    end
+
+    offset[2] = style.tl_base_offset_y - shift
+    style.tl_offset_y = offset[2]
+
+    return text
 end
 
 mod.get_true_levels = function(character_id)
@@ -994,11 +1081,6 @@ mod.on_setting_changed = function(id)
     _refresh_settings()
     mod._is_in_hub = _is_in_hub()
     mod.desync_all()
-
-    if id == "share_havoc_assignment" then
-        mod.request_local_havoc_assignment()
-        _publish_havoc_assignment()
-    end
 end
 
 mod.on_enabled = function()
