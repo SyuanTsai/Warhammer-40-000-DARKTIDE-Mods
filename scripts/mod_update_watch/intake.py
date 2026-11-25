@@ -14,11 +14,12 @@ from html import escape
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from .detect import file_category
+from .detect import file_category, file_version, uploaded_at
 from .drive import DriveClient, DriveError, DriveSizeLimit, FOLDER_MIME, InvalidDriveText, validate_id
+from .handoff import build_received_marker
 from .issues import GitHubClient, GitHubError, find_existing
 from .nexus import GAME_DOMAIN, RATE_HEADERS, NexusClient, NexusError
-from .registry import _normalized_name, load_registry, positive_id
+from .registry import _normalized_name, load_registry, parse_uploaded, positive_id
 from .safe_extract import (
     DEFAULT_LIMITS, CorruptArchive, UnsafeArchive, UnsupportedArchive, extract,
     inspect_archive, read_mod_info,
@@ -62,6 +63,10 @@ class NexusMatch:
     version: str
     name: str
     category: str
+    filename: str = ""
+    uploaded_at: str = ""
+    page_version: str = ""
+    page_updated_at: str = ""
 
 
 def _text(value, default="未知"):
@@ -138,9 +143,14 @@ def _nexus_match(payload):
             continue
         mod_id, file_id = positive_id(mod.get("mod_id")), positive_id(file.get("file_id"))
         if mod_id and file_id:
+            upload = uploaded_at(file) or parse_uploaded(_text(file.get("uploaded_time"), ""))
+            page_update = (uploaded_at({"uploaded_timestamp": mod.get("updated_timestamp")})
+                           or parse_uploaded(_text(mod.get("updated_time"), "")))
             matches.setdefault((mod_id, file_id), NexusMatch(
-                mod_id, file_id, _text(file.get("version")), _text(file.get("name"), ""),
-                file_category(file),
+                mod_id, file_id, file_version(file) or "未知", _text(file.get("name"), ""),
+                file_category(file), _text(file.get("file_name"), ""),
+                upload.isoformat() if upload else "", _text(mod.get("version"), ""),
+                page_update.isoformat() if page_update else "",
             ))
     if len(matches) > 1:
         return None, "Nexus MD5 命中多筆 Darktide 檔案，無法唯一辨識"
@@ -285,7 +295,9 @@ class Intake:
                 dest = Path(directory) / "extracted"
                 extract(archive, dest, **self.archive_options)
                 return read_mod_info(dest), actual
-            return inspect_archive(archive, **self.archive_options)
+            inspected = inspect_archive(archive, **self.archive_options)
+            with archive.open("rb") as stream:
+                return inspected, hashlib.file_digest(stream, "sha256").hexdigest()
 
     def _triage(self, candidate, reason, mod_id=None, *, retain=False):
         file = candidate.file
@@ -362,7 +374,7 @@ class Intake:
 
     def _official(self, candidate, match, reason):
         try:
-            archive = self._archive(candidate)
+            archive, sha256 = self._archive(candidate)
         except (CorruptArchive, UnsafeArchive, UnsupportedArchive, DriveSizeLimit) as error:
             detail = _archive_reason(error)
             self._triage(candidate, f"{reason}；{detail}" if reason else detail,
@@ -386,7 +398,16 @@ class Intake:
             note = f"類別 {category}，這不是主檔"
         if match.name and match.name != _file_name(candidate.file):
             body += f"\n\nNexus 檔案名稱：{_markdown(match.name)}"
-        self._received(candidate, match.mod_id, body, note=note)
+        filename = match.filename or _file_name(candidate.file)
+        if Path(filename).suffix.lower() not in ARCHIVE_SUFFIXES:
+            filename += "." + ("rar" if archive.format == "rar5" else archive.format)
+        marker = build_received_marker(
+            match.mod_id, match.file_id, validate_id(candidate.file.get("id")), _digest(candidate.file),
+            match.category, match.version, filename=filename,
+            uploaded_at=match.uploaded_at, page_version=match.page_version,
+            page_updated_at=match.page_updated_at, sha256=sha256,
+        )
+        self._received(candidate, match.mod_id, f"{body}\n\n{marker}", note=note)
 
     def _check_hotfix(self, candidate):
         if candidate.problem:
@@ -417,7 +438,11 @@ class Intake:
             f"；已移到「已處理/{mod_id}/hotfix」\n\n來源：{_markdown(candidate.source_url)}"
         )
         note = f"版本 {_markdown(version)}" if version != "未知" else "版本未知，info.json 缺少可讀版本"
-        self._received(candidate, mod_id, body, source_id=candidate.source_id, note=note)
+        marker = build_received_marker(
+            mod_id, None, validate_id(candidate.file.get("id")), digest, "UNKNOWN", version,
+            source="hotfix", filename=_file_name(candidate.file),
+        )
+        self._received(candidate, mod_id, f"{body}\n\n{marker}", source_id=candidate.source_id, note=note)
 
     def run(self, max_files):
         self.retained_issue_attempts = 0
