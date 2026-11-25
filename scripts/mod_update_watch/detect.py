@@ -72,7 +72,7 @@ def _latest_main(files):
     return latest, None
 
 
-def _normalized_version(value):
+def normalized_version(value):
     return strip_version(value or "").casefold().removeprefix("v").strip()
 
 
@@ -86,8 +86,8 @@ def _update_reasons(mod, latest, notes):
     baseline_id = mod.baseline_main_file_id
     baseline_time = mod.baseline_uploaded_utc
     latest_version = file_version(latest)
-    before = _normalized_version(mod.baseline_version)
-    after = _normalized_version(latest_version)
+    before = normalized_version(mod.baseline_version)
+    after = normalized_version(latest_version)
     comparable_versions = bool(before and after)
     mod_label = f"Nexus {mod.nexus_id} | {mod.name}"
 

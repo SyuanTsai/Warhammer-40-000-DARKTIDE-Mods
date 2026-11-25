@@ -20,6 +20,7 @@ from scripts.mod_update_orchestrate.report import blocked_units, pr_body
 from scripts.mod_update_watch.drive import FOLDER_MIME
 from scripts.mod_update_watch.handoff import Received, build_received_marker
 from scripts.mod_update_watch.issues import GitHubError
+from scripts.mod_update_watch.registry import load_registry
 
 
 def issue(body="", **fields):
@@ -32,8 +33,8 @@ def comment(receipt, **fields):
     return {"body": receipt, "user": {"login": BOT}, **fields}
 
 
-def marker(file=9001, category="MAIN", **metadata):
-    return build_received_marker(123, file, "drive", "a" * 32, category, "2", **metadata)
+def marker(file=9001, category="MAIN", *, version="2", **metadata):
+    return build_received_marker(123, file, "drive", "a" * 32, category, version, **metadata)
 
 
 class DiscoverTests(unittest.TestCase):
@@ -103,6 +104,98 @@ class DiscoverTests(unittest.TestCase):
         self.assertFalse(discover(Path.cwd(), github, {})[0])
         github.comments.return_value.append(comment("<!-- mod-update-orchestrate:human-localization -->\n\n待辦"))
         self.assertTrue(discover(Path.cwd(), github, {})[0])
+
+
+class RecordedVersionTests(unittest.TestCase):
+    def setUp(self):
+        tmp = self.enterContext(tempfile.TemporaryDirectory())
+        self.root = Path(tmp)
+        (self.root / "Warhammer 40,000 DARKTIDE" / "mods" / "Example").mkdir(parents=True)
+        self.github = Mock()
+        self.github.list_open_issues.return_value = [issue()]
+
+    def registry(self, readme_version, hash_version=None):
+        (self.root / "README.md").write_text(
+            "### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n"
+            f"- MOD 版本：{readme_version}\n", encoding="utf-8")
+        if hash_version is not None:
+            path = self.root / ".hash" / "Example.hash"
+            path.parent.mkdir(exist_ok=True)
+            path.write_text("nexus_id=123\nrepo_directory=Example\nmain_file_id=9000\n"
+                            f"version={hash_version}\n", encoding="utf-8")
+        mods, _ = load_registry(self.root)
+        return {mod.nexus_id: mod for mod in mods}
+
+    # Scenario: .hash 與收件版本相同，但 README 版本及檔案 ID 不同，收件無 SHA-256。
+    # Purpose: 依 registry 的 .hash 優先順序跳過手動更新過的版本。
+    def test_UnitT10_hash_version_skips_update(self):
+        # Given
+        mods = self.registry("1", hash_version="2")
+        self.github.comments.return_value = [comment(marker())]
+        # When
+        matrix, notes = discover(self.root, self.github, mods)
+        # Then
+        self.assertEqual(matrix, [])
+        self.assertIn("repo 紀錄已是版本 2", notes[0])
+
+    # Scenario: 只有 README 提供基準，且收件版本相同。
+    # Purpose: README 基準也能阻止重複更新。
+    def test_UnitT20_readme_version_skips_update(self):
+        # Given
+        mods = self.registry("Version 2")
+        self.github.comments.return_value = [comment(marker())]
+        # When
+        matrix, _ = discover(self.root, self.github, mods)
+        # Then
+        self.assertEqual(matrix, [])
+
+    # Scenario: README 與收件相同，但 .hash 基準版本不同。
+    # Purpose: 使用 .hash 版本並繼續排入更新。
+    def test_UnitT30_different_version_queues_update(self):
+        # Given
+        mods = self.registry("2", hash_version="1")
+        self.github.comments.return_value = [comment(marker())]
+        # When
+        matrix, _ = discover(self.root, self.github, mods)
+        # Then
+        self.assertEqual([item["action"] for item in matrix], ["update"])
+
+    # Scenario: 收件版本為空白或未知，且 repo 也缺少有效版本。
+    # Purpose: 即使雙方使用相同的未知值，也照常排入更新。
+    def test_UnitT40_missing_or_unknown_version_queues_update(self):
+        for version in ("  ", "未知", "UnKnOwN"):
+            with self.subTest(version=version):
+                # Given
+                mods = self.registry(version)
+                self.github.comments.return_value = [comment(marker(version=version))]
+                # When
+                matrix, _ = discover(self.root, self.github, mods)
+                # Then
+                self.assertEqual([item["action"] for item in matrix], ["update"])
+
+    # Scenario: 收件與基準有 Version、v 前綴或大小寫差異。
+    # Purpose: 使用與 P1 相同的版本正規化。
+    def test_UnitT50_normalized_version_skips_update(self):
+        for before, after in (("v26.06.24", "26.06.24"), ("vErSiOn V2.0-BETA", "2.0-beta")):
+            with self.subTest(before=before, after=after):
+                # Given
+                mods = self.registry("1", hash_version=before)
+                self.github.comments.return_value = [comment(marker(version=after))]
+                # When
+                matrix, _ = discover(self.root, self.github, mods)
+                # Then
+                self.assertEqual(matrix, [])
+
+    # Scenario: 版本已收錄，且已有同檔案 PR。
+    # Purpose: 自動模式仍保留既有 PR 的合併檢查。
+    def test_UnitT60_recorded_version_preserves_merge_check(self):
+        # Given
+        mods = self.registry("2")
+        self.github.comments.return_value = [comment(marker())]
+        # When
+        matrix, _ = discover(self.root, self.github, mods, mode="auto", current=lambda *_: True)
+        # Then
+        self.assertEqual([item["action"] for item in matrix], ["merge-check"])
 
 
 class ArchiveTests(unittest.TestCase):

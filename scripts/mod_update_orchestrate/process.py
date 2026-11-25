@@ -11,7 +11,7 @@ from scripts.mod_update_watch.registry import TAIPEI, _load_overrides, _read_has
 from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, extract
 
 from .base import digest, find_base, folder_id
-from .discover import already_recorded, latest_receipt, target, unresolved_external_label
+from .discover import already_recorded, latest_receipt, recorded_version, target, unresolved_external_label
 from .gate import validate_git, validate_paths
 from .localization import Localization, LocalizationError
 from .merge import change_summary, merge_tree
@@ -222,7 +222,8 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 emit("未登錄 MOD 由 P3b 處理")
                 return
             if already_recorded(root, mod, receipt):
-                emit("main 已收錄相同主檔，略過")
+                version = recorded_version(mod, receipt)
+                emit(f"repo 紀錄已是版本 {version}，跳過。" if version else "main 已收錄相同主檔，略過")
                 return
             mod_path = (MODS / mod.directory).as_posix()
             hash_path = f".hash/{mod.hash_file or mod.directory + '.hash'}"

@@ -91,3 +91,20 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual(restore.call_count, 2)
         self.assertEqual(self.github.needs_human.call_args.args[:2], (7, "main"))
         publication.assert_not_called()
+
+    # Scenario: 排入 matrix 後，repo 已手動更新到收件版本。
+    # Purpose: 在下載及 PR 處理前結束，並向 step summary 提供版本。
+    def test_UnitT50_recorded_version_stops_before_download(self):
+        # Given
+        self.mod.baseline_version = "v2"
+        drive = Mock()
+        with (patch("scripts.mod_update_orchestrate.process.latest_receipt", return_value=RECEIPT),
+              patch("scripts.mod_update_orchestrate.process.registry_mod", return_value=self.mod),
+              patch("scripts.mod_update_orchestrate.process.download") as download):
+            # When
+            process(self.root, self.git, self.github, drive, "processed", 7, 123, 9001,
+                    self.scratch / "skill", self.scratch, self.scratch / "cache", emit=self.emit)
+        # Then
+        self.assertIn("repo 紀錄已是版本 v2", self.emit.call_args.args[0])
+        download.assert_not_called()
+        self.github.pulls.assert_not_called()

@@ -3,6 +3,7 @@
 import re
 from dataclasses import asdict, replace
 
+from scripts.mod_update_watch.detect import normalized_version
 from scripts.mod_update_watch.handoff import parse_received_markers
 from scripts.mod_update_watch.issues import AMBIGUOUS_MAIN, FILE_MARKER, MISSING_BASELINE_MARKER
 from scripts.mod_update_watch.registry import _read_hash, positive_id
@@ -31,7 +32,16 @@ def latest_receipt(comments, nexus_id):
     return markers[-1] if markers else None
 
 
-def already_recorded(root, mod, receipt):
+def recorded_version(mod, receipt):
+    version = normalized_version(receipt.version)
+    if mod and version not in {"", "未知", "unknown"} and normalized_version(mod.baseline_version) == version:
+        return mod.baseline_version
+    return None
+
+
+def already_recorded(root, mod, receipt, *, match_version=True):
+    if match_version and recorded_version(mod, receipt):
+        return True
     if not mod or not mod.hash_file:
         return False
     fields = _read_hash(root / ".hash" / mod.hash_file)
@@ -83,13 +93,17 @@ def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=No
         if receipt.file_id != file_id:
             notes.append(f"Issue #{number}：等待主檔 {file_id} 收件")
             continue
-        if nexus_id in seen or already_recorded(root, mods.get(nexus_id), receipt):
+        mod = mods.get(nexus_id)
+        if nexus_id in seen or already_recorded(root, mod, receipt, match_version=False):
             continue
         if current and current(nexus_id, file_id):
             if mode != "auto":
                 continue
             action = "merge-check"
         elif skip_updates:
+            continue
+        elif version := recorded_version(mod, receipt):
+            notes.append(f"Issue #{number}：repo 紀錄已是版本 {version}，跳過。")
             continue
         else:
             action = "update"
