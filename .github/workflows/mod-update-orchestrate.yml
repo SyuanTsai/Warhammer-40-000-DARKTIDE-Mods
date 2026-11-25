@@ -79,19 +79,20 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           NEXUS_FILTER: ${{ inputs.nexus_id }}
           DRY_RUN: ${{ inputs.dry_run }}
+          REVIEW_INPUT: ${{ inputs.review_mode }}
+          MOD_UPDATE_REVIEW_MODE: ${{ vars.MOD_UPDATE_REVIEW_MODE }}
           GCP_WORKLOAD_IDENTITY_PROVIDER: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
           GCP_SERVICE_ACCOUNT: ${{ vars.GCP_SERVICE_ACCOUNT }}
           GDRIVE_PROCESSED_FOLDER_ID: ${{ vars.GDRIVE_PROCESSED_FOLDER_ID }}
         run: |
-          if (!$env:GCP_WORKLOAD_IDENTITY_PROVIDER -or !$env:GCP_SERVICE_ACCOUNT -or !$env:GDRIVE_PROCESSED_FOLDER_ID) {
-            Write-Output '::warning::缺少 Drive／WIF 設定，略過此次更新。'
-            '缺少 Drive／WIF 設定，略過此次更新。' >> $env:GITHUB_STEP_SUMMARY
-            'matrix={"include":[]}' >> $env:GITHUB_OUTPUT
-            'has_items=false' >> $env:GITHUB_OUTPUT
-            exit 0
-          }
           $arguments = @()
+          if (!$env:GCP_WORKLOAD_IDENTITY_PROVIDER -or !$env:GCP_SERVICE_ACCOUNT -or !$env:GDRIVE_PROCESSED_FOLDER_ID) {
+            Write-Output '::warning::缺少 Drive／WIF 設定，僅探索既有 PR 的合併資格。'
+            '缺少 Drive／WIF 設定，僅探索既有 PR 的合併資格。' >> $env:GITHUB_STEP_SUMMARY
+            $arguments += '--skip-updates'
+          }
           if ($env:NEXUS_FILTER) { $arguments += @('--nexus-id', $env:NEXUS_FILTER) }
+          if ($env:REVIEW_INPUT) { $arguments += @('--review-mode', $env:REVIEW_INPUT) }
           if ($env:DRY_RUN -eq 'true') { $arguments += '--dry-run' }
           python -m scripts.mod_update_orchestrate.main discover @arguments
 
@@ -121,6 +122,7 @@ jobs:
           path: mods
           persist-credentials: true
       - uses: actions/checkout@v4
+        if: matrix.action == 'update'
         with:
           repository: SyuanTsai/Skill-Darktide-Translate
           ref: 215182256aa1d620b8c748afc4254453038eef3e
@@ -130,6 +132,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: 安裝 Skill 相依套件
+        if: matrix.action == 'update'
         shell: pwsh
         env:
           SKILL_ROOT: ${{ github.workspace }}/.skill
@@ -138,6 +141,7 @@ jobs:
           python -m pip install -r (Join-Path $env:SKILL_ROOT 'packages/claude-runner/requirements.lock')
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
       - name: Install 7-Zip
+        if: matrix.action == 'update'
         shell: bash
         run: |
           if ! sudo apt-get install -y 7zip; then
@@ -146,6 +150,7 @@ jobs:
             echo "::warning::無法安裝 7-Zip 的 RAR 外掛。RAR 解壓能力取決於 runner 上已有的解碼器。"
           fi
       - name: 驗證 Drive 身分
+        if: matrix.action == 'update'
         id: gauth
         uses: google-github-actions/auth@v2
         with:
@@ -156,6 +161,7 @@ jobs:
           create_credentials_file: false
           export_environment_variables: false
       - uses: actions/cache/restore@v4
+        if: matrix.action == 'update'
         id: translation_cache
         with:
           path: ${{ runner.temp }}/darktide-translate-${{ matrix.nexus_id }}
@@ -179,14 +185,16 @@ jobs:
           NEXUS_ID: ${{ matrix.nexus_id }}
           FILE_ID: ${{ matrix.file_id }}
           ISSUE: ${{ matrix.issue }}
+          MATRIX_ACTION: ${{ matrix.action }}
         run: |
           $arguments = @('--nexus-id', $env:NEXUS_ID, '--file-id', $env:FILE_ID, '--issue', $env:ISSUE)
+          if ($env:MATRIX_ACTION -eq 'merge-check') { $arguments += '--merge-check' }
           if ($env:REVIEW_INPUT) { $arguments += @('--review-mode', $env:REVIEW_INPUT) }
           if ($env:MAX_ITEMS -and $env:MAX_ITEMS -ne '0') { $arguments += @('--max-items', $env:MAX_ITEMS) }
           if ($env:DRY_RUN -eq 'true') { $arguments += '--dry-run' }
           python -m scripts.mod_update_orchestrate.main process @arguments
       - uses: actions/cache/save@v4
-        if: always() && steps.process.outcome != 'skipped' && inputs.dry_run != true && steps.translation_cache.outputs.cache-hit != 'true'
+        if: always() && matrix.action == 'update' && steps.process.outcome != 'skipped' && inputs.dry_run != true && steps.translation_cache.outputs.cache-hit != 'true'
         with:
           path: ${{ runner.temp }}/darktide-translate-${{ matrix.nexus_id }}
           key: ${{ steps.translation_cache.outputs.cache-primary-key }}

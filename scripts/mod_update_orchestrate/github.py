@@ -116,6 +116,9 @@ class GitHub(GitHubClient):
                            "per_page": 100})
         return self.pages(f"pulls?{query}", "列出同分支的開啟 PR")
 
+    def pull(self, number):
+        return self.api("GET", f"pulls/{number}", "重讀更新 PR")
+
     def write_pr(self, previous, branch, title, body, draft):
         payload = {"title": title, "body": body}
         if previous:

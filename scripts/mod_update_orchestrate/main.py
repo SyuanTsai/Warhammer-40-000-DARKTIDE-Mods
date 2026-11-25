@@ -14,7 +14,7 @@ from scripts.mod_update_watch.registry import load_registry, positive_id
 
 from .discover import discover
 from .github import GitHub
-from .pr import current_pr, run_git
+from .pr import current_pr, merge_check, run_git
 from .process import process
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -45,11 +45,16 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     parser.add_argument("--issue", type=count)
     parser.add_argument("--max-items", type=count)
     parser.add_argument("--review-mode", choices=("manual", "auto"))
+    parser.add_argument("--merge-check", action="store_true")
+    parser.add_argument("--skip-updates", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
 
     try:
         github = GitHub(github_transport)
+        mode = args.review_mode or os.environ.get("MOD_UPDATE_REVIEW_MODE") or "manual"
+        if mode not in ("manual", "auto"):
+            raise ValueError("MOD_UPDATE_REVIEW_MODE 必須為 manual 或 auto")
         if args.command == "discover":
             mods, _ = load_registry(root)
             @memoize
@@ -61,6 +66,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
                 root, github, {mod.nexus_id: mod for mod in mods}, nexus_filter=args.nexus_id,
                 dry_run=args.dry_run,
                 current=lambda nexus, file: current_pr(open_pulls(), nexus, file),
+                mode=mode, skip_updates=args.skip_updates,
             )
             for note in notes:
                 emit(note)
@@ -73,6 +79,14 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
 
         if not all((args.nexus_id, args.file_id, args.issue)):
             parser.error("process 需要 --nexus-id、--file-id、--issue")
+        git = partial(run_git, root)
+        if args.merge_check:
+            if mode == "auto":
+                merge_check(git, github, args.issue, args.nexus_id, args.file_id,
+                            dry_run=args.dry_run, emit=emit)
+            else:
+                emit("目前為 manual 審查模式，略過合併檢查。")
+            return 0
         processed = os.environ.get("GDRIVE_PROCESSED_FOLDER_ID")
         if not processed or not os.environ.get("GOOGLE_ACCESS_TOKEN"):
             emit("警告：缺少 Drive／WIF 設定，略過此次更新")
@@ -85,10 +99,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
                      scratch / f"darktide-translate-{args.nexus_id}").resolve()
         if any(path.is_relative_to(root) or path.is_relative_to(skill) for path in (scratch, cache)):
             raise ValueError("暫存與快取目錄須位於兩個 checkout 之外")
-        mode = args.review_mode or os.environ.get("MOD_UPDATE_REVIEW_MODE") or "manual"
-        if mode not in ("manual", "auto"):
-            raise ValueError("MOD_UPDATE_REVIEW_MODE 必須為 manual 或 auto")
-        process(root, partial(run_git, root), github, DriveClient(drive_transport), processed,
+        process(root, git, github, DriveClient(drive_transport), processed,
                 args.issue, args.nexus_id, args.file_id, skill, scratch, cache,
                 max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit)
         return 0

@@ -12,6 +12,7 @@ from unittest.mock import Mock, patch
 from scripts.mod_update_orchestrate.base import find_base
 from scripts.mod_update_orchestrate.discover import discover
 from scripts.mod_update_orchestrate.github import BOT, GitHub
+from scripts.mod_update_orchestrate.main import main
 from scripts.mod_update_orchestrate.pr import publish
 from scripts.mod_update_orchestrate.process import NeedsHuman, download, registry_mod
 from scripts.mod_update_orchestrate.records import update_hash, update_readme
@@ -46,13 +47,40 @@ class DiscoverTests(unittest.TestCase):
             github.comments.return_value = [comment(marker(sha256="b" * 64))]
             matrix, _ = discover(root, github, {})
             self.assertEqual(len(matrix), 1)
+            self.assertEqual(matrix[0]["action"], "update")
             self.assertEqual((matrix[0]["nexus_id"], matrix[0]["file_id"], matrix[0]["issue"],
                               matrix[0]["drive_file_id"]), (123, 9001, 7, "drive"))
             self.assertFalse(discover(root, github, {}, current=lambda *args: True)[0])
+            self.assertFalse(discover(root, github, {}, mode="auto", skip_updates=True)[0])
             hash_file = root / ".hash" / "example.hash"
             hash_file.parent.mkdir()
             hash_file.write_text("main_file_id=9001\nsha256=" + "b" * 64, encoding="utf-8")
             self.assertFalse(discover(root, github, {123: SimpleNamespace(hash_file=hash_file.name)})[0])
+
+    # Scenario: 同版本 PR 已開啟，分別以 manual 與 auto 探索。
+    # Purpose: 確認 dispatch 優先於變數，且缺少 Drive 設定時仍可排入合併檢查。
+    def test_UnitT15_review_mode_controls_existing_pr_matrix(self):
+        # Given
+        github = Mock()
+        github.list_open_issues.return_value = [issue()]
+        github.comments.return_value = [comment(marker())]
+        github.pages.return_value = [{"pull_request": {}, "body": (
+            "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 verified_head="
+            + "a" * 40 + " -->")}]
+        for variable, flags, actions in [("", [], []), ("auto", ["--review-mode", "manual"], []),
+                                         ("auto", ["--skip-updates"], ["merge-check"]),
+                                         ("manual", ["--review-mode", "auto"], ["merge-check"])]:
+            with self.subTest(variable=variable, flags=flags), patch.dict(os.environ, {
+                    "MOD_UPDATE_REVIEW_MODE": variable, "GITHUB_OUTPUT": ""}), patch(
+                    "scripts.mod_update_orchestrate.main.GitHub", return_value=github), patch(
+                    "scripts.mod_update_orchestrate.main.load_registry", return_value=([], None)), patch(
+                    "builtins.print") as printed:
+                # When
+                result = main(["discover", *flags])
+                # Then
+                self.assertEqual(result, 0)
+                matrix = json.loads(printed.call_args.args[0])["include"]
+                self.assertEqual([item["action"] for item in matrix], actions)
 
     # Scenario: 收件版本過期、非主檔、hotfix、或 Issue 有歧義。
     # Purpose: 跳過並提示正確原因，dry run 留言零寫入。
@@ -162,7 +190,9 @@ class HumanAndPrTests(unittest.TestCase):
     # Scenario: 既有同 MOD PR 更新時遠端 head 可核對，自動合併具備條件。
     # Purpose: 固定分支使用精確 lease，PR upsert 與 merge 綁定驗證過的 SHA。
     def test_UnitT30_publish_uses_lease_and_expected_sha(self):
+        # Given
         expected, head = "a" * 40, "b" * 40
+        body = "本文\n<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"
         path = "Warhammer 40,000 DARKTIDE/mods/Example"
         ref = "refs/heads/auto/mod-update/123"
         github = Mock()
@@ -171,10 +201,14 @@ class HumanAndPrTests(unittest.TestCase):
         previous = {"number": 7, "head": {"sha": expected}}
         git = Mock(side_effect=lambda *args: {"ls-remote": f"{expected}\t{ref}",
                          "rev-parse": head, "diff": "README.md\0"}.get(args[0], ""))
-        self.assertEqual(publish(git, github, previous, 123, "標題", "本文", "auto", [],
+        # When
+        self.assertEqual(publish(git, github, previous, 123, "標題", body, "auto", [],
                                  "c" * 40, (path, "README.md", ".hash/example.hash")), 7)
+        # Then
         git.assert_any_call("push", f"--force-with-lease={ref}:{expected}", "origin", f"HEAD:{ref}")
-        github.write_pr.assert_called_once_with(previous, "auto/mod-update/123", "標題", "本文", False)
+        github.write_pr.assert_called_once_with(previous, "auto/mod-update/123", "標題",
+                                                body.replace(" -->", f" verified_head={head} route=update -->"),
+                                                False)
         github.merge_pr.assert_called_once_with(7, head)
 
     # Scenario: GitHub 拒絕 GITHUB_TOKEN 建立 PR。
@@ -194,6 +228,124 @@ class HumanAndPrTests(unittest.TestCase):
         for part in ("Closes #7", "無三方合併基準", "| NONE | 1 |", "0（未呼叫 API）",
                      "規則 SHA：rules", "詞彙表 SHA：terms", "main.lua ｜ +1 / -0"):
             self.assertIn(part, body)
+
+
+class MergeCheckTests(unittest.TestCase):
+    head = "a" * 40
+    ref = "refs/heads/auto/mod-update/123"
+    legacy = "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"
+
+    def setUp(self):
+        self.pull = {"number": 8, "node_id": "pr8", "state": "open", "draft": False, "labels": [],
+                     "head": {"sha": self.head, "ref": self.ref.removeprefix("refs/heads/")},
+                     "base": {"ref": "main"},
+                     "body": self.legacy.replace(" -->", f" verified_head={self.head} route=update -->")}
+        self.resolved = True
+        self.remote = self.head
+        self.notes = []
+        self.writes = []
+
+    def transport(self, method, url, headers, data):
+        path = url.split("/repos/owner/mods/")[-1]
+        if path == "issues/7":
+            response = issue()
+        elif path.startswith("pulls?"):
+            response = [{"number": 8}]
+        elif path == "pulls/8":
+            self.assertEqual(method, "GET")
+            response = self.pull
+        elif url.endswith("/graphql"):
+            self.assertIn("reviewThreads", json.loads(data)["query"])
+            response = {"data": {"node": {"reviewThreads": {
+                "nodes": [{"isResolved": self.resolved}], "pageInfo": {"hasNextPage": False}}}}}
+        elif path == "issues/8/comments?per_page=100":
+            response = self.notes
+        elif path == "issues/8/comments" and method == "POST":
+            payload = json.loads(data)
+            self.writes.append((method, path, payload))
+            self.notes.append(comment(payload["body"], id=44))
+            response = {}
+        elif path == "pulls/8/merge" and method == "PUT":
+            self.writes.append((method, path, json.loads(data)))
+            response = {"merged": True}
+        else:
+            self.fail(f"非預期 API 呼叫 {method} {path}")
+        return 200, {}, json.dumps(response).encode()
+
+    def run_check(self, *flags):
+        expected = ("ls-remote", "--heads", "origin", self.ref)
+
+        def git(root, *args):
+            self.assertEqual(args, expected)
+            return f"{self.remote}\t{self.ref}"
+
+        with patch.dict(os.environ, {"GITHUB_TOKEN": "fake", "GITHUB_REPOSITORY": "owner/mods"},
+                        clear=True), patch("scripts.mod_update_orchestrate.main.run_git", side_effect=git), patch(
+                        "scripts.mod_update_orchestrate.main.emit") as emit:
+            self.assertEqual(main(["process", "--merge-check", "--nexus-id", "123", "--file-id", "9001",
+                                   "--issue", "7", "--review-mode", "auto", *flags],
+                                  github_transport=self.transport), 0)
+            return "\n".join(call.args[0] for call in emit.call_args_list)
+
+    # Scenario: 同版本 PR 的標記、分支、狀態與討論均符合資格。
+    # Purpose: 合併 API 綁定 verified_head，且沒有 Git 或 PR 內容寫入。
+    def test_UnitT10_merge_only_with_verified_head(self):
+        # Given 目前 PR 與遠端分支指向驗證過的提交。
+        # When
+        summary = self.run_check()
+        # Then
+        self.assertEqual(self.writes, [("PUT", "pulls/8/merge", {"sha": self.head, "merge_method": "merge"})])
+        self.assertIn("已合併", summary)
+
+    # Scenario: PR head 或遠端固定分支在驗證後移動。
+    # Purpose: 阻止任何與 verified_head 不一致的提交進入 main。
+    def test_UnitT20_skip_changed_pr_or_remote_head(self):
+        # Given
+        self.pull["head"]["sha"] = "b" * 40
+        # When / Then
+        self.assertIn("verified_head", self.run_check())
+        self.pull["head"]["sha"] = self.head
+        self.remote = "c" * 40
+        self.assertIn("verified_head", self.run_check())
+        self.assertEqual(self.writes, [])
+
+    # Scenario: 未解決討論先重跑兩次，再於討論解決後重跑。
+    # Purpose: 沿用留言去重，並在討論解決後恢復自動合併。
+    def test_UnitT30_note_once_then_merge_after_resolution(self):
+        # Given
+        self.resolved = False
+        # When / Then
+        self.assertIn("未解決", self.run_check())
+        self.assertIn("未解決", self.run_check())
+        self.assertEqual([(method, path) for method, path, _ in self.writes], [("POST", "issues/8/comments")])
+        self.resolved = True
+        self.assertIn("已合併", self.run_check())
+        self.assertEqual(self.writes[-1], ("PUT", "pulls/8/merge", {"sha": self.head, "merge_method": "merge"}))
+
+    # Scenario: 舊標記、錯誤目標、新模組路由或 PR 狀態阻擋合併資格。
+    # Purpose: 每個阻擋條件在 summary 可追查，且沒有遠端寫入。
+    def test_UnitT40_skip_ineligible_pulls(self):
+        original = self.pull["body"]
+        for fields, reason in [({"body": self.legacy}, "verified_head"),
+                               ({"body": original.replace("9001", "9002")}, "標記"),
+                               ({"body": original.replace("route=update", "route=new")}, "route=new"),
+                               ({"state": "closed"}, "關閉"), ({"draft": True}, "草稿"),
+                               ({"labels": [{"name": "blocked"}]}, "blocked")]:
+            # Given
+            with self.subTest(fields=fields), patch.dict(self.pull, fields):
+                # When / Then
+                self.assertIn(reason, self.run_check())
+        self.assertEqual(self.writes, [])
+
+    # Scenario: 符合資格的 PR 以 dry-run 重跑。
+    # Purpose: 試跑回報合併資格且保留零遠端寫入。
+    def test_UnitT50_dry_run_does_not_write(self):
+        # Given 目前 PR 符合所有合併條件。
+        # When
+        summary = self.run_check("--dry-run")
+        # Then
+        self.assertIn("符合自動合併資格", summary)
+        self.assertEqual(self.writes, [])
 
 
 class RecordsTests(unittest.TestCase):

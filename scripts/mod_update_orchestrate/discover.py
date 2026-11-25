@@ -52,7 +52,8 @@ def unresolved_external_label(issue, comments):
                    and not comment["body"].endswith("\n\n已解決") for comment in comments)
 
 
-def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=None):
+def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=None,
+             mode="manual", skip_updates=False):
     matrix, notes = [], []
     seen = set()
     for issue in github.list_open_issues():
@@ -76,15 +77,22 @@ def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=No
             continue
         if receipt.category != "MAIN":
             notes.append(f"Issue #{number}：請上傳主檔 MAIN")
-            if not dry_run:
+            if not dry_run and not skip_updates:
                 github.note(number, "non-main", "請上傳 Nexus 主檔 MAIN。")
             continue
         if receipt.file_id != file_id:
             notes.append(f"Issue #{number}：等待主檔 {file_id} 收件")
             continue
-        if (nexus_id in seen or already_recorded(root, mods.get(nexus_id), receipt)
-                or (current and current(nexus_id, file_id))):
+        if nexus_id in seen or already_recorded(root, mods.get(nexus_id), receipt):
             continue
+        if current and current(nexus_id, file_id):
+            if mode != "auto":
+                continue
+            action = "merge-check"
+        elif skip_updates:
+            continue
+        else:
+            action = "update"
         seen.add(nexus_id)
-        matrix.append({**asdict(receipt), "issue": number})
+        matrix.append({**asdict(receipt), "issue": number, "action": action})
     return matrix, notes
