@@ -1,4 +1,6 @@
 import importlib.util
+import hashlib
+import io
 import json
 import os
 import shutil
@@ -6,12 +8,16 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from scripts.mod_update_orchestrate.gate import validate_git
 from scripts.mod_update_orchestrate.localization import Localization
 from scripts.mod_update_orchestrate.pr import run_git
+from scripts.mod_update_orchestrate.process import process
+from scripts.mod_update_orchestrate.tests.test_pipeline import comment, issue, marker
+from scripts.mod_update_orchestrate.tests.test_routes import README
 from scripts.mod_update_orchestrate.tree import MODS
 
 
@@ -82,6 +88,90 @@ class SkillTests(unittest.TestCase):
                      for unit in request.user["units"]]
         return self.Response(json.dumps({"items": items}), model="claude-sonnet-5-5",
                              usage={"input_tokens": 10, "output_tokens": 5})
+
+    # Scenario: 未登錄 MOD 只有原文，固定版 Skill 搭配假翻譯與審查產生新 PR。
+    # Purpose: 驗證第一個 Git 基準的 bytes、BaseOid 綁定、Receipt、第二個 Git 提交與禁止自動合併。
+    def test_InterT15_new_route_upstream_to_receipt_and_records(self):
+        # Given
+        readme = self.repo / "README.md"
+        readme.write_text(README, encoding="utf-8")
+        self.git("add", "--", "README.md")
+        main = self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                        "commit-tree", self.git("write-tree"), "-m", "Synthetic main")
+        self.git("update-ref", "HEAD", main)
+        fresh = (MODS / "Fresh").as_posix()
+        localization = 'return { added = { en = "Activate" } }\n'.encode()
+        upstream = {"Fresh.mod": b'return {}\r\n', "Fresh_localization.lua": localization,
+                    "info.json": b'{"description":"Example feature"}'}
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, "w") as archive:
+            for name, data in upstream.items():
+                archive.writestr("wrapper/Fresh/" + name, data)
+        blob = buffer.getvalue()
+        sha256 = hashlib.sha256(blob).hexdigest()
+        receipt = marker(filename="Fresh.zip", sha256=sha256, mod_name="New Example")
+        receipt = receipt.replace("a" * 32, hashlib.md5(blob, usedforsecurity=False).hexdigest())
+        github, drive = Mock(), Mock()
+        github.issue.return_value = issue()
+        github.comments.return_value = [comment(receipt)]
+        github.pulls.return_value = []
+        drive.download.side_effect = lambda _, path, limit: path.write_bytes(blob)
+        pushed = []
+
+        def git(*args, **kwargs):
+            if args[0] == "fetch":
+                return ""
+            if args == ("rev-parse", "FETCH_HEAD"):
+                return main
+            if args[0] == "ls-remote":
+                return ""
+            if args[0] == "push":
+                pushed.append(args[-1].split(":", 1)[0])
+                return ""
+            return run_git(self.repo, *args, **kwargs)
+
+        github.write_pr.side_effect = lambda *args: {
+            "number": 9, "head": {"sha": pushed[-1]}, "draft": False, "labels": []}
+        transport = self.FakeTransport([self.respond, self.respond])
+        generated = []
+        generate = Localization.generate
+        translate = Localization.translate
+
+        def capture_generation(loc, tree):
+            document = generate(loc, tree)
+            generated.append((loc.base_oid, document))
+            return document
+
+        def translate_offline(loc, document, **kwargs):
+            return translate(loc, document, adapter=self.run_adapter(transport), **kwargs)
+
+        # When
+        with patch.object(Localization, "generate", capture_generation), patch.object(
+                Localization, "translate", translate_offline), patch.dict(os.environ, {"ANTHROPIC_API_KEY": ""}):
+            process(self.repo, git, github, drive, "processed", 7, 123, 9001,
+                    self.skill, self.temp, self.temp / "cache", route="new", mode="auto", emit=Mock())
+
+        # Then
+        final, = pushed
+        first = self.git("rev-parse", f"{final}^")
+        self.assertEqual(self.git("rev-parse", f"{first}^"), main)
+        base_oid, workset = generated[0]
+        self.assertEqual(workset["baseOid"], first)
+        self.assertEqual(base_oid, first)
+        self.assertEqual(workset["units"][0]["action"], "AI_REQUIRED")
+        self.assertEqual(len(transport.requests), 2)
+        self.assertEqual(set(self.git("diff-tree", "--name-only", "-r", main, first).splitlines()),
+                         {f"{fresh}/{name}" for name in upstream})
+        for name, data in upstream.items():
+            actual = subprocess.check_output(["git", "show", f"{first}:{fresh}/{name}"], cwd=self.repo)
+            self.assertEqual(actual, data)
+        self.assertEqual(set(self.git("diff-tree", "--name-only", "-r", first, final).splitlines()),
+                         {f"{fresh}/Fresh_localization.lua", ".hash/Fresh.hash", "README.md"})
+        self.assertIn("啟動", self.git("show", f"{final}:{fresh}/Fresh_localization.lua"))
+        self.assertIn("route=new", github.write_pr.call_args.args[3])
+        self.assertIn("Permissions", github.write_pr.call_args.args[3])
+        self.assertEqual(self.git("status", "--porcelain"), "")
+        github.merge_pr.assert_not_called()
 
     # Scenario: 上游新增英文項目，假 transport 通過翻譯與審查。
     # Purpose: 用真 Skill 測試 New、核准、Apply、Receipt、Gate 的介面。

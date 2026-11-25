@@ -74,7 +74,8 @@ class DiscoverTests(unittest.TestCase):
             with self.subTest(variable=variable, flags=flags), patch.dict(os.environ, {
                     "MOD_UPDATE_REVIEW_MODE": variable, "GITHUB_OUTPUT": ""}), patch(
                     "scripts.mod_update_orchestrate.main.GitHub", return_value=github), patch(
-                    "scripts.mod_update_orchestrate.main.load_registry", return_value=([], None)), patch(
+                    "scripts.mod_update_orchestrate.main.load_registry", return_value=(
+                        [SimpleNamespace(nexus_id=123, hash_file=None)], None)), patch(
                     "builtins.print") as printed:
                 # When
                 result = main(["discover", *flags])
@@ -83,16 +84,19 @@ class DiscoverTests(unittest.TestCase):
                 matrix = json.loads(printed.call_args.args[0])["include"]
                 self.assertEqual([item["action"] for item in matrix], actions)
 
-    # Scenario: 收件版本過期、非主檔、hotfix、或 Issue 有歧義。
+    # Scenario: 已登錄 MOD 的收件版本過期、非主檔、hotfix 資料不足或 Issue 有歧義。
     # Purpose: 跳過並提示正確原因，dry run 留言零寫入。
     def test_UnitT20_filter_and_dry_run(self):
+        # Given
         github = Mock()
         github.list_open_issues.return_value = [issue()]
+        mods = {123: SimpleNamespace(hash_file=None, baseline_version="1")}
+        # When / Then
         for received, expected in [(marker(9000), "等待主檔"),
                                    (marker(9000, "OPTIONAL"), "請上傳主檔"),
-                                   (marker(None, "UNKNOWN", source="hotfix"), "P3b")]:
+                                   (marker(None, "UNKNOWN", source="hotfix"), "hotfix 收件資料不完整")]:
             github.comments.return_value = [comment(received)]
-            matrix, notes = discover(Path.cwd(), github, {}, dry_run=True)
+            matrix, notes = discover(Path.cwd(), github, mods, dry_run=True)
             self.assertFalse(matrix)
             self.assertIn(expected, notes[0])
         github.note.assert_not_called()

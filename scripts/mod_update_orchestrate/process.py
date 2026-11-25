@@ -1,23 +1,26 @@
 """下載、重建並驗證單一 MOD 的更新候選。"""
 
 import os
+import re
 import shutil
 import tempfile
 from datetime import datetime
+from html import unescape
 from pathlib import Path
 
 from scripts.mod_update_watch.drive import DriveError, validate_id
-from scripts.mod_update_watch.registry import TAIPEI, _load_overrides, _read_hash, load_registry
-from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, extract
+from scripts.mod_update_watch.registry import README_MOD, TAIPEI, TrackedMod, _load_overrides, _read_hash, load_registry
+from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, WINDOWS_DEVICE, extract
 
 from .base import digest, find_base, folder_id
-from .discover import already_recorded, latest_receipt, recorded_version, target, unresolved_external_label
+from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
 from .gate import validate_git, validate_paths
 from .localization import Localization, LocalizationError
 from .merge import change_summary, merge_tree
-from .pr import branch_for, current_pr, publish
-from .records import update_hash, update_readme, updates
+from .pr import branch_for, current_pr, publish, stage_raw, upstream_commit
+from .records import PENDING, insert_readme, readme_sections, update_hash, update_readme, updates
 from .report import blocked_units, cell, plain, pr_body
+from .section import DEFAULT_SECTION, choose_section, describe
 from .tree import MODS, TreeError, is_localization, locate_mod, read_tree
 
 
@@ -44,10 +47,27 @@ def registry_mod(root, nexus_id):
     return mod
 
 
+def new_mod(root, issue, receipt, directory, tree):
+    if (not re.fullmatch(r"[\w.-](?:[\w. -]*[\w-])?", directory) or directory.startswith(".")
+            or WINDOWS_DEVICE.fullmatch(directory.partition(".")[0].rstrip())):
+        raise TreeError("BLOCKED：新增 MOD 目錄名稱含不安全字元")
+    for parent, name in ((root / MODS, directory), (root / ".hash", directory + ".hash")):
+        if parent.exists() and any(entry.name.casefold() == name.casefold() for entry in parent.iterdir()):
+            raise TreeError("BLOCKED：新增 MOD 目錄或 .hash 與 repo 既有名稱衝突")
+    if any((match := README_MOD.match(line)) and int(match[2]) == receipt.nexus_id
+           for line in (root / "README.md").read_text(encoding="utf-8-sig").splitlines()):
+        raise TreeError("BLOCKED：README 已有相同 Nexus ID")
+    if sum(is_localization(path) for path in tree) != 1:
+        raise TreeError("unsupported-localization-layout：須有唯一靜態本地化檔")
+    name = re.search(r"^- MOD：([^\r\n]+)", issue.get("body") or "", re.MULTILINE)
+    name = receipt.mod_name or (unescape(name[1]) if name else f"Nexus MOD {receipt.nexus_id}（待補）")
+    return TrackedMod(receipt.nexus_id, plain(name), directory, "hash", None, None, None, None, None)
+
+
 def download(drive, receipt, workspace):
     path = workspace / "new-archive"
     drive.download(receipt.drive_file_id, path, DEFAULT_LIMITS.max_archive_bytes)
-    if digest(path, "md5") != receipt.md5:
+    if not receipt.source and digest(path, "md5") != receipt.md5:
         raise NeedsHuman("archive", "下載檔案 MD5 與收件標記不符")
     if receipt.sha256 and digest(path) != receipt.sha256:
         raise NeedsHuman("archive", "下載檔案 SHA-256 與收件標記不符")
@@ -84,15 +104,16 @@ def _budget(github, number, nexus_id, receipt, mod, summary):
     title = f"[MOD 翻譯超額] {plain(mod.name)}（{count} 項）"[:256]
     message = (f"待翻譯 {count} 項，單次上限 {summary['maxItems']}。估算 USD {estimate:.6f}。\n\n"
                f"放行方式：workflow_dispatch nexus_id={nexus_id} max_items={count}。")
-    github.budget_issue(number, nexus_id, receipt.file_id, title, message)
+    github.budget_issue(number, nexus_id, receipt_key(receipt), title, message)
 
 
 def candidate(root, git, github, drive, processed, issue, number, receipt, mod, paths, archive,
-              new_tree, workspace, cache, skill, base_oid, *, max_items, dry_run, emit):
+              new_tree, workspace, cache, skill, base_oid, *, max_items, dry_run, emit,
+              route="update", upstream_oid=None):
     nexus_id = receipt.nexus_id
     mod_path, _, hash_path = paths
     hash_fields = _read_hash(root / hash_path) if (root / hash_path).exists() else {}
-    base_archive = find_base(drive, processed, nexus_id, hash_fields.get("sha256"), workspace,
+    base_archive = None if route == "new" else find_base(drive, processed, nexus_id, hash_fields.get("sha256"), workspace,
                              exclude=receipt.drive_file_id,
                              preferred_md5=hash_fields.get("drive_intake_md5"))
     base = None
@@ -104,15 +125,15 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         except (ArchiveError, ValueError):
             emit("封存基準無法安全解壓或定位，使用無基準路線")
     repo_mod = root / mod_path
-    ours = read_tree(repo_mod, include_localization=True)
+    ours = new_tree if route == "new" else read_tree(repo_mod, include_localization=True)
     non_local = {path: value for path, value in new_tree.items() if not is_localization(path)}
     ours_non_local = {path: value for path, value in ours.items() if not is_localization(path)}
-    merged, conflicts = merge_tree(ours_non_local, base, non_local, workspace)
+    merged, conflicts = (non_local, []) if route == "new" else merge_tree(ours_non_local, base, non_local, workspace)
     validate_paths([*(f"{mod_path}/{path}" for path in merged),
                     *(f"{mod_path}/{path}" for path in new_tree if is_localization(path)),
                     *paths[1:]], mod_path, hash_path)
     with tempfile.TemporaryDirectory(prefix=".p3-localization-", dir=root) as temporary:
-        loc = Localization(root, Path(temporary), workspace, skill, mod_path, base_oid,
+        loc = Localization(root, Path(temporary), workspace, skill, mod_path, upstream_oid or base_oid,
                            f"nexus-{nexus_id}", cache)
         document = loc.generate(new_tree)
         preblocked = [unit for unit in document["units"] if unit["action"] == "BLOCKED"]
@@ -124,6 +145,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
             emit(f"翻譯預覽：待送 {summary['apiItemCount']} 項，上限 {summary['maxItems']}，"
                  f"估算 USD {summary['estimate']['estimatedUsd']:.6f}。路徑預檢通過。"
                  " Apply、Receipt、Gate 未執行。")
+            if route == "new":
+                emit(f"README 預覽分區：{DEFAULT_SECTION}。摘要：{PENDING}。")
             return None
         if status == 2:
             _budget(github, number, nexus_id, receipt, mod, summary)
@@ -160,32 +183,50 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
             for name in endings for parent in Path(name).parents if parent != Path(".")):
         raise NeedsHuman("layout", "BLOCKED：本地化輸出與合併後的檔案樹碰撞")
     filename = receipt.filename
-    if not filename:
+    if not filename and route == "update":
         folder = folder_id(drive, processed, str(nexus_id))
         filename = next((item.get("name") for item in drive.list_children(folder)
                          if item.get("id") == receipt.drive_file_id), "") if folder else ""
     received_at = datetime.fromisoformat(receipt.received_at).astimezone(TAIPEI) if receipt.received_at else datetime.now(TAIPEI)
-    values = updates(receipt, issue, mod, filename, archive, received_at.date().isoformat())
-    update_readme(root / "README.md", nexus_id, values)
+    readme = root / "README.md"
+    values = updates(receipt, issue, mod, filename, archive, received_at.date().isoformat(),
+                     route=route, previous=hash_fields, readme=readme)
+    section, classification = None, {}
+    if route == "new":
+        section, abstract, classification = choose_section(
+            skill, readme_sections(readme), mod.name, "" if values["filename"] == PENDING else values["filename"],
+            describe(new_tree), dry_run=dry_run)
+        insert_readme(readme, section, mod.name, abstract, values)
+    else:
+        update_readme(readme, nexus_id, values)
     update_hash(root / hash_path, values, mod.directory)
     install_tree(repo_mod, ours, merged)
-    validate_git(git, base_oid, mod_path, hash_path)
+    if upstream_oid and merged[loc.relative] != ours[loc.relative]:
+        stage_raw(git, [f"{mod_path}/{loc.relative}"])
+    validate_git(git, upstream_oid or base_oid, mod_path, hash_path)
     code_changes = change_summary(ours_non_local, {path: value for path, value in merged.items()
                                                   if not is_localization(path)}, workspace)
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
-                   nexus_id, receipt.file_id)
-    title = f"[MOD 更新] {plain(mod.name)} {plain(mod.baseline_version or '未知')} → {plain(receipt.version)}"[:256]
+                   nexus_id, receipt_key(receipt), route=route, section=section, classification=classification)
+    action = {"update": "更新", "new": "新增", "hotfix": "hotfix"}[route]
+    version = plain(receipt.version)
+    if route != "new":
+        version = f"{plain(mod.baseline_version or '未知')} → {version}"
+    title = f"[MOD {action}] {plain(mod.name)} {version}"[:256]
     if dry_run:
         emit(f"{title}\n\nApply、Receipt、Gate 通過。\n\n{body}")
-        restore(git, base_oid, paths)
+        if route != "new":
+            restore(git, base_oid, paths)
         return None
     if latest(git) != base_oid:
         return False
     live = github.issue(number)
-    marker = latest_receipt(github.comments(number), nexus_id)
-    if target(live) != (nexus_id, receipt.file_id) or marker != receipt:
+    comments = github.comments(number)
+    marker = latest_receipt(comments, nexus_id)
+    if not matches_issue(live, receipt, route) or marker != receipt or unresolved_external_label(live, comments):
         emit("Issue 目標或收件標記已變更，略過")
-        restore(git, base_oid, paths)
+        if route != "new":
+            restore(git, base_oid, paths)
         return None
     return title, body, conflicts
 
@@ -196,38 +237,41 @@ def restore(git, base_oid, paths):
     git("clean", "-fd", "--", *paths)
 
 
+def restore_new(git, base_oid, paths):
+    mod_path, readme, hash_path = paths
+    git("reset", base_oid, "--", *paths)
+    git("restore", "--source", base_oid, "--worktree", "--", readme)
+    git("clean", "-fdx", "--", mod_path, hash_path)
+
+
 def process(root, git, github, drive, processed, number, nexus_id, file_id, skill, scratch, cache,
-            *, max_items=None, mode="manual", dry_run=False, emit=print):
+            *, max_items=None, mode="manual", dry_run=False, emit=print, route="update"):
     if git("status", "--porcelain", "--untracked-files=all"):
         raise ValueError("編排需要乾淨的 checkout")
     for attempt in range(2):
         issue = github.issue(number)
-        if target(issue) != (nexus_id, file_id):
-            emit("Issue 已關閉或主檔版本已變更，略過")
-            return
         comments = github.comments(number)
         if unresolved_external_label(issue, comments):
             emit("Issue 另有人工待辦，略過")
             return
         receipt = latest_receipt(comments, nexus_id)
-        if not receipt or receipt.source or receipt.category != "MAIN" or receipt.file_id != file_id:
-            emit("hotfix 由 P3b 處理" if receipt and receipt.source else "無相符的 MAIN 收件，略過")
+        if not receipt or not matches_issue(issue, receipt, route) or receipt_key(receipt) != file_id:
+            emit("Issue 已關閉、收件不完整或目標已變更，略過")
             return
         base_oid = git("rev-parse", "HEAD") if dry_run else latest(git)
         if not dry_run and git("rev-parse", "HEAD") != base_oid:
             git("switch", "--detach", base_oid)
+        cleanup = None
+        upstream_oid = None
         try:
             mod = registry_mod(root, nexus_id)
-            if mod is None:
-                emit("未登錄 MOD 由 P3b 處理")
+            if (mod is None) != (route == "new"):
+                emit("MOD 登錄已變更，略過並等候重新探索")
                 return
             if already_recorded(root, mod, receipt):
                 version = recorded_version(mod, receipt)
                 emit(f"repo 紀錄已是版本 {version}，跳過。" if version else "main 已收錄相同主檔，略過")
                 return
-            mod_path = (MODS / mod.directory).as_posix()
-            hash_path = f".hash/{mod.hash_file or mod.directory + '.hash'}"
-            paths = (mod_path, "README.md", hash_path)
             branch = branch_for(nexus_id)
             pulls = github.pulls(branch)
             if len(pulls) > 1:
@@ -238,12 +282,24 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             with tempfile.TemporaryDirectory(dir=scratch, prefix=f"mod-{nexus_id}-") as work:
                 workspace = Path(work)
                 archive = download(drive, receipt, workspace)
-                new_tree = read_tree(locate_mod(workspace / "new", mod.directory), include_localization=True)
+                extracted = locate_mod(workspace / "new", mod.directory if mod else None)
+                new_tree = read_tree(extracted, include_localization=True)
+                if route == "new":
+                    mod = new_mod(root, issue, receipt, extracted.name, new_tree)
+                mod_path = (MODS / mod.directory).as_posix()
+                hash_path = f".hash/{mod.hash_file or mod.directory + '.hash'}"
+                paths = (mod_path, "README.md", hash_path)
+                if route == "new":
+                    cleanup = paths
+                    install_tree(root / mod_path, {}, new_tree)
+                    upstream_oid = upstream_commit(git, base_oid, mod_path, new_tree, nexus_id)
                 outcome = candidate(root, git, github, drive, processed, issue, number, receipt, mod,
                                     paths, archive, new_tree, workspace, cache, skill, base_oid,
-                                    max_items=max_items, dry_run=dry_run, emit=emit)
+                                    max_items=max_items, dry_run=dry_run, emit=emit,
+                                    route=route, upstream_oid=upstream_oid)
             if outcome is False:
-                restore(git, base_oid, paths)
+                if route != "new":
+                    restore(git, base_oid, paths)
                 if attempt:
                     raise NeedsHuman("main", "main 在重建後再次更新，請重新執行")
                 emit("main 已更新，從最新基準重建一次")
@@ -257,7 +313,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             else:
                 resolved.add("merge")
             pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
-                                mode, conflicts, base_oid, paths)
+                                mode, conflicts, upstream_oid or base_oid, paths, route=route)
             github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")
             return
@@ -278,3 +334,6 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                                    else "archive", note)
             emit(note)
             return
+        finally:
+            if cleanup:
+                restore_new(git, base_oid, cleanup)

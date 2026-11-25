@@ -12,12 +12,11 @@ from datetime import datetime, timezone
 from functools import cached_property
 from html import escape
 from pathlib import Path
-from urllib.parse import urlsplit
 
 from .detect import file_category, file_version, uploaded_at
 from .drive import DriveClient, DriveError, DriveSizeLimit, FOLDER_MIME, InvalidDriveText, validate_id
-from .handoff import build_received_marker
-from .issues import GitHubClient, GitHubError, find_existing
+from .handoff import build_received_marker, valid_source_url
+from .issues import GitHubClient, GitHubError, find_existing, issue_markers
 from .nexus import GAME_DOMAIN, RATE_HEADERS, NexusClient, NexusError
 from .registry import _normalized_name, load_registry, parse_uploaded, positive_id
 from .safe_extract import (
@@ -67,6 +66,7 @@ class NexusMatch:
     uploaded_at: str = ""
     page_version: str = ""
     page_updated_at: str = ""
+    mod_name: str = ""
 
 
 def _text(value, default="未知"):
@@ -150,7 +150,7 @@ def _nexus_match(payload):
                 mod_id, file_id, file_version(file) or "未知", _text(file.get("name"), ""),
                 file_category(file), _text(file.get("file_name"), ""),
                 upload.isoformat() if upload else "", _text(mod.get("version"), ""),
-                page_update.isoformat() if page_update else "",
+                page_update.isoformat() if page_update else "", _text(mod.get("name"), ""),
             ))
     if len(matches) > 1:
         return None, "Nexus MD5 命中多筆 Darktide 檔案，無法唯一辨識"
@@ -161,18 +161,7 @@ def _nexus_match(payload):
 
 def _source_url(text):
     line = next((line.strip() for line in text.splitlines() if line.strip()), "")
-    if (not line.startswith("https://") or re.search(r'[<>"\\]|%(?![a-fA-F0-9]{2})', line)
-            or any(char.isspace() or ord(char) < 32 for char in line)):
-        return None
-    try:
-        url = urlsplit(line)
-        if url.hostname and url.username is None and url.password is None:
-            # Reading port also validates the syntax when one is supplied.
-            if url.port is None or url.port > 0:
-                return line
-    except ValueError:
-        pass
-    return None
+    return line if valid_source_url(line) else None
 
 
 def _marker(file_id):
@@ -218,6 +207,14 @@ class IntakeIssues(GitHubClient):
         result = self._create({"title": _clean(title)[:256], "body": _clean(body), "labels": ["needs-human"]})
         self.triage[marker] = None
         return result
+
+    def create_update(self, title, body):
+        self.ensure_labels()
+        issue, warnings = self._create_issue({"title": _clean(title), "body": _clean(body),
+                                              "labels": ["mod-update"]})
+        # 同一批後續收件與搬移復原後的重試都能找到這張 Issue。
+        self.updates.append({**issue, "body": body})
+        return issue, warnings
 
 
 class Intake:
@@ -289,12 +286,14 @@ class Intake:
             if digest or unpack:
                 with archive.open("rb") as stream:
                     actual = hashlib.file_digest(stream, lambda: hashlib.md5(usedforsecurity=False)).hexdigest()
-                if digest and actual != digest:
+                if not unpack and digest and actual != digest:
                     raise DriveError("下載內容與 Drive MD5 不符，請下次重新掃描")
             if unpack:
                 dest = Path(directory) / "extracted"
                 extract(archive, dest, **self.archive_options)
-                return read_mod_info(dest), actual
+                with archive.open("rb") as stream:
+                    sha256 = hashlib.file_digest(stream, "sha256").hexdigest()
+                return read_mod_info(dest), actual, sha256
             inspected = inspect_archive(archive, **self.archive_options)
             with archive.open("rb") as stream:
                 return inspected, hashlib.file_digest(stream, "sha256").hexdigest()
@@ -352,23 +351,33 @@ class Intake:
             self.errors.extend(warnings)
         self._record(candidate, f"{move_action}，{notification}")
 
-    def _received(self, candidate, mod_id, body, *, source_id=None, note=""):
+    def _received(self, candidate, mod_id, body, *, source_id=None, note="", opening=None):
         subpath = f"已處理/{mod_id}" + ("/hotfix" if source_id else "")
-        issue = self._update_issue(mod_id) if mod_id in self.mods else None
-        if mod_id not in self.mods:
-            detail = "未登錄 MOD，待 P3 新增路線"
-        elif issue is None:
-            detail = "沒有開啟中的更新 Issue"
-        else:
+        issue = self._update_issue(mod_id) if opening or mod_id in self.mods else None
+        if issue:
             detail = f"留言 Issue #{positive_id(issue.get('number')) or '未知'}"
+        elif opening:
+            detail = "建立更新 Issue 並留言"
+        elif mod_id not in self.mods:
+            detail = "未登錄 MOD，非 MAIN 不建立更新 Issue"
+        else:
+            detail = "沒有開啟中的更新 Issue"
         if note:
             detail += f"；{note}"
         if not self.dry_run:
             destination = self.drive.ensure_subfolder(self.processed, str(mod_id))
             if source_id:
                 destination = self.drive.ensure_subfolder(destination, "hotfix")
-            callback = (lambda message: self.github.comment(issue, message)) if issue else None
-            self._deliver(candidate, destination, callback, body, source_id)
+            def notify(message):
+                nonlocal detail
+                destination_issue = issue
+                if destination_issue is None:
+                    destination_issue, warnings = self.github.create_update(*opening)
+                    self.errors.extend(warnings)
+                    detail += f"（Issue #{destination_issue['number']}）"
+                self.github.comment(destination_issue, message)
+
+            self._deliver(candidate, destination, notify if issue or opening else None, body, source_id)
         self.counts["作者 hotfix" if source_id else "Nexus 正式版"] += 1
         self._record(candidate, f"搬到 {subpath}，{detail}")
 
@@ -405,9 +414,26 @@ class Intake:
             match.mod_id, match.file_id, validate_id(candidate.file.get("id")), _digest(candidate.file),
             match.category, match.version, filename=filename,
             uploaded_at=match.uploaded_at, page_version=match.page_version,
-            page_updated_at=match.page_updated_at, sha256=sha256,
+            page_updated_at=match.page_updated_at, sha256=sha256, mod_name=match.mod_name,
         )
-        self._received(candidate, match.mod_id, f"{body}\n\n{marker}", note=note)
+        opening = None
+        if match.mod_id not in self.mods and match.category == "MAIN":
+            mod_name = match.mod_name or f"Nexus MOD {match.mod_id}"
+            body += f"\n\n- 檔名：{_markdown(filename)}"
+            if uploaded := parse_uploaded(match.uploaded_at):
+                body += f"\n- 上傳時間：{_time(uploaded)}"
+            opening = self._opening("新增", match.mod_id, mod_name, match.file_id, body)
+        self._received(candidate, match.mod_id, f"{body}\n\n{marker}", note=note, opening=opening)
+
+    @staticmethod
+    def _opening(route, mod_id, mod_name, file_id, detail):
+        suffix = f"（Nexus {mod_id}）"
+        prefix = f"[MOD {route}] "
+        name = " ".join(mod_name.splitlines())
+        title = prefix + name[:256 - len(prefix) - len(suffix)] + suffix
+        url = f"https://www.nexusmods.com/{GAME_DOMAIN}/mods/{mod_id}"
+        body = f"{issue_markers(mod_id, file_id)}\n\n- MOD：{_markdown(name)}\n- Nexus 下載頁：{url}\n\n{detail}"
+        return title, body
 
     def _check_hotfix(self, candidate):
         if candidate.problem:
@@ -427,7 +453,7 @@ class Intake:
     def _hotfix(self, candidate):
         mod_id = candidate.mod_id
         try:
-            info, digest = self._archive(candidate, unpack=True)
+            info, digest, sha256 = self._archive(candidate, unpack=True)
         except (CorruptArchive, UnsafeArchive, UnsupportedArchive, DriveSizeLimit) as error:
             self._triage(candidate, _archive_reason(error), mod_id)
             return
@@ -440,9 +466,12 @@ class Intake:
         note = f"版本 {_markdown(version)}" if version != "未知" else "版本未知，info.json 缺少可讀版本"
         marker = build_received_marker(
             mod_id, None, validate_id(candidate.file.get("id")), digest, "UNKNOWN", version,
-            source="hotfix", filename=_file_name(candidate.file),
+            source="hotfix", filename=_file_name(candidate.file), sha256=sha256,
+            source_url=candidate.source_url,
         )
-        self._received(candidate, mod_id, f"{body}\n\n{marker}", source_id=candidate.source_id, note=note)
+        opening = self._opening("hotfix", mod_id, self.mods[mod_id].name, None, body)
+        self._received(candidate, mod_id, f"{body}\n\n{marker}", source_id=candidate.source_id,
+                       note=note, opening=opening)
 
     def run(self, max_files):
         self.retained_issue_attempts = 0

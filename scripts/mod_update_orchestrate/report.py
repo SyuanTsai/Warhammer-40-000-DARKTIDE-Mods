@@ -26,13 +26,25 @@ def blocked_units(workset, summary):
     return pending
 
 
-def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, file_id):
+def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, file_id,
+            *, route="update", section=None, classification=None):
     counters = Counter(unit["action"] for unit in workset["units"])
     binding = workset["translationBinding"]
-    usage = rendition.get("usage") or {}
+    classification = classification or {}
+    usage = {**(rendition.get("usage") or {}), **classification.get("usage", {})}
+    route_name = {"update": "更新", "new": "新增", "hotfix": "作者 hotfix"}[route]
     result = [
-        f"Closes #{number}", "", "## 摘要", "", "- 路線：更新",
-        "- 基準：" + ("有三方合併基準" if has_base else "無三方合併基準"),
+        f"Closes #{number}", "", "## 摘要", "", f"- 路線：{route_name}",
+        "- 基準：" + ("上游原檔提交" if route == "new" else
+                    "有三方合併基準" if has_base else "無三方合併基準"),
+    ]
+    if route == "new":
+        result += [
+            f"- README 分區：{cell(section or '待確認')}，請確認歸類。",
+            "- 審核模式：manual。新增 MOD 的授權與來源紀錄規則尚未定案（對照 PROVENANCE.md、LICENSE-SCOPE.md）。",
+            f"- 請確認 [Nexus 頁面](https://www.nexusmods.com/warhammer40kdarktide/mods/{nexus_id}) 的 Permissions。",
+        ]
+    result += [
         "", "| 工作集動作 | 項數 |", "| --- | ---: |",
         *(f"| {key} | {counters[key]} |" for key in sorted(counters)),
         "", "## BLOCKED", "",
@@ -40,9 +52,10 @@ def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, 
         "", "## API 用量", "",
     ]
     if usage:
-        result += [f"- 模型：{cell(rendition['model'])}",
-                   f"- 估算費用：USD {rendition['estimatedUsageUsd']:.6f}"]
-        names = {"translator": "翻譯", "reviewer": "審查"}
+        model = rendition.get("model") or classification["model"]
+        cost = rendition.get("estimatedUsageUsd", 0) + classification.get("estimatedUsageUsd", 0)
+        result += [f"- 模型：{cell(model)}", f"- 估算費用：USD {cost:.6f}"]
+        names = {"translator": "翻譯", "reviewer": "審查", "classification": "README 分類"}
         for role, counts in usage.items():
             result.append(f"- {names[role]}：輸入 {counts['input_tokens']} / 輸出 {counts['output_tokens']} tokens")
     else:

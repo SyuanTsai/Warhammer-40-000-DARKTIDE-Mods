@@ -9,10 +9,11 @@ class TreeError(ValueError):
     pass
 
 
-def locate_mod(extracted, directory):
+def locate_mod(extracted, directory=None):
     entries = [path for path in extracted.rglob("*")
                if path.is_file() and path.suffix.casefold() == ".mod"]
-    if len(entries) != 1 or entries[0].parent.name != directory:
+    if (len(entries) != 1 or entries[0].parent == extracted
+            or directory is not None and entries[0].parent.name != directory):
         raise TreeError("BLOCKED：壓縮檔須有唯一 .mod 入口，且其父目錄須符合登錄")
     return entries[0].parent
 

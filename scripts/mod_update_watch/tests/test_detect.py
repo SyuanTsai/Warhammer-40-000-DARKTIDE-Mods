@@ -8,6 +8,7 @@ from unittest.mock import patch
 from urllib.parse import urlsplit
 
 from scripts.mod_update_watch.detect import detect_updates
+from scripts.mod_update_watch.issues import render_issue
 from scripts.mod_update_watch.nexus import NexusClient
 from scripts.mod_update_watch.registry import TrackedMod
 
@@ -63,6 +64,18 @@ class DetectTests(unittest.TestCase):
         for detail in ("同版本但主檔 ID 或上傳時間不同", "100 → 101",
                        mod.baseline_uploaded_utc.isoformat(), UPLOADED.isoformat()):
             self.assertIn(detail, note)
+
+    # Scenario: 作者 hotfix 與之後上架的 Nexus 主檔使用相同版本字串。
+    # Purpose: 依實際上傳時間發現正式版，保留一般 MOD 的同版跳過規則。
+    def test_UnitT25_hotfix_detects_new_official_main_with_same_version(self):
+        # Given
+        hotfix = replace(MOD, baseline_version=CURRENT["version"], acquisition_method="author-hotfix",
+                         baseline_main_file_id=None, baseline_uploaded_utc=UPLOADED - timedelta(days=1))
+        # When
+        finding, = self.scan((hotfix,)).findings
+        # Then
+        self.assertIn("目前使用作者 hotfix，Nexus 正式版已上架", render_issue(finding)[1])
+        self.assertFalse(self.scan((replace(hotfix, baseline_uploaded_utc=UPLOADED),)).findings)
 
     def test_UnitT30_readme_date_uses_utc_and_strictly_newer_day(self):
         """Scenario: Given only a README date, when comparing upload days, then require a later UTC date.

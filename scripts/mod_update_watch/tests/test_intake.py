@@ -13,6 +13,10 @@ from urllib.parse import parse_qs, urlsplit
 from scripts.mod_update_watch.drive import FOLDER_MIME
 from scripts.mod_update_watch.handoff import parse_received_markers
 from scripts.mod_update_watch.intake import main
+from scripts.mod_update_watch.detect import UpdateFinding
+from scripts.mod_update_watch.intake import IntakeIssues
+from scripts.mod_update_watch.issues import FILE_MARKER, find_existing, render_issue
+from scripts.mod_update_watch.registry import load_registry
 
 
 class IntakeTests(unittest.TestCase):
@@ -172,17 +176,76 @@ class IntakeTests(unittest.TestCase):
         self.assertIn("⚠ 這不是主檔", self.github_writes[0][2]["body"])
         self.assertEqual(self.moves, [("archive", "dir-42", "upload")])
 
-    def test_UnitT03_untracked_match_only_reports(self):
-        """Scenario: Given an official hit outside the registry, when intake runs, then it moves and reports the P3 follow-up.
-        Purpose: Confirm untracked Mods do not create or receive Issues.
-        """
+    # Scenario: 未登錄 Nexus MAIN 收件，執行 P2。
+    # Purpose: 建立可供 P3 探索的 Issue 與收件留言。
+    def test_UnitT03_untracked_main_opens_issue_and_comments(self):
+        # Given
+        self.file()
+        self.match["mod"].update(mod_id=99, name="New Example")
+        # When
+        status, report = self.invoke()
+        # Then
+        self.assertEqual(status, 0)
+        self.assertEqual(self.moves, [("archive", "dir-99", "upload")])
+        created, received = self.github_writes
+        self.assertEqual(created[2]["title"], "[MOD 新增] New Example（Nexus 99）")
+        self.assertEqual(created[2]["labels"], ["mod-update"])
+        self.assertEqual(FILE_MARKER.search(created[2]["body"])[1], "12")
+        self.assertIsNotNone(find_existing([created[2]], 99))
+        self.assertTrue(received[1].endswith("/issues/90/comments"))
+        self.assertEqual(parse_received_markers(received[2]["body"])[0].nexus_id, 99)
+        self.assertIn("Issue #90", report)
+
+    # Scenario: 未登錄 MOD 已有開啟的 Issue，再收 MAIN 或選用檔。
+    # Purpose: MAIN 復用 Issue，選用檔保留原來的無 Issue 行為。
+    def test_UnitT25_untracked_main_reuses_issue_and_non_main_only_reports(self):
+        # Given
         self.file()
         self.match["mod"]["mod_id"] = 99
+        self.issue_list = [{"number": 25, "body": "<!-- mod-update-watch:nexus_id=99 -->"}]
+        # When
+        self.assertEqual(self.invoke()[0], 0)
+        # Then
+        self.assertEqual(len(self.github_writes), 1)
+        self.assertTrue(self.github_writes[0][1].endswith("/issues/25/comments"))
+        self.github_writes.clear()
+        self.match["file_details"]["category_name"] = "OPTIONAL"
         status, report = self.invoke()
         self.assertEqual(status, 0)
-        self.assertIn("未登錄 MOD，待 P3 新增路線", report)
-        self.assertEqual(self.moves, [("archive", "dir-99", "upload")])
+        self.assertIn("未登錄 MOD", report)
+        self.assertIn("這不是主檔", report)
         self.assertFalse(self.github_writes)
+
+    # Scenario: 作者 hotfix 沒有 Issue，之後 P1 發現 Nexus 正式版。
+    # Purpose: 驗證新 Issue 相容 P1 upsert，並保留完整 hotfix 收件資料。
+    def test_UnitT26_hotfix_opens_issue_and_p1_reuses_it(self):
+        # Given
+        self.issue_list = []
+        url = "https://example.org/release?a=1&b=2"
+        self.hotfix(source=url.encode())
+        # When
+        self.assertEqual(self.invoke()[0], 0)
+        # Then
+        created, received = self.github_writes
+        self.assertTrue(created[2]["title"].startswith("[MOD hotfix] "))
+        self.assertEqual(FILE_MARKER.search(created[2]["body"])[1], "unknown")
+        self.assertTrue(received[1].endswith("/issues/90/comments"))
+        receipt, = parse_received_markers(received[2]["body"])
+        self.assertEqual((receipt.source, receipt.version, receipt.filename, receipt.source_url),
+                         ("hotfix", "1.9", "Sample-42-1.zip", url))
+        self.assertEqual(receipt.sha256, hashlib.sha256(self.archive).hexdigest())
+
+        with (self.root / ".hash" / "sample.hash").open("a", encoding="utf-8") as stream:
+            stream.write("acquisition_method=author-hotfix\n")
+        mods, _ = load_registry(self.root)
+        finding = UpdateFinding(mods[0], {"file_id": 12, "version": "2"}, [], 0, [], False, ["新版"])
+        self.assertIn("目前使用作者 hotfix，Nexus 正式版已上架", render_issue(finding)[1])
+        self.issue_list = [{"number": 90, **created[2]}]
+        client = IntakeIssues(self.github)
+        client.upsert(finding, client.updates)
+        _, path, payload = self.github_writes[-2]
+        self.assertTrue(path.endswith("/issues/90"))
+        self.assertEqual(FILE_MARKER.search(payload["body"])[1], "12")
 
     def test_UnitT04_md5_not_found_opens_needs_human(self):
         """Scenario: Given no Nexus match or update Issue, when intake runs, then the moved file receives a needs-human Issue.
@@ -388,14 +451,15 @@ class IntakeTests(unittest.TestCase):
         self.assertEqual(self.drive_writes, ["PATCH"])
         self.assertFalse(self.github_writes)
 
+    # Scenario: 缺來源.txt 的 hotfix 保留原地，補檔後再次收件。
+    # Purpose: 驗證 triage 不佔收件名額，修復後另建正常更新 Issue。
     def test_UnitT21_incomplete_hotfix_opens_issue_and_can_use_slot_after_repair(self):
-        """Scenario: Given a missing source, intake retains the hotfix and moves the newer upload, then processes the repaired hotfix.
-        Purpose: Verify a new Issue consumes no file slot and an existing marker does not block a valid hotfix.
-        """
+        # Given
         self.hotfix(source=None)
         self.file("official", modified="2026-01-03T00:00:00Z")
         self.issue_list = []
 
+        # When / Then
         self.assertEqual(self.invoke("--max-files", "1")[0], 0)
         self.assertEqual(self.moves, [("official", "dir-42", "upload")])
         self.assertEqual(self.media_reads, ["official"])
@@ -410,7 +474,10 @@ class IntakeTests(unittest.TestCase):
         self.assertEqual(self.invoke("--max-files", "1")[0], 0)
         self.assertEqual(self.moves[1:], [("archive", "dir-hotfix", "mod"), ("source", "dir-hotfix", "mod")])
         self.assertEqual(self.media_reads, ["source", "archive"])
-        self.assertEqual(len(self.github_writes), 1)
+        create, received = self.github_writes[1:]
+        self.assertEqual(create[2]["labels"], ["mod-update"])
+        self.assertTrue(create[2]["title"].startswith("[MOD hotfix] "))
+        self.assertEqual(parse_received_markers(received[2]["body"])[0].source, "hotfix")
 
     def test_UnitT22_retained_hotfix_prerequisites_do_not_use_file_slots(self):
         """Scenario: Given an older hotfix with conflicting files, a bad source, or an unknown MOD, the newer upload moves.

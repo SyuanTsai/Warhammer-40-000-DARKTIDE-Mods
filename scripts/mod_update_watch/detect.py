@@ -91,6 +91,12 @@ def _update_reasons(mod, latest, notes):
     comparable_versions = bool(before and after)
     mod_label = f"Nexus {mod.nexus_id} | {mod.name}"
 
+    if mod.acquisition_method == "author-hotfix" and uploaded:
+        if baseline_time and uploaded - baseline_time > timedelta(seconds=120):
+            return ["主檔上傳時間晚於 hotfix 前已知的 Nexus 時間超過 120 秒"]
+        if not baseline_time and mod.baseline_date and uploaded.date() > mod.baseline_date:
+            return ["主檔 UTC 上傳日期晚於 hotfix 收件日期"]
+
     if comparable_versions and before == after:
         if ((baseline_id is not None and baseline_id != current_id)
                 or (baseline_time and uploaded and baseline_time != uploaded)):

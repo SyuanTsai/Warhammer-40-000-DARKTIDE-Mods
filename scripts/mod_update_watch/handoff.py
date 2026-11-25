@@ -2,14 +2,14 @@
 
 import re
 from dataclasses import dataclass
-from urllib.parse import quote, unquote
+from urllib.parse import quote, unquote, urlsplit
 
 from .drive import DriveError, validate_id
 from .registry import positive_id
 
 _MARKER = re.compile(r"<!-- mod-drive-intake:received v=1 ([^\r\n]*?) -->")
 _REQUIRED = {"nexus_id", "file_id", "drive_file_id", "md5", "category", "version"}
-_METADATA = {"filename", "uploaded_at", "page_version", "page_updated_at", "sha256"}
+_METADATA = {"filename", "uploaded_at", "page_version", "page_updated_at", "sha256", "source_url", "mod_name"}
 
 
 @dataclass(frozen=True)
@@ -27,6 +27,19 @@ class Received:
     page_updated_at: str = ""
     sha256: str = ""
     received_at: str = ""
+    source_url: str = ""
+    mod_name: str = ""
+
+
+def valid_source_url(value):
+    if (not value.startswith("https://") or re.search(r'[<>"\\]|%(?![a-fA-F0-9]{2})', value)
+            or any(char.isspace() or ord(char) < 32 for char in value)):
+        return False
+    try:
+        url = urlsplit(value)
+        return bool(url.hostname and url.username is None and url.password is None and url.port != 0)
+    except ValueError:
+        return False
 
 
 def build_received_marker(nexus_id, file_id, drive_file_id, md5, category, version, *, source="", **metadata):
@@ -63,6 +76,7 @@ def parse_received_markers(body):
                 or ("sha256" in fields and not re.fullmatch(r"[0-9a-f]{64}", fields["sha256"]))
                 or not re.fullmatch(r"[A-Z_]+", fields["category"])
                 or not fields["version"]
+                or ("source_url" in fields and (source != "hotfix" or not valid_source_url(fields["source_url"])))
                 or any(ord(char) < 32 for value in fields.values() for char in value)):
             continue
         try:
