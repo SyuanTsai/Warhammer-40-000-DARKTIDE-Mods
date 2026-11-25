@@ -80,13 +80,15 @@ class IssueTests(unittest.TestCase):
 
     def test_UnitT20_matching_open_issue_patches_without_comment_for_same_file(self):
         """Scenario: Given a matching Issue with the same ID, when syncing, then patch it once.
-        Purpose: Avoid creating duplicates or commenting daily for the same published file.
+        Purpose: Avoid duplicate Issues, repeated comments and overwrites of up-to-date labels.
         """
-        self.existing = [{"number": 9, "body": render_issue(FINDING)[1]}]
+        self.existing = [{"number": 9, "body": render_issue(FINDING)[1],
+                          "labels": ["priority", "mod-update"]}]
         self.client.upsert(FINDING, self.client.list_open_issues())
         self.assertEqual([call[0] for call in self.calls], ["GET", "PATCH"])
         self.assertEqual(parse_qs(urlsplit(self.calls[0][1]).query)["state"], ["open"])
         self.assertTrue(self.calls[-1][1].endswith("/issues/9"))
+        self.assertNotIn("labels", self.calls[-1][2])
 
     def test_UnitT30_new_file_adds_one_comment(self):
         """Scenario: Given a matching Issue with an old ID, when syncing, then add one update comment.
@@ -216,3 +218,47 @@ class IssueTests(unittest.TestCase):
             with self.assertRaisesRegex(GitHubError, "HTTP 500"):
                 self.client.upsert(finding, [])
         self.assertEqual([call[0] for call in self.calls], ["GET"])
+
+    def test_UnitT140_resolved_ambiguity_removes_needs_human(self):
+        """Scenario: Given an Issue marked for review, when a unique main is found, then clear the label.
+        Purpose: Remove stale review labels and preserve unrelated labels in mixed formats.
+        """
+        ambiguous = replace(FINDING, ambiguous=True, latest_main=None)
+        self.existing = [{"number": 9, "body": render_issue(ambiguous)[1],
+                          "labels": [{"name": "mod-update"}, "priority", {"name": "needs-human"}]}]
+        self.client.upsert(FINDING, self.client.list_open_issues())
+        _, _, payload = next(call for call in self.calls if call[0] == "PATCH")
+        self.assertCountEqual(payload["labels"], ["mod-update", "priority"])
+
+    def test_UnitT150_still_ambiguous_leaves_labels_untouched(self):
+        """Scenario: Given an Issue already marked for review, when ambiguity remains, then keep the label.
+        Purpose: Avoid overwriting labels when the Issue still needs review.
+        """
+        finding = replace(FINDING, ambiguous=True, latest_main=None)
+        self.existing = [{"number": 9, "body": render_issue(finding)[1],
+                          "labels": [{"name": "needs-human"}, {"name": "priority"},
+                                     {"name": "mod-update"}]}]
+        self.client.upsert(finding, self.client.list_open_issues())
+        self.assertEqual(self.calls[-1][0], "PATCH")
+        self.assertNotIn("labels", self.calls[-1][2])
+
+    def test_UnitT160_update_restores_missing_mod_update_label(self):
+        """Scenario: Given a matching Issue without mod-update, when syncing, then restore the label.
+        Purpose: Ensure a definite finding keeps the tracking label and preserves unrelated labels.
+        """
+        self.existing = [{"number": 9, "body": render_issue(FINDING)[1],
+                          "labels": ["priority"]}]
+        self.client.upsert(FINDING, self.client.list_open_issues())
+        self.assertEqual(self.calls[-1][0], "PATCH")
+        self.assertCountEqual(self.calls[-1][2]["labels"], ["mod-update", "priority"])
+
+    def test_UnitT170_creates_ambiguous_issue_with_review_label(self):
+        """Scenario: Given no matching Issue, when syncing an ambiguous finding, then create a review Issue.
+        Purpose: Preserve both managed labels on creation when no unique main file is available.
+        """
+        finding = replace(FINDING, ambiguous=True, latest_main=None)
+        self.client.upsert(finding, [])
+        method, url, payload = self.calls[-1]
+        self.assertEqual(method, "POST")
+        self.assertTrue(url.endswith("/issues"))
+        self.assertEqual(payload["labels"], ["mod-update", "needs-human"])
