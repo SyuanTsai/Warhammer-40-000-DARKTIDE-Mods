@@ -20,6 +20,10 @@ on:
         description: 預覽更新
         type: boolean
         default: false
+      regenerate:
+        description: 重建指定 nexus_id 的更新 PR
+        type: boolean
+        default: false
 
 permissions: {}
 
@@ -78,6 +82,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           NEXUS_FILTER: ${{ inputs.nexus_id }}
+          REGENERATE: ${{ github.event_name == 'workflow_dispatch' && inputs.regenerate }}
           DRY_RUN: ${{ inputs.dry_run }}
           REVIEW_INPUT: ${{ inputs.review_mode }}
           MOD_UPDATE_REVIEW_MODE: ${{ vars.MOD_UPDATE_REVIEW_MODE }}
@@ -92,6 +97,7 @@ jobs:
             $arguments += '--skip-updates'
           }
           if ($env:NEXUS_FILTER) { $arguments += @('--nexus-id', $env:NEXUS_FILTER) }
+          if ($env:REGENERATE -eq 'true') { $arguments += '--regenerate' }
           if ($env:REVIEW_INPUT) { $arguments += @('--review-mode', $env:REVIEW_INPUT) }
           if ($env:DRY_RUN -eq 'true') { $arguments += '--dry-run' }
           python -m scripts.mod_update_orchestrate.main discover @arguments
@@ -188,11 +194,13 @@ jobs:
           MATRIX_ROUTE: ${{ matrix.route }}
           ISSUE: ${{ matrix.issue }}
           MATRIX_ACTION: ${{ matrix.action }}
+          REGENERATE: ${{ matrix.regenerate }}
         run: |
           $arguments = @('--nexus-id', $env:NEXUS_ID, '--issue', $env:ISSUE, '--route', $env:MATRIX_ROUTE)
           if ($env:MATRIX_ROUTE -eq 'hotfix') { $arguments += @('--sha256', $env:RECEIPT_SHA256) }
           else { $arguments += @('--file-id', $env:FILE_ID) }
           if ($env:MATRIX_ACTION -eq 'merge-check') { $arguments += '--merge-check' }
+          if ($env:REGENERATE -eq 'true') { $arguments += '--regenerate' }
           if ($env:REVIEW_INPUT) { $arguments += @('--review-mode', $env:REVIEW_INPUT) }
           if ($env:MAX_ITEMS -and $env:MAX_ITEMS -ne '0') { $arguments += @('--max-items', $env:MAX_ITEMS) }
           if ($env:DRY_RUN -eq 'true') { $arguments += '--dry-run' }

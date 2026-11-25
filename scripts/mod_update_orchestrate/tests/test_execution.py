@@ -34,6 +34,8 @@ class ExecutionTests(unittest.TestCase):
                                    hash_file=None)
         self.git = Mock()
         self.git.side_effect = lambda *args: "" if args[0] == "status" else "a" * 40
+        self.baseline = self.enterContext(patch("scripts.mod_update_orchestrate.process.read_repo_tree",
+                                                return_value={}))
         self.emit = Mock()
 
     def build_candidate(self, *, dry_run=False):
@@ -126,7 +128,7 @@ class ExecutionTests(unittest.TestCase):
         ready = {"units": [], "translationBinding": {"rulesSha256": "rules", "glossarySha256": "terms"}}
         self.loc.translate.return_value = (0, {}, ready)
         self.loc.generate.return_value = ready
-        self.loc.relative, self.loc.apply.return_value = "Example_localization.lua", b"translation"
+        self.loc.relative, self.loc.apply.return_value = "Example_localization.lua", b"translation\r\n"
         receipt = self.enterContext(patch("scripts.mod_update_orchestrate.process.latest_receipt"))
         receipt.return_value = RECEIPT
         self.enterContext(patch("scripts.mod_update_orchestrate.process.matches_issue", return_value=True))
@@ -134,7 +136,9 @@ class ExecutionTests(unittest.TestCase):
         self.enterContext(patch("scripts.mod_update_orchestrate.process.extract"))
         self.enterContext(patch("scripts.mod_update_orchestrate.process.locate_mod"))
         read_tree = self.enterContext(patch("scripts.mod_update_orchestrate.process.read_tree"))
-        read_tree.side_effect = [{"Example.mod": b"upstream"}, {"Example.mod": b"private"}]
+        self.baseline.return_value = {"Example.mod": b"private", self.loc.relative: b"original\n"}
+        read_tree.side_effect = [{"Example.mod": b"upstream"}, self.baseline.return_value]
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.stage_raw"))
         self.enterContext(patch("scripts.mod_update_orchestrate.process.validate_git"))
         self.enterContext(patch("scripts.mod_update_orchestrate.process.folder_id", return_value=None))
         archive = self.scratch / "new"
@@ -157,4 +161,5 @@ class ExecutionTests(unittest.TestCase):
         self.assertNotIn("source_url", saved)
         self.assertIn("私人修正（非官方）", readme.read_text(encoding="utf-8"))
         self.assertEqual((self.root / MOD / "Example.mod").read_bytes(), b"private")
+        self.assertEqual((self.root / MOD / self.loc.relative).read_bytes(), b"translation\n")
         self.assertFalse(conflicts)

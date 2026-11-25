@@ -14,6 +14,7 @@ from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, 
 
 from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
+from .eol import FORMAT_ONLY, MIXED_EOL, default_format, repo_bytes
 from .gate import validate_git, validate_paths
 from .localization import Localization, LocalizationError
 from .merge import change_summary, merge_tree, private_changes
@@ -21,7 +22,7 @@ from .pr import branch_for, current_pr, publish, stage_raw, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
 from .report import blocked_units, cell, plain, pr_body
 from .section import DEFAULT_SECTION, choose_section, describe
-from .tree import MODS, TreeError, is_localization, locate_mod, read_tree
+from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
 
 
 class NeedsHuman(ValueError):
@@ -78,7 +79,10 @@ def download(drive, receipt, workspace):
     return path
 
 
-def install_tree(mod_root, ours, candidate):
+def install_tree(mod_root, ours, candidate, *, baseline=None):
+    baseline = ours if baseline is None else baseline
+    fallback = default_format(baseline)
+    written = []
     for name in sorted(ours.keys() - candidate.keys()):
         path = mod_root / name
         path.unlink()
@@ -87,10 +91,14 @@ def install_tree(mod_root, ours, candidate):
             parent.rmdir()
             parent = parent.parent
     for name, data in candidate.items():
-        if ours.get(name) != data:
-            path = mod_root / name
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(data)
+        target = repo_bytes(data, baseline.get(name), fallback)
+        if name in ours and target == baseline.get(name):
+            continue
+        path = mod_root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(target)
+        written.append(name)
+    return written
 
 
 def latest(git):
@@ -125,12 +133,14 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         except (ArchiveError, ValueError):
             emit("封存基準無法安全解壓或定位，使用無基準路線")
     repo_mod = root / mod_path
-    ours = new_tree if route == "new" else read_tree(repo_mod, include_localization=True)
+    checkout = read_tree(repo_mod, include_localization=True)
+    ours = read_repo_tree(git, upstream_oid or base_oid, mod_path)
     non_local = {path: value for path, value in new_tree.items() if not is_localization(path)}
     ours_non_local = {path: value for path, value in ours.items() if not is_localization(path)}
     private_files = private_changes(base, ours_non_local) if base is not None else []
     private_recorded = hash_fields.get("private_fix") == "true"
-    merged, conflicts = (non_local, []) if route == "new" else merge_tree(ours_non_local, base, non_local, workspace)
+    merged, conflicts = (non_local, []) if route == "new" else merge_tree(
+        ours_non_local, base, non_local, workspace, repo=ours)
     validate_paths([*(f"{mod_path}/{path}" for path in merged),
                     *(f"{mod_path}/{path}" for path in new_tree if is_localization(path)),
                     *paths[1:]], mod_path, hash_path)
@@ -205,12 +215,14 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
             values["private_fix"] = "true"
             mark_private_readme(readme, nexus_id)
     update_hash(root / hash_path, values, mod.directory)
-    install_tree(repo_mod, ours, merged)
-    if upstream_oid and merged[loc.relative] != ours[loc.relative]:
-        stage_raw(git, [f"{mod_path}/{loc.relative}"])
+    written = install_tree(repo_mod, checkout, merged, baseline=ours)
+    deleted = sorted(checkout.keys() - merged.keys())
+    if deleted:
+        git("update-index", "--force-remove", "--", *(f"{mod_path}/{path}" for path in deleted))
+    stage_raw(git, (f"{mod_path}/{path}" for path in written), preserve_mode=True)
     validate_git(git, upstream_oid or base_oid, mod_path, hash_path)
-    code_changes = change_summary(ours_non_local, {path: value for path, value in merged.items()
-                                                  if not is_localization(path)}, workspace)
+    code_changes = [(path, delta) for path, delta in change_summary({} if route == "new" else ours, merged, workspace)
+                    if not is_localization(path) or delta == FORMAT_ONLY or MIXED_EOL in delta]
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
                    private_files=private_files, private_recorded=private_recorded)
@@ -251,7 +263,7 @@ def restore_new(git, base_oid, paths):
 
 
 def process(root, git, github, drive, processed, number, nexus_id, file_id, skill, scratch, cache,
-            *, max_items=None, mode="manual", dry_run=False, emit=print, route="update"):
+            *, max_items=None, mode="manual", dry_run=False, emit=print, route="update", regenerate=False):
     if git("status", "--porcelain", "--untracked-files=all"):
         raise ValueError("編排需要乾淨的 checkout")
     for attempt in range(2):
@@ -282,7 +294,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             pulls = github.pulls(branch)
             if len(pulls) > 1:
                 raise NeedsHuman("publication", "固定分支出現多個開啟中的 PR")
-            if current_pr(pulls, nexus_id, file_id):
+            if not regenerate and current_pr(pulls, nexus_id, file_id):
                 emit("同主檔已有開啟中的 PR，略過")
                 return
             with tempfile.TemporaryDirectory(dir=scratch, prefix=f"mod-{nexus_id}-") as work:
@@ -319,7 +331,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             else:
                 resolved.add("merge")
             pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
-                                mode, conflicts, upstream_oid or base_oid, paths, route=route)
+                                mode, conflicts, upstream_oid or base_oid, paths, route=route, mod_staged=True)
             github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")
             return

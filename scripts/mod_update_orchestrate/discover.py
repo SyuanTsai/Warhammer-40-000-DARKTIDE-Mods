@@ -83,8 +83,11 @@ def unresolved_external_label(issue, comments):
 
 
 def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=None,
-             mode="manual", skip_updates=False):
+             mode="manual", skip_updates=False, regenerate=False):
     matrix, notes = [], []
+    if regenerate and nexus_filter is None:
+        notes.append("警告：未指定 nexus_id，已忽略 regenerate。")
+        regenerate = False
     seen = set()
     for issue in github.list_open_issues():
         nexus_id, file_id = target(issue)
@@ -119,7 +122,7 @@ def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=No
             continue
         if nexus_id in seen or already_recorded(root, mod, receipt, match_version=False):
             continue
-        if current and current(nexus_id, receipt_key(receipt)):
+        if not regenerate and current and current(nexus_id, receipt_key(receipt)):
             if mode != "auto" or route == "new":
                 continue
             action = "merge-check"
@@ -131,5 +134,8 @@ def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=No
         else:
             action = "update"
         seen.add(nexus_id)
-        matrix.append({**asdict(receipt), "issue": number, "action": action, "route": route})
+        entry = {**asdict(receipt), "issue": number, "action": action, "route": route}
+        if regenerate:
+            entry["regenerate"] = True
+        matrix.append(entry)
     return matrix, notes

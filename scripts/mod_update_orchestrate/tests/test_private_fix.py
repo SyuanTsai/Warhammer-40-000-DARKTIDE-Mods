@@ -42,6 +42,10 @@ class PrivateFixTests(unittest.TestCase):
         self.old_hash = "version=1\nsha256=" + "0" * 64
         self.git = Mock(side_effect=self.run_git)
         self.gate_changes = "README.md\0" + HASH
+        self.baseline = self.enterContext(patch("scripts.mod_update_orchestrate.private_fix.read_repo_tree"))
+        self.baseline.side_effect = lambda git, oid, mod: {
+            path.name: path.read_bytes() for path in (self.root / mod).iterdir() if path.is_file()
+        }
         self.make_mod()
 
     def make_mod(self, name="Example", nexus_id=123, local=b"private\n", upstream=b"original\r\n",
@@ -85,6 +89,8 @@ class PrivateFixTests(unittest.TestCase):
             return "\0".join(self.changes) if BEFORE in args and AFTER in args else ""
         if args[0] == "show":
             return self.old_hash
+        if args[0] == "hash-object":
+            return HEAD
         return ""
 
     def run_detection(self, *, drive=True, dry_run=False, mode="manual"):
@@ -179,7 +185,7 @@ class PrivateFixTests(unittest.TestCase):
         self.changes.append(f"{MOD}/{LOC}")
         self.gate_changes += f"\0{MOD}/{LOC}"
         localization = self.root / MOD / LOC
-        localization.write_bytes(b"English")
+        localization.write_bytes(b"English\r\n")
 
         def inspect_candidate(*args):
             self.assertIs(args[0], previous)
@@ -190,16 +196,16 @@ class PrivateFixTests(unittest.TestCase):
                              ("true", AFTER, "yes"))
             self.assertEqual(load_registry(self.root)[0][0].nexus_id, 123)
             self.assertIn(NOTE + "（待補說明）", (self.root / "README.md").read_text(encoding="utf-8"))
-            self.assertEqual(localization.read_bytes(), "翻譯".encode())
+            self.assertEqual(localization.read_bytes(), "翻譯\r\n".encode())
             return self.github.write_pr.return_value
 
         self.github.write_pr.side_effect = inspect_candidate
         # When
         with patch("scripts.mod_update_orchestrate.private_fix.translate_private",
-                   return_value=(LOC, "翻譯".encode(), [], [])) as translate:
+                   return_value=(LOC, "翻譯\n".encode(), [], [])) as translate:
             self.run_detection()
         # Then
-        self.assertEqual(translate.call_args.args[4][LOC], b"English")
+        self.assertEqual(translate.call_args.args[4][LOC], b"English\r\n")
         self.assertEqual(translate.call_args.args[5], BEFORE)
         self.github.write_pr.assert_called_once()
         self.github.merge_pr.assert_not_called()
