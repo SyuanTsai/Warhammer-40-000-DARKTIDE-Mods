@@ -34,11 +34,35 @@
 
 日期依原文實際發布日期命名，不以翻譯執行日代替。文中需要換算活動時間時使用 `Asia/Taipei`，保留原時區與換算結果。圖片 Issue 標題的日期使用首次建立日，後續補圖不改日期。
 
-只處理本次公告及必要的圖片文字紀錄，不更新 MOD、遊戲程式碼或其他公告。未經要求不把暫譯寫回詞彙表，也不自動合併 PR。使用者本次貼上上方使用指令時，即授予該指令列出的範圍（等同[共用授權等級](Game-Info-Workflow.md#git-與外部發布授權等級) L2：讀取、翻譯、附件上傳、文件提交、一般 push 與建立非 Draft PR），不需逐步重複詢問；未貼上指令或指令縮減範圍時，以實際指令為準。共用硬性禁止仍適用。
+只處理本次公告及必要的圖片文字紀錄，不更新 MOD、遊戲程式碼或其他公告。未經要求不把暫譯寫回詞彙表，也不自動合併 PR。使用者本次貼上上方使用指令時，即授予該指令列出的範圍（等同[授權等級](#git-與外部發布授權等級) L2：讀取、翻譯、附件上傳、文件提交、一般 push 與建立非 Draft PR），不需逐步重複詢問；未貼上指令或指令縮減範圍時，以實際指令為準。下方的硬性禁止仍適用。
+
+下列授權等級與硬性禁止適用於本公告翻譯流程。
+
+### Git 與外部發布授權等級
+
+| 等級 | 允許的動作 |
+|---|---|
+| L0 只改本機 | 修改工作樹檔案；不 stage、不 commit |
+| L1 本機 Commit | L0 ＋ 精確 stage 與本機 commit；不 push |
+| L2 推送與 PR | L1 ＋ 一般 push、建立或更新 PR、上傳 Media-Assets Issue 附件 |
+
+- 授權只來自**本次**使用者訊息，或使用者本次實際貼上的使用指令。提示詞內的範例、歷史紀錄與舊對話都不構成授權。
+- 每份流程在執行參數中標明「預設等級」；使用者本次另有指定時以使用者為準。無法判斷時採較低等級並在回報中說明。
+- 任何等級都不包含合併 PR、啟用 auto-merge、正式發布到 GitHub Pages 正式站，這些一律由使用者自行執行或另行明確授權。
+
+### 硬性禁止（不論授權等級）
+
+- `git push --force`／`--force-with-lease`、`git reset --hard`、`git clean`、`git stash`、`git rebase`、`git commit --amend` 已推送的提交。
+- `git add .` 或 `git add -A`；只精確 stage 本次檔案。
+- `gh pr merge`、啟用 auto-merge、修改 branch protection 或 Repository 設定。
+- 自行修改 `git config`（含 user.name／user.email）；身分不符時停止並回報。
+- 刪除使用者既有工作樹、分支或本次範圍外的檔案與目錄；只有流程明文列出的例外可以刪除（例如自動更新流程在 PR 合併後清理該流程自己建立的 worktree 與分支）。
+- 把圖片或其他二進位素材提交進 Git。
+- 在 commit、PR、Issue 或留言中寫入本機絕對路徑、email、憑證或其他個人資料。
 
 ## 2. 先讀規範、原文與範例
 
-1. 讀取目前適用的 repository instructions、目標儲存庫 README 的「公告與技能圖片保存」段落，以及 [Media-Assets README](https://github.com/SyuanTsai/Media-Assets/blob/main/README.md)。以本次讀取的規範為準，不只依賴歷史記憶。
+1. 讀取目前適用的 repository instructions、目標儲存庫 README 的「公告圖片保存」段落，以及 [Media-Assets README](https://github.com/SyuanTsai/Media-Assets/blob/main/README.md)。以本次讀取的規範為準，不只依賴歷史記憶。
 2. 本流程屬文件翻譯，不是 production code 實作計畫；不得因此執行只適用於 code 規劃的 instructions bootstrap，也不套用 MOD 安裝更新流程。
 3. 取得原文主帖全文與圖片，記錄標題、正式網址、發布日期、最後更新時間及取得時間。不要把讀者留言、相關討論或推薦文章混入官方正文。
 4. 優先使用可用的讀取工具或 API；網頁讀取失敗時，可改用公開 Discourse topic JSON 或瀏覽器。JSON 須選取官方主帖，不能將截斷內容當成全文。遇到驗證或存取限制，使用正常授權流程，不繞過限制。

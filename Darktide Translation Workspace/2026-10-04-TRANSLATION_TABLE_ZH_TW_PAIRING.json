@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-10-04",
   "scope": "1.13.X same-build English / zh-tw skill-name pairing",
-  "supersedes_pending_status_in": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_RECONCILIATION.json",
+  "supersedes_pending_status_blob": "7587ff639986ba27dbe5cf7dd16ecca044e71172",
   "source_pin": "7e662fcda16219d775b84af50322be2e9cd9d62e",
   "texts": {
     "game_version": "1.13.1",

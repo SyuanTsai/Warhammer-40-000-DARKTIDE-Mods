@@ -59,9 +59,9 @@
 
 本 Repository 收錄的 [DPM](Warhammer%2040%2C000%20DARKTIDE/mods/DPM/) 包含針對 Darktide 1.13.1 的私人修正，並非遊戲官方或 DPM 原作者發布的更新。修正移除關閉介面時重建整個 HUD 的行為、補齊敵人血量資料清理、減少攻擊回呼中的重複查詢，並將 HUD 文字的正常格式化頻率限制在每秒最多 10 次；傷害事件仍逐次處理。
 
-## 公告與技能圖片保存
+## 公告圖片保存
 
-公告及技能說明交由 [Media-Assets](https://github.com/SyuanTsai/Media-Assets#readme) 管理的圖片，只保存於公開 Issue 附件。編輯前先讀該 README，找到對應 Issue，將圖片上傳到本文或 comment，再使用 GitHub 產生的完整附件網址。
+公告圖片由 [Media-Assets](https://github.com/SyuanTsai/Media-Assets#readme) 管理，只保存於公開 Issue 附件。編輯前先讀該 README，找到對應 Issue，將圖片上傳到本文或 comment，再使用 GitHub 產生的完整附件網址。
 
 Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖檔提交至 Media-Assets 或本專案的 main、master 或任何工作分支，也不得另存為 Git 備份。貼上原站或 `raw.githubusercontent.com` 圖片網址並不等於上傳附件。上傳遇到限制時保留來源 metadata 並回報，取得可用的附件上傳方式後再完成保存。
 
