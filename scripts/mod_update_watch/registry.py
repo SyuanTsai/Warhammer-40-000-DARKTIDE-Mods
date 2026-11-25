@@ -127,8 +127,12 @@ def _readme_entries(path):
 
 
 def _read_hash(path):
+    return parse_hash(path.read_text(encoding="utf-8-sig", errors="replace"))
+
+
+def parse_hash(text):
     fields = {}
-    for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
+    for line in text.removeprefix("\ufeff").splitlines():
         key, separator, value = line.partition("=")
         if separator:
             fields[key.strip()] = value.strip()

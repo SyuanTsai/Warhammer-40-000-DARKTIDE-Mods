@@ -14,7 +14,8 @@ from unittest.mock import Mock, patch
 
 from scripts.mod_update_orchestrate.gate import validate_git
 from scripts.mod_update_orchestrate.localization import Localization
-from scripts.mod_update_orchestrate.pr import run_git
+from scripts.mod_update_orchestrate.private_fix import private_fix, translate_private
+from scripts.mod_update_orchestrate.pr import commit_tree, run_git
 from scripts.mod_update_orchestrate.process import process
 from scripts.mod_update_orchestrate.tests.test_pipeline import comment, issue, marker
 from scripts.mod_update_orchestrate.tests.test_routes import README
@@ -89,6 +90,87 @@ class SkillTests(unittest.TestCase):
         return self.Response(json.dumps({"items": items}), model="claude-sonnet-5-5",
                              usage={"input_tokens": 10, "output_tokens": 5})
 
+    def test_InterT12_private_pr_reuses_approved_translation_after_code_only_push(self):
+        code = self.file.parent / "Example.mod"
+        code.write_text("original\n", encoding="utf-8")
+        (self.repo / "README.md").write_text(
+            "### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n\n",
+            encoding="utf-8")
+        hash_file = self.repo / ".hash" / "Example.hash"
+        hash_file.parent.mkdir()
+        hash_file.write_text(f"nexus_id=123\nversion=1\nsha256={'0' * 64}\nrepo_directory=Example\n",
+                             encoding="utf-8")
+
+        def snapshot(parent):
+            self.git("add", "--all")
+            head = commit_tree(self.git, parent, "Synthetic fixture")
+            self.git("update-ref", "HEAD", head)
+            return head
+
+        before = snapshot(self.oid)
+        code.write_text("private A\n", encoding="utf-8")
+        self.file.write_text('return { stable = { en = "Stable", ["zh-tw"] = "穩定" }, '
+                             'added = { en = "Activate" } }\n', encoding="utf-8")
+        main = after_a = snapshot(before)
+        github = Mock()
+        github.commit_pulls.return_value = []
+        github.pulls.return_value = []
+        pushed = []
+        published = []
+
+        def git(*args, **kwargs):
+            if args[0] == "fetch":
+                return ""
+            if args == ("rev-parse", "FETCH_HEAD"):
+                return main
+            if args[0] == "ls-remote":
+                return f"{pushed[-1]}\t{args[-1]}" if pushed else ""
+            if args[0] == "push":
+                pushed.append(args[-1].split(":", 1)[0])
+                return ""
+            return run_git(self.repo, *args, **kwargs)
+
+        def write_pr(previous, branch, title, body, draft):
+            pull = {"number": 7, "head": {"sha": pushed[-1]}, "body": body, "draft": draft, "labels": []}
+            published.append(pull)
+            return pull
+
+        github.write_pr.side_effect = write_pr
+        transport = self.FakeTransport([self.respond, self.respond])
+        bases = []
+        translate = Localization.translate
+
+        def translate_offline(loc, document, **kwargs):
+            bases.append(document["baseOid"])
+            kwargs["adapter"] = self.run_adapter(transport)
+            return translate(loc, document, **kwargs)
+
+        with (patch.object(Localization, "translate", translate_offline),
+              patch("scripts.mod_update_orchestrate.private_fix.compare_archive",
+                    return_value=(["Example.mod"], "Synthetic archive")),
+              patch.dict(os.environ, {"ANTHROPIC_API_KEY": ""})):
+            private_fix(self.repo, git, github, None, None, before, after_a, self.skill, self.temp, emit=Mock())
+            first, = pushed
+            self.assertIn("啟動", self.git("show", f"{first}:{self.mod}/{self.name}"))
+            self.assertEqual(len(transport.requests), 2)
+            previous, = published
+            github.pulls.return_value = [previous]
+
+            code.write_text("private B\n", encoding="utf-8")
+            main = after_b = snapshot(after_a)
+            private_fix(self.repo, git, github, None, None, after_a, after_b, self.skill, self.temp, emit=Mock())
+
+        _, updated = pushed
+        self.assertEqual(self.git("rev-parse", f"{updated}^"), after_b)
+        self.assertEqual(self.git("show", f"{updated}:{self.mod}/Example.mod"), "private B")
+        self.assertEqual(self.git("show", f"{updated}:{self.mod}/{self.name}"),
+                         self.git("show", f"{first}:{self.mod}/{self.name}"))
+        self.assertEqual(bases, [before, before])
+        self.assertEqual(len(transport.requests), 2)
+        self.assertIs(github.write_pr.call_args.args[0], previous)
+        self.assertIn(f"before={before} after={after_b} verified_head={updated}",
+                      github.write_pr.call_args.args[3])
+
     # Scenario: 未登錄 MOD 只有原文，固定版 Skill 搭配假翻譯與審查產生新 PR。
     # Purpose: 驗證第一個 Git 基準的 bytes、BaseOid 綁定、Receipt、第二個 Git 提交與禁止自動合併。
     def test_InterT15_new_route_upstream_to_receipt_and_records(self):
@@ -143,7 +225,8 @@ class SkillTests(unittest.TestCase):
             return document
 
         def translate_offline(loc, document, **kwargs):
-            return translate(loc, document, adapter=self.run_adapter(transport), **kwargs)
+            kwargs["adapter"] = self.run_adapter(transport)
+            return translate(loc, document, **kwargs)
 
         # When
         with patch.object(Localization, "generate", capture_generation), patch.object(
@@ -203,6 +286,23 @@ class SkillTests(unittest.TestCase):
         self.assertIn("穩定", self.file.read_text(encoding="utf-8"))
         shutil.rmtree(self.loc.run)
         validate_git(self.git, self.oid, self.mod, ".hash/example.hash")
+
+    # Scenario: 私人修正在推送中加入英文，真 Skill 將其送到假翻譯與審查。
+    # Purpose: 確認以 before 為基準，通過 AI_REQUIRED、Apply 和 Receipt。
+    def test_InterT25_private_fix_ai_required_to_receipt(self):
+        # Given
+        content = b'return { stable = { en = "Stable" }, added = { en = "Activate" } }\n'
+        transport = self.FakeTransport([self.respond, self.respond])
+        # When
+        name, merged, report, blocked = translate_private(
+            self.repo, self.temp, self.skill, self.mod, {self.name: content}, self.oid, 123,
+            adapter=self.run_adapter(transport))
+        # Then
+        self.assertEqual(name, self.name)
+        self.assertFalse(blocked)
+        self.assertIn("啟動", merged.decode())
+        self.assertIn("AI_REQUIRED", "\n".join(report))
+        self.assertEqual(len(transport.requests), 2)
 
     # Scenario: 兩個待送項目超過覆寫上限一項。
     # Purpose: 真轉接層回傳 2，並且不呼叫 transport、不套用。

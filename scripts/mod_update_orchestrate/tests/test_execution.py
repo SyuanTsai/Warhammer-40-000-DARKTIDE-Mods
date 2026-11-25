@@ -6,6 +6,7 @@ from unittest.mock import Mock, patch
 
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
 from scripts.mod_update_watch.handoff import Received
+from scripts.mod_update_watch.registry import _read_hash
 
 MOD = "Warhammer 40,000 DARKTIDE/mods/Example"
 PATHS = (MOD, "README.md", ".hash/example.hash")
@@ -108,3 +109,52 @@ class ExecutionTests(unittest.TestCase):
         self.assertIn("repo 紀錄已是版本 v2", self.emit.call_args.args[0])
         download.assert_not_called()
         self.github.pulls.assert_not_called()
+
+    # Scenario: Nexus 正式版取代 hotfix，且封存基準與現有程式不同。
+    # Purpose: C5 列出原有私人修改、保留修改與 private_fix_commit，清除 hotfix 來源。
+    def test_UnitT60_c5_keeps_private_fix_when_official_replaces_hotfix(self):
+        # Given
+        readme = self.root / "README.md"
+        readme.write_text("# 遊戲體驗改善\n\n### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n"
+                          "- MOD 版本：1\n- MOD 網站最後更新日期：待補\n- MOD 檔案名稱：patch.zip\n"
+                          "- 手動維護最後下載日期：2026-11-24\n", encoding="utf-8")
+        hash_file = self.root / PATHS[2]
+        hash_file.parent.mkdir()
+        hash_file.write_text("acquisition_method=author-hotfix\nsource_url=https://example.invalid/patch\n"
+                             "private_fix_commit=old\n", encoding="utf-8")
+        (self.root / MOD / "Example.mod").write_bytes(b"private")
+        ready = {"units": [], "translationBinding": {"rulesSha256": "rules", "glossarySha256": "terms"}}
+        self.loc.translate.return_value = (0, {}, ready)
+        self.loc.generate.return_value = ready
+        self.loc.relative, self.loc.apply.return_value = "Example_localization.lua", b"translation"
+        receipt = self.enterContext(patch("scripts.mod_update_orchestrate.process.latest_receipt"))
+        receipt.return_value = RECEIPT
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.matches_issue", return_value=True))
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.find_base", return_value=self.scratch / "base"))
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.extract"))
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.locate_mod"))
+        read_tree = self.enterContext(patch("scripts.mod_update_orchestrate.process.read_tree"))
+        read_tree.side_effect = [{"Example.mod": b"upstream"}, {"Example.mod": b"private"}]
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.validate_git"))
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.folder_id", return_value=None))
+        archive = self.scratch / "new"
+        archive.write_bytes(b"zip")
+        values = dict(filename="new.zip", nexus_last_updated="2026-11-25T00:00:00Z",
+                      version="2", downloaded="2026-11-25", acquisition_method="drive-intake")
+        self.enterContext(patch("scripts.mod_update_orchestrate.process.updates", return_value=values))
+        # When
+        _, body, conflicts = candidate(
+            self.root, self.git, self.github, Mock(), "processed", ISSUE, 7, RECEIPT,
+            self.mod, PATHS, archive, {"Example.mod": b"upstream", self.loc.relative: b"new"},
+            self.scratch, self.scratch / "cache", self.scratch / "skill", "a" * 40,
+            max_items=None, dry_run=False, emit=self.emit,
+        )
+        # Then
+        self.assertIn("偵測到私人修正", body)
+        self.assertIn("Example.mod", body)
+        saved = _read_hash(hash_file)
+        self.assertEqual((saved["private_fix"], saved["private_fix_commit"]), ("true", "old"))
+        self.assertNotIn("source_url", saved)
+        self.assertIn("私人修正（非官方）", readme.read_text(encoding="utf-8"))
+        self.assertEqual((self.root / MOD / "Example.mod").read_bytes(), b"private")
+        self.assertFalse(conflicts)
