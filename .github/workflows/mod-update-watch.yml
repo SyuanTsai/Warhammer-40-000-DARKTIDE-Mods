@@ -46,11 +46,18 @@ jobs:
           NEXUS_API_KEY: ${{ secrets.NEXUS_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MOD_UPDATE_ASSIGNEE: ${{ github.repository_owner }}
+          WATCH_EVENT: ${{ github.event_name }}
           WATCH_MODE: ${{ inputs.mode }}
           WATCH_FULL_SCAN: ${{ inputs.full_scan }}
           WATCH_DRY_RUN: ${{ inputs.dry_run }}
         run: |
           if [[ -z "$NEXUS_API_KEY" ]]; then
+            if [[ "$WATCH_EVENT" == "schedule" ]]; then
+              warning="未設定 GitHub Actions Secret NEXUS_API_KEY，本次排程略過 MOD 更新偵測。請到 Settings → Secrets and variables → Actions 新增 NEXUS_API_KEY。"
+              echo "::warning::$warning"
+              echo "$warning" >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
             echo "::error::請在 GitHub Actions secrets 設定 NEXUS_API_KEY"
             exit 2
           fi
