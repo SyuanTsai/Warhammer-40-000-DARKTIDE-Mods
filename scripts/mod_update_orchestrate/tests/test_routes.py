@@ -1,3 +1,4 @@
+import gzip
 import hashlib
 import io
 import json
@@ -303,3 +304,90 @@ class RouteTests(unittest.TestCase):
         self.assertIn("main_file_id=9001", hash_path.read_text(encoding="utf-8"))
         self.assertNotIn("source_url=", hash_path.read_text(encoding="utf-8"))
         self.assertNotIn("- 來源類型：", self.readme.read_text(encoding="utf-8"))
+
+    # Scenario: True Level 從社群公開測試版更新到已收件的 Nexus 正式主檔。
+    # Purpose: 同步現行來源說明，保留歷史連結及 README 其他段落的原始位元組。
+    def test_UnitT55_true_level_readme_source(self):
+        # Given
+        fixture = Path(__file__).with_name("fixtures") / "true_level_readme_before.md.gz"
+        raw = gzip.decompress(fixture.read_bytes())
+        before = raw.decode("utf-8")
+        start = before.index("### [True Level]")
+        end = before.index("\n### ", start) + 1
+        entry = before[start:end]
+        self.readme.write_bytes(raw)
+        values = {
+            "nexus_last_updated": "2026-10-09T12:34:23Z",
+            "version": "1.11.5",
+            "filename": "True Level 156 1.11.5 2026-10-09T12-34Z oudzUunTm.zip",
+            "downloaded": "2026-11-25",
+            "acquisition_method": "drive-intake",
+            "main_file_id": "8911",
+            "main_file_uploaded_at_utc": "2026-10-09T12:34:22Z",
+        }
+        # When
+        update_readme(self.readme, 156, values)
+        # Then
+        replacements = {
+            "MOD 網站最後更新日期": "Last updated 09 October 2026, 08:34PM",
+            "MOD 版本": "1.11.5",
+            "MOD 檔案名稱": values["filename"].removesuffix(".zip"),
+            "手動維護最後下載日期": values["downloaded"],
+            "來源類型": "Nexus 正式主檔（Main file ID 8911，Main file uploaded at UTC 2026-10-09T12:34:22Z）",
+        }
+        expected = []
+        for line in entry.splitlines(keepends=True):
+            base = line.rstrip("\r\n")
+            label, _, _ = base.removeprefix("- ").partition("：")
+            if label in replacements:
+                line = f"- {label}：{replacements[label]}" + line[len(base):]
+            elif label in {"社群來源", "社群程式來源"}:
+                line = "- 歷史" + line.removeprefix("- ")
+            elif label == "來源欄位說明":
+                continue
+            expected.append(line)
+        self.assertEqual(self.readme.read_bytes(),
+                         (before[:start] + "".join(expected) + before[end:]).encode("utf-8"))
+
+    # Scenario: README 已記錄相同的正式主檔，且有額外來源備註。
+    # Purpose: 保留已同步的文字，以及無法從 .hash 判定矛盾的欄位。
+    def test_UnitT56_official_readme_source_is_unchanged(self):
+        # Given
+        source = ("- 來源類型：Nexus 正式主檔（Main file ID 8911，"
+                  "Main file uploaded at UTC 2026-10-09T12:34:22Z）\n"
+                  "- 來源欄位說明：保留維護紀錄\n- 來源網址：<https://example.invalid/reference>\n")
+        before = README.replace("：舊", "：Last updated 09 October 2026, 08:34PM").replace(
+            "\n\n# 移除", "\n" + source + "\n# 移除")
+        self.readme.write_bytes(before.encode("utf-8"))
+        values = {"nexus_last_updated": "2026-10-09T12:34:23Z", "version": "1",
+                  "filename": "old.zip", "downloaded": "2026-01-01", "acquisition_method": "drive-intake",
+                  "main_file_id": "8911", "main_file_uploaded_at_utc": "2026-10-09T12:34:22Z"}
+        # When
+        update_readme(self.readme, 42, values)
+        # Then
+        self.assertEqual(self.readme.read_bytes(), before.encode("utf-8"))
+
+    # Scenario: 已有正式來源說明的 MOD 再次更新，之後改用作者 hotfix。
+    # Purpose: 更新正式檔 ID，再套用既有 hotfix 標記並保留歷史與維護備註。
+    def test_UnitT57_official_readme_source_updates_then_switches_to_hotfix(self):
+        # Given
+        source = ("- 來源類型：Nexus 正式主檔（Main file ID 8911，"
+                  "Main file uploaded at UTC 2026-10-09T12:34:22Z）\n"
+                  "- 歷史社群來源：原始貼文\n- 來源網址：<https://example.invalid/reference>\n")
+        before = README.replace("\n\n# 移除", "\n" + source + "\n# 移除")
+        self.readme.write_text(before, encoding="utf-8")
+        values = {"nexus_last_updated": "2026-11-25T00:00:00Z", "version": "2",
+                  "filename": "new.zip", "downloaded": "2026-11-25", "acquisition_method": "drive-intake",
+                  "main_file_id": "9001", "main_file_uploaded_at_utc": "2026-11-25T00:00:00Z"}
+        # When
+        update_readme(self.readme, 42, values)
+        official = self.readme.read_text(encoding="utf-8")
+        update_readme(self.readme, 42, dict(values, acquisition_method="author-hotfix", source_url=SOURCE,
+                                           main_file_id="not-applicable", main_file_uploaded_at_utc="not-applicable"))
+        hotfix = self.readme.read_text(encoding="utf-8")
+        # Then
+        self.assertIn("Main file ID 9001，Main file uploaded at UTC 2026-11-25T00:00:00Z", official)
+        self.assertNotIn("Main file ID 8911", official)
+        self.assertIn(f"- 來源類型：作者 hotfix\n- 來源網址：<{SOURCE}>\n", hotfix)
+        self.assertNotIn("Nexus 正式主檔", hotfix)
+        self.assertIn("- 歷史社群來源：原始貼文\n- 來源網址：<https://example.invalid/reference>\n", hotfix)

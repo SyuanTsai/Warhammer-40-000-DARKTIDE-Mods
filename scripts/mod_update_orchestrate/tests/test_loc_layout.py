@@ -128,6 +128,22 @@ class LocalizationLayoutTests(unittest.TestCase):
         self.assertEqual(note, "")
         self.assertEqual(output, before.replace(b"color = 1", b"color = 2") + b"-- updated\n")
 
+    # Scenario: A helper returns its own table before the final localization table.
+    # Purpose: Select the final literal and keep both helper code and call tokens from Apply.
+    def test_UnitT52_direct_return_after_local_function(self):
+        # Given
+        prefix = (b"local function labels()\n"
+                  b'    return { title = "Menu title" }\n'
+                  b"end\n\n")
+        before = prefix + REPO.replace(b'"One"', b'cf(labels().title, Localize("old"))')
+        applied_prefix = prefix.replace(b"Menu title", b"Settings title")
+        value = b'cf(labels().title, Localize("new"))'
+        applied = applied_prefix + APPLIED.replace(b'"One"', value)
+        # When
+        output, note = preserve_layout(before, applied)
+        # Then
+        self.assertEqual((output, note), (applied_prefix + REPO.replace(b'"One"', value), ""))
+
     # Scenario: The baseline has no zh-tw field to establish a placement convention.
     # Purpose: Keep the Apply order and field text within a newly added entry.
     def test_UnitT55_no_convention_preserves_new_entry_layout(self):
@@ -146,7 +162,11 @@ class LocalizationLayoutTests(unittest.TestCase):
         # Given
         unsupported = [APPLIED.replace(b'"One"', b'[[first\nsecond]]'),
                        APPLIED.replace(b'"One"', b'{ nested = "One" }'),
+                       APPLIED.replace(b'    one = {', b'    [Settings.One] = {'),
+                       b"return {\n    one = make_entry(),\n}\n",
+                       APPLIED.replace(b'        en = "One",', b'        en = "One",\n        en = "Other",'),
                        b"local function example()\n" + APPLIED + b"end\nreturn example()\n",
+                       APPLIED + b"local extra = true\n",
                        b'return { one = { en = "One" }, two = { en = "Two" } }\n']
         for source in unsupported:
             with self.subTest(source=source):
@@ -182,3 +202,93 @@ class LocalizationLayoutTests(unittest.TestCase):
                          [b"+    throw_on_release = {", b"+    throw_on_release_tooltip = {"])
         self.assertEqual(output, before.replace(b"    -- Grenade Throw Mode", b"".join(
             line[1:] + b"\n" for line in diff) + b"    -- Grenade Throw Mode"))
+
+    # Scenario: Apply returns a named local table and updates the surrounding Lua.
+    # Purpose: Keep repo field order and take the declaration, comments and return from Apply.
+    def test_UnitT80_named_local_table(self):
+        # Given
+        before = REPO.replace(b"return {", b"local old = {") + b"return old\n"
+        applied = (b"-- upstream\nlocal color = 2\n"
+                   + APPLIED.replace(b"return {", b"local current = {")
+                   + b"--[[ upstream comment ]]\nreturn current;\n")
+        # When
+        output, note = preserve_layout(before, applied)
+        empty_before, empty_applied = b"local x = {}\nreturn x\n", b"local y = {}\nreturn y\n"
+        empty = preserve_layout(empty_before, empty_applied)
+        # Then
+        self.assertEqual(note, "")
+        self.assertEqual(output, b"-- upstream\nlocal color = 2\n"
+                         + REPO.replace(b"return {", b"local current = {")
+                         + b"--[[ upstream comment ]]\nreturn current;\n")
+        self.assertEqual(empty, (empty_applied, ""))
+
+    # Scenario: A loop derives new entries from a named table, and Apply may update the loop.
+    # Purpose: Restore the repo's literal layout and preserve the Apply code around it byte for byte.
+    def test_UnitT82_named_local_table_derives_entries_in_loop(self):
+        # Given
+        prefix = b'local suffix = "_alias"\n\n'
+        literal = REPO.replace(b"return {", b"local messages = {")
+        tail = (b'\nfor _, key in ipairs({ "one", "two" }) do\n'
+                b"    messages[key .. suffix] = messages[key]\n"
+                b"end\n\nreturn messages; -- export\n")
+        before = prefix + literal + tail
+        for applied_tail in (tail, tail.replace(b"messages[key]\n", b"table.clone(messages[key])\n")):
+            with self.subTest(tail=applied_tail):
+                applied_prefix = prefix.replace(b"_alias", b"_derived")
+                applied_table = APPLIED.replace(b"return {", b"local messages = {").replace(b'"One"', b'"Updated"')
+                applied = applied_prefix + applied_table + applied_tail
+                # When
+                output, note = preserve_layout(before, applied)
+                # Then
+                self.assertEqual((output, note),
+                                 (applied_prefix + literal.replace(b'"One"', b'"Updated"') + applied_tail, ""))
+
+    # Scenario: The final return does not identify exactly one local literal declaration.
+    # Purpose: Fall back without guessing which table to rearrange.
+    def test_UnitT85_named_local_table_requires_unique_matching_declaration(self):
+        # Given
+        declaration = APPLIED.replace(b"return {", b"local x = {")
+        unsupported = (declaration + b"return y\n",
+                       declaration.removeprefix(b"local ") + b"return x\n",
+                       declaration + b"local x = {}\nreturn x\n")
+        for applied in unsupported:
+            with self.subTest(applied=applied):
+                # When
+                output, note = preserve_layout(REPO, applied)
+                # Then
+                self.assertEqual((output, note), (applied, FALLBACK_NOTE))
+
+    # Scenario: A repo entry puts its brace and language value on their own lines.
+    # Purpose: Preserve the multiline assignment spacing when Apply changes the value.
+    def test_UnitT87_split_assignment(self):
+        # Given
+        before = REPO.replace(b"one = {", b"one =\n    {").replace(b'en  = "One"', b'en  =\n          "One"')
+        # When
+        output, note = preserve_layout(before, APPLIED.replace(b'"One"', b'"Updated"'))
+        # Then
+        self.assertEqual((output, note), (before.replace(b'"One"', b'"Updated"'), ""))
+
+    # Scenario: Re-run layout preservation on the exact True Level 1.11.0 and 1.11.5 blobs.
+    # Purpose: Keep en before zh-tw and leave only actual translation and upstream changes.
+    def test_UnitT90_true_level_incident(self):
+        # Given
+        fixtures = Path(__file__).with_name("fixtures")
+        before, applied = [gzip.decompress((fixtures / f"true_level_{name}.lua.gz").read_bytes())
+                           for name in ("before", "applied")]
+        # When
+        output, note = preserve_layout(before, applied)
+        # Then
+        self.assertEqual(note, "")
+        diff = changes(before, output)
+        self.assertEqual((sum(line.startswith(b"+") for line in diff),
+                          sum(line.startswith(b"-") for line in diff)), (11, 14))
+        self.assertEqual(sum(line.startswith(b"+        ja =") for line in diff), 9)
+        self.assertEqual([line for line in diff if line.startswith(b"-    share_")],
+                         [b"-    share_havoc_assignment = {", b"-    share_havoc_assignment_desc = {"])
+        for key in (b"enable_havoc_assignment", b"havoc_assignment_icon", b"havoc_assignment_color",
+                    b"enable_havoc_assignment_charges", b"havoc_assignment_charges_desc"):
+            with self.subTest(key=key):
+                body = output.split(b"    " + key + b" = {\n", 1)[1].split(b"    },", 1)[0]
+                self.assertLess(body.index(b"en ="), body.index(b'["zh-tw"] ='))
+        self.assertEqual(output.split(b"local _add_child_loc", 1)[1],
+                         applied.split(b"local _add_child_loc", 1)[1])
