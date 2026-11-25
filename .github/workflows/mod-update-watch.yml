@@ -1,0 +1,68 @@
+name: MOD update watch
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Run update detection or the Nexus API probe
+        type: choice
+        options:
+          - detect
+          - probe
+        default: detect
+      full_scan:
+        description: Check all tracked MODs in detect mode
+        type: boolean
+        default: false
+      dry_run:
+        description: Preview Issue titles without calling GitHub
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: mod-update-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run offline unit tests
+        run: python -m unittest discover -s scripts/mod_update_watch/tests -t .
+      - name: Run MOD update watch
+        shell: bash
+        env:
+          NEXUS_API_KEY: ${{ secrets.NEXUS_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MOD_UPDATE_ASSIGNEE: ${{ github.repository_owner }}
+          WATCH_MODE: ${{ inputs.mode }}
+          WATCH_FULL_SCAN: ${{ inputs.full_scan }}
+          WATCH_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [[ -z "$NEXUS_API_KEY" ]]; then
+            echo "::error::請在 GitHub Actions secrets 設定 NEXUS_API_KEY"
+            exit 2
+          fi
+          if [[ "$WATCH_MODE" == "probe" ]]; then
+            python -m scripts.mod_update_watch.probe
+          else
+            args=()
+            if [[ "$WATCH_FULL_SCAN" == "true" ]]; then
+              args+=(--full-scan)
+            fi
+            if [[ "$WATCH_DRY_RUN" == "true" ]]; then
+              args+=(--dry-run)
+            fi
+            python -m scripts.mod_update_watch.main "${args[@]}"
+          fi

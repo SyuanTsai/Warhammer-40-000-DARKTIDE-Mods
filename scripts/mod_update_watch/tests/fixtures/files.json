@@ -1,0 +1,10 @@
+{
+  "files": [
+    {"file_id":101,"name":"Current release","file_name":"Spidey_Sense-2.zip","version":"2.0","uploaded_timestamp":1790816400,"category_name":"main","size_kb":1250},
+    {"file_id":102,"name":"Optional colors","file_name":"colors.zip","category_id":3},
+    {"file_id":103,"name":"Old release","category_name":"OLD_VERSION"},
+    {"file_id":104,"name":"Archive","category_id":6},
+    {"file_id":105,"name":"Patch notes","category_name":"UPDATE"},
+    {"file_id":106,"name":"Earlier main","version":"1.0","uploaded_timestamp":1780000000,"category_id":1}
+  ]
+}

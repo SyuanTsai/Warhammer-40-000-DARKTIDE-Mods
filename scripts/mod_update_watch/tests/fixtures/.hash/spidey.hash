@@ -1,0 +1,6 @@
+nexus_id=11
+repo_directory=Explicit_Directory
+version=1.1
+main_file_id=100
+main_file_uploaded_at_utc=2026-08-23T23:33:54Z
+upstream_reference_nexus_id=12345

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "directories": {
+    "19": "base",
+    "71": "BetterMelk",
+    "127": "who_are_you",
+    "181": "name_it",
+    "447": "markers_aio",
+    "460": "DisplayPing",
+    "544": "valkyrie",
+    "625": "auto_rations",
+    "932": "FpsDoctor"
+  },
+  "ignore": [847]
+}
