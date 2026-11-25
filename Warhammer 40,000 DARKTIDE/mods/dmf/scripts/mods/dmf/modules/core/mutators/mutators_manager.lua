@@ -506,3 +506,4 @@ end
 -- #####################################################################################################################
 
 -- Testing
+--dmf:io_dofile("dmf/scripts/mods/dmf/modules/core/mutators/test/mutators_test")
