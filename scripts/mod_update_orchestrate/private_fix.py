@@ -10,14 +10,15 @@ from scripts.mod_update_watch.registry import _read_hash, load_registry, parse_h
 from scripts.mod_update_watch.safe_extract import ArchiveError, extract
 
 from .base import find_base
+from .eol import default_format, format_note, repo_bytes
 from .gate import validate_private
 from .localization import Localization, LocalizationError
 from .merge import private_changes
-from .pr import UNRESOLVED_THREADS, commit_tree, push, remote_head, should_merge
+from .pr import UNRESOLVED_THREADS, commit_tree, push, remote_head, should_merge, stage_raw
 from .process import latest
 from .records import mark_private_readme, update_hash
 from .report import api_usage, blocked_units, cell, plain, workset_actions
-from .tree import MODS, TreeError, is_localization, locate_mod, read_tree
+from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
 
 MARKER = "mod-private-fix:pr"
 PR_MARKER = re.compile(
@@ -119,7 +120,11 @@ def publish_private(git, github, nexus_id, before, after, title, body, mode, blo
     expected = remote_head(git, branch)
     if previous is not None and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("私人修正 PR 分支已變更，請重新執行")
-    git("--literal-pathspecs", "add", "--", *changed_paths)
+    localization_path = f"{mod_path}/{localization}" if localization else None
+    if metadata_paths := [path for path in changed_paths if path != localization_path]:
+        git("--literal-pathspecs", "add", "--", *metadata_paths)
+    if localization_path:
+        stage_raw(git, [localization_path], preserve_mode=True)
     diff = git("diff", "--cached", "--name-only", "--no-renames", "-z", after, "--")
     if not diff:
         return None
@@ -194,8 +199,18 @@ def check_mod(root, git, github, drive, processed, before, after, skill, workspa
             message = f"重新翻譯範圍 `{before}..{after}` 需要人工處理，已保留原 PR head。"
             block_private(github, previous["number"], message + "\n\n" + "\n".join(blocked))
             return
+    note = ""
+    if loc_name:
+        baseline = read_repo_tree(git, after, mod_path)
+        original = baseline.get(loc_name)
+        target = repo_bytes(translated, original, default_format(baseline))
+        if note := format_note(original, translated, target):
+            report.append(f"- {cell(loc_name)} ｜ {note}")
+        translated = target
+        if translated == original:
+            loc_name = None
     if not (mark or loc_name):
-        if dry_run:
+        if dry_run or note:
             emit("\n".join(report))
         return
     paths = (["README.md", hash_path] if mark else []) + ([f"{mod_path}/{loc_name}"] if loc_name else [])

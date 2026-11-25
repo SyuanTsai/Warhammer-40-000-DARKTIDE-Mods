@@ -33,3 +33,15 @@ def read_tree(root, *, include_localization=False):
         if path.is_file() and (include_localization or not is_localization(relative)):
             result[relative] = path.read_bytes()
     return result
+
+
+def read_repo_tree(git, oid, mod_path):
+    result = {}
+    entries = git("--literal-pathspecs", "ls-tree", "-r", "-z", oid, "--", mod_path)
+    for entry in filter(None, entries.split("\0")):
+        metadata, path = entry.split("\t", 1)
+        mode, kind, blob = metadata.split()
+        if kind != "blob" or mode not in {"100644", "100755"}:
+            raise TreeError("BLOCKED：MOD 基準含非一般檔案")
+        result[path.removeprefix(mod_path + "/")] = git("cat-file", "blob", blob, raw=True)
+    return result

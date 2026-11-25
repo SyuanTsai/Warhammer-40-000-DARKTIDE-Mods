@@ -14,12 +14,12 @@ PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_i
 UNRESOLVED_THREADS = "暫停自動合併，PR 尚有未解決的討論串。"
 
 
-def run_git(root, *args, input=None):
+def run_git(root, *args, input=None, raw=False):
     try:
         result = subprocess.run(["git", *args], cwd=root, check=True, capture_output=True, input=input)
     except (OSError, subprocess.CalledProcessError):
         raise ValueError(f"Git 操作失敗（{args[0]}）") from None
-    return result.stdout.decode("utf-8").strip("\r\n")
+    return result.stdout if raw else result.stdout.decode("utf-8").strip("\r\n")
 
 
 def branch_for(nexus_id):
@@ -108,14 +108,22 @@ def push(git, branch, expected, head="HEAD"):
     git("push", f"--force-with-lease={ref}:{expected}", "origin", f"{head}:{ref}")
 
 
-def stage_raw(git, paths):
-    # 直接把壓縮檔位元組加入 index，避免 .gitattributes 或換行轉換更動原檔。
+def stage_raw(git, paths, *, preserve_mode=False):
+    # 保留已選定的位元組，略過 Git clean filters。
     names = sorted(paths)
+    if not names:
+        return
+    modes = {}
+    if preserve_mode:
+        entries = git("--literal-pathspecs", "ls-files", "--stage", "-z", "--", *names)
+        for entry in filter(None, entries.split("\0")):
+            metadata, name = entry.split("\t", 1)
+            modes[name] = metadata.split()[0]
     hashes = git("hash-object", "-w", "--no-filters", "--stdin-paths",
                  input=("\n".join(names) + "\n").encode("utf-8")).splitlines()
     if len(hashes) != len(names):
         raise ValueError("Git blob 與 MOD 檔案清單不符")
-    index = "".join(f"100644 {oid}\t{name}\0" for name, oid in zip(names, hashes))
+    index = "".join(f"{modes.get(name, '100644')} {oid}\t{name}\0" for name, oid in zip(names, hashes))
     git("update-index", "--add", "-z", "--index-info", input=index.encode("utf-8"))
 
 
@@ -138,7 +146,7 @@ def upstream_commit(git, base_oid, mod_path, files, nexus_id):
 
 
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
-            paths, *, route="update"):
+            paths, *, route="update", mod_staged=False):
     marker = pr_marker(body)
     if (not marker or marker[1] != str(nexus_id) or marker[3]
             or marker[2].startswith("sha256-") != (route == "hotfix")):
@@ -147,7 +155,8 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
     expected = remote_head(git, branch)
     if previous and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("PR 分支已變更，請重新執行")
-    git("-c", "core.autocrlf=false", "add", "-A", "--", *(paths[1:] if route == "new" else paths))
+    git("-c", "core.autocrlf=false", "add", "-A", "--",
+        *(paths[1:] if mod_staged or route == "new" else paths))
     changes = git("diff", "--cached", "--name-only", "--no-renames", "-z", base_oid, "--")
     if not changes:
         raise ValueError("Git index 無候選異動")

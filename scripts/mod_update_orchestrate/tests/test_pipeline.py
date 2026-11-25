@@ -38,6 +38,38 @@ def marker(file=9001, category="MAIN", *, version="2", **metadata):
 
 
 class DiscoverTests(unittest.TestCase):
+    # Scenario: 同主檔已有 PR，分別用指定 Nexus ID、未指定 ID 與一般排程探索。
+    # Purpose: 只為指定 MOD 傳遞重建旗標，未指定 ID 時在 step summary 警告。
+    def test_UnitT05_regenerate_requires_a_nexus_filter(self):
+        # Given
+        github = Mock()
+        github.list_open_issues.return_value = [issue()]
+        github.comments.return_value = [comment(marker())]
+        github.pages.return_value = [{"pull_request": {}, "body":
+            "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"}]
+        mods = [SimpleNamespace(nexus_id=123, hash_file=None, baseline_version="1")]
+        with tempfile.TemporaryDirectory() as tmp, patch(
+                "scripts.mod_update_orchestrate.main.GitHub", return_value=github), patch(
+                "scripts.mod_update_orchestrate.main.load_registry", return_value=(mods, [])):
+            for flags, action, warning in [
+                (["--regenerate", "--nexus-id", "123"], "update", False),
+                (["--regenerate"], "merge-check", True),
+                ([], "merge-check", False),
+            ]:
+                with self.subTest(flags=flags):
+                    output, summary = Path(tmp) / "output", Path(tmp) / "summary"
+                    output.write_text("")
+                    summary.write_text("")
+                    # When
+                    with patch.dict(os.environ, {"GITHUB_OUTPUT": str(output), "GITHUB_STEP_SUMMARY": str(summary)}):
+                        status = main(["discover", "--review-mode", "auto", *flags])
+                    # Then
+                    self.assertEqual(status, 0)
+                    matrix = json.loads(output.read_text().splitlines()[0].removeprefix("matrix="))["include"]
+                    self.assertEqual([item["action"] for item in matrix], [action])
+                    self.assertEqual(matrix[0].get("regenerate"), True if action == "update" else None)
+                    self.assertEqual("已忽略 regenerate" in summary.read_text(encoding="utf-8"), warning)
+
     # Scenario: Issue 有最新 MAIN 收件，或它已寫入 SHA-256／有開啟 PR。
     # Purpose: 探索只排入尚無交付的主檔。
     def test_UnitT10_queue_only_when_unpublished(self):
@@ -259,6 +291,54 @@ class RecordedVersionTests(unittest.TestCase):
 
 
 class ArchiveTests(unittest.TestCase):
+    # Scenario: 固定分支已開啟相同主檔的 PR，操作人員要求重建。
+    # Purpose: 只在重建時執行候選流程，使用既有 head 的 lease 更新同一張 PR。
+    def test_UnitT05_regenerate_updates_existing_pr_with_lease(self):
+        # Given
+        base, previous_head, head = ("a" * 40, "b" * 40, "c" * 40)
+        branch_ref = "refs/heads/auto/mod-update/123"
+        body = "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"
+        previous = {"number": 8, "head": {"sha": previous_head}, "body": body}
+        github = Mock()
+        github.issue.return_value = issue()
+        github.comments.return_value = [comment(marker())]
+        github.pulls.return_value = [previous]
+        github.write_pr.return_value = {"number": 8, "head": {"sha": head}, "draft": False}
+
+        def git_response(*args):
+            if args[:2] == ("rev-parse", "FETCH_HEAD"):
+                return base
+            if args[:2] == ("rev-parse", "HEAD"):
+                return head
+            if args[0] == "ls-remote":
+                return f"{previous_head}\t{branch_ref}"
+            if args[:2] == ("diff", "--cached"):
+                return "README.md\0"
+            return ""
+
+        git = Mock(side_effect=git_response)
+        mod = SimpleNamespace(directory="Example", hash_file=None, baseline_version="1")
+        with tempfile.TemporaryDirectory() as tmp, patch(
+                "scripts.mod_update_orchestrate.process.registry_mod", return_value=mod), patch(
+                "scripts.mod_update_orchestrate.process.download"), patch(
+                "scripts.mod_update_orchestrate.process.locate_mod"), patch(
+                "scripts.mod_update_orchestrate.process.read_tree"), patch(
+                "scripts.mod_update_orchestrate.process.candidate", return_value=("Title", body, [])) as rebuild:
+            root = Path(tmp)
+            args = (root, git, github, Mock(), "processed", 7, 123, 9001, root, root, root)
+            # When
+            process(*args, emit=Mock())
+            # Then
+            rebuild.assert_not_called()
+            github.write_pr.assert_not_called()
+            # When
+            process(*args, regenerate=True, emit=Mock())
+        # Then
+        rebuild.assert_called_once()
+        git.assert_any_call("push", f"--force-with-lease={branch_ref}:{previous_head}", "origin", f"HEAD:{branch_ref}")
+        self.assertIs(github.write_pr.call_args.args[0], previous)
+        self.assertIn(f"verified_head={head}", github.write_pr.call_args.args[3])
+
     # Scenario: 檔案 MD5 不符，或 MD5 正確但 ZIP 包含路徑穿越。
     # Purpose: 流程停止並隔離不安全檔案。
     def test_UnitT10_checksum_and_zip_safety(self):

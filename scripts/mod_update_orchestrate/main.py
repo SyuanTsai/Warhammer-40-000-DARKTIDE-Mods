@@ -60,6 +60,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     parser.add_argument("--merge-check", action="store_true")
     parser.add_argument("--skip-updates", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--regenerate", action="store_true")
     args = parser.parse_args(argv)
 
     try:
@@ -78,7 +79,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
                 root, github, {mod.nexus_id: mod for mod in mods}, nexus_filter=args.nexus_id,
                 dry_run=args.dry_run,
                 current=lambda nexus, file: current_pr(open_pulls(), nexus, file),
-                mode=mode, skip_updates=args.skip_updates,
+                mode=mode, skip_updates=args.skip_updates, regenerate=args.regenerate,
             )
             for note in notes:
                 emit(note)
@@ -135,7 +136,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             raise ValueError("暫存與快取目錄須位於兩個 checkout 之外")
         process(root, git, github, DriveClient(drive_transport), processed,
                 args.issue, args.nexus_id, identity, skill, scratch, cache,
-                max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit, route=args.route)
+                max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit, route=args.route,
+                regenerate=args.regenerate)
         return 0
     except (GitHubError, DriveError, RuntimeError) as error:
         emit(str(error))

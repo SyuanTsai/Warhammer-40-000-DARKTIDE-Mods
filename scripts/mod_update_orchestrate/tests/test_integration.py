@@ -16,10 +16,10 @@ from scripts.mod_update_orchestrate.gate import validate_git
 from scripts.mod_update_orchestrate.localization import Localization
 from scripts.mod_update_orchestrate.private_fix import private_fix, translate_private
 from scripts.mod_update_orchestrate.pr import commit_tree, run_git
-from scripts.mod_update_orchestrate.process import process
+from scripts.mod_update_orchestrate.process import install_tree, process
 from scripts.mod_update_orchestrate.tests.test_pipeline import comment, issue, marker
 from scripts.mod_update_orchestrate.tests.test_routes import README
-from scripts.mod_update_orchestrate.tree import MODS
+from scripts.mod_update_orchestrate.tree import MODS, read_repo_tree
 
 
 class SkillTests(unittest.TestCase):
@@ -53,7 +53,7 @@ class SkillTests(unittest.TestCase):
         self.file = self.repo / self.mod / self.name
         self.file.parent.mkdir(parents=True)
         self.file.write_text('return { stable = { en = "Stable", ["zh-tw"] = "穩定" } }\n',
-                             encoding="utf-8")
+                             encoding="utf-8", newline="\n")
         for name in ("zh-tw_localization_base_rules", "zh-tw_initial_translation_rules",
                      "zh-tw_revision_rules", "enhanced_descriptions_zh-tw_special_rules"):
             path = self.repo / "Darktide Translation Workspace" / "Rules" / (name + ".md")
@@ -73,8 +73,8 @@ class SkillTests(unittest.TestCase):
                                 self.mod, oid, "nexus-123", self.temp / "cache")
         self.oid = oid
 
-    def git(self, *args):
-        return run_git(self.repo, *args)
+    def git(self, *args, **kwargs):
+        return run_git(self.repo, *args, **kwargs)
 
     def run_adapter(self, transport):
         return lambda argv: self.adapter.main(argv, transport=transport, sleeper=lambda _: None)
@@ -182,7 +182,7 @@ class SkillTests(unittest.TestCase):
                         "commit-tree", self.git("write-tree"), "-m", "Synthetic main")
         self.git("update-ref", "HEAD", main)
         fresh = (MODS / "Fresh").as_posix()
-        localization = 'return { added = { en = "Activate" } }\n'.encode()
+        localization = b'return { added = { en = "Activate" } }\r\n'
         upstream = {"Fresh.mod": b'return {}\r\n', "Fresh_localization.lua": localization,
                     "info.json": b'{"description":"Example feature"}'}
         buffer = io.BytesIO()
@@ -241,16 +241,18 @@ class SkillTests(unittest.TestCase):
         base_oid, workset = generated[0]
         self.assertEqual(workset["baseOid"], first)
         self.assertEqual(base_oid, first)
+        self.assertEqual(workset["new"]["newline"], "crlf")
         self.assertEqual(workset["units"][0]["action"], "AI_REQUIRED")
         self.assertEqual(len(transport.requests), 2)
         self.assertEqual(set(self.git("diff-tree", "--name-only", "-r", main, first).splitlines()),
                          {f"{fresh}/{name}" for name in upstream})
         for name, data in upstream.items():
             actual = subprocess.check_output(["git", "show", f"{first}:{fresh}/{name}"], cwd=self.repo)
-            self.assertEqual(actual, data)
+            self.assertEqual(actual, data.replace(b"\r\n", b"\n"))
         self.assertEqual(set(self.git("diff-tree", "--name-only", "-r", first, final).splitlines()),
                          {f"{fresh}/Fresh_localization.lua", ".hash/Fresh.hash", "README.md"})
         self.assertIn("啟動", self.git("show", f"{final}:{fresh}/Fresh_localization.lua"))
+        self.assertNotIn(b"\r\n", self.git("show", f"{final}:{fresh}/Fresh_localization.lua", raw=True))
         self.assertIn("route=new", github.write_pr.call_args.args[3])
         self.assertIn("Permissions", github.write_pr.call_args.args[3])
         self.assertEqual(self.git("status", "--porcelain"), "")
@@ -259,13 +261,26 @@ class SkillTests(unittest.TestCase):
     # Scenario: 上游新增英文項目，假 transport 通過翻譯與審查。
     # Purpose: 用真 Skill 測試 New、核准、Apply、Receipt、Gate 的介面。
     def test_InterT10_ai_workset_to_gate(self):
-        content = b'return { stable = { en = "Stable" }, added = { en = "Activate" } }\n'
+        # Given
+        content = b'return { stable = { en = "Stable" }, added = { en = "Activate" } }\r\n'
+        baseline = read_repo_tree(self.git, self.oid, self.mod)
+        self.assertTrue(baseline[self.name].endswith(b"\n"))
+        self.assertNotIn(b"\r\n", baseline[self.name])
+        # When
         initial = self.loc.generate({self.name: content})
         transport = self.FakeTransport([self.respond, self.respond])
         status, summary, doc = self.loc.translate(initial, adapter=self.run_adapter(transport))
         self.assertEqual(status, 0)
         self.assertEqual(summary["approvedCount"], 1)
-        self.file.write_bytes(self.loc.apply(doc, summary))
+        with patch.object(self.loc, "powershell", wraps=self.loc.powershell) as powershell:
+            verified = self.loc.apply(doc, summary)
+        install_tree(self.file.parent, baseline, {self.name: verified}, baseline=baseline)
+        # Then
+        self.assertEqual(powershell.call_args.args[0], "Test-LocalizationWorksetReceipt")
+        self.assertEqual((self.loc.artifacts / "new.lua").read_bytes(), content)
+        self.assertEqual((self.loc.artifacts / "merged.lua").read_bytes(), verified)
+        self.assertIn(b"\r\n", verified)
+        self.assertNotIn(b"\r\n", self.file.read_bytes())
         self.assertIn("啟動", self.file.read_text(encoding="utf-8"))
         self.assertIn("穩定", self.file.read_text(encoding="utf-8"))
         self.assertEqual(len(transport.requests), 2)
