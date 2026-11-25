@@ -38,6 +38,7 @@ class PrivateFixTests(unittest.TestCase):
         self.changes = [f"{MOD}/Example.mod"]
         self.expected = ""
         self.before = BEFORE
+        self.fetched = AFTER
         self.old_hash = "version=1\nsha256=" + "0" * 64
         self.git = Mock(side_effect=self.run_git)
         self.gate_changes = "README.md\0" + HASH
@@ -71,14 +72,16 @@ class PrivateFixTests(unittest.TestCase):
             ref = args[-1].removesuffix("^{commit}")
             if ref == MISSING:
                 raise ValueError("找不到 Git 提交")
-            return {"HEAD": AFTER, f"{AFTER}^": BEFORE, "FETCH_HEAD": AFTER}.get(ref, ref)
+            return {"HEAD": AFTER, f"{AFTER}^": BEFORE, "FETCH_HEAD": self.fetched}.get(ref, ref)
+        if args[0] == "fetch":
+            self.fetched = self.expected if args[-1] == f"refs/heads/{BRANCH}" else AFTER
         if args[0] == "merge-base":
-            return AFTER
+            return BEFORE if args[1:] == (OLD, AFTER) else AFTER
         if args[0] == "ls-remote":
             return f"{self.expected}\t{args[-1]}" if self.expected else ""
         if args[:2] == ("diff", "--cached"):
             return self.gate_changes
-        if args[0] == "diff":
+        if "diff" in args:
             return "\0".join(self.changes) if BEFORE in args and AFTER in args else ""
         if args[0] == "show":
             return self.old_hash
@@ -157,34 +160,70 @@ class PrivateFixTests(unittest.TestCase):
         self.run_detection()
         self.run_detection(drive=False)
         # Then
-        self.assertEqual([call[0] for call in self.github.mock_calls], ["commit_pulls", "commit_pulls"])
+        self.assertEqual([call[0] for call in self.github.mock_calls],
+                         ["commit_pulls", "pulls", "commit_pulls", "pulls"])
         self.assertIn("無法判定", str(self.emit.call_args_list))
 
     # Scenario: MOD 非本地化檔不同，同一固定分支已有標記 PR。
     # Purpose: 更新原 PR、保留 hash 欄位、驗證 lease 與 verified head。
-    def test_UnitT50_private_fix_updates_existing_pr(self):
+    def test_UnitT50_private_fix_updates_legacy_pr_using_merge_base(self):
         # Given
         self.expected = OLD
-        previous = {"number": 7, "head": {"sha": OLD}}
+        self.before = "f" * 40
+        previous = {"number": 7, "head": {"sha": OLD},
+                    "body": f"<!-- mod-private-fix:pr nexus_id=123 after={BEFORE} verified_head={OLD} -->"}
         self.github.pulls.return_value = [previous]
+        self.git.side_effect = lambda *args, **kwargs: (
+            f"{MOD}/Example.mod" if args[0] == "diff" and self.before in args
+            else self.run_git(*args, **kwargs))
+        self.changes.append(f"{MOD}/{LOC}")
+        self.gate_changes += f"\0{MOD}/{LOC}"
+        localization = self.root / MOD / LOC
+        localization.write_bytes(b"English")
+
         def inspect_candidate(*args):
             self.assertIs(args[0], previous)
-            self.assertIn(f"verified_head={HEAD}", args[3])
+            self.assertIn(f"before={BEFORE} after={AFTER} verified_head={HEAD}", args[3])
             self.assertIn("Example.zip", args[3])
             fields = _read_hash(self.root / HASH)
             self.assertEqual((fields["private_fix"], fields["private_fix_commit"], fields["extra"]),
                              ("true", AFTER, "yes"))
             self.assertEqual(load_registry(self.root)[0][0].nexus_id, 123)
             self.assertIn(NOTE + "（待補說明）", (self.root / "README.md").read_text(encoding="utf-8"))
+            self.assertEqual(localization.read_bytes(), "翻譯".encode())
             return self.github.write_pr.return_value
+
         self.github.write_pr.side_effect = inspect_candidate
         # When
-        self.run_detection()
+        with patch("scripts.mod_update_orchestrate.private_fix.translate_private",
+                   return_value=(LOC, "翻譯".encode(), [], [])) as translate:
+            self.run_detection()
         # Then
+        self.assertEqual(translate.call_args.args[4][LOC], b"English")
+        self.assertEqual(translate.call_args.args[5], BEFORE)
         self.github.write_pr.assert_called_once()
         self.github.merge_pr.assert_not_called()
+        self.git.assert_any_call("merge-base", OLD, AFTER)
+        self.assertIn(f"舊格式標記，改用 PR head 與 main 的 merge-base `{BEFORE}`",
+                      str(self.emit.call_args_list))
         self.git.assert_any_call("push", f"--force-with-lease=refs/heads/{BRANCH}:{OLD}",
                                  "origin", f"{HEAD}:refs/heads/{BRANCH}")
+
+    def test_UnitT52_private_marker_preserves_hotfix_source_fields(self):
+        hash_file = self.root / HASH
+        with hash_file.open("a", encoding="utf-8") as output:
+            output.write("acquisition_method=author-hotfix\nsource_url=https://example.invalid/patch\n"
+                         "main_file_id=not-applicable\nmain_file_uploaded_at_utc=not-applicable\n")
+        original = _read_hash(hash_file)
+
+        def inspect_candidate(*args):
+            self.assertEqual(_read_hash(hash_file),
+                             {**original, "private_fix": "true", "private_fix_commit": AFTER})
+            return self.github.write_pr.return_value
+
+        self.github.write_pr.side_effect = inspect_candidate
+        self.run_detection()
+        self.github.write_pr.assert_called_once()
 
     # Scenario: 自動模式碰到未解決討論串或遠端 head 已變更。
     # Purpose: 只有討論串已解決且遠端指向 verified head 時呼叫合併。
@@ -278,7 +317,8 @@ class PrivateFixTests(unittest.TestCase):
     def test_UnitT90_no_ai_does_not_call_adapter(self):
         # Given
         adapter = Mock()
-        with (patch.object(Localization, "generate", return_value={"units": [{"action": "NONE"}]}),
+        with (patch.object(Localization, "generate", autospec=True,
+                           return_value={"units": [{"action": "NONE"}]}) as generate,
               patch.object(Localization, "apply") as apply):
             # When
             name, _, _, blocked = translate_private(
@@ -287,6 +327,7 @@ class PrivateFixTests(unittest.TestCase):
         # Then
         self.assertIsNone(name)
         self.assertFalse(blocked)
+        self.assertEqual(generate.call_args.args[0].cache, self.scratch / "translation-cache")
         adapter.assert_not_called()
         apply.assert_not_called()
 
@@ -309,6 +350,45 @@ class PrivateFixTests(unittest.TestCase):
         self.github.needs_human.assert_called_once()
         self.github.merge_pr.assert_not_called()
         self.assertEqual((self.root / MOD / LOC).read_bytes(), b"English")
+
+    def test_UnitT93_blocked_retranslation_preserves_existing_pr_head(self):
+        intermediate = "f" * 40
+        self.before = intermediate
+        self.expected = OLD
+        previous = {"number": 7, "head": {"sha": OLD}, "draft": False,
+                    "body": f"<!-- mod-private-fix:pr nexus_id=123 before={BEFORE} "
+                            f"after={intermediate} verified_head={OLD} -->"}
+        self.github.pulls.return_value = [previous]
+        self.changes.append(f"{MOD}/{LOC}")
+        self.git.side_effect = lambda *args, **kwargs: (
+            f"{MOD}/Example.mod" if args[0] == "diff" and intermediate in args
+            else self.run_git(*args, **kwargs))
+        (self.root / MOD / LOC).write_bytes(b"English affected by push A")
+        for action in ("AI_REQUIRED", "BLOCKED"):
+            with self.subTest(action=action):
+                self.git.reset_mock()
+                self.github.reset_mock()
+                pending = {"units": [{"action": action, "unitId": "a", "key": "start",
+                                      "reviewStatus": "pending"}]}
+                with (patch.object(Localization, "generate", return_value=pending, autospec=True) as generate,
+                      patch.object(Localization, "translate", return_value=(0, {}, pending)) as translate,
+                      patch.object(Localization, "apply") as apply):
+                    self.run_detection(mode="auto")
+
+                self.assertEqual(generate.call_args.args[0].base_oid, BEFORE)
+                self.assertEqual(generate.call_args.args[0].cache, self.scratch / "darktide-translate-123")
+                self.assertEqual(translate.call_count, int(action == "AI_REQUIRED"))
+                apply.assert_not_called()
+                self.github.write_pr.assert_not_called()
+                self.github.merge_pr.assert_not_called()
+                self.github.set_draft.assert_called_once_with(previous, True)
+                self.github.label.assert_called_once_with(7, "blocked", True)
+                self.github.needs_human.assert_called_once()
+                number, key, comment = self.github.needs_human.call_args.args
+                self.assertEqual((number, key), (7, "private-localization"))
+                self.assertIn("已保留原 PR head", comment)
+                self.assertFalse(any(call.args[0] == "push" for call in self.git.call_args_list))
+                self.assertNotIn("private_fix", _read_hash(self.root / HASH))
 
     # Scenario: 待發布的候選意外包含程式碼、其他 MOD 或其他 .hash。
     # Purpose: Gate 把異動限制在指定的 metadata 與已驗證的本地化檔。

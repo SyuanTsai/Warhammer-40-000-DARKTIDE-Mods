@@ -20,6 +20,10 @@ from .report import api_usage, blocked_units, cell, plain, workset_actions
 from .tree import MODS, TreeError, is_localization, locate_mod, read_tree
 
 MARKER = "mod-private-fix:pr"
+PR_MARKER = re.compile(
+    rf"<!-- {MARKER} nexus_id=(?P<nexus_id>[0-9]+) (?:before=(?P<before>[a-f0-9]{{40}}) )?"
+    r"after=[a-f0-9]{40} verified_head=[a-f0-9]{40} -->"
+)
 AUTOMATION_BRANCHES = ("auto/mod-update/", "auto/private-fix/")
 AUTOMATION_MARKERS = ("<!-- mod-update-orchestrate:pr ", f"<!-- {MARKER} ")
 
@@ -49,10 +53,12 @@ def compare_archive(drive, processed, nexus_id, fields, directory, ours, workspa
 
 
 def translate_private(root, workspace, skill, mod_path, tree, before, nexus_id, *,
-                      max_items=None, dry_run=False, adapter=None):
+                      cache=None, max_items=None, dry_run=False, adapter=None):
+    if cache is None:
+        cache = workspace / "translation-cache"
     with tempfile.TemporaryDirectory(prefix=".p3-private-localization-", dir=root) as temporary:
         loc = Localization(root, Path(temporary), workspace, skill, mod_path, before,
-                           f"nexus-{nexus_id}", workspace.parent / f"darktide-translate-{nexus_id}")
+                           f"nexus-{nexus_id}", cache)
         report = api_usage({})
         try:
             doc = loc.generate(tree)
@@ -84,13 +90,32 @@ def translate_private(root, workspace, skill, mod_path, tree, before, nexus_id, 
             return None, None, report, [f"- {cell(error)}"]
 
 
-def publish_private(git, github, nexus_id, after, title, body, mode, blocked, mod_path, hash_path,
-                    *, mark, localization, changed_paths):
-    branch = f"auto/private-fix/{nexus_id}"
-    pulls = github.pulls(branch)
-    if len(pulls) > 1:
-        raise ValueError("私人修正固定分支有多個開啟中的 PR")
-    previous = pulls[0] if pulls else None
+def translation_base(git, previous, branch, nexus_id, emit):
+    body = previous.get("body") or ""
+    markers = [line for line in body.splitlines() if line.startswith(f"<!-- {MARKER} ")]
+    marker = PR_MARKER.fullmatch(markers[0]) if len(markers) == 1 else None
+    if markers and (not marker or marker["nexus_id"] != str(nexus_id)):
+        raise ValueError("無法確認既有私人修正 PR 的標記")
+    if marker and marker["before"]:
+        return git("rev-parse", "--verify", f"{marker['before']}^{{commit}}")
+    main = latest(git)
+    git("fetch", "--no-tags", "origin", f"refs/heads/{branch}")
+    head = git("rev-parse", "FETCH_HEAD")
+    if head != (previous.get("head") or {}).get("sha"):
+        raise ValueError("私人修正 PR 分支已變更，請重新執行")
+    base = git("merge-base", head, main)
+    emit(f"- PR #{previous['number']} 使用舊格式標記，改用 PR head 與 main 的 merge-base `{base}` 作為 before。")
+    return base
+
+
+def block_private(github, number, message):
+    github.ensure_blocked()
+    github.label(number, "blocked", True)
+    github.needs_human(number, "private-localization", message)
+
+
+def publish_private(git, github, nexus_id, before, after, title, body, mode, blocked, mod_path, hash_path,
+                    *, branch, previous, mark, localization, changed_paths):
     expected = remote_head(git, branch)
     if previous is not None and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("私人修正 PR 分支已變更，請重新執行")
@@ -101,7 +126,7 @@ def publish_private(git, github, nexus_id, after, title, body, mode, blocked, mo
     validate_private(diff.rstrip("\0").split("\0"),
                      mod_path, hash_path, mark=mark, localization=localization)
     head = commit_tree(git, after, f"chore(mod): record Nexus MOD {nexus_id} private fix or translation")
-    body += f"\n\n<!-- {MARKER} nexus_id={nexus_id} after={after} verified_head={head} -->"
+    body += f"\n\n<!-- {MARKER} nexus_id={nexus_id} before={before} after={after} verified_head={head} -->"
     push(git, branch, expected, head)
     pull = github.write_pr(previous, branch, title, body, bool(blocked))
     if (pull.get("head") or {}).get("sha") != head:
@@ -112,9 +137,7 @@ def publish_private(git, github, nexus_id, after, title, body, mode, blocked, mo
     draft = bool(blocked) or (pull["draft"] and not had_blocked)
     github.set_draft(pull, draft)
     if blocked:
-        github.ensure_blocked()
-        github.label(number, "blocked", True)
-        github.needs_human(number, "private-localization", "\n".join(blocked))
+        block_private(github, number, "\n".join(blocked))
     elif had_blocked:
         github.label(number, "blocked", False)
         github.resolve(number, {"private-localization"})
@@ -127,7 +150,7 @@ def publish_private(git, github, nexus_id, after, title, body, mode, blocked, mo
 
 
 def check_mod(root, git, github, drive, processed, before, after, skill, workspace,
-              mod, changed, *, mode, max_items, dry_run, emit):
+              mod, changed, *, cache, mode, max_items, dry_run, emit):
     nexus_id = mod.nexus_id
     mod_path = (MODS / mod.directory).as_posix()
     hash_path = f".hash/{mod.hash_file or mod.directory + '.hash'}"
@@ -148,12 +171,29 @@ def check_mod(root, git, github, drive, processed, before, after, skill, workspa
     mark = bool(difference)
     status = "無法判定" if difference is None else "偵測到私人修正" if mark else "不是私人修正"
     emit(f"- {cell(mod.directory)}（Nexus {nexus_id}）：{status}。{reason}。{evidence}。")
+    branch = f"auto/private-fix/{nexus_id}"
+    pulls = github.pulls(branch)
+    if len(pulls) > 1:
+        raise ValueError("私人修正固定分支有多個開啟中的 PR")
+    previous = pulls[0] if pulls else None
+    if previous is not None:
+        before = translation_base(git, previous, branch, nexus_id, emit)
+        changed = git("--literal-pathspecs", "diff", "--name-only", "--no-renames", "-z",
+                      before, after, "--", mod_path).split("\0")
     loc_name, translated, report, blocked = None, None, api_usage({}), []
     if any(path.startswith(mod_path + "/") and is_localization(path) for path in changed):
         loc_name, translated, report, blocked = translate_private(
-            root, workspace, skill, mod_path, tree, before, nexus_id, max_items=max_items, dry_run=dry_run)
+            root, workspace, skill, mod_path, tree, before, nexus_id,
+            cache=cache, max_items=max_items, dry_run=dry_run)
     if blocked:
         emit("翻譯需要人工處理（needs-human）。\n" + "\n".join(blocked))
+        if previous is not None and not dry_run:
+            if (previous.get("head") or {}).get("sha") != remote_head(git, branch):
+                raise ValueError("私人修正 PR 分支已變更，請重新執行")
+            github.set_draft(previous, True)
+            message = f"重新翻譯範圍 `{before}..{after}` 需要人工處理，已保留原 PR head。"
+            block_private(github, previous["number"], message + "\n\n" + "\n".join(blocked))
+            return
     if not (mark or loc_name):
         if dry_run:
             emit("\n".join(report))
@@ -183,7 +223,8 @@ def check_mod(root, git, github, drive, processed, before, after, skill, workspa
             update_hash(hash_file, {"private_fix": "true", "private_fix_commit": after}, None)
         if loc_name:
             (root / mod_path / loc_name).write_bytes(translated)
-        number = publish_private(git, github, nexus_id, after, title, body, mode, blocked, mod_path, hash_path,
+        number = publish_private(git, github, nexus_id, before, after, title, body, mode, blocked,
+                                 mod_path, hash_path, branch=branch, previous=previous,
                                  mark=mark, localization=loc_name, changed_paths=paths)
         if number:
             emit(f"私人修正流程 PR #{number} 已發布。")
@@ -233,10 +274,12 @@ def private_fix(root, git, github, drive, processed, before, after, skill, scrat
                            for item in unmapped)):
                 emit(f"- {cell(directory)}：registry 無法唯一對應 Nexus ID，略過。")
                 continue
+            mod = matches[0]
+            cache = scratch / f"darktide-translate-{mod.nexus_id}"
             with tempfile.TemporaryDirectory(dir=scratch, prefix="mod-private-fix-") as work:
                 try:
                     check_mod(root, git, github, drive, processed, before, after, skill, Path(work),
-                              matches[0], changed, mode=mode, max_items=max_items, dry_run=dry_run, emit=emit)
+                              mod, changed, cache=cache, mode=mode, max_items=max_items, dry_run=dry_run, emit=emit)
                 except TreeError as error:
                     emit(f"- {cell(directory)}：{cell(error)}")
                 except (GitHubError, OSError, ValueError) as error:

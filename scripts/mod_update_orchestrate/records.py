@@ -79,7 +79,7 @@ def update_hash(path, values, directory):
     lines = raw.decode("utf-8-sig").splitlines()
     was_hotfix = any(line.strip() == "acquisition_method=author-hotfix" for line in lines)
     removed = set()
-    if was_hotfix and "source_url" not in values:
+    if was_hotfix and values.get("acquisition_method") == "drive-intake" and "source_url" not in values:
         removed.add("source_url")
     if values.get("acquisition_method") == "author-hotfix":
         removed.add("drive_intake_md5")
