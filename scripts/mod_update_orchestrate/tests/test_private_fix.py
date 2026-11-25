@@ -7,6 +7,7 @@ from unittest.mock import Mock, patch
 
 from scripts.mod_update_orchestrate.gate import validate_private
 from scripts.mod_update_orchestrate.github import GitHub
+from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
 from scripts.mod_update_orchestrate.localization import Localization
 from scripts.mod_update_orchestrate.private_fix import private_fix, translate_private
 from scripts.mod_update_orchestrate.records import mark_private_readme
@@ -191,6 +192,7 @@ class PrivateFixTests(unittest.TestCase):
             self.assertIs(args[0], previous)
             self.assertIn(f"before={BEFORE} after={AFTER} verified_head={HEAD}", args[3])
             self.assertIn("Example.zip", args[3])
+            self.assertIn(FALLBACK_NOTE, args[3])
             fields = _read_hash(self.root / HASH)
             self.assertEqual((fields["private_fix"], fields["private_fix_commit"], fields["extra"]),
                              ("true", AFTER, "yes"))
@@ -298,17 +300,29 @@ class PrivateFixTests(unittest.TestCase):
     # Scenario: push 同時改動英文和程式，Drive 可用或未設定。
     # Purpose: 譯文在同一 PR；無封存時 Gate 只接受本地化檔。
     def test_UnitT80_translation_shares_pr_or_stands_alone_without_drive(self):
+        before = (b'return {\r\n    entry = {\r\n        en = "English",\r\n'
+                  b'        ["zh-tw"] = "old",\r\n    },\r\n}\r\n')
+        verified = ('return {\n    entry = {\n        ["zh-tw"] = "翻譯",\n'
+                    '        en = "English",\n    },\n}\n').encode()
+        expected = before.replace(b'"old"', '"翻譯"'.encode())
+        localization = self.root / MOD / LOC
+
+        def inspect_candidate(*args):
+            self.assertEqual(localization.read_bytes(), expected)
+            return {"number": 7, "head": {"sha": HEAD}, "labels": [], "draft": False}
+
+        self.github.write_pr.side_effect = inspect_candidate
         for use_drive, differs in ((True, True), (False, True), (True, False)):
             with self.subTest(use_drive=use_drive, differs=differs):
                 # Given
                 self.github.reset_mock()
                 self.changes = [f"{MOD}/Example.mod", f"{MOD}/{LOC}"]
                 (self.root / MOD / "Example.mod").write_bytes(b"private\n" if differs else b"original\n")
-                (self.root / MOD / LOC).write_bytes(b"English")
+                localization.write_bytes(before)
                 mark = use_drive and differs
                 self.gate_changes = (f"README.md\0{HASH}\0" if mark else "") + f"{MOD}/{LOC}"
                 with patch("scripts.mod_update_orchestrate.private_fix.translate_private",
-                           return_value=(LOC, "翻譯".encode(), ["已核准 1 項"], [])) as translate:
+                           return_value=(LOC, verified, ["已核准 1 項"], [])) as translate:
                     # When
                     self.run_detection(drive=use_drive)
                 # Then
@@ -316,6 +330,7 @@ class PrivateFixTests(unittest.TestCase):
                 self.assertEqual(translate.call_args.args[5], BEFORE)
                 body = self.github.write_pr.call_args.args[3]
                 self.assertIn("已核准 1 項", body)
+                self.assertNotIn(FALLBACK_NOTE, body)
                 self.assertEqual("private_fix=true" in body, mark)
 
     # Scenario: Schema 15 無 AI_REQUIRED。

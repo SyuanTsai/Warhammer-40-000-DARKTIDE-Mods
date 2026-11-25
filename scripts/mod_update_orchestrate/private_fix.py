@@ -13,6 +13,7 @@ from .base import find_base
 from .eol import default_format, format_note, repo_bytes
 from .gate import validate_private
 from .localization import Localization, LocalizationError
+from .loc_layout import preserve_layout
 from .merge import private_changes
 from .pr import UNRESOLVED_THREADS, commit_tree, push, remote_head, should_merge, stage_raw
 from .process import latest
@@ -199,10 +200,11 @@ def check_mod(root, git, github, drive, processed, before, after, skill, workspa
             message = f"重新翻譯範圍 `{before}..{after}` 需要人工處理，已保留原 PR head。"
             block_private(github, previous["number"], message + "\n\n" + "\n".join(blocked))
             return
-    note = ""
+    note = layout_note = ""
     if loc_name:
         baseline = read_repo_tree(git, after, mod_path)
         original = baseline.get(loc_name)
+        translated, layout_note = preserve_layout(original, translated)
         target = repo_bytes(translated, original, default_format(baseline))
         if note := format_note(original, translated, target):
             report.append(f"- {cell(loc_name)} ｜ {note}")
@@ -210,14 +212,15 @@ def check_mod(root, git, github, drive, processed, before, after, skill, workspa
         if translated == original:
             loc_name = None
     if not (mark or loc_name):
-        if dry_run or note:
-            emit("\n".join(report))
+        if dry_run or note or layout_note:
+            emit("\n".join([*report, *([layout_note] if layout_note else [])]))
         return
     paths = (["README.md", hash_path] if mark else []) + ([f"{mod_path}/{loc_name}"] if loc_name else [])
     validate_private(paths, mod_path, hash_path, mark=mark, localization=loc_name)
     body = "\n".join([
         f"- 推送範圍：`{before}..{after}`", f"- 判定：{status}。{reason}。", f"- 上游原檔：{evidence}",
         f"- 私人修正標記：{'private_fix=true，private_fix_commit=' + after if mark else '本 PR 未寫入'}",
+        *([f"- {layout_note}"] if layout_note else []),
         "", "## 非本地化差異檔案", "", *([f"- {cell(path)}" for path in difference or ()] or ["無可列出"]),
         *report, "", "## BLOCKED", "", *(blocked or ["無"]),
     ])

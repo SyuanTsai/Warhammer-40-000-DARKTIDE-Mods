@@ -13,6 +13,7 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 from scripts.mod_update_orchestrate.gate import validate_git
+from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
 from scripts.mod_update_orchestrate.localization import Localization
 from scripts.mod_update_orchestrate.private_fix import private_fix, translate_private
 from scripts.mod_update_orchestrate.pr import commit_tree, run_git
@@ -168,6 +169,7 @@ class SkillTests(unittest.TestCase):
         self.assertEqual(bases, [before, before])
         self.assertEqual(len(transport.requests), 2)
         self.assertIs(github.write_pr.call_args.args[0], previous)
+        self.assertTrue(all(FALLBACK_NOTE in pull["body"] for pull in published))
         self.assertIn(f"before={before} after={after_b} verified_head={updated}",
                       github.write_pr.call_args.args[3])
 
@@ -255,6 +257,7 @@ class SkillTests(unittest.TestCase):
         self.assertNotIn(b"\r\n", self.git("show", f"{final}:{fresh}/Fresh_localization.lua", raw=True))
         self.assertIn("route=new", github.write_pr.call_args.args[3])
         self.assertIn("Permissions", github.write_pr.call_args.args[3])
+        self.assertNotIn(FALLBACK_NOTE, github.write_pr.call_args.args[3])
         self.assertEqual(self.git("status", "--porcelain"), "")
         github.merge_pr.assert_not_called()
 
