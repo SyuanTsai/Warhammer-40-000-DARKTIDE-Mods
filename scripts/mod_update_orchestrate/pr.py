@@ -2,6 +2,7 @@
 
 import re
 import subprocess
+import time
 
 from scripts.mod_update_watch.issues import GitHubError
 from scripts.mod_update_watch.registry import positive_id
@@ -12,6 +13,10 @@ from .gate import validate_paths, validate_upstream
 PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_id=([0-9]+|sha256-[a-f0-9]{64})"
                        r"(?: verified_head=([a-f0-9]{40})(?: route=(update|new|hotfix))?)? -->")
 UNRESOLVED_THREADS = "暫停自動合併，PR 尚有未解決的討論串。"
+
+
+class PullHeadError(RuntimeError):
+    pass
 
 
 def run_git(root, *args, input=None, raw=False):
@@ -145,6 +150,44 @@ def upstream_commit(git, base_oid, mod_path, files, nexus_id):
     return commit_tree(git, base_oid, f"chore(mod): import Nexus MOD {nexus_id} upstream")
 
 
+def _pull_sha(pull, number):
+    pr_head = pull.get("head")
+    sha = pr_head.get("sha") if isinstance(pr_head, dict) else None
+    if not isinstance(sha, str) or not re.fullmatch(r"[a-f0-9]{40}", sha):
+        raise PullHeadError(f"PR #{number} 回應缺少有效的 head.sha")
+    return sha
+
+
+def _verify_pull_head(git, github, branch, pull, head, old_head):
+    number = pull["number"]
+    actual = _pull_sha(pull, number)
+    if actual == head:
+        return pull
+
+    reads = 0
+    if actual == old_head:
+        remote = remote_head(git, branch)
+        if remote != head:
+            raise PullHeadError(f"PR #{number} 遠端分支 {branch} 的 SHA 不符"
+                                f"（預期 {head}，實際 {remote or '分支不存在'}）")
+        delays = (1, 2, 4)
+        for reads, delay in enumerate(delays, start=1):
+            time.sleep(delay)
+            try:
+                pull = github.pull(number)
+            except GitHubError as error:
+                if reads == len(delays) or error.status not in (None, 502, 503, 504):
+                    raise
+                continue
+            actual = _pull_sha(pull, number)
+            if actual == head:
+                return pull
+            if actual != old_head:
+                break
+
+    raise PullHeadError(f"PR #{number} head SHA 不符（預期 {head}，實際 {actual}，重讀 {reads} 次）")
+
+
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
             paths, *, route="update", mod_staged=False):
     marker = pr_marker(body)
@@ -176,8 +219,7 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
     push(git, branch, expected, head if route == "new" else "HEAD")
     pull = github.write_pr(previous, branch, title, body, bool(conflicts))
     number = pull["number"]
-    if (pull.get("head") or {}).get("sha") != head:
-        raise GitHubError("PR head 與驗證過的 Git SHA 不符")
+    pull = _verify_pull_head(git, github, branch, pull, head, expected if previous else None)
     had_blocked = any(label.get("name") == "blocked" for label in pull.get("labels", []))
     draft = bool(conflicts) or (pull["draft"] and not had_blocked)
     github.set_draft(pull, draft)
