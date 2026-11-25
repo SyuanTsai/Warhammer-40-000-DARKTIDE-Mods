@@ -71,17 +71,17 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Darktide Mod Loader](https://www.nexusmods.com/warhammer40kdarktide/mods/19?tab=description)
     MOD載入器 - 使用MOD必備
-- MOD 網站最後更新日期：Last updated 23 September 2025, 6:39PM
-- MOD 版本：Version 25.09.23
-- MOD 檔案名稱：Darktide Mod Loader-19-25-09-23-1758623959
-- 手動維護最後下載日期：2025-09-30
+- MOD 網站最後更新日期：待手動補（Nexus 公開頁面回傳 HTTP 403）
+- MOD 版本：Version 26.06.24
+- MOD 檔案名稱：Darktide Mod Loader 19 26.06.24 2026-06-24T06-07Z ndQ1md9gG
+- 手動維護最後下載日期：2026-11-25
 
 ### [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8)
     MOD框架 - 想要使用MOD必備，此MOD才能夠讓你開始加入其他的MOD
-- MOD 網站最後更新日期：Last updated 20 August 2026, 5:00AM
-- MOD 版本：Version 26.08.19
-- MOD 檔案名稱：Darktide Mod Framework 8 26.08.19 2026-08-19T21-00Z L8cAq8xWz.zip
-- 手動維護最後下載日期：2026-08-29
+- MOD 網站最後更新日期：待手動補（Nexus 公開頁面回傳 HTTP 403）
+- MOD 版本：Version 26.10.22
+- MOD 檔案名稱：Darktide Mod Framework 8 26.10.22 2026-10-23T02-11Z FQPKZQIuu.zip
+- 手動維護最後下載日期：2026-11-25
 ---
 # 遊戲體驗改善
 
