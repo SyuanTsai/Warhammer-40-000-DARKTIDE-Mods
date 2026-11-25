@@ -7,7 +7,7 @@ import re
 import sys
 import tempfile
 from collections import Counter
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from functools import cached_property
 from html import escape
@@ -30,6 +30,7 @@ FOLDER_VARIABLES = (
     "GDRIVE_UPLOAD_FOLDER_ID", "GDRIVE_PROCESSED_FOLDER_ID", "GDRIVE_UNRECOGNIZED_FOLDER_ID",
 )
 DARKTIDE_GAME_ID = 4943
+MAX_RETAINED_HOTFIX_ISSUES = 20
 MD5 = re.compile(r"[A-Fa-f0-9]{32}")
 ARCHIVE_SUFFIXES = {".zip", ".7z", ".rar"}
 ARCHIVE_MIMES = {
@@ -49,6 +50,9 @@ class Candidate:
     hotfix_folder: str | None = None
     source: dict | None = None
     problem: str = ""
+    mod_id: int | None = None
+    source_id: str | None = None
+    source_url: str | None = None
 
 
 @dataclass(frozen=True)
@@ -88,7 +92,7 @@ def _blob(file):
     return not _text(file.get("mimeType"), "").startswith("application/vnd.google-apps.")
 
 
-def _candidates(drive, upload, max_files):
+def _candidates(drive, upload):
     children = drive.list_children(upload)
     candidates = [Candidate(file, upload) for file in children if _blob(file)]
     for folder in children:
@@ -118,7 +122,7 @@ def _candidates(drive, upload, max_files):
                 problem = "例外資料夾內有多個來源.txt"
             candidates.append(Candidate(archive, parent, _file_name(mod_folder),
                                         source[0] if len(source) == 1 else None, problem))
-    return sorted(candidates, key=lambda item: _sort_key(item.file))[:max_files]
+    return sorted(candidates, key=lambda item: _sort_key(item.file))
 
 
 def _nexus_match(payload):
@@ -187,7 +191,10 @@ class IntakeIssues(GitHubClient):
     @cached_property
     def triage(self):
         issues = self._list_issues("列出 needs-human Issue", state="open", labels="needs-human")
-        return {body.splitlines()[0] for issue in issues if (body := issue.get("body"))}
+        return {
+            body.splitlines()[0]: positive_id(issue.get("number"))
+            for issue in issues if (body := issue.get("body"))
+        }
 
     def comment(self, issue, body):
         number = positive_id(issue.get("number"))
@@ -199,7 +206,7 @@ class IntakeIssues(GitHubClient):
     def create_triage(self, title, body, marker):
         self.ensure_labels()
         result = self._create({"title": _clean(title)[:256], "body": _clean(body), "labels": ["needs-human"]})
-        self.triage.add(marker)
+        self.triage[marker] = None
         return result
 
 
@@ -292,6 +299,16 @@ class Intake:
 
         issue = None if retain else self._update_issue(mod_id)
         existing = not issue and self.github is not None and marker in self.github.triage
+        if retain:
+            if existing:
+                number = self.github.triage[marker]
+                reference = f"Issue #{number}" if number else "needs-human Issue"
+                self._record(candidate, f"保留中，已有 {reference}")
+                return
+            if self.retained_issue_attempts >= MAX_RETAINED_HOTFIX_ISSUES:
+                self._record(candidate, "保留原地，下一輪再處理")
+                return
+            self.retained_issue_attempts += 1
         if issue:
             notification = f"留言 Issue #{positive_id(issue.get('number')) or '未知'}"
         elif existing:
@@ -371,24 +388,23 @@ class Intake:
             body += f"\n\nNexus 檔案名稱：{_markdown(match.name)}"
         self._received(candidate, match.mod_id, body, note=note)
 
-    def _hotfix(self, candidate):
+    def _check_hotfix(self, candidate):
+        if candidate.problem:
+            return candidate
         mod_id = self._identify("", (candidate.hotfix_folder,), exact=True)
-        reason = candidate.problem
-        source_id = None
-        source_url = None
-        if not reason and mod_id is None:
-            reason = "找不到 MOD 或資料夾名稱無法唯一對應 registry"
-        if not reason:
-            source_id = validate_id(candidate.source.get("id"))
-            try:
-                source_url = _source_url(self.drive.read_text(source_id))
-            except (InvalidDriveText, DriveSizeLimit):
-                reason = "來源.txt 必須是 16 KiB 以內的 UTF-8 文字"
-            if not source_url and not reason:
-                reason = "來源.txt 第一個非空行必須是有效的 https:// 網址"
-        if reason:
-            self._triage(candidate, reason, retain=True)
-            return
+        if mod_id is None:
+            return replace(candidate, problem="找不到 MOD 或資料夾名稱無法唯一對應 registry")
+        source_id = validate_id(candidate.source.get("id"))
+        try:
+            source_url = _source_url(self.drive.read_text(source_id))
+        except (InvalidDriveText, DriveSizeLimit):
+            return replace(candidate, problem="來源.txt 必須是 16 KiB 以內的 UTF-8 文字")
+        if not source_url:
+            return replace(candidate, problem="來源.txt 第一個非空行必須是有效的 https:// 網址")
+        return replace(candidate, mod_id=mod_id, source_id=source_id, source_url=source_url)
+
+    def _hotfix(self, candidate):
+        mod_id = candidate.mod_id
         try:
             info, digest = self._archive(candidate, unpack=True)
         except (CorruptArchive, UnsafeArchive, UnsupportedArchive, DriveSizeLimit) as error:
@@ -398,14 +414,27 @@ class Intake:
         body = (
             f"已收到作者 hotfix：{_markdown(_file_name(candidate.file))}（MD5 "
             f"{digest}，版本 {_markdown(version)}）"
-            f"；已移到「已處理/{mod_id}/hotfix」\n\n來源：{_markdown(source_url)}"
+            f"；已移到「已處理/{mod_id}/hotfix」\n\n來源：{_markdown(candidate.source_url)}"
         )
         note = f"版本 {_markdown(version)}" if version != "未知" else "版本未知，info.json 缺少可讀版本"
-        self._received(candidate, mod_id, body, source_id=source_id, note=note)
+        self._received(candidate, mod_id, body, source_id=candidate.source_id, note=note)
 
     def run(self, max_files):
+        self.retained_issue_attempts = 0
+        candidates = []
         try:
-            candidates = _candidates(self.drive, self.upload, max_files)
+            for candidate in _candidates(self.drive, self.upload):
+                if candidate.hotfix_folder is not None:
+                    try:
+                        candidate = self._check_hotfix(candidate)
+                    except DriveError as error:
+                        self.errors.append(f"{_markdown(_file_name(candidate.file))}｜{error}")
+                        continue
+                if candidate.problem:
+                    candidates.append(candidate)
+                elif max_files > 0:
+                    candidates.append(candidate)
+                    max_files -= 1
             matches = {}
             for candidate in candidates:
                 if candidate.hotfix_folder is not None:
@@ -427,7 +456,9 @@ class Intake:
         for candidate in candidates:
             self.counts["處理"] += 1
             try:
-                if candidate.hotfix_folder is not None:
+                if candidate.problem:
+                    self._triage(candidate, candidate.problem, retain=True)
+                elif candidate.hotfix_folder is not None:
                     self._hotfix(candidate)
                 else:
                     self._official(candidate, *matches[validate_id(candidate.file.get("id"))])

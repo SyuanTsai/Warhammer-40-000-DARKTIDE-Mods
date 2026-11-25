@@ -39,6 +39,7 @@ class IntakeTests(unittest.TestCase):
         self.media = {}
         self.moves = []
         self.move_failure = None
+        self.media_reads = []
         self.drive_writes = []
         self.github_writes = []
         self.issue_list = [{"number": 7, "body": "<!-- mod-update-watch:nexus_id=42 -->"}]
@@ -84,6 +85,7 @@ class IntakeTests(unittest.TestCase):
         file_id = parsed.path.rsplit("/", 1)[-1]
         if method == "GET":
             if "alt" in query:
+                self.media_reads.append(file_id)
                 return 200, {}, io.BytesIO(self.media[file_id])
             parent = query["q"][0].split("'")[1]
             return self.response(200, {"files": self.folders[parent]})
@@ -359,3 +361,108 @@ class IntakeTests(unittest.TestCase):
         digest = self.folders["mod"][0].pop("md5Checksum")
         self.assertEqual(self.invoke()[0], 0)
         self.assertIn(digest, self.github_writes[0][2]["body"])
+
+    def test_UnitT20_retained_hotfix_with_issue_leaves_slot_for_newer_upload(self):
+        """Scenario: Given an older incomplete hotfix with an open Issue, when the limit is one, the newer upload moves.
+        Purpose: Report the existing Issue without writing for the retained hotfix or downloading its archive.
+        """
+        self.hotfix(source=None)
+        self.needs = [{"number": 8, "body": "<!-- mod-drive-intake:drive_file_id=archive -->"}]
+        self.file("official", name="New.zip", modified="2026-01-03T00:00:00Z")
+        self.issue_list = []
+        self.folder("dir-42", "42", "processed")
+
+        status, report = self.invoke("--max-files", "1")
+        self.assertEqual(status, 0)
+        self.assertIn("保留中，已有 Issue #8", report)
+        self.assertEqual(self.moves, [("official", "dir-42", "upload")])
+        self.assertEqual(self.media_reads, ["official"])
+        self.assertEqual(self.drive_writes, ["PATCH"])
+        self.assertFalse(self.github_writes)
+
+    def test_UnitT21_incomplete_hotfix_opens_issue_and_can_use_slot_after_repair(self):
+        """Scenario: Given a missing source, intake retains the hotfix and moves the newer upload, then processes the repaired hotfix.
+        Purpose: Verify a new Issue consumes no file slot and an existing marker does not block a valid hotfix.
+        """
+        self.hotfix(source=None)
+        self.file("official", modified="2026-01-03T00:00:00Z")
+        self.issue_list = []
+
+        self.assertEqual(self.invoke("--max-files", "1")[0], 0)
+        self.assertEqual(self.moves, [("official", "dir-42", "upload")])
+        self.assertEqual(self.media_reads, ["official"])
+        self.assertEqual(len(self.github_writes), 1)
+        issue = self.github_writes[0][2]
+        self.assertEqual(issue["labels"], ["needs-human"])
+        self.assertIn("缺來源.txt", issue["body"])
+
+        self.needs = [{"number": 90, "body": issue["body"]}]
+        self.file("source", "來源.txt", "mod", data=b"https://example.org/release", mime="text/plain")
+        self.media_reads.clear()
+        self.assertEqual(self.invoke("--max-files", "1")[0], 0)
+        self.assertEqual(self.moves[1:], [("archive", "dir-hotfix", "mod"), ("source", "dir-hotfix", "mod")])
+        self.assertEqual(self.media_reads, ["source", "archive"])
+        self.assertEqual(len(self.github_writes), 1)
+
+    def test_UnitT22_retained_hotfix_prerequisites_do_not_use_file_slots(self):
+        """Scenario: Given an older hotfix with conflicting files, a bad source, or an unknown MOD, the newer upload moves.
+        Purpose: Check every prerequisite before selecting the batch and read only source text for retained hotfixes.
+        """
+        cases = (
+            ({"name": "Other"}, False, "找不到 MOD", []),
+            ({"multiple": True}, False, "有多個壓縮檔", []),
+            ({}, True, "有多個來源.txt", []),
+            ({"source": b"https://"}, False, "https://", ["source"]),
+            ({"source": b"x" * 16385}, False, "16 KiB", ["source"]),
+        )
+        self.issue_list = []
+        for options, duplicate_source, reason, reads in cases:
+            with self.subTest(reason=reason):
+                self.folders["upload"] = []
+                self.moves.clear()
+                self.media_reads.clear()
+                self.github_writes.clear()
+                self.hotfix(**options)
+                if duplicate_source:
+                    self.file("second-source", "來源.txt", "mod", mime="text/plain")
+                self.file("official", modified="2026-01-03T00:00:00Z")
+
+                self.assertEqual(self.invoke("--max-files", "1")[0], 0)
+                self.assertEqual(self.moves, [("official", "dir-42", "upload")])
+                self.assertEqual(self.media_reads, [*reads, "official"])
+                self.assertEqual(len(self.github_writes), 1)
+                self.assertIn(reason, self.github_writes[0][2]["body"])
+
+    def test_UnitT23_caps_new_retained_hotfix_issues_in_preview_and_live_run(self):
+        """Scenario: Given 21 retained hotfixes without Issues and one with an Issue, preview and live intake defer the last new Issue.
+        Purpose: Enforce the independent limit of 20 while leaving the file slot available and previewing without writes.
+        """
+        self.folder("exception", "例外", "upload")
+        for index in range(22):
+            self.folder(f"mod-{index:02}", "Sample", "exception")
+            self.file(f"archive-{index:02}", f"Hotfix-{index:02}.zip", f"mod-{index:02}")
+        self.needs = [{"number": 8, "body": "<!-- mod-drive-intake:drive_file_id=archive-00 -->"}]
+        official_digest = self.file("official", name="New.zip", modified="2026-01-03T00:00:00Z")
+        self.issue_list = []
+
+        status, preview = self.invoke("--max-files", "1", "--dry-run")
+        self.assertEqual(status, 0)
+        self.assertEqual(preview.count("建立 needs-human Issue"), 20)
+        self.assertIn("保留中，已有 Issue #8", preview)
+        self.assertIn("Hotfix-21.zip｜預計 保留原地，下一輪再處理", preview)
+        self.assertIn("New.zip｜預計 搬到 已處理/42", preview)
+        self.assertFalse(self.drive_writes)
+        self.assertFalse(self.github_writes)
+        self.assertEqual(self.media_reads, ["official"])
+
+        self.media_reads.clear()
+        status, report = self.invoke("--max-files", "1")
+        self.assertEqual(status, 0)
+        self.assertIn("Hotfix-21.zip｜保留原地，下一輪再處理", report)
+        self.assertEqual(self.moves, [("official", "dir-42", "upload")])
+        self.assertEqual(self.nexus_calls, [official_digest, official_digest])
+        self.assertEqual(self.media_reads, ["official"])
+        self.assertEqual(
+            [payload["body"].splitlines()[0] for _, _, payload in self.github_writes],
+            [f"<!-- mod-drive-intake:drive_file_id=archive-{index:02} -->" for index in range(1, 21)],
+        )
