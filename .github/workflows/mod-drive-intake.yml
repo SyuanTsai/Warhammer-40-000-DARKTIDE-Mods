@@ -1,0 +1,99 @@
+name: MOD drive intake
+
+on:
+  schedule:
+    - cron: "41 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview moves and Issue actions
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: mod-drive-intake
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run offline unit tests
+        run: python -m unittest discover -s scripts/mod_update_watch/tests -t .
+      - name: Install 7-Zip
+        shell: bash
+        run: |
+          if ! sudo apt-get install -y 7zip; then
+            echo "::warning::無法安裝 7-Zip。若 runner 未提供 7zz 或 7z，7z 和 RAR 檔案將判定為不支援。"
+          elif command -v 7z >/dev/null && ! sudo apt-get install -y 7zip-rar; then
+            echo "::warning::無法安裝 7-Zip 的 RAR 外掛。RAR 解壓能力取決於 runner 上已有的解碼器。"
+          fi
+      - name: Check intake configuration
+        id: config
+        shell: bash
+        env:
+          GDRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+          NEXUS_API_KEY: ${{ secrets.NEXUS_API_KEY }}
+          GDRIVE_UPLOAD_FOLDER_ID: ${{ vars.GDRIVE_UPLOAD_FOLDER_ID }}
+          GDRIVE_PROCESSED_FOLDER_ID: ${{ vars.GDRIVE_PROCESSED_FOLDER_ID }}
+          GDRIVE_UNRECOGNIZED_FOLDER_ID: ${{ vars.GDRIVE_UNRECOGNIZED_FOLDER_ID }}
+        run: |
+          missing=()
+          for name in GDRIVE_SERVICE_ACCOUNT_JSON NEXUS_API_KEY GDRIVE_UPLOAD_FOLDER_ID \
+                      GDRIVE_PROCESSED_FOLDER_ID GDRIVE_UNRECOGNIZED_FOLDER_ID; do
+            if [[ -z "${!name}" ]]; then
+              missing+=("$name")
+            fi
+          done
+          if (( ${#missing[@]} == 0 )); then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            message="缺少 MOD drive intake 設定：${missing[*]}"
+            if [[ "$GITHUB_EVENT_NAME" == "schedule" ]]; then
+              echo "::warning::$message"
+              echo "$message" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "::error::$message"
+              exit 2
+            fi
+          fi
+      - name: Authenticate to Google Drive
+        if: steps.config.outputs.ready == 'true'
+        id: gauth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/drive
+          create_credentials_file: false
+          export_environment_variables: false
+      - name: Run MOD drive intake
+        if: steps.config.outputs.ready == 'true'
+        shell: bash
+        env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.gauth.outputs.access_token }}
+          NEXUS_API_KEY: ${{ secrets.NEXUS_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          MOD_UPDATE_ASSIGNEE: ${{ github.repository_owner }}
+          GDRIVE_UPLOAD_FOLDER_ID: ${{ vars.GDRIVE_UPLOAD_FOLDER_ID }}
+          GDRIVE_PROCESSED_FOLDER_ID: ${{ vars.GDRIVE_PROCESSED_FOLDER_ID }}
+          GDRIVE_UNRECOGNIZED_FOLDER_ID: ${{ vars.GDRIVE_UNRECOGNIZED_FOLDER_ID }}
+          INTAKE_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=()
+          if [[ "$INTAKE_DRY_RUN" == "true" ]]; then
+            args+=(--dry-run)
+          fi
+          python -m scripts.mod_update_watch.intake "${args[@]}"
