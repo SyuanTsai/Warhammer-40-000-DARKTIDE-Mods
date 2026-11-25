@@ -234,9 +234,15 @@ class GitHubClient:
         if number is None:
             raise GitHubError("讀取既有 Issue 編號")
         url = f"{self._repo_url}/issues/{number}"
-        if finding.ambiguous:
-            existing_labels = [label["name"] for label in existing.get("labels", [])]
-            payload["labels"] = list(dict.fromkeys(existing_labels + labels))
+        existing_labels = {
+            label["name"] if isinstance(label, dict) else label
+            for label in existing.get("labels", [])
+        }
+        updated_labels = existing_labels.union(labels)
+        if not finding.ambiguous:
+            updated_labels.discard("needs-human")
+        if updated_labels != existing_labels:
+            payload["labels"] = sorted(updated_labels)
 
         old_marker = FILE_MARKER.search(existing["body"])
         if finding.latest_main is None and old_marker is not None:
