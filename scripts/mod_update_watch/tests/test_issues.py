@@ -262,3 +262,57 @@ class IssueTests(unittest.TestCase):
         self.assertEqual(method, "POST")
         self.assertTrue(url.endswith("/issues"))
         self.assertEqual(payload["labels"], ["mod-update", "needs-human"])
+
+    def test_UnitT180_creates_one_missing_baseline_issue(self):
+        """Scenario: Given two MODs without a baseline and no open aggregate, create one Issue.
+        Purpose: Keep the links, remediation instructions and labels together.
+        """
+        other = replace(MOD, nexus_id=12, name="Another Mod")
+        action, warnings = self.client.upsert_missing_baseline([other, MOD], [])
+        self.assertEqual(action, "建立 Issue #7")
+        self.assertFalse(warnings)
+        method, _, payload = self.calls[0]
+        self.assertEqual(len(self.calls), 1)
+        self.assertEqual(method, "POST")
+        self.assertEqual(payload["title"], "[MOD 更新] 缺少比對基準的 MOD")
+        self.assertCountEqual(payload["labels"], ["mod-update", "needs-human"])
+        for fragment in ("<!-- mod-update-watch:missing-baseline -->", "Nexus 11", "Spidey Sense",
+                         "/mods/11", "Nexus 12", "Another Mod", "/mods/12",
+                         ".hash", "README", "版本", "檔名", "更新日期"):
+            self.assertIn(fragment, payload["body"])
+
+    def test_UnitT190_same_missing_baseline_list_does_nothing(self):
+        """Scenario: Given the same MODs in a different order, leave the open Issue alone.
+        Purpose: Avoid redundant comments and updates when the list is unchanged.
+        """
+        other = replace(MOD, nexus_id=12)
+        self.client.upsert_missing_baseline([other, MOD], [])
+        self.existing = [{"number": 7, "body": self.calls.pop()[2]["body"]}]
+        self.client.upsert_missing_baseline([MOD, other], self.existing)
+        self.assertEqual(self.calls, [])
+
+    def test_UnitT200_changed_missing_baseline_list_updates_and_comments(self):
+        """Scenario: Given a newly missing MOD and a resolved MOD, update the open Issue.
+        Purpose: Show which entries were added and removed in a single comment.
+        """
+        other = replace(MOD, nexus_id=12, name="Another Mod")
+        self.client.upsert_missing_baseline([MOD], [])
+        self.existing = [{"number": 7, "body": self.calls.pop()[2]["body"]}]
+        self.client.upsert_missing_baseline([other], self.existing)
+        self.assertEqual([call[0] for call in self.calls], ["PATCH", "POST"])
+        self.assertTrue(self.calls[0][1].endswith("/issues/7"))
+        self.assertNotIn("Nexus 11", self.calls[0][2]["body"])
+        self.assertIn("Nexus 12", self.calls[0][2]["body"])
+        self.assertTrue(self.calls[1][1].endswith("/issues/7/comments"))
+        comment = self.calls[1][2]["body"]
+        self.assertRegex(comment, r"新增[^\n]*Nexus 12[^\n]*Another Mod")
+        self.assertRegex(comment, r"移除[^\n]*Nexus 11[^\n]*Spidey Sense")
+
+    def test_UnitT210_empty_missing_baseline_list_does_nothing(self):
+        """Scenario: Given an empty list, leave GitHub alone even if an aggregate exists.
+        Purpose: Honor the empty-list rule without closing, editing or commenting.
+        """
+        existing = [{"number": 7, "body": "<!-- mod-update-watch:missing-baseline -->"}]
+        for issues in ([], existing):
+            self.client.upsert_missing_baseline([], issues)
+        self.assertEqual(self.calls, [])

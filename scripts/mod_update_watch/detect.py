@@ -1,7 +1,7 @@
 """Compare Nexus file listings with repository baselines."""
 
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from .nexus import CallLimitExceeded, NexusError
 from .registry import TrackedMod, positive_id, strip_version
@@ -29,6 +29,7 @@ class ScanResult:
     no_baseline: list[TrackedMod] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
     stopped: bool = False
+    notes: list[str] = field(default_factory=list)
 
 
 def file_category(file):
@@ -71,36 +72,59 @@ def _latest_main(files):
     return latest, None
 
 
-def _update_reasons(mod, latest):
-    reasons = []
+def _normalized_version(value):
+    return strip_version(value or "").casefold().removeprefix("v").strip()
+
+
+def _utc_text(moment):
+    return moment.isoformat() if moment else "未知"
+
+
+def _update_reasons(mod, latest, notes):
     current_id = positive_id(latest["file_id"])
     uploaded = uploaded_at(latest)
-    if mod.baseline_main_file_id is not None and current_id != mod.baseline_main_file_id:
-        reasons.append(f"主檔 ID 已變更（{mod.baseline_main_file_id} → {current_id}）")
-    if uploaded and mod.baseline_uploaded_utc and uploaded > mod.baseline_uploaded_utc:
-        reasons.append("主檔上傳時間晚於 repo 基準")
-    if (uploaded and mod.baseline_date and not mod.baseline_uploaded_utc
-            and mod.baseline_main_file_id is None and uploaded.date() > mod.baseline_date):
-        reasons.append("主檔 UTC 上傳日期晚於 README 下載日期")
-    if not uploaded:
-        time_allows_change = True
-    elif mod.baseline_uploaded_utc:
-        time_allows_change = uploaded >= mod.baseline_uploaded_utc
-    else:
-        time_allows_change = not mod.baseline_date or uploaded.date() >= mod.baseline_date
+    baseline_id = mod.baseline_main_file_id
+    baseline_time = mod.baseline_uploaded_utc
     latest_version = file_version(latest)
-    if (mod.baseline_version and latest_version and time_allows_change
-            and strip_version(mod.baseline_version).casefold() != strip_version(latest_version).casefold()):
-        reasons.append(f"主檔版本已變更（{mod.baseline_version} → {latest_version}）")
-    return reasons
+    before = _normalized_version(mod.baseline_version)
+    after = _normalized_version(latest_version)
+    comparable_versions = bool(before and after)
+    mod_label = f"Nexus {mod.nexus_id} | {mod.name}"
+
+    if comparable_versions and before == after:
+        if ((baseline_id is not None and baseline_id != current_id)
+                or (baseline_time and uploaded and baseline_time != uploaded)):
+            notes.append(f"{mod_label} | 同版本但主檔 ID 或上傳時間不同"
+                         f"（版本 {latest_version}，ID {baseline_id or '未知'} → {current_id}，"
+                         f"上傳時間 {_utc_text(baseline_time)} → {_utc_text(uploaded)}）")
+        return []
+
+    if baseline_id is not None:
+        return [f"主檔 ID 已變更（{baseline_id} → {current_id}）"] if current_id != baseline_id else []
+
+    if baseline_time and uploaded:
+        if uploaded - baseline_time > timedelta(seconds=120):
+            return ["主檔上傳時間晚於 repo 基準超過 120 秒"]
+        if comparable_versions and uploaded <= baseline_time:
+            notes.append(f"{mod_label} | 版本不一致但上傳時間未晚於基準"
+                         f"（版本 {mod.baseline_version} → {latest_version}，"
+                         f"上傳時間 {_utc_text(baseline_time)} → {_utc_text(uploaded)}）")
+        return []
+
+    if comparable_versions:
+        return [f"主檔版本已變更（{mod.baseline_version} → {latest_version}）"]
+
+    if uploaded and mod.baseline_date and uploaded.date() > mod.baseline_date:
+        return ["主檔 UTC 上傳日期晚於 README 下載日期"]
+    return []
 
 
-def _compare(mod, files):
+def _compare(mod, files, notes):
     groups = {}
     for file in files:
         groups.setdefault(file_category(file), []).append(file)
     latest, ambiguity = _latest_main(groups.get("MAIN", []))
-    reasons = [ambiguity] if ambiguity else _update_reasons(mod, latest)
+    reasons = [ambiguity] if ambiguity else _update_reasons(mod, latest, notes)
     if not reasons:
         return None
     return UpdateFinding(
@@ -113,8 +137,8 @@ def _compare(mod, files):
 
 
 def detect_updates(mods, client, full_scan=False):
-    result = ScanResult()
     candidates = list(mods)
+    result = ScanResult(no_baseline=[mod for mod in candidates if not mod.has_baseline])
     if not full_scan:
         try:
             updated_ids = {positive_id(entry.get("mod_id")) for entry in client.get_updated("1w")}
@@ -126,10 +150,6 @@ def detect_updates(mods, client, full_scan=False):
 
     result.candidate_count = len(candidates)
     for mod in candidates:
-        has_baseline = any((mod.baseline_version, mod.baseline_main_file_id,
-                            mod.baseline_uploaded_utc, mod.baseline_date))
-        if not has_baseline:
-            result.no_baseline.append(mod)
         try:
             files = client.get_files(mod.nexus_id)["files"]
         except NexusError as error:
@@ -138,6 +158,6 @@ def detect_updates(mods, client, full_scan=False):
                 result.stopped = True
                 break
             continue
-        if has_baseline and (finding := _compare(mod, files)):
+        if mod.has_baseline and (finding := _compare(mod, files, result.notes)):
             result.findings.append(finding)
     return result

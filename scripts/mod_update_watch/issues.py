@@ -17,6 +17,12 @@ LABELS = {
     "needs-human": ("d93f0b", "需要人工處理的例外"),
 }
 FILE_MARKER = re.compile(r"<!-- mod-update-watch:latest_file_id=([0-9]+|unknown) -->")
+MISSING_BASELINE_MARKER = "<!-- mod-update-watch:missing-baseline -->"
+MISSING_BASELINE_TITLE = "[MOD 更新] 缺少比對基準的 MOD"
+MISSING_BASELINE_ROW = re.compile(
+    rf"^- (Nexus ([0-9]+) \| .+ \| <https://www\.nexusmods\.com/{GAME_DOMAIN}/mods/\2>)$",
+    re.MULTILINE,
+)
 
 
 def _mod_marker(nexus_id):
@@ -176,8 +182,9 @@ class GitHubClient:
                         raise
                     self._request("GET", label_url, f"查詢標籤 {name}")
 
-    def list_open_issues(self):
-        return self._list_issues("列出開啟的更新 Issue", state="open")
+    def list_open_issues(self, *, include_unlabeled=False):
+        labels = None if include_unlabeled else "mod-update"
+        return self._list_issues("列出開啟的更新 Issue", state="open", labels=labels)
 
     def _list_closed_issues(self):
         if self._closed_issues is None:
@@ -192,8 +199,10 @@ class GitHubClient:
             raise self._closed_issues.with_traceback(None)
         return self._closed_issues
 
-    def _list_issues(self, action, *, max_pages=None, **filters):
-        query = {"labels": "mod-update", "per_page": 100, **filters}
+    def _list_issues(self, action, *, max_pages=None, labels="mod-update", **filters):
+        query = {"per_page": 100, **filters}
+        if labels:
+            query["labels"] = labels
         url = f"{self._repo_url}/issues?{urlencode(query)}"
         issues = []
         visited = set()
@@ -259,6 +268,54 @@ class GitHubClient:
                 self._request("POST", f"{url}/comments", f"留言 Issue #{number}", {"body": comment})
             except GitHubError as error:
                 warnings.append(str(error))
+        return f"更新 Issue #{number}", warnings
+
+    def upsert_missing_baseline(self, mods, open_issues):
+        if not mods:
+            return None, []
+        rows = {
+            mod.nexus_id: f"Nexus {mod.nexus_id} | {mod.name} | "
+            f"<https://www.nexusmods.com/{GAME_DOMAIN}/mods/{mod.nexus_id}>"
+            for mod in mods
+        }
+        body = "\n".join([
+            MISSING_BASELINE_MARKER,
+            "",
+            "請在 `.hash` 或 README 補上各 MOD 的版本、檔名與更新日期，供更新偵測比對。",
+            "",
+            *(f"- {rows[nexus_id]}" for nexus_id in sorted(rows)),
+        ])
+        existing = next((issue for issue in open_issues
+                         if "pull_request" not in issue
+                         and MISSING_BASELINE_MARKER in (issue.get("body") or "")), None)
+        labels = ["mod-update", "needs-human"]
+        if existing is None:
+            return self._create({"title": MISSING_BASELINE_TITLE, "body": body, "labels": labels})
+
+        previous = {int(nexus_id): row for row, nexus_id in MISSING_BASELINE_ROW.findall(existing["body"])}
+        if previous == rows:
+            return None, []
+
+        number = positive_id(existing.get("number"))
+        if number is None:
+            raise GitHubError("讀取缺少比對基準 Issue 編號")
+        url = f"{self._repo_url}/issues/{number}"
+        payload = {"body": body}
+        existing_labels = {label["name"] if isinstance(label, dict) else label
+                           for label in existing.get("labels", [])}
+        if not existing_labels.issuperset(labels):
+            payload["labels"] = sorted(existing_labels.union(labels))
+        self._request("PATCH", url, f"更新 Issue #{number}", payload)
+
+        added = [rows[nexus_id] for nexus_id in sorted(rows) if previous.get(nexus_id) != rows[nexus_id]]
+        removed = [previous[nexus_id] for nexus_id in sorted(previous)
+                   if rows.get(nexus_id) != previous[nexus_id]]
+        comment = f"- 新增：{'、'.join(added) or '無'}\n- 移除：{'、'.join(removed) or '無'}"
+        warnings = []
+        try:
+            self._request("POST", f"{url}/comments", f"留言 Issue #{number}", {"body": comment})
+        except GitHubError as error:
+            warnings.append(str(error))
         return f"更新 Issue #{number}", warnings
 
     def _create(self, payload):

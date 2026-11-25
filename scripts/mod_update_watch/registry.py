@@ -16,6 +16,8 @@ README_MOD = re.compile(
     r"([0-9]+)(?:[/?#][^)]*)?\)\s*$"
 )
 README_REMOVED = re.compile(r"^#\s+移除的\s*MOD\s*#*\s*$", re.IGNORECASE)
+HASH_FILENAME_TIME = re.compile(r"(?<![0-9])([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2})-([0-9]{2})Z")
+README_FILENAME_TIME = re.compile(r"-([0-9]{10})$")
 
 
 @dataclass(frozen=True)
@@ -29,6 +31,21 @@ class TrackedMod:
     baseline_uploaded_utc: datetime | None
     baseline_date: date | None
     hash_file: str | None
+
+    @property
+    def has_baseline(self):
+        return any((self.baseline_version, self.baseline_main_file_id,
+                    self.baseline_uploaded_utc, self.baseline_date))
+
+
+@dataclass
+class _ReadmeEntry:
+    nexus_id: int
+    name: str
+    version: str | None = None
+    downloaded: date | None = None
+    uploaded_utc: datetime | None = None
+    filename: str = ""
 
 
 @dataclass(frozen=True)
@@ -60,11 +77,24 @@ def parse_uploaded(value):
         moment = datetime.fromisoformat(value)
     except ValueError:
         try:
-            moment = datetime.strptime(value, "Last updated %d %B %Y, %I:%M%p")
+            moment = datetime.strptime(value.removeprefix("Last updated "), "%d %B %Y, %I:%M%p")
         except ValueError:
             return None
         moment = moment.replace(tzinfo=TAIPEI)
     return moment.replace(tzinfo=moment.tzinfo or timezone.utc).astimezone(timezone.utc)
+
+
+def _hash_filename_uploaded(filename):
+    if match := HASH_FILENAME_TIME.search(filename):
+        return parse_uploaded(f"{match[1]}:{match[2]}Z")
+    return None
+
+
+def _readme_uploaded(entry):
+    if f"-{entry.nexus_id}-" in entry.filename and (match := README_FILENAME_TIME.search(entry.filename)):
+        # An aware UTC epoch plus seconds also handles dates beyond the platform time_t range.
+        return datetime(1970, 1, 1, tzinfo=timezone.utc) + timedelta(seconds=int(match[1]))
+    return entry.uploaded_utc
 
 
 def _readme_entries(path):
@@ -77,16 +107,20 @@ def _readme_entries(path):
             if README_REMOVED.match(line):
                 return
             if match := README_MOD.match(line):
-                current = [int(match[2]), match[1], None, None]
+                current = _ReadmeEntry(int(match[2]), match[1])
         elif current is not None:
             if line.startswith("- MOD 版本："):
-                current[2] = strip_version(line.removeprefix("- MOD 版本：")) or None
+                current.version = strip_version(line.removeprefix("- MOD 版本：")) or None
             elif line.startswith("- 手動維護最後下載日期："):
                 value = line.removeprefix("- 手動維護最後下載日期：").strip()
                 try:
-                    current[3] = date.fromisoformat(value)
+                    current.downloaded = date.fromisoformat(value)
                 except ValueError:
                     pass
+            elif line.startswith("- MOD 檔案名稱："):
+                current.filename = line.removeprefix("- MOD 檔案名稱：").strip()
+            elif line.startswith("- MOD 網站最後更新日期："):
+                current.uploaded_utc = parse_uploaded(line.removeprefix("- MOD 網站最後更新日期：").strip())
     if current is not None:
         yield current
 
@@ -155,13 +189,14 @@ def load_registry(root: Path):
     readme = {}
     readme_path = root / "README.md"
     try:
-        for mod_id, name, version, day in _readme_entries(readme_path):
+        for entry in _readme_entries(readme_path):
+            mod_id = entry.nexus_id
             if mod_id in ignored:
                 continue
             if mod_id in readme:
-                unmapped.append(Unmapped(mod_id, name, "README 重複"))
+                unmapped.append(Unmapped(mod_id, entry.name, "README 重複"))
             else:
-                readme[mod_id] = name, version, day
+                readme[mod_id] = entry
     except (OSError, UnicodeError):
         unmapped.append(Unmapped(None, "README.md", "無法讀取 README"))
 
@@ -183,7 +218,8 @@ def load_registry(root: Path):
         if mod_id in tracked:
             unmapped.append(Unmapped(mod_id, path.stem, ".hash 重複"))
             continue
-        readme_name = readme.get(mod_id, (None, None, None))[0]
+        entry = readme.get(mod_id)
+        readme_name = entry.name if entry else None
         name = readme_name or fields.get("mod") or path.stem
         filename_prefix = re.split(r"[\s-]", fields.get("filename", ""), maxsplit=1)[0]
         override = overrides.get(str(mod_id)) if not fields.get("repo_directory") else None
@@ -195,20 +231,25 @@ def load_registry(root: Path):
             unmapped.append(Unmapped(mod_id, name, reason, candidates))
         tracked[mod_id] = TrackedMod(
             mod_id, name, directory, "override" if override and directory else "hash",
-            fields.get("version") or None, positive_id(fields.get("main_file_id")),
+            fields.get("version") or (entry.version if entry else None),
+            positive_id(fields.get("main_file_id")),
             parse_uploaded(fields.get("main_file_uploaded_at_utc"))
-            or parse_uploaded(fields.get("nexus_last_updated")), None, path.name,
+            or _hash_filename_uploaded(fields.get("filename", ""))
+            or (_readme_uploaded(entry) if entry else None)
+            or parse_uploaded(fields.get("nexus_last_updated")),
+            entry.downloaded if entry else None, path.name,
         )
 
-    for mod_id, (name, version, day) in readme.items():
+    for mod_id, entry in readme.items():
         if mod_id in tracked:
             continue
+        name = entry.name
         override = overrides.get(str(mod_id))
         directory, reason, candidates = _map_directory(override, (name,), directories)
         if reason:
             unmapped.append(Unmapped(mod_id, name, reason, candidates))
         tracked[mod_id] = TrackedMod(
             mod_id, name, directory, "override" if override and directory else "readme",
-            version, None, None, day, None,
+            entry.version, None, _readme_uploaded(entry), entry.downloaded, None,
         )
     return list(tracked.values()), unmapped
