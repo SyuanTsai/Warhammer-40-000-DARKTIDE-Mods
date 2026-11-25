@@ -15,7 +15,18 @@ README_FIELDS = {
     "手動維護最後下載日期": "downloaded",
 }
 PENDING = "（待補）"
-HOTFIX_FIELDS = ("- 來源類型：作者 hotfix", "- 來源網址：")
+SOURCE_TYPE = "- 來源類型："
+HOTFIX_FIELDS = (SOURCE_TYPE + "作者 hotfix", "- 來源網址：")
+COMMUNITY_TYPE = re.compile(
+    SOURCE_TYPE + r"(?:[^；]+社群公開測試版；版本號與 ZIP 內 info\.json 一致。"
+    r"|[^；]+社群修正；ZIP 未提供作者發行版號，上述修正識別沿用本分支既有提交標記。)")
+COMMUNITY_NOTE = re.compile(
+    r"- 來源欄位說明：Nexus 欄位僅記錄上游正式版參考；本次 ZIP 來自社群 GitHub fork，"
+    r"Main file ID 與 Main file uploaded at UTC 均不適用，(?:記為 not-applicable|因此記為 `not-applicable`)。")
+COMMUNITY_LINKS = ("- 社群來源：", "- 社群程式來源：")
+OFFICIAL_SOURCE = SOURCE_TYPE + "Nexus 正式主檔（Main file ID {file_id}，Main file uploaded at UTC {uploaded}）"
+OFFICIAL_TYPE = re.compile(OFFICIAL_SOURCE.format(
+    file_id=r"[1-9][0-9]*", uploaded=r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?Z"))
 SECTION = re.compile(r"^# (?P<name>.+?)\s*$")
 
 
@@ -184,6 +195,39 @@ def insert_readme(path, section, name, summary, values):
     _write_readme(path, raw, lines)
 
 
+def _sync_readme_sources(lines, source_lines, insert_at, values):
+    method = values.get("acquisition_method")
+    file_id = values.get("main_file_id", "")
+    uploaded = parse_uploaded(values.get("main_file_uploaded_at_utc"))
+    official = (OFFICIAL_SOURCE.format(file_id=file_id, uploaded=_utc(uploaded))
+                if method == "drive-intake" and re.fullmatch(r"[1-9][0-9]*", file_id) and uploaded else "")
+    hotfix_url = values.get("source_url") if method == "author-hotfix" else None
+    if not (official or hotfix_url):
+        return
+    community = any(COMMUNITY_TYPE.fullmatch(line) or COMMUNITY_NOTE.fullmatch(line)
+                    for line in source_lines.values())
+    for index, line in source_lines.items():
+        replacement = line
+        if (line == HOTFIX_FIELDS[0] or (line.startswith(HOTFIX_FIELDS[1] + "<")
+                and line.endswith(">") and source_lines.get(index - 1) == HOTFIX_FIELDS[0])):
+            replacement = ""
+        elif community and line.startswith(COMMUNITY_LINKS):
+            replacement = "- 歷史" + line.removeprefix("- ")
+        elif COMMUNITY_NOTE.fullmatch(line):
+            replacement = ""
+        elif COMMUNITY_TYPE.fullmatch(line) or OFFICIAL_TYPE.fullmatch(line):
+            replacement = official
+        if replacement != line:
+            lines[index] = replacement + lines[index][len(line):] if replacement else ""
+
+    if hotfix_url:
+        newline = "\r\n" if lines[insert_at - 1].endswith("\r\n") else "\n"
+        if not lines[insert_at - 1].endswith(("\r", "\n")):
+            lines[insert_at - 1] += newline
+        lines[insert_at:insert_at] = [HOTFIX_FIELDS[0] + newline,
+                                     f"{HOTFIX_FIELDS[1]}<{hotfix_url}>" + newline]
+
+
 def update_readme(path, nexus_id, values):
     raw = path.read_bytes()
     lines = raw.decode("utf-8-sig").splitlines(keepends=True)
@@ -192,7 +236,7 @@ def update_readme(path, nexus_id, values):
     found = 0
     active = False
     seen = set()
-    source_lines = []
+    source_lines = {}
     insert_at = None
     for index, line in enumerate(lines):
         bare = line.rstrip("\r\n")
@@ -212,20 +256,9 @@ def update_readme(path, nexus_id, values):
             lines[index] = f"- {field[1]}：{value}" + line[len(bare):]
             if field[1] == "手動維護最後下載日期":
                 insert_at = index + 1
-        if active and (bare == HOTFIX_FIELDS[0] or bare.startswith(HOTFIX_FIELDS[1])):
-            source_lines.append(index)
+        if active and bare.startswith((SOURCE_TYPE, HOTFIX_FIELDS[1], "- 來源欄位說明：", *COMMUNITY_LINKS)):
+            source_lines[index] = bare
     if found != 1 or seen != README_FIELDS.keys():
         raise ValueError("README 須有唯一的 MOD 條目及四個更新欄位")
-    # 只清除編排寫入的作者 hotfix 欄位，保留 true_level 等既有社群來源紀錄。
-    if not any(lines[index].rstrip("\r\n") == HOTFIX_FIELDS[0] for index in source_lines):
-        source_lines = []
-    if values.get("source_url"):
-        newline = "\r\n" if lines[insert_at - 1].endswith("\r\n") else "\n"
-        if not lines[insert_at - 1].endswith(("\r", "\n")):
-            lines[insert_at - 1] += newline
-        lines[insert_at:insert_at] = [HOTFIX_FIELDS[0] + newline,
-                                     f"{HOTFIX_FIELDS[1]}<{values['source_url']}>" + newline]
-        source_lines = [index + (2 if index >= insert_at else 0) for index in source_lines]
-    for index in reversed(source_lines):
-        del lines[index]
+    _sync_readme_sources(lines, source_lines, insert_at, values)
     _write_readme(path, raw, lines)

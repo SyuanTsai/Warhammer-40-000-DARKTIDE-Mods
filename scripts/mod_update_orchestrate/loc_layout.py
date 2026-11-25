@@ -170,21 +170,54 @@ class _Parser:
         suffix = self.text[(delimiter or last).end():end]
         return Field(leading, prefix, value, tokens, spacing, delimiter.group() if delimiter else "", suffix), end
 
-    def table(self):
-        starts = [index for index, (token, following) in enumerate(zip(self.tokens, self.tokens[1:]))
-                  if token.group() == "return" and following.group() == "{"
-                  and not self.text[self.text.rfind("\n", 0, token.start()) + 1:token.start()].strip()]
-        if len(starts) != 1:
+    def _table_opening(self):
+        end = len(self.tokens) - bool(self.tokens and self.tokens[-1].group() == ";")
+        if end >= 2:
+            returned = self.tokens[end - 1]
+            if (self.tokens[end - 2].group() == "return" and returned.lastgroup == "name"
+                    and returned.group() not in _RESERVED):
+                declaration = ["local", returned.group(), "=", "{"]
+                starts = [index for index in range(end - 4)
+                          if self.tokens[index].group() == "local"
+                          and [token.group() for token in self.tokens[index:index + 4]] == declaration]
+                if len(starts) != 1:
+                    raise UnsupportedLayout
+                self.line_start(self.tokens[starts[0]])
+                return starts[0] + 3, end - 2
+
+        if not end or self.tokens[end - 1].group() != "}":
             raise UnsupportedLayout
-        self.index = starts[0] + 1
-        prefix_end = cursor = self.line_end(self.take("{"))
+        # Match the final literal's braces without mistaking a helper's return for it.
+        depth = 1
+        for index in range(end - 2, 0, -1):
+            token = self.tokens[index].group()
+            if token == "}":
+                depth += 1
+            elif token == "{":
+                depth -= 1
+                if depth == 0:
+                    returned = self.tokens[index - 1]
+                    if returned.group() != "return":
+                        break
+                    self.line_start(returned)
+                    return index, end
+        raise UnsupportedLayout
+
+    def table(self):
+        self.index, boundary = self._table_opening()
+        opening = self.take("{")
+        compact_empty = self.peek() == "}" and "\n" not in self.text[opening.end():self.current().start()]
+        prefix_end = cursor = opening.end() if compact_empty else self.line_end(opening)
         entries = {}
         while self.peek() != "}":
             start = self.line_start(self.current())
             key = self.key()
-            self.take("=")
-            opening_end = self.line_end(self.take("{"))
-            if key in entries or "\n" in self.text[start:self.tokens[self.index - 1].start()]:
+            equals = self.take("=")
+            brace = self.take("{")
+            opening_end = self.line_end(brace)
+            before_brace = self.text[equals.end():brace.start()]
+            if (key in entries or "\n" in self.text[start:equals.end()]
+                    or ("\n" in before_brace and before_brace.strip())):
                 raise UnsupportedLayout
             fields = {}
             field_cursor = opening_end
@@ -196,10 +229,10 @@ class _Parser:
                 self.expression()
                 tokens = tuple(token.group() for token in self.tokens[expr_index:self.index])
                 expr_start = self.tokens[expr_index].start()
-                if lang in fields or "\n" in self.text[start_field:expr_start]:
+                if lang in fields or "\n" in self.text[start_field:equals.end()]:
                     raise UnsupportedLayout
                 # The assignment prefix must not contain an intervening comment.
-                if self.text[equals.end():expr_start].strip(" \t"):
+                if self.text[equals.end():expr_start].strip():
                     raise UnsupportedLayout
                 fields[lang], field_cursor = self.line(self.text[field_cursor:start_field],
                                                        self.text[start_field:expr_start], expr_start, tokens)
@@ -209,10 +242,9 @@ class _Parser:
                                    self.text[close_start:closing.start()], closing.start(), ())
             entries[key] = Entry(self.text[cursor:opening_end], fields, close)
             cursor = end
-        close_start = self.line_start(self.take("}"))
-        if self.peek() == ";":
-            self.take(";")
-        if self.peek():
+        closing = self.take("}")
+        close_start = prefix_end if compact_empty else self.line_start(closing)
+        if self.index > boundary:
             raise UnsupportedLayout
         return Table(self.text[:prefix_end], entries, self.text[cursor:close_start], self.text[close_start:])
 
