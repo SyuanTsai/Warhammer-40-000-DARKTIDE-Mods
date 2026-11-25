@@ -11,6 +11,7 @@ from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
 from scripts.mod_update_watch.drive import FOLDER_MIME
+from scripts.mod_update_watch.handoff import parse_received_markers
 from scripts.mod_update_watch.intake import main
 
 
@@ -151,6 +152,11 @@ class IntakeTests(unittest.TestCase):
         self.assertTrue(url.endswith("/issues/7/comments"))
         for value in ("Sample-42-1.zip", digest, "file_id 12", "1.0", "主檔"):
             self.assertIn(value, comment["body"])
+        # 成功收件保留原文，並於末尾交接已驗證的壓縮檔。
+        received, = parse_received_markers(comment["body"].splitlines()[-1])
+        self.assertEqual((received.nexus_id, received.file_id, received.drive_file_id, received.md5,
+                          received.category), (42, 12, "archive", digest, "MAIN"))
+        self.assertEqual(len(received.sha256), 64)
         self.assertIn("X-RL-Hourly-Remaining：24", path.read_text(encoding="utf-8"))
         self.assertIn("已處理/42", self.summary.read_text(encoding="utf-8"))
 
@@ -215,6 +221,8 @@ class IntakeTests(unittest.TestCase):
         self.assertEqual(self.nexus_calls, [])
         self.assertIn("1.9", self.github_writes[0][2]["body"])
         self.assertIn("https://example.org/release", self.github_writes[0][2]["body"])
+        received, = parse_received_markers(self.github_writes[0][2]["body"].splitlines()[-1])
+        self.assertEqual((received.source, received.version, received.file_id), ("hotfix", "1.9", None))
 
     def test_UnitT07_bad_hotfix_prerequisites_leave_files_in_place(self):
         """Scenario: Given invalid author hotfix inputs, when intake runs, then it records triage without moving them.

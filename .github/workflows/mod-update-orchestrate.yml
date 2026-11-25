@@ -1,0 +1,208 @@
+name: MOD 更新編排
+
+on:
+  schedule:
+    - cron: "56 * * * *"
+  workflow_dispatch:
+    inputs:
+      nexus_id:
+        description: 指定 Nexus MOD ID
+        type: string
+      max_items:
+        description: 覆寫待送 API 項數上限
+        type: number
+      review_mode:
+        description: PR 審查模式
+        type: choice
+        options: ["", manual, auto]
+        default: ""
+      dry_run:
+        description: 預覽更新
+        type: boolean
+        default: false
+
+permissions: {}
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUTF8: "1"
+  GIT_TERMINAL_PROMPT: "0"
+  GIT_CONFIG_COUNT: "1"
+  GIT_CONFIG_KEY_0: core.autocrlf
+  GIT_CONFIG_VALUE_0: "false"
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: mod-update-orchestrate-discover
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      issues: write
+    outputs:
+      matrix: ${{ steps.discover.outputs.matrix }}
+      has_items: ${{ steps.discover.outputs.has_items }}
+    defaults:
+      run:
+        working-directory: mods
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: mods
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SyuanTsai/Skill-Darktide-Translate
+          ref: 215182256aa1d620b8c748afc4254453038eef3e
+          path: .skill
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 執行離線測試
+        shell: pwsh
+        env:
+          SKILL_ROOT: ${{ github.workspace }}/.skill
+        run: |
+          pwsh --version
+          python -m pip install -r (Join-Path $env:SKILL_ROOT 'packages/claude-runner/requirements.lock')
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          python -m unittest discover -s scripts/mod_update_watch/tests -t .
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          python -m unittest discover -s scripts/mod_update_orchestrate/tests -t .
+      - name: 探索待處理收件
+        id: discover
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          NEXUS_FILTER: ${{ inputs.nexus_id }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          REVIEW_INPUT: ${{ inputs.review_mode }}
+          MOD_UPDATE_REVIEW_MODE: ${{ vars.MOD_UPDATE_REVIEW_MODE }}
+          GCP_WORKLOAD_IDENTITY_PROVIDER: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          GCP_SERVICE_ACCOUNT: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          GDRIVE_PROCESSED_FOLDER_ID: ${{ vars.GDRIVE_PROCESSED_FOLDER_ID }}
+        run: |
+          $arguments = @()
+          if (!$env:GCP_WORKLOAD_IDENTITY_PROVIDER -or !$env:GCP_SERVICE_ACCOUNT -or !$env:GDRIVE_PROCESSED_FOLDER_ID) {
+            Write-Output '::warning::缺少 Drive／WIF 設定，僅探索既有 PR 的合併資格。'
+            '缺少 Drive／WIF 設定，僅探索既有 PR 的合併資格。' >> $env:GITHUB_STEP_SUMMARY
+            $arguments += '--skip-updates'
+          }
+          if ($env:NEXUS_FILTER) { $arguments += @('--nexus-id', $env:NEXUS_FILTER) }
+          if ($env:REVIEW_INPUT) { $arguments += @('--review-mode', $env:REVIEW_INPUT) }
+          if ($env:DRY_RUN -eq 'true') { $arguments += '--dry-run' }
+          python -m scripts.mod_update_orchestrate.main discover @arguments
+
+  process:
+    if: needs.discover.outputs.has_items == 'true'
+    needs: discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
+    concurrency:
+      group: mod-update-${{ matrix.nexus_id }}
+      cancel-in-progress: false
+    defaults:
+      run:
+        working-directory: mods
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: mods
+          persist-credentials: true
+      - uses: actions/checkout@v4
+        if: matrix.action == 'update'
+        with:
+          repository: SyuanTsai/Skill-Darktide-Translate
+          ref: 215182256aa1d620b8c748afc4254453038eef3e
+          path: .skill
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 安裝 Skill 相依套件
+        if: matrix.action == 'update'
+        shell: pwsh
+        env:
+          SKILL_ROOT: ${{ github.workspace }}/.skill
+        run: |
+          pwsh --version
+          python -m pip install -r (Join-Path $env:SKILL_ROOT 'packages/claude-runner/requirements.lock')
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Install 7-Zip
+        if: matrix.action == 'update'
+        shell: bash
+        run: |
+          if ! sudo apt-get install -y 7zip; then
+            echo "::warning::無法安裝 7-Zip。若 runner 未提供 7zz 或 7z，7z 和 RAR 檔案將判定為不支援。"
+          elif command -v 7z >/dev/null && ! sudo apt-get install -y 7zip-rar; then
+            echo "::warning::無法安裝 7-Zip 的 RAR 外掛。RAR 解壓能力取決於 runner 上已有的解碼器。"
+          fi
+      - name: 驗證 Drive 身分
+        if: matrix.action == 'update'
+        id: gauth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/drive
+          create_credentials_file: false
+          export_environment_variables: false
+      - uses: actions/cache/restore@v4
+        if: matrix.action == 'update'
+        id: translation_cache
+        with:
+          path: ${{ runner.temp }}/darktide-translate-${{ matrix.nexus_id }}
+          key: darktide-translate-${{ matrix.nexus_id }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: darktide-translate-${{ matrix.nexus_id }}-
+      - name: 處理 MOD 更新
+        id: process
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GOOGLE_ACCESS_TOKEN: ${{ steps.gauth.outputs.access_token }}
+          GDRIVE_PROCESSED_FOLDER_ID: ${{ vars.GDRIVE_PROCESSED_FOLDER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SKILL_ROOT: ${{ github.workspace }}/.skill
+          MOD_UPDATE_CACHE_DIR: ${{ runner.temp }}/darktide-translate-${{ matrix.nexus_id }}
+          MOD_UPDATE_FAILURE_DIR: ${{ runner.temp }}/mod-update-failure-${{ matrix.nexus_id }}
+          MOD_UPDATE_REVIEW_MODE: ${{ vars.MOD_UPDATE_REVIEW_MODE }}
+          REVIEW_INPUT: ${{ inputs.review_mode }}
+          MAX_ITEMS: ${{ inputs.max_items }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          NEXUS_ID: ${{ matrix.nexus_id }}
+          FILE_ID: ${{ matrix.file_id }}
+          ISSUE: ${{ matrix.issue }}
+          MATRIX_ACTION: ${{ matrix.action }}
+        run: |
+          $arguments = @('--nexus-id', $env:NEXUS_ID, '--file-id', $env:FILE_ID, '--issue', $env:ISSUE)
+          if ($env:MATRIX_ACTION -eq 'merge-check') { $arguments += '--merge-check' }
+          if ($env:REVIEW_INPUT) { $arguments += @('--review-mode', $env:REVIEW_INPUT) }
+          if ($env:MAX_ITEMS -and $env:MAX_ITEMS -ne '0') { $arguments += @('--max-items', $env:MAX_ITEMS) }
+          if ($env:DRY_RUN -eq 'true') { $arguments += '--dry-run' }
+          python -m scripts.mod_update_orchestrate.main process @arguments
+      - uses: actions/cache/save@v4
+        if: always() && matrix.action == 'update' && steps.process.outcome != 'skipped' && inputs.dry_run != true && steps.translation_cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ runner.temp }}/darktide-translate-${{ matrix.nexus_id }}
+          key: ${{ steps.translation_cache.outputs.cache-primary-key }}
+      - uses: actions/upload-artifact@v4
+        if: failure() && steps.process.outputs.api_failed == 'true'
+        with:
+          name: mod-update-api-failure-${{ matrix.nexus_id }}
+          path: |
+            ${{ runner.temp }}/mod-update-failure-${{ matrix.nexus_id }}
+            ${{ runner.temp }}/darktide-translate-${{ matrix.nexus_id }}
+          retention-days: 7

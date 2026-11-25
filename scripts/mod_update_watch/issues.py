@@ -18,6 +18,7 @@ LABELS = {
 }
 FILE_MARKER = re.compile(r"<!-- mod-update-watch:latest_file_id=([0-9]+|unknown) -->")
 MISSING_BASELINE_MARKER = "<!-- mod-update-watch:missing-baseline -->"
+AMBIGUOUS_MAIN = "**需要人工確認主檔。**"
 MISSING_BASELINE_TITLE = "[MOD 更新] 缺少比對基準的 MOD"
 MISSING_BASELINE_ROW = re.compile(
     rf"^- (Nexus ([0-9]+) \| .+ \| <https://www\.nexusmods\.com/{GAME_DOMAIN}/mods/\2>)$",
@@ -77,7 +78,7 @@ def render_issue(finding):
             f"- 檔案連結：{url}&file_id={file_id}",
         ]
     else:
-        lines += ["**需要人工確認主檔。**", "", *(f"- {reason}" for reason in finding.reasons)]
+        lines += [AMBIGUOUS_MAIN, "", *(f"- {reason}" for reason in finding.reasons)]
     lines += ["", "### 選用檔（選用，非必要）", ""]
     lines += [f"- {_file_name(file)}" for file in finding.optional_files] or ["- 無"]
     lines += ["", f"舊版或封存檔共 {finding.old_files_count} 個（不要下載）。",
@@ -248,7 +249,7 @@ class GitHubClient:
             for label in existing.get("labels", [])
         }
         updated_labels = existing_labels.union(labels)
-        if not finding.ambiguous:
+        if not finding.ambiguous and AMBIGUOUS_MAIN in (existing.get("body") or ""):
             updated_labels.discard("needs-human")
         if updated_labels != existing_labels:
             payload["labels"] = sorted(updated_labels)
