@@ -1,0 +1,73 @@
+{
+  "_fixture_note": "上傳時間和 file_id 為合成值，版本取自 run 45591480761",
+  "22": {
+    "files": [
+      {
+        "file_id": 10022,
+        "category_name": "MAIN",
+        "version": "2.5",
+        "uploaded_timestamp": 1777657786
+      }
+    ]
+  },
+  "511": {
+    "files": [
+      {
+        "file_id": 9999,
+        "category_name": "MAIN",
+        "version": "1.6",
+        "uploaded_timestamp": 1790867580
+      }
+    ]
+  },
+  "25": {
+    "files": [
+      {
+        "file_id": 10025,
+        "category_name": "MAIN",
+        "version": "26.07.25",
+        "uploaded_timestamp": 1785009840
+      }
+    ]
+  },
+  "181": {
+    "files": [
+      {
+        "file_id": 10181,
+        "category_name": "MAIN",
+        "version": "1.3.7",
+        "uploaded_timestamp": 1765938961
+      }
+    ]
+  },
+  "281": {
+    "files": [
+      {
+        "file_id": 10281,
+        "category_name": "MAIN",
+        "version": "v1.1.21",
+        "uploaded_timestamp": 1774197940
+      }
+    ]
+  },
+  "404": {
+    "files": [
+      {
+        "file_id": 10404,
+        "category_name": "MAIN",
+        "version": "1.0.4",
+        "uploaded_timestamp": 1744814116
+      }
+    ]
+  },
+  "163": {
+    "files": [
+      {
+        "file_id": 10163,
+        "category_name": "MAIN",
+        "version": "1.2.4",
+        "uploaded_timestamp": 1751911140
+      }
+    ]
+  }
+}

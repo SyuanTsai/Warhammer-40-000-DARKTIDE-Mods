@@ -7,7 +7,7 @@ from collections import Counter
 from pathlib import Path
 
 from .detect import detect_updates
-from .issues import GitHubClient, GitHubError, render_issue
+from .issues import GitHubClient, GitHubError, MISSING_BASELINE_TITLE, render_issue
 from .nexus import NexusClient, RATE_HEADERS
 from .registry import load_registry
 
@@ -36,8 +36,10 @@ def _report(mods, unmapped, scan, actions, errors, nexus):
         f" | 候選：{', '.join(entry.candidates) or '無'}"
         for entry in unmapped
     ] or ["- 無"]
-    lines += ["", "## 無比對基準", ""]
+    lines += ["", "## 缺少基準", ""]
     lines += [f"- Nexus {mod.nexus_id} | {mod.name}" for mod in scan.no_baseline] or ["- 無"]
+    lines += ["", "## 備註（notes）", ""]
+    lines += [f"- {note}" for note in scan.notes] or ["- 無"]
     lines += ["", "## 錯誤與警告", ""]
     lines += [f"- {error}" for error in errors] or ["- 無"]
     lines += ["", "## Nexus 額度", ""]
@@ -90,16 +92,19 @@ def main(argv=None, *, root=None, nexus_transport=None, github_transport=None):
     scan = detect_updates(mods, nexus, args.full_scan)
     errors.extend(scan.errors)
     actions = []
-    if args.dry_run:
-        for finding in scan.findings:
-            title, _ = render_issue(finding)
-            print(title)
+    for finding in scan.findings:
+        title, _ = render_issue(finding)
+        print(f"{title}｜{'；'.join(finding.reasons)}")
+        if args.dry_run:
             actions.append(f"預計建立或更新 {title}")
+    if args.dry_run:
+        if scan.no_baseline:
+            actions.append(f"預計同步 {MISSING_BASELINE_TITLE}")
         for error in errors:
             print(error, file=sys.stderr)
-    elif github is not None and scan.findings:
+    elif github is not None and (scan.findings or scan.no_baseline):
         try:
-            issues = github.list_open_issues()
+            issues = github.list_open_issues(include_unlabeled=bool(scan.no_baseline))
         except GitHubError as error:
             github_failed = True
             errors.append(str(error))
@@ -112,6 +117,15 @@ def main(argv=None, *, root=None, nexus_transport=None, github_transport=None):
                 except GitHubError as error:
                     github_failed = True
                     errors.append(f"Nexus {finding.mod.nexus_id}：{error}")
+            if scan.no_baseline:
+                try:
+                    action, warnings = github.upsert_missing_baseline(scan.no_baseline, issues)
+                    if action:
+                        actions.append(f"{action}（缺少比對基準）")
+                    errors.extend(warnings)
+                except GitHubError as error:
+                    github_failed = True
+                    errors.append(f"缺少比對基準：{error}")
 
     report = _report(mods, unmapped, scan, actions, errors, nexus)
     if not args.dry_run:
