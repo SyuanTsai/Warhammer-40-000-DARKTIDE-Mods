@@ -53,9 +53,9 @@ return {
         ['zh-tw'] = ' 戰鬥{#color(255,191,0)}統計{#reset()}',
     },
     mod_description = {
-        en = 'Track detailed combat statistics including damage, kills, buff uptime, and more.',
+        en = 'Comprehensive combat analytics tracking damage breakdowns, kills, buff uptime, and more. Essential for theory-crafting and build optimization.',
         ['zh-cn'] = '追踪详细的战斗统计数据，包括伤害、击杀、增益持续时间等。',
-        ['zh-tw'] = '追蹤詳細戰鬥統計，包括傷害、擊殺、增益持續時間等。',
+        ['zh-tw'] = "完整的戰鬥數據分析，追蹤傷害明細、擊殺、增益覆蓋率等資訊。是理論配裝與配置最佳化的必備工具。",
     },
 
     -- Config
