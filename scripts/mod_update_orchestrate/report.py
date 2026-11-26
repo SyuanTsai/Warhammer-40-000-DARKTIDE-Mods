@@ -7,7 +7,7 @@ from html import escape
 
 from .loc_layout import decode_lua_string
 
-SKILL_SHA = "215182256aa1d620b8c748afc4254453038eef3e"
+SKILL_SHA = "59ae554bd9977ae0ab293ca8ae26297750aeb5e4"
 TERM_REVIEW_HEADING = "## 待審查術語"
 _TERM_REVIEW_COLUMNS = ("| 鍵值 | 英文原文 | 標記詞彙 | 採用譯文 |", "| --- | --- | --- | --- |")
 _TERM_REVIEW_DATA = "<!-- term-review-data:"
