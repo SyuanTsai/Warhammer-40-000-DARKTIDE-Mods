@@ -3,6 +3,7 @@ name: MOD update tests
 on:
   pull_request:
     paths:
+      - 'scripts/localization_lint/**'
       - 'scripts/mod_update_watch/**'
       - 'scripts/mod_update_orchestrate/**'
       - '.github/workflows/mod-update-*.yml'
@@ -37,6 +38,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install LuaJIT
+        run: sudo apt-get update && sudo apt-get install -y luajit
       - name: Install Skill dependencies
         run: |
           pwsh --version
@@ -47,5 +50,7 @@ jobs:
           python -m flake8 --select=F821 scripts/mod_update_watch scripts/mod_update_orchestrate
       - name: Run MOD update watch tests
         run: python -m unittest discover -s scripts/mod_update_watch/tests -t .
+      - name: Run localization lint tests
+        run: python -m unittest discover -s scripts/localization_lint/tests -t .
       - name: Run MOD update orchestrate tests
         run: python -m unittest discover -s scripts/mod_update_orchestrate/tests -t .

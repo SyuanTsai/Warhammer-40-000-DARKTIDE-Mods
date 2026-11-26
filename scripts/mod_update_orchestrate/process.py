@@ -8,6 +8,7 @@ from datetime import datetime
 from html import unescape
 from pathlib import Path
 
+from scripts.localization_lint import LocalizationSyntaxError, lint_changes
 from scripts.mod_update_watch.drive import DriveError, validate_id
 from scripts.mod_update_watch.registry import README_MOD, TAIPEI, TrackedMod, _load_overrides, _read_hash, load_registry
 from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, WINDOWS_DEVICE, extract
@@ -329,6 +330,13 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 continue
             if outcome is None:
                 return
+            # 使用 main 基準，涵蓋新增 MOD 的上游提交與最終候選。
+            try:
+                lint_changes(git, base_oid)
+            except (LocalizationSyntaxError, ValueError):
+                if route != "new":
+                    restore(git, base_oid, paths)
+                raise
             title, body, conflicts = outcome
             resolved = {"archive", "layout", "registry", "budget", "localization", "main", "publication"}
             if conflicts:

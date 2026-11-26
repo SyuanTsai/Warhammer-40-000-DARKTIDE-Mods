@@ -4,6 +4,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
+from scripts.localization_lint import LocalizationSyntaxError
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
 from scripts.mod_update_watch.handoff import Received
@@ -112,6 +113,29 @@ class ExecutionTests(unittest.TestCase):
         self.assertIn("repo 紀錄已是版本 v2", self.emit.call_args.args[0])
         download.assert_not_called()
         self.github.pulls.assert_not_called()
+
+    # Scenario: 自動更新的 localization 候選檔有語法錯誤。
+    # Purpose: 保留解析診斷，並在寫入 PR 前中止。
+    def test_UnitT55_invalid_lua_stops_publication(self):
+        # Given
+        error = LocalizationSyntaxError("example_localization.lua:2: unexpected symbol")
+        with (patch("scripts.mod_update_orchestrate.process.latest_receipt", return_value=RECEIPT),
+              patch("scripts.mod_update_orchestrate.process.registry_mod", return_value=self.mod),
+              patch("scripts.mod_update_orchestrate.process.download"),
+              patch("scripts.mod_update_orchestrate.process.locate_mod"),
+              patch("scripts.mod_update_orchestrate.process.read_tree"),
+              patch("scripts.mod_update_orchestrate.process.candidate", return_value=("title", "body", [])),
+              patch("scripts.mod_update_orchestrate.process.lint_changes", side_effect=error) as lint,
+              patch("scripts.mod_update_orchestrate.process.restore") as restore,
+              patch("scripts.mod_update_orchestrate.process.publish") as publication):
+            # When
+            with self.assertRaisesRegex(LocalizationSyntaxError, "example_localization.lua:2:"):
+                process(self.root, self.git, self.github, Mock(), "processed", 7, 123, 9001,
+                        self.scratch / "skill", self.scratch, self.scratch / "cache", emit=self.emit)
+        # Then
+        lint.assert_called_once_with(self.git, "a" * 40)
+        restore.assert_called_once_with(self.git, "a" * 40, (MOD, "README.md", ".hash/Example.hash"))
+        publication.assert_not_called()
 
     # Scenario: Nexus 正式版取代 hotfix，且封存基準與現有程式不同。
     # Purpose: C5 列出原有私人修改、保留修改與 private_fix_commit，清除 hotfix 來源。
