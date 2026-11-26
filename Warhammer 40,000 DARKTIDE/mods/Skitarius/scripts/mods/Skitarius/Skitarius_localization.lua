@@ -10,7 +10,7 @@ local localizations = {
     -- Mod Details
     mod_name = {
         en = "Skitarius",
-        ["zh-tw"] = "護教軍",
+        ["zh-tw"] = "機械教信徒",
         ["zh-cn"] = "战斗序列（鼠标宏）",
     },
     mod_description = {
