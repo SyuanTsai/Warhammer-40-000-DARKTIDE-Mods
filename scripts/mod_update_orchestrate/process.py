@@ -15,7 +15,7 @@ from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, 
 
 from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
-from .eol import FORMAT_ONLY, MIXED_EOL, default_format, repo_bytes
+from .eol import FORMAT_ONLY, MIXED_EOL, default_format, normalize, repo_bytes
 from .gate import validate_git, validate_paths
 from .localization import Localization, LocalizationError, read_json
 from .loc_layout import preserve_layout
@@ -208,6 +208,13 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         layout_base = None if route == "new" else ours.get(loc.relative)
         merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
 
+    private_paths = {path.strip() for path in hash_fields.get("private_fix_paths", "").split(",") if path.strip()}
+    changed_private_paths = [path for path in sorted(private_paths)
+                             if path not in ours or normalize(ours[path]) != normalize(merged.get(path))]
+    if changed_private_paths:
+        raise NeedsHuman("private-fix", "更新候選變更已登記的私人修正檔，請確認修正仍有效。\n\n"
+                         + "\n".join(f"- {cell(path)}" for path in changed_private_paths))
+
     validate_paths((f"{mod_path}/{path}" for path in merged), mod_path, hash_path)
     endings = sorted(merged)
     folded = {name.casefold() for name in endings}
@@ -361,7 +368,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                     restore(git, base_oid, paths)
                 raise
             title, body, conflicts = outcome
-            resolved = {"archive", "layout", "registry", "budget", "localization", "main", "publication"}
+            resolved = {"archive", "layout", "registry", "budget", "localization", "main", "publication", "private-fix"}
             if conflicts:
                 github.needs_human(number, "merge", "\n".join(f"- merge-conflict：{cell(item)}" for item in conflicts))
             else:
