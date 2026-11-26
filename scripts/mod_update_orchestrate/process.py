@@ -17,12 +17,15 @@ from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
 from .eol import FORMAT_ONLY, MIXED_EOL, default_format, repo_bytes
 from .gate import validate_git, validate_paths
-from .localization import Localization, LocalizationError
+from .localization import Localization, LocalizationError, read_json
 from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
 from .pr import branch_for, current_pr, publish, stage_raw, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
-from .report import blocked_units, cell, plain, pr_body, unquoted_note
+from .report import (
+    blocked_units, cell, plain, pr_body, prepare_term_reviews, sync_term_review_translations,
+    term_review_issue, term_review_log, unquoted_note,
+)
 from .section import DEFAULT_SECTION, choose_section, describe
 from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
 
@@ -154,11 +157,22 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if preblocked:
             details = blocked_units(document, {})
             raise NeedsHuman("localization", "有 BLOCKED 工作集項目。\n\n" + "\n".join(details))
-        status, summary, document = loc.translate(document, max_items=max_items, dry_run=dry_run)
+        status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run)
+        document, summary, reviews = prepare_term_reviews(translated, summary)
+        pending = blocked_units(document, summary)
+        if dry_run and reviews:
+            issue_title, _ = term_review_issue(mod.name, nexus_id, reviews)
+            emit(f"預計建立或更新 Issue：{issue_title}\n\n{term_review_log(reviews)}\n\n- PR：待發布")
+        elif reviews and (status or pending):
+            emit(term_review_log(reviews))
         if dry_run and summary:
-            emit(f"翻譯預覽：待送 {summary['apiItemCount']} 項，上限 {summary['maxItems']}，"
-                 f"估算 USD {summary['estimate']['estimatedUsd']:.6f}。路徑預檢通過。"
-                 " Apply、Receipt、Gate 未執行。")
+            count, limit = summary.get("apiItemCount"), summary.get("maxItems")
+            estimated = (summary.get("estimate") or {}).get("estimatedUsd")
+            preview = (f"待送 {count} 項，上限 {limit}，估算 USD {estimated:.6f}。"
+                       if None not in (count, limit, estimated) else "")
+            if summary.get("blocked"):
+                emit("\n".join(blocked_units(document, summary)))
+            emit(f"翻譯預覽：{preview}路徑預檢通過。 Apply、Receipt、Gate 未執行。")
             if route == "new":
                 emit(f"README 預覽分區：{DEFAULT_SECTION}。摘要：{PENDING}。")
             return None
@@ -184,10 +198,13 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
                              + "\n".join(blocked_units(document, summary)))
         if status:
             raise NeedsHuman("localization", f"翻譯轉接層失敗（回傳碼 {status}）")
-        pending = blocked_units(document, summary)
         if pending:
             raise NeedsHuman("localization", "有未核准或 BLOCKED 項目。\n\n" + "\n".join(pending))
-        applied, unquoted_keys = loc.apply(document, summary)
+        applied, unquoted_keys = loc.apply(document, summary, rewrite_workset=document is not translated)
+        if unquoted_keys and reviews:
+            sync_term_review_translations(reviews, read_json(loc.workset), set(unquoted_keys))
+        if reviews:
+            emit(term_review_log(reviews))
         layout_base = None if route == "new" else ours.get(loc.relative)
         merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
 
@@ -233,7 +250,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         code_changes.append((loc.relative, unquoted_note(unquoted_keys)))
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
-                   private_files=private_files, private_recorded=private_recorded)
+                   private_files=private_files, private_recorded=private_recorded, term_reviews=reviews)
     action = {"update": "更新", "new": "新增", "hotfix": "hotfix"}[route]
     version = plain(receipt.version)
     if route != "new":
@@ -254,7 +271,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if route != "new":
             restore(git, base_oid, paths)
         return None
-    return title, body, conflicts
+    return title, body, conflicts, reviews
 
 
 def restore(git, base_oid, paths):
@@ -339,14 +356,16 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 if route != "new":
                     restore(git, base_oid, paths)
                 raise
-            title, body, conflicts = outcome
+            title, body, conflicts, reviews = outcome
             resolved = {"archive", "layout", "registry", "budget", "localization", "main", "publication"}
             if conflicts:
                 github.needs_human(number, "merge", "\n".join(f"- merge-conflict：{cell(item)}" for item in conflicts))
             else:
                 resolved.add("merge")
             pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
-                                mode, conflicts, upstream_oid or base_oid, paths, route=route, mod_staged=True)
+                                mode, conflicts, upstream_oid or base_oid, paths, route=route, mod_staged=True,
+                                term_review=term_review_issue(mod.name, nexus_id, reviews) if reviews else None,
+                                emit=emit)
             github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")
             return

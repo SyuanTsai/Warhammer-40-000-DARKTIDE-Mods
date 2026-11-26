@@ -12,7 +12,7 @@ FALLBACK_NOTE = "本地化檔無法保留原排版，已使用 Skill 輸出"
 _TOKEN = re.compile(
     r"(?P<trivia>--\[(?P<comment_eq>=*)\[.*?\](?P=comment_eq)\]|--[^\r\n]*|\s+)"
     r"|(?P<long>\[(?P<string_eq>=*)\[.*?\](?P=string_eq)\])"
-    r"""|(?P<string>"(?:\\(?:z[ \t\r\n]*|.)|[^"\\\r\n])*"|'(?:\\(?:z[ \t\r\n]*|.)|[^'\\\r\n])*')"""
+    r"""|(?P<string>"(?:\\(?:z[ \t\r\n\v\f]*|\r\n|\n\r|.)|[^"\\\r\n])*"|'(?:\\(?:z[ \t\r\n\v\f]*|\r\n|\n\r|.)|[^'\\\r\n])*')"""
     r"|(?P<name>[A-Za-z_][A-Za-z_0-9]*)"
     r"|(?P<number>0[xX][0-9a-fA-F]+|(?:[0-9]+(?:\.(?!\.)[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?)"
     r"|(?P<symbol>\.\.\.?|==|~=|<=|>=|.)",
@@ -20,6 +20,12 @@ _TOKEN = re.compile(
 )
 _KEY = re.compile(r"['\"]([A-Za-z_0-9-]+)['\"]")
 _DOUBLE_QUOTE = r'(?:"|\\(?:"|034|34(?![0-9])|x22|u\{0*22\}))'
+_NEWLINE = re.compile(r"\r\n|\n\r|\r|\n")
+_ESCAPES = dict(zip("abfnrtv\\\"'", "\a\b\f\n\r\t\v\\\"'"))
+_STRING_PART = re.compile(r"[^\\]+|\\([0-9]{1,3}|x[0-9a-fA-F]{2}|u\{[0-9a-fA-F]+\}|"
+                          r"z[ \t\r\n\v\f]*|\r\n|\n\r|.)", re.DOTALL)
+_DOUBLE_QUOTE_CHARS = frozenset('"“”＂')
+_BOUNDARY_QUOTES = _DOUBLE_QUOTE_CHARS | set("'‘’「」『』")
 _WRAPPED_SHORT_STRING = re.compile(
     rf"(?P<leading>\s*){_DOUBLE_QUOTE}(?P<content>(?:\\.|[^\\])*)"
     rf"{_DOUBLE_QUOTE}(?P<trailing>\s*)", re.DOTALL,
@@ -35,14 +41,68 @@ class UnsupportedLayout(ValueError):
     pass
 
 
-def unwrap_literal_outer_double_quotes(expression):
-    """Return the rewritten literal, the original unwrapped literal, or None for non-literals."""
+def _single_string_token(expression):
     if not isinstance(expression, str):
         return None
     tokens = [token for token in _TOKEN.finditer(expression) if token.lastgroup != "trivia"]
-    if len(tokens) != 1:
+    if len(tokens) == 1 and tokens[0].lastgroup in ("long", "string"):
+        return tokens[0]
+    return None
+
+
+def decode_lua_string(expression):
+    """Decode a single Lua string literal for display, or return None."""
+    token = _single_string_token(expression)
+    if token is None:
         return None
-    token = tokens[0]
+    literal = token.group()
+    if token.lastgroup == "long":
+        delimiter_length = len(token["string_eq"]) + 2
+        return _NEWLINE.sub("\n", literal[delimiter_length:-delimiter_length]).removeprefix("\n")
+    decoded = bytearray()
+    try:
+        for part in _STRING_PART.finditer(literal[1:-1]):
+            escape = part[1]
+            if escape is None:
+                decoded.extend(part[0].encode("utf-8"))
+            elif escape in _ESCAPES:
+                decoded.extend(_ESCAPES[escape].encode("utf-8"))
+            elif _NEWLINE.fullmatch(escape):
+                decoded.append(10)
+            elif escape[0] in "0123456789":
+                decoded.append(int(escape))
+            elif escape.startswith("x"):
+                decoded.append(int(escape[1:], 16))
+            elif escape.startswith("u{"):
+                decoded.extend(chr(int(escape[2:-1], 16)).encode("utf-8"))
+            elif not escape.startswith("z"):
+                return None
+        return decoded.decode("utf-8")
+    except ValueError:
+        return None
+
+
+def literal_has_boundary_quote(expression):
+    """Return None if the expression cannot be decoded as a single string."""
+    value = decode_lua_string(expression)
+    if value is None:
+        return None
+    value = value.strip()
+    return value[:1] in _BOUNDARY_QUOTES or value[-1:] in _BOUNDARY_QUOTES
+
+
+def unwrap_literal_outer_double_quotes(expression):
+    """Remove clearly redundant display quotes while preserving Lua syntax and escapes."""
+    token = _single_string_token(expression)
+    if token is None:
+        return None
+    original = decode_lua_string(expression)
+    if original is None:
+        return expression
+    first, end = len(original) - len(original.lstrip()), len(original.rstrip())
+    if (end - first < 2 or original[first] != '"' or original[end - 1] != '"'
+            or any(char in _DOUBLE_QUOTE_CHARS for char in original[first + 1:end - 1])):
+        return expression
     literal = token.group()
     if token.lastgroup == "long":
         delimiter_length = len(token["string_eq"]) + 2
@@ -52,7 +112,7 @@ def unwrap_literal_outer_double_quotes(expression):
             return expression
         leading, inside, trailing = match.groups()
         # Normalize each part before joining so separate Lua newlines cannot combine.
-        content = "".join(re.sub(r"\r\n|\n\r|\r", "\n", part) for part in (leading, inside, trailing))
+        content = "".join(_NEWLINE.sub("\n", part) for part in (leading, inside, trailing))
         # Lua ignores the first newline immediately after a long string opener.
         if not leading and content.startswith("\n"):
             content = "\n" + content
@@ -62,7 +122,7 @@ def unwrap_literal_outer_double_quotes(expression):
             equals += "="
             closing = f"]{equals}]"
         unwrapped = f"[{equals}[{content}{closing}"
-    elif token.lastgroup == "string":
+    else:
         match = _WRAPPED_SHORT_STRING.fullmatch(literal[1:-1])
         if not match:
             return expression
@@ -71,15 +131,9 @@ def unwrap_literal_outer_double_quotes(expression):
             # An escape keeps a preceding \z from consuming the outer whitespace.
             trailing = f"\\{ord(trailing[0]):03d}" + trailing[1:]
         unwrapped = literal[0] + leading + inside + trailing + literal[-1]
-    else:
-        return None
-    return expression[:token.start()] + unwrapped + expression[token.end():]
-
-
-def literal_has_outer_double_quotes(expression):
-    """Return None for non-literals, otherwise whether the string has visible outer quotes."""
-    unwrapped = unwrap_literal_outer_double_quotes(expression)
-    return None if unwrapped is None else unwrapped != expression
+    candidate = expression[:token.start()] + unwrapped + expression[token.end():]
+    expected = original[:first] + original[first + 1:end - 1] + original[end:]
+    return candidate if decode_lua_string(candidate) == expected else expression
 
 
 @dataclass(frozen=True)

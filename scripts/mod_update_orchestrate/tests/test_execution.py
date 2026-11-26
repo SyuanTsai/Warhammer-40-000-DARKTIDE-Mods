@@ -1,11 +1,14 @@
+import os
 import tempfile
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
-from unittest.mock import Mock, patch
+from unittest.mock import Mock, call, patch
 
 from scripts.localization_lint import LocalizationSyntaxError
+from scripts.mod_update_orchestrate.github import GitHub
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
+from scripts.mod_update_orchestrate.main import main
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
 from scripts.mod_update_watch.handoff import Received
 from scripts.mod_update_watch.registry import _read_hash
@@ -17,6 +20,11 @@ ISSUE = {"number": 7, "state": "open", "body": (
     "<!-- mod-update-watch:nexus_id=123 -->\n<!-- mod-update-watch:latest_file_id=9001 -->")}
 PENDING = {"units": [{"key": "start", "unitId": "a", "action": "AI_REQUIRED",
                       "reviewStatus": "pending", "new": {"sourceExpression": {"raw": '"Start"'}}}]}
+FLAGGED = {"unitId": "a", "key": "start", "source": "Start Shot Recovery",
+           "terms": ["Shot Recovery"], "translation": "開始射擊恢復"}
+READY = {"units": [{**PENDING["units"][0], "reviewStatus": "approved",
+                   "suggestedZhTwExpression": '"開始射擊恢復"'}],
+         "translationBinding": {"rulesSha256": "rules", "glossarySha256": "terms"}}
 
 
 class ExecutionTests(unittest.TestCase):
@@ -30,6 +38,7 @@ class ExecutionTests(unittest.TestCase):
         self.github.issue.return_value = ISSUE
         self.github.comments.return_value = []
         self.github.pulls.return_value = []
+        self.github.term_review_issue.return_value = 31
         self.loc = self.enterContext(patch("scripts.mod_update_orchestrate.process.Localization")).return_value
         self.loc.generate.return_value = PENDING
         self.mod = SimpleNamespace(nexus_id=123, directory="Example", name="範例", baseline_version="1",
@@ -72,12 +81,160 @@ class ExecutionTests(unittest.TestCase):
 
     # Scenario: 回傳碼 0 的工作集仍有未核准內容。
     # Purpose: 阻止 Apply，並提供可編輯回原留言的鍵值、英文與原因。
-    def test_UnitT30_unapproved_stops_before_apply(self):
-        self.loc.translate.return_value = (0, {"blocked": [{"unitId": "a", "reason": "unknown_term"}]}, PENDING)
-        with self.assertRaisesRegex(NeedsHuman, "start.*Start.*unknown_term"):
+    def test_UnitT30_legacy_unknown_term_without_translation_stays_blocked(self):
+        self.loc.translate.return_value = (0, {"blocked": [
+            {"unitId": "a", "reason": "unknown_term", "details": ["Shot Recovery"]}]}, PENDING)
+        with self.assertRaisesRegex(NeedsHuman, "start.*Start.*unknown_term.*Shot Recovery"):
             self.build_candidate()
         self.loc.apply.assert_not_called()
         self.assertFalse(self.github.mock_calls)
+
+    def run_update(self, *, dry_run=False, mode="manual"):
+        self.loc.relative = "Example_localization.lua"
+        self.loc.apply.return_value = (b"return {}\n", [])
+        self.github.write_pr.return_value = {
+            "number": 22, "head": {"sha": "a" * 40}, "draft": False,
+            "html_url": "https://github.com/owner/mods/pull/22",
+        }
+        self.git.side_effect = lambda command, *args: {
+            "rev-parse": "a" * 40, "diff": "README.md\0",
+        }.get(command, "")
+        values = {"filename": "new.zip", "nexus_last_updated": "2026-11-25T00:00:00Z",
+                  "version": "2", "downloaded": "2026-11-25", "acquisition_method": "drive-intake"}
+        skill = self.scratch / "skill"
+        skill.mkdir(exist_ok=True)
+        env = {"SKILL_ROOT": str(skill), "RUNNER_TEMP": str(self.scratch), "MOD_UPDATE_CACHE_DIR": "",
+               "GDRIVE_PROCESSED_FOLDER_ID": "processed", "GOOGLE_ACCESS_TOKEN": "fake"}
+        with (patch.dict(os.environ, env),
+              patch("scripts.mod_update_orchestrate.main.run_git", side_effect=lambda _, *args: self.git(*args)),
+              patch("scripts.mod_update_orchestrate.main.GitHub", return_value=self.github),
+              patch("scripts.mod_update_orchestrate.main.DriveClient"),
+              patch("scripts.mod_update_orchestrate.main.emit", self.emit),
+              patch("scripts.mod_update_orchestrate.process.latest_receipt", return_value=RECEIPT),
+              patch("scripts.mod_update_orchestrate.process.registry_mod", return_value=self.mod),
+              patch("scripts.mod_update_orchestrate.process.download", return_value=self.scratch / "archive"),
+              patch("scripts.mod_update_orchestrate.process.locate_mod", return_value=self.root / MOD),
+              patch("scripts.mod_update_orchestrate.process.folder_id", return_value=None),
+              patch("scripts.mod_update_orchestrate.process.matches_issue", return_value=True),
+              patch("scripts.mod_update_orchestrate.process.updates", return_value=values),
+              patch("scripts.mod_update_orchestrate.process.update_readme"),
+              patch("scripts.mod_update_orchestrate.process.stage_raw"),
+              patch("scripts.mod_update_orchestrate.process.validate_git"),
+              patch("scripts.mod_update_orchestrate.process.lint_changes")):
+            args = ["process", "--nexus-id", "123", "--issue", "7", "--file-id", "9001", "--review-mode", mode]
+            return main([*args, "--dry-run"] if dry_run else args, root=self.root)
+
+    def test_UnitT31_unknown_terms_apply_publish_and_open_review(self):
+        self.loc.translate.return_value = (0, {"unknownTerms": [FLAGGED]}, READY)
+        self.assertEqual(self.run_update(), 0)
+        self.loc.apply.assert_called_once()
+        call_pr = self.github.write_pr.call_args
+        self.assertIs(call_pr.args[4], False)
+        pr_body = call_pr.args[3]
+        self.assertIn("## BLOCKED\n\n無", pr_body)
+        row = "| start | Start Shot Recovery | Shot Recovery | 開始射擊恢復 |"
+        self.assertIn(row, pr_body)
+        call_issue = self.github.term_review_issue.call_args
+        self.assertEqual(call_issue.args[:3], (123, "9001", "[term-review] 範例 (Nexus 123)"))
+        for evidence in (row, "MOD：範例", "Nexus ID：123", "https://github.com/owner/mods/pull/22"):
+            self.assertIn(evidence, call_issue.args[3])
+        self.assertLess(self.github.mock_calls.index(call.write_pr(*call_pr.args)),
+                        self.github.mock_calls.index(call.term_review_issue(*call_issue.args, **call_issue.kwargs)))
+        self.assertIn("start ｜ Start Shot Recovery ｜ Shot Recovery ｜ 開始射擊恢復",
+                      self.messages())
+        self.github.needs_human.assert_not_called()
+
+    def test_UnitT32_dry_run_previews_term_review_without_writes(self):
+        self.loc.translate.return_value = (0, {"unknownTerms": [FLAGGED]}, READY)
+        self.assertEqual(self.run_update(dry_run=True), 0)
+        messages = self.messages()
+        for evidence in ("預計建立或更新 Issue", "[term-review] 範例 (Nexus 123)", "Shot Recovery", "開始射擊恢復"):
+            self.assertIn(evidence, messages)
+        self.loc.apply.assert_not_called()
+        self.github.write_pr.assert_not_called()
+        self.github.term_review_issue.assert_not_called()
+        self.github.needs_human.assert_not_called()
+
+    def test_UnitT33_other_block_reason_still_prevents_pr(self):
+        self.loc.translate.return_value = (0, {"blocked": [
+            {"unitId": "a", "reason": "needs_lookup_definition"},
+            {"unitId": "a", "reason": "unknown_term", "details": ["Shot Recovery"]},
+        ]}, READY)
+        self.run_update()
+        self.loc.apply.assert_not_called()
+        self.github.write_pr.assert_not_called()
+        self.github.term_review_issue.assert_not_called()
+        self.github.needs_human.assert_called_once()
+        detail = self.github.needs_human.call_args.args[2]
+        self.assertIn("needs_lookup_definition", detail)
+        self.assertIn("Shot Recovery", detail)
+
+    def test_UnitT34_legacy_unknown_term_with_translation_publishes(self):
+        pending = {**READY, "units": [{**READY["units"][0], "reviewStatus": "pending"}]}
+        self.loc.translate.return_value = (0, {"blocked": [
+            {"unitId": "a", "reason": "unknown_term", "details": ["Shot Recovery"]}]}, pending)
+        self.run_update()
+        applied, summary = self.loc.apply.call_args.args
+        self.assertEqual(applied["units"][0]["reviewStatus"], "approved")
+        self.assertEqual(summary["blocked"], [])
+        self.assertTrue(self.loc.apply.call_args.kwargs["rewrite_workset"])
+        self.assertIn("Shot Recovery", self.github.write_pr.call_args.args[3])
+        self.github.term_review_issue.assert_called_once()
+
+    def messages(self):
+        return "\n".join(event.args[0] for event in self.emit.call_args_list)
+
+    def test_UnitT35_exhausted_review_issue_leaves_published_pr_and_fails_job(self):
+        second = {**FLAGGED, "unitId": "b", "key": "stop", "terms": ["*Other Term*", "End Shot"]}
+        self.loc.translate.return_value = (0, {"unknownTerms": [FLAGGED, second]}, READY)
+        sleeper = Mock()
+        transport = Mock(side_effect=[(200, {}, b"{}"), (200, {}, b"[]"), (503, {}, b"")] * 3)
+        with patch.dict(os.environ, {"GITHUB_TOKEN": "fake", "GITHUB_REPOSITORY": "owner/mods"}):
+            review = GitHub(transport)
+        self.github.term_review_issue.side_effect = lambda *args: review.term_review_issue(*args, sleeper=sleeper)
+        self.github.discussions_resolved.return_value = True
+
+        self.assertEqual(self.run_update(mode="auto"), 1)
+
+        self.assertEqual(sleeper.call_args_list, [call(1), call(2)])
+        self.assertEqual([event.args[0] for event in transport.call_args_list], ["GET", "GET", "POST"] * 3)
+        self.github.write_pr.assert_called_once()
+        body = self.github.write_pr.call_args.args[3]
+        for evidence in ("Shot Recovery", "&#42;Other Term&#42;", "End Shot"):
+            self.assertIn(evidence, body)
+        self.github.discussions_resolved.assert_not_called()
+        self.github.merge_pr.assert_not_called()
+        self.github.needs_human.assert_not_called()
+        self.assertFalse(any(event.args[0] in {"restore", "reset", "clean"} for event in self.git.call_args_list))
+        messages = self.messages()
+        for evidence in ("PR #22 已發布", "術語審查 Issue 寫入失敗", "HTTP 503",
+                         "Shot Recovery", "*Other Term*、End Shot"):
+            self.assertIn(evidence, messages)
+        self.assertNotIn("&#", messages)
+
+    def test_UnitT36_term_review_displays_lua_literals_and_complex_expressions(self):
+        flagged = {**FLAGGED, "key": "start_key#", "source": r'"\u{53}elect \z    \"A|B\"\n*strongly*"',
+                   "terms": ["Shot_Recovery", "a~b"], "translation": r"'選擇 \034A|B\x22\r\n[`#] <&>'"}
+        compound = {**FLAGGED, "unitId": "b", "key": "compound",
+                    "source": 'Localize("Term|Choice") .. " two  spaces"',
+                    "translation": r'Localize("Term|Choice") .. " \"引號\""'}
+        self.loc.translate.return_value = (0, {"unknownTerms": [flagged, compound]}, READY)
+        self.assertEqual(self.run_update(), 0)
+        rows = [
+            '| start&#95;key&#35; | Select "A&#124;B"<br>&#42;strongly&#42; | '
+            'Shot&#95;Recovery、a&#126;b | 選擇 "A&#124;B"<br>&#91;&#96;&#35;&#93; &#60;&amp;&#62; |',
+            '| compound | Localize("Term&#124;Choice") .. " two  spaces" | Shot Recovery | '
+            'Localize("Term&#124;Choice") .. " &#92;"引號&#92;"" |',
+        ]
+        for display in (self.github.write_pr.call_args.args[3], self.github.term_review_issue.call_args.args[3]):
+            for row in rows:
+                self.assertIn(row, display)
+        messages = self.messages()
+        self.assertIn(r'start_key# ｜ Select "A|B"\n*strongly* ｜ Shot_Recovery、a~b ｜ 選擇 "A|B"\n[`#] <&>',
+                      messages)
+        self.assertIn(r'Localize("Term|Choice") .. " \"引號\""', messages)
+        self.assertNotIn("&#", messages)
+        self.assertNotIn("<br>", messages)
 
     # Scenario: 第一次候選完成後 main 改變，第二次從新基準重建。
     # Purpose: 重建一次後才標記人工待辦，舊候選無法發布。
@@ -173,7 +330,7 @@ class ExecutionTests(unittest.TestCase):
                       version="2", downloaded="2026-11-25", acquisition_method="drive-intake")
         self.enterContext(patch("scripts.mod_update_orchestrate.process.updates", return_value=values))
         # When
-        _, body, conflicts = candidate(
+        _, body, conflicts, _ = candidate(
             self.root, self.git, self.github, Mock(), "processed", ISSUE, 7, RECEIPT,
             self.mod, PATHS, archive, {"Example.mod": b"upstream", self.loc.relative: b"new"},
             self.scratch, self.scratch / "cache", self.scratch / "skill", "a" * 40,

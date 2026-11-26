@@ -189,7 +189,7 @@ def _verify_pull_head(git, github, branch, pull, head, old_head):
 
 
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
-            paths, *, route="update", mod_staged=False):
+            paths, *, route="update", mod_staged=False, term_review=None, emit=print):
     marker = pr_marker(body)
     if (not marker or marker[1] != str(nexus_id) or marker[3]
             or marker[2].startswith("sha256-") != (route == "hotfix")):
@@ -228,6 +228,16 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
         github.label(number, "blocked", True)
     elif had_blocked:
         github.label(number, "blocked", False)
+    if term_review:
+        issue_title, issue_body = term_review
+        try:
+            if not (url := pull.get("html_url")):
+                raise GitHubError("PR 回應缺少連結")
+            review_number = github.term_review_issue(nexus_id, marker[2], issue_title, f"{issue_body}\n\n- PR：{url}")
+        except GitHubError as error:
+            raise RuntimeError(f"更新 PR #{number} 已發布，術語審查 Issue 寫入失敗，"
+                               f"已略過本次自動合併（{error}）。") from error
+        emit(f"術語審查 Issue #{review_number} 已同步（PR #{number}）。")
     if should_merge(mode, route, conflicts, draft):
         if github.discussions_resolved(pull):
             github.merge_pr(number, head)

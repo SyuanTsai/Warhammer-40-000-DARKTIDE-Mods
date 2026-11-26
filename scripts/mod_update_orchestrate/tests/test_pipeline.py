@@ -323,7 +323,7 @@ class ArchiveTests(unittest.TestCase):
                 "scripts.mod_update_orchestrate.process.download"), patch(
                 "scripts.mod_update_orchestrate.process.locate_mod"), patch(
                 "scripts.mod_update_orchestrate.process.read_tree"), patch(
-                "scripts.mod_update_orchestrate.process.candidate", return_value=("Title", body, [])) as rebuild:
+                "scripts.mod_update_orchestrate.process.candidate", return_value=("Title", body, [], [])) as rebuild:
             root = Path(tmp)
             args = (root, git, github, Mock(), "processed", 7, 123, 9001, root, root, root)
             # When
@@ -461,6 +461,135 @@ class HumanAndPrTests(unittest.TestCase):
         for part in ("Closes #7", "無三方合併基準", "| NONE | 1 |", "0（未呼叫 API）",
                      "規則 SHA：rules", "詞彙表 SHA：terms", "main.lua ｜ +1 / -0"):
             self.assertIn(part, body)
+
+
+class TermReviewIssueTests(unittest.TestCase):
+    file_id = "12345"
+    title = "[term-review] PlasmaBFG (Nexus 834)"
+    marker = "<!-- term-review:nexus=834 -->"
+    version_marker = "<!-- term-review:nexus=834:file=12345 -->"
+    body = "- MOD：PlasmaBFG\n- Nexus ID：834\n- PR：https://github.com/owner/mods/pull/22\n\nShot Recovery"
+
+    def setUp(self):
+        self.transport = Mock()
+        with patch.dict(os.environ, {"GITHUB_TOKEN": "fake", "GITHUB_REPOSITORY": "owner/mods"}):
+            self.github = GitHub(self.transport)
+
+    def writes(self):
+        return [(method, url.split("/repos/owner/mods/")[-1], json.loads(data))
+                for method, url, _, data in (event.args for event in self.transport.call_args_list)
+                if method != "GET"]
+
+    def test_UnitT10_creates_missing_label_and_issue(self):
+        self.transport.side_effect = [(404, {}, b""), (201, {}, b"{}"), (200, {}, b"[]"),
+                                      (201, {}, b'{"number": 31}')]
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+        label, issue = self.writes()
+        self.assertEqual(label[:2], ("POST", "labels"))
+        self.assertEqual(label[2]["name"], "term-review")
+        self.assertEqual(issue, ("POST", "issues", {"title": self.title,
+                                                    "body": f"{self.marker}\n{self.version_marker}\n\n{self.body}",
+                                                    "labels": ["term-review"]}))
+
+    def test_UnitT20_comments_on_open_issue_by_marker_or_title_without_editing_body(self):
+        for title, body, labels in (
+            ("重新命名", "前言\n" + self.marker, [{"name": "term-review"}]),
+            (self.title, "舊內文", []),
+        ):
+            with self.subTest(title=title):
+                existing = [{"number": 31, "title": title, "body": body, "labels": labels},
+                            {"number": 32, "title": self.title, "pull_request": {}}]
+                self.transport.reset_mock()
+                self.transport.side_effect = [(200, {}, b"{}"), (200, {}, json.dumps(existing).encode()),
+                                              (200, {}, b"[]"), (201, {}, b"{}"), (200, {}, b"[]")]
+                self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+                expected = [("POST", "issues/31/comments",
+                             {"body": f"{self.version_marker}\n\n- 版本識別：12345\n{self.body}"})]
+                if not labels:
+                    expected.append(("POST", "issues/31/labels", {"labels": ["term-review"]}))
+                self.assertEqual(self.writes(), expected)
+
+    def test_UnitT30_retries_server_and_network_errors_then_reuses_created_issue(self):
+        label = (200, {}, b"{}")
+        no_issues = (200, {}, b"[]")
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}],
+                    "body": f"{self.marker}\n{self.version_marker}\n\n{self.body}"}
+        self.transport.side_effect = [
+            label, no_issues, (503, {}, b""),
+            label, no_issues, TimeoutError(),
+            label, (200, {}, json.dumps([existing]).encode()),
+        ]
+        sleeper = Mock()
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body, sleeper=sleeper), 31)
+        self.assertEqual(sleeper.call_args_list, [call(1), call(2)])
+        self.assertEqual([write[:2] for write in self.writes()], [("POST", "issues")] * 2)
+
+    def test_UnitT40_permanent_error_is_not_retried(self):
+        self.transport.side_effect = [(200, {}, b"{}"), (200, {}, b"[]"), (403, {}, b"")]
+        sleeper = Mock()
+        with self.assertRaisesRegex(GitHubError, "HTTP 403"):
+            self.github.term_review_issue(834, self.file_id, self.title, self.body, sleeper=sleeper)
+        sleeper.assert_not_called()
+        self.assertEqual([write[:2] for write in self.writes()], [("POST", "issues")])
+
+    def test_UnitT50_comments_on_existing_issue_from_numeric_repository_page(self):
+        next_url = "https://api.github.com/repositories/42/issues?state=open&per_page=100&page=2"
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}],
+                    "body": f"{self.marker}\n<!-- term-review:nexus=834:file=12344 -->\n\n{self.body}"}
+        self.transport.side_effect = [
+            (200, {}, b"{}"), (200, {"Link": f'<{next_url}>; rel="next"'}, b"[]"),
+            (200, {}, b'{"id": 42}'), (200, {}, json.dumps([existing]).encode()),
+            (200, {}, b"[]"), (201, {}, b"{}"),
+        ]
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+        self.assertEqual(self.transport.call_args_list[3].args[:2], ("GET", next_url))
+        self.assertEqual(self.writes(), [("POST", "issues/31/comments",
+                                          {"body": f"{self.version_marker}\n\n- 版本識別：12345\n{self.body}"})])
+
+    def test_UnitT60_pagination_rejects_other_hosts_repositories_and_endpoints(self):
+        for url, verify_repo in (
+            ("https://unknown.invalid/repositories/42/issues?page=2", False),
+            ("https://api.github.com/repositories/43/issues?page=2", True),
+            ("https://api.github.com/repositories/42/pulls?page=2", False),
+        ):
+            with self.subTest(url=url):
+                self.transport.reset_mock()
+                self.transport.side_effect = [(200, {"Link": f'<{url}>; rel="next"'}, b"[]"),
+                                              (200, {}, b'{"id": 42}')]
+                with self.assertRaises(GitHubError):
+                    self.github.pages("issues?state=open", "列出開啟的術語審查 Issue")
+                self.assertEqual(self.transport.call_count, 2 if verify_repo else 1)
+                self.assertTrue(all(event.args[1] != url for event in self.transport.call_args_list))
+
+    def test_UnitT70_skips_comment_when_version_marker_is_on_later_page(self):
+        next_url = "https://api.github.com/repositories/42/issues/31/comments?per_page=100&page=2"
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}], "body": self.marker}
+        old_comment = {"body": "<!-- term-review:nexus=834:file=12344 -->"}
+        same_version = {"body": self.version_marker + "\n\n已記錄的詞表"}
+        self.transport.side_effect = [
+            (200, {}, b"{}"), (200, {}, json.dumps([existing]).encode()),
+            (200, {"Link": f'<{next_url}>; rel="next"'}, json.dumps([old_comment]).encode()),
+            (200, {}, b'{"id": 42}'), (200, {}, json.dumps([same_version]).encode()),
+        ]
+
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+        self.assertEqual(self.transport.call_args.args[:2], ("GET", next_url))
+        self.assertEqual(self.writes(), [])
+
+    def test_UnitT80_retry_rechecks_comments_after_post_timeout(self):
+        label = (200, {}, b"{}")
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}], "body": self.marker}
+        issues = (200, {}, json.dumps([existing]).encode())
+        posted = {"body": self.version_marker + "\n\n" + self.body}
+        self.transport.side_effect = [
+            label, issues, (200, {}, b"[]"), TimeoutError(),
+            label, issues, (200, {}, json.dumps([posted]).encode()),
+        ]
+        sleeper = Mock()
+
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body, sleeper=sleeper), 31)
+        sleeper.assert_called_once_with(1)
+        self.assertEqual([write[:2] for write in self.writes()], [("POST", "issues/31/comments")])
 
 
 class PublishHeadTests(unittest.TestCase):
