@@ -839,10 +839,10 @@
 
 ### [Simple Assets](https://www.nexusmods.com/warhammer40kdarktide/mods/1008)
     Spidey Sense 的依賴MOD
-- MOD 網站最後更新日期：Last updated 26 August 2026, 4:39AM
-- MOD 版本：2.0.0
-- MOD 檔案名稱：SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip
-- 手動維護最後下載日期：2026-10-02
+- MOD 網站最後更新日期：Last updated 26 October 2026, 05:18AM
+- MOD 版本：2.0.1
+- MOD 檔案名稱：SimpleAssets 1008 2.0.1 2026-10-25T21-18Z iYOupY3CK
+- 手動維護最後下載日期：2026-11-25
 
 ### [Field_Awareness](https://www.nexusmods.com/warhammer40kdarktide/mods/1359)
     顯示特定怪物的輪廓與攻擊區域(可視範圍內)
