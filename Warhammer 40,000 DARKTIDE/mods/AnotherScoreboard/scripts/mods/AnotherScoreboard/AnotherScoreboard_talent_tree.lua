@@ -6,12 +6,16 @@ local Parser = mod:original_require("scripts/ui/views/talent_builder_view/utilit
 local Settings = mod:original_require("scripts/ui/views/talent_builder_view/talent_builder_view_settings")
 local Definitions = mod:original_require("scripts/ui/views/talent_builder_view/talent_builder_view_definitions")
 local Colors = mod:original_require("scripts/utilities/ui/colors")
+local LoadoutRender = mod:io_dofile("AnotherScoreboard/scripts/mods/AnotherScoreboard/AnotherScoreboard_loadout_render")
 
 local Tree = {}
 Tree.__index = Tree
 -- Must match the tree frame in AnotherScoreboard_loadout_render (panel content area).
 local X, Y, W, H = -86, 168, 1072, 639
 local serial = 0
+-- Style fields scaled by the zoom, and the connector offset of a node without one (read only).
+local SCALED_STYLE_FIELDS = { "size", "size_addition", "offset", "pivot" }
+local NO_OFFSET = { 0, 0 }
 
 -- Snapshot IDs are evidence of selection only when the entire layout contract matches.
 function Tree.resolve(snapshot)
@@ -227,7 +231,7 @@ function Tree:_position()
         w.content.size[1], w.content.size[2] = entry.config.size[1] * zoom, entry.config.size[2] * zoom
         for key, original in pairs(entry.styles) do
             local style = w.style[key]
-            for _, field in ipairs({ "size", "size_addition", "offset", "pivot" }) do
+            for _, field in ipairs(SCALED_STYLE_FIELDS) do
                 if original[field] then
                     style[field] = style[field] or {}
                     for axis = 1, 2 do
@@ -240,11 +244,7 @@ function Tree:_position()
 end
 
 function Tree:update(input)
-    if not input or input:is_null_service() or self.host._input_disabled then
-        self.drag_x, self.hovered, self.inside, self.over_tooltip = nil, nil, false, false
-        return
-    end
-    local cursor = input:get("cursor")
+    local cursor = input and not input:is_null_service() and not self.host._input_disabled and input:get("cursor")
     if not cursor then
         self.drag_x, self.hovered, self.inside, self.over_tooltip = nil, nil, false, false
         return
@@ -310,18 +310,7 @@ function Tree:_tooltip(entry)
     local style = w.style.description
     style.font_size = 18
     style.offset[2], style.size[2] = y, math.max(60, H - 100 - y)
-    local remaining = w.content.description:gsub("{#[^}]*}", "")
-    self.pages, self.page = {}, 1
-    while remaining ~= "" do
-        local low, high, best = 1, Utf8.string_length(remaining), 1
-        while low <= high do
-            local middle = math.floor((low + high) / 2)
-            local _, height = self.host:_text_size(Utf8.sub_string(remaining, 1, middle), style, { 380, 100000 }, true)
-            if height <= style.size[2] - 6 then best, low = middle, middle + 1 else high = middle - 1 end
-        end
-        self.pages[#self.pages + 1] = Utf8.sub_string(remaining, 1, best)
-        remaining = Utf8.sub_string(remaining, best + 1)
-    end
+    self.pages, self.page = LoadoutRender.paginate_text(self.host, w.content.description, style, 380, style.size[2] - 6), 1
     if #self.pages == 0 then self.pages[1] = "" end
     w.content.description = self.pages[1]
     w.content.input_text = #self.pages > 1 and string.format("1 / %d  %s", #self.pages, mod:localize("loadout_hover_scroll")) or ""
@@ -341,7 +330,7 @@ function Tree:draw(dt, input, layer)
     local line, zoom = self.connection, self.zoom
     for _, edge in ipairs(self.edges) do
         local a, b = edge[1], edge[2]
-        local ao, bo = a.node.connector_offset or { 0, 0 }, b.node.connector_offset or { 0, 0 }
+        local ao, bo = a.node.connector_offset or NO_OFFSET, b.node.connector_offset or NO_OFFSET
         local ax = a.widget.offset[1] + (a.config.size[1] / 2 + ao[1]) * zoom
         local ay = a.widget.offset[2] + (a.config.size[2] / 2 + ao[2]) * zoom
         local bx = b.widget.offset[1] + (b.config.size[1] / 2 + bo[1]) * zoom

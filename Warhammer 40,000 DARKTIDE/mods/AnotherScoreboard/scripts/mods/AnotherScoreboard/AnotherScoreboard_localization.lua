@@ -287,6 +287,11 @@ local localization = {
 	    ["zh-cn"] = "高对比黑曜石",
 	    ["zh-tw"] = "高對比黑曜石",
 	},
+	scoreboard_theme_simple = {
+	    en = "Simple (Original)",
+	    ["zh-cn"] = "简约（原版）",
+	    ["zh-tw"] = "簡約（原版）",
+	},
 
 	show_at_end = {
 	    en = "Show at Mission End",
@@ -357,6 +362,79 @@ local localization = {
 	    en = "Use fixed shading for headings and alternating shading for detail rows in full scoreboards.",
 	    ["zh-cn"] = "完整记分板的标题使用固定底色，详情行使用交替底色。",
 	    ["zh-tw"] = "完整記分板的標題使用固定底色，詳細資料列則交替使用不同底色。",
+	},
+	highlight_best = {
+	    en = "Highlight Best Values",
+	    ["zh-cn"] = "高亮最佳数值",
+	    ["zh-tw"] = "標示最佳數值",
+	},
+	highlight_best_tooltip = {
+	    en = "Show the best value in each row in green, with a marker, in full scoreboards. When off, the value is not coloured.",
+	    ["zh-cn"] = "在完整记分板中以绿色并带标记显示每行的最佳数值。关闭后不加颜色。",
+	    ["zh-tw"] = "在完整記分板中，以綠色並附上標記顯示每列的最佳數值。關閉時，數值不會上色。",
+	},
+	highlight_worst = {
+	    en = "Highlight Worst Values",
+	    ["zh-cn"] = "高亮最差数值",
+	    ["zh-tw"] = "標示最差數值",
+	},
+	highlight_worst_tooltip = {
+	    en = "Show the worst value in each row in red in full scoreboards. When off, the value is not coloured.",
+	    ["zh-cn"] = "在完整记分板中以红色显示每行的最差数值。关闭后不加颜色。",
+	    ["zh-tw"] = "在完整記分板中，以紅色顯示每列的最差數值。關閉時，數值不會上色。",
+	},
+	exact_damage_numbers = {
+	    en = "Exact Damage Numbers",
+	    ["zh-tw"] = "精確傷害數值",
+	},
+	show_local_clock = {
+	    en = "Show Local Time",
+	    ["zh-cn"] = "显示本地时间",
+	    ["zh-tw"] = "顯示本地時間",
+	},
+	show_local_clock_tooltip = {
+	    en = "Show your computer's current time in the top-left corner of the Tab and end-of-mission scoreboards. Saved scoreboards in the history do not show it.",
+	    ["zh-cn"] = "在 Tab 和任务结束记分板的左上角显示电脑的当前时间。历史记录中保存的记分板不显示。",
+	    ["zh-tw"] = "在 Tab 記分板與任務結束記分板的左上角顯示你電腦的目前時間。歷史紀錄中已儲存的記分板不會顯示。",
+	},
+	local_clock_label = {
+	    en = "Current time",
+	    ["zh-cn"] = "当前时间",
+	    ["zh-tw"] = "目前時間",
+	},
+	local_clock_format = {
+	    en = "Time Format",
+	    ["zh-cn"] = "时间格式",
+	    ["zh-tw"] = "時間格式",
+	},
+	local_clock_format_tooltip = {
+	    en = "How the local time is shown: 24-hour (14:37) or 12-hour with AM/PM (02:37 PM).",
+	    ["zh-cn"] = "本地时间的显示方式：24 小时制（14:37）或带 AM/PM 的 12 小时制（02:37 PM）。",
+	    ["zh-tw"] = "本地時間的顯示方式：24 小時制（14:37）或附 AM/PM 的 12 小時制（02:37 PM）。",
+	},
+	local_clock_seconds = {
+	    en = "Show Seconds",
+	    ["zh-cn"] = "显示秒数",
+	    ["zh-tw"] = "顯示秒數",
+	},
+	local_clock_seconds_tooltip = {
+	    en = "Add seconds to the local time, for example 14:37:05.",
+	    ["zh-cn"] = "在本地时间中显示秒数，例如 14:37:05。",
+	    ["zh-tw"] = "在本地時間加上秒數，例如 14:37:05。",
+	},
+	local_clock_format_24h = {
+	    en = "24-hour (14:37)",
+	    ["zh-cn"] = "24 小时制（14:37）",
+	    ["zh-tw"] = "24 小時制（14:37）",
+	},
+	local_clock_format_12h = {
+	    en = "12-hour (02:37 PM)",
+	    ["zh-cn"] = "12 小时制（02:37 PM）",
+	    ["zh-tw"] = "12 小時制（02:37 PM）",
+	},
+	exact_damage_numbers_tooltip = {
+	    en = "Show damage and other large values as whole numbers grouped by spaces, for example 123 456 instead of 123.5K, in the scoreboards, Live Stats and the boss damage popup.",
+	    ["zh-tw"] = "在記分板、即時統計與首領傷害彈出視窗中，將傷害與其他大數值以空格分組的完整數字顯示，例如 123 456，而非 123.5K。",
 	},
 	scoreboard_opacity = {
 	    en = "Opacity",
@@ -481,14 +559,17 @@ local localization = {
 	live_scoreboard_stat_count_1 = {
 	    en = "1",
 	    ["zh-cn"] = "1",
+	    ["zh-tw"] = "1",
 	},
 	live_scoreboard_stat_count_2 = {
 	    en = "2",
 	    ["zh-cn"] = "2",
+	    ["zh-tw"] = "2",
 	},
 	live_scoreboard_stat_count_3 = {
 	    en = "3",
 	    ["zh-cn"] = "3",
+	    ["zh-tw"] = "3",
 	},
 	live_scoreboard_stat_1 = {
 	    en = "Live Stat 1 (Sort Players By)",
@@ -709,6 +790,18 @@ local localization = {
 	    en = "Enemies Aggro'd",
 	    ["zh-cn"] = "吸引仇恨的敌人",
 	    ["zh-tw"] = "吸引敵人仇恨",
+	},
+	live_stat_hits_taken = {
+	    en = "Hits That Cost HP",
+	    ["zh-tw"] = "損失生命值的受擊次數",
+	},
+	live_stat_highest_hit = {
+	    en = "Highest Single Hit Damage",
+	    ["zh-tw"] = "單次最高命中傷害",
+	},
+	live_stat_teammates_hurt = {
+	    en = "Teammates Hurt",
+	    ["zh-tw"] = "誤傷隊友",
 	},
 	live_scoreboard_scale = {
 	    en = "Scale",
@@ -960,6 +1053,18 @@ local localization = {
 	    ["zh-cn"] = "吸引仇恨",
 	    ["zh-tw"] = "吸引仇恨",
 	},
+	live_header_hits_taken = {
+	    en = "HP Hits",
+	    ["zh-tw"] = "掉血次數",
+	},
+	live_header_highest_hit = {
+	    en = "Top Hit",
+	    ["zh-tw"] = "最高單擊",
+	},
+	live_header_teammates_hurt = {
+	    en = "Team Hurt",
+	    ["zh-tw"] = "誤傷隊友",
+	},
 	show_boss_popup = {
 	    en = "Show Boss Damage Popup",
 	    ["zh-cn"] = "显示首领伤害弹窗",
@@ -1080,6 +1185,10 @@ local localization = {
 	    ["zh-cn"] = "生存统计",
 	    ["zh-tw"] = "生存統計",
 	},
+	scoreboard_stats_fun_facts_header = {
+	    en = "Fun Facts (Beta)",
+	    ["zh-tw"] = "趣味小統計（測試版）",
+	},
 	scoreboard_stats_group_tooltip = {
 	    en = "Visibility settings only. All stats continue to be tracked and saved.",
 	    ["zh-cn"] = "这里只控制显示。所有统计仍会继续追踪和保存。",
@@ -1138,6 +1247,10 @@ local localization = {
 	    en = "PERFORMANCE",
 	    ["zh-cn"] = "表现",
 	    ["zh-tw"] = "表現",
+	},
+	cat_fun_facts = {
+	    en = "Fun Facts (Beta)",
+	    ["zh-tw"] = "趣味小統計（測試版）",
 	},
 
 	row_total_kills = {
@@ -1381,6 +1494,18 @@ local localization = {
 	    ["zh-cn"] = "协同覆盖",
 	    ["zh-tw"] = "協同",
 	},
+	row_hits_taken = {
+	    en = "Hits that cost HP",
+	    ["zh-tw"] = "損失生命值的受擊次數",
+	},
+	row_highest_hit = {
+	    en = "Highest single hit damage",
+	    ["zh-tw"] = "單次最高命中傷害",
+	},
+	row_teammates_hurt = {
+	    en = "Teammates hurt",
+	    ["zh-tw"] = "誤傷隊友",
+	},
 
 	row_survivability = {
 	    en = "Survivability",
@@ -1553,6 +1678,21 @@ local localization = {
 	    ["zh-cn"] = "取消",
 	    ["zh-tw"] = "取消",
 	},
+	history_clear_popup_title = {
+	    en = "Clear Recent History",
+	    ["zh-cn"] = "清除最近记录",
+	    ["zh-tw"] = "清除最近紀錄",
+	},
+	history_clear_popup_description = {
+	    en = "Delete all %d Recent missions? Saved games are kept. This cannot be undone.",
+	    ["zh-cn"] = "删除全部 %d 条最近任务记录？已保存游戏会保留。此操作无法撤销。",
+	    ["zh-tw"] = "要刪除全部 %d 筆最近任務嗎？已儲存的對局會保留。此操作無法復原。",
+	},
+	history_clear = {
+	    en = "CLEAR",
+	    ["zh-cn"] = "清除",
+	    ["zh-tw"] = "清除",
+	},
 	history_no_saved_entries = {
 	    en = "No saved games yet.",
 	    ["zh-cn"] = "还没有已保存的游戏。",
@@ -1567,6 +1707,16 @@ local localization = {
 	    en = "No saved scoreboards yet.",
 	    ["zh-cn"] = "还没有保存的记分板。",
 	    ["zh-tw"] = "目前還沒有記分板紀錄。",
+	},
+	history_no_class_entries = {
+	    en = "No missions played as this class.",
+	    ["zh-cn"] = "没有以该职业进行的任务。",
+	    ["zh-tw"] = "尚無以此職業進行的任務。",
+	},
+	history_filter_all = {
+	    en = "All",
+	    ["zh-cn"] = "全部",
+	    ["zh-tw"] = "全部",
 	},
 	history_game_type_expedition = {
 	    en = "Expedition",
@@ -1602,6 +1752,11 @@ local localization = {
 	    en = "ESC - Exit  |  Mouse wheel - Scroll  |  SPACE - Clear Recent",
 	    ["zh-cn"] = "ESC - 退出  |  鼠标滚轮 - 滚动  |  SPACE - 清除最近记录",
 	    ["zh-tw"] = "ESC - 離開  |  滑鼠滾輪 - 捲動  |  SPACE - 清除近期紀錄",
+	},
+	history_filtered_hint = {
+	    en = "ESC - Exit  |  Mouse wheel - Scroll  |  Select All to clear Recent",
+	    ["zh-cn"] = "ESC - 退出  |  鼠标滚轮 - 滚动  |  选择“全部”后可清除最近记录",
+	    ["zh-tw"] = "ESC - 離開  |  滑鼠滾輪 - 捲動  |  選擇「全部」可清除最近紀錄",
 	},
 	history_saved_hint = {
 	    en = "ESC - Exit  |  Mouse wheel - Scroll  |  Manage saved games individually",
@@ -1770,7 +1925,6 @@ for _, category in ipairs({ "specials", "elites" }) do
 		localization[enemy.label] = {
 			en = enemy.name.en,
 			["zh-cn"] = enemy.name["zh-cn"],
-			["zh-tw"] = enemy.name["zh-tw"],
 		}
 	end
 end

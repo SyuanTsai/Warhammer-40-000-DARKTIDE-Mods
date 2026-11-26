@@ -34,9 +34,13 @@ local SOURCELESS_DEBUFFS = {
 local ATTRIBUTION_WINDOW = 0.5
 
 local DOT_TEMPLATE_BY_PROFILE = {}
+local TRACKED_ARCHETYPES = {}
 for template_name, entry in pairs(SOURCELESS_DEBUFFS) do
     if entry.dot_profile then
         DOT_TEMPLATE_BY_PROFILE[entry.dot_profile] = template_name
+    end
+    for archetype_name in pairs(entry.archetypes) do
+        TRACKED_ARCHETYPES[archetype_name] = true
     end
 end
 
@@ -106,6 +110,11 @@ function Sourceless.reset()
     _clear(_recent_attacks)
     _clear(_pending)
     _clear(_dot_owners)
+end
+
+-- Only attacks by a listed archetype can attribute a debuff; others need not be recorded.
+function Sourceless.tracks_archetype(archetype_name)
+    return archetype_name ~= nil and TRACKED_ARCHETYPES[archetype_name] == true
 end
 
 function Sourceless.is_sourceless(template_name)

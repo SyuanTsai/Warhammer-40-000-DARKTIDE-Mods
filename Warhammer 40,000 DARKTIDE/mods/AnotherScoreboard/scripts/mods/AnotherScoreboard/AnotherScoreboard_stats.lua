@@ -39,6 +39,7 @@ local RANGED_ELITES = {
     cultist_gunner = true, renegade_gunner = true,
     cultist_shocktrooper = true, renegade_shocktrooper = true,
     chaos_ogryn_gunner = true, renegade_plasma_gunner = true,
+    renegade_radio_operator = true,
 }
 
 local BOSSES = {
@@ -105,6 +106,26 @@ local OTHER_DAMAGE_BY_ATTACK_TYPE = {
     buff = "other_electrocution_damage",
 }
 
+-- The game reports barrel and Poxburster explosions without an attack type: hazard_prop_extension.lua
+-- reads explosion_settings.explosion, which hazard_prop_settings.lua does not define, and
+-- bt_chaos_poxwalker_explode_action.lua never sets one. Without this they would look like damage ticks.
+local UNTYPED_EXPLOSION_PROFILES = {
+    barrel_explosion = true,
+    barrel_explosion_close = true,
+    fire_barrel_explosion = true,
+    fire_barrel_explosion_close = true,
+    poxwalker_explosion = true,
+    poxwalker_explosion_close = true,
+}
+
+local function _reported_attack_type(damage_profile, attack_type)
+    if attack_type == nil and damage_profile and UNTYPED_EXPLOSION_PROFILES[damage_profile.name] then
+        return "explosion"
+    end
+
+    return attack_type
+end
+
 local OTHER_DETAIL_STATS = {
     other_dot_damage = true,
     other_explosion_damage = true,
@@ -126,6 +147,12 @@ local NON_HIT_ATTACK_RESULTS = {
     shield_blocked = true,
 }
 
+local TOUGHNESS_ATTACK_RESULTS = {
+    toughness_absorbed = true,
+    toughness_absorbed_melee = true,
+    toughness_broken = true,
+}
+
 local function is_companion_attack(damage_profile, attack_type)
     return attack_type == "companion_dog"
         or damage_profile and COMPANION_DAMAGE_PROFILES[damage_profile.name] == true
@@ -136,6 +163,10 @@ local Stats = {}
 -- Attack reports and the death manager can both report the same kill.
 local _killed_units = {}
 local _companion_killed_units = {}
+-- Breeds with a scripted death sequence (Prophet of Decay) report their killing blow as
+-- "damaged" (attack.lua:539-541) and never reach set_dead (bt_wizard_die_action.lua):
+-- enemy unit to the last account that damaged it, until its health reaches zero.
+local _scripted_death_hitters = setmetatable({}, { __mode = "k" })
 
 local _boss_damage = {}
 local _boss_max_health = {}
@@ -370,6 +401,10 @@ local STAT_DEFS = {
     { id = "enemies_aggroed",      label = "row_enemies_aggroed",      cat = "survival",     dir = "asc",  accum = "add", parent = "survival_utility", style = "sub" },
     { id = "coherency_uptime",     label = "row_coherency_uptime",     cat = "survival",     dir = "asc",  accum = "set", parent = "survival_utility", style = "sub" },
 
+    { id = "hits_taken",           label = "row_hits_taken",           cat = "fun_facts",    dir = "desc", accum = "add", style = "sub" },
+    { id = "highest_hit",          label = "row_highest_hit",          cat = "fun_facts",    dir = "asc",  accum = "max", style = "sub" },
+    { id = "teammates_hurt",       label = "row_teammates_hurt",       cat = "fun_facts",    dir = "desc", accum = "add", style = "sub" },
+
 }
 
 for _, category in ipairs({ "lesser", "specials", "elites" }) do
@@ -429,15 +464,18 @@ local _kill_damage_enabled = false
 local CATEGORIES = {
     { key = "combat",       label = "cat_combat"       },
     { key = "survival",     label = "cat_survival"     },
+    { key = "fun_facts",    label = "cat_fun_facts"    },
 }
 
 local ACCUMULATORS = {
     add  = function(entry, raw) entry.score = entry.score + raw; entry.value = entry.value + raw end,
     diff = function(entry, raw) entry.score = entry.score + math_max(raw - entry.value, 0); entry.value = raw end,
     set  = function(entry, raw) entry.score = raw; entry.value = raw end,
+    max  = function(entry, raw) entry.score = math_max(entry.score, raw); entry.value = entry.score end,
 }
 
-local function _validate(data, accounts)
+-- Marks the best and worst scores of the accounts; lower_better ranks the lowest score best.
+local function _validate(data, accounts, lower_better)
     local scores, all_same = {}, true
     local first_score = nil
     for aid in pairs(accounts) do
@@ -457,44 +495,19 @@ local function _validate(data, accounts)
         if s > high then high = s end
         if s < low then low = s end
     end
+    local best, worst = high, low
+    if lower_better then best, worst = low, high end
     for aid, s in pairs(scores) do
         if data[aid] then
-            data[aid].best  = (s == high)
-            data[aid].worst = (s == low)
+            data[aid].best  = (s == best)
+            data[aid].worst = (s == worst)
         end
     end
 end
 
 local VALIDATORS = {
-    asc  = function(data, accounts) _validate(data, accounts) end,
-    desc = function(data, accounts)
-        -- invert: lowest score is "best", highest is "worst"
-        local scores, all_same = {}, true
-        local first_score = nil
-        for aid in pairs(accounts) do
-            local s = data[aid] and data[aid].score or 0
-            scores[aid] = s
-            if first_score == nil then first_score = s
-            elseif s ~= first_score then all_same = false end
-        end
-        if all_same then
-            for aid in pairs(accounts) do
-                if data[aid] then data[aid].best = false; data[aid].worst = false end
-            end
-            return
-        end
-        local high, low = first_score, first_score
-        for _, s in pairs(scores) do
-            if s > high then high = s end
-            if s < low then low = s end
-        end
-        for aid, s in pairs(scores) do
-            if data[aid] then
-                data[aid].best  = (s == low)
-                data[aid].worst = (s == high)
-            end
-        end
-    end,
+    asc  = function(data, accounts) _validate(data, accounts, false) end,
+    desc = function(data, accounts) _validate(data, accounts, true) end,
 }
 
 local _data = {}
@@ -601,7 +614,6 @@ function Stats.init()
         _data[def.id] = {}
         def.children = nil
     end
-    _data._total_damage = {}
 
     for _, def in ipairs(STAT_DEFS) do
         if def.parent then
@@ -659,10 +671,6 @@ function Stats.ensure_entries(account_ids)
             if not d[aid] then d[aid] = { value = 0, score = 0 } end
         end
     end
-    local td = _data._total_damage
-    for aid in pairs(account_ids) do
-        if not td[aid] then td[aid] = { value = 0, score = 0 } end
-    end
 end
 
 function Stats.validate(account_ids)
@@ -679,9 +687,9 @@ function Stats.clear()
     for _, def in ipairs(STAT_DEFS) do
         table_clear(_data[def.id])
     end
-    table_clear(_data._total_damage)
     table_clear(_killed_units)
     table_clear(_companion_killed_units)
+    table_clear(_scripted_death_hitters)
     Stats.clear_boss_data()
 end
 
@@ -692,12 +700,6 @@ function Stats.has_active_run_data()
             if entry and ((entry.value or 0) ~= 0 or (entry.score or 0) ~= 0) then
                 return true
             end
-        end
-    end
-
-    for _, entry in pairs(_data._total_damage) do
-        if entry and ((entry.value or 0) ~= 0 or (entry.score or 0) ~= 0) then
-            return true
         end
     end
 
@@ -714,14 +716,42 @@ function Stats.export_active_run()
         end
     end
 
-    stats._total_damage = _copy_stat_table(_data._total_damage) or {}
-
     return {
         version = 1,
         stats = stats,
         external = External.export(),
         boss_damage_by_type = _copy_boss_damage_by_type(_boss_damage_by_type) or {},
     }
+end
+
+-- Copies a snapshot's stat tables, or nil when one is invalid. Runs saved before Other damage
+-- existed derive it from the damage split.
+local function _copy_snapshot_stats(saved)
+    local copied = {}
+
+    for _, def in ipairs(STAT_DEFS) do
+        local source = saved[def.id]
+        if source ~= nil then
+            source = _copy_stat_table(source)
+            if not source then return nil end
+        else
+            source = {}
+        end
+        copied[def.id] = source
+    end
+
+    if saved.other_damage == nil then
+        for aid, damage_entry in pairs(copied.damage_dealt) do
+            local melee_entry = copied.melee_damage[aid]
+            local ranged_entry = copied.ranged_damage[aid]
+            local other = math_max(damage_entry.score
+                - (melee_entry and melee_entry.score or 0)
+                - (ranged_entry and ranged_entry.score or 0), 0)
+            copied.other_damage[aid] = { value = other, score = other }
+        end
+    end
+
+    return copied
 end
 
 function Stats.import_active_run(snapshot)
@@ -731,41 +761,9 @@ function Stats.import_active_run(snapshot)
 
     if not External.validate_snapshot(snapshot.external) then return false end
 
-    local imported = {}
-
-    for _, def in ipairs(STAT_DEFS) do
-        local source = snapshot.stats[def.id]
-        if source ~= nil then
-            local copied = _copy_stat_table(source)
-            if not copied then
-                return false
-            end
-
-            imported[def.id] = copied
-        else
-            imported[def.id] = {}
-        end
-    end
-
-    if snapshot.stats.other_damage == nil then
-        for aid, damage_entry in pairs(imported.damage_dealt) do
-            local melee_entry = imported.melee_damage[aid]
-            local ranged_entry = imported.ranged_damage[aid]
-            local other = math_max(damage_entry.score
-                - (melee_entry and melee_entry.score or 0)
-                - (ranged_entry and ranged_entry.score or 0), 0)
-            imported.other_damage[aid] = { value = other, score = other }
-        end
-    end
-
-    local total_damage = snapshot.stats._total_damage
-    if total_damage ~= nil then
-        total_damage = _copy_stat_table(total_damage)
-        if not total_damage then
-            return false
-        end
-    else
-        total_damage = {}
+    local imported = _copy_snapshot_stats(snapshot.stats)
+    if not imported then
+        return false
     end
 
     local boss_damage_by_type = _copy_boss_damage_by_type(snapshot.boss_damage_by_type)
@@ -781,11 +779,6 @@ function Stats.import_active_run(snapshot)
             target[aid] = entry
         end
     end
-
-    for aid, entry in pairs(total_damage) do
-        _data._total_damage[aid] = entry
-    end
-
 
     _boss_damage_by_type = boss_damage_by_type
     External.restore(snapshot.external)
@@ -805,28 +798,8 @@ function Stats.merged_active_run(snapshot)
     local merged_external = External.merge_snapshot(snapshot.external)
     if not merged_external then return false end
 
-    local saved_stats = {}
-    for _, def in ipairs(STAT_DEFS) do
-        local source = snapshot.stats[def.id]
-        if source ~= nil then
-            source = _copy_stat_table(source)
-            if not source then return false end
-        else
-            source = {}
-        end
-        saved_stats[def.id] = source
-    end
-
-    if snapshot.stats.other_damage == nil then
-        for aid, damage_entry in pairs(saved_stats.damage_dealt) do
-            local melee_entry = saved_stats.melee_damage[aid]
-            local ranged_entry = saved_stats.ranged_damage[aid]
-            local other = math_max(damage_entry.score
-                - (melee_entry and melee_entry.score or 0)
-                - (ranged_entry and ranged_entry.score or 0), 0)
-            saved_stats.other_damage[aid] = { value = other, score = other }
-        end
-    end
+    local saved_stats = _copy_snapshot_stats(snapshot.stats)
+    if not saved_stats then return false end
 
     local merged = Stats.export_active_run()
     merged.external = merged_external
@@ -846,23 +819,8 @@ function Stats.merged_active_run(snapshot)
                 local score = _safe_sum(saved.score, current.score)
                 if not score then return false end
                 target[aid] = { value = current.value, score = score }
-            end
-        end
-    end
-
-    local saved_total = snapshot.stats._total_damage
-    if saved_total ~= nil then
-        saved_total = _copy_stat_table(saved_total)
-        if not saved_total then return false end
-        for aid, saved in pairs(saved_total) do
-            local current = merged.stats._total_damage[aid]
-            if not current then
-                merged.stats._total_damage[aid] = saved
-            else
-                local value = _safe_sum(saved.value, current.value)
-                local score = _safe_sum(saved.score, current.score)
-                if not value or not score then return false end
-                merged.stats._total_damage[aid] = { value = value, score = score }
+            elseif def.accum == "max" and saved.score > current.score then
+                target[aid] = saved
             end
         end
     end
@@ -1013,6 +971,14 @@ function Stats.hit_percentage_values(stat_id)
     return values
 end
 
+-- Row fields a saved scoreboard keeps.
+local SNAPSHOT_ROW_FIELDS = {
+    "id", "label", "label_text", "engine_localization_key", "boss_detail", "boss_type", "count", "parent", "depth",
+    "style", "show_total", "ranked", "no_values", "suffix", "decimals", "external", "external_group", "placement",
+    "group", "value_type", "accumulation", "ranking", "collapsible", "collapsed_by_default", "full_width",
+    "height_scale", "font_scale",
+}
+
 function Stats.snapshot_sections(account_ids, sections)
     local result = {}
     sections = sections or Stats.sections()
@@ -1021,36 +987,11 @@ function Stats.snapshot_sections(account_ids, sections)
         local snapshot_rows = {}
 
         for _, row in ipairs(section.rows) do
-            local snapshot_row = {
-                id = row.id,
-                label = row.label,
-                label_text = row.label_text,
-                engine_localization_key = row.engine_localization_key,
-                boss_detail = row.boss_detail,
-                boss_type = row.boss_type,
-                count = row.count,
-                parent = row.parent,
-                depth = row.depth,
-                style = row.style,
-                show_total = row.show_total,
-                ranked = row.ranked,
-                no_values = row.no_values,
-                suffix = row.suffix,
-                decimals = row.decimals,
-                external = row.external,
-                external_group = row.external_group,
-                placement = row.placement,
-                group = row.group,
-                value_type = row.value_type,
-                accumulation = row.accumulation,
-                ranking = row.ranking,
-                collapsible = row.collapsible,
-                collapsed_by_default = row.collapsed_by_default,
-                full_width = row.full_width,
-                height_scale = row.height_scale,
-                font_scale = row.font_scale,
-                values = {},
-            }
+            local snapshot_row = { values = {} }
+            for i = 1, #SNAPSHOT_ROW_FIELDS do
+                local field = SNAPSHOT_ROW_FIELDS[i]
+                snapshot_row[field] = row[field]
+            end
             local percentage_values = Stats.hit_percentage_values(row.id)
             if percentage_values then
                 snapshot_row.percentage_values = {}
@@ -1117,37 +1058,6 @@ function Stats.snapshot_sections(account_ids, sections)
     return result
 end
 
-function Stats.live_summary(aid)
-    local damage = 0
-    local kills = 0
-    local taken = 0
-    local total_dmg = _data._total_damage
-    local kill_data = _data.total_kills
-    local taken_data = _data.damage_taken
-
-    if total_dmg and total_dmg[aid] then
-        damage = total_dmg[aid].score or 0
-    end
-
-    if kill_data and kill_data[aid] then
-        kills = kill_data[aid].score or 0
-    end
-
-    if taken_data and taken_data[aid] then
-        taken = taken_data[aid].score or 0
-    end
-
-    return damage, kills, taken
-end
-
-function Stats.def(stat_id)
-    return _def_by_id[stat_id]
-end
-
-function Stats.defs()
-    return STAT_DEFS
-end
-
 function Stats.is_enemy_detail(stat_id)
     return ENEMY_DETAIL_STATS[stat_id] == true
 end
@@ -1187,6 +1097,10 @@ function Stats.classify_kill(breed_name, aid)
         elseif MELEE_ELITES[breed_name] then
             Stats.record("melee_elites_killed", aid, 1)
         end
+    elseif RANGED_ELITES[breed_name] then
+        -- An elite without its own row (the Radio Operator).
+        Stats.record("elites_killed", aid, 1)
+        Stats.record("ranged_elites_killed", aid, 1)
     end
     return true
 end
@@ -1208,31 +1122,105 @@ function Stats.record_kill_from_death(attacked_unit, last_hitter_account_id)
     Stats.classify_kill(breed.name, aid)
 end
 
-function Stats.mark_killed(unit)
-    _killed_units[unit] = true
+function Stats.clear_scripted_deaths()
+    table_clear(_scripted_death_hitters)
 end
 
-function Stats.clear_kill_tracking()
-    table_clear(_killed_units)
-    table_clear(_companion_killed_units)
+-- Calls on_death(unit, account_id) once for each watched unit whose health reached zero.
+function Stats.update_scripted_deaths(on_death)
+    if next(_scripted_death_hitters) == nil then
+        return
+    end
+
+    for unit, aid in pairs(_scripted_death_hitters) do
+        if _killed_units[unit] or not Unit.alive(unit) then
+            _scripted_death_hitters[unit] = nil
+        else
+            local hp_ext = ScriptUnit.has_extension(unit, "health_system")
+            if hp_ext and hp_ext:current_health_percent() <= 0 then
+                _scripted_death_hitters[unit] = nil
+                on_death(unit, aid)
+            end
+        end
+    end
 end
 
-function Stats.handle_attack(aid, damage_profile, attacked_unit, hit_weakspot, damage, attack_result, attack_type, enemy_health, is_critical_strike)
+-- Attack RPCs can arrive before client health replication; keep a local balance
+-- so a stale health value cannot turn the killing blow into extra damage.
+-- Returns the damage that came off the unit's health. Non-player hits also call this.
+function Stats.apply_enemy_damage(attacked_unit, damage, attack_result, enemy_health, breed)
+    local actual = damage or 0
+    if attack_result ~= "damaged" and attack_result ~= "died" then
+        return actual
+    end
+
+    -- The report carries the damage before the server's per-hit clamp (attack.lua:512,
+    -- damage.lua:58-64): the Prophet of Decay takes at most 2.5 % of its health per hit, the twin
+    -- captains 20 %. Unclamped, the first big hits would use up the whole balance.
+    local hit_clamp = breed and breed.clamp_health_percent_damage
+    if hit_clamp then
+        local hp_ext = ScriptUnit.has_extension(attacked_unit, "health_system")
+        local max_health = hp_ext and hp_ext:max_health()
+        if max_health then
+            actual = math_min(actual, max_health * hit_clamp)
+        end
+    end
+
+    local current_health = enemy_health[attacked_unit]
+    if not current_health then
+        local hp_ext = ScriptUnit.has_extension(attacked_unit, "health_system")
+        local max_health = hp_ext and hp_ext:max_health()
+        local replicated_health = hp_ext and hp_ext:current_health()
+        current_health = replicated_health and replicated_health + actual or max_health or actual
+        if max_health then
+            current_health = math_min(current_health, max_health)
+        end
+    elseif attack_result == "damaged" and actual > current_health and breed
+        and not BOSSES[breed.name] and not breed.clamp_health_percent_damage then
+        -- The unit survived more than its balance, so the server healed it: resync.
+        -- Bosses are left out: their reports can exceed the damage the server applies
+        -- (per-hit clamp, phase floors). Zero replicated health keeps the balance.
+        local hp_ext = ScriptUnit.has_extension(attacked_unit, "health_system")
+        local replicated_health = hp_ext and hp_ext:current_health()
+        if replicated_health and replicated_health > 0 then
+            current_health = math_min(replicated_health + actual, hp_ext:max_health() or math_huge)
+        end
+    end
+
+    actual = math_min(actual, current_health)
+    enemy_health[attacked_unit] = attack_result == "died" and nil or current_health - actual
+    return actual
+end
+
+-- known_breed: the attacked unit's breed when the caller already read it.
+function Stats.handle_attack(aid, damage_profile, attacked_unit, hit_weakspot, damage, attack_result, attack_type, enemy_health, is_critical_strike, known_breed)
     if not attacked_unit then
         return
     end
+
+    attack_type = _reported_attack_type(damage_profile, attack_type)
 
     if hit_weakspot then
         Stats.record("headshots", aid, 1)
     end
 
-    local ud = ScriptUnit.has_extension(attacked_unit, "unit_data_system")
-    local breed = ud and ud:breed()
+    local breed = known_breed
+    if breed == nil then
+        local ud = ScriptUnit.has_extension(attacked_unit, "unit_data_system")
+        breed = ud and ud:breed()
+    end
     if not breed or not Breed.is_minion(breed) then
         return
     end
 
-    local melee_or_ranged = attack_type == "melee" or attack_type == "ranged"
+    -- The servo skull's shots and flames are reported as ranged; they count as companion
+    -- damage, not as the player's own ranged hits.
+    local companion_attack = is_companion_attack(damage_profile, attack_type)
+    local melee_or_ranged = not companion_attack and (attack_type == "melee" or attack_type == "ranged")
+    if melee_or_ranged and (damage or 0) > 0 then
+        -- The reported damage, overkill included.
+        Stats.record("highest_hit", aid, damage)
+    end
     if melee_or_ranged and not NON_HIT_ATTACK_RESULTS[attack_result] then
         Stats.record("melee_ranged_hits", aid, 1)
         if hit_weakspot then
@@ -1249,39 +1237,18 @@ function Stats.handle_attack(aid, damage_profile, attacked_unit, hit_weakspot, d
 
     local bn = breed.name
 
-    -- Attack RPCs can arrive before client health replication; keep a local balance
-    -- so a stale health value cannot turn the killing blow into extra damage.
-    local actual = damage or 0
-    local current_health = enemy_health[attacked_unit]
-
-    if attack_result == "damaged" or attack_result == "died" then
-        if not current_health then
-            local hp_ext = ScriptUnit.has_extension(attacked_unit, "health_system")
-            local max_health = hp_ext and hp_ext:max_health()
-            local replicated_health = hp_ext and hp_ext:current_health()
-            current_health = replicated_health and replicated_health + actual or max_health or actual
-            if max_health then
-                current_health = math_min(current_health, max_health)
-            end
-        end
-
-        actual = math_min(actual, current_health)
-        enemy_health[attacked_unit] = attack_result == "died" and nil or current_health - actual
+    if breed.has_scripted_death_sequence and (damage or 0) > 0 and not _killed_units[attacked_unit] then
+        _scripted_death_hitters[attacked_unit] = aid
     end
 
-    local total_dmg = _data._total_damage
-    local td_entry = total_dmg[aid] or { value = 0, score = 0 }
-    td_entry.score = td_entry.score + actual
-    td_entry.value = td_entry.value + actual
-    total_dmg[aid] = td_entry
+    local actual = Stats.apply_enemy_damage(attacked_unit, damage, attack_result, enemy_health, breed)
 
     local boss_result = nil
-    local companion_attack = is_companion_attack(damage_profile, attack_type)
     local dot_stat_id = damage_profile and DOT_PROFILES[damage_profile.name]
     Stats.record("damage_dealt", aid, actual)
-    if attack_type == "ranged" then
+    if melee_or_ranged and attack_type == "ranged" then
         Stats.record("ranged_damage", aid, actual)
-    elseif attack_type == "melee" then
+    elseif melee_or_ranged then
         Stats.record("melee_damage", aid, actual)
     else
         Stats.record("other_damage", aid, actual)
@@ -1315,6 +1282,8 @@ function Stats.handle_attack(aid, damage_profile, attacked_unit, hit_weakspot, d
         if enemy then
             Stats.record(KILL_DAMAGE_STAT_BY_CATEGORY[enemy.category], aid, actual)
             Stats.record(KILL_DAMAGE_STAT_BY_KILL_STAT[enemy.stat_id], aid, actual)
+        elseif RANGED_ELITES[bn] then
+            Stats.record(KILL_DAMAGE_STAT_BY_CATEGORY.elites, aid, actual)
         end
     end
 
@@ -1338,6 +1307,27 @@ function Stats.handle_attack(aid, damage_profile, attacked_unit, hit_weakspot, d
     end
 
     return boss_result
+end
+
+-- An attack report on a player. Its damage is health and corruption only; toughness is not in it.
+-- Damage over time and area ticks (no attack type, or buff) are not hits.
+function Stats.handle_player_attacked(attacker_aid, attacked_aid, damage, attack_result, attack_type, damage_profile)
+    attack_type = _reported_attack_type(damage_profile, attack_type)
+    if attack_type == nil or attack_type == "buff" then
+        return
+    end
+
+    local hurt_health = (damage or 0) > 0
+    if hurt_health then
+        Stats.record("hits_taken", attacked_aid, 1)
+    end
+
+    -- Players can only hurt each other with profiles that allow friendly fire: barrels, and
+    -- a poxburster explosion credited to the player who pushed or killed it.
+    if attacker_aid and attacker_aid ~= attacked_aid
+            and (hurt_health or TOUGHNESS_ATTACK_RESULTS[attack_result]) then
+        Stats.record("teammates_hurt", attacker_aid, 1)
+    end
 end
 
 return Stats

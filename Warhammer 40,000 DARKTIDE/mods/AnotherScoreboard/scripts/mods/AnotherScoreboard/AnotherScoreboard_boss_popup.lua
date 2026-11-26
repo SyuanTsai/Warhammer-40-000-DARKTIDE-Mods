@@ -1,3 +1,4 @@
+---@type AnotherScoreboardMod
 local mod = get_mod("AnotherScoreboard")
 
 local orig_require = Mods and Mods.original_require or require
@@ -37,13 +38,7 @@ local FOOTER_H = 52
 local MAX_PLAYERS = 4
 
 local C = Themes.by_id[Themes.default].colors.boss
-
-local PLAYER_COLORS = {
-    { 255, 106, 224, 216 },
-    { 255, 244, 115, 171 },
-    { 255, 255, 139, 82 },
-    { 255, 139, 164, 255 },
-}
+local PLAYER_COLORS = Themes.player_colors
 
 local scenegraph_definition = {
     screen = UIWorkspaceSettings.screen,
@@ -57,21 +52,11 @@ local scenegraph_definition = {
 }
 
 local function _set_size(style, width, height)
-    if not style then
-        return
-    end
-
-    style.size = style.size or { 0, 0 }
     style.size[1] = width
     style.size[2] = height
 end
 
 local function _set_offset(style, x, y, z)
-    if not style then
-        return
-    end
-
-    style.offset = style.offset or { 0, 0, 0 }
     style.offset[1] = x
     style.offset[2] = y
     style.offset[3] = z
@@ -82,15 +67,11 @@ local function _set_rect_style(style, x, y, width, height, scale, z)
     _set_offset(style, x * scale, y * scale, z)
 end
 
-local function _set_text_style(style, x, y, width, height, font_size, scale, alignment, vertical_alignment)
+-- Alignments stay as the passes were created.
+local function _set_text_style(style, x, y, width, height, font_size, scale)
     _set_size(style, width * scale, height * scale)
     _set_offset(style, x * scale, y * scale, BASE_Z + 5)
-
-    if style then
-        style.font_size = font_size * scale
-        style.text_horizontal_alignment = alignment or "left"
-        style.text_vertical_alignment = vertical_alignment or "center"
-    end
+    style.font_size = font_size * scale
 end
 
 local function _hide_style(style)
@@ -115,30 +96,22 @@ end
 
 local function _apply_popup_layout(self, scale, settings, player_count)
     local widget = self._widget
-    if not widget then
-        return
-    end
-
-    scale = math_max(tonumber(scale) or 1, 0.1)
-    player_count = math_max(math.min(player_count or 0, MAX_PLAYERS), 1)
+    scale = math_max(scale, 0.1)
+    player_count = math_max(math.min(player_count, MAX_PLAYERS), 1)
 
     local popup_w = _popup_width(settings)
     local rows_bottom = ROWS_Y + player_count * ROW_H
     local footer_y = rows_bottom + FOOTER_GAP
     local popup_h = settings.show_boss_popup_total_damage and footer_y + FOOTER_H or rows_bottom
-    local popup_scenegraph = self._ui_scenegraph and self._ui_scenegraph.popup
+    local popup_size = self._ui_scenegraph.popup.size
 
-    if popup_scenegraph and popup_scenegraph.size then
-        popup_scenegraph.size[1] = popup_w * scale
-        popup_scenegraph.size[2] = popup_h * scale
-        self._update_scenegraph = true
-    end
+    popup_size[1] = popup_w * scale
+    popup_size[2] = popup_h * scale
+    self._update_scenegraph = true
 
     local style = widget.style
     _set_rect_style(style.background, 0, 0, popup_w, popup_h, scale, BASE_Z)
-
-    _set_text_style(style.title, PADDING_X, TITLE_Y, popup_w - PADDING_X * 2,
-        TITLE_H, TITLE_FONT, scale, "left", "center")
+    _set_text_style(style.title, PADDING_X, TITLE_Y, popup_w - PADDING_X * 2, TITLE_H, TITLE_FONT, scale)
 
     local right_x = popup_w - PADDING_X
     local percent_x = right_x
@@ -164,21 +137,17 @@ local function _apply_popup_layout(self, scale, settings, player_count)
         local divider_style = style["divider_" .. i]
 
         if i <= player_count then
-            _set_text_style(player_icon_style, PADDING_X, row_y, PLAYER_ICON_W, ROW_H,
-                ROW_FONT - 2, scale, "center", "center")
-            _set_text_style(player_style, player_x, row_y, right_x - player_x, ROW_H,
-                ROW_FONT, scale, "left", "center")
+            _set_text_style(player_icon_style, PADDING_X, row_y, PLAYER_ICON_W, ROW_H, ROW_FONT - 2, scale)
+            _set_text_style(player_style, player_x, row_y, right_x - player_x, ROW_H, ROW_FONT, scale)
 
             if settings.show_boss_popup_damage then
-                _set_text_style(damage_style, damage_x, row_y, DAMAGE_W, ROW_H,
-                    ROW_FONT, scale, "right", "center")
+                _set_text_style(damage_style, damage_x, row_y, DAMAGE_W, ROW_H, ROW_FONT, scale)
             else
                 _hide_style(damage_style)
             end
 
             if settings.show_boss_popup_percent then
-                _set_text_style(percent_style, percent_x, row_y, PERCENT_W, ROW_H,
-                    ROW_FONT - 2, scale, "right", "center")
+                _set_text_style(percent_style, percent_x, row_y, PERCENT_W, ROW_H, ROW_FONT - 2, scale)
             else
                 _hide_style(percent_style)
             end
@@ -203,10 +172,9 @@ local function _apply_popup_layout(self, scale, settings, player_count)
         _set_rect_style(style.footer_border, 0, footer_y, popup_w, 2, scale, BASE_Z + 2)
 
         local total_label_w = math.min(160, popup_w * 0.42)
-        _set_text_style(style.total_label, PADDING_X, footer_y, total_label_w, FOOTER_H,
-            15, scale, "left", "center")
+        _set_text_style(style.total_label, PADDING_X, footer_y, total_label_w, FOOTER_H, 15, scale)
         _set_text_style(style.total_value, PADDING_X + total_label_w, footer_y,
-            popup_w - PADDING_X * 2 - total_label_w, FOOTER_H, 18, scale, "right", "center")
+            popup_w - PADDING_X * 2 - total_label_w, FOOTER_H, 18, scale)
     else
         _hide_style(style.footer_bg)
         _hide_style(style.footer_border)
@@ -215,16 +183,6 @@ local function _apply_popup_layout(self, scale, settings, player_count)
     end
 
     widget.dirty = true
-end
-
-local function _shorten(value)
-    if value >= 1e6 then
-        return string_format("%.1fM", value * 1e-6)
-    elseif value >= 1e3 then
-        return string_format("%.1fK", value * 1e-3)
-    end
-
-    return string_format("%.0f", value)
 end
 
 local function _player_display(aid, fallback_index)
@@ -248,78 +206,56 @@ local function _player_display(aid, fallback_index)
         end
     end
 
+    -- A player who left before the boss died.
+    local departed = mod._departed_players[aid]
+    if departed then
+        return departed.name or aid, departed.slot and PLAYER_COLORS[departed.slot] or PLAYER_COLORS[fallback_index] or C.text,
+            departed.archetype_icon
+    end
+
     return aid, PLAYER_COLORS[fallback_index] or C.text, nil
 end
 
 local function _set_popup_content(widget, data, settings)
     widget.content.title = data.display_name or data.breed_name or "Boss"
 
+    -- Rows past the players are blanked.
     local players = data.players or {}
     for i = 1, MAX_PLAYERS do
         local player_data = players[i]
-        local player_icon_style = widget.style["player_icon_" .. i]
-        local player_style = widget.style["player_" .. i]
+        local name, color, archetype_icon = "", C.text, nil
 
         if player_data then
-            local name, color, archetype_icon = _player_display(player_data.aid, i)
+            name, color, archetype_icon = _player_display(player_data.aid, i)
+            -- Markup first, as the scoreboard header does: a bot's name carries a coloured "[BOT]", and cutting
+            -- through the markup dropped the tag.
+            name = name:gsub("{#[^}]*}", "")
             if utf8_string_length(name) > 14 then
                 name = utf8_sub_string(name, 1, 14)
             end
-
-            widget.content["player_icon_" .. i] = archetype_icon or ""
-            widget.content["player_" .. i] = name
-            widget.content["damage_" .. i] = settings.show_boss_popup_damage
-                and _shorten(player_data.damage or 0) or ""
-            widget.content["percent_" .. i] = settings.show_boss_popup_percent
-                and string_format("%d%%", player_data.pct or 0) or ""
-            player_icon_style.text_color = color
-            player_style.text_color = color
-        else
-            widget.content["player_icon_" .. i] = ""
-            widget.content["player_" .. i] = ""
-            widget.content["damage_" .. i] = ""
-            widget.content["percent_" .. i] = ""
-            player_icon_style.text_color = C.text
-            player_style.text_color = C.text
         end
+
+        widget.content["player_icon_" .. i] = archetype_icon or ""
+        widget.content["player_" .. i] = name
+        widget.content["damage_" .. i] = player_data and settings.show_boss_popup_damage
+            and mod.format_amount(player_data.damage or 0) or ""
+        widget.content["percent_" .. i] = player_data and settings.show_boss_popup_percent
+            and string_format("%d%%", player_data.pct or 0) or ""
+        widget.style["player_icon_" .. i].text_color = color
+        widget.style["player_" .. i].text_color = color
     end
 
-    local total_damage = _shorten(data.total_damage or 0)
+    local total_damage = mod.format_amount(data.total_damage or 0)
     widget.content.total_label = "TOTAL DAMAGE"
     widget.content.total_value = string_format("{#color(%d,%d,%d)}%s HP{#reset()}",
         C.damage[2], C.damage[3], C.damage[4], total_damage)
 end
 
--- class() is not available in every loading context.
-local HudElementBossPopup = nil
+local HudElementBossPopup = class("HudElementBossPopup", "HudElementBase")
 
-if not HudElementBossPopup and type(class) == "function" then
-    local ok, result = pcall(class, "HudElementBossPopup", "HudElementBase")
-    if ok and result then
-        HudElementBossPopup = result
-    end
-end
-
-if not HudElementBossPopup then
-    local ok, Base = pcall(orig_require, "scripts/ui/hud/elements/hud_element_base")
-    if ok and Base then
-        HudElementBossPopup = setmetatable({}, { __index = Base })
-        HudElementBossPopup.__index = HudElementBossPopup
-        HudElementBossPopup.super = Base
-
-        function HudElementBossPopup:new(host, draw_layer, scale, context)
-            local instance = setmetatable({}, self)
-            if instance.init then
-                instance:init(host, draw_layer, scale, context)
-            end
-            return instance
-        end
-    end
-end
-
-if not HudElementBossPopup then
-    return {}
-end
+-- update draws nothing, so UIHud skips the render pass around it (ui_hud.lua:387-397).
+HudElementBossPopup.begin_update = false
+HudElementBossPopup.end_update = false
 
 local function _rect_pass(style_id, x, y, z, width, height, color)
     return {
@@ -356,13 +292,12 @@ local function _color_copy(color)
 end
 
 local function _apply_theme(self, theme_id)
-    local selected = Themes.by_id[theme_id] or Themes.by_id[Themes.default]
     if self._theme_id == theme_id then
         return false
     end
 
     self._theme_id = theme_id
-    C = selected.colors.boss
+    C = (Themes.by_id[theme_id] or Themes.by_id[Themes.default]).colors.boss
 
     local widget = self._widget
     if not widget then
@@ -389,14 +324,9 @@ end
 
 HudElementBossPopup.init = function(self, parent, draw_layer, start_scale, definitions)
     self._draw_layer = math.max(draw_layer or 0, 990)
-    self._render_scale = start_scale or 1
     self._widgets = {}
     self._widgets_by_name = {}
-    self._event_list = {}
-
-    local scale = self._render_scale
-    self._definitions = { widget_definitions = {}, scenegraph_definition = scenegraph_definition }
-    self._ui_scenegraph = UIScenegraph.init_scenegraph(scenegraph_definition, scale)
+    self._ui_scenegraph = UIScenegraph.init_scenegraph(scenegraph_definition, start_scale or 1)
 
     local passes = {
         _rect_pass("background", 0, 0, BASE_Z, POPUP_W_BOTH, POPUP_H, C.bg),
@@ -427,18 +357,12 @@ HudElementBossPopup.init = function(self, parent, draw_layer, start_scale, defin
     local widget_definition = UIWidget.create_definition(passes, "popup")
     self._widget = self:_create_widget("boss_popup", widget_definition)
     self._widget.visible = false
-
-    self._popup_data = nil
-    self._popup_visible = false
-    self._widget.offset[1] = 0
-    self._widget.offset[2] = 0
 end
 
 HudElementBossPopup.show = function(self, data, x_offset, y_offset, scale)
     self._popup_data = data
-    self._popup_visible = true
 
-    local settings = mod.get_cached_settings and mod.get_cached_settings() or {}
+    local settings = mod.get_cached_settings()
     local player_count = data and data.players and #data.players or 0
 
     _apply_theme(self, settings.scoreboard_theme)
@@ -454,7 +378,6 @@ HudElementBossPopup.show = function(self, data, x_offset, y_offset, scale)
 end
 
 HudElementBossPopup.hide = function(self)
-    self._popup_visible = false
     self._popup_data = nil
 
     if self._widget then
@@ -468,14 +391,12 @@ HudElementBossPopup.hide = function(self)
 end
 
 HudElementBossPopup.update = function(self, dt, t, ui_renderer, render_settings, input_service)
-    local settings = mod.get_cached_settings and mod.get_cached_settings() or {}
+    local settings = mod.get_cached_settings()
     if _apply_theme(self, settings.scoreboard_theme) and self._popup_data then
         _set_popup_content(self._widget, self._popup_data, settings)
     end
 
-    if HudElementBossPopup.super and HudElementBossPopup.super.update then
-        HudElementBossPopup.super.update(self, dt, t, ui_renderer, render_settings, input_service)
-    end
+    HudElementBossPopup.super.update(self, dt, t, ui_renderer, render_settings, input_service)
 end
 
 HudElementBossPopup.destroy = function(self, ui_renderer)
@@ -499,14 +420,11 @@ HudElementBossPopup.destroy = function(self, ui_renderer)
 end
 
 HudElementBossPopup.draw = function(self, dt, t, ui_renderer, render_settings, input_service)
-    if self._popup_visible then
+    local widget = self._widget
+    if widget and widget.visible then
         render_settings.start_layer = self._draw_layer
         UIRenderer.begin_pass(ui_renderer, self._ui_scenegraph, input_service, dt, render_settings)
-
-        if self._widget and self._widget.visible then
-            UIWidget.draw(self._widget, ui_renderer)
-        end
-
+        UIWidget.draw(widget, ui_renderer)
         UIRenderer.end_pass(ui_renderer)
     end
 end

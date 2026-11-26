@@ -34,14 +34,6 @@ local function talent_tier(value)
     return type(value) == "number" and value or nil
 end
 
-local function copy_links(links)
-    local result = {}
-    for i = 1, #(links or {}) do
-        result[i] = links[i]
-    end
-    return result
-end
-
 local function capture_traits(traits, definitions)
     local result = {}
     for i = 1, #(traits or {}) do
@@ -182,13 +174,8 @@ local function capture_profile(profile)
                     tier = tier,
                     points_spent = points,
                     cost = node.cost,
-                    max_points = node.max_points,
                     type = node.type,
-                    x = node.x,
-                    y = node.y,
                     icon = node.icon,
-                    parents = copy_links(node.parents),
-                    children = copy_links(node.children),
                     name = definition and TalentLayoutParser.talent_title(definition, points) or node.talent or node.widget_name,
                     description = definition and definition.description and TalentLayoutParser.talent_description(definition, points),
                 }

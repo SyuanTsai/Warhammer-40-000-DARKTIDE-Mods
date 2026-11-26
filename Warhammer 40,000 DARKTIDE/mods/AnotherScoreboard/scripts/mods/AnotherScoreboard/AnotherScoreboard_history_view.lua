@@ -1,8 +1,11 @@
+---@type AnotherScoreboardMod
 local mod = get_mod("AnotherScoreboard")
 
 local Managers = Managers
 local UIWorkspace = mod:original_require("scripts/settings/ui/ui_workspace_settings")
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
+local UISettings = mod:original_require("scripts/settings/ui/ui_settings")
+local Archetypes = mod:original_require("scripts/settings/archetype/archetypes")
 local Themes = mod:io_dofile("AnotherScoreboard/scripts/mods/AnotherScoreboard/AnotherScoreboard_themes")
 
 local HistoryView = class("AnotherScoreboardHistoryView", "BaseView")
@@ -23,6 +26,20 @@ local MODIFIER_W = SAVE_BUTTON_X - MODIFIER_X - 8
 local MAIN_TEXT_W = MODIFIER_X - 32
 local MODIFIER_FONT_SIZE = 13
 local MAX_VISIBLE_ENTRIES = math.floor((VIEW_H - FOOTER_H - LIST_BOTTOM_PADDING - LIST_TOP + ENTRY_GAP) / (ENTRY_H + ENTRY_GAP))
+local FILTER_RIGHT = 864
+local FILTER_Y = 62
+local FILTER_H = 22
+local FILTER_GAP = 4
+local FILTER_ALL_W = 48
+local FILTER_CLASS_W = 30
+
+local CLASS_FILTERS = {}
+for _, archetype in pairs(Archetypes) do
+    CLASS_FILTERS[#CLASS_FILTERS + 1] = archetype
+end
+table.sort(CLASS_FILTERS, function(a, b)
+    return (a.ui_selection_order or math.huge) < (b.ui_selection_order or math.huge)
+end)
 
 local COLORS = Themes.by_id[Themes.default].colors.history
 
@@ -33,7 +50,7 @@ local function refresh_theme()
     COLORS = selected.colors.history
 end
 
-local function text_pass(value_id, text, x, y, z, w, h, size, color, valign, halign)
+local function text_pass(value_id, text, x, y, z, w, h, size, color, valign, halign, font_type)
     return {
         pass_type = "text",
         value_id = value_id,
@@ -42,7 +59,7 @@ local function text_pass(value_id, text, x, y, z, w, h, size, color, valign, hal
             offset = { x, y, z },
             size = { w, h },
             font_size = size,
-            font_type = "proxima_nova_bold",
+            font_type = font_type or "proxima_nova_bold",
             text_horizontal_alignment = halign or "left",
             text_vertical_alignment = valign or "center",
             text_color = color,
@@ -61,7 +78,7 @@ local function rect_pass(x, y, z, w, h, color)
     }
 end
 
-local function button_definition(text, x, y, w, h, selected)
+local function button_definition(text, x, y, w, h, selected, font_type)
     local color = selected and COLORS.button_selected or COLORS.button
 
     return UIWidget.create_definition({
@@ -89,7 +106,7 @@ local function button_definition(text, x, y, w, h, selected)
                 style.color[4] = target[4]
             end,
         },
-        text_pass("text", text, x, y, BASE_Z + 6, w, h, 14, COLORS.text, "center", "center"),
+        text_pass("text", text, x, y, BASE_Z + 6, w, h, 14, COLORS.text, "center", "center", font_type),
     }, "content", nil, { VIEW_W, VIEW_H })
 end
 
@@ -103,75 +120,24 @@ local function player_names(entry)
     return table.concat(names, ", ")
 end
 
-local function entry_title(entry, History)
-    if History and History.entry_title_display then
-        return History.entry_title_display(entry)
-    end
-
-    local mission = entry.mission_display or mod:localize("history_unknown_mission")
-    local difficulty = entry.difficulty_display or mod:localize("history_unknown_difficulty")
-    local duration = entry.duration_display or "--:--"
-
-    return string.format("%s | %s | %s", mission, difficulty, duration)
-end
-
-local function entry_title_color(entry, History)
-    local outcome = History and History.entry_outcome and History.entry_outcome(entry) or entry.outcome or entry.mission and entry.mission.outcome
-
-    if outcome == "won" then
-        return COLORS.won
-    elseif outcome == "lost" then
-        return COLORS.lost
-    end
-
-    return COLORS.text
-end
-
-local function mission_condition_lines(entry, History)
-    if History and History.mission_conditions_display then
-        return History.mission_conditions_display(entry)
-    end
-
-    return entry.havoc_modifiers_display
-end
-
 local function strip_formatting_tags(text)
     return type(text) == "string" and text:gsub("{#[^}]*}", "") or text
 end
 
-local function modifier_font_size(view, lines)
-    local style = {
-        font_size = MODIFIER_FONT_SIZE,
-        font_type = "proxima_nova_bold",
-    }
-    local max_width = 0
-
-    for i = 1, math.min(#lines, 2) do
-        local width = view:_text_size(strip_formatting_tags(lines[i]), style)
-        max_width = math.max(max_width, width)
+-- The base size if the widest of the texts fits in max_width, else that size scaled down to fit.
+local function fitted_font_size(view, base_size, max_width, text, second_text)
+    local style = { font_size = base_size, font_type = "proxima_nova_bold" }
+    local width = text and view:_text_size(text, style) or 0
+    if second_text then
+        -- _text_size returns more than the width (text.lua TextUtilities.text_size).
+        width = math.max(width, (view:_text_size(second_text, style)))
     end
-
-    if max_width <= MODIFIER_W then
-        return MODIFIER_FONT_SIZE
-    end
-
-    return math.max(1, math.floor(MODIFIER_FONT_SIZE * MODIFIER_W / max_width))
-end
-
-local function entry_title_font_size(view, title)
-    local font_size = 16
-    local style = {
-        font_size = font_size,
-        font_type = "proxima_nova_bold",
-    }
-    local max_width = MAIN_TEXT_W - 8
-    local width = view:_text_size(title, style)
 
     if width <= max_width then
-        return font_size
+        return base_size
     end
 
-    return math.max(1, math.floor(font_size * max_width / width))
+    return math.max(1, math.floor(base_size * max_width / width))
 end
 
 function HistoryView:init(settings, context)
@@ -196,12 +162,12 @@ function HistoryView:init(settings, context)
         },
     }
 
-    self._entry_widgets = {}
-    self._tab_widgets = {}
+    -- Every widget the view draws, in draw order: background, entries or the empty text, tabs and filters.
+    self._history_widgets = {}
     self._active_tab = "recent"
     self._first_entries = { recent = 1, saved = 1 }
     self._max_first_entries = { recent = 1, saved = 1 }
-    self._popup_id = nil
+    self._owned_classes = {}
     HistoryView.super.init(self, self._definitions, settings, context or {})
     self._pass_draw = true
     self._pass_input = false
@@ -209,10 +175,13 @@ end
 
 function HistoryView:on_enter()
     HistoryView.super.on_enter(self)
+    self:_check_class_ownership()
     self:_build()
 end
 
 function HistoryView:on_exit()
+    self._closed = true
+
     if self._popup_id and Managers.event then
         Managers.event:trigger("event_remove_ui_popup", self._popup_id)
         self._popup_id = nil
@@ -244,8 +213,7 @@ function HistoryView:update(dt, t, input_service)
     end
 
     if self._history_cache_ready == false then
-        local History = self:_history()
-        if History.cache_ready and History.cache_ready() then
+        if mod.get_history().cache_ready() then
             self:_build()
         end
     end
@@ -258,12 +226,8 @@ function HistoryView:update(dt, t, input_service)
         end
     end
 
-    if self._active_tab == "recent" and input_service and input_service:get("next") then
-        local History = self:_history()
-        if History.clear then
-            History.clear()
-            self:_build()
-        end
+    if self._active_tab == "recent" and not self._class_filter and input_service and input_service:get("next") then
+        self:_show_clear_popup()
 
         return
     end
@@ -277,12 +241,8 @@ function HistoryView:update(dt, t, input_service)
     return HistoryView.super.update(self, dt, t, input_service)
 end
 
-function HistoryView:_history()
-    return mod.get_history and mod:get_history() or mod:io_dofile("AnotherScoreboard/scripts/mods/AnotherScoreboard/AnotherScoreboard_history")
-end
-
 function HistoryView:_open_entry(entry)
-    local History = self:_history()
+    local History = mod.get_history()
     local loaded = entry.file_path and History.load(entry.file_path) or entry
     if not loaded then
         return
@@ -295,9 +255,12 @@ function HistoryView:_open_entry(entry)
 
     self._showing_entry = true
 
+    local players = History.player_adapters(loaded.players)
+    mod.prepare_scoreboard_view_packages(players)
+
     ui:open_view("another_scoreboard_view", nil, false, false, nil, {
         scoreboard_history = true,
-        players = History.player_adapters(loaded.players),
+        players = players,
         sections = loaded.sections or {},
         snapshot = loaded,
     }, { use_transition_ui = false })
@@ -305,14 +268,16 @@ end
 
 function HistoryView:_entry_definition(entry, index, History)
     local y = LIST_TOP + (index - 1) * (ENTRY_H + ENTRY_GAP)
-    local title = entry_title(entry, History)
-    local title_size = entry_title_font_size(self, title)
-    local title_color = entry_title_color(entry, History)
+    local title = History.entry_title_display(entry)
+    local title_size = fitted_font_size(self, 16, MAIN_TEXT_W - 8, title)
+    local outcome = History.entry_outcome(entry)
+    local title_color = outcome == "won" and COLORS.won or outcome == "lost" and COLORS.lost or COLORS.text
     local subtitle = string.format("%s  |  %s", entry.date_display or entry.date or "", player_names(entry))
-    local modifier_lines = mission_condition_lines(entry, History) or {}
+    local modifier_lines = History.mission_conditions_display(entry) or {}
     local modifier_text = table.concat(modifier_lines, "\n", 1, math.min(#modifier_lines, 2))
-    local modifier_size = modifier_font_size(self, modifier_lines)
-    local is_saved = History.is_saved and History.is_saved(entry.id)
+    local modifier_size = fitted_font_size(self, MODIFIER_FONT_SIZE, MODIFIER_W,
+        strip_formatting_tags(modifier_lines[1]), strip_formatting_tags(modifier_lines[2]))
+    local is_saved = History.is_saved(entry.id)
     local save_text = is_saved and mod:localize("history_manage")
         or mod:localize("history_save")
 
@@ -380,138 +345,130 @@ function HistoryView:_set_tab(tab)
     self._rebuild_requested = true
 end
 
-function HistoryView:_popup_closed()
-    self._popup_id = nil
-end
-
-function HistoryView:_show_save_popup(entry)
-    if self._popup_id or not Managers.event then
+function HistoryView:_set_class_filter(archetype_name)
+    if archetype_name == self._class_filter then
         return
     end
 
-    local context = {
-        title_text_unlocalized = mod:localize("history_name_popup_title"),
-        description_text_unlocalized = mod:localize("history_name_popup_description"),
-        options = {
-            {
-                keyboard_title = "loc_rename_account_virtual_keyboard_label",
-                max_length = 48,
-                template_type = "terminal_input_field",
-                width = 512,
-            },
-            {
-                close_on_pressed = true,
-                no_localization = true,
-                template_type = "terminal_button_small",
-                text = mod:localize("history_save"),
-                callback = function(custom_name)
-                    self._pending_saved_action = { kind = "save", entry = entry, custom_name = custom_name }
-                    self:_popup_closed()
-                end,
-            },
-            {
-                close_on_pressed = true,
-                force_same_row = true,
-                no_localization = true,
-                template_type = "terminal_button_small",
-                text = mod:localize("history_cancel"),
-                callback = function()
-                    self:_popup_closed()
-                end,
-            },
-        },
-    }
-
-    Managers.event:trigger("event_show_ui_popup", context, function(popup_id)
-        self._popup_id = popup_id
-    end)
+    self._class_filter = archetype_name
+    self._first_entries.recent = 1
+    self._first_entries.saved = 1
+    self._rebuild_requested = true
 end
 
-function HistoryView:_show_manage_popup(entry)
-    if self._popup_id or not Managers.event then
-        return
-    end
+-- Base classes are always offered; a DLC class only once the platform confirms ownership,
+-- the same check the class selection screen uses (DLCUtils.is_archetype_available).
+function HistoryView:_check_class_ownership()
+    local dlc_manager = Managers.dlc
 
-    local History = self:_history()
-    local name_label = entry.custom_name and mod:localize("history_manage_current_name")
-        or mod:localize("history_manage_generated_name")
-    local description = string.format("%s: %s", name_label, entry_title(entry, History))
-    local context = {
-        title_text_unlocalized = mod:localize("history_manage_popup_title"),
-        description_text_unlocalized = description,
-        options = {
-            {
-                keyboard_title = "loc_rename_account_virtual_keyboard_label",
-                max_length = 48,
-                template_type = "terminal_input_field",
-                width = 512,
-            },
-            {
-                close_on_pressed = true,
-                no_localization = true,
-                template_type = "terminal_button_small",
-                text = mod:localize("history_save_name"),
-                callback = function(custom_name)
-                    self._pending_saved_action = { kind = "rename", entry = entry, custom_name = custom_name }
-                    self:_popup_closed()
-                end,
-            },
-            {
-                close_on_pressed = true,
-                force_same_row = true,
-                no_localization = true,
-                template_type = "terminal_button_small",
-                text = mod:localize("history_remove"),
-                callback = function()
-                    self._pending_saved_action = { kind = "remove", entry = entry }
-                    self:_popup_closed()
-                end,
-            },
-            {
-                close_on_pressed = true,
-                force_same_row = true,
-                no_localization = true,
-                template_type = "terminal_button_small",
-                text = mod:localize("history_cancel"),
-                callback = function()
-                    self:_popup_closed()
-                end,
-            },
-        },
-    }
+    for i = 1, #CLASS_FILTERS do
+        local archetype = CLASS_FILTERS[i]
+        local archetype_name = archetype.name
+        local requires_dlc = archetype.requires_dlc
 
-    Managers.event:trigger("event_show_ui_popup", context, function(popup_id)
-        self._popup_id = popup_id
-    end)
-end
-
-function HistoryView:_handle_saved_button(entry)
-    local History = self:_history()
-
-    if History.is_saved and History.is_saved(entry.id) then
-        local saved_entry = entry
-        for _, candidate in ipairs(History.saved_list and History.saved_list() or {}) do
-            if candidate.id == entry.id then
-                saved_entry = candidate
-                break
-            end
+        if not requires_dlc then
+            self._owned_classes[archetype_name] = true
+        elseif dlc_manager then
+            dlc_manager:is_owner_of(requires_dlc):next(function(is_owner)
+                if is_owner and not self._closed then
+                    self._owned_classes[archetype_name] = true
+                    self._rebuild_requested = true
+                end
+            end)
         end
-        self:_show_manage_popup(saved_entry)
+    end
+end
+
+-- A popup with a name field (unless without_name) and buttons in one row; a button with a kind
+-- queues that saved action for the entry (remove takes no name). Nothing opens while a popup is up.
+function HistoryView:_show_name_popup(title, description, entry, buttons, without_name)
+    if self._popup_id or not Managers.event then
+        return
+    end
+
+    local options = {}
+    if not without_name then
+        options[1] = {
+            keyboard_title = "loc_rename_account_virtual_keyboard_label",
+            max_length = 48,
+            template_type = "terminal_input_field",
+            width = 512,
+        }
+    end
+
+    for i, button in ipairs(buttons) do
+        options[#options + 1] = {
+            close_on_pressed = true,
+            force_same_row = i > 1 or nil,
+            no_localization = true,
+            template_type = "terminal_button_small",
+            text = mod:localize(button.text),
+            callback = function(custom_name)
+                if button.kind then
+                    self._pending_saved_action = { kind = button.kind, entry = entry,
+                        custom_name = button.kind ~= "remove" and custom_name or nil }
+                end
+                self._popup_id = nil
+            end,
+        }
+    end
+
+    Managers.event:trigger("event_show_ui_popup", {
+        title_text_unlocalized = title,
+        description_text_unlocalized = description,
+        options = options,
+    }, function(popup_id)
+        self._popup_id = popup_id
+    end)
+end
+
+function HistoryView:_show_clear_popup()
+    -- Checked before list(), which can refresh the cache.
+    if self._popup_id or not Managers.event then
+        return
+    end
+
+    local count = #mod.get_history().list()
+    if count == 0 then
+        return
+    end
+
+    self:_show_name_popup(mod:localize("history_clear_popup_title"), mod:localize("history_clear_popup_description", count),
+        nil, { { text = "history_clear", kind = "clear" }, { text = "history_cancel" } }, true)
+end
+
+-- Save for a Recent entry; rename or remove for a saved one, shown with its saved name.
+function HistoryView:_handle_saved_button(entry)
+    local History = mod.get_history()
+    local saved_entry = History.saved_entry(entry.id)
+
+    if saved_entry then
+        local name_label = saved_entry.custom_name and mod:localize("history_manage_current_name")
+            or mod:localize("history_manage_generated_name")
+        local description = string.format("%s: %s", name_label, History.entry_title_display(saved_entry))
+        self:_show_name_popup(mod:localize("history_manage_popup_title"), description, saved_entry, {
+            { text = "history_save_name", kind = "rename" },
+            { text = "history_remove", kind = "remove" },
+            { text = "history_cancel" },
+        })
     else
-        self:_show_save_popup(entry)
+        self:_show_name_popup(mod:localize("history_name_popup_title"), mod:localize("history_name_popup_description"),
+            entry, { { text = "history_save", kind = "save" }, { text = "history_cancel" } })
     end
 end
 
 function HistoryView:_apply_saved_action(action)
-    local History = self:_history()
+    local History = mod.get_history()
     local changed
 
     if action.kind == "save" then
-        changed = History.save_entry and History.save_entry(action.entry, action.custom_name)
+        changed = History.save_entry(action.entry, action.custom_name)
     elseif action.kind == "rename" then
-        changed = History.rename_saved and History.rename_saved(action.entry.id, action.custom_name)
+        changed = History.rename_saved(action.entry.id, action.custom_name)
     elseif action.kind == "remove" then
-        changed = History.remove_saved and History.remove_saved(action.entry.id)
+        changed = History.remove_saved(action.entry.id)
+    elseif action.kind == "clear" then
+        changed = History.clear()
     end
 
     if changed then
@@ -529,19 +486,27 @@ function HistoryView:_change_scroll(delta)
     end
 end
 
+function HistoryView:_add_widget(name, definition)
+    local widget = self:_create_widget(name, definition)
+    self._history_widgets[#self._history_widgets + 1] = widget
+
+    return widget
+end
+
+function HistoryView:_add_button(name, text, x, y, w, h, selected, on_pressed, font_type)
+    local widget = self:_add_widget(name, button_definition(text, x, y, w, h, selected, font_type))
+    widget.content.hotspot.pressed_callback = on_pressed
+end
+
 function HistoryView:_build()
     refresh_theme()
     self:_cleanup()
 
-    local History = self:_history()
-    if not History then
-        return
-    end
-
-    local recent_entries = History.list()
-    local saved_entries = History.saved_list and History.saved_list() or {}
+    local History = mod.get_history()
+    local recent_entries = History.filter_by_archetype(History.list(), self._class_filter)
+    local saved_entries = History.filter_by_archetype(History.saved_list(), self._class_filter)
     local entries = self._active_tab == "saved" and saved_entries or recent_entries
-    local cache_ready = not History.cache_ready or History.cache_ready()
+    local cache_ready = History.cache_ready()
     self._history_cache_ready = cache_ready
     local tab = self._active_tab
     local max_first_entry = math.max(1, #entries - MAX_VISIBLE_ENTRIES + 1)
@@ -550,13 +515,15 @@ function HistoryView:_build()
     local first_entry = self._first_entries[tab]
     local subtitle = tab == "saved" and mod:localize("history_saved_subtitle")
         or mod:localize("history_view_subtitle", History.recent_capacity())
-    local hint_id = self._active_tab == "saved" and "history_saved_hint" or "history_escape_hint"
+    local hint_id = self._active_tab == "saved" and "history_saved_hint"
+        or self._class_filter and "history_filtered_hint"
+        or "history_escape_hint"
     local last_entry = math.min(#entries, first_entry + MAX_VISIBLE_ENTRIES - 1)
 
     local background_passes = {
         rect_pass(0, 0, BASE_Z - 1, VIEW_W, VIEW_H, COLORS.panel),
         text_pass("title", mod:localize("history_view_title"), 36, 18, BASE_Z + 4, VIEW_W - 72, 42, 30, COLORS.title),
-        text_pass("subtitle", subtitle, 38, 56, BASE_Z + 4, VIEW_W - 76, 24, 16, COLORS.sub),
+        text_pass("subtitle", subtitle, 38, 56, BASE_Z + 4, 530, 24, 16, COLORS.sub),
         rect_pass(0, VIEW_H - FOOTER_H, BASE_Z + 2, VIEW_W, FOOTER_H, COLORS.footer),
         text_pass("hint", mod:localize(hint_id), 16, VIEW_H - 36, BASE_Z + 4, 560, 24, 15, COLORS.text),
     }
@@ -566,41 +533,23 @@ function HistoryView:_build()
         background_passes[#background_passes + 1] = text_pass("range", range_text, 700, VIEW_H - 36, BASE_Z + 4, 164, 24, 15, COLORS.text, "center", "right")
     end
 
-    local background = UIWidget.create_definition(background_passes, "content", nil, { VIEW_W, VIEW_H })
-
-    self._background_widget = self:_create_widget("as_history_background", background)
-
-    local recent_text = string.format("%s (%d)", mod:localize("history_tab_recent"), #recent_entries)
-    local saved_text = string.format("%s (%d)", mod:localize("history_tab_saved"), #saved_entries)
-    local recent_widget = self:_create_widget("as_history_tab_recent", button_definition(recent_text, 570, 24, 140, 34, self._active_tab == "recent"))
-    recent_widget.content.hotspot.pressed_callback = function()
-        self:_set_tab("recent")
-    end
-    self._tab_widgets[#self._tab_widgets + 1] = recent_widget
-
-    local saved_widget = self:_create_widget("as_history_tab_saved", button_definition(saved_text, 718, 24, 146, 34, self._active_tab == "saved"))
-    saved_widget.content.hotspot.pressed_callback = function()
-        self:_set_tab("saved")
-    end
-    self._tab_widgets[#self._tab_widgets + 1] = saved_widget
+    self:_add_widget("as_history_background", UIWidget.create_definition(background_passes, "content", nil, { VIEW_W, VIEW_H }))
 
     if #entries == 0 then
-        local empty_id = self._active_tab == "saved" and "history_no_saved_entries"
+        local empty_id = self._class_filter and cache_ready and "history_no_class_entries"
+            or self._active_tab == "saved" and "history_no_saved_entries"
             or cache_ready and "history_no_entries"
             or "history_loading"
-        local empty = UIWidget.create_definition({
+        self:_add_widget("as_history_empty", UIWidget.create_definition({
             text_pass("empty", mod:localize(empty_id), 40, 120, BASE_Z + 4, VIEW_W - 80, 40, 20, COLORS.empty),
-        }, "content", nil, { VIEW_W, 180 })
-
-        self._empty_widget = self:_create_widget("as_history_empty", empty)
-        return
+        }, "content", nil, { VIEW_W, 180 }))
     end
 
     local visible_index = 0
     for entry_index = first_entry, last_entry do
         visible_index = visible_index + 1
         local definition, offset = self:_entry_definition(entries[entry_index], visible_index, History)
-        local widget = self:_create_widget("as_history_entry_" .. visible_index, definition)
+        local widget = self:_add_widget("as_history_entry_" .. visible_index, definition)
         widget.offset = offset
         widget.content.entry = entries[entry_index]
         widget.content.entry_hotspot.pressed_callback = function()
@@ -609,39 +558,51 @@ function HistoryView:_build()
         widget.content.save_hotspot.pressed_callback = function()
             self:_handle_saved_button(widget.content.entry)
         end
-        self._entry_widgets[#self._entry_widgets + 1] = widget
+    end
+
+    local recent_text = string.format("%s (%d)", mod:localize("history_tab_recent"), #recent_entries)
+    local saved_text = string.format("%s (%d)", mod:localize("history_tab_saved"), #saved_entries)
+    self:_add_button("as_history_tab_recent", recent_text, 570, 24, 140, 34, tab == "recent", function()
+        self:_set_tab("recent")
+    end)
+    self:_add_button("as_history_tab_saved", saved_text, 718, 24, 146, 34, tab == "saved", function()
+        self:_set_tab("saved")
+    end)
+    self:_build_class_filters()
+end
+
+function HistoryView:_build_class_filters()
+    local owned = {}
+    for i = 1, #CLASS_FILTERS do
+        if self._owned_classes[CLASS_FILTERS[i].name] then
+            owned[#owned + 1] = CLASS_FILTERS[i].name
+        end
+    end
+
+    local x = FILTER_RIGHT - FILTER_ALL_W - #owned * (FILTER_CLASS_W + FILTER_GAP)
+    self:_add_button("as_history_filter_all", mod:localize("history_filter_all"), x, FILTER_Y, FILTER_ALL_W, FILTER_H,
+        not self._class_filter, function()
+            self:_set_class_filter(nil)
+        end)
+    x = x + FILTER_ALL_W + FILTER_GAP
+
+    for i = 1, #owned do
+        local archetype_name = owned[i]
+        local icon = UISettings.archetype_font_icon[archetype_name] or "?"
+        self:_add_button("as_history_filter_" .. archetype_name, icon, x, FILTER_Y, FILTER_CLASS_W, FILTER_H,
+            self._class_filter == archetype_name, function()
+                self:_set_class_filter(archetype_name)
+            end, "itc_novarese_bold")
+        x = x + FILTER_CLASS_W + FILTER_GAP
     end
 end
 
 function HistoryView:_cleanup()
-    if self._background_widget then
-        self._widgets_by_name[self._background_widget.name] = nil
-        self:_unregister_widget_name(self._background_widget.name)
-        self._background_widget = nil
+    for _, widget in ipairs(self._history_widgets) do
+        self:_unregister_widget_name(widget.name)
     end
 
-    if self._empty_widget then
-        self._widgets_by_name[self._empty_widget.name] = nil
-        self:_unregister_widget_name(self._empty_widget.name)
-        self._empty_widget = nil
-    end
-
-    if self._entry_widgets then
-        for _, widget in ipairs(self._entry_widgets) do
-            self._widgets_by_name[widget.name] = nil
-            self:_unregister_widget_name(widget.name)
-        end
-    end
-
-    if self._tab_widgets then
-        for _, widget in ipairs(self._tab_widgets) do
-            self._widgets_by_name[widget.name] = nil
-            self:_unregister_widget_name(widget.name)
-        end
-    end
-
-    self._entry_widgets = {}
-    self._tab_widgets = {}
+    self._history_widgets = {}
 end
 
 function HistoryView:_draw_widgets(dt, t, input_service, ui_renderer, render_settings)
@@ -651,32 +612,10 @@ function HistoryView:_draw_widgets(dt, t, input_service, ui_renderer, render_set
 
     local alpha = self._alpha_multiplier or render_settings.alpha_multiplier or 1
 
-    if self._background_widget then
-        self._background_widget.alpha_multiplier = alpha
-        UIWidget.draw(self._background_widget, ui_renderer)
-    end
-
-    if self._empty_widget then
-        self._empty_widget.alpha_multiplier = alpha
-        UIWidget.draw(self._empty_widget, ui_renderer)
-    end
-
-    for i = 1, #self._entry_widgets do
-        local widget = self._entry_widgets[i]
+    for _, widget in ipairs(self._history_widgets) do
         widget.alpha_multiplier = alpha
         UIWidget.draw(widget, ui_renderer)
     end
-
-    for i = 1, #self._tab_widgets do
-        local widget = self._tab_widgets[i]
-        widget.alpha_multiplier = alpha
-        UIWidget.draw(widget, ui_renderer)
-    end
-
-end
-
-function HistoryView:dialogue_system()
-    return nil
 end
 
 return HistoryView

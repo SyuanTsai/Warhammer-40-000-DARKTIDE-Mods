@@ -2,14 +2,8 @@
 -- servo skull (bt_inject_syringe) and the Veteran shout talent (shout_ability). Both set
 -- assisted_state_input.force_assist on the server; clients only see their consequences.
 -- Attributed assists are passed to the recorder set by the main module.
-local mod = get_mod("AnotherScoreboard")
-
 local pairs = pairs
 local math_huge = math.huge
-local string_format = string.format
-
--- Diagnostics: set to true to log every observation to the console log and chat.
-local DEBUG = false
 
 local HELP_STATES = {
     knocked_down = true,
@@ -37,7 +31,6 @@ local _episodes = {}      -- target account id -> current help-state episode
 local _skull_claims = {}  -- target account id -> { owner_aid, owner_name, t }
 local _ability_uses = {}  -- account id -> last combat ability use time
 local _recorder
-local _names = {}         -- account id -> display name
 local _pending = {}       -- target account id -> finished episode awaiting a decision
 local _players = {}
 
@@ -48,12 +41,6 @@ end
 
 local function _account_id(player)
     return player and (player:account_id() or player:name()) or nil
-end
-
-local function _remember_name(player, aid)
-    if player and aid then
-        _names[aid] = player:name() or aid
-    end
 end
 
 local function _position(unit)
@@ -82,13 +69,6 @@ local function _has_talent(player, talent_name)
     return talents and talents[talent_name] ~= nil and talents[talent_name] ~= 0 or false
 end
 
-local function _report(line)
-    if DEBUG then
-        mod:info("[ForcedAssist] %s", line)
-        mod:echo("[AS2 forced assist] " .. line)
-    end
-end
-
 function Observer.reset()
     table.clear(_episodes)
     table.clear(_pending)
@@ -105,18 +85,9 @@ function Observer.set_recorder(recorder)
     _recorder = recorder
 end
 
-function Observer.on_ability_used(player, aid, t)
+function Observer.on_ability_used(_, aid, t)
     if aid and t then
         _ability_uses[aid] = t
-        _remember_name(player, aid)
-    end
-end
-
-function Observer.on_interaction_started(target_unit)
-    local target = _player_from_unit(target_unit)
-    local episode = target and _episodes[_account_id(target)]
-    if episode then
-        episode.interaction_started_t = _now()
     end
 end
 
@@ -138,13 +109,10 @@ function Observer.on_effect_started(template_name, unit)
     end
 
     local t = _now()
-    local owner = _player_from_unit(unit)
-    local owner_aid = _account_id(owner)
+    local owner_aid = _account_id(_player_from_unit(unit))
     if not t or not owner_aid then
-        _report("skull effect without resolvable owner")
         return
     end
-    _remember_name(owner, owner_aid)
 
     local best_aid, best_distance
     for aid, episode in pairs(_episodes) do
@@ -156,8 +124,6 @@ function Observer.on_effect_started(template_name, unit)
 
     if best_aid then
         _skull_claims[best_aid] = { owner_aid = owner_aid, t = t }
-        _report(string_format("skull of %s injecting %s (%.1f m, %s)", _names[owner_aid] or owner_aid,
-            _names[best_aid] or best_aid, best_distance, _episodes[best_aid].state))
     end
 end
 
@@ -186,9 +152,11 @@ local function _veteran_for(episode, t)
 end
 
 local function _finish_episode(aid, episode, new_state, t)
-    local target_name = _names[aid] or aid
     local by_interaction = episode.interaction_success_t
         and math.abs(episode.end_t - episode.interaction_success_t) <= INTERACTION_GRACE
+    -- A claim belongs to this episode only, however it ended.
+    local claim = _skull_claims[aid]
+    _skull_claims[aid] = nil
 
     if new_state == "dead" then
         return
@@ -198,23 +166,14 @@ local function _finish_episode(aid, episode, new_state, t)
         return
     end
 
-    local helper_aid, source
-    local claim = _skull_claims[aid]
+    local helper_aid
     if claim and t - claim.t <= SKULL_MATCH_WINDOW then
-        helper_aid, source = claim.owner_aid, "servo skull"
+        helper_aid = claim.owner_aid
     elseif episode.state == "knocked_down" then
         helper_aid = _veteran_for(episode, t)
-        source = helper_aid and "veteran shout" or nil
     end
-    _skull_claims[aid] = nil
-
-    local evidence = string_format("progress=%s interaction_started=%s forced_local=%s",
-        episode.progress_start_t and "yes" or "no", episode.interaction_started_t and "yes" or "no",
-        episode.forced_local and "yes" or "no")
 
     if not helper_aid then
-        _report(string_format("UNATTRIBUTED %s left %s -> %s without player interaction (%s)",
-            target_name, episode.state, tostring(new_state), evidence))
         return
     end
 
@@ -224,13 +183,11 @@ local function _finish_episode(aid, episode, new_state, t)
     if _recorder and kind ~= "ledge_pull_up" then
         _recorder(kind, helper_aid)
     end
-    _report(string_format("%s by %s: %s %s -> %s [%s] (%s)", kind, _names[helper_aid] or helper_aid,
-        target_name, episode.state, tostring(new_state), source, evidence))
 end
 
 -- Called from the player health fixed_update hooks for every player unit (local and husk).
-function Observer.sample(unit, player, state_name, unit_data_extension)
-    local aid = _account_id(player)
+function Observer.sample(unit, player, state_name, unit_data_extension, known_aid)
+    local aid = known_aid or _account_id(player)
     if not aid or not state_name then
         return
     end
@@ -248,8 +205,7 @@ function Observer.sample(unit, player, state_name, unit_data_extension)
         end
 
         if not episode or episode.state ~= state_name then
-            _remember_name(player, aid)
-            episode = { unit = unit, state = state_name, start_t = t, players = {} }
+            episode = { unit = unit, state = state_name, players = {} }
             _episodes[aid] = episode
         end
 
@@ -257,7 +213,6 @@ function Observer.sample(unit, player, state_name, unit_data_extension)
             local other_aid = _account_id(other)
             if other_aid then
                 episode.players[other_aid] = other
-                _remember_name(other, other_aid)
             end
         end
 
@@ -268,10 +223,6 @@ function Observer.sample(unit, player, state_name, unit_data_extension)
                 episode.progress_start_t = t
             end
             episode.in_progress = in_progress
-            -- Husk components only replicate in_progress; force_assist exists on the local unit.
-            if unit_data_extension:is_local_unit() and assisted.force_assist then
-                episode.forced_local = true
-            end
         end
     elseif episode then
         _episodes[aid] = nil
