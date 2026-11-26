@@ -547,7 +547,7 @@ return {
   },
   cs_hero_trial_boss_rush_ogryn_pack_master = {
     en = "Boss Rush - Ogryn Pack Master",
-    ["zh-tw"] = "首領連戰 - 歐格林馴犬師",
+    ["zh-tw"] = "首領連戰 - 歐格林獸群領主",
   },
   cs_hero_trial_hunting_grounds = {
     en = "Hunting Grounds",
