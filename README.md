@@ -131,14 +131,13 @@
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
-- MOD 網站最後更新日期：Last updated 17 August 2026, 4:20PM（目前瀏覽器顯示；UTC：2026-08-17T08:20:57Z；Asia/Taipei：2026-08-17 16:20:57；僅為 Nexus 上游正式版頁面資訊）
-- MOD 版本：1.11.0（LucLeto 社群公開測試版；Nexus 正式版：1.10.3）
-- MOD 檔案名稱：true_level.zip
-- 手動維護最後下載日期：2026-10-07
-- 來源類型：LucLeto 發布的 True Level 1.11.0 社群公開測試版；版本號與 ZIP 內 info.json 一致。
-- 社群來源：[Nexus True Level 1.11.0 公開測試貼文](https://www.nexusmods.com/warhammer40kdarktide/mods/156?tab=posts#comment-176898600)
-- 社群程式來源：[LucLeto/zombine04-darktide-mods](https://github.com/LucLeto/zombine04-darktide-mods/tree/f2a7b33848bbe46ff16baca4560ee808ee31ca33/true_level)；分支 `integration/true-level-havoc`；固定提交 `f2a7b33848bbe46ff16baca4560ee808ee31ca33`。
-- 來源欄位說明：Nexus 欄位僅記錄上游正式版參考；本次 ZIP 來自社群 GitHub fork，Main file ID 與 Main file uploaded at UTC 均不適用，記為 not-applicable。
+- MOD 網站最後更新日期：Last updated 09 October 2026, 08:34PM
+- MOD 版本：1.11.5
+- MOD 檔案名稱：True Level 156 1.11.5 2026-10-09T12-34Z oudzUunTm
+- 手動維護最後下載日期：2026-11-25
+- 來源類型：Nexus 正式主檔（Main file ID 8911，Main file uploaded at UTC 2026-10-09T12:34:22Z）
+- 歷史社群來源：[Nexus True Level 1.11.0 公開測試貼文](https://www.nexusmods.com/warhammer40kdarktide/mods/156?tab=posts#comment-176898600)
+- 歷史社群程式來源：[LucLeto/zombine04-darktide-mods](https://github.com/LucLeto/zombine04-darktide-mods/tree/f2a7b33848bbe46ff16baca4560ee808ee31ca33/true_level)；分支 `integration/true-level-havoc`；固定提交 `f2a7b33848bbe46ff16baca4560ee808ee31ca33`。
 - GitHub（原作者上游與個人 fork）:
 - Source=>  https://github.com/zombine04/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods
