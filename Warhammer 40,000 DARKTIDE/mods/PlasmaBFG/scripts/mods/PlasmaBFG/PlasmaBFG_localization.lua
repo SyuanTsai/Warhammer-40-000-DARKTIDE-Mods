@@ -12,16 +12,16 @@ return {
 		["zh-tw"] = "開火",
 	},
 	group_primary_fire_description = {
-		en = "Held-fire, charge timing, recoil, and spread settings.",
-		["zh-tw"] = "按住開火、充能時機、後座力與散布設定。",
+		en = "Charge and shot timing settings.",
+		["zh-tw"] = "充能與射擊時機設定。",
 	},
 	group_ammo = {
 		en = "Ammo",
 		["zh-tw"] = "彈藥",
 	},
 	group_ammo_description = {
-		en = "Ammo economy and empty-mag auto-reload settings.",
-		["zh-tw"] = "彈藥消耗與空彈匣自動換彈設定。",
+		en = "Ammo economy, reload speed, and empty-mag auto-reload settings.",
+		["zh-tw"] = "彈藥消耗、裝填速度與空彈匣自動換彈設定。",
 	},
 	group_venting = {
 		en = "Venting",
@@ -60,8 +60,8 @@ return {
 		["zh-tw"] = "下一發延遲",
 	},
 	primary_rechain_time_description = {
-		en = "How soon a primary shot can chain into the next charge. Lower is faster.",
-		["zh-tw"] = "主要射擊後多久可銜接下一次充能。數值越低越快。",
+		en = "How soon a primary shot can chain into the next charge. The effective delay is capped just below Shot Recovery.",
+		["zh-tw"] = "主要射擊後多久可銜接下一次充能。實際延遲上限略低於射擊恢復時間。",
 	},
 	primary_sprint_ready_up_time = {
 		en = "Sprint Lockout",
@@ -78,30 +78,6 @@ return {
 	primary_charge_sprint_ready_up_time_description = {
 		en = "Delay after starting a primary charge before sprint handling returns.",
 		["zh-tw"] = "開始主要充能後恢復衝刺操作的延遲。",
-	},
-	held_primary_assist_enabled = {
-		en = "Hold To Fire",
-		["zh-tw"] = "按住開火",
-	},
-	held_primary_assist_enabled_description = {
-		en = "Hold primary to keep firing. Preserves held-fire intent through reloads and vents using weapon action hooks instead of a rate timer.",
-		["zh-tw"] = "按住主要射擊即可持續開火。換彈或散熱完成後，會自動延續先前的開火指令。",
-	},
-	recoil_multiplier = {
-		en = "Recoil Scale",
-		["zh-tw"] = "後座力倍率",
-	},
-	recoil_multiplier_description = {
-		en = "Scales Plasma recoil. Lower means less kick.",
-		["zh-tw"] = "調整電漿槍後座力。數值越低後座越小。",
-	},
-	spread_multiplier = {
-		en = "Spread Scale",
-		["zh-tw"] = "散布倍率",
-	},
-	spread_multiplier_description = {
-		en = "Scales Plasma spread. Lower means tighter shots.",
-		["zh-tw"] = "調整電漿槍散布。數值越低彈著越集中。",
 	},
 	primary_ammo_cost = {
 		en = "Primary Ammo Cost",
@@ -126,6 +102,14 @@ return {
 	ammo_pool_multiplier_description = {
 		en = "Multiplies loaded ammo and reserve ammo.",
 		["zh-tw"] = "調整已裝填彈藥與備用彈藥倍率。",
+	},
+	reload_speed_multiplier = {
+		en = "Reload Speed",
+		["zh-tw"] = "裝填速度",
+	},
+	reload_speed_multiplier_description = {
+		en = "Multiplies reload speed.",
+		["zh-tw"] = "裝填速度的倍率。",
 	},
 	auto_reload_empty_enabled = {
 		en = "Auto-Reload Empty",

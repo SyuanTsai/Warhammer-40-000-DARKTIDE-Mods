@@ -2,6 +2,7 @@
 
 local mod = get_mod("PlasmaBFG")
 local Ammo = require("scripts/utilities/ammo")
+local ActionHandlerSettings = require("scripts/settings/action/action_handler_settings")
 
 local PLASMA_TEMPLATE_NAMES = {
 	plasmagun_p1_m1 = true,
@@ -21,7 +22,6 @@ local PRIMARY_SHOT_TOTAL_TIME_SETTING = "primary_shot_total_time"
 local PRIMARY_RECHAIN_TIME_SETTING = "primary_rechain_time"
 local PRIMARY_SPRINT_READY_UP_TIME_SETTING = "primary_sprint_ready_up_time"
 local PRIMARY_CHARGE_SPRINT_READY_UP_TIME_SETTING = "primary_charge_sprint_ready_up_time"
-local HELD_PRIMARY_ASSIST_ENABLED_SETTING = "held_primary_assist_enabled"
 local AUTO_VENT_ENABLED_SETTING = "auto_vent_enabled"
 local AUTO_VENT_START_PERCENT_SETTING = "auto_vent_start_percent"
 local PRIMARY_CHARGE_DURATION_BASIC_SETTING = "primary_charge_duration_basic"
@@ -42,11 +42,12 @@ local PRIMARY_AMMO_COST_SETTING = "primary_ammo_cost"
 local CHARGED_AMMO_MAX_SETTING = "charged_ammo_max"
 local AMMO_POOL_MULTIPLIER_SETTING = "ammo_pool_multiplier"
 local AUTO_RELOAD_EMPTY_ENABLED_SETTING = "auto_reload_empty_enabled"
-local RECOIL_MULTIPLIER_SETTING = "recoil_multiplier"
-local SPREAD_MULTIPLIER_SETTING = "spread_multiplier"
+local RELOAD_SPEED_MULTIPLIER_SETTING = "reload_speed_multiplier"
+local MIN_PRECISION_MULTIPLIER = 0.05
 local VENT_DAMAGE_MULTIPLIER_SETTING = "vent_damage_multiplier"
 local VENT_SPEED_MULTIPLIER_SETTING = "vent_speed_multiplier"
 local OVERHEAT_GUARD_MARGIN = 0.01
+local PRIMARY_RECHAIN_MARGIN = 0.05
 local EXPLOSION_TEMPLATE_NAMES = {
 	"plasma_rifle",
 	"plasma_rifle_exit",
@@ -95,10 +96,6 @@ local SETTING_DEFINITIONS = {
 		max = 1.0,
 		min = 0.0,
 		value_type = "number",
-	},
-	[HELD_PRIMARY_ASSIST_ENABLED_SETTING] = {
-		default = true,
-		value_type = "boolean",
 	},
 	[AUTO_VENT_ENABLED_SETTING] = {
 		default = true,
@@ -206,21 +203,15 @@ local SETTING_DEFINITIONS = {
 		min = 1.0,
 		value_type = "number",
 	},
+	[RELOAD_SPEED_MULTIPLIER_SETTING] = {
+		default = 1.5,
+		max = 2.0,
+		min = 1.0,
+		value_type = "number",
+	},
 	[AUTO_RELOAD_EMPTY_ENABLED_SETTING] = {
 		default = true,
 		value_type = "boolean",
-	},
-	[RECOIL_MULTIPLIER_SETTING] = {
-		default = 1.0,
-		max = 1.0,
-		min = 0.05,
-		value_type = "number",
-	},
-	[SPREAD_MULTIPLIER_SETTING] = {
-		default = 1.0,
-		max = 1.0,
-		min = 0.05,
-		value_type = "number",
 	},
 	[VENT_DAMAGE_MULTIPLIER_SETTING] = {
 		default = 1.0,
@@ -267,6 +258,7 @@ local mod_enabled = true
 
 local state = {
 	ads_held = false,
+	alternate_fire_component = nil,
 	auto_venting = false,
 	inventory_slot_component = nil,
 	post_ads_shot_vent = false,
@@ -274,11 +266,11 @@ local state = {
 	queued_press = false,
 	resume_after_reload = false,
 	resume_after_vent = false,
-	trigger_hold_started_t = 0,
 	trigger_held = false,
 	weapon_extension = nil,
 	weapon_template = nil,
 	wielded_slot = nil,
+	synthetic_ads_active = false,
 }
 
 local loaded_templates = {
@@ -300,6 +292,8 @@ local original_template_values = {
 	spread_templates = nil,
 	weapon_templates = {},
 }
+
+local original_vent_damage = {}
 
 local function deep_copy(value)
 	if type(value) ~= "table" then
@@ -357,10 +351,6 @@ end
 
 local function auto_reload_empty_enabled()
 	return get_setting_value(AUTO_RELOAD_EMPTY_ENABLED_SETTING)
-end
-
-local function held_primary_assist_enabled()
-	return get_setting_value(HELD_PRIMARY_ASSIST_ENABLED_SETTING)
 end
 
 local function primary_bfg_impact_enabled()
@@ -557,8 +547,6 @@ local function capture_weapon_template_defaults(weapon_template)
 	local primary_chain_actions = action_shoot and action_shoot.allowed_chain_actions
 	local rechain_charge = primary_chain_actions and primary_chain_actions.shoot_charge
 	local overheat_configuration = weapon_template and weapon_template.overheat_configuration
-	local vent_damage_profile = overheat_configuration and overheat_configuration.vent_damage_profile
-	local proficiency_vent_damage_profile = overheat_configuration and overheat_configuration.proficiency_vent_damage_profile
 
 	original_template_values.weapon_templates[template_name] = {
 		action_charge_direct_sprint_ready_up_time = action_charge_direct and action_charge_direct.sprint_ready_up_time,
@@ -579,11 +567,8 @@ local function capture_weapon_template_defaults(weapon_template)
 		overheat_explode_action = overheat_configuration and overheat_configuration.explode_action,
 		overheat_vent_duration = overheat_configuration and overheat_configuration.vent_duration,
 		overheat_vent_interval = overheat_configuration and overheat_configuration.vent_interval,
-		vent_damage_attack = vent_damage_profile and vent_damage_profile.power_distribution and vent_damage_profile.power_distribution.attack,
-		vent_damage_toughness_multiplier = vent_damage_profile and vent_damage_profile.toughness_multiplier,
-		proficiency_vent_damage_attack = proficiency_vent_damage_profile and proficiency_vent_damage_profile.power_distribution and proficiency_vent_damage_profile.power_distribution.attack,
-		proficiency_vent_damage_toughness_multiplier = proficiency_vent_damage_profile and proficiency_vent_damage_profile.toughness_multiplier,
 		primary_rechain_time = rechain_charge and rechain_charge.chain_time,
+		alternate_fire_settings = weapon_template.alternate_fire_settings,
 	}
 end
 
@@ -754,7 +739,7 @@ local function apply_recoil_template_settings()
 	end
 
 	local base_templates = templates.base_templates
-	local multiplier = mod_enabled and get_setting_value(RECOIL_MULTIPLIER_SETTING) or 1
+	local multiplier = mod_enabled and MIN_PRECISION_MULTIPLIER or 1
 
 	apply_recoil_to_still_template(base_templates and base_templates.default_plasma_rifle_bfg and base_templates.default_plasma_rifle_bfg.still, original_values.default_plasma_rifle_bfg and original_values.default_plasma_rifle_bfg.still, multiplier)
 	apply_recoil_to_still_template(base_templates and base_templates.default_plasma_rifle_demolitions and base_templates.default_plasma_rifle_demolitions.still, original_values.default_plasma_rifle_demolitions and original_values.default_plasma_rifle_demolitions.still, multiplier)
@@ -833,7 +818,7 @@ local function apply_spread_template_settings()
 	end
 
 	local base_templates = templates.base_templates
-	local multiplier = mod_enabled and get_setting_value(SPREAD_MULTIPLIER_SETTING) or 1
+	local multiplier = mod_enabled and MIN_PRECISION_MULTIPLIER or 1
 
 	apply_spread_to_template(base_templates and base_templates.default_plasma_rifle_bfg, original_values.default_plasma_rifle_bfg, multiplier)
 	apply_spread_to_template(base_templates and base_templates.default_plasma_rifle_demolitions, original_values.default_plasma_rifle_demolitions, multiplier)
@@ -894,6 +879,28 @@ local function apply_hitscan_template_settings()
 	end
 end
 
+local function apply_vent_damage(profile, multiplier)
+	local power_distribution = profile and profile.power_distribution
+
+	if not power_distribution then
+		return
+	end
+
+	-- Both Plasma marks reference the same profiles.
+	local original = original_vent_damage[profile]
+
+	if not original then
+		original = {
+			attack = power_distribution.attack,
+			toughness_multiplier = profile.toughness_multiplier,
+		}
+		original_vent_damage[profile] = original
+	end
+
+	power_distribution.attack = scaled_value(original.attack, multiplier)
+	profile.toughness_multiplier = scaled_value(original.toughness_multiplier, multiplier)
+end
+
 local function apply_weapon_template_settings(weapon_template)
 	local template_name = weapon_template and weapon_template.name
 	local original_values = template_name and original_template_values.weapon_templates[template_name]
@@ -912,6 +919,20 @@ local function apply_weapon_template_settings(weapon_template)
 	local action_overheat_explode = actions and actions.action_overheat_explode
 	local overheat_configuration = weapon_template.overheat_configuration
 
+	if mod_enabled then
+		if not weapon_template.alternate_fire_settings then
+			weapon_template.alternate_fire_settings = {
+				recoil_template = weapon_template.recoil_template,
+				spread_template = weapon_template.spread_template,
+				suppression_template = weapon_template.suppression_template,
+				sway_template = weapon_template.sway_template,
+				toughness_template = weapon_template.toughness_template,
+			}
+		end
+	else
+		weapon_template.alternate_fire_settings = original_values.alternate_fire_settings
+	end
+
 	if action_charge_direct then
 		action_charge_direct.sprint_ready_up_time = configured_or_original(PRIMARY_CHARGE_SPRINT_READY_UP_TIME_SETTING, original_values.action_charge_direct_sprint_ready_up_time)
 	end
@@ -926,7 +947,13 @@ local function apply_weapon_template_settings(weapon_template)
 		local rechain_charge = primary_chain_actions and primary_chain_actions.shoot_charge
 
 		if rechain_charge then
-			rechain_charge.chain_time = configured_or_original(PRIMARY_RECHAIN_TIME_SETTING, original_values.primary_rechain_time)
+			if mod_enabled then
+				local latest_chain_time = action_shoot.total_time - PRIMARY_RECHAIN_MARGIN
+
+				rechain_charge.chain_time = math.min(get_setting_value(PRIMARY_RECHAIN_TIME_SETTING), latest_chain_time)
+			else
+				rechain_charge.chain_time = original_values.primary_rechain_time
+			end
 		end
 	end
 
@@ -963,19 +990,10 @@ local function apply_weapon_template_settings(weapon_template)
 		overheat_configuration.vent_interval = scaled_value(original_values.overheat_vent_interval, mod_enabled and vent_speed_multiplier() or 1)
 		overheat_configuration.explode_action = mod_enabled and disable_overheat_explosion_enabled() and "action_vent_override" or original_values.overheat_explode_action
 
-		local vent_damage_profile = overheat_configuration.vent_damage_profile
+		local damage_multiplier = mod_enabled and vent_damage_multiplier() or 1
 
-		if vent_damage_profile and vent_damage_profile.power_distribution then
-			vent_damage_profile.power_distribution.attack = scaled_value(original_values.vent_damage_attack, mod_enabled and vent_damage_multiplier() or 1)
-			vent_damage_profile.toughness_multiplier = scaled_value(original_values.vent_damage_toughness_multiplier, mod_enabled and vent_damage_multiplier() or 1)
-		end
-
-		local proficiency_vent_damage_profile = overheat_configuration.proficiency_vent_damage_profile
-
-		if proficiency_vent_damage_profile and proficiency_vent_damage_profile.power_distribution then
-			proficiency_vent_damage_profile.power_distribution.attack = scaled_value(original_values.proficiency_vent_damage_attack, mod_enabled and vent_damage_multiplier() or 1)
-			proficiency_vent_damage_profile.toughness_multiplier = scaled_value(original_values.proficiency_vent_damage_toughness_multiplier, mod_enabled and vent_damage_multiplier() or 1)
-		end
+		apply_vent_damage(overheat_configuration.vent_damage_profile, damage_multiplier)
+		apply_vent_damage(overheat_configuration.proficiency_vent_damage_profile, damage_multiplier)
 	end
 
 	if action_charge then
@@ -1025,9 +1043,34 @@ end
 
 local function gameplay_time()
 	local time_manager = Managers and Managers.time
-	local ok, time = time_manager and pcall(time_manager.time, time_manager, "gameplay")
+	if not time_manager then
+		return 0
+	end
+
+	local ok, time = pcall(time_manager.time, time_manager, "gameplay")
 
 	return ok and time or 0
+end
+
+local function set_plasma_ads_compatibility(active)
+	local alternate_fire_component = state.alternate_fire_component
+	local should_be_active = mod_enabled and active
+
+	if not alternate_fire_component then
+		return
+	end
+
+	if should_be_active then
+		if not alternate_fire_component.is_active then
+			alternate_fire_component.start_t = gameplay_time()
+		end
+
+		alternate_fire_component.is_active = true
+		state.synthetic_ads_active = true
+	elseif state.synthetic_ads_active then
+		alternate_fire_component.is_active = false
+		state.synthetic_ads_active = false
+	end
 end
 
 local function is_local_unit(unit)
@@ -1037,7 +1080,9 @@ local function is_local_unit(unit)
 end
 
 local function clear_weapon_state()
+	set_plasma_ads_compatibility(false)
 	state.ads_held = false
+	state.alternate_fire_component = nil
 	state.auto_venting = false
 	state.inventory_slot_component = nil
 	state.post_ads_shot_vent = false
@@ -1045,11 +1090,11 @@ local function clear_weapon_state()
 	state.queued_press = false
 	state.resume_after_reload = false
 	state.resume_after_vent = false
-	state.trigger_hold_started_t = 0
 	state.trigger_held = false
 	state.weapon_extension = nil
 	state.weapon_template = nil
 	state.wielded_slot = nil
+	state.synthetic_ads_active = false
 end
 
 local function reset_runtime()
@@ -1093,6 +1138,7 @@ local function refresh_plasma_state(optional_weapon_extension)
 	state.inventory_slot_component = weapon.inventory_slot_component
 	state.player_unit = weapon_extension._unit
 	state.weapon_extension = weapon_extension
+	state.alternate_fire_component = weapon_extension._alternate_fire_write_component
 	state.weapon_template = weapon_template
 	state.wielded_slot = wielded_slot
 
@@ -1115,7 +1161,7 @@ local function cancel_resume_after_reload()
 end
 
 local function queue_primary_press_if_held()
-	if held_primary_assist_enabled() and state.trigger_held and not state.ads_held then
+	if state.trigger_held and not state.ads_held then
 		state.queued_press = true
 
 		return true
@@ -1160,8 +1206,7 @@ local function can_resume_primary_after_reload(current_action, should_auto_reloa
 end
 
 local function can_start_primary_from_held(current_action, should_auto_reload)
-	return held_primary_assist_enabled()
-		and state.trigger_held
+	return state.trigger_held
 		and not state.ads_held
 		and not state.auto_venting
 		and not should_auto_reload
@@ -1503,17 +1548,12 @@ local function get_raw_input(input_service, action_name)
 end
 
 local function mark_primary_trigger_held()
-	if not state.trigger_held then
-		state.trigger_hold_started_t = gameplay_time()
-	end
-
 	state.trigger_held = true
 end
 
 local function clear_primary_trigger_hold()
 	state.trigger_held = false
 	state.queued_press = false
-	state.trigger_hold_started_t = 0
 	cancel_resume_after_reload()
 	cancel_resume_after_vent()
 end
@@ -1549,6 +1589,7 @@ local function update_manual_input_state(action_name, raw_value)
 		clear_primary_trigger_hold()
 	elseif action_name == "action_two_hold" then
 		state.ads_held = raw_value and true or false
+		set_plasma_ads_compatibility(state.ads_held)
 
 		if raw_value then
 			state.queued_press = false
@@ -1623,15 +1664,7 @@ local function controlled_input(action_name, raw_value)
 	return raw_value
 end
 
-mod.on_setting_changed = function(setting_id)
-	if setting_id == HELD_PRIMARY_ASSIST_ENABLED_SETTING and not held_primary_assist_enabled() then
-		state.queued_press = false
-		cancel_resume_after_reload()
-		cancel_resume_after_vent()
-	end
-
-	apply_loaded_plasma_settings()
-end
+mod.on_setting_changed = apply_loaded_plasma_settings
 
 mod.on_enabled = function()
 	mod_enabled = true
@@ -1654,6 +1687,27 @@ mod:hook_safe(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(self)
 		clear_weapon_state()
 		refresh_plasma_state(self)
 	end
+end)
+
+mod:hook(CLASS.ActionHandler, "_calculate_time_scale", function(func, self, action_settings)
+	local time_scale = func(self, action_settings)
+
+	if not mod_enabled or action_settings.kind ~= "reload_state" or not is_local_unit(self._unit) or not refresh_plasma_state(self._weapon_extension) then
+		return time_scale
+	end
+
+	local actions = state.weapon_template.actions
+
+	if not actions or actions[RELOAD_ACTION] ~= action_settings then
+		return time_scale
+	end
+
+	local network_limit = NetworkConstants.action_time_scale.max
+	local gameplay_limit = ActionHandlerSettings.gameplay_time_scale_limits.reload_state or network_limit
+	local reload_limit = math.min(network_limit, gameplay_limit)
+	local boosted_time_scale = time_scale * get_setting_value(RELOAD_SPEED_MULTIPLIER_SETTING)
+
+	return math.max(time_scale, math.min(boosted_time_scale, reload_limit))
 end)
 
 mod:hook(CLASS.ActionHandler, "start_action", function(func, self, id, action_objects, action_name, action_params, action_settings, used_input, t, transition_type, condition_func_params, automatic_input, reset_combo_override)
@@ -1736,6 +1790,10 @@ local function input_hook(func, self, action_name)
 	local ui_manager = Managers and Managers.ui
 
 	if ui_manager and ui_manager:using_input() then
+		clear_primary_trigger_hold()
+		state.ads_held = false
+		set_plasma_ads_compatibility(false)
+
 		return func(self, action_name)
 	end
 
@@ -1754,7 +1812,6 @@ local function input_hook(func, self, action_name)
 end
 
 mod:hook(CLASS.InputService, "_get", input_hook)
-mod:hook(CLASS.InputService, "_get_simulate", input_hook)
 
 mod:hook_require("scripts/settings/equipment/weapon_handling_templates/weapon_ammo_templates", function(ammo_templates)
 	loaded_templates.ammo_templates = ammo_templates
