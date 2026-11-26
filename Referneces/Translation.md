@@ -33,6 +33,7 @@
 - Center - 中心(用於表達畫面位置時)/中央(用於表達遊戲區域)
 - explosive - 爆炸桶(用於描述遊戲中的爆裂物)
 - Fire Barrel - 燃燒桶(用於描述遊戲中的燃燒爆裂物)
+- Shot Recovery - 射擊恢復(PlasmaBFG 設定名稱)
 
 ##### MOD Enhanced descriptions 專用詞表
 - Previous Missions - 歷史任務
