@@ -1,0 +1,13 @@
+nexus_id=100
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/100
+nexus_page_version=2.3.2
+nexus_last_updated=2025-03-30T15:53:39Z
+main_file_id=2959
+version=2.3.2
+main_file_uploaded_at_utc=2025-03-30T15:53:39Z
+filename=Buy Until Rating-100-2-3-2-1743350019.zip
+size_bytes=7173
+sha256=f06e7a7240a98159a0b803531e7f925c87aac2362a579823f2884b9f21b0cb5f
+acquisition_method=drive-intake
+drive_intake_md5=16a33a3b10f4cd8690fbe4c90147d609
+repo_directory=buy_until_rating
