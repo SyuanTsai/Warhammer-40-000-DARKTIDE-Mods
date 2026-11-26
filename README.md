@@ -629,15 +629,15 @@
 
 ### [Show CJK Glyphs](https://www.nexusmods.com/warhammer40kdarktide/mods/149)
     顯示亞洲區域字型
-- MOD 網站最後更新日期：Last updated 16 April 2025, 10:35PM
-- MOD 版本：1.0.3
+- MOD 網站最後更新日期：Last updated 08 May 2023, 12:51PM
+- MOD 版本：2.0.2
 - MOD 檔案名稱：show_cjk_glyphs-149-2-0-2-1683521516
 - 手動維護最後下載日期：2026-07-14
 
 ### [Simple Speed Meter](https://www.nexusmods.com/warhammer40kdarktide/mods/404)
     顯示移動速度(用於比較不同武器的移動)
-- MOD 網站最後更新日期：Last updated 08 May 2023, 12:51PM
-- MOD 版本：2.02
+- MOD 網站最後更新日期：Last updated 16 April 2025, 10:35PM
+- MOD 版本：1.0.3
 - MOD 檔案名稱：SimpleSpeedMeter-404-1-0-3-1744814116
 - 手動維護最後下載日期：2026-07-14
 

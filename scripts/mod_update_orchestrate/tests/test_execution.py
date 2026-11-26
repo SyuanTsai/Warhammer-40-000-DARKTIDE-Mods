@@ -124,6 +124,12 @@ class ExecutionTests(unittest.TestCase):
             args = ["process", "--nexus-id", "123", "--issue", "7", "--file-id", "9001", "--review-mode", mode]
             return main([*args, "--dry-run"] if dry_run else args, root=self.root)
 
+    def test_pr_title_uses_unknown_for_missing_baseline_version(self):
+        self.mod.baseline_version = None
+        self.loc.translate.return_value = (0, {}, READY)
+        self.assertEqual(self.run_update(), 0)
+        self.assertIn("未知 → 2", self.github.write_pr.call_args.args[2])
+
     def test_UnitT31_unknown_terms_apply_publish_and_open_review(self):
         self.loc.translate.return_value = (0, {"unknownTerms": [FLAGGED]}, READY)
         self.assertEqual(self.run_update(), 0)

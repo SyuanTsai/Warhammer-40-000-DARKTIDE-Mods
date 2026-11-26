@@ -88,6 +88,25 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(mods[13].source, "override")
         self.assertNotIn(13, [entry.nexus_id for entry in unmapped])
 
+    def test_readme_version_checks_identifiable_filenames(self):
+        readme = self.root / "README.md"
+        for filename, expected, warns in (
+            ("Example.zip-123-V1-0-3-1744814116.rar", "v1.0.3", False),
+            ("Example 123 2.0.2 2025-04-16T14-35Z receipt", None, True),
+            ("Example-124-2-0-2-1744814116", "v1.0.3", False),
+            ("Example-123-special-build-1744814116", "v1.0.3", False),
+        ):
+            with self.subTest(filename=filename):
+                readme.write_text(
+                    "### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n"
+                    "- MOD 版本：Version v1.0.3\n"
+                    f"- MOD 檔案名稱：{filename}\n", encoding="utf-8")
+                with patch("scripts.mod_update_watch.registry.LOGGER.warning") as warning:
+                    mods, _ = load_registry(self.root)
+                self.assertEqual(next(mod for mod in mods if mod.nexus_id == 123).baseline_version,
+                                 expected)
+                self.assertEqual(warning.call_count, int(warns))
+
     def test_UnitT35_overrides_apply_to_hash_only_entries(self):
         """Scenario: Given two hash-only entries, when loading, then remap one and ignore the other.
         Purpose: Confirm overrides take precedence over name matching while preserving the hash baseline.
@@ -291,7 +310,12 @@ class RecordedRunTests(unittest.TestCase):
         """Scenario: Given real metadata from run 45591480761, load each MOD baseline.
         Purpose: Reject the foreign timestamp for 163 and use the exact available metadata.
         """
-        mods = {mod.nexus_id: mod for mod in load_registry(self.root)[0]}
+        with self.assertLogs("scripts.mod_update_watch.registry", "WARNING") as warnings:
+            mods = {mod.nexus_id: mod for mod in load_registry(self.root)[0]}
+        self.assertIn("Nexus 404 | Simple Speed Meter | README 版本 2.02 與檔名版本 1.0.3 不一致",
+                      "\n".join(warnings.output))
+        self.assertIsNone(mods[404].baseline_version)
+        self.assertTrue(mods[404].has_baseline)
         self.assertEqual(set(mods), {22, 25, 163, 181, 281, 404, 511})
         self.assertEqual(mods[181].source, "override")
         self.assertIsNone(mods[25].baseline_main_file_id)
@@ -316,7 +340,8 @@ class RecordedRunTests(unittest.TestCase):
 
         summary = self.root / "summary.md"
         env = {"NEXUS_API_KEY": "fixture-placeholder", "GITHUB_STEP_SUMMARY": str(summary)}
-        with patch.dict("os.environ", env, clear=True), redirect_stdout(StringIO()) as output:
+        with (patch.dict("os.environ", env, clear=True), redirect_stdout(StringIO()) as output,
+              self.assertLogs("scripts.mod_update_watch.registry", "WARNING")):
             self.assertEqual(main(["--full-scan", "--dry-run"], root=self.root,
                                   nexus_transport=nexus_transport, github_transport=github_transport), 0)
         self.assertEqual(output.getvalue().splitlines(), [
@@ -325,11 +350,11 @@ class RecordedRunTests(unittest.TestCase):
         report = summary.read_text(encoding="utf-8")
         for item in ("候選數：7", "更新數：1\n", "## 缺少基準", "## 備註（notes）",
                      "Nexus 511 | Better Hud Info View", "8665 → 9999",
-                     "Nexus 404 | Simple Speed Meter", "Nexus 163 | What The Localization",
+                     "Nexus 163 | What The Localization",
                      "版本不一致但上傳時間未晚於基準"):
             self.assertIn(item, report)
         notes = report.split("## 備註（notes）", 1)[1].split("##", 1)[0]
         self.assertCountEqual(
             [line.split(" | ", 1)[0] for line in notes.splitlines() if line],
-            ["- Nexus 511", "- Nexus 404", "- Nexus 163"],
+            ["- Nexus 511", "- Nexus 163"],
         )
