@@ -328,10 +328,10 @@
 
 ### [Default To Highest Blessing Tier](https://www.nexusmods.com/warhammer40kdarktide/mods/364)
     預設天賦在第四層，避免沒注意到用了第一層天賦
-- MOD 網站最後更新日期：Last updated 29 January 2025 4:18AM
-- MOD 版本：1.0.2
-- MOD 檔案名稱：DefaultToHighestBlessingTier-364-1-0-2-1738124336
-- 手動維護最後下載日期：2025-02-23
+- MOD 網站最後更新日期：Last updated 25 October 2026, 09:54PM
+- MOD 版本：1.0.3
+- MOD 檔案名稱：DefaultToHighestBlessingTier 364 1.0.3 2026-10-25T13-54Z sXjHdXzGA
+- 手動維護最後下載日期：2026-11-25
 
 ### [Buy Until Rating](https://www.nexusmods.com/warhammer40kdarktide/mods/100)
     自動購買你要的武器(五維)
