@@ -18,7 +18,7 @@ from .merge import private_changes
 from .pr import UNRESOLVED_THREADS, commit_tree, push, remote_head, should_merge, stage_raw
 from .process import latest
 from .records import mark_private_readme, update_hash
-from .report import api_usage, blocked_units, cell, plain, workset_actions
+from .report import api_usage, blocked_units, cell, plain, unquoted_note, workset_actions
 from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
 
 MARKER = "mod-private-fix:pr"
@@ -87,7 +87,10 @@ def translate_private(root, workspace, skill, mod_path, tree, before, nexus_id, 
             blocked = blocked_units(doc, summary)
             if blocked:
                 return None, None, report, blocked
-            return loc.relative, loc.apply(doc, summary), report + ["- Apply、Receipt 通過。"], []
+            merged, unquoted_keys = loc.apply(doc, summary)
+            if unquoted_keys:
+                report.append(f"- {unquoted_note(unquoted_keys)}")
+            return loc.relative, merged, report + ["- Apply、Receipt 通過。"], []
         except LocalizationError as error:
             return None, None, report, [f"- {cell(error)}"]
 

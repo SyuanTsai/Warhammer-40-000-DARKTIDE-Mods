@@ -153,7 +153,8 @@ class ExecutionTests(unittest.TestCase):
         ready = {"units": [], "translationBinding": {"rulesSha256": "rules", "glossarySha256": "terms"}}
         self.loc.translate.return_value = (0, {}, ready)
         self.loc.generate.return_value = ready
-        self.loc.relative, self.loc.apply.return_value = "Example_localization.lua", b"translation\r\n"
+        self.loc.relative = "Example_localization.lua"
+        self.loc.apply.return_value = (b"translation\r\n", ["combat_duration", "stim_trigger_mode"])
         receipt = self.enterContext(patch("scripts.mod_update_orchestrate.process.latest_receipt"))
         receipt.return_value = RECEIPT
         self.enterContext(patch("scripts.mod_update_orchestrate.process.matches_issue", return_value=True))
@@ -182,6 +183,7 @@ class ExecutionTests(unittest.TestCase):
         self.assertIn("偵測到私人修正", body)
         self.assertIn("Example.mod", body)
         self.assertIn(f"- {self.loc.relative} ｜ {FALLBACK_NOTE}", body)
+        self.assertIn(f"- {self.loc.relative} ｜ 已自動去除多餘外層引號：combat_duration、stim_trigger_mode", body)
         saved = _read_hash(hash_file)
         self.assertEqual((saved["private_fix"], saved["private_fix_commit"]), ("true", "old"))
         self.assertNotIn("source_url", saved)

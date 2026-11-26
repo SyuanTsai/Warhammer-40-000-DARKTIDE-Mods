@@ -22,7 +22,7 @@ from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
 from .pr import branch_for, current_pr, publish, stage_raw, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
-from .report import blocked_units, cell, plain, pr_body
+from .report import blocked_units, cell, plain, pr_body, unquoted_note
 from .section import DEFAULT_SECTION, choose_section, describe
 from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
 
@@ -187,7 +187,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         pending = blocked_units(document, summary)
         if pending:
             raise NeedsHuman("localization", "有未核准或 BLOCKED 項目。\n\n" + "\n".join(pending))
-        applied = loc.apply(document, summary)
+        applied, unquoted_keys = loc.apply(document, summary)
         layout_base = None if route == "new" else ours.get(loc.relative)
         merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
 
@@ -229,6 +229,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
                     if not is_localization(path) or delta == FORMAT_ONLY or MIXED_EOL in delta]
     if layout_note:
         code_changes.append((loc.relative, layout_note))
+    if unquoted_keys:
+        code_changes.append((loc.relative, unquoted_note(unquoted_keys)))
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
                    private_files=private_files, private_recorded=private_recorded)
