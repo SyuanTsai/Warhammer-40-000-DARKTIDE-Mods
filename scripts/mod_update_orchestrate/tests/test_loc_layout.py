@@ -5,7 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts.mod_update_orchestrate.eol import repo_bytes
-from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE, preserve_layout
+from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE, _Parser, preserve_layout
 from scripts.mod_update_orchestrate.report import pr_body
 
 
@@ -161,7 +161,7 @@ class LocalizationLayoutTests(unittest.TestCase):
     def test_UnitT60_unsafe_layout_falls_back_and_reports(self):
         # Given
         unsupported = [APPLIED.replace(b'"One"', b'[[first\nsecond]]'),
-                       APPLIED.replace(b'"One"', b'{ nested = "One" }'),
+                       APPLIED.replace(b'"One"', b'{ nested = ("One" }'),
                        APPLIED.replace(b'    one = {', b'    [Settings.One] = {'),
                        b"return {\n    one = make_entry(),\n}\n",
                        APPLIED.replace(b'        en = "One",', b'        en = "One",\n        en = "Other",'),
@@ -243,13 +243,13 @@ class LocalizationLayoutTests(unittest.TestCase):
                 self.assertEqual((output, note),
                                  (applied_prefix + literal.replace(b'"One"', b'"Updated"') + applied_tail, ""))
 
-    # Scenario: The final return does not identify exactly one local literal declaration.
+    # Scenario: The final return does not identify an unambiguous literal assignment.
     # Purpose: Fall back without guessing which table to rearrange.
     def test_UnitT85_named_local_table_requires_unique_matching_declaration(self):
         # Given
         declaration = APPLIED.replace(b"return {", b"local x = {")
         unsupported = (declaration + b"return y\n",
-                       declaration.removeprefix(b"local ") + b"return x\n",
+                       declaration + b"x = {}\nreturn x\n",
                        declaration + b"local x = {}\nreturn x\n")
         for applied in unsupported:
             with self.subTest(applied=applied):
@@ -292,3 +292,57 @@ class LocalizationLayoutTests(unittest.TestCase):
                 self.assertLess(body.index(b"en ="), body.index(b'["zh-tw"] ='))
         self.assertEqual(output.split(b"local _add_child_loc", 1)[1],
                          applied.split(b"local _add_child_loc", 1)[1])
+
+    def test_UnitT100_main_localization_layouts(self):
+        # Before blobs are unchanged from origin/main at 57cf106. The expected
+        # blobs contain only the fixture edits in the original repo layout.
+        mods = ("combatstats", "decodeminigamesolver", "displayping", "emperorsguidance",
+                "fpsdoctor", "loadoutmonitor", "nobrainer", "skitarius", "spidey_sense",
+                "machine_gods_beacon", "markers_aio", "ovenproof_scoreboard_plugin", "uptime")
+        fixtures = Path(__file__).with_name("fixtures")
+        for mod in mods:
+            with self.subTest(mod=mod):
+                before, applied, expected = [
+                    gzip.decompress((fixtures / f"layout3_{mod}_{version}.lua.gz").read_bytes())
+                    for version in ("before", "applied", "expected")
+                ]
+                output, note = preserve_layout(before, applied)
+                self.assertEqual(note, "")
+                self.assertEqual(changes(before, output), changes(before, expected))
+                self.assertEqual(output, expected)
+                rebuilt = _Parser(output.decode("utf-8-sig")).table()
+                verified = _Parser(applied.decode("utf-8-sig")).table()
+                self.assertEqual(rebuilt.values(), verified.values())
+                self.assertEqual((rebuilt.prefix, rebuilt.suffix), (verified.prefix, verified.suffix))
+
+    def test_UnitT110_main_unsupported_layouts_keep_apply_bytes(self):
+        fixtures = Path(__file__).with_name("fixtures")
+        for mod in ("empoweruntillimit", "havocpeek", "radar"):
+            with self.subTest(mod=mod):
+                before, applied = [
+                    gzip.decompress((fixtures / f"layout3_{mod}_{version}.lua.gz").read_bytes())
+                    for version in ("before", "applied")
+                ]
+                self.assertNotEqual(before, applied)
+                self.assertEqual(preserve_layout(before, applied), (applied, FALLBACK_NOTE))
+
+    def test_UnitT120_dynamic_keys_require_exact_text_and_apply_order(self):
+        key = b'["prefix" .. suffix]'
+        before = REPO.replace(b"one =", key + b" =")
+        applied = APPLIED.replace(b"one =", key + b" =").replace(b'"One"', b'"Changed"')
+        self.assertEqual(preserve_layout(before, applied),
+                         (before.replace(b'"One"', b'"Changed"'), ""))
+        changed_key = applied.replace(key, b'["prefix"..suffix]')
+        first, second = applied.removeprefix(b"return {\n").split(b"    two =", 1)
+        reordered = b"return {\n    two =" + second.removesuffix(b"}\n") + first + b"}\n"
+        for source in (changed_key, reordered):
+            with self.subTest(source=source):
+                self.assertEqual(preserve_layout(before, source), (source, FALLBACK_NOTE))
+
+    def test_UnitT130_repeated_entry_requires_same_number_of_occurrences(self):
+        before = REPO.replace(b"two =", b"one =")
+        applied = APPLIED.replace(b"two =", b"one =").replace(b'"Two"', b'"Changed"')
+        self.assertEqual(preserve_layout(before, applied),
+                         (before.replace(b'"Two"', b'"Changed"'), ""))
+        missing = APPLIED.split(b"    two =", 1)[0] + b"}\n"
+        self.assertEqual(preserve_layout(before, missing), (missing, FALLBACK_NOTE))

@@ -1,10 +1,11 @@
 """Preserve repository layout after the Skill has verified its output."""
 
 import re
+from codecs import BOM_UTF8
 from collections import Counter, defaultdict
 from dataclasses import dataclass, replace
 
-from .eol import is_text, mixed_eol, normalize, text_format
+from .eol import is_text, mixed_eol, text_format
 
 FALLBACK_NOTE = "本地化檔無法保留原排版，已使用 Skill 輸出"
 
@@ -18,6 +19,8 @@ _TOKEN = re.compile(
     re.DOTALL,
 )
 _KEY = re.compile(r"['\"]([A-Za-z_0-9-]+)['\"]")
+_LANGUAGE = re.compile(r"[a-z]{2,3}(?:-[A-Za-z0-9]+)*")
+_BRACKETS = {"{": "}", "(": ")", "[": "]"}
 _RESERVED = set("and break do else elseif end false for function goto if in local nil not or repeat "
                 "return then true until while".split())
 _BINARY = set("and or < > <= >= ~= == .. + - * / % ^".split())
@@ -25,6 +28,17 @@ _BINARY = set("and or < > <= >= ~= == .. + - * / % ^".split())
 
 class UnsupportedLayout(ValueError):
     pass
+
+
+@dataclass(frozen=True)
+class DynamicKey:
+    source: str
+
+
+@dataclass(frozen=True)
+class RepeatedKey:
+    name: str
+    occurrence: int
 
 
 @dataclass
@@ -47,24 +61,34 @@ class Entry:
     opening: str
     fields: dict[str, Field]
     closing: Field
+    inline: bool = False
+    children: dict[str | RepeatedKey, "Entry"] | None = None
 
     def render(self, needs_separator):
-        fields = list(self.fields.values())
-        return (self.opening + "".join(field.render(index < len(fields) - 1)
-                                       for index, field in enumerate(fields))
+        members = list((self.fields if self.children is None else self.children).values())
+        return (self.opening + "".join(member.render(index < len(members) - 1)
+                                       for index, member in enumerate(members))
                 + self.closing.render(needs_separator))
 
 
 @dataclass
 class Table:
     prefix: str
-    entries: dict[str, Entry]
+    entries: dict[str | DynamicKey | RepeatedKey, Entry]
     trailing: str
     suffix: str
 
     def values(self):
-        return {key: {lang: field.tokens for lang, field in entry.fields.items()}
-                for key, entry in self.entries.items()}
+        return _values(self.entries)
+
+
+def _values(entries):
+    # An opaque key can resolve to any sibling key at runtime. Include the entire
+    # sibling order in verification where changing it could change which value wins.
+    order = tuple(entries) if any(isinstance(key, DynamicKey) for key in entries) else ()
+    return order, {key: (_values(entry.children) if entry.children is not None
+                         else {lang: field.tokens for lang, field in entry.fields.items()})
+                   for key, entry in entries.items()}
 
 
 class _Parser:
@@ -94,15 +118,31 @@ class _Parser:
             raise UnsupportedLayout
         return token.group()
 
-    def key(self):
+    def key(self, allow_dynamic=False):
         if self.peek() != "[":
             return self.name()
-        self.take("[")
-        key = _KEY.fullmatch(self.take().group())
-        self.take("]")
-        if key is None:
+        opening = self.take("[")
+        first = self.current()
+        key = _KEY.fullmatch(first.group())
+        if key and self.index + 1 < len(self.tokens) and self.tokens[self.index + 1].group() == "]":
+            self.take()
+            self.take("]")
+            return key[1]
+        if not allow_dynamic:
             raise UnsupportedLayout
-        return key[1]
+        self.expression()
+        closing = self.take("]")
+        return DynamicKey(self.text[opening.start():closing.end()])
+
+    def constructor(self):
+        """Consume a table expression without interpreting any of its fields."""
+        stack = [_BRACKETS[self.take("{").group()]]
+        while stack:
+            token = self.take().group()
+            if token in _BRACKETS:
+                stack.append(_BRACKETS[token])
+            elif token in _BRACKETS.values() and token != stack.pop():
+                raise UnsupportedLayout
 
     def expression(self):
         """Recognize a subset of Lua expressions without evaluating them."""
@@ -118,6 +158,9 @@ class _Parser:
             self.take("(")
             self.expression()
             self.take(")")
+        elif self.peek() == "{":
+            self.constructor()
+            return
         else:
             token = self.current()
             if token.lastgroup in ("string", "long", "number") or self.peek() in ("true", "false", "nil"):
@@ -125,7 +168,7 @@ class _Parser:
                     raise UnsupportedLayout
                 return
             self.name()
-        while self.peek() in (".", "[", "("):
+        while self.peek() in (".", "[", "(", ":"):
             if self.peek() == ".":
                 self.take(".")
                 self.name()
@@ -134,6 +177,9 @@ class _Parser:
                 self.expression()
                 self.take("]")
             else:
+                if self.peek() == ":":
+                    self.take(":")
+                    self.name()
                 self.take("(")
                 if self.peek() != ")":
                     self.expression()
@@ -157,7 +203,7 @@ class _Parser:
             raise UnsupportedLayout
         return end + 1
 
-    def line(self, leading, prefix, start, tokens):
+    def line(self, leading, prefix, start, tokens, inline=False):
         last = self.tokens[self.index - 1]
         value = self.text[start:last.end()]
         delimiter = self.take() if self.peek() in (",", ";") else None
@@ -165,7 +211,7 @@ class _Parser:
             raise UnsupportedLayout
         if delimiter is None and self.peek() != "}":
             raise UnsupportedLayout
-        end = self.line_end(delimiter or last)
+        end = (delimiter or last).end() if inline else self.line_end(delimiter or last)
         spacing = self.text[last.end():delimiter.start()] if delimiter else ""
         suffix = self.text[(delimiter or last).end():end]
         return Field(leading, prefix, value, tokens, spacing, delimiter.group() if delimiter else "", suffix), end
@@ -176,14 +222,29 @@ class _Parser:
             returned = self.tokens[end - 1]
             if (self.tokens[end - 2].group() == "return" and returned.lastgroup == "name"
                     and returned.group() not in _RESERVED):
-                declaration = ["local", returned.group(), "=", "{"]
-                starts = [index for index in range(end - 4)
-                          if self.tokens[index].group() == "local"
-                          and [token.group() for token in self.tokens[index:index + 4]] == declaration]
+                declaration = [returned.group(), "=", "{"]
+                starts = []
+                for index in range(end - 4):
+                    if [token.group() for token in self.tokens[index:index + 3]] != declaration:
+                        continue
+                    start = index - 1 if index and self.tokens[index - 1].group() == "local" else index
+                    try:
+                        self.line_start(self.tokens[start])
+                    except UnsupportedLayout:
+                        continue
+                    starts.append((start, index + 2))
+                if len(starts) == 2:
+                    start, brace = starts[0]
+                    second_start, second_brace = starts[1]
+                    # An empty local initializer may precede the actual assignment.
+                    if (self.tokens[start].group() == "local" and second_start == second_brace - 2
+                            and self.tokens[brace + 1].group() == "}"
+                            and self.tokens[start].start() - self.line_start(self.tokens[start])
+                            == self.tokens[second_start].start() - self.line_start(self.tokens[second_start])):
+                        starts.pop(0)
                 if len(starts) != 1:
                     raise UnsupportedLayout
-                self.line_start(self.tokens[starts[0]])
-                return starts[0] + 3, end - 2
+                return starts[0][1], end - 2
 
         if not end or self.tokens[end - 1].group() != "}":
             raise UnsupportedLayout
@@ -203,45 +264,72 @@ class _Parser:
                     return index, end
         raise UnsupportedLayout
 
-    def table(self):
-        self.index, boundary = self._table_opening()
-        opening = self.take("{")
-        compact_empty = self.peek() == "}" and "\n" not in self.text[opening.end():self.current().start()]
-        prefix_end = cursor = opening.end() if compact_empty else self.line_end(opening)
+    def entries(self, cursor, allow_dynamic):
         entries = {}
+        occurrences = Counter()
         while self.peek() != "}":
             start = self.line_start(self.current())
-            key = self.key()
+            key = self.key(allow_dynamic)
             equals = self.take("=")
             brace = self.take("{")
-            opening_end = self.line_end(brace)
             before_brace = self.text[equals.end():brace.start()]
-            if (key in entries or "\n" in self.text[start:equals.end()]
+            if ("\n" in self.text[start:equals.end()]
                     or ("\n" in before_brace and before_brace.strip())):
                 raise UnsupportedLayout
+            occurrences[key] += 1
+            if occurrences[key] > 1:
+                if isinstance(key, DynamicKey):
+                    raise UnsupportedLayout
+                key = RepeatedKey(key, occurrences[key])
+            inline = "\n" not in self.text[brace.end():self.current().start()]
+            opening_end = brace.end() if inline else self.line_end(brace)
+            body_index = self.index
             fields = {}
             field_cursor = opening_end
             while self.peek() != "}":
-                start_field = self.line_start(self.current())
+                start_field = self.current().start() if inline else self.line_start(self.current())
+                if inline and self.text[field_cursor:start_field].strip(" \t"):
+                    raise UnsupportedLayout
                 lang = self.key()
                 equals = self.take("=")
                 expr_index = self.index
                 self.expression()
                 tokens = tuple(token.group() for token in self.tokens[expr_index:self.index])
                 expr_start = self.tokens[expr_index].start()
-                if lang in fields or "\n" in self.text[start_field:equals.end()]:
+                if (lang in fields or "\n" in self.text[start_field:equals.end()]
+                        or (inline and "\n" in self.text[start_field:self.tokens[self.index - 1].end()])):
                     raise UnsupportedLayout
                 # The assignment prefix must not contain an intervening comment.
                 if self.text[equals.end():expr_start].strip():
                     raise UnsupportedLayout
-                fields[lang], field_cursor = self.line(self.text[field_cursor:start_field],
-                                                       self.text[start_field:expr_start], expr_start, tokens)
+                prefix_start = field_cursor if inline else start_field
+                fields[lang], field_cursor = self.line(self.text[field_cursor:prefix_start],
+                                                       self.text[prefix_start:expr_start],
+                                                       expr_start, tokens, inline)
+            children = None
+            # A group of named entry tables is distinct from a language whose value
+            # happens to be a table. Keep the latter's whole expression opaque.
+            if not inline and fields and all(not _LANGUAGE.fullmatch(name) and field.tokens[0] == "{"
+                                             for name, field in fields.items()):
+                self.index = body_index
+                children, field_cursor = self.entries(opening_end, allow_dynamic=False)
+                fields = {}
             closing = self.take("}")
-            close_start = self.line_start(closing)
+            close_start = field_cursor if inline else self.line_start(closing)
+            if inline and self.text[field_cursor:closing.start()].strip(" \t"):
+                raise UnsupportedLayout
             close, end = self.line(self.text[field_cursor:close_start],
                                    self.text[close_start:closing.start()], closing.start(), ())
-            entries[key] = Entry(self.text[cursor:opening_end], fields, close)
+            entries[key] = Entry(self.text[cursor:opening_end], fields, close, inline, children)
             cursor = end
+        return entries, cursor
+
+    def table(self):
+        self.index, boundary = self._table_opening()
+        opening = self.take("{")
+        compact_empty = self.peek() == "}" and "\n" not in self.text[opening.end():self.current().start()]
+        prefix_end = opening.end() if compact_empty else self.line_end(opening)
+        entries, cursor = self.entries(prefix_end, allow_dynamic=True)
         closing = self.take("}")
         close_start = prefix_end if compact_empty else self.line_start(closing)
         if self.index > boundary:
@@ -263,6 +351,13 @@ def _convention(entries):
     return None
 
 
+def _entry_positions(entries):
+    multiline = _convention({key: entry for key, entry in entries.items() if not entry.inline})
+    inline = _convention({key: entry for key, entry in entries.items() if entry.inline})
+    return {False: multiline if multiline is not None else inline,
+            True: inline if inline is not None else multiline}
+
+
 def _place_zh_tw(fields, position):
     if position is None or "zh-tw" not in fields:
         return fields
@@ -273,7 +368,28 @@ def _place_zh_tw(fields, position):
     return dict(ordered)
 
 
+def _fit_added_field(field, old, new, first):
+    if old.inline:
+        if field.leading.strip() or field.suffix.strip() or "\n" in field.value:
+            raise UnsupportedLayout
+        sample = list(old.fields.values())
+        padding = " "
+        if sample and (first or len(sample) > 1):
+            prefix = sample[0 if first else 1].prefix
+            padding = prefix[:len(prefix) - len(prefix.lstrip(" \t"))]
+        return replace(field, leading="", prefix=padding + field.prefix.lstrip(" \t"), suffix="")
+    if new.inline:
+        indent = re.match(r"[ \t]*", next(iter(old.fields.values()), old.closing).prefix).group()
+        eol = "\r\n" if old.opening.endswith("\r\n") else "\n"
+        return replace(field, prefix=indent + field.prefix.lstrip(" \t"), suffix=eol)
+    return field
+
+
 def _existing_entry(old, new, position):
+    if old.children is not None or new.children is not None:
+        if old.children is None or new.children is None:
+            raise UnsupportedLayout
+        return replace(old, children=_merge_entries(old.children, new.children))
     fields = {}
     leading = ""
     for lang, field in old.fields.items():
@@ -302,27 +418,44 @@ def _existing_entry(old, new, position):
         old_last = next(reversed(old.fields))
         if old_last not in new.fields and last in old.fields and not old.fields[old_last].separator:
             fields[last] = replace(fields[last], separator="")
-    return Entry(old.opening, fields, replace(old.closing, leading=leading + old.closing.leading))
+    for index, lang in enumerate(fields):
+        if lang in added:
+            fields[lang] = _fit_added_field(fields[lang], old, new, first=index == 0)
+    if old.inline and fields and old.fields and last in added:
+        fields[last] = replace(fields[last], separator=old.fields[old_last].separator)
+    return replace(old, fields=fields, closing=replace(old.closing, leading=leading + old.closing.leading))
 
 
-def _rebuild(repo, applied):
-    position = _convention(repo.entries)
+def _merge_entries(repo, applied):
+    fixed_keys = (DynamicKey, RepeatedKey)
+    if {key for key in repo if isinstance(key, fixed_keys)} != {
+            key for key in applied if isinstance(key, fixed_keys)}:
+        raise UnsupportedLayout
+    positions = _entry_positions(repo)
     existing = {}
     additions = defaultdict(list)
     anchor = None
-    for key, entry in applied.entries.items():
-        if key in repo.entries:
+    for key, entry in applied.items():
+        if key in repo:
             anchor = key
-            existing[key] = _existing_entry(repo.entries[key], entry, position)
+            old = repo[key]
+            existing[key] = _existing_entry(old, entry, positions[old.inline])
         else:
-            additions[anchor].append(replace(entry, fields=_place_zh_tw(entry.fields.copy(), position)))
-    ordered = []
-    for key in repo.entries:
+            fields = _place_zh_tw(entry.fields.copy(), positions[entry.inline])
+            additions[anchor].append((key, replace(entry, fields=fields)))
+    ordered = {}
+    for key in repo:
         if key in existing:
-            ordered.extend([existing[key], *additions[key]])
-    ordered.extend(additions[None])
+            ordered[key] = existing[key]
+            ordered.update(additions[key])
+    ordered.update(additions[None])
+    return ordered
+
+
+def _rebuild(repo, applied):
+    ordered = _merge_entries(repo.entries, applied.entries)
     return (applied.prefix + "".join(entry.render(index < len(ordered) - 1)
-                                     for index, entry in enumerate(ordered))
+                                     for index, entry in enumerate(ordered.values()))
             + repo.trailing + applied.suffix)
 
 
@@ -336,14 +469,14 @@ def preserve_layout(before, applied):
         repo = _Parser(before.decode("utf-8-sig")).table()
         verified = _Parser(applied.decode("utf-8-sig")).table()
         output = _rebuild(repo, verified)
+        if not (mixed_eol(before) or mixed_eol(applied)):
+            eol = text_format(applied)[0].decode("ascii")
+            output = output.replace("\r\n", "\n").replace("\n", eol)
         # Exact token sequences preserve values, including escapes and operators.
-        if _Parser(output).table().values() != verified.values():
+        rebuilt = _Parser(output).table()
+        if (rebuilt.values() != verified.values()
+                or (rebuilt.prefix, rebuilt.suffix) != (verified.prefix, verified.suffix)):
             return applied, FALLBACK_NOTE
     except (UnsupportedLayout, RecursionError):
         return applied, FALLBACK_NOTE
-    result = output.encode("utf-8")
-    if normalize(result) == normalize(before):
-        return before, ""
-    if not (mixed_eol(before) or mixed_eol(applied)):
-        result = result.replace(b"\r\n", b"\n").replace(b"\n", text_format(applied)[0])
-    return result, ""
+    return (BOM_UTF8 if applied.startswith(BOM_UTF8) else b"") + output.encode("utf-8"), ""
