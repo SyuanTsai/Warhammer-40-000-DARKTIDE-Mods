@@ -470,10 +470,10 @@
 
 ### [Red Weapons at Home](https://www.nexusmods.com/warhammer40kdarktide/mods/380)
     武器顏色顯示
-- MOD 網站最後更新日期：Last updated 10 July 2025, 7:04PM
-- MOD 版本：1.2.5
-- MOD 檔案名稱：Red Weapons at Home-380-1-2-5-1752145450
-- 手動維護最後下載日期：2025-07-12
+- MOD 網站最後更新日期：Last updated 29 October 2026, 11:04PM
+- MOD 版本：1.3.0
+- MOD 檔案名稱：Red Weapons at Home 380 1.3.0 2026-10-29T15-04Z q4A7x4GVa
+- 手動維護最後下載日期：2026-11-25
 
 ### [AutoBlitz](https://www.nexusmods.com/warhammer40kdarktide/mods/480)
     自動手榴彈(一鍵投出、獒犬自爆)
