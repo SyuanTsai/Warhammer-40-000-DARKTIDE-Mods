@@ -19,6 +19,10 @@ _TOKEN = re.compile(
     re.DOTALL,
 )
 _KEY = re.compile(r"['\"]([A-Za-z_0-9-]+)['\"]")
+_DOUBLE_QUOTE = r'(?:"|\\(?:"|034|34(?![0-9])|x22|u\{0*22\}))'
+_WRAPPED_SHORT_STRING = re.compile(
+    rf"\s*{_DOUBLE_QUOTE}(?:\\.|[^\\])*{_DOUBLE_QUOTE}\s*", re.DOTALL,
+)
 _LANGUAGE = re.compile(r"[a-z]{2,3}(?:-[A-Za-z0-9]+)*")
 _BRACKETS = {"{": "}", "(": ")", "[": "]"}
 _RESERVED = set("and break do else elseif end false for function goto if in local nil not or repeat "
@@ -28,6 +32,24 @@ _BINARY = set("and or < > <= >= ~= == .. + - * / % ^".split())
 
 class UnsupportedLayout(ValueError):
     pass
+
+
+def literal_has_outer_double_quotes(expression):
+    """Return None for non-literals, otherwise whether the string has visible outer quotes."""
+    if not isinstance(expression, str):
+        return None
+    tokens = [token for token in _TOKEN.finditer(expression) if token.lastgroup != "trivia"]
+    if len(tokens) != 1:
+        return None
+    token = tokens[0]
+    literal = token.group()
+    if token.lastgroup == "long":
+        delimiter_length = len(token["string_eq"]) + 2
+        content = literal[delimiter_length:-delimiter_length].strip()
+        return len(content) >= 2 and content[0] == content[-1] == '"'
+    if token.lastgroup == "string":
+        return _WRAPPED_SHORT_STRING.fullmatch(literal[1:-1]) is not None
+    return None
 
 
 @dataclass(frozen=True)

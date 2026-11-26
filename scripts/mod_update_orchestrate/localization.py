@@ -7,7 +7,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .report import blocked_units
+from .loc_layout import literal_has_outer_double_quotes
+from .report import blocked_units, cell
 from .tree import is_localization
 
 
@@ -17,6 +18,18 @@ class LocalizationError(ValueError):
 
 def read_json(path):
     return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def _unexpected_quotes(unit):
+    if unit["action"] != "AI_REQUIRED" or not literal_has_outer_double_quotes(
+            unit.get("suggestedZhTwExpression")):
+        return False
+    old, new = unit.get("old") or {}, unit.get("new") or {}
+    source = (new.get("sourceExpression") or {}).get("raw")
+    if literal_has_outer_double_quotes(source) is not False:
+        return False
+    return not any(literal_has_outer_double_quotes((side.get("zhTwExpression") or {}).get("raw"))
+                   for side in (old, new))
 
 
 class Localization:
@@ -96,6 +109,9 @@ class Localization:
     def apply(self, document, summary):
         if blocked_units(document, summary):
             raise LocalizationError("工作集含未核准或 BLOCKED 項目")
+        unexpected = [cell(unit["key"]) for unit in document["units"] if _unexpected_quotes(unit)]
+        if unexpected:
+            raise LocalizationError("AI 譯文新增外層雙引號，請檢查後重產：" + "、".join(unexpected))
         result = self.powershell("Apply-LocalizationWorkset", "-WorksetPath", self.workset)
         if result.get("result") != "passed":
             raise LocalizationError("Apply 未通過")
