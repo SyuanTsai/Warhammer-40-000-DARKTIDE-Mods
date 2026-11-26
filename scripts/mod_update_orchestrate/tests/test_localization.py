@@ -1,4 +1,5 @@
 import json
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -7,6 +8,7 @@ from unittest.mock import patch
 from scripts.mod_update_orchestrate.loc_layout import (
     decode_lua_string, preserve_layout, unwrap_literal_outer_double_quotes,
 )
+from scripts.mod_update_orchestrate import localization
 from scripts.mod_update_orchestrate.localization import Localization, read_json
 from scripts.mod_update_orchestrate.report import prepare_term_reviews
 
@@ -22,6 +24,45 @@ UPSTREAM = '''return {
 BEFORE = UPSTREAM.replace("Stim Delay", "Combat Duration").replace("興奮劑延遲", "戰鬥持續時間")
 TRANSLATION = '"興奮劑延遲（秒）"'
 WRAPPED = r'"\"興奮劑延遲（秒）\""'
+
+
+class SkillOutputTests(unittest.TestCase):
+    # Scenario: Skill 同時輸出進度、含機密的診斷與最後一行 JSON。
+    # Purpose: 轉發可診斷的訊息，遮蔽機密，保留 stdout 回傳及退出碼契約。
+    def test_UnitT10_streams_redacted_skill_output_and_keeps_stdout_result(self):
+        code = """import sys
+import time
+from pathlib import Path
+
+print('workset started')
+print('failure fake-test-secret', file=sys.stderr)
+ack = Path(sys.argv[1])
+deadline = time.monotonic() + 5
+while not ack.is_file() and time.monotonic() < deadline:
+    time.sleep(0.01)
+if not ack.is_file():
+    sys.exit(1)
+print('{"result":"passed"}')
+print('late diagnostic', file=sys.stderr)
+sys.exit(3)
+"""
+        ack = Path(self.enterContext(tempfile.TemporaryDirectory())) / "logged"
+
+        def acknowledge_progress(message, *, flush):
+            if "workset started" in message:
+                ack.touch()
+
+        with patch.dict("os.environ", {"ANTHROPIC_API_KEY": "fake-test-secret"}), patch(
+                "builtins.print", side_effect=acknowledge_progress) as logged:
+            status, result = localization._run_skill([sys.executable, "-u", "-c", code, str(ack)],
+                                                     Path.cwd(), "Skill test")
+        lines = "\n".join(call.args[0] for call in logged.call_args_list)
+        self.assertEqual((status, json.loads(result)), (3, {"result": "passed"}))
+        self.assertRegex(lines, r"\d{4}-\d{2}-\d{2}T[^ ]+ Skill test.*workset started")
+        self.assertIn("late diagnostic", lines)
+        self.assertIn("failure [已遮蔽]", lines)
+        self.assertNotIn("fake-test-secret", lines)
+        self.assertTrue(all(call.kwargs.get("flush") for call in logged.call_args_list))
 
 
 class LocalizationQuoteTests(unittest.TestCase):
