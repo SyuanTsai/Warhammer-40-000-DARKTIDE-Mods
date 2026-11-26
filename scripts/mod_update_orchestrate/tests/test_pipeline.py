@@ -16,7 +16,7 @@ from scripts.mod_update_orchestrate.main import main
 from scripts.mod_update_orchestrate.pr import PullHeadError, current_pr, publish
 from scripts.mod_update_orchestrate.process import NeedsHuman, download, process, registry_mod
 from scripts.mod_update_orchestrate.records import update_hash, update_readme
-from scripts.mod_update_orchestrate.report import blocked_units, pr_body
+from scripts.mod_update_orchestrate.report import blocked_units, pr_body, term_review_section
 from scripts.mod_update_watch.drive import FOLDER_MIME
 from scripts.mod_update_watch.handoff import Received, build_received_marker
 from scripts.mod_update_watch.issues import GitHubError
@@ -463,6 +463,136 @@ class HumanAndPrTests(unittest.TestCase):
             self.assertIn(part, body)
 
 
+class TermReviewIssueTests(unittest.TestCase):
+    file_id = "12345"
+    title = "[term-review] PlasmaBFG (Nexus 834)"
+    marker = "<!-- term-review:nexus=834 -->"
+    version_marker = "<!-- term-review:nexus=834:file=12345 -->"
+    body = "- MOD：PlasmaBFG\n- Nexus ID：834\n- PR：https://github.com/owner/mods/pull/22\n\nShot Recovery"
+
+    def setUp(self):
+        self.transport = Mock()
+        with patch.dict(os.environ, {"GITHUB_TOKEN": "fake", "GITHUB_REPOSITORY": "owner/mods"}):
+            self.github = GitHub(self.transport)
+
+    def writes(self):
+        return [(method, url.split("/repos/owner/mods/")[-1], json.loads(data))
+                for method, url, _, data in (event.args for event in self.transport.call_args_list)
+                if method != "GET"]
+
+    def test_UnitT10_creates_missing_label_and_issue(self):
+        self.transport.side_effect = [(404, {}, b""), (201, {}, b"{}"), (200, {}, b"[]"),
+                                      (200, {}, b"[]"), (201, {}, b'{"number": 31}')]
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+        label, issue = self.writes()
+        self.assertEqual(label[:2], ("POST", "labels"))
+        self.assertEqual(label[2]["name"], "term-review")
+        self.assertEqual(issue, ("POST", "issues", {"title": self.title,
+                                                    "body": f"{self.marker}\n{self.version_marker}\n\n{self.body}",
+                                                    "labels": ["term-review"]}))
+
+    def test_UnitT20_comments_on_open_issue_by_marker_or_title_without_editing_body(self):
+        for title, body, labels in (
+            ("重新命名", "前言\n" + self.marker, [{"name": "term-review"}]),
+            (self.title, "舊內文", []),
+        ):
+            with self.subTest(title=title):
+                existing = [{"number": 31, "title": title, "body": body, "labels": labels},
+                            {"number": 32, "title": self.title, "pull_request": {}}]
+                self.transport.reset_mock()
+                self.transport.side_effect = [(200, {}, b"{}"), (200, {}, json.dumps(existing).encode()),
+                                              (200, {}, b"[]"), (200, {}, b"[]"), (201, {}, b"{}"),
+                                              (200, {}, b"[]")]
+                self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+                expected = [("POST", "issues/31/comments",
+                             {"body": f"{self.version_marker}\n\n- 版本識別：12345\n{self.body}"})]
+                if not labels:
+                    expected.append(("POST", "issues/31/labels", {"labels": ["term-review"]}))
+                self.assertEqual(self.writes(), expected)
+
+    def test_UnitT30_retries_server_and_network_errors_then_reuses_created_issue(self):
+        label = (200, {}, b"{}")
+        no_issues = (200, {}, b"[]")
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}],
+                    "body": f"{self.marker}\n{self.version_marker}\n\n{self.body}"}
+        self.transport.side_effect = [
+            label, no_issues, no_issues, (503, {}, b""),
+            label, no_issues, no_issues, TimeoutError(),
+            label, (200, {}, json.dumps([existing]).encode()),
+        ]
+        sleeper = Mock()
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body, sleeper=sleeper), 31)
+        self.assertEqual(sleeper.call_args_list, [call(1), call(2)])
+        self.assertEqual([write[:2] for write in self.writes()], [("POST", "issues")] * 2)
+
+    def test_UnitT40_permanent_error_is_not_retried(self):
+        self.transport.side_effect = [(200, {}, b"{}"), (200, {}, b"[]"), (200, {}, b"[]"), (403, {}, b"")]
+        sleeper = Mock()
+        with self.assertRaisesRegex(GitHubError, "HTTP 403"):
+            self.github.term_review_issue(834, self.file_id, self.title, self.body, sleeper=sleeper)
+        sleeper.assert_not_called()
+        self.assertEqual([write[:2] for write in self.writes()], [("POST", "issues")])
+
+    def test_UnitT50_comments_on_existing_issue_from_numeric_repository_page(self):
+        next_url = "https://api.github.com/repositories/42/issues?state=open&per_page=100&page=2"
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}],
+                    "body": f"{self.marker}\n<!-- term-review:nexus=834:file=12344 -->\n\n{self.body}"}
+        self.transport.side_effect = [
+            (200, {}, b"{}"), (200, {"Link": f'<{next_url}>; rel="next"'}, b"[]"),
+            (200, {}, b'{"id": 42}'), (200, {}, json.dumps([existing]).encode()),
+            (200, {}, b"[]"), (200, {}, b"[]"), (201, {}, b"{}"),
+        ]
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+        self.assertEqual(self.transport.call_args_list[3].args[:2], ("GET", next_url))
+        self.assertEqual(self.writes(), [("POST", "issues/31/comments",
+                                          {"body": f"{self.version_marker}\n\n- 版本識別：12345\n{self.body}"})])
+
+    def test_UnitT60_pagination_rejects_other_hosts_repositories_and_endpoints(self):
+        for url, verify_repo in (
+            ("https://unknown.invalid/repositories/42/issues?page=2", False),
+            ("https://api.github.com/repositories/43/issues?page=2", True),
+            ("https://api.github.com/repositories/42/pulls?page=2", False),
+        ):
+            with self.subTest(url=url):
+                self.transport.reset_mock()
+                self.transport.side_effect = [(200, {"Link": f'<{url}>; rel="next"'}, b"[]"),
+                                              (200, {}, b'{"id": 42}')]
+                with self.assertRaises(GitHubError):
+                    self.github.pages("issues?state=open", "列出開啟的術語審查 Issue")
+                self.assertEqual(self.transport.call_count, 2 if verify_repo else 1)
+                self.assertTrue(all(event.args[1] != url for event in self.transport.call_args_list))
+
+    def test_UnitT70_skips_comment_when_version_marker_is_on_later_page(self):
+        next_url = "https://api.github.com/repositories/42/issues/31/comments?per_page=100&page=2"
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}], "body": self.marker}
+        old_comment = {"body": "<!-- term-review:nexus=834:file=12344 -->"}
+        same_version = {"body": self.version_marker + "\n\n已記錄的詞表"}
+        self.transport.side_effect = [
+            (200, {}, b"{}"), (200, {}, json.dumps([existing]).encode()),
+            (200, {"Link": f'<{next_url}>; rel="next"'}, json.dumps([old_comment]).encode()),
+            (200, {}, b'{"id": 42}'), (200, {}, json.dumps([same_version]).encode()),
+        ]
+
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body), 31)
+        self.assertEqual(self.transport.call_args.args[:2], ("GET", next_url))
+        self.assertEqual(self.writes(), [])
+
+    def test_UnitT80_retry_rechecks_comments_after_post_timeout(self):
+        label = (200, {}, b"{}")
+        existing = {"number": 31, "title": self.title, "labels": [{"name": "term-review"}], "body": self.marker}
+        issues = (200, {}, json.dumps([existing]).encode())
+        posted = {"body": self.version_marker + "\n\n" + self.body}
+        self.transport.side_effect = [
+            label, issues, (200, {}, b"[]"), (200, {}, b"[]"), TimeoutError(),
+            label, issues, (200, {}, json.dumps([posted]).encode()),
+        ]
+        sleeper = Mock()
+
+        self.assertEqual(self.github.term_review_issue(834, self.file_id, self.title, self.body, sleeper=sleeper), 31)
+        sleeper.assert_called_once_with(1)
+        self.assertEqual([write[:2] for write in self.writes()], [("POST", "issues/31/comments")])
+
+
 class PublishHeadTests(unittest.TestCase):
     old_head = "a" * 40
     new_head = "b" * 40
@@ -658,16 +788,23 @@ class MergeCheckTests(unittest.TestCase):
     head = "a" * 40
     ref = "refs/heads/auto/mod-update/123"
     legacy = "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"
+    review_marker = "<!-- term-review:nexus=123 -->"
+    review_version = "<!-- term-review:nexus=123:file=9001 -->"
 
     def setUp(self):
         self.pull = {"number": 8, "node_id": "pr8", "state": "open", "draft": False, "labels": [],
                      "head": {"sha": self.head, "ref": self.ref.removeprefix("refs/heads/")},
                      "base": {"ref": "main"},
+                     "html_url": "https://github.com/owner/mods/pull/8",
                      "body": self.legacy.replace(" -->", f" verified_head={self.head} route=update -->")}
         self.resolved = True
         self.remote = self.head
         self.notes = []
         self.writes = []
+        self.review_status = 201
+        self.open_reviews = []
+        self.closed_reviews = []
+        self.review_comments = []
 
     def transport(self, method, url, headers, data):
         path = url.split("/repos/owner/mods/")[-1]
@@ -689,6 +826,17 @@ class MergeCheckTests(unittest.TestCase):
             self.writes.append((method, path, payload))
             self.notes.append(comment(payload["body"], id=44))
             response = {}
+        elif path == "labels/term-review":
+            response = {}
+        elif path == "issues?state=open&per_page=100":
+            response = self.open_reviews
+        elif path == "issues?state=closed&labels=term-review&per_page=100":
+            response = self.closed_reviews
+        elif path == "issues/31/comments?per_page=100":
+            response = self.review_comments
+        elif path == "issues" and method == "POST":
+            self.writes.append((method, path, json.loads(data)))
+            return self.review_status, {}, b'{"number": 31}'
         elif path == "pulls/8/merge" and method == "PUT":
             self.writes.append((method, path, json.loads(data)))
             response = {"merged": True}
@@ -696,7 +844,7 @@ class MergeCheckTests(unittest.TestCase):
             self.fail(f"非預期 API 呼叫 {method} {path}")
         return 200, {}, json.dumps(response).encode()
 
-    def run_check(self, *flags):
+    def run_check(self, *flags, exit_code=0):
         expected = ("ls-remote", "--heads", "origin", self.ref)
 
         def git(root, *args):
@@ -708,7 +856,7 @@ class MergeCheckTests(unittest.TestCase):
                         "scripts.mod_update_orchestrate.main.emit") as emit:
             self.assertEqual(main(["process", "--merge-check", "--nexus-id", "123", "--file-id", "9001",
                                    "--issue", "7", "--review-mode", "auto", *flags],
-                                  github_transport=self.transport), 0)
+                                  github_transport=self.transport), exit_code)
             return "\n".join(call.args[0] for call in emit.call_args_list)
 
     # Scenario: 同版本 PR 的標記、分支、狀態與討論均符合資格。
@@ -770,6 +918,56 @@ class MergeCheckTests(unittest.TestCase):
         # Then
         self.assertIn("符合自動合併資格", summary)
         self.assertEqual(self.writes, [])
+
+    def add_term_review(self):
+        section = term_review_section([{"key": "start", "source": "A | B", "terms": ["B"],
+                                        "translation": "甲 | 乙"}])
+        self.pull["body"] = "\n".join(["摘要", *section, "", self.pull["body"]])
+
+    # Scenario: 舊版 PR 只有可見術語表，尚未建立 Issue。
+    # Purpose: 排程須先用原始術語表建立 Issue，再執行合併。
+    def test_UnitT60_backfills_legacy_term_review_before_merge(self):
+        self.add_term_review()
+        summary = self.run_check()
+        self.assertEqual([(method, path) for method, path, _ in self.writes],
+                         [("POST", "issues"), ("PUT", "pulls/8/merge")])
+        review = self.writes[0][2]
+        self.assertEqual(review["labels"], ["term-review"])
+        self.assertTrue(review["body"].startswith(f"{self.review_marker}\n{self.review_version}\n"))
+        self.assertIn("| start | A &#124; B | B | 甲 &#124; 乙 |", review["body"])
+        self.assertIn(self.pull["html_url"], review["body"])
+        self.assertIn("已合併", summary)
+
+    # Scenario: 已符合合併條件的 PR 補同步時遇到 Issue 寫入錯誤。
+    # Purpose: CLI 回傳非零，並保留原 PR。
+    def test_UnitT70_failed_term_review_leaves_pr_untouched(self):
+        self.add_term_review()
+        self.review_status = 403
+        summary = self.run_check(exit_code=1)
+        self.assertEqual([(method, path) for method, path, _ in self.writes], [("POST", "issues")])
+        self.assertIn("術語審查 Issue 寫入失敗", summary)
+        self.assertIn("HTTP 403", summary)
+
+    # Scenario: 同版本 marker 已出現在開啟或關閉 Issue 的內文或留言。
+    # Purpose: 保留人工審查結果，避免重複建立 Issue 或留言。
+    def test_UnitT80_existing_version_in_issue_or_comment_is_not_written_again(self):
+        self.add_term_review()
+        review = {"number": 31, "labels": [{"name": "term-review"}], "body": self.review_marker}
+        for is_closed in (False, True):
+            for version_in_issue in (False, True):
+                with self.subTest(is_closed=is_closed, version_in_issue=version_in_issue):
+                    self.writes.clear()
+                    review["body"] = self.review_marker
+                    self.review_comments = []
+                    if version_in_issue:
+                        review["body"] += "\n" + self.review_version
+                    else:
+                        self.review_comments = [comment(self.review_version + "\n\n已記錄的詞表")]
+                    self.open_reviews = [] if is_closed else [review]
+                    self.closed_reviews = [review] if is_closed else []
+                    self.assertIn("已合併", self.run_check())
+                    self.assertEqual([(method, path) for method, path, _ in self.writes],
+                                     [("PUT", "pulls/8/merge")])
 
 
 class RecordsTests(unittest.TestCase):

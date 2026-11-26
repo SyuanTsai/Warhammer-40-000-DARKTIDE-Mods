@@ -130,6 +130,10 @@ class GitHubError(Exception):
         super().__init__(f"GitHub {action}：{detail}")
 
 
+class GitHubTransportError(GitHubError):
+    pass
+
+
 def _transport(method, url, headers, data):
     return request_bytes(url, headers, method, data)
 
@@ -159,7 +163,7 @@ class GitHubClient:
         try:
             status, headers, body = self._transport(method, url, self._headers.copy(), data)
         except Exception:
-            raise GitHubError(action) from None
+            raise GitHubTransportError(action) from None
         if not 200 <= status < 300:
             raise GitHubError(action, status)
         if expected is None:

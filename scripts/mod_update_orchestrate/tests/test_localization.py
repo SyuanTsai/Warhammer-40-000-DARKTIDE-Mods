@@ -4,8 +4,11 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from scripts.mod_update_orchestrate.loc_layout import preserve_layout, unwrap_literal_outer_double_quotes
+from scripts.mod_update_orchestrate.loc_layout import (
+    decode_lua_string, preserve_layout, unwrap_literal_outer_double_quotes,
+)
 from scripts.mod_update_orchestrate.localization import Localization, read_json
+from scripts.mod_update_orchestrate.report import prepare_term_reviews
 
 
 UPSTREAM = '''return {
@@ -98,11 +101,24 @@ class LocalizationQuoteTests(unittest.TestCase):
             ("new", "sourceExpression", """'"Stim Delay (seconds)"'"""),
             ("new", "sourceExpression", '[["Stim Delay (seconds)"]]'),
             ("new", "sourceExpression", r'"\034Stim Delay (seconds)\x22"'),
+            ("new", "sourceExpression", r'"\u{201c}Stim Delay (seconds)\u{201d}"'),
+            ("new", "sourceExpression", '"Stim Delay (seconds)”"'),
+            ("new", "sourceExpression", '"＂Stim Delay (seconds)"'),
+            ("new", "sourceExpression", r'"Stim Delay (seconds)\u{ff02}"'),
+            ("new", "sourceExpression", '''"'Stim Delay (seconds)'"'''),
             ("new", "zhTwExpression", WRAPPED),
             ("old", "zhTwExpression", WRAPPED),
             ("approval", "", r'"興奮劑\"延遲\"（秒）"'),
             ("approval", "", r'"\"興奮劑延遲（秒）"'),
             ("approval", "", r'"興奮劑延遲（秒）\""'),
+            ("approval", "", r'"\"選項 A\" 和 \"選項 B\""'),
+            ("approval", "", r'"\"已啟用。\" 或 \"已停用。\""'),
+            ("approval", "", r'"\"\034內部\"\\\n\""'),
+            ("approval", "", r'"\"內部有“彎引號”\""'),
+            ("approval", "", r'"\"內部有\u{ff02}全形引號\""'),
+            ("approval", "", '"＂興奮劑延遲（秒）＂"'),
+            ("approval", "", """'"選項 A"和"選項 B"'"""),
+            ("approval", "", '"選項 A" .. "選項 B"'),
             ("new", "sourceExpression", '"Stim Delay" .. suffix'),
             ("old", "zhTwExpression", 'Localize("delay")'),
             ("non_ai", "", WRAPPED),
@@ -124,7 +140,7 @@ class LocalizationQuoteTests(unittest.TestCase):
 
     def test_UnitT40_removes_one_pair_and_preserves_lua_content(self):
         for quoted, expected in (
-            (r'"\"\034內部\"\\\n\""', r'"\034內部\"\\\n"'),
+            (r'"\"內部\\\n\""', r'"內部\\\n"'),
             (r'"\0345 秒\x22"', '"5 秒"'),
             ("'\"興奮劑\"'", "'興奮劑'"),
             ('[=["興奮劑"]=]', '[=[興奮劑]=]'),
@@ -134,3 +150,43 @@ class LocalizationQuoteTests(unittest.TestCase):
         ):
             with self.subTest(quoted=quoted):
                 self.assertEqual(unwrap_literal_outer_double_quotes(quoted), expected)
+
+    def test_UnitT50_legacy_report_translation_is_written_before_apply(self):
+        pending = {**self.unit, "reviewStatus": "pending", "suggestedZhTwExpression": None}
+        document = {"units": [pending], "immutableContractSha256": "digest"}
+        self.loc.workset.write_text(json.dumps(document), encoding="utf-8")
+        report = {"blocked": [{"unitId": "combat_duration", "reason": "unknown_term",
+                               "details": ["Stim Delay"], "translation": '延遲 \\ "5" 秒\n'}]}
+        updated, summary, reviews = prepare_term_reviews(document, report)
+        self.assertEqual(reviews[0]["terms"], ["Stim Delay"])
+
+        def skill_step(script, *args):
+            saved = read_json(self.loc.workset)
+            self.assertEqual(saved["immutableContractSha256"], "digest")
+            self.assertEqual(saved["units"][0]["reviewStatus"], "approved")
+            self.assertEqual(saved["units"][0]["suggestedZhTwExpression"], r'"延遲 \\ \"5\" 秒\010"')
+            return {"result": "passed"}
+
+        with patch.object(self.loc, "powershell", side_effect=skill_step) as powershell:
+            self.loc.apply(updated, summary, rewrite_workset=True)
+        self.assertEqual(powershell.call_count, 2)
+
+    def test_UnitT60_term_report_accepts_missing_fields(self):
+        document = {"units": [self.unit]}
+        for report in ({}, {"unknownTerms": None}, {"unknownTerms": {"terms": ["Stim Delay"]}}):
+            with self.subTest(report=report):
+                self.assertEqual(prepare_term_reviews(document, report), (document, report, []))
+        report = {"unknownTerms": [None, {}, {"unitId": "combat_duration", "terms": ["Stim Delay"]}]}
+        unchanged, summary, reviews = prepare_term_reviews(document, report)
+        self.assertIs(unchanged, document)
+        self.assertIs(summary, report)
+        self.assertEqual(reviews, [{"unitId": "combat_duration", "key": "combat_duration",
+                                    "source": "Stim Delay (seconds)", "terms": ["Stim Delay"],
+                                    "translation": '"興奮劑延遲（秒）"'}])
+
+    def test_UnitT70_lua_string_decoding_keeps_bytes_and_newline_rules(self):
+        self.assertEqual(decode_lua_string(r'"\228\xBD\160\u{597d}"'), "你好")
+        self.assertEqual(decode_lua_string("[=[\r\nA\\n|B\rC]=]"), "A\\n|B\nC")
+        self.assertEqual(decode_lua_string("'line\\\r\nbreak'"), "line\nbreak")
+        self.assertIsNone(decode_lua_string('"left" .. "right"'))
+        self.assertIsNone(decode_lua_string(r'"\999"'))

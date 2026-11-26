@@ -18,6 +18,7 @@ from scripts.mod_update_orchestrate.localization import Localization
 from scripts.mod_update_orchestrate.private_fix import private_fix, translate_private
 from scripts.mod_update_orchestrate.pr import commit_tree, run_git
 from scripts.mod_update_orchestrate.process import install_tree, process
+from scripts.mod_update_orchestrate.report import prepare_term_reviews
 from scripts.mod_update_orchestrate.tests.test_pipeline import comment, issue, marker
 from scripts.mod_update_orchestrate.tests.test_routes import README
 from scripts.mod_update_orchestrate.tree import MODS, read_repo_tree
@@ -260,6 +261,16 @@ class SkillTests(unittest.TestCase):
         self.assertNotIn(FALLBACK_NOTE, github.write_pr.call_args.args[3])
         self.assertEqual(self.git("status", "--porcelain"), "")
         github.merge_pr.assert_not_called()
+
+    def test_InterT16_legacy_unknown_term_with_translation_passes_receipt(self):
+        workset = self.loc.generate({self.name: b'return { added = { en = "Shot Recovery" } }\r\n'})
+        unit = next(unit for unit in workset["units"] if unit["action"] == "AI_REQUIRED")
+        report = {"blocked": [{"unitId": unit["unitId"], "reason": "unknown_term",
+                               "details": ["Shot Recovery"], "translation": "射擊恢復"}]}
+        prepared, summary, reviews = prepare_term_reviews(workset, report)
+        merged, _ = self.loc.apply(prepared, summary, rewrite_workset=True)
+        self.assertIn("射擊恢復".encode("utf-8"), merged)
+        self.assertEqual(reviews[0]["terms"], ["Shot Recovery"])
 
     # Scenario: 上游新增英文項目，假 transport 通過翻譯與審查。
     # Purpose: 用真 Skill 測試 New、核准、Apply、Receipt、Gate 的介面。

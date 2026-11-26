@@ -1,14 +1,16 @@
 """在既有 GitHub transport 上提供編排需要的操作。"""
 
 import re
+import time
 from urllib.parse import quote, urlencode, urlsplit
 
 from scripts.mod_update_watch.handoff import parse_received_markers
-from scripts.mod_update_watch.issues import AMBIGUOUS_MAIN, GITHUB_URL, GitHubClient, GitHubError
+from scripts.mod_update_watch.issues import AMBIGUOUS_MAIN, GITHUB_URL, GitHubClient, GitHubError, GitHubTransportError
 from scripts.mod_update_watch.registry import positive_id
 
 PREFIX = "mod-update-orchestrate:"
 BOT = "github-actions[bot]"
+TERM_REVIEW = "term-review"
 
 
 class GitHub(GitHubClient):
@@ -18,12 +20,21 @@ class GitHub(GitHubClient):
 
     def pages(self, path, action):
         url = f"{self._repo_url}/{path}"
+        endpoint = "/" + path.split("?", 1)[0]
+        named_path = urlsplit(self._repo_url).path + endpoint
+        numeric_path = None
         found, seen = [], set()
         while url:
             parsed = urlsplit(url)
-            if (url in seen or parsed.scheme != "https" or parsed.netloc != "api.github.com"
-                    or not url.startswith(self._repo_url + "/")):
+            if url in seen or parsed.scheme != "https" or parsed.netloc != "api.github.com":
                 raise GitHubError(action)
+            if parsed.path != named_path:
+                if numeric_path is None and re.fullmatch(r"/repositories/[0-9]+" + re.escape(endpoint), parsed.path):
+                    repo, _ = self._request("GET", self._repo_url, "驗證分頁的 repository ID", expected=dict)
+                    if repo_id := positive_id(repo.get("id")):
+                        numeric_path = f"/repositories/{repo_id}{endpoint}"
+                if parsed.path != numeric_path:
+                    raise GitHubError(action)
             seen.add(url)
             page, headers = self._request("GET", url, action, expected=list)
             if any(not isinstance(item, dict) for item in page):
@@ -68,19 +79,23 @@ class GitHub(GitHubClient):
                 if error.status != 404:
                     raise
 
-    def ensure_blocked(self):
+    def ensure_label(self, name, color, description):
+        path = f"labels/{quote(name, safe='')}"
         try:
-            self.api("GET", "labels/blocked", "查詢 blocked 標籤")
+            self.api("GET", path, f"查詢 {name} 標籤")
         except GitHubError as error:
             if error.status != 404:
                 raise
             try:
-                self.api("POST", "labels", "建立 blocked 標籤",
-                         {"name": "blocked", "color": "b60205", "description": "MOD 更新需人工排除衝突"})
+                self.api("POST", "labels", f"建立 {name} 標籤",
+                         {"name": name, "color": color, "description": description})
             except GitHubError as race:
                 if race.status != 422:
                     raise
-                self.api("GET", "labels/blocked", "確認 blocked 標籤")
+                self.api("GET", path, f"確認 {name} 標籤")
+
+    def ensure_blocked(self):
+        self.ensure_label("blocked", "b60205", "MOD 更新需人工排除衝突")
 
     def needs_human(self, number, key, message):
         self.note(number, f"human-{key}", message)
@@ -189,3 +204,57 @@ class GitHub(GitHubClient):
                               "labels": ["needs-human"]})
             budget_number = issue["number"]
         self.needs_human(number, "budget", f"超過翻譯上限，詳見 #{budget_number}。")
+
+    def term_review_issue(self, nexus_id, file_id, title, body, *, sleeper=time.sleep):
+        for delay in (1, 2, None):
+            try:
+                return self._upsert_term_review_issue(nexus_id, file_id, title, body)
+            except GitHubError as error:
+                transient = (isinstance(error, GitHubTransportError)
+                             or error.status is not None and 500 <= error.status < 600)
+                if delay is None or not transient:
+                    raise
+                sleeper(delay)
+
+    def _has_term_review_version(self, issue, number, marker):
+        return marker in (issue.get("body") or "").splitlines() or any(
+            marker in (comment.get("body") or "").splitlines() for comment in self.comments(number)
+        )
+
+    def _upsert_term_review_issue(self, nexus_id, file_id, title, body):
+        issue_marker = f"<!-- term-review:nexus={nexus_id} -->"
+        version_marker = f"<!-- term-review:nexus={nexus_id}:file={file_id} -->"
+        self.ensure_label(TERM_REVIEW, "5319e7", "MOD 術語待審查")
+        issues = [item for item in self.pages("issues?state=open&per_page=100", "列出開啟的術語審查 Issue")
+                  if "pull_request" not in item]
+        existing = next((item for item in issues if issue_marker in (item.get("body") or "").splitlines()), None)
+        if existing is None:
+            existing = next((item for item in issues if item.get("title") == title), None)
+        number = positive_id(existing.get("number")) if existing is not None else None
+        if existing is not None and not number:
+            raise GitHubError("無效術語審查 Issue 編號")
+        has_version = existing is not None and self._has_term_review_version(existing, number, version_marker)
+        if not has_version:
+            # 人工審查完成後關閉的 Issue，仍可證明同版本已同步。
+            closed_issues = self.pages(f"issues?state=closed&labels={TERM_REVIEW}&per_page=100",
+                                       "列出已關閉的術語審查 Issue")
+            for item in closed_issues:
+                if ("pull_request" not in item
+                        and (issue_marker in (item.get("body") or "").splitlines() or item.get("title") == title)
+                        and (closed_number := positive_id(item.get("number")))
+                        and self._has_term_review_version(item, closed_number, version_marker)):
+                    return closed_number
+        if existing is None:
+            created = self.api("POST", "issues", "建立術語審查 Issue",
+                               {"title": title, "body": f"{issue_marker}\n{version_marker}\n\n{body}",
+                                "labels": [TERM_REVIEW]})
+            number = positive_id(created.get("number"))
+        else:
+            if not has_version:
+                self.api("POST", f"issues/{number}/comments", "新增術語審查留言",
+                         {"body": f"{version_marker}\n\n- 版本識別：{file_id}\n{body}"})
+            if not any(label.get("name") == TERM_REVIEW for label in existing.get("labels", [])):
+                self.label(number, TERM_REVIEW, True)
+        if not number:
+            raise GitHubError("無效術語審查 Issue 編號")
+        return number

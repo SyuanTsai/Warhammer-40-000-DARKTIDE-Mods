@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .loc_layout import literal_has_outer_double_quotes, unwrap_literal_outer_double_quotes
+from .loc_layout import literal_has_boundary_quote, unwrap_literal_outer_double_quotes
 from .report import blocked_units
 from .tree import is_localization
 
@@ -25,10 +25,10 @@ def _unexpected_quotes(unit):
         return False
     old, new = unit.get("old") or {}, unit.get("new") or {}
     source = (new.get("sourceExpression") or {}).get("raw")
-    if literal_has_outer_double_quotes(source) is not False:
+    if literal_has_boundary_quote(source) is not False:
         return False
     references = ((side.get("zhTwExpression") or {}).get("raw") for side in (old, new))
-    return all(raw is None or literal_has_outer_double_quotes(raw) is False for raw in references)
+    return all(raw is None or literal_has_boundary_quote(raw) is False for raw in references)
 
 
 class Localization:
@@ -105,7 +105,7 @@ class Localization:
         summary = read_json(self.summary) if self.summary.is_file() else {}
         return status, summary, read_json(self.workset)
 
-    def apply(self, document, summary):
+    def apply(self, document, summary, *, rewrite_workset=False):
         if blocked_units(document, summary):
             raise LocalizationError("工作集含未核准或 BLOCKED 項目")
         units = []
@@ -118,11 +118,13 @@ class Localization:
                     unit = {**unit, "suggestedZhTwExpression": unwrapped}
                     unquoted_keys.append(unit["key"])
             units.append(unit)
-        if unquoted_keys and read_json(self.workset)["units"] != units:
-            updated = self.workset.with_suffix(".tmp")
-            corrected = {**document, "units": units}
-            updated.write_text(json.dumps(corrected, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            updated.replace(self.workset)
+        if rewrite_workset or unquoted_keys:
+            saved = read_json(self.workset)
+            if saved["units"] != units:
+                updated = self.workset.with_suffix(".tmp")
+                corrected = {**saved, "units": units}
+                updated.write_text(json.dumps(corrected, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                updated.replace(self.workset)
         result = self.powershell("Apply-LocalizationWorkset", "-WorksetPath", self.workset)
         if result.get("result") != "passed":
             raise LocalizationError("Apply 未通過")
