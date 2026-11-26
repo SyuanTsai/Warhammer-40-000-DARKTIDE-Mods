@@ -583,10 +583,10 @@
 
 ### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
     在戰鬥中自動使用化學興奮劑，支援設定檔切換、取消動畫與戰鬥狀態檢查
-- MOD 網站最後更新日期：Last updated 01 October 2026, 1:11AM
-- MOD 版本：3.1
-- MOD 檔案名稱：BrokerAutoStim 655 3.1 2026-09-30T17-11Z cwrBAw7dp.zip
-- 手動維護最後下載日期：2026-10-01
+- MOD 網站最後更新日期：Last updated 25 November 2026, 12:01PM
+- MOD 版本：3.5.1
+- MOD 檔案名稱：BrokerAutoStim 655 3.5.1 2026-11-25T04-01Z bTkWSTfqf
+- 手動維護最後下載日期：2026-11-26
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
     天賦UI
