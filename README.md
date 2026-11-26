@@ -318,10 +318,10 @@
 
 ### [Remember Server Location](https://www.nexusmods.com/warhammer40kdarktide/mods/308)
     能夠固定預設的伺服器避免都是香港
-- MOD 網站最後更新日期：Last updated 02 December 2025, 6:15AM
-- MOD 版本：1.1.6
-- MOD 檔案名稱：RememberServerLocation-308-1-1-6-1764627354
-- 手動維護最後下載日期：2025-12-06
+- MOD 網站最後更新日期：Last updated 03 November 2026, 11:05AM
+- MOD 版本：1.1.7
+- MOD 檔案名稱：RememberServerLocation 308 1.1.7 2026-11-03T03-05Z RZfXOZu5G
+- 手動維護最後下載日期：2026-11-25
 - GitHub :
 - Source=>  https://github.com/deluxghost/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods-1
