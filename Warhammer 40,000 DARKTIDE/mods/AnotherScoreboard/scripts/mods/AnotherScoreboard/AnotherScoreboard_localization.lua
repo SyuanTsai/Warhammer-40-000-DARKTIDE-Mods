@@ -1925,6 +1925,7 @@ for _, category in ipairs({ "specials", "elites" }) do
 		localization[enemy.label] = {
 			en = enemy.name.en,
 			["zh-cn"] = enemy.name["zh-cn"],
+			["zh-tw"] = enemy.name["zh-tw"],
 		}
 	end
 end
