@@ -1,4 +1,5 @@
 name: MOD 更新編排
+# 暫停每小時排程：repository variable MOD_ORCHESTRATE_PAUSED=true（不分大小寫）。只略過 schedule，workflow_dispatch 照常可用；設為 false 或刪除變數即恢復。
 
 on:
   schedule:
@@ -36,7 +37,15 @@ env:
   GIT_CONFIG_VALUE_0: "false"
 
 jobs:
+  paused-summary:
+    if: github.event_name == 'schedule' && vars.MOD_ORCHESTRATE_PAUSED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: echo '排程已暫停（MOD_ORCHESTRATE_PAUSED=true）' >> "$GITHUB_STEP_SUMMARY"
+
   discover:
+    if: github.event_name != 'schedule' || vars.MOD_ORCHESTRATE_PAUSED != 'true'
     runs-on: ubuntu-latest
     concurrency:
       group: mod-update-orchestrate-discover
