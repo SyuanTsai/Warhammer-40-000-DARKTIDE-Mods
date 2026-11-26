@@ -1,5 +1,6 @@
 """呈現更新狀態、人工待辦與 PR 證據。"""
 
+import json
 import re
 from collections import Counter, defaultdict
 from html import escape
@@ -8,6 +9,8 @@ from .loc_layout import decode_lua_string
 
 SKILL_SHA = "215182256aa1d620b8c748afc4254453038eef3e"
 TERM_REVIEW_HEADING = "## 待審查術語"
+_TERM_REVIEW_COLUMNS = ("| 鍵值 | 英文原文 | 標記詞彙 | 採用譯文 |", "| --- | --- | --- | --- |")
+_TERM_REVIEW_DATA = "<!-- term-review-data:"
 _TABLE_ESCAPES = {ord(char): f"&#{ord(char)};" for char in "\\`*_~[]<>|#@"}
 _TABLE_ESCAPES.update({ord("&"): "&amp;", ord("\n"): "<br>"})
 
@@ -138,7 +141,7 @@ def blocked_units(workset, summary):
 def term_review_section(reviews):
     if not reviews:
         return []
-    return ["", TERM_REVIEW_HEADING, "", "| 鍵值 | 英文原文 | 標記詞彙 | 採用譯文 |", "| --- | --- | --- | --- |",
+    return ["", TERM_REVIEW_HEADING, "", *_TERM_REVIEW_COLUMNS,
             *("| " + " | ".join(map(_expression_cell, row)) + " |" for row in _term_review_rows(reviews))]
 
 
@@ -162,16 +165,41 @@ def sync_term_review_translations(reviews, workset, unquoted_keys):
             item["translation"] = _expression_text(corrected[item["unitId"]])
 
 
-def term_review_issue(name, nexus_id, reviews):
+def term_review_title(name, nexus_id):
+    if not name:
+        return f"[term-review] Nexus {nexus_id}"
     suffix = f" (Nexus {nexus_id})"
-    title = f"[term-review] {plain(name)}"[:256 - len(suffix)] + suffix
-    body = "\n".join([f"- MOD：{cell(name)}", f"- Nexus ID：{nexus_id}", *term_review_section(reviews)])
-    return title, body
+    return f"[term-review] {plain(name)}"[:256 - len(suffix)] + suffix
+
+
+def term_review_from_pr(body, nexus_id):
+    _, heading, section = ("\n" + _normalize_newlines(body) + "\n").partition(f"\n{TERM_REVIEW_HEADING}\n")
+    if not heading:
+        return None
+    table, _, remainder = section.removeprefix("\n").partition("\n\n")
+    table = table.rstrip("\n")
+    lines = table.split("\n")
+    rows = lines[2:]
+    if tuple(lines[:2]) != _TERM_REVIEW_COLUMNS or not rows or any(
+            not row.startswith("| ") or not row.endswith(" |") for row in rows):
+        raise ValueError("PR 的待審查術語表格式無效")
+    name = None
+    if remainder.startswith(_TERM_REVIEW_DATA):
+        metadata = remainder.split("\n", 1)[0]
+        if not metadata.endswith(" -->"):
+            raise ValueError("PR 的術語審查資料格式無效")
+        name = json.loads(metadata[len(_TERM_REVIEW_DATA):-len(" -->")])
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError("PR 的術語審查資料缺少 MOD 名稱")
+    mod_name = cell(name or f"Nexus {nexus_id}")
+    return term_review_title(name, nexus_id), (
+        f"- MOD：{mod_name}\n- Nexus ID：{nexus_id}\n\n{TERM_REVIEW_HEADING}\n\n{table}"
+    )
 
 
 def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, file_id,
             *, route="update", section=None, classification=None, private_files=(), private_recorded=False,
-            term_reviews=()):
+            term_reviews=(), term_review_name=None):
     binding = workset["translationBinding"]
     route_name = {"update": "更新", "new": "新增", "hotfix": "作者 hotfix"}[route]
     result = [
@@ -189,11 +217,15 @@ def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, 
         result += ["", "## 偵測到私人修正", "", *(f"- {cell(path)}" for path in private_files)]
     elif private_recorded:
         result += ["- 保留既有私人修正標記（private_fix=true）。"]
+    review_section = term_review_section(term_reviews)
+    if review_section and term_review_name:
+        name = json.dumps(plain(term_review_name)).replace("<", r"\u003c").replace(">", r"\u003e")
+        review_section += ["", f"{_TERM_REVIEW_DATA}{name} -->"]
     result += [
         *workset_actions(workset),
         "", "## BLOCKED", "",
         *([f"- merge-conflict：{cell(conflict)}" for conflict in conflicts] or ["無"]),
-        *term_review_section(term_reviews),
+        *review_section,
         *api_usage(rendition, classification),
         "", "## 規則與版本", "",
         f"- 規則 SHA：{binding['rulesSha256']}",

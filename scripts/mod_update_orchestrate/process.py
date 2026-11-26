@@ -20,11 +20,11 @@ from .gate import validate_git, validate_paths
 from .localization import Localization, LocalizationError, read_json
 from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
-from .pr import branch_for, current_pr, publish, stage_raw, upstream_commit
+from .pr import branch_for, current_pr, publish, stage_raw, sync_term_review, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
 from .report import (
     blocked_units, cell, plain, pr_body, prepare_term_reviews, sync_term_review_translations,
-    term_review_issue, term_review_log, unquoted_note,
+    term_review_log, term_review_title, unquoted_note,
 )
 from .section import DEFAULT_SECTION, choose_section, describe
 from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
@@ -161,7 +161,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         document, summary, reviews = prepare_term_reviews(translated, summary)
         pending = blocked_units(document, summary)
         if dry_run and reviews:
-            issue_title, _ = term_review_issue(mod.name, nexus_id, reviews)
+            issue_title = term_review_title(mod.name, nexus_id)
             emit(f"預計建立或更新 Issue：{issue_title}\n\n{term_review_log(reviews)}\n\n- PR：待發布")
         elif reviews and (status or pending):
             emit(term_review_log(reviews))
@@ -250,7 +250,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         code_changes.append((loc.relative, unquoted_note(unquoted_keys)))
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
-                   private_files=private_files, private_recorded=private_recorded, term_reviews=reviews)
+                   private_files=private_files, private_recorded=private_recorded, term_reviews=reviews,
+                   term_review_name=mod.name)
     action = {"update": "更新", "new": "新增", "hotfix": "hotfix"}[route]
     version = plain(receipt.version)
     if route != "new":
@@ -271,7 +272,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if route != "new":
             restore(git, base_oid, paths)
         return None
-    return title, body, conflicts, reviews
+    return title, body, conflicts
 
 
 def restore(git, base_oid, paths):
@@ -320,6 +321,9 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             if len(pulls) > 1:
                 raise NeedsHuman("publication", "固定分支出現多個開啟中的 PR")
             if not regenerate and current_pr(pulls, nexus_id, file_id):
+                if not dry_run:
+                    pull = pulls[0]
+                    sync_term_review(github, pull, pull.get("body") or "", nexus_id, file_id, emit=emit)
                 emit("同主檔已有開啟中的 PR，略過")
                 return
             with tempfile.TemporaryDirectory(dir=scratch, prefix=f"mod-{nexus_id}-") as work:
@@ -356,7 +360,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 if route != "new":
                     restore(git, base_oid, paths)
                 raise
-            title, body, conflicts, reviews = outcome
+            title, body, conflicts = outcome
             resolved = {"archive", "layout", "registry", "budget", "localization", "main", "publication"}
             if conflicts:
                 github.needs_human(number, "merge", "\n".join(f"- merge-conflict：{cell(item)}" for item in conflicts))
@@ -364,7 +368,6 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 resolved.add("merge")
             pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
                                 mode, conflicts, upstream_oid or base_oid, paths, route=route, mod_staged=True,
-                                term_review=term_review_issue(mod.name, nexus_id, reviews) if reviews else None,
                                 emit=emit)
             github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")

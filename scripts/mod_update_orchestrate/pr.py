@@ -9,6 +9,7 @@ from scripts.mod_update_watch.registry import positive_id
 
 from .discover import latest_receipt, matches_issue, receipt_key, target, unresolved_external_label
 from .gate import validate_paths, validate_upstream
+from .report import term_review_from_pr
 
 PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_id=([0-9]+|sha256-[a-f0-9]{64})"
                        r"(?: verified_head=([a-f0-9]{40})(?: route=(update|new|hotfix))?)? -->")
@@ -45,6 +46,21 @@ def should_merge(mode, route, blocked, draft):
     return mode == "auto" and route != "new" and not blocked and not draft
 
 
+def sync_term_review(github, pull, body, nexus_id, file_id, *, emit=print):
+    try:
+        review = term_review_from_pr(body, nexus_id)
+        if review is None:
+            return
+        title, issue_body = review
+        if not (url := pull.get("html_url")):
+            raise GitHubError("PR 回應缺少連結")
+        review_number = github.term_review_issue(nexus_id, str(file_id), title, f"{issue_body}\n\n- PR：{url}")
+    except (GitHubError, ValueError) as error:
+        raise RuntimeError(f"更新 PR #{pull['number']} 已發布，術語審查 Issue 寫入失敗，"
+                           f"已略過本次自動合併（{error}）。") from error
+    emit(f"術語審查 Issue #{review_number} 已同步（PR #{pull['number']}）。")
+
+
 def remote_head(git, branch):
     ref = f"refs/heads/{branch}"
     response = git("ls-remote", "--heads", "origin", ref)
@@ -75,7 +91,8 @@ def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_r
         return
     pull = github.pull(pr_number)
     head = pull.get("head") or {}
-    marker = pr_marker(pull.get("body") or "")
+    body = pull.get("body") or ""
+    marker = pr_marker(body)
     if pull.get("state") != "open":
         reason = "PR 已關閉"
     elif pull.get("draft") is not False:
@@ -102,6 +119,7 @@ def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_r
         if dry_run:
             emit(f"PR #{pr_number} 符合自動合併資格（dry-run）。")
         else:
+            sync_term_review(github, pull, body, nexus_id, file_id, emit=emit)
             github.merge_pr(pr_number, verified_head)
             emit(f"PR #{pr_number} 已合併（{verified_head}）。")
         return
@@ -189,7 +207,7 @@ def _verify_pull_head(git, github, branch, pull, head, old_head):
 
 
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
-            paths, *, route="update", mod_staged=False, term_review=None, emit=print):
+            paths, *, route="update", mod_staged=False, emit=print):
     marker = pr_marker(body)
     if (not marker or marker[1] != str(nexus_id) or marker[3]
             or marker[2].startswith("sha256-") != (route == "hotfix")):
@@ -228,16 +246,7 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
         github.label(number, "blocked", True)
     elif had_blocked:
         github.label(number, "blocked", False)
-    if term_review:
-        issue_title, issue_body = term_review
-        try:
-            if not (url := pull.get("html_url")):
-                raise GitHubError("PR 回應缺少連結")
-            review_number = github.term_review_issue(nexus_id, marker[2], issue_title, f"{issue_body}\n\n- PR：{url}")
-        except GitHubError as error:
-            raise RuntimeError(f"更新 PR #{number} 已發布，術語審查 Issue 寫入失敗，"
-                               f"已略過本次自動合併（{error}）。") from error
-        emit(f"術語審查 Issue #{review_number} 已同步（PR #{number}）。")
+    sync_term_review(github, pull, body, nexus_id, marker[2], emit=emit)
     if should_merge(mode, route, conflicts, draft):
         if github.discussions_resolved(pull):
             github.merge_pr(number, head)

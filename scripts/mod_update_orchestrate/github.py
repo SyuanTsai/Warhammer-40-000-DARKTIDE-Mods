@@ -216,6 +216,11 @@ class GitHub(GitHubClient):
                     raise
                 sleeper(delay)
 
+    def _has_term_review_version(self, issue, number, marker):
+        return marker in (issue.get("body") or "").splitlines() or any(
+            marker in (comment.get("body") or "").splitlines() for comment in self.comments(number)
+        )
+
     def _upsert_term_review_issue(self, nexus_id, file_id, title, body):
         issue_marker = f"<!-- term-review:nexus={nexus_id} -->"
         version_marker = f"<!-- term-review:nexus={nexus_id}:file={file_id} -->"
@@ -225,20 +230,29 @@ class GitHub(GitHubClient):
         existing = next((item for item in issues if issue_marker in (item.get("body") or "").splitlines()), None)
         if existing is None:
             existing = next((item for item in issues if item.get("title") == title), None)
+        number = positive_id(existing.get("number")) if existing is not None else None
+        if existing is not None and not number:
+            raise GitHubError("無效術語審查 Issue 編號")
+        has_version = existing is not None and self._has_term_review_version(existing, number, version_marker)
+        if not has_version:
+            # 人工審查完成後關閉的 Issue，仍可證明同版本已同步。
+            closed_issues = self.pages(f"issues?state=closed&labels={TERM_REVIEW}&per_page=100",
+                                       "列出已關閉的術語審查 Issue")
+            for item in closed_issues:
+                if ("pull_request" not in item
+                        and (issue_marker in (item.get("body") or "").splitlines() or item.get("title") == title)
+                        and (closed_number := positive_id(item.get("number")))
+                        and self._has_term_review_version(item, closed_number, version_marker)):
+                    return closed_number
         if existing is None:
             created = self.api("POST", "issues", "建立術語審查 Issue",
                                {"title": title, "body": f"{issue_marker}\n{version_marker}\n\n{body}",
                                 "labels": [TERM_REVIEW]})
             number = positive_id(created.get("number"))
         else:
-            number = positive_id(existing.get("number"))
-            if not number:
-                raise GitHubError("無效術語審查 Issue 編號")
-            if version_marker not in (existing.get("body") or "").splitlines():
-                if not any(version_marker in (comment.get("body") or "").splitlines()
-                           for comment in self.comments(number)):
-                    self.api("POST", f"issues/{number}/comments", "新增術語審查留言",
-                             {"body": f"{version_marker}\n\n- 版本識別：{file_id}\n{body}"})
+            if not has_version:
+                self.api("POST", f"issues/{number}/comments", "新增術語審查留言",
+                         {"body": f"{version_marker}\n\n- 版本識別：{file_id}\n{body}"})
             if not any(label.get("name") == TERM_REVIEW for label in existing.get("labels", [])):
                 self.label(number, TERM_REVIEW, True)
         if not number:

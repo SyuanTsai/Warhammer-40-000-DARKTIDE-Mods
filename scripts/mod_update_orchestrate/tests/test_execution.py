@@ -184,11 +184,15 @@ class ExecutionTests(unittest.TestCase):
     def messages(self):
         return "\n".join(event.args[0] for event in self.emit.call_args_list)
 
-    def test_UnitT35_exhausted_review_issue_leaves_published_pr_and_fails_job(self):
+    # Scenario: 發布 PR 後術語 Issue 寫入連續失敗，GitHub 恢復後重跑同一版本。
+    # Purpose: 從既有 PR 補同步，並保留原 PR 與翻譯候選。
+    def test_UnitT35_exhausted_review_issue_is_recovered_from_published_pr(self):
         second = {**FLAGGED, "unitId": "b", "key": "stop", "terms": ["*Other Term*", "End Shot"]}
         self.loc.translate.return_value = (0, {"unknownTerms": [FLAGGED, second]}, READY)
         sleeper = Mock()
-        transport = Mock(side_effect=[(200, {}, b"{}"), (200, {}, b"[]"), (503, {}, b"")] * 3)
+        no_issues = (200, {}, b"[]")
+        label = (200, {}, b"{}")
+        transport = Mock(side_effect=[label, no_issues, no_issues, (503, {}, b"")] * 3)
         with patch.dict(os.environ, {"GITHUB_TOKEN": "fake", "GITHUB_REPOSITORY": "owner/mods"}):
             review = GitHub(transport)
         self.github.term_review_issue.side_effect = lambda *args: review.term_review_issue(*args, sleeper=sleeper)
@@ -197,7 +201,7 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual(self.run_update(mode="auto"), 1)
 
         self.assertEqual(sleeper.call_args_list, [call(1), call(2)])
-        self.assertEqual([event.args[0] for event in transport.call_args_list], ["GET", "GET", "POST"] * 3)
+        self.assertEqual([event.args[0] for event in transport.call_args_list], ["GET", "GET", "GET", "POST"] * 3)
         self.github.write_pr.assert_called_once()
         body = self.github.write_pr.call_args.args[3]
         for evidence in ("Shot Recovery", "&#42;Other Term&#42;", "End Shot"):
@@ -211,6 +215,23 @@ class ExecutionTests(unittest.TestCase):
                          "Shot Recovery", "*Other Term*、End Shot"):
             self.assertIn(evidence, messages)
         self.assertNotIn("&#", messages)
+
+        self.github.pulls.return_value = [{**self.github.write_pr.return_value, "body": body}]
+        transport.reset_mock()
+        transport.side_effect = [label, no_issues, no_issues, (403, {}, b""),
+                                 label, no_issues, no_issues, (201, {}, b'{"number": 31}')]
+        self.git.reset_mock()
+        self.assertEqual(self.run_update(mode="auto"), 1)
+        self.assertEqual(self.run_update(mode="auto"), 0)
+
+        self.assertEqual([event.args[0] for event in transport.call_args_list], ["GET", "GET", "GET", "POST"] * 2)
+        self.assertEqual(self.github.term_review_issue.call_args_list,
+                         [self.github.term_review_issue.call_args] * 3)
+        self.loc.apply.assert_called_once()
+        self.github.write_pr.assert_called_once()
+        self.github.merge_pr.assert_not_called()
+        self.assertFalse(any(event.args[0] == "push" for event in self.git.call_args_list))
+        self.assertIn("術語審查 Issue #31 已同步（PR #22）", self.messages())
 
     def test_UnitT36_term_review_displays_lua_literals_and_complex_expressions(self):
         flagged = {**FLAGGED, "key": "start_key#", "source": r'"\u{53}elect \z    \"A|B\"\n*strongly*"',
@@ -330,7 +351,7 @@ class ExecutionTests(unittest.TestCase):
                       version="2", downloaded="2026-11-25", acquisition_method="drive-intake")
         self.enterContext(patch("scripts.mod_update_orchestrate.process.updates", return_value=values))
         # When
-        _, body, conflicts, _ = candidate(
+        _, body, conflicts = candidate(
             self.root, self.git, self.github, Mock(), "processed", ISSUE, 7, RECEIPT,
             self.mod, PATHS, archive, {"Example.mod": b"upstream", self.loc.relative: b"new"},
             self.scratch, self.scratch / "cache", self.scratch / "skill", "a" * 40,
