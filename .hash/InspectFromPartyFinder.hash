@@ -1,0 +1,13 @@
+nexus_id=455
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/455
+nexus_page_version=1.0.4
+nexus_last_updated=2025-12-07T05:29:59Z
+main_file_id=4140
+version=1.0.4
+main_file_uploaded_at_utc=2025-12-07T05:29:59Z
+filename=Inspect from Party FinderInspect-455-1-0-4-1765085399.zip
+size_bytes=4635
+sha256=e7b742276cca0d2456f5202f5bc03a2c8eb035997f551f5d2a238f724442be5f
+acquisition_method=drive-intake
+drive_intake_md5=28c4163e26ee6bc88dc6fb274dc07bc4
+repo_directory=InspectFromPartyFinder
