@@ -39,7 +39,7 @@ jobs:
   discover:
     runs-on: ubuntu-latest
     concurrency:
-      group: mod-update-orchestrate-discover
+      group: mod-update-orchestrate-discover-v2
       cancel-in-progress: false
     permissions:
       contents: read
