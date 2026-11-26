@@ -242,10 +242,10 @@
 
 ### [Killfeed Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/70)
     擊殺名稱顯示改進
-- MOD 網站最後更新日期：Last updated 05 August 2026, 2:36PM
-- MOD 版本：26.08.05
-- MOD 檔案名稱：KillfeedImprovements 70 26.08.05 2026-08-05T06-36Z vNTD9NbBl.zip
-- 手動維護最後下載日期：2026-08-18
+- MOD 網站最後更新日期：Last updated 23 November 2026, 02:19AM
+- MOD 版本：26.11.22
+- MOD 檔案名稱：KillfeedImprovements 70 26.11.22 2026-11-22T18-19Z rlqxBlHvN
+- 手動維護最後下載日期：2026-11-26
 
 ### [Gas Outline](https://www.nexusmods.com/warhammer40kdarktide/mods/398)
     瓦斯透明化 - 避免瓦斯導致你看不到隊友
