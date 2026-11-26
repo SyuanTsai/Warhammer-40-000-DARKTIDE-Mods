@@ -9,7 +9,7 @@ local localizations = {
 	mod_description = {
 		en = "Shows stimm duration and cooldown timer for Hive Scum (Broker) class.",
 		ru = "Показывает таймер действия и перезарядки стимма для класса Hive Scum (Broker).",
-		["zh-tw"] = "顯示巢都渣子（代理）職業的興奮劑持續時間與冷卻計時器。",
+		["zh-tw"] = "顯示巢都敗類（代理）職業的興奮劑持續時間與冷卻計時器。",
 	},
 
 	display_group = {
