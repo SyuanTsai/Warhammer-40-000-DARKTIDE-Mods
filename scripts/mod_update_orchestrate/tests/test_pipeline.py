@@ -5,6 +5,7 @@ import os
 import tempfile
 import unittest
 import zipfile
+from contextlib import redirect_stderr
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock, call, patch
@@ -12,7 +13,7 @@ from unittest.mock import Mock, call, patch
 from scripts.mod_update_orchestrate.base import find_base
 from scripts.mod_update_orchestrate.discover import discover
 from scripts.mod_update_orchestrate.github import BOT, GitHub
-from scripts.mod_update_orchestrate.main import main
+from scripts.mod_update_orchestrate.main import emit_stop, main
 from scripts.mod_update_orchestrate.pr import PullHeadError, current_pr, publish
 from scripts.mod_update_orchestrate.process import NeedsHuman, download, process, registry_mod
 from scripts.mod_update_orchestrate.records import update_hash, update_readme
@@ -35,6 +36,47 @@ def comment(receipt, **fields):
 
 def marker(file=9001, category="MAIN", *, version="2", **metadata):
     return build_received_marker(123, file, "drive", "a" * 32, category, version, **metadata)
+
+
+class CliDiagnosticsTests(unittest.TestCase):
+    def test_unwritable_summary_keeps_redacted_stderr_diagnostics(self):
+        stderr = io.StringIO()
+        with (patch("scripts.mod_update_orchestrate.main.append", side_effect=OSError("summary path")),
+              redirect_stderr(stderr)):
+            emit_stop(ValueError("輸入格式不符"))
+        self.assertIn("ValueError: 輸入格式不符", stderr.getvalue())
+        self.assertIn("無法寫入 step summary", stderr.getvalue())
+        self.assertNotIn("summary path", stderr.getvalue())
+
+    def test_process_stop_prints_redacted_exception_and_traceback(self):
+        def fail(*args, **kwargs):
+            raise ValueError("路徑不符 <input> test-token test-key")
+
+        with tempfile.TemporaryDirectory() as temporary:
+            scratch = Path(temporary)
+            skill = scratch / "skill"
+            skill.mkdir()
+            summary = scratch / "summary.md"
+            stderr = io.StringIO()
+            with (patch.dict(os.environ, {"GOOGLE_ACCESS_TOKEN": "test-token",
+                                         "ANTHROPIC_API_KEY": "test-key",
+                                         "GDRIVE_PROCESSED_FOLDER_ID": "folder",
+                                         "SKILL_ROOT": str(skill), "RUNNER_TEMP": str(scratch),
+                                         "GITHUB_STEP_SUMMARY": str(summary)}, clear=True),
+                  patch("scripts.mod_update_orchestrate.main.GitHub"),
+                  patch("scripts.mod_update_orchestrate.main.process", side_effect=fail),
+                  redirect_stderr(stderr)):
+                result = main(["process", "--nexus-id", "395", "--file-id", "5764", "--issue", "7"],
+                              root=scratch / "repo")
+            self.assertEqual(result, 1)
+            for output, detail in ((stderr.getvalue(), "<input>"),
+                                   (summary.read_text(encoding="utf-8"), "&lt;input&gt;")):
+                self.assertIn("更新編排停止（ValueError）", output)
+                self.assertIn("Traceback (most recent call last):", output)
+                self.assertIn("in fail", output)
+                self.assertIn(f"ValueError: 路徑不符 {detail} [已遮蔽] [已遮蔽]", output)
+                self.assertNotIn("test-token", output)
+                self.assertNotIn("test-key", output)
 
 
 class DiscoverTests(unittest.TestCase):

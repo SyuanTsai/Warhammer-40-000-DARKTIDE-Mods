@@ -1,6 +1,7 @@
 """Build the tracked MOD registry from local repository metadata."""
 
 import json
+import logging
 import re
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
@@ -18,6 +19,7 @@ README_MOD = re.compile(
 README_REMOVED = re.compile(r"^#\s+移除的\s*MOD\s*#*\s*$", re.IGNORECASE)
 HASH_FILENAME_TIME = re.compile(r"(?<![0-9])([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2})-([0-9]{2})Z")
 README_FILENAME_TIME = re.compile(r"-([0-9]{10})$")
+LOGGER = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -96,6 +98,26 @@ def _readme_uploaded(entry):
         # An aware UTC epoch plus seconds also handles dates beyond the platform time_t range.
         return datetime(1970, 1, 1, tzinfo=timezone.utc) + timedelta(seconds=int(match[1]))
     return entry.uploaded_utc
+
+
+def _readme_version(entry):
+    if not entry.version:
+        return None
+    nexus_id = entry.nexus_id
+    legacy = re.search(rf"-{nexus_id}-(v?[0-9]+(?:-[0-9]+)*)-[0-9]{{10}}(?:\.(?:zip|7z|rar))?$",
+                       entry.filename, re.IGNORECASE)
+    if legacy:
+        filename_version = legacy[1].replace("-", ".")
+    elif current := re.search(rf" {nexus_id} (\S+) "
+                              r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}-[0-9]{2}Z \S+$", entry.filename):
+        filename_version = current[1]
+    else:
+        return entry.version
+    if entry.version.casefold().removeprefix("v").strip() != filename_version.casefold().removeprefix("v"):
+        LOGGER.warning("Nexus %s | %s | README 版本 %s 與檔名版本 %s 不一致，基準版本視為未知",
+                       nexus_id, entry.name, entry.version, filename_version)
+        return None
+    return entry.version
 
 
 def _readme_entries(path):
@@ -259,6 +281,6 @@ def load_registry(root: Path):
             unmapped.append(Unmapped(mod_id, name, reason, candidates))
         tracked[mod_id] = TrackedMod(
             mod_id, name, directory, "override" if override and directory else "readme",
-            entry.version, None, _readme_uploaded(entry), entry.downloaded, None,
+            _readme_version(entry), None, _readme_uploaded(entry), entry.downloaded, None,
         )
     return list(tracked.values()), unmapped
