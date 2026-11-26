@@ -65,6 +65,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install LuaJIT
+        run: sudo apt-get update && sudo apt-get install -y luajit
       - name: 執行離線測試
         shell: pwsh
         env:
