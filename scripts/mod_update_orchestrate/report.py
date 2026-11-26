@@ -10,6 +10,11 @@ from .loc_layout import decode_lua_string
 SKILL_SHA = "59ae554bd9977ae0ab293ca8ae26297750aeb5e4"
 TERM_REVIEW_HEADING = "## 待審查術語"
 _TERM_REVIEW_COLUMNS = ("| 鍵值 | 英文原文 | 標記詞彙 | 採用譯文 |", "| --- | --- | --- | --- |")
+_TEXT_REVIEW_COLUMNS = ("| 鍵值 | 英文原文 | 原因 | 實際採用值 | 待確認詞 |", "| --- | --- | --- | --- | --- |")
+_ADOPTION_LABELS = {
+    "translation": "採用通過審查的譯文", "existing_zh_tw": "沿用現有繁中",
+    "english_fallback": "回退英文", "preserved_expression": "原樣保留運算式",
+}
 _TERM_REVIEW_DATA = "<!-- term-review-data:"
 _TABLE_ESCAPES = {ord(char): f"&#{ord(char)};" for char in "\\`*_~[]<>|#@"}
 _TABLE_ESCAPES.update({ord("&"): "&amp;", ord("\n"): "<br>"})
@@ -65,17 +70,22 @@ def prepare_term_reviews(workset, summary):
     reviews, recovered = [], {}
 
     def add_review(item, unit, terms):
-        reviews.append({
+        review = {
             "unitId": item.get("unitId"),
             "key": item.get("key") or unit.get("key") or item.get("unitId"),
             "source": _expression_text(item.get("source") or _source(unit)),
             "terms": terms,
             "translation": _expression_text(item.get("translation") or unit.get("suggestedZhTwExpression")),
-        })
+        }
+        if item.get("reason") not in (None, "", "unknown_term"):
+            review.update(reason=item["reason"], adoption=item.get("adoption"))
+        reviews.append(review)
 
-    reported = summary.get("unknownTerms")
     reported_ids = set()
-    if isinstance(reported, list):
+    for field in ("unknownTerms", "termReviews"):
+        reported = summary.get(field)
+        if not isinstance(reported, list):
+            continue
         for item in reported:
             if not isinstance(item, dict):
                 continue
@@ -123,8 +133,10 @@ def blocked_units(workset, summary):
     pending = []
     for unit in workset["units"]:
         entries = blocked.get(unit["unitId"], [])
+        status = unit.get("reviewStatus")
+        reviewed = status == "approved" or (status == "preserved" and unit.get("suggestedZhTwExpression") is None)
         if (unit["action"] == "BLOCKED" or entries
-                or unit["action"] == "AI_REQUIRED" and unit["reviewStatus"] != "approved"):
+                or unit["action"] == "AI_REQUIRED" and not reviewed):
             reasons = list(dict.fromkeys(item["reason"] for item in entries if item.get("reason")))
             if (reason := unit.get("blockedReason")) and reason not in reasons:
                 reasons.append(reason)
@@ -141,20 +153,31 @@ def blocked_units(workset, summary):
 def term_review_section(reviews):
     if not reviews:
         return []
-    return ["", TERM_REVIEW_HEADING, "", *_TERM_REVIEW_COLUMNS,
-            *("| " + " | ".join(map(_expression_cell, row)) + " |" for row in _term_review_rows(reviews))]
+    has_reasons = any(item.get("reason") for item in reviews)
+    columns = _TEXT_REVIEW_COLUMNS if has_reasons else _TERM_REVIEW_COLUMNS
+    return ["", TERM_REVIEW_HEADING, "", *columns,
+            *("| " + " | ".join(map(_expression_cell, row)) + " |" for row in _term_review_rows(reviews, has_reasons))]
 
 
-def _term_review_rows(reviews):
+def _term_review_rows(reviews, has_reasons):
     for item in reviews:
-        yield (item["key"] or "—", item["source"] or "—", "、".join(item["terms"]) or "—",
-               item["translation"] or "—")
+        key, source = item["key"] or "—", item["source"] or "—"
+        terms, adopted = "、".join(item["terms"]) or "—", item["translation"] or "—"
+        if has_reasons:
+            reason = item.get("reason") or "unknown_term"
+            if label := _ADOPTION_LABELS.get(item.get("adoption")):
+                reason = f"{reason}（{label}）"
+            yield key, source, reason, adopted, terms
+        else:
+            yield key, source, terms, adopted
 
 
 def term_review_log(reviews):
+    has_reasons = any(item.get("reason") for item in reviews)
+    labels = "原因 ｜ 實際採用值 ｜ 待確認詞" if has_reasons else "標記詞彙 ｜ 採用譯文"
     rows = (" ｜ ".join(_normalize_newlines(value).replace("\n", r"\n") for value in row)
-            for row in _term_review_rows(reviews))
-    return "\n".join(["待審查術語（鍵值 ｜ 英文原文 ｜ 標記詞彙 ｜ 採用譯文）", *rows])
+            for row in _term_review_rows(reviews, has_reasons))
+    return "\n".join([f"待審查術語（鍵值 ｜ 英文原文 ｜ {labels}）", *rows])
 
 
 def sync_term_review_translations(reviews, workset, unquoted_keys):
@@ -180,26 +203,33 @@ def term_review_from_pr(body, nexus_id):
     table = table.rstrip("\n")
     lines = table.split("\n")
     rows = lines[2:]
-    if tuple(lines[:2]) != _TERM_REVIEW_COLUMNS or not rows or any(
+    if tuple(lines[:2]) not in (_TERM_REVIEW_COLUMNS, _TEXT_REVIEW_COLUMNS) or not rows or any(
             not row.startswith("| ") or not row.endswith(" |") for row in rows):
         raise ValueError("PR 的待審查術語表格式無效")
-    name = None
+    name = version = None
     if remainder.startswith(_TERM_REVIEW_DATA):
         metadata = remainder.split("\n", 1)[0]
         if not metadata.endswith(" -->"):
             raise ValueError("PR 的術語審查資料格式無效")
-        name = json.loads(metadata[len(_TERM_REVIEW_DATA):-len(" -->")])
+        data = json.loads(metadata[len(_TERM_REVIEW_DATA):-len(" -->")])
+        if isinstance(data, dict):
+            name, version = data.get("name"), data.get("version")
+            if not isinstance(version, str) or not version.strip():
+                raise ValueError("PR 的術語審查資料缺少 MOD 版本")
+        else:
+            name = data
         if not isinstance(name, str) or not name.strip():
             raise ValueError("PR 的術語審查資料缺少 MOD 名稱")
     mod_name = cell(name or f"Nexus {nexus_id}")
+    version_line = f"\n- 版本：{cell(version)}" if version else ""
     return term_review_title(name, nexus_id), (
-        f"- MOD：{mod_name}\n- Nexus ID：{nexus_id}\n\n{TERM_REVIEW_HEADING}\n\n{table}"
+        f"- MOD：{mod_name}\n- Nexus ID：{nexus_id}{version_line}\n\n{TERM_REVIEW_HEADING}\n\n{table}"
     )
 
 
 def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, file_id,
             *, route="update", section=None, classification=None, private_files=(), private_recorded=False,
-            term_reviews=(), term_review_name=None):
+            term_reviews=(), term_review_name=None, term_review_version=None):
     binding = workset["translationBinding"]
     route_name = {"update": "更新", "new": "新增", "hotfix": "作者 hotfix"}[route]
     result = [
@@ -219,8 +249,10 @@ def pr_body(number, has_base, workset, rendition, conflicts, changes, nexus_id, 
         result += ["- 保留既有私人修正標記（private_fix=true）。"]
     review_section = term_review_section(term_reviews)
     if review_section and term_review_name:
-        name = json.dumps(plain(term_review_name)).replace("<", r"\u003c").replace(">", r"\u003e")
-        review_section += ["", f"{_TERM_REVIEW_DATA}{name} -->"]
+        name = plain(term_review_name)
+        data = {"name": name, "version": plain(term_review_version)} if term_review_version else name
+        metadata = json.dumps(data).replace("<", r"\u003c").replace(">", r"\u003e")
+        review_section += ["", f"{_TERM_REVIEW_DATA}{metadata} -->"]
     result += [
         *workset_actions(workset),
         "", "## BLOCKED", "",

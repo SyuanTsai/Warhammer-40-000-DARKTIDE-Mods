@@ -21,7 +21,7 @@ def read_json(path):
 
 
 def _unexpected_quotes(unit):
-    if unit["action"] != "AI_REQUIRED":
+    if unit["action"] != "AI_REQUIRED" or unit["reviewStatus"] != "approved":
         return False
     old, new = unit.get("old") or {}, unit.get("new") or {}
     source = (new.get("sourceExpression") or {}).get("raw")
