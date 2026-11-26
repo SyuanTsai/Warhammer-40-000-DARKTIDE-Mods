@@ -396,6 +396,31 @@ class ArchiveTests(unittest.TestCase):
                     download(drive, Received(123, 9001, "drive", md5, "MAIN", "2"), Path(tmp))
                 self.assertFalse((Path(tmp) / "outside.lua").exists())
 
+    # Scenario: 已收件的主檔有正確校驗碼，但 ZIP 含 Git metadata。
+    # Purpose: process 在建立候選前停止，並把原因回報到 Issue 的 archive 待辦。
+    def test_UnitT15_git_metadata_is_reported_as_archive_rejection(self):
+        stream = io.BytesIO()
+        with zipfile.ZipFile(stream, "w") as archive:
+            archive.writestr("Example/Example.mod", "ok")
+            archive.writestr("Example/.GiT/config", "")
+        data = stream.getvalue()
+        md5 = hashlib.md5(data).hexdigest()
+        drive, github = Mock(), Mock()
+        drive.download.side_effect = lambda file_id, dest, limit: dest.write_bytes(data)
+        github.issue.return_value = issue()
+        github.comments.return_value = [comment(build_received_marker(123, 9001, "drive", md5, "MAIN", "2"))]
+        github.pulls.return_value = []
+        git = Mock(side_effect=["", "base"])
+        with tempfile.TemporaryDirectory() as tmp, patch(
+                "scripts.mod_update_orchestrate.process.latest", return_value="base"), patch(
+                "scripts.mod_update_orchestrate.process.registry_mod", return_value=Mock()), patch(
+                "scripts.mod_update_orchestrate.process.already_recorded", return_value=False), patch(
+                "scripts.mod_update_orchestrate.process.candidate") as build:
+            root = Path(tmp)
+            process(root, git, github, drive, "processed", 7, 123, 9001, root, root, root, emit=Mock())
+        build.assert_not_called()
+        github.needs_human.assert_called_once_with(7, "archive", "解壓拒絕（UnsafeArchive）：項目路徑含 .git 片段")
+
     # Scenario: 已處理目錄有不同版本，正確 bytes 位於 hotfix／。
     # Purpose: SHA-256 確認基準，找不到即 fallback。
     def test_UnitT20_base_matches_bytes_including_hotfix(self):

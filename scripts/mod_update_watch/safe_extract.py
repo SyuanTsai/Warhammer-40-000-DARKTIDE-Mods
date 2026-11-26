@@ -90,7 +90,7 @@ def _format(path, limits):
     raise UnsupportedArchive("無法辨識壓縮檔 magic bytes")
 
 
-def _path_parts(name):
+def _path_parts(name, *, allow_directory_entry=True):
     if not name:
         raise UnsafeArchive("項目名稱為空")
     if name.startswith("/"):
@@ -99,8 +99,12 @@ def _path_parts(name):
         raise UnsafeArchive("項目路徑含反斜線")
     if "\0" in name:
         raise UnsafeArchive("項目路徑含 NUL")
+    if not allow_directory_entry and name.endswith("/"):
+        raise UnsafeArchive("路徑須指向檔案")
     parts = name.removesuffix("/").split("/")
     for part in parts:
+        if part.casefold() == ".git":
+            raise UnsafeArchive("項目路徑含 .git 片段")
         if part == "..":
             raise UnsafeArchive("項目路徑含 .. 片段")
         if (not part or part.endswith((" ", "."))

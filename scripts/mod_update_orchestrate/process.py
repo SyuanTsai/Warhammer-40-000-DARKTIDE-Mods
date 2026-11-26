@@ -16,7 +16,7 @@ from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, 
 from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
 from .eol import FORMAT_ONLY, MIXED_EOL, default_format, normalize, repo_bytes
-from .gate import validate_git, validate_paths
+from .gate import validate_git, validate_paths, validate_upstream
 from .localization import Localization, LocalizationError, read_json
 from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
@@ -80,7 +80,7 @@ def download(drive, receipt, workspace):
     try:
         extract(path, workspace / "new")
     except ArchiveError as error:
-        raise NeedsHuman("archive", f"解壓拒絕（{type(error).__name__}）") from None
+        raise NeedsHuman("archive", f"解壓拒絕（{type(error).__name__}）：{error}") from None
     return path
 
 
@@ -344,6 +344,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 hash_path = f".hash/{mod.hash_file or mod.directory + '.hash'}"
                 paths = (mod_path, "README.md", hash_path)
                 if route == "new":
+                    validate_upstream([f"{mod_path}/{path}" for path in new_tree], mod_path)
                     cleanup = paths
                     install_tree(root / mod_path, {}, new_tree)
                     upstream_oid = upstream_commit(git, base_oid, mod_path, new_tree, nexus_id)

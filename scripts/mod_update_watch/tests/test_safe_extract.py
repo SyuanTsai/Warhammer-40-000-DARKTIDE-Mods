@@ -48,7 +48,8 @@ class ArchiveTests(unittest.TestCase):
         """Scenario: Given a valid file followed by an unsafe path, when extracting, then the destination stays empty.
         Purpose: Verify validation covers the entire archive before writing.
         """
-        for name in ("../evil", "/abs", "C:x", "nested/C:x", "a/../b", "folder\\evil", "nul\0name"):
+        for name in ("../evil", "/abs", "C:x", "nested/C:x", "a/../b",
+                     "folder\\evil", "nul\0name", "mod/.git/config", "mod/.GiT/config"):
             with self.subTest(name=name):
                 # ZipInfo normalizes backslashes on Windows and truncates at NUL.
                 safe_name = name.replace("\\", "/").replace("\0", "_")
@@ -57,7 +58,11 @@ class ArchiveTests(unittest.TestCase):
                     self.archive.write_bytes(
                         self.archive.read_bytes().replace(safe_name.encode(), name.encode())
                     )
-                self.assert_rejected()
+                with patch("scripts.mod_update_watch.safe_extract._read_zip_member") as read:
+                    with self.assertRaises(UnsafeArchive):
+                        inspect_archive(self.archive)
+                    self.assert_rejected()
+                    read.assert_not_called()
 
     def test_UnitT03_reject_zip_link_and_device(self):
         """Scenario: Given special POSIX modes in a ZIP, when extracting, then links and devices are rejected.
