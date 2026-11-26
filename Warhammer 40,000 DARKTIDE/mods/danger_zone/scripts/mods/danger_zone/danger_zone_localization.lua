@@ -61,13 +61,13 @@ local init_loc = {
 		["en"] = "Scab Flamer Explosion",
 		["zh-cn"] = "血痂火焰兵爆炸",
 		["ru"] = "Взрыв Скаба-огнемётчика",
-		["zh-tw"] = "血痂火焰兵爆炸",
+		["zh-tw"] = "血痂噴火者爆炸",
 	},
 	scab_flamer_explosion_outline_enabled_tooltip = {
 		["en"] = "Show outline around the fire left by a Scab Flamer explosion",
 		["zh-cn"] = "在血痂火焰兵爆炸留下的火焰周围显示轮廓",
 		["ru"] = "Показывает контур вокруг огня, оставшегося от взрыва Скаба-огнемётчика",
-		["zh-tw"] = "顯示血痂火焰兵爆炸留下火焰周圍的輪廓",
+		["zh-tw"] = "顯示血痂噴火者爆炸後留下的火焰輪廓",
 	},
 	tox_flamer_explosion_outline_enabled = {
 		["en"] = "Tox Flamer Explosion",
@@ -117,7 +117,7 @@ local init_loc = {
 		["en"] = "Fire Barrel Explosion Radius",
 		["zh-cn"] = "燃料桶爆炸半径",
 		["ru"] = "Радиус взрыва Огненной бочки",
-		["zh-tw"] = "燃料桶爆炸半徑",
+		["zh-tw"] = "燃燒桶爆炸半徑",
 	},
 	fire_barrel_spawn_outline_enabled = {
 		["en"] = "Show when spawned",
@@ -198,7 +198,7 @@ local init_loc = {
 		["en"] = "Scab Flamer Explosion Radius",
 		["zh-cn"] = "血痂火焰兵爆炸半径",
 		["ru"] = "Радиус взрыва Скаба-огнемётчика",
-		["zh-tw"] = "血痂火焰兵爆炸半徑",
+		["zh-tw"] = "血痂噴火者爆炸半徑",
 	},
 	scab_flamer_spawn_outline_enabled = {
 		["en"] = "Show when spawned",
@@ -210,7 +210,7 @@ local init_loc = {
 		["en"] = "Show Scab Flamer explosion radius when they spawn",
 		["zh-cn"] = "在血痂火焰兵被生成时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Скаба-огнемётчика при появлении",
-		["zh-tw"] = "血痂火焰兵生成時顯示爆炸半徑",
+		["zh-tw"] = "血痂噴火者生成時顯示爆炸半徑",
 	},
 	scab_flamer_fuse_outline_enabled = {
 		["en"] = "Show when set to explode",
@@ -222,7 +222,7 @@ local init_loc = {
 		["en"] = "Show Scab Flamer explosion radius when Scab Flamer is set to explode upon death",
 		["zh-cn"] = "在血痂火焰兵即将爆炸死亡时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Скаба-огнемётчика, когда он готов взорваться при смерти",
-		["zh-tw"] = "血痂火焰兵被設定為死亡後爆炸時，顯示爆炸半徑",
+		["zh-tw"] = "血痂噴火者被設定為死亡後爆炸時，顯示爆炸半徑",
 	},
 
 	tox_flamer_effects_group = {
