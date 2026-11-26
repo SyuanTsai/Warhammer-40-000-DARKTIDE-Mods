@@ -298,7 +298,7 @@ local localizations = {
     de = "Mitte",
     ru = "Центр",
     ["zh-cn"] = "中部",
-    ["zh-tw"] = "中間",
+    ["zh-tw"] = "中心",
   },
   left = {
     en = "Left",

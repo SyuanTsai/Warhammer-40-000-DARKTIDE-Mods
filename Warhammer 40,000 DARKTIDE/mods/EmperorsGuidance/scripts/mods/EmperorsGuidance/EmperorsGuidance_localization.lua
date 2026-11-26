@@ -90,7 +90,7 @@ localization = {
     -- Group Names
     boss_group = {
         en = "Bosses",
-        ["zh-tw"] = "Boss",
+        ["zh-tw"] = "首領",
         ["zh-cn"] = "Boss",
     },
     elite_group = {
@@ -140,12 +140,12 @@ localization = {
 local manual = {
     chaos_mutated_poxwalker = {
         en = "Mutated Poxwalker",
-        ["zh-tw"] = "變異瘟疫行屍",
+        ["zh-tw"] = "變異瘟疫行者",
         ["zh-cn"] = "变异瘟疫行者（炮灰）"
     },
     chaos_lesser_mutated_poxwalker = {
         en = "Lesser Mutated Poxwalker",
-        ["zh-tw"] = "次級變異瘟疫行屍",
+        ["zh-tw"] = "低階變異瘟疫行者",
         ["zh-cn"] = "次级变异瘟疫行者（炮灰）"
     }
 }

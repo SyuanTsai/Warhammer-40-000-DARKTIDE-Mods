@@ -217,7 +217,7 @@ return {
 	teammate_ability_preset_coherency_side = {
 		en = "Coherency Side",
 		ru = "Рядом с когерентностью",
-		["zh-tw"] = "凝聚度側邊",
+		["zh-tw"] = "協同圖示旁",
 	},
 	teammate_ability_preset_portrait_side = {
 		en = "Large Icons Next to Portrait",
@@ -242,7 +242,7 @@ return {
 	weapon_preset_coherency_side = {
 		en = "Coherency Side",
 		ru = "Рядом с когерентностью",
-		["zh-tw"] = "凝聚度側邊",
+		["zh-tw"] = "協同圖示旁",
 	},
 	weapon_preset_player_name_above = {
 		en = "Above Player Name",

@@ -364,7 +364,7 @@ local localization = {
         en = "ROW VISIBILITY CHANGES WILL NOT TAKE EFFECT UNTIL THE MAP CHANGES (such as by going from Mourningstar to Psykhanium)\nCreates a separate row to track these values.",
 		ru = "ИЗМЕНЕНИЯ ВИДИМОСТИ СТРОК НЕ ВСТУПЯТ В СИЛУ, ПОКА КАРТА НЕ ИЗМЕНИТСЯ (например, при переходе от Mourningstar к Psykhanium)\nСоздает отдельную строку для отслеживания этих значений",
         ["zh-cn"] = "行可见性更改只有在地图发生变化时才会生效（例如从哀星到灵能星）\n创建一个单独的行来跟踪这些值",
-        ["zh-tw"] = "列可見性變更要等地圖更換後才會生效（例如從哀悼之星前往靈能室）\n建立獨立列來追蹤這些數值。",
+        ["zh-tw"] = "列的顯示設定會在切換地圖後才生效（例如從哀星號前往靈能室）\n建立獨立列來追蹤這些數值。",
 		["pt-br"] = "A alteração na visibilidade dos separadores só terá efeito quando o mapa for alterado (por exemplo, ao passar de Mourningstar para Psykhanium).\nCria uma linha separada para rastrear esses valores",
     },
     -- @backup158: Machine translation used. Verification required:
@@ -382,7 +382,7 @@ local localization = {
         en = "Choose which row Companion Damage counts towards. \"Companion\" is its own row, which will be hidden if one of the other options is chosen.",
 		ru = "Выберите, в какой строке учитывается урон от компаньонов. «Компаньон» — это отдельная строка, которая будет скрыта, если выбран один из других вариантов.",
         ["zh-cn"] = "选择伙伴伤害计入哪一行。“伙伴”单独占一行，如果选择其他选项，该行将被隐藏。",
-        ["zh-tw"] = "選擇「支援單位」要計入哪一個列。「支援單位」本身是一個獨立的列；若選擇其他選項，該列將會被隱藏。",
+        ["zh-tw"] = "選擇要將支援單位傷害計入哪一列。「支援單位」有獨立的列，選擇其他選項時會隱藏該列。",
 		["pt-br"] = "Escolha em qual linha o dano causado pelo companheiro será contabilizado. \"Companheiro\" é uma linha separada, que ficará oculta se uma das outras opções for selecionada.",
     },
     -- @backup158: Machine translation used. Verification required:
@@ -537,7 +537,7 @@ local localization = {
         en = "Charged by a Mutant",
 		ru = "Нападение мутанта", 
         ["zh-cn"] = "被变种人攻击",
-        ["zh-tw"] = "被變種衝撞",
+        ["zh-tw"] = "被變種人衝撞",
 		["pt-br"] = "Acusado por um mutante",
     },
     -- @backup158: Machine translation used. Verification required:

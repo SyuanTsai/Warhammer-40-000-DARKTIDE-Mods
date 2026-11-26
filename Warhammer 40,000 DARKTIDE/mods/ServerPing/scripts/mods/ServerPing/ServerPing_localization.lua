@@ -121,7 +121,7 @@ return {
     },
     history_aggregate_subtitle = {
         en = "%d tests accumulated from %s to %s.",
-        ["zh-tw"] = "從 %s 到 %s 共完成 %d 次測試。",
+        ["zh-tw"] = "累計 %d 次測試，期間為 %s 至 %s。",
     },
     history_aggregate_empty = {
         en = "No accumulated measurements are available yet.",

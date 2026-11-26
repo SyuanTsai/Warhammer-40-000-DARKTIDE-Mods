@@ -98,7 +98,7 @@ return {
 	wield_5 = {
 		en = "Wield Auspex",
 		["zh-cn"] = "使用感应器",
-		["zh-tw"] = "使用感應器",
+		["zh-tw"] = "切換至占卜儀",
 		de = "Auspex führen",
 		fr = "Manier l'Auspex",
 		ru = "Использовать ауспекс",
@@ -138,7 +138,7 @@ return {
 	grenade_ability = {
 		en = "Activate Blitz",
 		["zh-cn"] = "激活闪电战",
-		["zh-tw"] = "啟動閃電戰",
+		["zh-tw"] = "啟動閃擊",
 		de = "Blitz aktivieren",
 		fr = "Activer le Blitz",
 		ru = "Активировать Блиц",

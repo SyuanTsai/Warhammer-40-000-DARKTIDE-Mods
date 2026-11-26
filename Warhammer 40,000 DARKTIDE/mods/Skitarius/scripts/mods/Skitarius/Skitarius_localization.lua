@@ -10,7 +10,7 @@ local localizations = {
     -- Mod Details
     mod_name = {
         en = "Skitarius",
-        ["zh-tw"] = "機械教信徒",
+        ["zh-tw"] = "護教軍",
         ["zh-cn"] = "战斗序列（鼠标宏）",
     },
     mod_description = {
@@ -108,11 +108,12 @@ local localizations = {
         en = string.format(
             "When enabled, the mod will prevent sequence input which would lead to death from Perils of the Warp. \nThis will NOT prevent deaths caused by manual player inputs."),
         ["zh-cn"] = "如果下一次攻击引发过载自爆，序列将阻止继续执行",
-        ["zh-tw"] = "如果下一次攻擊引發過載自爆，序列將阻止繼續執行",
+        ["zh-tw"] = string.format(
+            "啟用後，模組會阻止會因亞空間反噬而致死的序列輸入。 \n玩家手動輸入所造成的死亡不在保護範圍內。"),
     },
     halt_on_interrupt = {
         en = "Halt On Manual Interrupt",
-        ["zh-tw"] = "中斷時停止",
+        ["zh-tw"] = "手動中斷時停止",
         ["zh-cn"] = "中断应急终止",
     },
     halt_on_interrupt_tooltip = {
@@ -149,6 +150,7 @@ local localizations = {
     },
     interruption_all = {
         en = Localize("loc_ingame_sprint") .. " / Attacking / Blocking", -- [ ] Localize
+        ["zh-tw"] = Localize("loc_ingame_sprint") .. " / 攻擊中 / 格擋中",
     },
     -- Keybinds
     maintain_bind = {
@@ -232,7 +234,7 @@ local localizations = {
     interrupt = {
         en = "Action On Stun",
         ["zh-cn"] = "当玩家被打晕时",
-        ["zh-tw"] = "當玩家被打暈時",
+        ["zh-tw"] = "玩家眩暈時的序列動作",
     },
     interrupt_tooltip = {
         en = "Determines the action taken by sequences when the player is stunned/interrupted by external sources.",
@@ -263,7 +265,7 @@ local localizations = {
         en =
         "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting.",
         ["zh-cn"] = "启动神圣充能协议后，战术重击将维持相位蓄能状态，直至机魂增幅矩阵达到预设充能阶位（参见『重击增幅协议阶位配置』）。",
-        ["zh-tw"] = "啟動神聖充能協定後，戰術重擊將維持相位蓄能狀態，直至機魂增幅矩陣達到預設充能階位（參見『重擊增幅協定階位配置』）。",
+        ["zh-tw"] = "選用此強化效果後，重擊會持續蓄力，直到該效果疊加至「重擊強化層數」設定的層數。",
     },
     thrust = { en = Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") },
     slow_and_steady = {
@@ -290,6 +292,16 @@ local localizations = {
         ["zh-cn"] = "蓄力buff层数",
     },
     heavy_buff_stacks_tooltip = {
+        ["zh-tw"] = string.format(
+            "最大層數:\n" ..
+            cf(Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
+            cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
+            cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
+            cf(Localize("loc_weapon_family_ogryn_hammer_2h_p1_m1") .. ":","terminal_text_body") .. " 4\n" ..
+            cf(Localize("loc_weapon_family_thunderhammer_2h_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
+            cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n" ..
+            cf(Localize("loc_trait_bespoke_pass_past_armor_on_heavy_attack") .. ":","terminal_text_body") .. " 不適用\n"
+        ),
         en = string.format(
             "Max Stacks:\n" ..
             cf(Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
@@ -308,7 +320,7 @@ local localizations = {
     },
     special_buff_stacks = {
         en = "Buff Stacks (Special Attacks)",
-        ["zh-tw"] = "buff層數（特殊攻擊）",
+        ["zh-tw"] = "強化層數（特殊攻擊）",
         ["zh-cn"] = "buff层数 （特殊攻击）",
     },
     always_special = {
@@ -525,7 +537,7 @@ local localizations = {
     },
     auto_charge_threshold = {
         en = "Weapon Charge Threshold %%",
-        ["zh-tw"] = "蓄力閾值 %%",
+        ["zh-tw"] = "武器蓄力閾值 %%",
         ["zh-cn"] = "充能阈值 %%",
     },
     auto_shoot = {
