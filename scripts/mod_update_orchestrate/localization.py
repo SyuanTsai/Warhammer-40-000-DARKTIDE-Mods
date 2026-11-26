@@ -7,8 +7,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .loc_layout import literal_has_outer_double_quotes
-from .report import blocked_units, cell
+from .loc_layout import literal_has_outer_double_quotes, unwrap_literal_outer_double_quotes
+from .report import blocked_units
 from .tree import is_localization
 
 
@@ -21,15 +21,14 @@ def read_json(path):
 
 
 def _unexpected_quotes(unit):
-    if unit["action"] != "AI_REQUIRED" or not literal_has_outer_double_quotes(
-            unit.get("suggestedZhTwExpression")):
+    if unit["action"] != "AI_REQUIRED":
         return False
     old, new = unit.get("old") or {}, unit.get("new") or {}
     source = (new.get("sourceExpression") or {}).get("raw")
     if literal_has_outer_double_quotes(source) is not False:
         return False
-    return not any(literal_has_outer_double_quotes((side.get("zhTwExpression") or {}).get("raw"))
-                   for side in (old, new))
+    references = ((side.get("zhTwExpression") or {}).get("raw") for side in (old, new))
+    return all(raw is None or literal_has_outer_double_quotes(raw) is False for raw in references)
 
 
 class Localization:
@@ -109,9 +108,21 @@ class Localization:
     def apply(self, document, summary):
         if blocked_units(document, summary):
             raise LocalizationError("工作集含未核准或 BLOCKED 項目")
-        unexpected = [cell(unit["key"]) for unit in document["units"] if _unexpected_quotes(unit)]
-        if unexpected:
-            raise LocalizationError("AI 譯文新增外層雙引號，請檢查後重產：" + "、".join(unexpected))
+        units = []
+        unquoted_keys = []
+        for unit in document["units"]:
+            if _unexpected_quotes(unit):
+                expression = unit.get("suggestedZhTwExpression")
+                unwrapped = unwrap_literal_outer_double_quotes(expression)
+                if unwrapped is not None and unwrapped != expression:
+                    unit = {**unit, "suggestedZhTwExpression": unwrapped}
+                    unquoted_keys.append(unit["key"])
+            units.append(unit)
+        if unquoted_keys and read_json(self.workset)["units"] != units:
+            updated = self.workset.with_suffix(".tmp")
+            corrected = {**document, "units": units}
+            updated.write_text(json.dumps(corrected, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            updated.replace(self.workset)
         result = self.powershell("Apply-LocalizationWorkset", "-WorksetPath", self.workset)
         if result.get("result") != "passed":
             raise LocalizationError("Apply 未通過")
@@ -125,4 +136,4 @@ class Localization:
         )
         if checked.get("result") != "passed":
             raise LocalizationError("Receipt 未通過")
-        return merged.read_bytes()
+        return merged.read_bytes(), unquoted_keys

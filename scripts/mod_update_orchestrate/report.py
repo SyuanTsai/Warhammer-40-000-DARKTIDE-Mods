@@ -14,6 +14,10 @@ def cell(value):
     return escape(plain(value)).replace("|", "&#124;").replace("`", "&#96;").replace("@", "&#64;")
 
 
+def unquoted_note(keys):
+    return "已自動去除多餘外層引號：" + "、".join(map(cell, keys))
+
+
 def blocked_units(workset, summary):
     reasons = {item["unitId"]: item["reason"] for item in summary.get("blocked", [])}
     pending = []

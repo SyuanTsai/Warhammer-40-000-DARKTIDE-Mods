@@ -161,6 +161,7 @@
 - Celerity Stimm - 敏捷興奮劑
 - Stimm - 興奮劑
 - Hive Scum Stimm - 巢都敗類興奮劑
+- Broker stim - 巢都敗類興奮劑
 - Boost Stimm - 專注興奮劑
 - Power Stimm - 戰鬥興奮劑
 - Speed Stimm - 敏捷興奮劑
@@ -1269,7 +1270,8 @@
 - Stoked Rage - 振奮怒火
 - Adrenaline Unbound - 腎上腺素突破
 - Uncontrolled Aggression - 失控攻擊
-- Chemical Dependency - 化學依賴性
+- Chemical Dependency - 化學性依賴
+- Chem Dependency - 化學性依賴
 - Chem Enhanced - 化學強化
 - Chem Fortified - 化學增強
 - Maxed Out Chems - 化學藥劑全開

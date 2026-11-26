@@ -276,7 +276,8 @@ class SkillTests(unittest.TestCase):
         self.assertEqual(status, 0)
         self.assertEqual(summary["approvedCount"], 1)
         with patch.object(self.loc, "powershell", wraps=self.loc.powershell) as powershell:
-            verified = self.loc.apply(doc, summary)
+            verified, keys = self.loc.apply(doc, summary)
+        self.assertEqual(keys, [])
         install_tree(self.file.parent, baseline, {self.name: verified}, baseline=baseline)
         # Then
         self.assertEqual(powershell.call_args.args[0], "Test-LocalizationWorksetReceipt")
@@ -300,7 +301,9 @@ class SkillTests(unittest.TestCase):
             status, summary, doc = self.loc.translate(initial, adapter=adapter)
         self.assertEqual((status, summary), (0, {}))
         adapter.assert_not_called()
-        self.file.write_bytes(self.loc.apply(doc, summary))
+        verified, keys = self.loc.apply(doc, summary)
+        self.assertEqual(keys, [])
+        self.file.write_bytes(verified)
         self.assertIn("穩定", self.file.read_text(encoding="utf-8"))
         shutil.rmtree(self.loc.run)
         validate_git(self.git, self.oid, self.mod, ".hash/example.hash")
