@@ -31,6 +31,7 @@ return {
 	},
 	explosive_common = {
 		en = "Explosive",
+		["zh-cn"] = "爆炸物",
 		["zh-tw"] = "爆炸桶",
 	},
 	explosive_fire_barrel = {

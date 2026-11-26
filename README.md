@@ -447,10 +447,10 @@
 
 ### [Scoreboard Explosive](https://www.nexusmods.com/warhammer40kdarktide/mods/113)
     爆桶爆炸
-- MOD 網站最後更新日期：Last updated 02 December 2023, 1:33AM
-- MOD 版本：1.1.3
-- MOD 檔案名稱：ScoreboardExplosive-113-1-1-3-1701451982
-- 手動維護最後下載日期：2025-07-05
+- MOD 網站最後更新日期：Last updated 03 November 2026, 11:05AM
+- MOD 版本：1.1.5
+- MOD 檔案名稱：ScoreboardExplosive 113 1.1.5 2026-11-03T03-05Z PhaYKh0xS
+- 手動維護最後下載日期：2026-11-25
 
 ### [Better Hud Info View](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     浩劫HUD資訊
