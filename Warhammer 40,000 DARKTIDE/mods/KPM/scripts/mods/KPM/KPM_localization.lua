@@ -5,7 +5,7 @@ return {
 	},
 	mod_description = {
 		en = "[Warhammer 40K Darktide Competition Mod] Displays team KPM data - Custom development: deluxghost",
-		["zh-tw"] = "[戰錘40K黑潮競賽模組] 顯示團隊 KPM 資料 - 客製化開發：deluxghost",
+		["zh-tw"] = "顯示團隊 KPM 資料 - 客製化開發：deluxghost",
 	},
 	show_mkpm = {
 		en = "Show Melee Elite KPM",
