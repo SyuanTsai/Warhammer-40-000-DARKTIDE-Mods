@@ -1,13 +1,13 @@
-	return {
+return {
 		mod_name = {
 			en = "Broker Auto Stim",
 			["zh-cn"] = "自动注射兴奋剂",
 			["zh-tw"] = "自動注射興奮劑",
 		},
 		mod_description = {
-			en = "Automatically uses your Broker stim in combat. Supports profile switching, animation cancels, and combat safety checks.",
+			en = "Automatically uses your Broker stim in combat. Supports profile switching, animation cancels, and combat safety checks so it won't interrupt attacks or interactions.",
 			["zh-cn"] = "在进入战斗一定时间后自动注射自制兴奋剂。",
-			["zh-tw"] = "在戰鬥中自動使用化學興奮劑。支援設定檔切換、取消動畫及戰鬥狀態檢查。",
+			["zh-tw"] = "在戰鬥中自動使用巢都敗類興奮劑。支援設定檔切換、取消動畫及戰鬥安全檢查，避免打斷攻擊或互動。",
 		},
 		profile_settings = {
 			en = "Profile Settings",
@@ -110,14 +110,14 @@
 			["zh-tw"] = "切換自動注射興奮劑開關的快捷鍵。",
 		},
 		combat_duration = {
-			en = "Combat Duration (seconds)",
-			["zh-cn"] = "战斗持续时间（秒）",
-			["zh-tw"] = "戰鬥持續時間（秒）",
+			en = "Stim Delay (seconds)",
+			["zh-cn"] = "兴奋剂延迟（秒）",
+			["zh-tw"] = "興奮劑延遲（秒）",
 		},
 		combat_duration_description = {
-			en = "How long to be in combat before auto-stimming.",
-			["zh-cn"] = "进入战斗后多久自动注射兴奋剂。",
-			["zh-tw"] = "自動注射興奮劑前，需要處於戰鬥多久。",
+			en = "Seconds to wait after combat starts and between stims.",
+			["zh-cn"] = "进入战斗后以及两次注射之间等待的秒数。",
+			["zh-tw"] = "進入戰鬥後以及兩次注射興奮劑之間等待的秒數。",
 		},
 		out_of_combat_timeout = {
 			en = "Out of Combat Timeout (seconds)",
@@ -149,6 +149,34 @@
 			["zh-cn"] = "只有当你拥有化学依赖关键技能时才自动注射兴奋剂。",
 			["zh-tw"] = "只有當你擁有「化學性依賴」關鍵天賦時，才會自動注射興奮劑。",
 		},
+	chem_dependency_timing = {
+		en = "Chemical Dependency Timing",
+		["zh-tw"] = "化學性依賴時機",
+	},
+	chem_dependency_timing_description = {
+		en = "How many Chemical Dependency stacks auto-stim keeps topped up.",
+		["zh-tw"] = "自動注射興奮劑時，要維持多少層化學性依賴疊加。",
+	},
+	chem_dependency_timing_keep_max = {
+		en = "Keep Max Stacks",
+		["zh-tw"] = "維持最大疊加",
+	},
+	chem_dependency_timing_keep_3 = {
+		en = "Keep At Least 3 Stacks",
+		["zh-tw"] = "至少維持 3 層疊加",
+	},
+	chem_dependency_timing_keep_2 = {
+		en = "Keep At Least 2 Stacks",
+		["zh-tw"] = "至少維持 2 層疊加",
+	},
+	chem_dependency_timing_keep_1 = {
+		en = "Keep At Least 1 Stack",
+		["zh-tw"] = "至少維持 1 層疊加",
+	},
+	chem_dependency_timing_ignore_stacks = {
+		en = "Ignore Stacks",
+		["zh-tw"] = "忽略疊加",
+	},
 		not_with_stimm_supply = {
             en = "Not with Stimm Supply",
             ["zh-cn"] = "选择兴奋剂补给时禁用自动化",
@@ -370,14 +398,14 @@
 			["zh-tw"] = "使用技能前",
 		},
 		stim_trigger_mode_combat_only = {
-			en = "Combat Only (use sliders)",
-			["zh-cn"] = "仅在战斗时（使用滑块设置）",
-			["zh-tw"] = "僅在戰鬥時（使用滑桿設定）",
+			en = "Combat Only",
+			["zh-cn"] = "仅在战斗时",
+			["zh-tw"] = "僅在戰鬥時",
 		},
 		stim_trigger_mode_non_combat_only = {
-			en = "Non-Combat Only (use sliders)",
-			["zh-cn"] = "仅在非战斗时（使用滑块设置）",
-			["zh-tw"] = "僅在非戰鬥時（使用滑桿設定）",
+			en = "Non-Combat Only",
+			["zh-cn"] = "仅在非战斗时",
+			["zh-tw"] = "僅在非戰鬥時",
 		},
 		stim_trigger_mode_always_stim = {
 			en = "Always Stim",
@@ -419,4 +447,4 @@
 			["zh-cn"] = "常规设置",
 			["zh-tw"] = "一般設定",
 		},
-	}
+}
