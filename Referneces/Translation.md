@@ -19,6 +19,9 @@
 
 ### MOD
 #### MOD名稱
+> **譯名決議**：MOD 名稱與 MOD 自訂的專有名稱（例如 Skitarius、Crusher Cleave Indicator）保留 repo 既有譯法，不套用本表的遊戲術語譯名；即使其中含有本表詞彙（如 Skitarius／Skitarii、Cleave），也以 MOD 作者的命名為準。翻譯盤點時這類差異列為誤報類別 `[MOD 專有名稱]`。
+> **譯名決議**：Crusher 的 cleave 攻擊不譯「順劈」，因為難以對應遊戲中實際的攻擊模式，直接描述為「攻擊範圍」（例如 crusher_attack_indicator）。
+
 - AutoBlitz - 自動使用閃擊
 - Scoreboard - 記分板
 - Radar - 雷達
