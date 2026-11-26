@@ -16,7 +16,6 @@ local function _add_event(events, event_name, stagger_type, controlled)
     local metadata = events[event_name]
     if not metadata then
         metadata = {
-            event_name = event_name,
             stagger_types = {},
             controlled = false,
         }
@@ -43,23 +42,19 @@ end
 
 local function _finalize_metadata(metadata)
     local min_impact
-    local max_impact
 
     for stagger_type in pairs(metadata.stagger_types) do
         local impact = STAGGER_IMPACT[stagger_type]
         if impact then
             min_impact = min_impact and math.min(min_impact, impact) or impact
-            max_impact = max_impact and math.max(max_impact, impact) or impact
         end
     end
 
     if metadata.controlled then
         min_impact = min_impact and math.min(min_impact, 1) or 1
-        max_impact = max_impact and math.max(max_impact, 4) or 4
     end
 
     metadata.min_impact = min_impact
-    metadata.max_impact = max_impact
 end
 
 local function _events_for_breed(breed)
@@ -100,11 +95,6 @@ end
 local function _machine_key(breed)
     local state_machine = breed.state_machine or breed.base_unit or ""
     return state_machine .. "|" .. (breed.base_unit or "")
-end
-
-local function _breed_key(breed)
-    local tree_name = breed.behavior_tree_name or breed.name or ""
-    return _machine_key(breed) .. "|" .. tree_name
 end
 
 local function _restore_animation(unit, snapshot)
@@ -154,13 +144,9 @@ local function _build_breed_map(unit, breed, key)
     local map = { by_index = {} }
     local state_checked, has_state_machine = pcall(Unit.has_animation_state_machine, unit)
     if not state_checked then return nil end
-    if not has_state_machine then
-        _breed_maps[key] = map
-        return map
-    end
-
-    local events = _events_for_breed(breed)
-    if not next(events) then
+    -- A unit without a state machine or a breed without stagger events gets an empty map.
+    local events = has_state_machine and _events_for_breed(breed)
+    if not events or not next(events) then
         _breed_maps[key] = map
         return map
     end
@@ -207,17 +193,12 @@ local function _build_breed_map(unit, breed, key)
     return map
 end
 
-local function _breed_from_unit(unit)
-    if not unit or not Unit.alive(unit) then return nil end
-    local unit_data = ScriptUnit.has_extension(unit, "unit_data_system")
-    return unit_data and unit_data:breed()
-end
-
 function Catalog.prepare_unit(unit)
-    local breed = _breed_from_unit(unit)
+    local unit_data = unit and Unit.alive(unit) and ScriptUnit.has_extension(unit, "unit_data_system")
+    local breed = unit_data and unit_data:breed()
     if not breed then return nil end
 
-    local key = _breed_key(breed)
+    local key = _machine_key(breed) .. "|" .. (breed.behavior_tree_name or breed.name or "")
     _unit_keys[unit] = key
 
     local map = _breed_maps[key]

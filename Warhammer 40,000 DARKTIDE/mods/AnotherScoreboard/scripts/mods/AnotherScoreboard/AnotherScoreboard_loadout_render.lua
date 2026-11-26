@@ -1,5 +1,7 @@
+---@type AnotherScoreboardMod
 local mod = get_mod("AnotherScoreboard")
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
+local TalentSettings = mod:original_require("scripts/ui/views/talent_builder_view/talent_builder_view_settings")
 
 local LoadoutRender = {}
 local PLAYER_COLORS = {
@@ -15,6 +17,7 @@ local CURIO_COLORS = {
     wounds = { 255, 214, 124, 214 },
 }
 local SIGNATURES = { "blitz", "aura", "ability", "keystone" }
+local SIGNATURE_NODE_TYPES = { blitz = "tactical", aura = "aura", ability = "ability", keystone = "keystone" }
 -- One panel height for every mode, so switching views or players never resizes the window.
 local W, H = 1120, 840
 local CONTENT_H = 639
@@ -25,8 +28,25 @@ function LoadoutRender.weapon_icon_render_size()
     return { 600, 216 }
 end
 
+-- Splits text, without markup, into pages that fit width and max_height in style (shared with the talent tree).
+function LoadoutRender.paginate_text(host, text, style, width, max_height)
+    local remaining, pages, wrap_size = text:gsub("{#[^}]*}", ""), {}, { width, 100000 }
+    while remaining ~= "" do
+        local low, high, best = 1, Utf8.string_length(remaining), 1
+        while low <= high do
+            local middle = math.floor((low + high) / 2)
+            local _, height = host:_text_size(Utf8.sub_string(remaining, 1, middle), style, wrap_size, true)
+            if height <= max_height then best, low = middle, middle + 1 else high = middle - 1 end
+        end
+        pages[#pages + 1] = Utf8.sub_string(remaining, 1, best)
+        remaining = Utf8.sub_string(remaining, best + 1)
+    end
+    return pages
+end
+
 function LoadoutRender.build(host, scenegraph_id, players, selected_player, show_tree, settings)
     local Render = mod:get_render()
+    ---@cast Render -nil
     Render.set_theme(settings and settings.scoreboard_theme)
     local C = Render.theme_colors()
     local text_scale = math.max(0.5, math.min(2, settings and settings.text_scale or 1))
@@ -157,9 +177,8 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
         outline(x, y, w, h, alpha(bar_color or accent, 160))
         rect(x, y, w, 3, bar_color or accent, 105)
     end
-    local function keycap(x, y, label, h)
-        h = h or 22
-        local size = 13
+    local function keycap(x, y, label)
+        local h, size = 22, 13
         local w = math.max(h, math.floor(text_width(label, size) + 12))
         rect(x, y, w, h, opaque(C.panel), 104)
         outline(x, y, w, h, alpha(accent, 150), 105)
@@ -184,20 +203,38 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
     local function trait_title(trait)
         return trait.name or trait.id or "-"
     end
+    -- Lifts the passes from first on to the tooltip layer, shown while the hotspot is hovered
+    -- unless a pass already has its own visibility.
+    local function raise_tooltip(first, hotspot_id)
+        for index = first, #passes do
+            local pass = passes[index]
+            pass.style.offset[3] = pass.style.offset[3] + TOOLTIP_Z
+            pass.visibility_function = pass.visibility_function or hovered(hotspot_id)
+        end
+    end
+    local function by_slot(list, slot)
+        for _, candidate in ipairs(list or {}) do
+            if candidate.slot == slot then return candidate end
+        end
+    end
+    -- A click area above the panel's passes; content holds its pressed_callback or paging state.
+    local function hotspot(hotspot_id, x, y, w, h, content)
+        local pass = { pass_type = "hotspot", content_id = hotspot_id, content = content,
+            style = { offset = { x, y, 115 }, size = { w, h } } }
+        passes[#passes + 1] = pass
+        return pass
+    end
 
     players = players or {}
     local player_index = math.max(1, math.min(math.min(#players, 4), math.floor(selected_player or 1)))
     local player = players[player_index]
     local snapshot = player and player.loadout_snapshot
-    local panel_h = H
     local player_color = PLAYER_COLORS[player_index]
     local talent_by_id = {}
     for _, layout in ipairs(snapshot and snapshot.layouts or {}) do
         for _, node in ipairs(layout.nodes or {}) do
-            if (node.tier or 0) > 0 then
-                if node.talent_id then
-                    talent_by_id[node.talent_id] = node
-                end
+            if (node.tier or 0) > 0 and node.talent_id then
+                talent_by_id[node.talent_id] = node
             end
         end
     end
@@ -209,11 +246,11 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
 
     -- Frame and header
     for i, spread in ipairs({ 2, 5, 9, 14 }) do
-        rect(-spread, -spread + 4, W + spread * 2, panel_h + spread * 2, { 64 - i * 14, 0, 0, 0 }, 96 + i)
+        rect(-spread, -spread + 4, W + spread * 2, H + spread * 2, { 64 - i * 14, 0, 0, 0 }, 96 + i)
     end
-    rect(0, 0, W, panel_h, opaque(C.panel), 100)
+    rect(0, 0, W, H, opaque(C.panel), 100)
     rect(0, 0, W, 60, opaque(surface), 101)
-    outline(0, 0, W, panel_h, border, 104)
+    outline(0, 0, W, H, border, 104)
     rect(0, 0, W, 2, accent, 105)
     rect(0, 59, W, 1, alpha(accent, 60), 103)
     text(loc("title"), 24, 10, 520, 36, 28, text_main, true)
@@ -235,13 +272,8 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
             rect(x + 1, seg_y + seg_h - 3, seg_w - 2, 2, accent, 105)
         else
             hover_rect(x + 1, seg_y + 1, seg_w - 2, seg_h - 2, text_main, hotspot_id, 0, 16, 103)
-            passes[#passes + 1] = {
-                pass_type = "hotspot", content_id = hotspot_id,
-                content = { pressed_callback = function()
-                    if host._request_loadout_tree_toggle then host:_request_loadout_tree_toggle() end
-                end },
-                style = { offset = { x, seg_y, 115 }, size = { seg_w, seg_h } },
-            }
+            hotspot(hotspot_id, x, seg_y, seg_w, seg_h,
+                { pressed_callback = function() host:_request_loadout_tree_toggle() end })
         end
         text(loc(entry.key), x + 8, seg_y + 6, seg_w - 16, seg_h - 4, 13, entry.active and text_main or text_dim,
             false, "center")
@@ -266,11 +298,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
         local name = type(players[i].name) == "function" and players[i]:name() or players[i].name
         text(players[i].string_symbol or "", x + 40, tab_y + 9, 30, 30, 22, chosen and color or alpha(color, 170), true, "center")
         text(name or "-", x + 76, tab_y + 14, 170, 24, 17, chosen and text_main or text_sub)
-        passes[#passes + 1] = {
-            pass_type = "hotspot", content_id = hotspot_id,
-            content = { pressed_callback = function() host:_select_loadout_player(i) end },
-            style = { offset = { x, tab_y, 115 }, size = { 256, tab_h } },
-        }
+        hotspot(hotspot_id, x, tab_y, 256, tab_h, { pressed_callback = function() host:_select_loadout_player(i) end })
     end
     rect(24, tab_y + tab_h + 4, 1072, 2, alpha(player_color, 200), 103)
 
@@ -280,10 +308,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
     elseif not show_tree then
         section_header(24, 132, 1072, loc("weapons"), loc("weapon_hover"))
         for i, slot in ipairs({ "slot_primary", "slot_secondary" }) do
-            local weapon
-            for _, candidate in ipairs(snapshot.weapons or {}) do
-                if candidate.slot == slot then weapon = candidate break end
-            end
+            local weapon = by_slot(snapshot.weapons, slot)
             local x, y = 24 + (i - 1) * 544, 168
             local hotspot_id = "weapon_hotspot_" .. i
             card(x, y, 528, 300, player_color)
@@ -292,8 +317,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
             outline(x + 12, y + 14, 300, 108, divider, 104)
             -- Slot and name
             text(string.format("%02d", i), x + 326, y + 15, 40, 24, 13, player_color)
-            text(Utf8.upper(loc(slot == "slot_primary" and "slot_primary" or "slot_secondary")),
-                x + 354, y + 16, 160, 24, 12, text_dim)
+            text(Utf8.upper(loc(slot)), x + 354, y + 16, 160, 24, 12, text_dim)
             local weapon_name = weapon and weapon.name
             if weapon_name and weapon_name:find("<unlocalized", 1, true) then
                 weapon_name = slot == "slot_primary" and "Bot Melee Weapon" or "Bot Ranged Weapon"
@@ -356,10 +380,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
                 end
 
                 hover_outline(x, y, 528, 300, player_color, hotspot_id)
-                passes[#passes + 1] = {
-                    pass_type = "hotspot", content_id = hotspot_id,
-                    style = { offset = { x, y, 115 }, size = { 528, 300 } },
-                }
+                hotspot(hotspot_id, x, y, 528, 300)
 
                 -- Hover card over the other weapon, so the hovered card stays visible.
                 local first = #passes + 1
@@ -395,10 +416,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
                     ty = ty + block_h
                 end
                 if count == 0 then text(loc("no_selection"), tx + 18, ty, 492, 22, 14, text_dim) end
-                for index = first, #passes do
-                    passes[index].style.offset[3] = passes[index].style.offset[3] + TOOLTIP_Z
-                    passes[index].visibility_function = hovered(hotspot_id)
-                end
+                raise_tooltip(first, hotspot_id)
             end
         end
 
@@ -410,10 +428,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
         else
             for i = 1, 3 do
                 local slot = "slot_attachment_" .. i
-                local curio
-                for _, candidate in ipairs(snapshot.curios) do
-                    if candidate.slot == slot then curio = candidate break end
-                end
+                local curio = by_slot(snapshot.curios, slot)
                 local x, y = 24 + (i - 1) * 364, 514
                 local type_color = curio and CURIO_COLORS[curio.type] or accent
                 card(x, y, 344, 90, nil, curio and raised or surface)
@@ -434,10 +449,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
                     text(main and (main.description or main.name) or loc("no_description"),
                         x + 18, y + 42, 312, 42, 15, type_color)
                     hover_outline(x, y, 344, 90, type_color, hotspot_id)
-                    passes[#passes + 1] = {
-                        pass_type = "hotspot", content_id = hotspot_id,
-                        style = { offset = { x, y, 115 }, size = { 344, 90 } },
-                    }
+                    hotspot(hotspot_id, x, y, 344, 90)
                     local first = #passes + 1
                     local tooltip_x = math.min(x, W - 504)
                     tooltip_card(tooltip_x, 620, 480, 180, type_color)
@@ -457,10 +469,7 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
                                 tooltip_x + 52, py, 410, 32, 15, text_main)
                         end
                     end
-                    for index = first, #passes do
-                        passes[index].style.offset[3] = passes[index].style.offset[3] + TOOLTIP_Z
-                        passes[index].visibility_function = hovered(hotspot_id)
-                    end
+                    raise_tooltip(first, hotspot_id)
                 else
                     outline(x, y, 344, 90, alpha(text_dim, 60), 105)
                     text(string.format("%02d", i), x + 18, y + 12, 30, 24, 12, text_dim)
@@ -485,14 +494,15 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
                 if talent and talent.icon then icons[#icons + 1] = talent.icon end
             end
             local icon_count = math.min(#icons, 3)
+            local node_settings = TalentSettings.settings_by_node_type[SIGNATURE_NODE_TYPES[category]]
             for j = 1, icon_count do
                 passes[#passes + 1] = {
                     pass_type = "texture", value = "content/ui/materials/frames/talents/talent_icon_container",
                     style = {
                         offset = { x + 128 - icon_count * 30 + (j - 1) * 60, signature_y + 36, 111 }, size = { 60, 60 },
                         color = { 255, 255, 255, 255 },
-                        material_values = { icon = icons[j], frame = "content/ui/textures/frames/talents/circular_frame",
-                            icon_mask = "content/ui/textures/frames/talents/circular_frame_mask", intensity = 0, saturation = 1 },
+                        material_values = { icon = icons[j], frame = node_settings.frame, icon_mask = node_settings.icon_mask,
+                            gradient_map = node_settings.gradient_map, intensity = 0, saturation = 1 },
                     },
                 }
             end
@@ -500,29 +510,14 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
             text(#names > 0 and table.concat(names, " / ") or loc("no_selection"), x + 12, names_y, 232,
                 signature_y + 164 - names_y, 16, #names > 0 and text_main or text_dim, true, "center")
             hover_outline(x, signature_y, 256, 169, accent, hotspot_id)
-            passes[#passes + 1] = {
-                pass_type = "hotspot", content_id = hotspot_id,
-                style = { offset = { x, signature_y, 115 }, size = { 256, 169 } },
-            }
+            local signature_hotspot = hotspot(hotspot_id, x, signature_y, 256, 169)
             local first = #passes + 1
             tooltip_card(170, 300, 780, 304, accent)
             text(Utf8.upper(loc(category)), 190, 312, 740, 24, 12, accent)
             text(table.concat(names, " / "), 190, 332, 740, 40, 23, text_main, true)
             rect(190, 374, 740, 1, divider, 104)
-            local remaining = table.concat(descriptions, "\n\n"):gsub("{#[^}]*}", "")
-            local pages = {}
             local tooltip_style = { font_type = "proxima_nova_bold", font_size = math.max(14, math.floor(18 * text_scale)) }
-            while remaining ~= "" do
-                local low, high, best = 1, Utf8.string_length(remaining), 1
-                while low <= high do
-                    local middle = math.floor((low + high) / 2)
-                    local _, height = host:_text_size(Utf8.sub_string(remaining, 1, middle), tooltip_style, { 740, 100000 }, true)
-                    if height <= 180 then best, low = middle, middle + 1 else high = middle - 1 end
-                end
-                pages[#pages + 1] = Utf8.sub_string(remaining, 1, best)
-                remaining = Utf8.sub_string(remaining, best + 1)
-            end
-            local page_first = #passes + 1
+            local pages = LoadoutRender.paginate_text(host, table.concat(descriptions, "\n\n"), tooltip_style, 740, 180)
             for page, value in ipairs(pages) do
                 text(value, 190, 384, 740, 190, tooltip_style.font_size / text_scale, C.label)
                 local page_pass = passes[#passes]
@@ -537,13 +532,8 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
                     font_size = 13, text_color = text_dim },
             }
             -- The view consumes wheel input over the card before player navigation.
-            passes[first - 1].content = { page = 1, pages = #pages }
-            for index = first, #passes do
-                passes[index].style.offset[3] = passes[index].style.offset[3] + TOOLTIP_Z
-                if index < page_first or not passes[index].visibility_function then
-                    passes[index].visibility_function = hovered(hotspot_id)
-                end
-            end
+            signature_hotspot.content = { page = 1, pages = #pages }
+            raise_tooltip(first, hotspot_id)
         end
     else
         section_header(24, 132, 1072, loc("tree"))
@@ -559,9 +549,8 @@ function LoadoutRender.build(host, scenegraph_id, players, selected_player, show
 
     return {
         weapon_icons = weapon_icons,
-        columns = { { widget = UIWidget.create_definition(passes, scenegraph_id, nil, { W, panel_h }), offset = { (900 - W) / 2, 0, 0 } } },
-        panel = { x = (900 - W) / 2, y = 0, w = W, h = panel_h },
-        content_height = panel_h + 42,
+        columns = { { widget = UIWidget.create_definition(passes, scenegraph_id, nil, { W, H }), offset = { (900 - W) / 2, 0, 0 } } },
+        panel = { x = (900 - W) / 2, y = 0, w = W, h = H },
         text_scale = text_scale,
     }
 end

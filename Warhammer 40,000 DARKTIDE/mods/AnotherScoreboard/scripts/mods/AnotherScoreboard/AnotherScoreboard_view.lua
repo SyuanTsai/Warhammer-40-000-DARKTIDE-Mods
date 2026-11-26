@@ -16,61 +16,22 @@ local TalentTree = mod:io_dofile("AnotherScoreboard/scripts/mods/AnotherScoreboa
 local BASE_Z = 100
 local VIEW_W = 900
 local VIEW_H = 700
-local MOVE_DURATION = 0.75
-local HISTORY_FOOTER_H = 42
 local HISTORY_VERTICAL_OFFSET = 100
 
-local HISTORY_HINT_TEXT = { 255, 216, 229, 207 }
-local HISTORY_FOOTER_COLOR = { 220, 18, 20, 18 }
 local Y_KEY = Keyboard.button_index("y")
 local Q_KEY = Keyboard.button_index("q")
 local U_KEY = Keyboard.button_index("u")
 local T_KEY = Keyboard.button_index("t")
+local DETAIL_TOGGLES = {
+    { field = "_show_all_enemy_rows", detail = "enemy", action = "hotkey_menu_special_1" },
+    { field = "_show_all_dot_rows", detail = "dot", action = "group_finder_refresh_groups" },
+    { field = "_show_boss_details", detail = "boss", action = "toggle_filter" },
+    { field = "_show_survival_details", detail = "survival", key = Y_KEY },
+}
 local PLAYER_KEYS = {
     Keyboard.button_index("1"), Keyboard.button_index("2"),
     Keyboard.button_index("3"), Keyboard.button_index("4"),
 }
-
-local function text_pass(value_id, text, x, y, z, w, h, size, color)
-    return {
-        pass_type = "text",
-        value_id = value_id,
-        value = text,
-        style = {
-            offset = { x, y, z },
-            size = { w, h },
-            font_size = size,
-            font_type = "proxima_nova_bold",
-            text_horizontal_alignment = "left",
-            text_vertical_alignment = "center",
-            text_color = color,
-        },
-    }
-end
-
-local function rect_pass(x, y, z, w, h, color)
-    return {
-        pass_type = "rect",
-        style = {
-            offset = { x, y, z },
-            size = { w, h },
-            color = color,
-        },
-    }
-end
-
-local function render_settings_with_title(settings, title_text, end_view)
-    return {
-        scale = end_view and settings.end_scoreboard_scale or settings.scale,
-        text_scale = settings.text_scale,
-        alternating_row_shading = settings.alternating_row_shading,
-        horizontal_offset = end_view and settings.end_scoreboard_horizontal_offset or settings.horizontal_offset,
-        vertical_offset = end_view and settings.end_scoreboard_vertical_offset or settings.vertical_offset,
-        title_text = title_text,
-        panel_min_h = settings and settings.panel_min_h or nil,
-        theme = settings.scoreboard_theme,
-    }
-end
 
 local ASView = class("AnotherScoreboardView", "BaseView")
 
@@ -96,30 +57,28 @@ ASView.init = function(self, settings, context)
         },
     }
 
-    self._column_widgets   = {}
-    self._section_widgets  = {}
-    self._row_widgets      = {}
-    self._history_hint_widget = nil
     self._context          = context or {}
     self._show_all_enemy_rows = false
     self._show_all_dot_rows = false
     self._show_boss_details = false
     self._show_survival_details = false
     self._temporarily_hidden = false
-    self._scoreboard_hint_text = nil
     self._show_loadout = false
     self._loadout_player = 1
     self._loadout_tree = false
-
-    self._move_timer   = nil
-    self._move_from    = 0
-    self._move_to      = 0
-    self._scoreboard_offset = 0
     self._scoreboard_fit_offset = 0
 
     ASView.super.init(self, self._definitions, settings, context)
     self._pass_draw  = true
     self._pass_input = true
+end
+
+-- Runs every frame; the scenegraph is marked for an update only when the position changes.
+local function _set_root_position(self, root, x, y)
+    local position = root.position
+    if position[1] ~= x or position[2] ~= y then
+        self:_set_scenegraph_position("scoreboard_root", x, y)
+    end
 end
 
 local function _apply_scoreboard_position(self)
@@ -130,28 +89,27 @@ local function _apply_scoreboard_position(self)
     end
 
     if self._show_loadout then
-        self:_set_scenegraph_position("scoreboard_root", 0, -11 - ((self._loadout_panel_height or 680) - 680) / 2)
+        _set_root_position(self, root, 0, -11 - ((self._loadout_panel_height or 680) - 680) / 2)
         return
     end
 
-    if self._context and self._context.scoreboard_history then
-        self:_set_scenegraph_position("scoreboard_root", 0,
-            -HISTORY_VERTICAL_OFFSET - (self._scoreboard_fit_offset or 0))
+    if self._context.scoreboard_history then
+        _set_root_position(self, root, 0, -HISTORY_VERTICAL_OFFSET - (self._scoreboard_fit_offset or 0))
 
         return
     end
 
     local settings = mod:get_cached_settings()
-    local end_view = self._context and self._context.end_view
+    local end_view = self._context.end_view
     local horizontal_offset = end_view and settings.end_scoreboard_horizontal_offset or settings.horizontal_offset
     local vertical_offset = end_view and settings.end_scoreboard_vertical_offset or settings.vertical_offset
-    self:_set_scenegraph_position("scoreboard_root", horizontal_offset or 0,
+    _set_root_position(self, root, horizontal_offset or 0,
         50 - (vertical_offset or 0) - (self._scoreboard_fit_offset or 0))
 end
 
 ASView.on_enter = function(self)
     ASView.super.on_enter(self)
-    if self._context and self._context.scoreboard_history then
+    if self._context.scoreboard_history then
         local players = mod.order_scoreboard_players(self:_get_players())
         self._preloaded_loadout_icons = LoadoutIcons.preload(players, LoadoutRender.weapon_icon_render_size())
     end
@@ -174,27 +132,35 @@ ASView._request_loadout_tree_toggle = function(self)
 end
 
 ASView._open_player_social = function(self, account_id)
-    if mod.open_player_social then
-        mod.open_player_social(account_id)
-    end
+    mod.open_player_social(account_id)
 end
 
 ASView._get_players = function(self)
     local context = self._context
-    if context and context.players then
+    if context.players then
         return context.players
     end
 
-    local list, n = {}, 0
+    local list = {}
     for _, p in pairs(Managers.player:players()) do
-        n = n + 1
-        if n <= 4 then list[#list + 1] = p end
+        if #list < 4 then list[#list + 1] = p end
     end
     return list
 end
 
+-- Registers each built widget under prefix .. (its index + index_offset), at its offset.
+local function _register_widgets(self, entries, prefix, index_offset)
+    local widgets = {}
+    for i, w in ipairs(entries) do
+        local registered = self:_create_widget(prefix .. (i + index_offset), w.widget)
+        registered.offset = w.offset
+        widgets[i] = registered
+    end
+    return widgets
+end
+
 ASView._build_hint = function(self, built, hint_text)
-    if not self._show_loadout and self._context and (self._context.end_view or self._context.scoreboard_history) then
+    if not self._show_loadout and (self._context.end_view or self._context.scoreboard_history) then
         local hint_id = self._context.scoreboard_history and "loadout_hint_open_history" or "loadout_hint_open"
         hint_text = (hint_text and hint_text .. "  |  " or "") .. mod:localize(hint_id)
     end
@@ -204,47 +170,22 @@ ASView._build_hint = function(self, built, hint_text)
 
     local panel = built.panel
     local Render = mod:get_render()
-    local footer_h = Render and Render.footer_height and Render.footer_height() or HISTORY_FOOTER_H
+    ---@cast Render -nil
+    local footer_h = Render.footer_height()
     local footer_x = panel and panel.x or 0
     local footer_y = panel and panel.y + panel.h or VIEW_H - footer_h
     local footer_w = panel and panel.w or VIEW_W
 
     self._scoreboard_hint_text = hint_text
-    local displayed_hint = self._context and self._context.end_view and self._temporarily_hidden
+    local displayed_hint = self._context.end_view and self._temporarily_hidden
         and mod:localize("scoreboard_hint_end_show") or hint_text
-    local styled_hint, plain_hint = displayed_hint, displayed_hint
-    if Render and Render.style_hint then
-        styled_hint, plain_hint = Render.style_hint(displayed_hint)
-    end
-
-    local hint_font_size = math.floor(16 * (built.text_scale or 1))
-    if Render and Render.fit_text_font_size then
-        hint_font_size = Render.fit_text_font_size(self, nil, plain_hint, "proxima_nova_bold",
-            hint_font_size, footer_w - 32, footer_h - 8)
-    end
-
-    local passes
-    if Render and Render.footer_passes then
-        passes = Render.footer_passes(footer_x, footer_y, footer_w, footer_h, "hint", styled_hint, hint_font_size)
-    else
-        passes = {
-            rect_pass(footer_x, footer_y, BASE_Z + 20, footer_w, footer_h, HISTORY_FOOTER_COLOR),
-            text_pass("hint", displayed_hint, footer_x + 16, footer_y + 6,
-                BASE_Z + 22, footer_w - 32, 24, hint_font_size, HISTORY_HINT_TEXT),
-        }
-    end
+    local styled_hint, plain_hint = Render.style_hint(displayed_hint)
+    local hint_font_size = Render.fit_text_font_size(self, nil, plain_hint, "proxima_nova_bold",
+        math.floor(16 * (built.text_scale or 1)), footer_w - 32, footer_h - 8)
+    local passes = Render.footer_passes(footer_x, footer_y, footer_w, footer_h, "hint", styled_hint, hint_font_size)
 
     self._history_hint_widget = self:_create_widget("as_scoreboard_hint", UIWidget.create_definition(
         passes, "content_area", nil, { VIEW_W, VIEW_H }))
-end
-
-ASView._styled_hint = function(self, text)
-    local Render = mod:get_render()
-    if Render and Render.style_hint then
-        return (Render.style_hint(text))
-    end
-
-    return text
 end
 
 ASView._build = function(self)
@@ -258,12 +199,15 @@ ASView._build = function(self)
     local context = self._context
     local settings = mod:get_cached_settings()
     players = mod.order_scoreboard_players(players)
-    local end_view = context and context.end_view
-    local title_text = mod.get_scoreboard_title_text and mod.get_scoreboard_title_text(context and context.snapshot) or nil
-    self._last_title_text = title_text
-    self._title_update_timer = 1.0
+    local end_view = context.end_view
+    local title_text = mod.get_scoreboard_title_text(context.snapshot)
 
     if self._show_loadout then
+        -- Keep every player's weapon icons loaded while the view is open, so switching players or
+        -- pages does not capture them again (history entries preload in on_enter; on_exit destroys).
+        if not self._preloaded_loadout_icons then
+            self._preloaded_loadout_icons = LoadoutIcons.preload(players, LoadoutRender.weapon_icon_render_size())
+        end
         self._loadout_player = math.max(1, math.min(#players, self._loadout_player))
         if self._loadout_tree then
             self._talent_tree, self._loadout_tree_error = TalentTree.new(self,
@@ -273,12 +217,7 @@ ASView._build = function(self)
             self._loadout_tree, settings)
         self._loadout_panel_height = built.panel.h
         self._loadout_player_count = #players
-        self._column_widgets = {}
-        for i, w in ipairs(built.columns) do
-            local registered = self:_create_widget("as_loadout_" .. i, w.widget)
-            registered.offset = w.offset
-            self._column_widgets[i] = registered
-        end
+        self._column_widgets = _register_widgets(self, built.columns, "as_loadout_", 0)
         self._loadout_icons = LoadoutIcons.load(self._column_widgets[1], built.weapon_icons)
         self:_build_hint(built, mod:localize(self._loadout_tree and "loadout_hint_tree" or "loadout_hint_equipment"))
         _apply_scoreboard_position(self)
@@ -286,109 +225,64 @@ ASView._build = function(self)
         return
     end
 
-    if context and context.scoreboard_history then
-        local sections = context.sections or {}
-        if mod.filter_scoreboard_sections then
-            sections = mod.filter_scoreboard_sections(sections, self._show_all_enemy_rows, self._show_all_dot_rows,
-                self._show_boss_details, self._show_survival_details, context.snapshot and context.snapshot.duration)
+    local history = context.scoreboard_history
+    local sections, render_settings, root_y
+    if history then
+        sections = mod.filter_scoreboard_sections(context.sections or {}, self._show_all_enemy_rows,
+            self._show_all_dot_rows, self._show_boss_details, self._show_survival_details,
+            context.snapshot and context.snapshot.duration)
+        render_settings = mod.scoreboard_render_settings(title_text, false)
+        render_settings.social_icons = true
+        -- Today's time would read as the mission's time in a saved scoreboard.
+        render_settings.clock_text = nil
+        root_y = -HISTORY_VERTICAL_OFFSET
+    else
+        local Stats   = mod:get_stats()
+        if not Stats then return end
+
+        local ids = {}
+        for i = 1, #players do
+            ids[players[i]:account_id() or players[i]:name()] = true
         end
-        sections = mod.external_stats.filter(sections, self._external_collapsed)
+        Stats.ensure_entries(ids)
 
-        local history_settings = render_settings_with_title(settings, title_text, false)
-        history_settings.social_icons = true
-        local built = Render.build_widgets(self, "content_area", players, sections, history_settings)
+        Stats.validate(ids)
 
-        if not built then return end
-
-        self._scoreboard_fit_offset = Render.view_vertical_fit_offset(built.content_height, -HISTORY_VERTICAL_OFFSET)
-
-        self._column_widgets = {}
-        self._section_widgets = {}
-        self._row_widgets = {}
-
-        for _, w in ipairs(built.columns) do
-            local registered = self:_create_widget("as_" .. #self._column_widgets, w.widget)
-            self._column_widgets[#self._column_widgets + 1] = registered
-            registered.offset = w.offset
-        end
-        self._title_widget = self._column_widgets[1]
-        self._title_max_font_size = built.title_max_font_size
-        self._title_max_width = built.title_max_width
-
-        for _, w in ipairs(built.sections) do
-            local registered = self:_create_widget("as_sec_" .. #self._section_widgets, w.widget)
-            self._section_widgets[#self._section_widgets + 1] = registered
-            registered.offset = w.offset
-        end
-
-        local hint_text = mod.get_scoreboard_hint_text(self._show_all_enemy_rows,
-            self._show_all_dot_rows, self._show_boss_details, self._show_survival_details, true)
-        self:_build_hint(built, hint_text)
-        _apply_scoreboard_position(self)
-        self:_force_update_scenegraph()
-
-        return
-    end
-
-    local Stats   = mod:get_stats()
-    if not Stats then return end
-
-    local ids = {}
-    for i = 1, #players do
-        ids[players[i]:account_id() or players[i]:name()] = true
-    end
-    Stats.ensure_entries(ids)
-
-    Stats.validate(ids)
-
-    local sections = Stats.sections()
-    self._external_revision = mod.external_stats.revision
-    self._external_refresh_timer = 0.25
-    if mod.filter_scoreboard_sections then
+        sections = Stats.sections()
+        self._external_revision = mod.external_stats.revision
+        self._external_refresh_timer = 0.25
         sections = mod.filter_scoreboard_sections(sections, self._show_all_enemy_rows, self._show_all_dot_rows,
-            self._show_boss_details, self._show_survival_details,
-            mod.get_scoreboard_duration and mod.get_scoreboard_duration() or 0)
+            self._show_boss_details, self._show_survival_details, mod.get_scoreboard_duration())
+        render_settings = mod.scoreboard_render_settings(title_text, end_view)
+        root_y = 50 - (end_view and settings.end_scoreboard_vertical_offset or settings.vertical_offset)
     end
     sections = mod.external_stats.filter(sections, self._external_collapsed)
-    local built = Render.build_widgets(self, "content_area", players, sections,
-        render_settings_with_title(settings, title_text, end_view))
+    local built = Render.build_widgets(self, "content_area", players, sections, render_settings)
 
     if not built then return end
 
-    local root_y = 50 - (end_view and settings.end_scoreboard_vertical_offset or settings.vertical_offset)
     self._scoreboard_fit_offset = Render.view_vertical_fit_offset(built.content_height, root_y)
-
-    self._column_widgets = {}
-    self._section_widgets = {}
-    self._row_widgets = {}
-
-    for _, w in ipairs(built.columns) do
-        local registered = self:_create_widget("as_" .. #self._column_widgets, w.widget)
-        self._column_widgets[#self._column_widgets + 1] = registered
-        registered.offset = w.offset
-    end
-    self._title_widget = self._column_widgets[1]
-    self._title_max_font_size = built.title_max_font_size
-    self._title_max_width = built.title_max_width
-
-    for _, w in ipairs(built.sections) do
-        local registered = self:_create_widget("as_sec_" .. #self._section_widgets, w.widget)
-        self._section_widgets[#self._section_widgets + 1] = registered
-        registered.offset = w.offset
-    end
-
-    for _, w in ipairs(built.rows) do
-        local registered = self:_create_widget("as_row_" .. #self._row_widgets, w.widget)
-        self._row_widgets[#self._row_widgets + 1] = registered
-        registered.offset = w.offset
-    end
-
+    self._column_widgets = _register_widgets(self, built.columns, "as_", -1)
+    self._section_widgets = _register_widgets(self, built.sections, "as_sec_", -1)
 
     local hint_text = mod.get_scoreboard_hint_text(self._show_all_enemy_rows,
-        self._show_all_dot_rows, self._show_boss_details, self._show_survival_details, false)
+        self._show_all_dot_rows, self._show_boss_details, self._show_survival_details, history)
     self:_build_hint(built, hint_text)
     _apply_scoreboard_position(self)
     self:_force_update_scenegraph()
+end
+
+local function unregister_widgets(self, widgets)
+    for _, w in ipairs(widgets or {}) do
+        self:_unregister_widget_name(w.name)
+    end
+end
+
+local function _draw_list(widgets, alpha, ui_renderer)
+    for i = 1, widgets and #widgets or 0 do
+        widgets[i].alpha_multiplier = alpha
+        UIWidget.draw(widgets[i], ui_renderer)
+    end
 end
 
 ASView._cleanup = function(self)
@@ -400,64 +294,13 @@ ASView._cleanup = function(self)
     end
     self._loadout_tree_error = nil
     self._pending_loadout_player = nil
-    local cols = self._column_widgets
-    if cols then
-        for _, w in ipairs(cols) do
-            self._widgets_by_name[w.name] = nil
-            self:_unregister_widget_name(w.name)
-        end
-        self._column_widgets = nil
-    end
-    self._title_widget = nil
-    self._title_max_font_size = nil
-    self._title_max_width = nil
+    unregister_widgets(self, self._column_widgets)
+    self._column_widgets = nil
     self._scoreboard_fit_offset = 0
-    local secs = self._section_widgets
-    if secs then
-        for _, w in ipairs(secs) do
-            self._widgets_by_name[w.name] = nil
-            self:_unregister_widget_name(w.name)
-        end
-        self._section_widgets = nil
-    end
-    local rows = self._row_widgets
-    if rows then
-        for _, w in ipairs(rows) do
-            self._widgets_by_name[w.name] = nil
-            self:_unregister_widget_name(w.name)
-        end
-        self._row_widgets = nil
-    end
-
-    if self._history_hint_widget then
-        self._widgets_by_name[self._history_hint_widget.name] = nil
-        self:_unregister_widget_name(self._history_hint_widget.name)
-        self._history_hint_widget = nil
-    end
-end
-
-ASView.move_scoreboard = function(self, from_x, to_x)
-    self._move_timer = MOVE_DURATION
-    self._move_from  = from_x
-    self._move_to    = to_x
-end
-
-ASView._update_move = function(self, dt)
-    if not self._move_timer then return end
-    if self._move_timer <= 0 then
-        self._scoreboard_offset = self._move_to
-        self._move_timer = nil
-    else
-        local pct = self._move_timer * (1 / MOVE_DURATION)
-        local t_ease = math.ease_sine(pct)
-        local range = math.abs(self._move_to) + math.abs(self._move_from)
-        if self._move_to > self._move_from then
-            self._scoreboard_offset = self._move_to - range * t_ease
-        else
-            self._scoreboard_offset = self._move_to + range * t_ease
-        end
-        self._move_timer = self._move_timer - dt
-    end
+    unregister_widgets(self, self._section_widgets)
+    self._section_widgets = nil
+    unregister_widgets(self, { self._history_hint_widget })
+    self._history_hint_widget = nil
 end
 
 ASView._toggle_external_group = function(self, key, closed)
@@ -467,12 +310,11 @@ ASView._toggle_external_group = function(self, key, closed)
 end
 
 ASView.update = function(self, dt, t, input_service)
-    local scoreboard_history = self._context and self._context.scoreboard_history
-    local end_view = self._context and self._context.end_view
+    local scoreboard_history = self._context.scoreboard_history
+    local end_view = self._context.end_view
 
     if self._input_disabled or not input_service or input_service:is_null_service() then
         if self._talent_tree then self._talent_tree:update(nil) end
-        self:_update_move(dt)
         return ASView.super.update(self, dt, t, input_service)
     end
 
@@ -528,28 +370,27 @@ ASView.update = function(self, dt, t, input_service)
         end
         if rebuild then self:_build() end
         if self._talent_tree then self._talent_tree:update(input_service) end
-        self:_update_move(dt)
         return ASView.super.update(self, dt, t, input_service)
     end
 
     if scoreboard_history and input_service and input_service:get("back") then
         Managers.ui:close_view(self.view_name)
 
-        return
+        -- Block input to the view below but let it draw (a nil return hides it for a frame).
+        return false, true
     end
 
     if end_view and Keyboard.pressed(Q_KEY) then
         self._temporarily_hidden = not self._temporarily_hidden
         if self._history_hint_widget then
-            self._history_hint_widget.content.hint = self:_styled_hint(self._temporarily_hidden
-                and mod:localize("scoreboard_hint_end_show") or self._scoreboard_hint_text)
+            self._history_hint_widget.content.hint = (mod:get_render().style_hint(self._temporarily_hidden
+                and mod:localize("scoreboard_hint_end_show") or self._scoreboard_hint_text))
             self._history_hint_widget.dirty = true
         end
     end
 
     if self._temporarily_hidden then
         _apply_scoreboard_position(self)
-        self:_update_move(dt)
         return ASView.super.update(self, dt, t, input_service)
     end
 
@@ -560,66 +401,34 @@ ASView.update = function(self, dt, t, input_service)
         self:_build()
     end
 
-    if input_service and input_service:get("hotkey_menu_special_1") and mod.scoreboard_detail_available("enemy") then
-        self._show_all_enemy_rows = not self._show_all_enemy_rows
-        self._show_all_dot_rows = false
-        self._show_boss_details = false
-        self._show_survival_details = false
-        self:_build()
+    -- Only one detail group is expanded at a time.
+    for i = 1, #DETAIL_TOGGLES do
+        local toggle = DETAIL_TOGGLES[i]
+        local pressed = toggle.key and Keyboard.pressed(toggle.key) or not toggle.key and input_service:get(toggle.action)
+        if pressed and mod.scoreboard_detail_available(toggle.detail) then
+            local shown = not self[toggle.field]
+            self._show_all_enemy_rows = false
+            self._show_all_dot_rows = false
+            self._show_boss_details = false
+            self._show_survival_details = false
+            self[toggle.field] = shown
+            self:_build()
 
-        return
-    end
-
-    if input_service and input_service:get("group_finder_refresh_groups") and mod.scoreboard_detail_available("dot") then
-        self._show_all_dot_rows = not self._show_all_dot_rows
-        self._show_all_enemy_rows = false
-        self._show_boss_details = false
-        self._show_survival_details = false
-        self:_build()
-
-        return
-    end
-
-    if input_service and input_service:get("toggle_filter") and mod.scoreboard_detail_available("boss") then
-        self._show_boss_details = not self._show_boss_details
-        self._show_all_enemy_rows = false
-        self._show_all_dot_rows = false
-        self._show_survival_details = false
-        self:_build()
-
-        return
-    end
-
-    if input_service and Keyboard.pressed(Y_KEY) and mod.scoreboard_detail_available("survival") then
-        self._show_survival_details = not self._show_survival_details
-        self._show_all_enemy_rows = false
-        self._show_all_dot_rows = false
-        self._show_boss_details = false
-        self:_build()
-
-        return
-    end
-
-    _apply_scoreboard_position(self)
-
-    if not (self._context and self._context.scoreboard_history) and self._title_widget then
-        self._title_update_timer = (self._title_update_timer or 0) - dt
-        if self._title_update_timer <= 0 then
-            self._title_update_timer = 1.0
-            local title_text = mod.get_scoreboard_title_text and mod.get_scoreboard_title_text() or nil
-            if title_text and title_text ~= self._last_title_text then
-                self._last_title_text = title_text
-                self._title_widget.content.title = title_text
-                local Render = mod:get_render()
-                if Render then
-                    Render.fit_title_widget(self, nil, self._title_widget, title_text,
-                        self._title_max_font_size, self._title_max_width)
-                end
-            end
+            return false, true
         end
     end
 
-    self:_update_move(dt)
+    -- Only a panel built with the clock has one (never in the history); this view draws every frame anyway.
+    local panel = self._section_widgets and self._section_widgets[1]
+    if panel and panel.content.clock then
+        local second = os.time()
+        if second ~= self._clock_second then
+            self._clock_second = second
+            mod:get_render().refresh_clock(panel, mod.local_clock_text())
+        end
+    end
+
+    _apply_scoreboard_position(self)
 
     return ASView.super.update(self, dt, t, input_service)
 end
@@ -633,43 +442,21 @@ end
 
 ASView._draw_widgets = function(self, dt, t, input_service, ui_renderer, render_settings)
     local alpha = self._alpha_multiplier or render_settings.alpha_multiplier or 1
-    if not self._show_loadout and not (self._context and self._context.scoreboard_history) then
+    if not self._show_loadout and not self._context.scoreboard_history then
         local settings = mod:get_cached_settings()
-        local opacity = self._context and self._context.end_view and settings.end_scoreboard_opacity
+        local opacity = self._context.end_view and settings.end_scoreboard_opacity
             or settings.scoreboard_opacity
         alpha = alpha * ((opacity or 206) / 255)
     end
-    if self._temporarily_hidden then
-        if self._history_hint_widget then
-            self._history_hint_widget.alpha_multiplier = alpha
-            UIWidget.draw(self._history_hint_widget, ui_renderer)
-        end
-        return
+    -- Q on the end screen hides everything but the hint.
+    if not self._temporarily_hidden then
+        _draw_list(self._column_widgets, alpha, ui_renderer)
+        _draw_list(self._section_widgets, alpha, ui_renderer)
     end
-    local cols = self._column_widgets
-    if cols then
-        for i = 1, #cols do
-            cols[i].alpha_multiplier = alpha
-            UIWidget.draw(cols[i], ui_renderer)
-        end
-    end
-    local secs = self._section_widgets
-    if secs then
-        for i = 1, #secs do
-            secs[i].alpha_multiplier = alpha
-            UIWidget.draw(secs[i], ui_renderer)
-        end
-    end
-    local rows = self._row_widgets
-    if rows then
-        for i = 1, #rows do
-            rows[i].alpha_multiplier = alpha
-            UIWidget.draw(rows[i], ui_renderer)
-        end
-    end
-    if self._history_hint_widget then
-        self._history_hint_widget.alpha_multiplier = alpha
-        UIWidget.draw(self._history_hint_widget, ui_renderer)
+    local hint = self._history_hint_widget
+    if hint then
+        hint.alpha_multiplier = alpha
+        UIWidget.draw(hint, ui_renderer)
     end
 end
 

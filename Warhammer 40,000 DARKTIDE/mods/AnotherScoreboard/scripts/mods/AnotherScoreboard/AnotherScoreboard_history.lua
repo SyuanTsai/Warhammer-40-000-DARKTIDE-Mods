@@ -6,8 +6,14 @@ local Missions = mod:original_require("scripts/settings/mission/mission_template
 local DangerSettings = mod:original_require("scripts/settings/difficulty/danger_settings")
 local Havoc = mod:original_require("scripts/utilities/havoc")
 local CircumstanceTemplates = mod:original_require("scripts/settings/circumstance/circumstance_templates")
+local UISettings = mod:original_require("scripts/settings/ui/ui_settings")
 
 local History = {}
+
+local ARCHETYPE_BY_ICON = {}
+for archetype_name, icon in pairs(UISettings.archetype_font_icon) do
+    ARCHETYPE_BY_ICON[icon] = archetype_name
+end
 
 local DEFAULT_CAPACITY = 10
 local VERSION = 1
@@ -116,10 +122,6 @@ local function ensure_directory()
     return path
 end
 
-local function legacy_saved_path(path)
-    return path and path .. LEGACY_SAVED_DIRECTORY or nil
-end
-
 local function sorted_keys(tbl)
     local keys = {}
     for key in pairs(tbl) do
@@ -132,39 +134,30 @@ local function sorted_keys(tbl)
     return keys
 end
 
-local function serialize_value(value, indent)
-    indent = indent or 0
+-- Appends the value's text to out; one buffer for the whole file, so nested tables are not copied per level.
+local function serialize_value(value, indent, out)
     local value_type = type(value)
 
     if value_type == "number" or value_type == "boolean" then
-        return tostring(value)
+        out[#out + 1] = tostring(value)
     elseif value_type == "string" then
-        return string.format("%q", value)
+        out[#out + 1] = string.format("%q", value)
     elseif value_type ~= "table" then
-        return "nil"
-    end
+        out[#out + 1] = "nil"
+    else
+        local next_pad = string.rep(" ", indent + 4)
+        out[#out + 1] = "{\n"
 
-    local next_indent = indent + 4
-    local pad = string.rep(" ", indent)
-    local next_pad = string.rep(" ", next_indent)
-    local parts = { "{" }
-
-    for _, key in ipairs(sorted_keys(value)) do
-        local entry = value[key]
-        local key_text
-
-        if type(key) == "number" then
-            key_text = "[" .. tostring(key) .. "]"
-        else
-            key_text = "[" .. string.format("%q", tostring(key)) .. "]"
+        for _, key in ipairs(sorted_keys(value)) do
+            out[#out + 1] = next_pad
+            out[#out + 1] = type(key) == "number" and "[" .. tostring(key) .. "] = "
+                or "[" .. string.format("%q", tostring(key)) .. "] = "
+            serialize_value(value[key], indent + 4, out)
+            out[#out + 1] = ",\n"
         end
 
-        parts[#parts + 1] = next_pad .. key_text .. " = " .. serialize_value(entry, next_indent) .. ","
+        out[#out + 1] = string.rep(" ", indent) .. "}"
     end
-
-    parts[#parts + 1] = pad .. "}"
-
-    return table.concat(parts, "\n")
 end
 
 local function date_text(timestamp)
@@ -185,47 +178,15 @@ local function read_file(path)
     return text
 end
 
-local load_file
+local ESCAPES = { n = "\n", r = "\r", t = "\t" }
 
-local function decode_string(text)
-    local result = {}
-    local i = 2
-    local last = #text - 1
-
-    while i <= last do
-        local c = text:sub(i, i)
-        if c == "\\" then
-            local next_char = text:sub(i + 1, i + 1)
-            if next_char == "n" then
-                result[#result + 1] = "\n"
-                i = i + 2
-            elseif next_char == "r" then
-                result[#result + 1] = "\r"
-                i = i + 2
-            elseif next_char == "t" then
-                result[#result + 1] = "\t"
-                i = i + 2
-            elseif next_char == "\\" or next_char == "\"" then
-                result[#result + 1] = next_char
-                i = i + 2
-            else
-                local digits = text:match("^%d%d?%d?", i + 1)
-                if digits then
-                    local byte = math.floor(tonumber(digits) or 0)
-                    result[#result + 1] = string.char(byte)
-                    i = i + 1 + #digits
-                else
-                    result[#result + 1] = next_char
-                    i = i + 2
-                end
-            end
-        else
-            result[#result + 1] = c
-            i = i + 1
-        end
+-- One escape of a %q string: \n, \r, \t, up to three digits of a byte, or the character itself.
+local function unescape(char, digits)
+    if char:find("%d") then
+        return string.char(tonumber(char .. digits) or 0)
     end
 
-    return table.concat(result)
+    return (ESCAPES[char] or char) .. digits
 end
 
 local function parse_saved_table(text)
@@ -247,25 +208,22 @@ local function parse_saved_table(text)
             return nil
         end
 
-        local start_pos = pos
-        pos = pos + 1
-
-        while pos <= #text do
-            local c = text:sub(pos, pos)
-
-            if c == "\\" then
-                pos = pos + 2
-            elseif c == '"' then
-                local full = text:sub(start_pos, pos)
-                pos = pos + 1
-
-                return decode_string(full)
-            else
-                pos = pos + 1
-            end
+        -- Jumps between quotes and backslashes; a backslash escapes the character after it.
+        local start_pos, escaped = pos + 1, false
+        local at = text:find('[\\"]', start_pos)
+        while at and text:byte(at) == 92 do
+            escaped = true
+            at = text:find('[\\"]', at + 2)
+        end
+        if not at then
+            pos = #text + 1
+            return nil
         end
 
-        return nil
+        pos = at + 1
+        local body = text:sub(start_pos, at - 1)
+
+        return escaped and (body:gsub("\\(.)(%d?%d?)", unescape)) or body
     end
 
     local function parse_key()
@@ -357,7 +315,9 @@ local function parse_saved_table(text)
             return nil
         end
 
-        local number_text = text:match("^[%-]?%d+%.?%d*", pos)
+        -- tostring writes very small and very large numbers in exponent form (5.55e-17, 1e+15).
+        local number_text = text:match("^[%-]?%d+%.?%d*[eE][%+%-]?%d+", pos)
+            or text:match("^[%-]?%d+%.?%d*", pos)
         if number_text then
             pos = pos + #number_text
             return tonumber(number_text)
@@ -376,42 +336,30 @@ local function parse_saved_table(text)
     return data
 end
 
-local function history_file_info(file_name)
-    local timestamp, suffix = file_name:match("^(%d+)_?(%d*)%.lua$")
-    if not timestamp then
-        return nil
+-- Id, timestamp and suffix of a history file name, or nil; prefix is SAVED_FILE_PREFIX for saved entries.
+local function history_file_info(file_name, prefix)
+    local id, timestamp, suffix = file_name:match("^" .. (prefix or "") .. "((%d+)_?(%d*))%.lua$")
+
+    return id, tonumber(timestamp), tonumber(suffix) or 1
+end
+
+local function summary_sort(a, b)
+    if (a.timestamp or 0) == (b.timestamp or 0) then
+        return (a.suffix or 1) > (b.suffix or 1)
     end
 
-    return tonumber(timestamp), tonumber(suffix) or 1
+    return (a.timestamp or 0) > (b.timestamp or 0)
 end
 
-local function history_file_id(file_name)
-    return file_name:match("^(%d+_?%d*)%.lua$")
-end
-
-local function saved_history_file_info(file_name)
-    local saved_name = file_name:match("^" .. SAVED_FILE_PREFIX .. "(.+)$")
-    if not saved_name then
-        return nil
-    end
-
-    return history_file_info(saved_name)
-end
-
-local function saved_history_file_id(file_name)
-    return file_name:match("^" .. SAVED_FILE_PREFIX .. "(%d+_?%d*)%.lua$")
-end
-
-local function sorted_history_files(path, file_info)
+local function sorted_history_files(path, prefix)
     local files = {}
-    file_info = file_info or history_file_info
     local pipe = _io.popen('dir "' .. path .. '" /b')
     if not pipe then
         return files
     end
 
     for file_name in pipe:lines() do
-        local timestamp, suffix = file_info(file_name)
+        local _, timestamp, suffix = history_file_info(file_name, prefix)
         if timestamp then
             files[#files + 1] = {
                 file_name = file_name,
@@ -423,31 +371,10 @@ local function sorted_history_files(path, file_info)
     end
 
     pipe:close()
-
-    table.sort(files, function(a, b)
-        if a.timestamp == b.timestamp then
-            return a.suffix > b.suffix
-        end
-
-        return a.timestamp > b.timestamp
-    end)
+    table.sort(files, summary_sort)
 
     return files
 end
-
-local function index_path(path, index_file)
-    return path .. (index_file or INDEX_FILE)
-end
-
-local function summary_sort(a, b)
-    if (a.timestamp or 0) == (b.timestamp or 0) then
-        return (a.suffix or 1) > (b.suffix or 1)
-    end
-
-    return (a.timestamp or 0) > (b.timestamp or 0)
-end
-
-local entry_title_display
 
 local function mission_template(metadata)
     metadata = metadata or {}
@@ -456,29 +383,17 @@ local function mission_template(metadata)
     return mission_id and Missions[mission_id]
 end
 
-local function mission_type(metadata)
-    local mission = mission_template(metadata)
-
-    return metadata and metadata.mission_type or mission and mission.mission_type
-end
-
+-- The entry's own value wins over the mission template's.
 local function game_mode_name(metadata)
     local mission = mission_template(metadata)
 
-    return metadata and metadata.game_mode_name or mission and mission.game_mode_name
-end
-
-local function is_expedition(metadata)
-    local mode_name = game_mode_name(metadata)
-
-    return metadata and metadata.is_expedition or mode_name == "expedition"
+    return metadata.game_mode_name or mission and mission.game_mode_name
 end
 
 local function is_mortis_trials(metadata)
-    local mission_type_name = mission_type(metadata)
-    local mode_name = game_mode_name(metadata)
+    local mission = mission_template(metadata)
 
-    return mode_name == "survival" or mission_type_name == "horde"
+    return game_mode_name(metadata) == "survival" or (metadata.mission_type or mission and mission.mission_type) == "horde"
 end
 
 local function localized_circumstance_name(circumstance_name)
@@ -527,20 +442,9 @@ local function split_modifier_lines(names)
         end
     end
 
-    local first = {}
-    local second = {}
-
-    for i = 1, split_at do
-        first[#first + 1] = names[i]
-    end
-
-    for i = split_at + 1, count do
-        second[#second + 1] = names[i]
-    end
-
     return {
-        table.concat(first, ", "),
-        table.concat(second, ", "),
+        table.concat(names, ", ", 1, split_at),
+        table.concat(names, ", ", split_at + 1, count),
     }
 end
 
@@ -581,7 +485,7 @@ local function havoc_modifier_lines(entry)
     return nil
 end
 
-local function mission_condition_lines(entry)
+function History.mission_conditions_display(entry)
     if type(entry) ~= "table" then
         return nil
     end
@@ -612,9 +516,9 @@ local function mission_condition_lines(entry)
 end
 
 local function entry_summary(entry, file_name, file_path)
-    local _, suffix = history_file_info(file_name)
-    if not suffix then
-        _, suffix = saved_history_file_info(file_name)
+    local id, _, suffix = history_file_info(file_name)
+    if not id then
+        _, _, suffix = history_file_info(file_name, SAVED_FILE_PREFIX)
     end
 
     -- Keep full loadouts in the mission file, not duplicated in both history indexes.
@@ -636,14 +540,15 @@ local function entry_summary(entry, file_name, file_path)
         file_name = file_name,
         file_path = file_path,
         timestamp = entry.timestamp,
-        suffix = suffix or 1,
+        suffix = suffix,
         date = entry.date,
         date_display = entry.date or date_text(entry.timestamp or 0),
         duration_display = entry.duration_display,
         difficulty_display = entry.difficulty_display,
         game_type_display = entry.game_type_display,
         custom_name = entry.custom_name,
-        history_title_display = entry_title_display(entry),
+        local_archetype = entry.local_archetype,
+        history_title_display = History.entry_title_display(entry),
         havoc_modifiers_display = havoc_modifier_lines(entry),
         mission_display = entry.mission_display,
         outcome = entry.outcome or entry.mission and entry.mission.outcome,
@@ -652,21 +557,19 @@ local function entry_summary(entry, file_name, file_path)
     }
 end
 
-local function load_index(path, max_entries, index_file, file_info, file_id)
-    local data = parse_saved_table(read_file(index_path(path, index_file)))
+local function load_index(path, index_file, prefix)
+    local data = parse_saved_table(read_file(path .. (index_file or INDEX_FILE)))
     if type(data) ~= "table" or data.version ~= VERSION or type(data.entries) ~= "table" then
         return nil
     end
 
     local entries = {}
-    file_info = file_info or history_file_info
-    file_id = file_id or history_file_id
     local seen_ids = {}
-    local count = max_entries and math.min(#data.entries, max_entries) or #data.entries
-    for i = 1, count do
+    for i = 1, #data.entries do
         local entry = data.entries[i]
-        local expected_id = type(entry) == "table" and type(entry.file_name) == "string" and file_id(entry.file_name)
-        if expected_id and entry.id == expected_id and not seen_ids[entry.id] and file_info(entry.file_name) then
+        local expected_id = type(entry) == "table" and type(entry.file_name) == "string"
+            and history_file_info(entry.file_name, prefix)
+        if expected_id and entry.id == expected_id and not seen_ids[entry.id] then
             entry.file_path = path .. entry.file_name
             if file_exists(entry.file_path) then
                 entries[#entries + 1] = entry
@@ -681,8 +584,8 @@ local function load_index(path, max_entries, index_file, file_info, file_id)
 end
 
 local function write_serialized(path, value)
-    local ok, serialized = pcall(serialize_value, value, 0)
-    if not ok then
+    local serialized = {}
+    if not pcall(serialize_value, value, 0, serialized) then
         return false
     end
 
@@ -693,7 +596,7 @@ local function write_serialized(path, value)
         return false
     end
 
-    local wrote = file:write("return ", serialized, "\n")
+    local wrote = file:write("return ", table.concat(serialized), "\n")
     local closed = file:close()
     if not wrote or closed == nil then
         _os.remove(temporary_path)
@@ -724,20 +627,18 @@ local function write_serialized(path, value)
 end
 
 local function write_index(path, entries, index_file)
-    return write_serialized(index_path(path, index_file), { version = VERSION, entries = entries })
+    return write_serialized(path .. (index_file or INDEX_FILE), { version = VERSION, entries = entries })
 end
 
-local function build_index_from_files(path, max_entries, index_file, file_info, file_id)
+local function build_index_from_files(path, index_file, prefix)
     local entries = {}
-    local files = sorted_history_files(path, file_info)
-    file_id = file_id or history_file_id
-    local count = max_entries and math.min(#files, max_entries) or #files
+    local files = sorted_history_files(path, prefix)
 
-    for i = 1, count do
+    for i = 1, #files do
         local history_file = files[i]
-        local entry = load_file(history_file.file_path)
+        local entry = History.load(history_file.file_path)
 
-        if entry and entry.id == file_id(history_file.file_name) then
+        if entry and entry.id == history_file_info(history_file.file_name, prefix) then
             entries[#entries + 1] = entry_summary(entry, history_file.file_name, history_file.file_path)
         end
     end
@@ -746,10 +647,6 @@ local function build_index_from_files(path, max_entries, index_file, file_info, 
     write_index(path, entries, index_file)
 
     return entries
-end
-
-local function write_snapshot(path, snapshot)
-    return write_serialized(path, snapshot)
 end
 
 local function saved_marker_path(path)
@@ -769,8 +666,8 @@ local function write_saved_marker(path)
 end
 
 local function migrate_legacy_saved_entries(path, entries)
-    local legacy_path = legacy_saved_path(path)
-    if not legacy_path or not directory_exists(legacy_path) then
+    local legacy_path = path .. LEGACY_SAVED_DIRECTORY
+    if not directory_exists(legacy_path) then
         return entries
     end
 
@@ -785,12 +682,12 @@ local function migrate_legacy_saved_entries(path, entries)
     for i = 1, #legacy_entries do
         local legacy_entry = legacy_entries[i]
         if not id_lookup[legacy_entry.id] then
-            local snapshot = load_file(legacy_entry.file_path)
+            local snapshot = History.load(legacy_entry.file_path)
             local file_name = SAVED_FILE_PREFIX .. legacy_entry.id .. ".lua"
             local file_path = path .. file_name
-            local existing_snapshot = file_exists(file_path) and load_file(file_path)
+            local existing_snapshot = file_exists(file_path) and History.load(file_path)
 
-            if snapshot and (existing_snapshot and existing_snapshot.id == legacy_entry.id or write_snapshot(file_path, snapshot)) then
+            if snapshot and (existing_snapshot and existing_snapshot.id == legacy_entry.id or write_serialized(file_path, snapshot)) then
                 local saved_snapshot = existing_snapshot and existing_snapshot.id == legacy_entry.id and existing_snapshot or snapshot
                 entries[#entries + 1] = entry_summary(saved_snapshot, file_name, file_path)
                 id_lookup[legacy_entry.id] = true
@@ -861,7 +758,7 @@ function History.game_type_display(metadata)
         return mod:localize("history_game_type_maelstrom")
     end
 
-    if is_expedition(metadata) then
+    if metadata.is_expedition or game_mode_name(metadata) == "expedition" then
         return mod:localize("history_game_type_expedition")
     end
 
@@ -910,7 +807,7 @@ local function generated_entry_title(entry)
     return string.format("%s | %s | %s", map, difficulty, duration)
 end
 
-entry_title_display = function(entry)
+function History.entry_title_display(entry)
     entry = entry or {}
 
     local generated_title = generated_entry_title(entry)
@@ -925,25 +822,13 @@ entry_title_display = function(entry)
     return generated_title
 end
 
-function History.entry_title_display(entry)
-    return entry_title_display(entry)
-end
-
 function History.entry_outcome(entry)
     entry = entry or {}
 
     return entry.outcome or entry.mission and entry.mission.outcome
 end
 
-function History.havoc_modifiers_display(entry)
-    return havoc_modifier_lines(entry)
-end
-
-function History.mission_conditions_display(entry)
-    return mission_condition_lines(entry)
-end
-
-load_file = function(path)
+function History.load(path)
     local data = parse_saved_table(read_file(path))
     if type(data) ~= "table" or data.version ~= VERSION then
         return nil
@@ -973,22 +858,66 @@ function History.saved_list()
     return cached_saved_entries
 end
 
-function History.is_saved(id)
-    if not id then
-        return false
-    end
-
+-- The saved entry with this id and its position in the saved list, or nil.
+function History.saved_entry(id)
     for i = 1, #cached_saved_entries do
         if cached_saved_entries[i].id == id then
-            return true
+            return cached_saved_entries[i], i
         end
     end
+end
 
-    return false
+function History.is_saved(id)
+    return History.saved_entry(id) ~= nil
 end
 
 function History.cache_ready()
     return cache_ready
+end
+
+-- Same id the scoreboard stores per player: account id, or the name when there is none.
+local function local_account_id()
+    local player_manager = Managers.player
+    local player = player_manager and player_manager:local_player_safe(1)
+
+    return player and (player:account_id() or player:name())
+end
+
+-- Entries saved before local_archetype existed are matched by account id; the index keeps
+-- only the class icon there, which is unique per class.
+function History.entry_local_archetype(entry, account_id)
+    if entry.local_archetype then
+        return entry.local_archetype
+    end
+
+    if account_id == nil then
+        return nil
+    end
+
+    for _, player in ipairs(entry.players or {}) do
+        if player.account_id == account_id then
+            local loadout = player.loadout_snapshot
+            return loadout and loadout.archetype or ARCHETYPE_BY_ICON[player.archetype_icon]
+        end
+    end
+
+    return nil
+end
+
+function History.filter_by_archetype(entries, archetype_name)
+    if not archetype_name then
+        return entries
+    end
+
+    local account_id = local_account_id()
+    local filtered = {}
+    for i = 1, #entries do
+        if History.entry_local_archetype(entries[i], account_id) == archetype_name then
+            filtered[#filtered + 1] = entries[i]
+        end
+    end
+
+    return filtered
 end
 
 function History.refresh_cache(rebuild_from_files)
@@ -1004,10 +933,10 @@ function History.refresh_cache(rebuild_from_files)
             entries = build_index_from_files(path)
         end
 
-        saved_entries = load_index(path, nil, SAVED_INDEX_FILE, saved_history_file_info, saved_history_file_id)
+        saved_entries = load_index(path, SAVED_INDEX_FILE, SAVED_FILE_PREFIX)
         if not saved_entries then
             if file_exists(saved_marker_path(path)) then
-                saved_entries = build_index_from_files(path, nil, SAVED_INDEX_FILE, saved_history_file_info, saved_history_file_id)
+                saved_entries = build_index_from_files(path, SAVED_INDEX_FILE, SAVED_FILE_PREFIX)
             else
                 saved_entries = migrate_legacy_saved_entries(path, {})
                 write_index(path, saved_entries, SAVED_INDEX_FILE)
@@ -1027,40 +956,22 @@ function History.refresh_cache(rebuild_from_files)
     return cached_entries
 end
 
-function History.prune()
-    local path = ensure_directory()
-    if not path then
-        return
-    end
-
-    local files = sorted_history_files(path)
-    for i = History.recent_capacity() + 1, #files do
-        local file_path = files[i].file_path
-        if file_path and file_exists(file_path) then
-            _os.remove(file_path)
-        end
-    end
-end
-
+-- Clears from the index, like save prunes: listing the folder (io.popen "dir") blocks the game for seconds.
+-- The index is rewritten empty rather than deleted, so the next preload does not rebuild it from a listing.
 function History.clear()
     local path = appdata_path()
-    local paths = {}
 
     if path and directory_exists(path) then
-        local files = sorted_history_files(path)
-        for i = 1, #files do
-            paths[#paths + 1] = files[i].file_path
+        local entries = load_index(path) or cached_entries
+        for i = 1, #entries do
+            pending_clear_paths[#pending_clear_paths + 1] = entries[i].file_path
         end
 
-        paths[#paths + 1] = index_path(path)
+        write_index(path, {})
     end
 
     cached_entries = {}
     cache_ready = true
-
-    for i = 1, #paths do
-        pending_clear_paths[#pending_clear_paths + 1] = paths[i]
-    end
 
     return true
 end
@@ -1078,8 +989,11 @@ function History.update(dt)
     end
 end
 
-function History.load(path)
-    return load_file(path)
+-- Removes every file a clear still has queued; used on unload and disable, where update stops.
+function History.flush_pending()
+    while pending_clear_paths[1] do
+        History.update()
+    end
 end
 
 local function normalized_custom_name(custom_name)
@@ -1113,7 +1027,7 @@ function History.save_entry(entry, custom_name)
         return true
     end
 
-    local snapshot = entry.file_path and load_file(entry.file_path) or entry.sections and entry
+    local snapshot = entry.file_path and History.load(entry.file_path) or entry.sections and entry
     if type(snapshot) ~= "table" or snapshot.id ~= entry.id then
         return false
     end
@@ -1127,7 +1041,7 @@ function History.save_entry(entry, custom_name)
 
     local file_name = SAVED_FILE_PREFIX .. entry.id .. ".lua"
     local file_path = path .. file_name
-    local source_entries = load_index(path, nil, SAVED_INDEX_FILE, saved_history_file_info, saved_history_file_id)
+    local source_entries = load_index(path, SAVED_INDEX_FILE, SAVED_FILE_PREFIX)
     if not source_entries and not file_exists(saved_marker_path(path)) then
         source_entries = migrate_legacy_saved_entries(path, {})
     end
@@ -1145,30 +1059,18 @@ function History.save_entry(entry, custom_name)
         end
     end
 
-    if file_exists(file_path) then
-        local existing_snapshot = load_file(file_path)
-        if not existing_snapshot or existing_snapshot.id ~= entry.id then
+    -- A saved file already on disk is kept and renamed; only a file created here is removed on failure.
+    local existed = file_exists(file_path)
+    if existed then
+        snapshot = History.load(file_path)
+        if not snapshot or snapshot.id ~= entry.id then
             return false
         end
 
-        existing_snapshot.custom_name = custom_name
-        if not write_snapshot(file_path, existing_snapshot) then
-            return false
-        end
-
-        entries[#entries + 1] = entry_summary(existing_snapshot, file_name, file_path)
-        table.sort(entries, summary_sort)
-
-        if not write_index(path, entries, SAVED_INDEX_FILE) then
-            return false
-        end
-
-        cached_saved_entries = entries
-        write_saved_marker(path)
-        return true
+        snapshot.custom_name = custom_name
     end
 
-    if not write_snapshot(file_path, snapshot) then
+    if not write_serialized(file_path, snapshot) then
         return false
     end
 
@@ -1176,7 +1078,9 @@ function History.save_entry(entry, custom_name)
     table.sort(entries, summary_sort)
 
     if not write_index(path, entries, SAVED_INDEX_FILE) then
-        _os.remove(file_path)
+        if not existed then
+            _os.remove(file_path)
+        end
         return false
     end
 
@@ -1201,28 +1105,19 @@ function History.rename_saved(id, custom_name)
         return false
     end
 
-    local saved_entry
-    local entry_index
-    for i = 1, #cached_saved_entries do
-        if cached_saved_entries[i].id == id then
-            saved_entry = cached_saved_entries[i]
-            entry_index = i
-            break
-        end
-    end
-
+    local saved_entry, entry_index = History.saved_entry(id)
     if not saved_entry or not saved_entry.file_path then
         return false
     end
 
-    local snapshot = load_file(saved_entry.file_path)
+    local snapshot = History.load(saved_entry.file_path)
     if not snapshot or snapshot.id ~= id then
         return false
     end
 
     local previous_name = snapshot.custom_name
     snapshot.custom_name = custom_name
-    if not write_snapshot(saved_entry.file_path, snapshot) then
+    if not write_serialized(saved_entry.file_path, snapshot) then
         return false
     end
 
@@ -1234,7 +1129,7 @@ function History.rename_saved(id, custom_name)
 
     if not write_index(path, entries, SAVED_INDEX_FILE) then
         snapshot.custom_name = previous_name
-        write_snapshot(saved_entry.file_path, snapshot)
+        write_serialized(saved_entry.file_path, snapshot)
         return false
     end
 
@@ -1317,8 +1212,9 @@ function History.save(snapshot)
     snapshot.game_type_display = History.game_type_display(snapshot.mission)
     snapshot.havoc_modifiers_display = havoc_modifier_lines(snapshot)
     snapshot.history_title_display = History.entry_title_display(snapshot)
+    snapshot.local_archetype = History.entry_local_archetype(snapshot, local_account_id())
 
-    if not write_snapshot(file_path, snapshot) then
+    if not write_serialized(file_path, snapshot) then
         return false
     end
 
@@ -1353,7 +1249,6 @@ function History.save(snapshot)
     cached_entries = entries
     cached_capacity = capacity
     cache_ready = true
-    History.prune()
 
     return true, file_path
 end
@@ -1376,6 +1271,7 @@ function History.player_adapters(players)
             string_symbol = player.archetype_icon or player.string_symbol,
             loadout_snapshot = player.loadout_snapshot,
             social_account_id = social_account_id,
+            rainbow_name = player.rainbow_name,
             account_id = function(self)
                 return self._account_id
             end,

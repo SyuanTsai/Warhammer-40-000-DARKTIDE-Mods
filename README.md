@@ -664,10 +664,10 @@
 
 ### [Another Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/1203)
     新型記分板
-- MOD 網站最後更新日期：Last updated 04 October 2026, 3:36AM
-- MOD 版本：2.0.2
-- MOD 檔案名稱：AnotherScoreboard（Nexus 公開頁面未提供完整檔名，待手動補）
-- 手動維護最後下載日期：2026-10-07
+- MOD 網站最後更新日期：Last updated 22 November 2026, 01:13AM
+- MOD 版本：2.4.1
+- MOD 檔案名稱：AnotherScoreboard 1203 2.4.1 2026-11-21T17-13Z pRus3Rl5u
+- 手動維護最後下載日期：2026-11-26
 
 ---
 # 遊戲內操作相關MOD

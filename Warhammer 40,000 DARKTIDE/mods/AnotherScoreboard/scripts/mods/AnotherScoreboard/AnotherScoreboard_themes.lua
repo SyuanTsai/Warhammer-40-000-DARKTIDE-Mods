@@ -15,7 +15,6 @@ local function legacy_hud_colors(panel, section, accent)
     return {
         live = {
             bg = { 210, panel[1], panel[2], panel[3] },
-            accent = { 220, accent[1], accent[2], accent[3] },
             title = { 255, accent[1], accent[2], accent[3] },
             header = { 255, 199, 208, 204 },
             text = { 255, 242, 244, 243 },
@@ -23,41 +22,34 @@ local function legacy_hud_colors(panel, section, accent)
         boss = {
             bg = { 210, panel[1], panel[2], panel[3] },
             accent = { 220, accent[1], accent[2], accent[3] },
-            accent_soft = { 90, accent[1], accent[2], accent[3] },
             title = { 255, accent[1], accent[2], accent[3] },
             header = { 255, 199, 208, 204 },
             text = { 255, 242, 244, 243 },
             damage = { 255, 255, 215, 94 },
-            section_bg = { 255, section[1], section[2], section[3] },
             footer_bg = { 255, section[1], section[2], section[3] },
             row_divider = { 90, accent[1], accent[2], accent[3] },
         },
     }
 end
 
-local function legacy_default_hud_colors()
-    return {
-        live = {
-            bg = { 210, 18, 22, 18 },
-            accent = { 220, 60, 78, 57 },
-            title = { 255, 239, 193, 82 },
-            header = { 255, 169, 191, 153 },
-            text = { 255, 204, 204, 204 },
-        },
-        boss = {
-            bg = { 210, 18, 22, 18 },
-            accent = { 220, 60, 78, 57 },
-            accent_soft = { 70, 60, 78, 57 },
-            title = { 255, 239, 193, 82 },
-            header = { 255, 169, 191, 153 },
-            text = { 255, 204, 204, 204 },
-            damage = { 255, 250, 189, 73 },
-            section_bg = { 55, 49, 56, 49 },
-            footer_bg = { 220, 40, 45, 40 },
-            row_divider = { 35, 60, 78, 57 },
-        },
-    }
-end
+local LEGACY_DEFAULT_HUD_COLORS = {
+    live = {
+        bg = { 210, 18, 22, 18 },
+        title = { 255, 239, 193, 82 },
+        header = { 255, 169, 191, 153 },
+        text = { 255, 204, 204, 204 },
+    },
+    boss = {
+        bg = { 210, 18, 22, 18 },
+        accent = { 220, 60, 78, 57 },
+        title = { 255, 239, 193, 82 },
+        header = { 255, 169, 191, 153 },
+        text = { 255, 204, 204, 204 },
+        damage = { 255, 250, 189, 73 },
+        footer_bg = { 220, 40, 45, 40 },
+        row_divider = { 35, 60, 78, 57 },
+    },
+}
 
 -- base: darkest surface, accent: signature color, text: primary text color.
 local function theme(base, accent, hud, options)
@@ -86,12 +78,9 @@ local function theme(base, accent, hud, options)
         text_dim = argb(255, text_dim),
         best = argb(255, best),
         worst = argb(255, worst),
-        total = { 255, 255, 215, 94 },
 
         -- Surfaces
         panel = argb(242, base),
-        panel_label = argb(255, surface),
-        panel_total = argb(255, raised),
         title_bg = argb(250, surface),
         header_bg = argb(255, surface),
         section_bg = argb(255, raised),
@@ -107,7 +96,6 @@ local function theme(base, accent, hud, options)
         section = argb(255, accent),
         row_div = { line_alpha, 255, 255, 255 },
         best_bg = argb(34, best),
-        worst_bg = argb(26, worst),
         lane_alpha = options.lane_alpha or 9,
         header_tint_alpha = options.header_tint_alpha or 26,
 
@@ -136,8 +124,66 @@ local function theme(base, accent, hud, options)
     }
 end
 
+-- Simple: the 1.x scoreboard look (plain olive panel, centred gold section headings, player-coloured
+-- names, no cards or best markers). colors serves Squad Loadouts, history, Live Stats and the Boss
+-- Popup; scoreboard holds the 1.x default palette for the full scoreboard.
+local function simple_theme()
+    local colors = theme({ 18, 22, 18 }, { 239, 193, 82 }, LEGACY_DEFAULT_HUD_COLORS, {
+        text = { 216, 229, 207 }, text_sub = { 169, 191, 153 }, text_dim = { 152, 152, 152 },
+        best = { 74, 199, 60 }, worst = { 220, 80, 70 },
+    })
+    colors.history = {
+        title = { 255, 239, 193, 82 },
+        text = { 255, 216, 229, 207 },
+        sub = { 255, 169, 191, 153 },
+        panel = { 230, 30, 35, 30 },
+        footer = { 220, 18, 20, 18 },
+        entry = { 180, 35, 40, 35 },
+        entry_hover = { 220, 49, 56, 49 },
+        button = { 220, 54, 62, 54 },
+        button_hover = { 255, 76, 88, 76 },
+        button_selected = { 255, 104, 78, 32 },
+        empty = { 255, 152, 152, 152 },
+        won = { 255, 74, 199, 60 },
+        lost = { 255, 220, 80, 70 },
+    }
+
+    ---@type table<string, any>
+    local scoreboard = {
+        simple = true,
+        title = { 255, 239, 193, 82 },
+        best = { 255, 74, 199, 60 },
+        worst = { 255, 88, 99, 80 },
+        normal = { 255, 204, 204, 204 },
+        sub = { 255, 152, 152, 152 },
+        label = { 255, 216, 229, 207 },
+        label_sub = { 255, 169, 191, 153 },
+        label_nested = { 255, 151, 174, 182 },
+        section = { 255, 239, 193, 82 },
+        section_bg = { 60, 49, 56, 49 },
+        section_col = { 40, 35, 40, 35 },
+        row_alt = { 48, 49, 56, 49 },
+        panel = { 220, 30, 35, 30 },
+        shadow = { 200, 5, 5, 5 },
+        title_line = { 255, 60, 78, 57 },
+        row_div = { 40, 60, 78, 57 },
+        history_hint_text = { 255, 216, 229, 207 },
+        history_footer = { 220, 18, 20, 18 },
+    }
+    for key, value in pairs(colors) do
+        if scoreboard[key] == nil then
+            scoreboard[key] = value
+        end
+    end
+
+    return colors, scoreboard
+end
+
+local simple_colors, simple_scoreboard = simple_theme()
+
 local order = {
     "default",
+    "simple",
     "reject_olive",
     "inquisition_navy",
     "manufactorum_slate",
@@ -146,12 +192,21 @@ local order = {
 }
 
 return {
-    default = "default",
+    -- New users start on this theme, and every theme lookup falls back to it, so a saved theme that a
+    -- later version removes shows this one.
+    default = "simple",
     order = order,
+    -- Player slot colours, the same in every theme.
+    player_colors = {
+        { 255, 106, 224, 216 },
+        { 255, 244, 115, 171 },
+        { 255, 255, 139, 82 },
+        { 255, 139, 164, 255 },
+    },
     by_id = {
         default = {
             label = "scoreboard_theme_default",
-            colors = theme({ 13, 15, 19 }, { 226, 180, 98 }, legacy_default_hud_colors()),
+            colors = theme({ 13, 15, 19 }, { 226, 180, 98 }, LEGACY_DEFAULT_HUD_COLORS),
         },
         reject_olive = {
             label = "scoreboard_theme_reject_olive",
@@ -185,6 +240,11 @@ return {
                     best = { 96, 255, 140 }, worst = { 255, 104, 96 },
                     line_alpha = 34, border_shift = 48, lane_alpha = 14, header_tint_alpha = 40,
                 }),
+        },
+        simple = {
+            label = "scoreboard_theme_simple",
+            colors = simple_colors,
+            scoreboard = simple_scoreboard,
         },
     },
 }

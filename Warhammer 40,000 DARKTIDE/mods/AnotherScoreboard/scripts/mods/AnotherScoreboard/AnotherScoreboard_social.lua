@@ -27,17 +27,6 @@ function Social.account_id_for_player(player)
     return account_id
 end
 
-local function _social_service()
-    local data_service = Managers.data_service
-
-    return data_service and data_service.social
-end
-
-local function _social_navigation_open(ui)
-    return ui:view_active(SOCIAL_VIEW) or ui:is_view_closing(SOCIAL_VIEW)
-        or ui:view_active(ROSTER_VIEW) or ui:is_view_closing(ROSTER_VIEW)
-end
-
 local function _board_open(ui)
     return ui:view_active(BOARD_VIEW) and not ui:is_view_closing(BOARD_VIEW)
 end
@@ -70,7 +59,8 @@ function Social.request(account_id)
 end
 
 local function _begin_resolving()
-    local social_service = _social_service()
+    local data_service = Managers.data_service
+    local social_service = data_service and data_service.social
     if not social_service or not Managers.presence then
         Social.reset()
 
@@ -116,7 +106,9 @@ local function _begin_resolving()
 end
 
 local function _open_social_view(ui)
-    if not _board_open(ui) or _social_navigation_open(ui) then
+    -- Not over a social menu that is already open or closing.
+    if not _board_open(ui) or ui:view_active(SOCIAL_VIEW) or ui:is_view_closing(SOCIAL_VIEW)
+            or ui:view_active(ROSTER_VIEW) or ui:is_view_closing(ROSTER_VIEW) then
         Social.reset()
 
         return
@@ -141,10 +133,7 @@ local function _show_popup(ui)
     end
 
     local player_info = _player_info
-    _phase = nil
-    _account_id = nil
-    _player_info = nil
-    _timer = 0
+    Social.reset()
     roster:cb_show_popup_menu_for_player(player_info)
 
     return true

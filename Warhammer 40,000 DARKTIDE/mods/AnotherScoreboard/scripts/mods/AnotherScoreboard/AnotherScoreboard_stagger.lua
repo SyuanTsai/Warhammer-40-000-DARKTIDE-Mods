@@ -1,3 +1,4 @@
+---@class AnotherScoreboardMod
 local mod = get_mod("AnotherScoreboard")
 
 local Stagger = mod:original_require("scripts/utilities/attack/stagger")
@@ -9,12 +10,12 @@ local BtChaosHoundLeapAction = mod:original_require("scripts/extension_systems/b
 local Catalog = mod:io_dofile("AnotherScoreboard/scripts/mods/AnotherScoreboard/AnotherScoreboard_stagger_catalog")
 
 local MIN_IMPACT = 2
-local MATCH_EXPIRY = 3
 local REPORT_RETENTION = 5
 local MAX_REPORT_BEFORE_EVENT = 1
 local MAX_REPORT_AFTER_EVENT = 0.75
 local MATCH_GRACE = MAX_REPORT_AFTER_EVENT
 local MAX_REPORTS_PER_UNIT = 24
+local REPORT_SWEEP_INTERVAL = 1
 local STAGGER_IMPACT = StaggerSettings.stagger_impact_comparison
 local STAGGER_CATEGORIES = StaggerSettings.stagger_categories
 local ZERO_IMPACT_DOT_PROFILES = {
@@ -35,6 +36,7 @@ local _reports = setmetatable({}, { __mode = "k" })
 local _pending_events = setmetatable({}, { __mode = "k" })
 local _server_pending = setmetatable({}, { __mode = "k" })
 local _sequence = 0
+local _next_report_sweep = 0
 
 local function _time()
     local time_manager = Managers.time
@@ -59,19 +61,6 @@ local function _account_id_from_unit(unit)
 
     local spawn_manager = Managers.state and Managers.state.player_unit_spawn
     local player = spawn_manager and spawn_manager:owner(resolved_unit)
-    if not player then
-        local player_manager = Managers.player
-        local players = player_manager and player_manager:players()
-        if players then
-            for _, candidate in pairs(players) do
-                if candidate.player_unit == resolved_unit then
-                    player = candidate
-                    break
-                end
-            end
-        end
-    end
-
     return player and (player:account_id() or player:name()) or nil
 end
 
@@ -85,9 +74,10 @@ local function _record(aid, impact)
     end
 end
 
-local function _profile_types(damage_profile)
-    if not damage_profile then return nil end
+-- Damage profiles are static, so their stagger types are computed once (false: none).
+local _profile_types_cache = setmetatable({}, { __mode = "k" })
 
+local function _build_profile_types(damage_profile)
     local types = {}
     local function add_category(category)
         local stagger_types = category and STAGGER_CATEGORIES[category]
@@ -106,7 +96,19 @@ local function _profile_types(damage_profile)
     end
     add_category(damage_profile.shield_stagger_category)
 
-    return next(types) and types or nil
+    return next(types) and types or false
+end
+
+local function _profile_types(damage_profile)
+    if not damage_profile then return nil end
+
+    local types = _profile_types_cache[damage_profile]
+    if types == nil then
+        types = _build_profile_types(damage_profile)
+        _profile_types_cache[damage_profile] = types
+    end
+
+    return types or nil
 end
 
 local function _event_impact(metadata, damage_profile)
@@ -221,10 +223,13 @@ local function _process_pending(unit, now)
     for i = 1, #events do
         local event = events[i]
         local age = now - event.t
-        local finalized = age >= MATCH_GRACE and _finalize_event(unit, event)
-        if not finalized and age < MATCH_EXPIRY then
+        -- One attempt once the grace has passed: no report that arrives later is inside the
+        -- event's window, so a failed match cannot succeed on a retry.
+        if age < MATCH_GRACE then
             events[write] = event
             write = write + 1
+        else
+            _finalize_event(unit, event)
         end
     end
     for i = write, #events do
@@ -238,9 +243,15 @@ end
 
 function mod.stagger_register_attack(attacked_unit, attacking_unit, damage_profile, attack_type, aid, attack_direction, hit_world_position)
     if not attacked_unit or not aid then return end
+    -- On a server stagger is counted from the minion's own actions; reports are only matched on clients.
+    if _is_server() then return end
     if damage_profile and ZERO_IMPACT_DOT_PROFILES[damage_profile.name] then return end
 
     _sequence = _sequence + 1
+    local now = _time()
+    -- This unit's consumed and expired reports go before the cap is applied; other units are swept
+    -- once a second, since a report past REPORT_RETENTION is outside every pending event's window.
+    _remove_old_reports(attacked_unit, now)
     local reports = _reports[attacked_unit]
     if not reports then
         reports = {}
@@ -251,14 +262,14 @@ function mod.stagger_register_attack(attacked_unit, attacking_unit, damage_profi
         aid = aid,
         damage_profile = damage_profile,
         sequence = _sequence,
-        t = _time(),
+        t = now,
     }
 
     if #reports > MAX_REPORTS_PER_UNIT then
         table.remove(reports, 1)
     end
 
-    _process_pending(attacked_unit, _time())
+    _process_pending(attacked_unit, now)
 end
 
 local function _handle_minion_event(unit_id, event_index)
@@ -269,7 +280,6 @@ local function _handle_minion_event(unit_id, event_index)
     local metadata = Catalog.event_metadata(unit, event_index)
     if not metadata then return end
 
-    _sequence = _sequence + 1
     local events = _pending_events[unit]
     if not events then
         events = {}
@@ -298,11 +308,6 @@ local function _server_state(unit)
         _server_pending[unit] = state
     end
     return state
-end
-
-local function _commit_server_record(unit, record)
-    if not record then return end
-    _record(record.aid, record.impact)
 end
 
 mod:hook(Stagger, "apply_stagger",
@@ -350,7 +355,7 @@ function(func, self, unit, breed, blackboard, scratchpad, action_data, t)
     if _is_server() and counter and counter > 0 then
         local state = _server_pending[unit]
         local record = state and state.normal[counter]
-        _commit_server_record(unit, record)
+        if record then _record(record.aid, record.impact) end
 
         if state then
             for pending_counter in pairs(state.normal) do
@@ -369,9 +374,10 @@ function(func, unit, t, dt, scratchpad, action_data, optional_reset_stagger_immu
     local before_duration = scratchpad.stagger_duration
     local result = func(unit, t, dt, scratchpad, action_data, optional_reset_stagger_immune_time)
 
-    if _is_server() and not before_duration and scratchpad.stagger_duration then
+    if not before_duration and scratchpad.stagger_duration and _is_server() then
         local state = _server_pending[unit]
-        _commit_server_record(unit, state and state.controlled)
+        local record = state and state.controlled
+        if record then _record(record.aid, record.impact) end
         if state then state.controlled = nil end
     end
 
@@ -383,9 +389,10 @@ function(func, self, unit, breed, blackboard, scratchpad, action_data, dt, t)
     local before_duration = scratchpad.stagger_duration
     local result = func(self, unit, breed, blackboard, scratchpad, action_data, dt, t)
 
-    if _is_server() and not before_duration and scratchpad.stagger_duration and scratchpad.state == "in_air_stagger" then
+    if not before_duration and scratchpad.stagger_duration and scratchpad.state == "in_air_stagger" and _is_server() then
         local state = _server_pending[unit]
-        _commit_server_record(unit, state and state.controlled)
+        local record = state and state.controlled
+        if record then _record(record.aid, record.impact) end
         if state then state.controlled = nil end
     end
 
@@ -413,12 +420,16 @@ function mod.stagger_update_frame()
     for unit in pairs(_pending_events) do
         _process_pending(unit, now)
     end
-    for unit in pairs(_reports) do
-        _remove_old_reports(unit, now)
+    if now >= _next_report_sweep or now < _next_report_sweep - REPORT_SWEEP_INTERVAL then
+        _next_report_sweep = now + REPORT_SWEEP_INTERVAL
+        for unit in pairs(_reports) do
+            _remove_old_reports(unit, now)
+        end
     end
 end
 
 function mod.stagger_clear_cache()
+    _next_report_sweep = 0
     _reports = setmetatable({}, { __mode = "k" })
     _pending_events = setmetatable({}, { __mode = "k" })
     _server_pending = setmetatable({}, { __mode = "k" })
@@ -430,7 +441,6 @@ function mod.stagger_shutdown()
     if Managers.event then
         Managers.event:unregister(mod, "unit_registered")
     end
-    mod.stagger_clear_cache()
 end
 
 if Managers.event then
