@@ -636,10 +636,10 @@
 
 ### [Simple Speed Meter](https://www.nexusmods.com/warhammer40kdarktide/mods/404)
     顯示移動速度(用於比較不同武器的移動)
-- MOD 網站最後更新日期：Last updated 08 May 2023, 12:51PM
-- MOD 版本：2.02
-- MOD 檔案名稱：SimpleSpeedMeter-404-1-0-3-1744814116
-- 手動維護最後下載日期：2026-07-14
+- MOD 網站最後更新日期：Last updated 03 November 2026, 11:06AM
+- MOD 版本：1.0.4
+- MOD 檔案名稱：SimpleSpeedMeter 404 1.0.4 2026-11-03T03-06Z YFIfRFOND
+- 手動維護最後下載日期：2026-11-25
 
 ### [Server ping](https://www.nexusmods.com/warhammer40kdarktide/mods/1221)
     顯示真實的服務器PING
