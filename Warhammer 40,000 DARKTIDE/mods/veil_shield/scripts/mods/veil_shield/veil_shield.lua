@@ -1,7 +1,10 @@
 local mod = get_mod("veil_shield")
 
 local TARGET_ITEMS = {
-    slab_shield = "content/items/weapons/player/melee/ogryn_powermaul_slabshield_p1_m1",
+    slab_shields = {
+		"content/items/weapons/player/melee/ogryn_powermaul_slabshield_p1_m1",
+		"content/items/weapons/player/melee/ogryn_powermaul_slabshield_p1_m2",
+	},
     suppression_shields = {
         "content/items/weapons/player/melee/powermaul_shield_p1_m1",
         "content/items/weapons/player/melee/powermaul_shield_p1_m2",
@@ -47,14 +50,19 @@ end
 
 local function should_hide_item(item_name)
     if not item_name then return false end
-    if item_name == TARGET_ITEMS.slab_shield then
-        return mod:get("hide_slab_shield")
+
+    for _, name in ipairs(TARGET_ITEMS.slab_shields) do
+        if item_name == name then
+            return mod:get("hide_slab_shield")
+        end
     end
+
     for _, name in ipairs(TARGET_ITEMS.suppression_shields) do
         if item_name == name then
             return mod:get("hide_suppression_shield")
         end
     end
+
     return false
 end
 

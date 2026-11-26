@@ -608,10 +608,10 @@
 
 ### [VeilShield](https://www.nexusmods.com/warhammer40kdarktide/mods/637)
     盾牌透明化
-- MOD 網站最後更新日期：Last updated 31 January 2026, 7:25PM
-- MOD 版本：1.4
-- MOD 檔案名稱：Machine God's Beacon-684-2026-01-26-1769450266
-- 手動維護最後下載日期：2026-02-02
+- MOD 網站最後更新日期：Last updated 12 October 2026, 07:21PM
+- MOD 版本：1.5
+- MOD 檔案名稱：veil_shield 1.4 637 1.5 2026-10-12T11-21Z iYOupY349
+- 手動維護最後下載日期：2026-11-25
 
 ### [Modular Menu Buttons](https://www.nexusmods.com/warhammer40kdarktide/mods/166)
     快速選單
