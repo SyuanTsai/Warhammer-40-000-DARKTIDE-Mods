@@ -1,4 +1,4 @@
-﻿-- Show Crit Chance mod by mroużon. Ver. 1.1
+﻿-- Show Crit Chance mod by mroużon. Ver. 1.1.3
 -- Thanks to Zombine, Redbeardt and others for their input into the community. Their work helped me a lot in the process of creating this mod.
 
 -- Russian translation by xsSplater
@@ -141,18 +141,23 @@ return {
 	},
 	icon_skull = {
 		en = "",
+		["zh-tw"] = "",
 	},
 	icon_dagger = {
 		en = "",
+		["zh-tw"] = "",
 	},
 	icon_thunderbolt = {
 		en = "",
+		["zh-tw"] = "",
 	},
 	icon_darktide = {
 		en = "",
+		["zh-tw"] = "",
 	},
 	icon_laurels = {
 		en = "",
+		["zh-tw"] = "",
 	},
 	crit_chance_indicator_settings_appearance = {
 		en = "Indicator Appearance",
