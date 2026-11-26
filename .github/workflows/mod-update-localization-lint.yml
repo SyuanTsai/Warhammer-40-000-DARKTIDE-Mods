@@ -1,0 +1,25 @@
+name: Localization Lua syntax
+
+on:
+  pull_request:
+    paths:
+      - 'Warhammer 40,000 DARKTIDE/mods/**/*_localization.lua'
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install LuaJIT
+        run: sudo apt-get update && sudo apt-get install -y luajit
+      - name: Check changed localization files
+        env:
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: python3 -m scripts.localization_lint --diff "$PR_BASE" "$PR_HEAD"

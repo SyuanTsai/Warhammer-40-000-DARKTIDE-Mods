@@ -137,6 +137,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install LuaJIT
+        if: matrix.action == 'update' && inputs.dry_run != true
+        run: sudo apt-get update && sudo apt-get install -y luajit
       - name: 安裝 Skill 相依套件
         if: matrix.action == 'update'
         shell: pwsh
