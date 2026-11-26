@@ -817,10 +817,10 @@
 
 ### [Auto Mark](https://www.nexusmods.com/warhammer40kdarktide/mods/736)
     自動標記 (非狗哨)
-- MOD 網站最後更新日期：Last updated 07 October 2026, 7:53PM（Nexus 頁面顯示；UTC：2026-10-07T19:53:42Z；Asia/Taipei：2026-10-08 03:53:42）
-- MOD 版本：2.5.4
-- MOD 檔案名稱：AutoMark 736 2.5.4 2026-10-07T19-53Z hUmF6UaSp.zip
-- 手動維護最後下載日期：2026-10-08
+- MOD 網站最後更新日期：Last updated 28 October 2026, 02:29AM
+- MOD 版本：2.5.6
+- MOD 檔案名稱：AutoMark 736 2.5.6 2026-10-27T18-29Z iYOupY3S5
+- 手動維護最後下載日期：2026-11-25
 
 ### [ErrorTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/824)
     錯誤追蹤

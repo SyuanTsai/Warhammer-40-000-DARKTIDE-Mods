@@ -842,9 +842,11 @@ local localization = {
     },
     percent = {
         en = "%%",
+        ["zh-tw"] = "%%",
     },
     degree = {
         en = "°",
+        ["zh-tw"] = "°",
     },
     stack = {
         en = "stack",

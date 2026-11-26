@@ -14,6 +14,7 @@ local servo_skull_visibility_check_frame   = mod.servo_skull_visibility_check_fr
 -- Imports
 local Breed                                = require("scripts/utilities/breed")
 local SpecialRulesSettings                 = require("scripts/settings/ability/special_rules_settings")
+local HitZone                              = require("scripts/utilities/attack/hit_zone")
 local Breed_height                         = Breed.height
 local special_rules                        = SpecialRulesSettings.special_rules
 
@@ -46,6 +47,7 @@ local Matrix4x4_right                      = Matrix4x4.right
 local Matrix4x4_forward                    = Matrix4x4.forward
 local Quaternion_forward                   = Quaternion.forward
 local Quaternion_up                        = Quaternion.up
+local table_clear                          = table.clear
 
 -- Constants
 local INDEX_POSITION                       = 1
@@ -835,7 +837,7 @@ function mod:find_focus_target_switch_melee_target_unit(max_range)
     end
 
     local ray_origin, forward, right, up = smart_targeting_extension:_targeting_parameters()
-    local hits, num_hits = PhysicsWorld_raycast(smart_targeting_extension._physics_world, ray_origin, forward, max_range, "all", "collision_filter", COLLISION_FILTER)
+    local hits, num_hits = PhysicsWorld_raycast(smart_targeting_extension._physics_world, ray_origin, forward, max_range, "all", "types", "dynamics", "collision_filter", COLLISION_FILTER)
     if not hits or num_hits <= 0 then
         return
     end
@@ -1025,6 +1027,60 @@ function mod:find_focus_target_switch_melee_target_unit(max_range)
     if best_unit then
         local best_unit_tag = smart_tag_system:unit_tag(best_unit)
         return best_unit, best_unit_tag
+    end
+end
+
+local checked_units = {}
+function mod:find_focus_target_switch_range_target_unit(max_range)
+    local player = context.player
+    local player_unit = player and player.player_unit
+    local smart_targeting_extension = context.smart_targeting_extension
+    local smart_tag_system = context.smart_tag_system
+    if not player_unit or not smart_targeting_extension or not smart_tag_system then
+        return
+    end
+
+    local ray_origin, forward, right, up = smart_targeting_extension:_targeting_parameters()
+    local hits, num_hits = PhysicsWorld_raycast(smart_targeting_extension._physics_world, ray_origin, forward, max_range, "all", "types", "dynamics", "collision_filter", "filter_player_character_shooting_raycast_dynamics")
+    if not hits or num_hits <= 0 then
+        return
+    end
+
+    table_clear(checked_units)
+    local fixed_frame = smart_targeting_extension._latest_fixed_frame
+    for i = 1, num_hits do
+        local hit = hits[i]
+        local hit_actor = hit[INDEX_ACTOR]
+        if not hit_actor then
+            goto continue
+        end
+
+        local hit_unit = Actor_unit(hit_actor)
+        if hit_unit == player_unit or checked_units[hit_unit] or not HEALTH_ALIVE[hit_unit] then
+            goto continue
+        end
+
+        local unit_data_extension = ScriptUnit_extension(hit_unit, "unit_data_system")
+        local breed_data = unit_data_extension and unit_data_extension._breed
+        -- ignore untaggable unit
+        if not breed_data or breed_data.smart_tag_target_type ~= "breed" or breed_data.faction_name == "imperium" or breed_data.unit_template_name ~= "minion" then
+            goto continue
+        end
+
+        local hit_zone_name_or_nil = HitZone.get_name(hit_unit, hit_actor)
+        if hit_zone_name_or_nil == HitZone.hit_zone_names.afro then
+            goto continue
+        end
+
+        local hit_unit_center_pos = Actor_world_bounds(hit_actor)
+        local half_height = Breed_height(hit_unit, breed_data) * 0.5
+        if is_target_visible(ray_origin, up, hit_unit_center_pos, half_height, hit_unit, fixed_frame) then
+            return hit_unit, smart_tag_system:unit_tag(hit_unit)
+        else
+            checked_units[hit_unit] = true
+        end
+
+        ::continue::
     end
 end
 
