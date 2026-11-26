@@ -6,7 +6,9 @@ import os
 import re
 import sys
 import tempfile
+import traceback
 from functools import cache as memoize, partial
+from html import escape
 from pathlib import Path
 
 from scripts.mod_update_watch.drive import DriveClient, DriveError
@@ -43,6 +45,23 @@ def append(name, value):
 def emit(message):
     print(message)
     append("GITHUB_STEP_SUMMARY", message)
+
+
+def emit_stop(error):
+    heading = f"更新編排停止（{type(error).__name__}）。請檢查 checkout、路徑與輸入契約。"
+    diagnostic = (f"{heading}\nTraceback (most recent call last):\n"
+                  f"{''.join(traceback.format_tb(error.__traceback__))}"
+                  f"{type(error).__name__}: {error}")
+    secrets = {os.environ.get(name, "").strip() for name in (
+        "ANTHROPIC_API_KEY", "GITHUB_TOKEN", "GOOGLE_ACCESS_TOKEN", "NEXUS_API_KEY",
+    )}
+    for secret in sorted(secrets - {""}, key=len, reverse=True):
+        diagnostic = diagnostic.replace(secret, "[已遮蔽]")
+    print(diagnostic, file=sys.stderr)
+    try:
+        append("GITHUB_STEP_SUMMARY", f"<pre>{escape(diagnostic)}</pre>\n")
+    except OSError:
+        print("警告：無法寫入 step summary。", file=sys.stderr)
 
 
 def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
@@ -143,7 +162,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
         emit(str(error))
         return 1
     except (OSError, ValueError, KeyError) as error:
-        emit(f"更新編排停止（{type(error).__name__}）。請檢查 checkout、路徑與輸入契約。")
+        emit_stop(error)
         return 1
 
 
