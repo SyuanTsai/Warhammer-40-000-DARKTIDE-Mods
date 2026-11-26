@@ -98,12 +98,12 @@ return {
     overhand = {
         en = "Overhand",
         ["zh-cn"] = "高抛投掷",
-        ["zh-tw"] = "高拋手雷",
+        ["zh-tw"] = "高拋投擲",
     },
     underhand = {
         en = "Underhand",
         ["zh-cn"] = "低抛投掷",
-        ["zh-tw"] = "低拋手雷",
+        ["zh-tw"] = "低拋投擲",
     },
     -- Box 欧格林-投弹完毕！
     box_enabled = {
