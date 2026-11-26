@@ -326,7 +326,7 @@ class ExecutionTests(unittest.TestCase):
         hash_file = self.root / PATHS[2]
         hash_file.parent.mkdir()
         hash_file.write_text("acquisition_method=author-hotfix\nsource_url=https://example.invalid/patch\n"
-                             "private_fix_commit=old\n", encoding="utf-8")
+                             "private_fix_commit=old\nprivate_fix_paths=Example.mod\n", encoding="utf-8")
         (self.root / MOD / "Example.mod").write_bytes(b"private")
         ready = {"units": [], "translationBinding": {"rulesSha256": "rules", "glossarySha256": "terms"}}
         self.loc.translate.return_value = (0, {}, ready)
@@ -364,8 +364,31 @@ class ExecutionTests(unittest.TestCase):
         self.assertIn(f"- {self.loc.relative} ｜ 已自動去除多餘外層引號：combat_duration、stim_trigger_mode", body)
         saved = _read_hash(hash_file)
         self.assertEqual((saved["private_fix"], saved["private_fix_commit"]), ("true", "old"))
+        self.assertEqual(saved["private_fix_paths"], "Example.mod")
         self.assertNotIn("source_url", saved)
         self.assertIn("私人修正（非官方）", readme.read_text(encoding="utf-8"))
         self.assertEqual((self.root / MOD / "Example.mod").read_bytes(), b"private")
         self.assertEqual((self.root / MOD / self.loc.relative).read_bytes(), b"translation\n")
         self.assertFalse(conflicts)
+
+    # Scenario: 沒有封存基準，候選缺少已登記的程式檔，或改動本地化載入檔。
+    # Purpose: 更新在安裝候選前列出受影響的檔案，讓既有 Issue 流程要求人工確認。
+    def test_UnitT65_registered_private_fix_stops_changed_candidate(self):
+        loc_path = "Example_localization.lua"
+        hash_file = self.root / PATHS[2]
+        hash_file.parent.mkdir()
+        hash_file.write_text(f"private_fix_paths=Example.mod,{loc_path}\n", encoding="utf-8")
+        self.baseline.return_value = {"Example.mod": b"private fix", loc_path: b"return {legacy = true}\n"}
+        ready = {"units": []}
+        self.loc.relative = loc_path
+        self.loc.generate.return_value = ready
+        self.loc.translate.return_value = (0, {}, ready)
+        self.loc.apply.return_value = (b"return {}\n", [])
+        with (patch("scripts.mod_update_orchestrate.process.find_base", return_value=None),
+              patch("scripts.mod_update_orchestrate.process.install_tree") as install):
+            with self.assertRaises(NeedsHuman) as blocked:
+                self.build_candidate()
+        self.assertEqual(blocked.exception.reason, "private-fix")
+        self.assertIn("Example.mod", str(blocked.exception))
+        self.assertIn(loc_path, str(blocked.exception))
+        install.assert_not_called()

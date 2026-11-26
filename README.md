@@ -668,6 +668,7 @@
 - MOD 版本：2.4.1
 - MOD 檔案名稱：AnotherScoreboard 1203 2.4.1 2026-11-21T17-13Z pRus3Rl5u
 - 手動維護最後下載日期：2026-11-26
+- 私人修正（非官方）：保留 `AnotherScoreboard_enemies.lua` 的 15 筆特殊與精英敵人舊譯，並由 `AnotherScoreboard_localization.lua` 載入。2.4.1 更新移除了這兩處繁中欄位。兩個檔案以相對 MOD 根目錄的路徑登記在 `.hash/AnotherScoreboard.hash` 的 `private_fix_paths`。更新候選若改動或移除任一登記檔案，編排會暫停，並在更新 Issue 列出檔案供人工覆核。
 
 ---
 # 遊戲內操作相關MOD
