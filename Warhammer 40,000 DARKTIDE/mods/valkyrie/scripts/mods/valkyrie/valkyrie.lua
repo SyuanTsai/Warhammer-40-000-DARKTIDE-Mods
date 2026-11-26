@@ -41,6 +41,7 @@ local EXPERIMENTAL_WEAPON_PRESENTATION = "weapon_presentation"
 local EXPERIMENTAL_BABOOSHKA = "babooshka"
 local in_lobby = false
 local lobby_start_detected = false
+local suppress_next_lobby_exit_start = false
 local silent_mode = true
 local in_mission_intro = false
 local active_intro_view = nil
@@ -145,8 +146,21 @@ local function should_silence_from_lobby()
 return get_option("mute_lobby_mission", false) and true or false
 end
 local function mark_lobby_start()
+suppress_next_lobby_exit_start = false
 lobby_start_detected = true
 silent_mode = should_silence_from_lobby()
+end
+local function mark_in_progress_start()
+lobby_start_detected = false
+silent_mode = true
+end
+local function cancel_lobby_start()
+mark_in_progress_start()
+suppress_next_lobby_exit_start = true
+end
+local function voting_is_mission_lobby_ready(voting)
+local template = voting and voting._template
+return template and template.name == "mission_lobby_ready" or false
 end
 local function is_mortis_trials()
 return current_game_mode_name() == "survival" or is_mortis_trials_start(get_mechanism_data())
@@ -522,13 +536,31 @@ end
 return func(self, ...)
 end)
 end
+mod:hook("VotingByNetworkImpl", "_on_started", function(func, self, voting_id, template, params, initiator_peer)
+if template and template.name == "mission_lobby_ready" then
+mark_lobby_start()
+end
+return func(self, voting_id, template, params, initiator_peer)
+end)
+mod:hook("VotingClient", "on_voting_aborted", function(func, self, reason, ...)
+if voting_is_mission_lobby_ready(self) then
+cancel_lobby_start()
+end
+return func(self, reason, ...)
+end)
+mod:hook("VotingHost", "on_voting_aborted", function(func, self, reason, ...)
+if voting_is_mission_lobby_ready(self) then
+cancel_lobby_start()
+end
+return func(self, reason, ...)
+end)
 mod:hook("LevelTransitionHandler", "on_mission_start", function(func, self, key, params)
 ValkCommand.reset_report()
 local from_lobby = lobby_start_detected or in_lobby or is_lobby_view_active()
 if from_lobby then
 mark_lobby_start()
 else
-silent_mode = true
+mark_in_progress_start()
 end
 reset_intro_visual_state()
 return func(self, key, params)
@@ -550,7 +582,7 @@ end)
 end
 if CLASS and CLASS.LobbyView and CLASS.LobbyView.trigger_on_exit_animation then
 mod:hook_safe(CLASS.LobbyView, "trigger_on_exit_animation", function(self)
-if self and self._is_animating_on_exit then
+if self and self._is_animating_on_exit and not suppress_next_lobby_exit_start then
 mark_lobby_start()
 end
 end)
@@ -558,7 +590,12 @@ end
 if CLASS and CLASS.LobbyView and CLASS.LobbyView.on_exit then
 mod:hook_safe(CLASS.LobbyView, "on_exit", function()
 if in_lobby then
+if suppress_next_lobby_exit_start then
+suppress_next_lobby_exit_start = false
+mark_in_progress_start()
+else
 mark_lobby_start()
+end
 end
 in_lobby = false
 end)
