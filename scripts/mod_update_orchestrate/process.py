@@ -21,7 +21,7 @@ from .discover import already_recorded, latest_receipt, matches_issue, receipt_k
 from .eol import FORMAT_ONLY, MIXED_EOL, default_format, matches_except_uniform_eol, normalize, repo_bytes
 from .gate import validate_git, validate_paths, validate_upstream
 from .localization import Localization, LocalizationError, log_stage, read_json
-from .loc_layout import preserve_layout
+from .loc_layout import FALLBACK_NOTE, preserve_layout
 from .merge import change_summary, merge_tree, private_changes
 from .pr import branch_for, current_pr, publish, require_reviewed_input, stage_raw, sync_term_review, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
@@ -286,7 +286,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
         if formal:
             if merged[loc.relative] != applied:
-                raise LocalizationError("localization layout would change receipted terminology bytes")
+                merged[loc.relative], layout_note = applied, FALLBACK_NOTE
             repo_format = repo_bytes(applied, layout_base, default_format(ours))
             if not matches_except_uniform_eol(applied, repo_format):
                 raise LocalizationError("repository formatting would change more than uniform LF/CRLF")

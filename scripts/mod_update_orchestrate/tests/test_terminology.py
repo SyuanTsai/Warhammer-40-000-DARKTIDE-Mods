@@ -475,16 +475,17 @@ class TerminologyBridgeTests(unittest.TestCase):
                 layout.assert_not_called()
                 self.assert_stopped(*scripts)
 
-    # Scenario: Both phases pass but normal layout or repository EOL handling would modify the result.
-    # Purpose: Preserve the receipt's exact byte coverage through publication.
-    def test_InterT60_layout_or_repository_format_change_stops_before_install(self):
-        scripts = ("New-LocalizationWorkset", "Apply-LocalizationWorkset", "Test-LocalizationWorksetReceipt")
+    # Scenario: The old layout would drop an approved value and a Lua table separator.
+    # Purpose: Stage the exact receipted Lua and report why the old layout was skipped.
+    def test_InterT60_layout_change_falls_back_to_receipted_bytes(self):
+        self.use_real_index()
         self.save_request()
         with patch("scripts.mod_update_orchestrate.process.preserve_layout",
-                   side_effect=lambda before, applied: (applied + b"\n", "")) as layout:
-            self.assertEqual(self.formal(), 1, self.stderr.getvalue())
+                   side_effect=lambda before, applied: (applied.replace(NEW_LITERAL.encode(), OLD_LITERAL.encode())
+                                                        .replace(b' },', b' }', 1), "")) as layout:
+            self.assertEqual(self.formal(), 0, self.stderr.getvalue())
         layout.assert_called_once()
-        self.assert_stopped(*scripts)
+        self.assertIn("本地化檔無法保留原排版，已使用 Skill 輸出", self.assert_published())
 
     # Scenario: The existing repo formatter changes BOM presence or converts mixed or lone CR delimiters.
     # Purpose: Allow only conversions between uniform LF and uniform CRLF.
