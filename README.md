@@ -79,10 +79,10 @@
 
 ### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
     翻譯修正器，
-- MOD 網站最後更新日期：Last updated 08 July 2025, 1:59AM
-- MOD 版本：Version 1.2.3
-- MOD 檔案名稱：WhatTheLocalization-163-1-2-3-1751911304
-- 手動維護最後下載日期：2025-07-09
+- MOD 網站最後更新日期：Last updated 03 November 2026, 11:06AM
+- MOD 版本：Version 1.2.4
+- MOD 檔案名稱：WhatTheLocalization 163 1.2.4 2026-11-03T03-06Z ke28WelFG
+- 手動維護最後下載日期：2026-11-25
 
 ### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
     UI改善
