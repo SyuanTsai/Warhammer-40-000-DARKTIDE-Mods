@@ -356,11 +356,6 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
         if not receipt or not matches_issue(issue, receipt, route) or receipt_key(receipt) != file_id:
             emit("Issue 已關閉、收件不完整或目標已變更，略過")
             return
-        pulls = github.pulls(branch_for(nexus_id))
-        previous = pulls[0] if len(pulls) == 1 else None
-        reuse = not regenerate and current_pr(pulls, nexus_id, file_id)
-        if not reviewing and not reuse:
-            require_reviewed_input(previous)
         base_oid = git("rev-parse", "HEAD") if dry_run else latest(git)
         if not dry_run and git("rev-parse", "HEAD") != base_oid:
             git("switch", "--detach", base_oid)
@@ -375,6 +370,11 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 version = recorded_version(mod, receipt)
                 emit(f"repo 紀錄已是版本 {version}，跳過。" if version else "main 已收錄相同主檔，略過")
                 return
+            pulls = github.pulls(branch_for(nexus_id))
+            previous = pulls[0] if len(pulls) == 1 else None
+            reuse = not regenerate and current_pr(pulls, nexus_id, file_id)
+            if not reviewing and not reuse:
+                require_reviewed_input(previous)
             if len(pulls) > 1:
                 raise NeedsHuman("publication", "固定分支出現多個開啟中的 PR")
             if reuse:

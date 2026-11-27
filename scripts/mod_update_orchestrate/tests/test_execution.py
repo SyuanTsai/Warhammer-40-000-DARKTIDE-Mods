@@ -117,7 +117,8 @@ class ExecutionTests(unittest.TestCase):
                         "body": f"<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 verified_head={previous_head} route=update -->"}
             if prior_reviewed:
                 previous["body"] += "\n<!-- reviewed-translation-v1 sha256=fixture -->"
-            self.github.pulls.return_value = [previous]
+            self.pr_before = previous
+            self.github.pulls.side_effect = lambda queried: [previous] if queried in (None, branch) else []
             live = {**previous, "head": {"sha": publication_head, "ref": branch}}
             self.github.pull.return_value = live
             self.github.write_pr.side_effect = lambda prev, branch, title, body, draft: {**live, "body": body}
@@ -284,8 +285,8 @@ class ExecutionTests(unittest.TestCase):
     def test_UnitT27_ordinary_regeneration_preserves_reviewed_pr(self):
         self.loc.translate.return_value = (0, {}, READY)
         self.assertEqual(self.run_update(mode="auto", reviewed_args=("--regenerate",), prior_reviewed=True), 1)
-        self.assertIn("reviewed-translation-v1", self.github.pulls.return_value[0]["body"])
-        self.git.assert_called_once_with("status", "--porcelain", "--untracked-files=all")
+        self.assertIn("reviewed-translation-v1", self.pr_before["body"])
+        self.assertTrue(all(call.args[0] in {"status", "fetch", "rev-parse"} for call in self.git.call_args_list))
         self.loc.generate.assert_not_called()
         self.github.write_pr.assert_not_called()
         self.github.merge_pr.assert_not_called()
