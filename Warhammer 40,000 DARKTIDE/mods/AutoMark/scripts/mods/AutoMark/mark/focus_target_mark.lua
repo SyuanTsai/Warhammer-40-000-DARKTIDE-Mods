@@ -11,7 +11,7 @@ local CLASS        = CLASS
 -- Constants
 local MELEE_RANGE  = 5
 
-local function focus_target_switch(is_melee)
+local function focus_target_switch(type, is_auto_fire)
     if not context.mod_enabled or not context.game_mode_valid or context.class_name ~= "veteran" or not context.has_focus_target then
         return
     end
@@ -32,23 +32,39 @@ local function focus_target_switch(is_melee)
     end
 
     local target_unit, target_tag
-    if is_melee then
+    if type == "melee" then
         target_unit, target_tag = mod:find_focus_target_switch_melee_target_unit(MELEE_RANGE)
-    else
-        target_unit = mod:find_target_unit(true)
+    elseif type == "range" then
+        target_unit, target_tag = mod:find_focus_target_switch_range_target_unit(100)
     end
 
-    target_tag = target_tag or smart_tag_system:unit_tag(target_unit)
     if not target_unit or not mod:can_focus_target_overwrite(target_unit, target_tag) then
+        if is_auto_fire then
+            tag_context.auto_fire_unit = nil
+            tag_context.auto_fire_unit_start_time = math.huge
+        end
+
         return
     end
 
-    if is_melee then
+    local latest_fixed_time = mod:get_latest_fixed_time()
+    if is_auto_fire then
+        if tag_context.auto_fire_unit ~= target_unit then
+            tag_context.auto_fire_unit = target_unit
+            tag_context.auto_fire_unit_start_time = latest_fixed_time
+        end
+
+        if tag_context.tag and (tag_context.priority_switch_cooldown > 0 or latest_fixed_time <= tag_context.auto_fire_unit_start_time + 0.1) then
+            return
+        end
+    end
+
+    if type == "melee" then
         tag_context.switch_melee_unit = target_unit
-    else
+    elseif type == "range" then
         tag_context.switch_range_unit = target_unit
     end
-    tag_context.switch_unit_expired_time = mod:get_latest_fixed_time() + 1
+    tag_context.switch_unit_expired_time = latest_fixed_time + 1
 
     mod:print_debug("Focus Target Switch", target_unit)
     mod:on_manual_mark(tag_context, target_unit)
@@ -76,10 +92,31 @@ mod:hook_safe(CLASS.ActionHandler, "start_action",
             if mod_settings.toggle_mod and mod_settings.focus_target_switch then
                 local action_kind = action_settings.kind
                 if mod_settings.focus_target_switch_melee and MELEE_ACTION_KINDS[action_kind] then
-                    focus_target_switch(true)
+                    focus_target_switch("melee")
                 elseif mod_settings.focus_target_switch_range and RANGED_ACTION_KINDS[action_kind] then
-                    focus_target_switch(false)
+                    focus_target_switch("range")
                 end
             end
+        end
+    end)
+
+mod:hook(CLASS.ActionShootHitScan, "_shoot",
+    function(func, self, ...)
+        if self._player.viewport_name == 'player1' and not self._unit_data_extension.is_resimulating then
+            if mod_settings.toggle_mod and mod_settings.focus_target_switch and mod_settings.focus_target_switch_range then
+                focus_target_switch("range", true)
+            end
+        end
+
+        return func(self, ...)
+    end)
+
+mod:hook_safe(CLASS.ActionShootHitScan, "finish",
+    function(self)
+        if self._player.viewport_name == 'player1' and not self._unit_data_extension.is_resimulating then
+            local tag_name = TAG_NAMES.VETERAN_TAG
+            local tag_context = mark_context[tag_name]
+            tag_context.auto_fire_unit = nil
+            tag_context.auto_fire_unit_start_time = math.huge
         end
     end)

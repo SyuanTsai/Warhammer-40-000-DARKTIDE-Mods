@@ -157,10 +157,6 @@ local context                            = {
     first_person_extension             = nil,
     smart_tag_system                   = nil,
     outline_system                     = nil,
-    smoke_fog_system                   = nil,
-    force_field_system                 = nil,
-    broadphase_system                  = nil,
-    side_system                        = nil,
     hud_element_smart_tagging          = nil,
     companion_command_tap              = "double"
 }
@@ -187,21 +183,23 @@ local mark_context                       = {
         is_manual                = false,
     },
     [TAG_NAMES.VETERAN_TAG]     = {
-        tag                      = nil,
-        cooldown                 = 0,
-        priority_switch_cooldown = 0,
-        delay                    = 0,
-        delay_times              = 0,
-        interval                 = 0,
-        manual_unit              = nil,
-        manual_unit_expired_time = nil,
-        is_manual                = false,
-        switch_melee_unit        = nil,
-        switch_range_unit        = nil,
-        switch_unit_expired_time = nil,
-        is_switch_melee          = false,
-        is_switch_range          = false,
-        removed_units            = setmetatable({}, { __mode = "k" }),
+        tag                       = nil,
+        cooldown                  = 0,
+        priority_switch_cooldown  = 0,
+        delay                     = 0,
+        delay_times               = 0,
+        interval                  = 0,
+        manual_unit               = nil,
+        manual_unit_expired_time  = nil,
+        is_manual                 = false,
+        switch_melee_unit         = nil,
+        switch_range_unit         = nil,
+        switch_unit_expired_time  = nil,
+        is_switch_melee           = false,
+        is_switch_range           = false,
+        auto_fire_unit            = nil,
+        auto_fire_unit_start_time = math.huge,
+        removed_units             = setmetatable({}, { __mode = "k" }),
     },
     [TAG_NAMES.COMPANION_TAG]   = {
         tag                      = nil,
@@ -286,6 +284,8 @@ local function reset_context()
     veteran_tag_context.switch_unit_expired_time = nil
     veteran_tag_context.is_switch_melee = false
     veteran_tag_context.is_switch_range = false
+    veteran_tag_context.auto_fire_unit = nil
+    veteran_tag_context.auto_fire_unit_start_time = math.huge
     table_clear(veteran_tag_context.removed_units)
     local companion_tag_context = mark_context[TAG_NAMES.COMPANION_TAG]
     companion_tag_context.pounce_start_time = nil
@@ -312,10 +312,6 @@ local function destroy_references()
     context.first_person_extension             = nil
     context.smart_tag_system                   = nil
     context.outline_system                     = nil
-    context.smoke_fog_system                   = nil
-    context.force_field_system                 = nil
-    context.broadphase_system                  = nil
-    context.side_system                        = nil
     context.hud_element_smart_tagging          = nil
     mod:destroy_visibility_raycast_objects()
 end
