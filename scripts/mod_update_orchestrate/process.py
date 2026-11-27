@@ -1,10 +1,12 @@
 """下載、重建並驗證單一 MOD 的更新候選。"""
 
+import hashlib
 import json
 import os
 import re
 import shutil
 import tempfile
+from dataclasses import replace
 from datetime import datetime
 from html import unescape
 from pathlib import Path
@@ -16,7 +18,7 @@ from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, 
 
 from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
-from .eol import FORMAT_ONLY, MIXED_EOL, default_format, normalize, repo_bytes
+from .eol import FORMAT_ONLY, MIXED_EOL, default_format, matches_except_uniform_eol, normalize, repo_bytes
 from .gate import validate_git, validate_paths, validate_upstream
 from .localization import Localization, LocalizationError, log_stage, read_json
 from .loc_layout import preserve_layout
@@ -127,11 +129,24 @@ def _budget(github, number, nexus_id, receipt, mod, summary):
     github.budget_issue(number, nexus_id, receipt_key(receipt), title, message)
 
 
+def active_receipt(github, number, receipt, route):
+    issue = github.issue(number)
+    comments = github.comments(number)
+    return (matches_issue(issue, receipt, route) and latest_receipt(comments, receipt.nexus_id) == receipt
+            and not unresolved_external_label(issue, comments))
+
+
+def require_current_terminology_target(git, github, number, receipt, route, base_oid):
+    if latest(git) != base_oid or not active_receipt(github, number, receipt, route):
+        raise ValueError("terminology correction base or active receipt changed")
+
+
 def candidate(root, git, github, drive, processed, issue, number, receipt, mod, paths, archive,
               new_tree, workspace, cache, skill, base_oid, *, max_items, dry_run, emit,
               route="update", upstream_oid=None, skipped_paths=(), review=None, review_template_only=False,
-              terminology_key=None):
+              terminology_key=None, terminology_request=None):
     nexus_id = receipt.nexus_id
+    file_id = receipt_key(receipt)
     mod_path, _, hash_path = paths
     hash_fields = _read_hash(root / hash_path) if (root / hash_path).exists() else {}
     base_archive = None
@@ -162,7 +177,9 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         validate_paths([*(f"{mod_path}/{path}" for path in merged),
                         *(f"{mod_path}/{path}" for path in new_tree if is_localization(path)),
                         *paths[1:]], mod_path, hash_path)
-    reviewing = review is not None or review_template_only
+    formal = terminology_request is not None
+    reviewing = review is not None or review_template_only or formal
+    evidence = None
     run = review_run(root) if reviewing else tempfile.TemporaryDirectory(prefix=".p3-localization-", dir=root)
     with run as temporary:
         loc = Localization(root, Path(temporary), workspace, skill, mod_path, upstream_oid or base_oid,
@@ -175,21 +192,34 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
             raise NeedsHuman("localization", "有 BLOCKED 工作集項目。\n\n" + "\n".join(details))
         fixed_ids = set()
         if reviewing:
-            originals = [v for k, v in ours.items() if is_localization(k)]
+            originals = {k: v for k, v in ours.items() if is_localization(k)}
             if len(originals) != 1:
                 raise ValueError("review requires one original localization")
-            binding = (nexus_id, receipt_key(receipt), originals[0], new_tree[loc.relative])
+            old = originals.get(loc.relative) if formal else next(iter(originals.values()))
+            frozen_new = new_tree[loc.relative]
+            binding = (nexus_id, file_id, old, frozen_new)
             if review_template_only:
                 template = review_template(document, *binding, terminology_key=terminology_key)
                 emit(json.dumps(template, ensure_ascii=True))
                 return None
-            if TERMINOLOGY_CORRECTION in review:
+            if review is not None and TERMINOLOGY_CORRECTION in review:
                 return pending_skill_evidence(document, review, *binding)
-            document = apply_review(document, review, *binding)
-            fixed_ids = {u["unitId"] for u in document["units"] if u["reviewStatus"] == "approved"}
-            loc.workset.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
+            if formal:
+                bound = pending_skill_evidence(document, terminology_request.review, *binding)
+                if bound.request[TERMINOLOGY_CORRECTION]["sourceId"] != loc.source_id:
+                    raise ValueError("terminology locator belongs to a different source")
+            if review is not None:
+                document = apply_review(document, review, *binding)
+                fixed_ids = {u["unitId"] for u in document["units"] if u["reviewStatus"] == "approved"}
+            if formal:
+                if pending := blocked_units(document, {}):
+                    raise ValueError("terminology correction requires all ordinary decisions to be resolved.\n"
+                                     + "\n".join(pending))
+                require_current_terminology_target(git, github, number, receipt, route, base_oid)
+            if review is not None:
+                loc.workset.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
         with log_stage("翻譯"):
-            if review is not None and not blocked_units(document, {}):
+            if formal or review is not None and not blocked_units(document, {}):
                 status, summary, translated = 0, {}, document
             else:
                 status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run)
@@ -240,14 +270,27 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if pending:
             raise NeedsHuman("localization", "有未核准或 BLOCKED 項目。\n\n" + "\n".join(pending))
         with log_stage("Apply 與 Receipt"):
-            applied, unquoted_keys = loc.apply(document, summary, rewrite_workset=document is not translated,
-                                               **({"reviewed_ids": fixed_ids} if fixed_ids else {}))
+            options = {"reviewed_ids": fixed_ids} if fixed_ids else {}
+            if formal:
+                options["terminology"] = (terminology_request, nexus_id, file_id, frozen_new)
+            result = loc.apply(document, summary, rewrite_workset=document is not translated, **options)
+            if formal:
+                applied, unquoted_keys, evidence = result
+            else:
+                applied, unquoted_keys = result
         if unquoted_keys and reviews:
             sync_term_review_translations(reviews, read_json(loc.workset), set(unquoted_keys))
         if reviews:
             emit(term_review_log(reviews))
         layout_base = None if route == "new" else ours.get(loc.relative)
         merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
+        if formal:
+            if merged[loc.relative] != applied:
+                raise LocalizationError("localization layout would change receipted terminology bytes")
+            repo_format = repo_bytes(applied, layout_base, default_format(ours))
+            if not matches_except_uniform_eol(applied, repo_format):
+                raise LocalizationError("repository formatting would change more than uniform LF/CRLF")
+            evidence = replace(evidence, repo_format_sha256=hashlib.sha256(repo_format).hexdigest())
 
     private_paths = {path.strip() for path in hash_fields.get("private_fix_paths", "").split(",") if path.strip()}
     changed_private_paths = [path for path in sorted(private_paths)
@@ -273,6 +316,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
     readme = root / "README.md"
     values = updates(receipt, issue, mod, filename, archive, received_at.date().isoformat(),
                      route=route, previous=hash_fields, readme=readme)
+    if formal:
+        require_current_terminology_target(git, github, number, receipt, route, base_oid)
     section, classification = None, {}
     if route == "new":
         section, abstract, classification = choose_section(
@@ -310,26 +355,26 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         version = f"{plain(mod.baseline_version or '未知')} → {version}"
     title = f"[MOD {action}] {plain(mod.name)} {version}"[:256]
     if dry_run:
-        if review is not None:
+        if review is not None or formal:
             try:
                 lint_changes(git, base_oid)
             finally:
                 restore(git, base_oid, paths)
         emit(f"{title}\n\nApply、Receipt、Gate 通過。\n\n{body}")
-        if route != "new" and review is None:
+        if route != "new" and review is None and not formal:
             restore(git, base_oid, paths)
         return None
     if latest(git) != base_oid:
         return False
-    live = github.issue(number)
-    comments = github.comments(number)
-    marker = latest_receipt(comments, nexus_id)
-    if not matches_issue(live, receipt, route) or marker != receipt or unresolved_external_label(live, comments):
+    if not active_receipt(github, number, receipt, route):
+        if formal:
+            restore(git, base_oid, paths)
+            raise ValueError("terminology correction active receipt changed before publication")
         emit("Issue 目標或收件標記已變更，略過")
         if route != "new":
             restore(git, base_oid, paths)
         return None
-    return title, body, conflicts
+    return (title, body, conflicts, evidence) if formal else (title, body, conflicts)
 
 
 def restore(git, base_oid, paths):
@@ -347,13 +392,17 @@ def restore_new(git, base_oid, paths):
 
 def process(root, git, github, drive, processed, number, nexus_id, file_id, skill, scratch, cache,
             *, max_items=None, mode="manual", dry_run=False, emit=print, route="update", regenerate=False,
-            review=None, review_template_only=False, terminology_key=None):
-    reviewing = review is not None or review_template_only
+            review=None, review_template_only=False, terminology_key=None, terminology_request=None):
+    formal = terminology_request is not None
+    reviewing = review is not None or review_template_only or formal
     if reviewing and (not regenerate or route != "update" or mode != "manual" or review_template_only and not dry_run):
         raise ValueError("review requires explicit manual update regeneration")
     if terminology_key is not None and (not review_template_only or review is not None):
         raise ValueError("terminology key belongs to review template generation")
-    terminology = terminology_key is not None or review is not None and TERMINOLOGY_CORRECTION in review
+    preview_replay = review is not None and TERMINOLOGY_CORRECTION in review
+    if formal and (review_template_only or preview_replay):
+        raise ValueError("formal terminology correction can only accompany an ordinary reviewed input")
+    terminology = formal or terminology_key is not None or preview_replay
     if git("status", "--porcelain", "--untracked-files=all"):
         raise ValueError("編排需要乾淨的 checkout")
     for attempt in range(2):
@@ -394,8 +443,8 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             pulls = github.pulls(branch_for(nexus_id))
             previous = pulls[0] if len(pulls) == 1 else None
             reuse = not regenerate and current_pr(pulls, nexus_id, file_id)
-            if not reviewing and not reuse:
-                require_reviewed_input(previous)
+            if not (reuse or review_template_only or preview_replay):
+                require_reviewed_input(previous, review=review, terminology_request=terminology_request)
             if len(pulls) > 1:
                 raise NeedsHuman("publication", "固定分支出現多個開啟中的 PR")
             if reuse:
@@ -425,12 +474,15 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                                     max_items=max_items, dry_run=dry_run, emit=emit,
                                     route=route, upstream_oid=upstream_oid, skipped_paths=skipped_paths,
                                     review=review, review_template_only=review_template_only,
-                                    **({"terminology_key": terminology_key} if terminology_key is not None else {}))
+                                    **({"terminology_key": terminology_key} if terminology_key is not None else {}),
+                                    **({"terminology_request": terminology_request} if formal else {}))
             if isinstance(outcome, PendingSkillEvidence):
                 return outcome
             if outcome is False:
                 if route != "new":
                     restore(git, base_oid, paths)
+                if formal:
+                    raise ValueError("terminology correction base changed before publication")
                 if attempt:
                     raise NeedsHuman("main", "main 在重建後再次更新，請重新執行")
                 emit("main 已更新，從最新基準重建一次")
@@ -445,7 +497,14 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 if route != "new":
                     restore(git, base_oid, paths)
                 raise
-            title, body, conflicts = outcome
+            publication = {}
+            if formal:
+                title, body, conflicts, evidence = outcome
+                if evidence is None:
+                    raise ValueError("terminology publication requires independently verified proof")
+                publication["terminology_evidence"] = evidence
+            else:
+                title, body, conflicts = outcome
             resolved = {"archive", "layout", "registry", "budget", "localization", "main", "publication", "private-fix"}
             if conflicts:
                 github.needs_human(number, "merge", "\n".join(f"- merge-conflict：{cell(item)}" for item in conflicts))
@@ -455,7 +514,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 pr_number = publish(git, github, previous, nexus_id, title, body,
                                     mode, conflicts, upstream_oid or base_oid, paths, route=route,
                                     mod_staged=True, emit=emit,
-                                    **({"review": review} if review is not None else {}))
+                                    **({"review": review} if review is not None else {}), **publication)
                 github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")
             return

@@ -1,5 +1,6 @@
 """以固定分支發布更新，並核對自動合併條件。"""
 
+import hashlib
 import re
 import subprocess
 import time
@@ -10,11 +11,13 @@ from scripts.mod_update_watch.registry import positive_id
 from .discover import latest_receipt, matches_issue, receipt_key, target, unresolved_external_label
 from .gate import validate_paths, validate_upstream
 from .report import term_review_from_pr
-from .reviewed import review_record
+from .reviewed import TerminologyEvidence, byte_record, review_record
+from .tree import is_localization
 
 PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_id=([0-9]+|sha256-[a-f0-9]{64})"
                        r"(?: verified_head=([a-f0-9]{40})(?: route=(update|new|hotfix))?)? -->")
 UNRESOLVED_THREADS = "暫停自動合併，PR 尚有未解決的討論串。"
+TERMINOLOGY_MARKER = "<!-- reviewed-terminology-v1 "
 
 
 class PullHeadError(RuntimeError):
@@ -47,9 +50,13 @@ def _has_reviewed_evidence(body):
     return "<!-- reviewed-translation-v1 " in body
 
 
-def require_reviewed_input(previous):
-    if (previous and previous.get("state") != "closed"
-            and _has_reviewed_evidence(previous.get("body") or "")):
+def require_reviewed_input(previous, *, review=None, terminology_request=None):
+    if not previous or previous.get("state") == "closed":
+        return
+    body = previous.get("body") or ""
+    if terminology_request is None and TERMINOLOGY_MARKER in body:
+        raise PullHeadError("replacing an open terminology PR requires new explicit terminology input")
+    if review is None and _has_reviewed_evidence(body):
         raise PullHeadError("replacing an open reviewed PR requires new reviewed input")
 
 
@@ -116,7 +123,7 @@ def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_r
         reason = "PR 標記無效或與 Issue 目標不符"
     elif not (verified_head := marker[3]):
         reason = "PR 標記缺少 verified_head"
-    elif _has_reviewed_evidence(body):
+    elif _has_reviewed_evidence(body) or TERMINOLOGY_MARKER in body:
         reason = "人工核准譯文須人工合併"
     elif marker[4] == "new" or route == "new":
         reason = "PR 標記為 route=new"
@@ -229,20 +236,44 @@ def _review_target(pull, branch, marker):
 
 
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
-            paths, *, route="update", mod_staged=False, emit=print, review=None):
-    if review is None:
-        require_reviewed_input(previous)
+            paths, *, route="update", mod_staged=False, emit=print, review=None, terminology_evidence=None):
+    require_reviewed_input(previous, review=review, terminology_request=terminology_evidence)
     marker = pr_marker(body)
     if (not marker or marker[1] != str(nexus_id) or marker[3]
             or marker[2].startswith("sha256-") != (route == "hotfix")):
         raise ValueError("PR 內文缺少唯一且有效的更新標記")
     branch = branch_for(nexus_id)
     expected = remote_head(git, branch)
-    trailers = ()
+    formal = terminology_evidence is not None
+    reviewed = review is not None or formal
+    trailers = []
     if review is not None:
         review_digest, encoded = review_record(review)
-        trailers = ("-m", f"Reviewed-Translation-SHA256: {review_digest}\nReviewed-Translation-Base64: {encoded}")
+        trailers.extend((f"Reviewed-Translation-SHA256: {review_digest}", f"Reviewed-Translation-Base64: {encoded}"))
         body += f"\n\n<!-- reviewed-translation-v1 sha256={review_digest} data={encoded} -->"
+    if formal:
+        if not isinstance(terminology_evidence, TerminologyEvidence):
+            raise ValueError("terminology publication requires independently verified proof")
+        request_sha, request_data = byte_record(terminology_evidence.request_bytes)
+        proof = terminology_evidence.proof
+        if (not isinstance(proof, dict) or proof.get("requestSha256") != request_sha
+                or (proof.get("nexusId"), str(proof.get("fileId")), proof.get("baseOid"), proof.get("modRelativePath"))
+                != (nexus_id, marker[2], base_oid, paths[0])):
+            raise ValueError("terminology publication proof does not match its target or request")
+        location = proof.get("localizationRelativePath")
+        if not isinstance(location, str) or not is_localization(location):
+            raise ValueError("terminology publication proof has no localization path")
+        validate_paths((location,), paths[0], None)
+        raw_sha = terminology_evidence.raw_output_sha256
+        repo_sha = terminology_evidence.repo_format_sha256
+        if not all(isinstance(value, str) and re.fullmatch(r"[a-f0-9]{64}", value) for value in (raw_sha, repo_sha)):
+            raise ValueError("terminology publication requires raw and repository-format SHA-256 evidence")
+        proof_sha, proof_data = review_record(proof)
+        trailers.extend((f"Reviewed-Terminology-Request-SHA256: {request_sha}",
+                         f"Reviewed-Terminology-Request-Base64: {request_data}",
+                         f"Reviewed-Terminology-Proof-SHA256: {proof_sha}",
+                         f"Reviewed-Terminology-Proof-Base64: {proof_data}"))
+    if reviewed:
         if mode != "manual" or route != "update":
             raise ValueError("reviewed publication requires a manual update")
         if previous:
@@ -251,6 +282,9 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
                 raise PullHeadError("previous verified_head differs from the update branch")
         elif expected:
             raise PullHeadError("existing review branch has no matching open PR")
+        head_suffix = f" verified_head={'0' * 40} route={route}"
+        if not formal and len(body.encode("utf-8")) + len(head_suffix) > 65536:
+            raise ValueError("review evidence exceeds PR body limit")
     if previous and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("PR 分支已變更，請重新執行")
     git("-c", "core.autocrlf=false", "add", "-A", "--",
@@ -259,22 +293,38 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
     if not changes:
         raise ValueError("Git index 無候選異動")
     validate_paths(filter(None, changes.split("\0")), paths[0], paths[2])
+    if formal:
+        staged_blob = git("cat-file", "blob", f":{location}", raw=True)
+        staged_sha = hashlib.sha256(staged_blob).hexdigest()
+        if staged_sha != repo_sha:
+            raise ValueError("staged terminology blob SHA-256 does not match the expected repository format")
+        trailers.extend((f"Reviewed-Terminology-Raw-Output-SHA256: {raw_sha}",
+                         f"Reviewed-Terminology-Repo-Format-SHA256: {repo_sha}",
+                         f"Reviewed-Terminology-Staged-Blob-SHA256: {staged_sha}"))
+        body += (f"\n\n{TERMINOLOGY_MARKER}request-sha256={request_sha} request-data={request_data} "
+                 f"proof-sha256={proof_sha} proof-data={proof_data} raw-output-sha256={raw_sha} "
+                 f"repo-format-sha256={repo_sha} staged-blob-sha256={staged_sha} -->")
+        if len(body.encode("utf-8")) + len(head_suffix) > 65536:
+            raise ValueError("review evidence exceeds PR body limit")
     if route == "new":
         if not set(paths[1:]) <= set(changes.split("\0")):
             raise ValueError("Gate 要求第二個提交包含 README 與新增 .hash")
         head = commit_tree(git, base_oid, f"chore(mod): translate and register Nexus MOD {nexus_id}")
     else:
-        git("-c", "user.name=github-actions[bot]", "-c",
-            "user.email=41898282+github-actions[bot]@users.noreply.github.com",
-            "commit", "-m", f"chore(mod): update Nexus MOD {nexus_id}", *trailers)
+        subject = f"chore(mod): update Nexus MOD {nexus_id}"
+        trailer_text = "\n".join(trailers)
+        commit = ("-c", "user.name=github-actions[bot]", "-c",
+                  "user.email=41898282+github-actions[bot]@users.noreply.github.com", "commit")
+        if formal:
+            git(*commit, "-F", "-", input=f"{subject}\n\n{trailer_text}\n".encode("utf-8"))
+        else:
+            git(*commit, "-m", subject, *(("-m", trailer_text) if trailers else ()))
         head = git("rev-parse", "HEAD")
     verified_marker = (f"<!-- mod-update-orchestrate:pr nexus_id={nexus_id} file_id={marker[2]}"
                        f" verified_head={head} route={route} -->")
     body = body.replace(marker[0], verified_marker, 1)
-    if review is not None and len(body.encode("utf-8")) > 65536:
-        raise ValueError("review evidence exceeds PR body limit")
-    push(git, branch, expected, head if route == "new" or review is not None else "HEAD")
-    if review is not None and previous:
+    push(git, branch, expected, head if route == "new" or reviewed else "HEAD")
+    if reviewed and previous:
         live = _verify_pull_head(git, github, branch, github.pull(previous["number"]), head, expected)
         if (live.get("number") != previous["number"] or live.get("body") != previous.get("body")
                 or _review_target(live, branch, marker)[0] != old[0] or remote_head(git, branch) != head):
@@ -282,7 +332,7 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
     pull = github.write_pr(previous, branch, title, body, bool(conflicts))
     number = pull["number"]
     pull = _verify_pull_head(git, github, branch, pull, head, expected if previous else None)
-    if review is not None:
+    if reviewed:
         if (previous and number != previous["number"] or pull.get("number") != number
                 or pull.get("body") != body or _review_target(pull, branch, marker)[3] != head
                 or remote_head(git, branch) != head):

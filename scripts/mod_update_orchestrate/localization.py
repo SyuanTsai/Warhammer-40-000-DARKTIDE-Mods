@@ -1,5 +1,6 @@
 """執行固定版 Skill 的工作集、核准、套用與收據驗證。"""
 
+import hashlib
 import json
 import os
 import shutil
@@ -13,6 +14,9 @@ from threading import Lock
 
 from .loc_layout import literal_has_boundary_quote, unwrap_literal_outer_double_quotes
 from .report import blocked_units
+from .reviewed import (
+    TERMINOLOGY_CORRECTION, TerminologyEvidence, canonical_json, verify_resume, verify_terminology_proof,
+)
 from .tree import is_localization
 
 
@@ -153,7 +157,7 @@ class Localization:
         summary = read_json(self.summary) if self.summary.is_file() else {}
         return status, summary, read_json(self.workset)
 
-    def apply(self, document, summary, *, rewrite_workset=False, reviewed_ids=()):
+    def apply(self, document, summary, *, rewrite_workset=False, reviewed_ids=(), terminology=None):
         if blocked_units(document, summary):
             raise LocalizationError("工作集含未核准或 BLOCKED 項目")
         units = []
@@ -173,6 +177,9 @@ class Localization:
                 corrected = {**saved, "units": units}
                 updated.write_text(json.dumps(corrected, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
                 updated.replace(self.workset)
+        if terminology is not None:
+            applied, evidence = self._apply_terminology({**document, "units": units}, *terminology)
+            return applied, unquoted_keys, evidence
         result = self.powershell("Apply-LocalizationWorkset", "-WorksetPath", self.workset)
         if result.get("result") != "passed":
             raise LocalizationError("Apply 未通過")
@@ -187,3 +194,58 @@ class Localization:
         if checked.get("result") != "passed":
             raise LocalizationError("Receipt 未通過")
         return merged.read_bytes(), unquoted_keys
+
+    def _apply_terminology(self, frozen_workset, request, nexus_id, file_id, frozen_new):
+        relative_path = f"{self.mod_path}/{self.relative}"
+        path_hash = hashlib.sha256(relative_path.encode("utf-8")).hexdigest()[:16]
+        artifacts = self.run / "artifacts" / "localization" / path_hash
+        artifacts.mkdir(parents=True)
+        request_path = self.run / "artifacts" / "terminology-request.json"
+        request_path.write_bytes(request.raw)
+        new, merged = artifacts / "new.lua", artifacts / "merged.lua"
+        new.write_bytes(frozen_new)
+        staged = self.stage / self.relative
+        if staged.read_bytes() != frozen_new:
+            raise LocalizationError("staged terminology NEW differs from frozen source")
+        verify_resume(frozen_workset, read_json(self.workset), actor="staged workset")
+        options = (
+            "-TerminologyRequestPath", request_path, "-ExpectedNexusId", nexus_id, "-ExpectedMainFileId", file_id,
+            "-WorksetPath", self.workset, "-RepositoryRoot", self.root, "-ExpectedBaseOid", self.base_oid,
+            "-ExpectedModRelativePath", self.mod_path, "-NewPath", new,
+        )
+        result = self.powershell("Apply-LocalizationWorkset", *options)
+        if not isinstance(result, dict) or result.get("result") != "passed":
+            raise LocalizationError("terminology Apply did not pass")
+        proof = result.get(TERMINOLOGY_CORRECTION)
+        verify_terminology_proof(proof, request, frozen_new, {
+            "nexusId": nexus_id, "fileId": file_id, "baseOid": self.base_oid, "modRelativePath": self.mod_path,
+            "localizationRelativePath": relative_path, "sourceId": self.source_id,
+        })
+        proof_bytes = canonical_json(proof)
+
+        def verify_artifacts():
+            if request_path.read_bytes() != request.raw or new.read_bytes() != frozen_new:
+                raise LocalizationError("Skill changed frozen terminology inputs")
+            saved = read_json(self.workset)
+            verify_resume(frozen_workset, saved, actor="Skill")
+            applied = saved.get("apply")
+            if not isinstance(applied, dict) or canonical_json(applied.get(TERMINOLOGY_CORRECTION)) != proof_bytes:
+                raise LocalizationError("workset lacks matching terminology Apply proof")
+
+        verify_artifacts()
+        applied = staged.read_bytes()
+        merged.write_bytes(applied)
+        checked = self.powershell("Test-LocalizationWorksetReceipt", *options,
+                                  "-RunRoot", self.run, "-MergedPath", merged)
+        if not isinstance(checked, dict) or checked.get("result") != "passed":
+            raise LocalizationError("terminology Receipt did not pass")
+        if canonical_json(checked.get(TERMINOLOGY_CORRECTION)) != proof_bytes:
+            raise LocalizationError("terminology Receipt proof differs from Apply proof")
+        verify_artifacts()
+        raw_output = merged.read_bytes()
+        if raw_output != applied:
+            raise LocalizationError("Skill changed merged terminology bytes during Receipt")
+        raw_sha256 = checked.get("outputSha256")
+        if raw_sha256 != hashlib.sha256(raw_output).hexdigest():
+            raise LocalizationError("terminology Receipt outputSha256 does not match the raw merged bytes")
+        return raw_output, TerminologyEvidence(request.raw, proof, raw_sha256)

@@ -21,7 +21,17 @@ After Apply, Receipt and lint pass, the publication commit records the canonical
 
 Add `--terminology-key <exact-key>` once to the manual dry-run template command. The template contains an empty `units` array and a single `terminologyCorrection` object for an eligible `NONE` unit. Fill `reviewer`, `reviewReference` and `terminologyCorrection.translation`, then submit with `--reviewed-input` from the same checkout baseline. The object carries the generated `sourceId`, `containerPath`, `key`, `occurrence`, `unitId` and `action`. Its `old` and `new` snapshots each carry `sourceRaw` and `zhTwRaw` Lua literals.
 
-On validated replay, the CLI emits a JSON diagnostic with `status` set to `pendingSkillEvidence` and the bound review in `request`. This includes both original localization byte hashes, the generated immutable, rules and glossary digests, the Nexus/file identity, the selected unit and the operator's replacement and attribution. Replay uses the current `HEAD` and exits with code 1 before editing the workset, invoking the translation adapter, running Apply or Receipt, or producing a publication or `verified_head`. An authorized exact-key Skill proof is still required before any correction can be applied.
+With `--reviewed-input`, a validated terminology replay emits a JSON diagnostic with `status` set to `pendingSkillEvidence` and the bound review in `request`. It uses the current `HEAD` and exits with code 1 before editing the workset, invoking the translation adapter, running Apply or Receipt, or producing a publication or `verified_head`.
+
+To apply the reviewed correction, pass the approved UTF-8 JSON file explicitly.
+
+```text
+python -m scripts.mod_update_orchestrate.main process --issue 7 --nexus-id 123 --file-id 9001 --review-mode manual --regenerate --route update --terminology-request /trusted/terminology.json
+```
+
+Add `--reviewed-input /trusted/review.json` if the generated workset also has ordinary units requiring approval. All ordinary decisions must be resolved before Apply, and a terminology run skips the translation adapter. The checkout baseline, active receipt, sources and generated bindings must still match. The configured Skill must support the terminology request and return matching exact-key proof from Apply, its saved workset and the independent Receipt. Mods checks the Receipt's `outputSha256` against the raw merged file before formatting. Layout must preserve those bytes exactly. Repository formatting may convert between uniform LF and uniform CRLF in valid UTF-8 if the BOM presence and every other byte are preserved. Mods reads the actual staged Git blob and requires its SHA-256 to match the expected repository-format bytes.
+
+The `reviewed-terminology-v1` PR marker and the `Reviewed-Terminology-Request-SHA256`, `Reviewed-Terminology-Request-Base64`, `Reviewed-Terminology-Proof-SHA256` and `Reviewed-Terminology-Proof-Base64` commit trailers record the original request bytes and the canonical proof JSON. The marker also carries `raw-output-sha256`, `repo-format-sha256`, and `staged-blob-sha256`. The matching commit trailers are `Reviewed-Terminology-Raw-Output-SHA256`, `Reviewed-Terminology-Repo-Format-SHA256`, and `Reviewed-Terminology-Staged-Blob-SHA256`. The evidence becomes public and counts toward the existing 65,536-byte PR body limit. A joint publication also carries the usual ordinary review record. A term-bearing PR requires fresh explicit terminology input before replacement and manual merge. A joint PR also requires fresh ordinary reviewed input.
 
 ## Exact-head CI observations
 

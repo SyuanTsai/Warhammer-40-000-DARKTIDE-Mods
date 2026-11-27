@@ -17,7 +17,7 @@ from scripts.mod_update_watch.issues import GitHubError
 from scripts.mod_update_watch.registry import load_registry, positive_id
 
 from .checks import check_report
-from .reviewed import PendingSkillEvidence, load_review
+from .reviewed import PendingSkillEvidence, load_review, load_terminology_request
 from .discover import discover
 from .github import GitHub
 from .pr import current_pr, merge_check, run_git
@@ -89,6 +89,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     reviewed.add_argument("--reviewed-input", type=Path)
     reviewed.add_argument("--review-template", action="store_true")
     parser.add_argument("--terminology-key", action="append", help="one exact NONE key for --review-template")
+    parser.add_argument("--terminology-request", type=Path, help="approved exact-key terminology request JSON")
     args = parser.parse_args(argv)
     if args.terminology_key and (not args.review_template or len(args.terminology_key) != 1):
         parser.error("--terminology-key requires one selector with --review-template")
@@ -100,10 +101,12 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             raise ValueError("MOD_UPDATE_REVIEW_MODE 必須為 manual 或 auto")
         if args.command != "check-report" and (args.workflow or args.head):
             parser.error("--head and --workflow belong to check-report")
-        if args.reviewed_input or args.review_template:
+        if args.reviewed_input or args.review_template or args.terminology_request:
             if (args.command != "process" or not args.regenerate or args.route != "update"
                     or args.merge_check or mode != "manual" or args.review_template and not args.dry_run):
                 parser.error("review requires manual process --regenerate --route update; template requires --dry-run")
+        if args.terminology_request and args.review_template:
+            parser.error("--terminology-request cannot accompany --review-template")
         if args.command == "check-report":
             emit(json.dumps(check_report(github, args.head, args.workflow), ensure_ascii=True))
             return 0
@@ -163,7 +166,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             return 0
         processed = os.environ.get("GDRIVE_PROCESSED_FOLDER_ID")
         if not processed or not os.environ.get("GOOGLE_ACCESS_TOKEN"):
-            if args.reviewed_input or args.review_template:
+            if args.reviewed_input or args.review_template or args.terminology_request:
                 raise ValueError("review regeneration requires configured Drive")
             emit("警告：缺少 Drive／WIF 設定，略過此次更新")
             return 0
@@ -182,6 +185,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             regenerate=args.regenerate, review=load_review(args.reviewed_input) if args.reviewed_input else None,
             review_template_only=args.review_template,
             **({"terminology_key": args.terminology_key[0]} if args.terminology_key else {}),
+            **({"terminology_request": load_terminology_request(args.terminology_request)}
+               if args.terminology_request else {}),
         )
         if isinstance(outcome, PendingSkillEvidence):
             emit(json.dumps(asdict(outcome), ensure_ascii=True))

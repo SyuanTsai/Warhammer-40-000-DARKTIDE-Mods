@@ -37,6 +37,20 @@ class PendingSkillEvidence:
     status: str = field(default="pendingSkillEvidence", init=False)
 
 
+@dataclass(frozen=True)
+class TerminologyRequest:
+    raw: bytes
+    review: dict
+
+
+@dataclass(frozen=True)
+class TerminologyEvidence:
+    request_bytes: bytes
+    proof: dict
+    raw_output_sha256: str
+    repo_format_sha256: str | None = None
+
+
 def _has_unsafe_controls(value):
     return any(char not in "\t\r\n" and category(char) in {"Cc", "Cf", "Cs"} for char in value)
 
@@ -63,7 +77,7 @@ def review_run(root):
         shutil.rmtree(run)
 
 
-def load_review(path):
+def _read_review(path):
     def unique(pairs):
         result = dict(pairs)
         if len(result) != len(pairs):
@@ -83,7 +97,15 @@ def load_review(path):
         raise ValueError("review exceeds JSON nesting limit") from error
     if not isinstance(payload, dict):
         raise ValueError("expected reviewed JSON object")
-    return payload
+    return raw, payload
+
+
+def load_review(path):
+    return _read_review(path)[1]
+
+
+def load_terminology_request(path):
+    return TerminologyRequest(*_read_review(path))
 
 
 def _review_header(document, nexus, file, old, new):
@@ -234,6 +256,39 @@ def pending_skill_evidence(document, review, nexus, file, old, new):
                                  TERMINOLOGY_CORRECTION: {**selected, "translation": value}})
 
 
+def verify_terminology_proof(proof, request, new, context):
+    review = request.review
+    row = review[TERMINOLOGY_CORRECTION]
+    fields = ("schemaVersion", "oldSha256", "newSha256", "immutableContractSha256", "rulesSha256",
+              "glossarySha256", "reviewer", "reviewReference")
+    expected = {**{name: review[name] for name in fields},
+                **{name: row[name] for name in (*_LOCATOR_FIELDS, "action")},
+                **context, "requestSha256": hashlib.sha256(request.raw).hexdigest(), "edit": None}
+    if not isinstance(proof, dict):
+        raise ValueError("Skill did not provide terminology proof")
+    _verify_binding(proof, expected, {"edit"})
+    edit = proof["edit"]
+    edit_fields = {"unitId", "operation", "startByte", "lengthByte", "oldSha256",
+                   "replacementBase64", "replacementSha256"}
+    if (not isinstance(edit, dict) or edit.keys() != edit_fields or edit["unitId"] != row["unitId"]
+            or edit["operation"] != "TERMINOLOGY_REPLACE"):
+        raise ValueError("invalid terminology proof edit")
+    start, length = edit["startByte"], edit["lengthByte"]
+    if type(start) is not int or type(length) is not int or start < 0 or not 0 < length <= len(new) - start:
+        raise ValueError("invalid terminology proof byte range")
+    replaced = new[start:start + length]
+    if replaced != row["new"]["zhTwRaw"].encode("utf-8") or edit["oldSha256"] != hashlib.sha256(replaced).hexdigest():
+        raise ValueError("terminology proof does not match the replaced NEW span")
+    try:
+        replacement = base64.b64decode(edit["replacementBase64"], validate=True)
+        literal = replacement.decode("utf-8")
+    except (TypeError, ValueError) as error:
+        raise ValueError("invalid terminology proof replacement encoding") from error
+    if (edit["replacementSha256"] != hashlib.sha256(replacement).hexdigest()
+            or decode_lua_string(literal) != row["translation"]):
+        raise ValueError("terminology proof does not match the approved replacement")
+
+
 def apply_review(document, review, nexus, file, old, new):
     expected, eligible = _review_template(document, nexus, file, old, new)
     _verify_binding(review, expected, {"units", "reviewer", "reviewReference"})
@@ -258,13 +313,13 @@ def apply_review(document, review, nexus, file, old, new):
     return {**document, "units": [{**u, **approved.get(u["unitId"], {})} for u in document["units"]]}
 
 
-def verify_resume(seed, result):
-    """The adapter may fill previously pending units. All prior decisions stay fixed."""
+def verify_resume(seed, result, *, actor="adapter"):
+    """Only previously pending units may receive decisions."""
     for field in ("immutableContractSha256", "old", "new", "translationBinding"):
         if result.get(field) != seed[field]:
-            raise ValueError(f"adapter changed reviewed workset binding: {field}")
+            raise ValueError(f"{actor} changed reviewed workset binding: {field}")
     if len(seed["units"]) != len(result["units"]):
-        raise ValueError("adapter changed the generated unit count")
+        raise ValueError(f"{actor} changed the generated unit count")
     for before, after in zip(seed["units"], result["units"]):
         if before["action"] == "AI_REQUIRED" and before["reviewStatus"] == "pending":
             mutable = {"reviewStatus", "suggestedZhTwExpression"}
@@ -273,9 +328,16 @@ def verify_resume(seed, result):
                 continue
         elif before == after:
             continue
-        raise ValueError("adapter changed a protected workset field or prior approval")
+        raise ValueError(f"{actor} changed a protected workset field or prior approval")
+
+
+def canonical_json(value):
+    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+
+
+def byte_record(data):
+    return hashlib.sha256(data).hexdigest(), base64.b64encode(data).decode("ascii")
 
 
 def review_record(review):
-    data = json.dumps(review, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
-    return hashlib.sha256(data).hexdigest(), base64.b64encode(data).decode("ascii")
+    return byte_record(canonical_json(review))
