@@ -535,15 +535,15 @@ local localizations = {
         ["zh-tw"] = "當狙擊手進行瞄準射擊時顯示「狙擊!!」警告",
     },
     
-    arial = {en = "Arial", ["zh-tw"] = "Arial"},
-    itc_novarese_medium = {en = "Novarese Medium", ["zh-tw"] = "Novarese Medium"},
-    itc_novarese_bold = {en = "Novarese Bold", ["zh-tw"] = "Novarese Bold"},
-    proxima_nova_light = {en = "Proxima Nova Light", ["zh-tw"] = "Proxima Nova Light"},
-    proxima_nova_medium = {en = "Proxima Nova Medium", ["zh-tw"] = "Proxima Nova Medium"},
-    proxima_nova_bold = {en = "Proxima Nova Bold", ["zh-tw"] = "Proxima Nova Bold"},
-    friz_quadrata = {en = "Fritz Quadrata", ["zh-tw"] = "Fritz Quadrata"},
-    rexlia = {en = "Rexila", ["zh-tw"] = "Rexila"},
-    machine_medium = {en = "Machine Medium", ["zh-tw"] = "Machine Medium"},
+    arial = {en = "Arial"},
+    itc_novarese_medium = {en = "Novarese Medium"},
+    itc_novarese_bold = {en = "Novarese Bold"},
+    proxima_nova_light = {en = "Proxima Nova Light"},
+    proxima_nova_medium = {en = "Proxima Nova Medium"},
+    proxima_nova_bold = {en = "Proxima Nova Bold"},
+    friz_quadrata = {en = "Fritz Quadrata"},
+    rexlia = {en = "Rexila"},
+    machine_medium = {en = "Machine Medium"},
     noto_sans_sc_black = {["zh-cn"] = "Noto Sans SC Black"},
     noto_sans_sc_bold = {["zh-cn"] = "Noto Sans SC Bold"} ,    
 }
@@ -638,6 +638,7 @@ local function addLocalisation(localisations, typeName)
     }
     localisations[typeName .. "_arrow_description"] = {
         en = "Shows an indicator when the target is within a certain closer range",
+        ["zh-tw"] = "當目標進入較近範圍內時顯示指示器",
         ["zh-cn"] = "当目标进入近距离范围内时显示指示器",
     }
     localisations[typeName .. "_arrow_colour"] = {
@@ -710,19 +711,19 @@ addLocalisation(localizations, "toxbomber")
 localizations.text_warning_crusher_cleave = {
     en = "Crusher (Cleave)",
     ["zh-cn"] = "粉碎者（横扫）",
-    ["zh-tw"] = "粉碎者（橫掃）",
+    ["zh-tw"] = "碾壓者（順劈）",
     ru = "Крушитель (Рассечение)",
 }
 localizations.text_warning_trapper_net = {
     en = "Trapper (Net)",
     ["zh-cn"] = "血痂陷阱手（网）",
-    ["zh-tw"] = "陷阱手（網）",
+    ["zh-tw"] = "陷阱兵（網）",
     ru = "Ловчий (Сеть)",
 }
 localizations.text_warning_pogryn_charge = {
     en = "Plague Ogryn (Charge)",
     ["zh-cn"] = "瘟疫欧格林（冲锋）",
-    ["zh-tw"] = "瘟疫歐根（衝鋒）",
+    ["zh-tw"] = "瘟疫歐格林（衝鋒）",
     ru = "Чумной огрин (Рывок)",
 }
 localizations.text_warning_shotgun_shot = {
@@ -734,7 +735,7 @@ localizations.text_warning_shotgun_shot = {
 localizations.text_warning_hound_pounce = {
     en = "Hound (Pounce)",
     ["zh-cn"] = "猎犬（扑击）",
-    ["zh-tw"] = "獵犬（撲擊）",
+    ["zh-tw"] = "瘟疫獵犬（撲擊）",
     ru = "Гончая (Прыжок)",
 }
 localizations.text_warning_sniper_sniper = {
