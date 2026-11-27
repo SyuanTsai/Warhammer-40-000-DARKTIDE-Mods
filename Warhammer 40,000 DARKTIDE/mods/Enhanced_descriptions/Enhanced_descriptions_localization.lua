@@ -89,54 +89,20 @@ local LOCALIZATION_GROUPS = {
 	"dump_stat3",
 }
 
--- UTILITY FUNCTIONS
-local function readable(text)
-	local tokens = string.split(text, "_")
-	for i, token in ipairs(tokens) do
-		tokens[i] = string.upper(string.sub(token, 1, 1)) .. string.sub(token, 2)
-	end
-	return table.concat(tokens, " ")
-end
-
-local function add_color_localizations(localizations)
-	for _, color_name in ipairs(Color.list) do
-		local color_values = Color[color_name](255, true)
-		local text = InputUtils.apply_color_to_input_text(readable(color_name), color_values)
-		localizations[color_name] = { en = text }
-	end
-end
-
-local function add_localisation_entry(localizations, type_name)
-	localizations[type_name .. "_text_colour"] = {
-		en = "Pick color",
-		ru = "Выберите цвет",
-		fr = "Couleur", 
-		["zh-tw"] = "顏色",
-		["zh-cn"] = "颜色",
-		de = "Farbe auswählen",
-		it = "Seleziona colore",
-		ja = "色を選択",
-		ko = "색상 선택",
-		pl = "Wybierz kolor",
-		["pt-br"] = "Escolher cor",
-		es = "Elegir color",
-	}
-end
-
 local localizations = {
 	mod_name = {
-		en = "{#color(192, 255, 26)} Enhanced Descriptions{#reset()}",
-		ru = "{#color(192, 255, 26)} Улучшенные описания{#reset()}",
-		fr = "{#color(192, 255, 26)} Descriptions améliorées{#reset()}",
-		["zh-tw"] = "{#color(192, 255, 26)} 描述改善{#reset()}",
-		["zh-cn"] = "{#color(192, 255, 26)} 描述增强{#reset()}",
-		de = "{#color(192, 255, 26)} Erweiterte Beschreibungen{#reset()}",
-		it = "{#color(192, 255, 26)} Descrizioni Migliorate{#reset()}",
-		ja = "{#color(192, 255, 26)} 詳細な説明{#reset()}",
-		ko = "{#color(192, 255, 26)} 향상된 설명{#reset()}",
-		pl = "{#color(192, 255, 26)} Rozszerzone Opisy{#reset()}",
-		["pt-br"] = "{#color(192, 255, 26)} Descrições Aprimoradas{#reset()}",
-		es = "{#color(192, 255, 26)} Descripciones Mejoradas{#reset()}",
+		en = "Enhanced Descriptions",
+		ru = "Улучшенные описания",
+		fr = "Descriptions améliorées",
+		["zh-tw"] = "強化描述",
+		["zh-cn"] = "描述增强",
+		de = "Erweiterte Beschreibungen",
+		it = "Descrizioni Migliorate",
+		ja = "詳細な説明",
+		ko = "향상된 설명",
+		pl = "Rozszerzone Opisy",
+		["pt-br"] = "Descrições Aprimoradas",
+		es = "Descripciones Mejoradas",
 	},
 	mod_description = {
 		en = "Improves readability by highlighting numbers and keywords in descriptions of Talents, Blessings, Penances, Curios, and other menu texts. Also fixes localizations and adds clarity to some descriptions.",
@@ -709,29 +675,41 @@ local localizations = {
 	},
 
 --[+DUMP STATS+]--
-	dump_stat_colour = {
+	dump_stat_text_colour = {
 		en = "Dump Stats"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Mobility, Melee Damage, Warp Resistance{#reset()}",
 		ru = "Мусорные статы"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Мобильность, Урон рукопашный, Сопротивление варпу{#reset()}",
+		["zh-cn"] = "垃圾属性"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 机动性、近战伤害、亚空间抗性{#reset()}",
+		["zh-tw"] = "雜項屬性"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 移動性、近戰傷害、反噬抗性{#reset()}",
 	},
 --[+DUMP STATS 2+]--
-	dump_stat2_colour = {
+	dump_stat2_text_colour = {
 		en = "Dump Stats 2"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Ammo, Defences, Heat Management{#reset()}",
 		ru = "Мусорные статы 2"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Боеприпасы, Защита, Отведение тепла{#reset()}",
+		["zh-cn"] = "垃圾属性2"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 弹药、防御、热量管理{#reset()}",
+		["zh-tw"] = "雜項屬性 2"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 彈藥、防禦、熱能管理{#reset()}",
 	},
 --[+DUMP STATS 3+]--
-	dump_stat3_colour = {
+	dump_stat3_text_colour = {
 		en = "Dump Stats 3"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Damage{#reset()}",
 		ru = "Мусорные статы 3"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Урон {#reset()}", -- {#size(14)}(Игольный пистолет, Огнемёт и др., наносят урон со временем, на который не влияет эта стата).
+		["zh-cn"] = "垃圾属性3"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 伤害{#reset()}",
+		["zh-tw"] = "雜項屬性 3"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 傷害{#reset()}",
 	},
 
 --[+MAIN+]--
-	bleed_colour = {
+	bleed_text_colour = {
 		en = " Bleed",
 		fr = " Saignement",
 		ru = " Кровотечение",
@@ -745,7 +723,7 @@ local localizations = {
 		["pt-br"] = " Sangramento",
 		es = " Sangrado",
 	},
-	brittleness_colour = {
+	brittleness_text_colour = {
 		en = " Brittleness",
 		fr = " Fragilité",
 		ru = " Хрупкость",
@@ -759,7 +737,7 @@ local localizations = {
 		["pt-br"] = " Fragilidade",
 		es = " Fragilidad",
 	},
-	burn_colour = {
+	burn_text_colour = {
 		en = " Burn",
 		fr = " Brûlure",
 		ru = " Горение",
@@ -773,11 +751,11 @@ local localizations = {
 		["pt-br"] = " Queimadura",
 		es = " Quemadura",
 	},
-	cleave_colour = {
+	cleave_text_colour = {
 		en = " Cleave",
 		fr = " Transpercement",
 		ru = " Рассечение",
-		["zh-tw"] = " 順劈目標",
+		["zh-tw"] = " 順劈攻擊",
 		["zh-cn"] = " 劈裂",
 		de = " Spalten",
 		it = " Fendente",
@@ -787,7 +765,7 @@ local localizations = {
 		["pt-br"] = " Fender",
 		es = " Hendir",
 	},
-	coherency_colour = {
+	coherency_text_colour = {
 		en = " Coherency",
 		fr = " Cohérence",
 		ru = " Сплочённость",
@@ -801,11 +779,11 @@ local localizations = {
 		["pt-br"] = " Coerência",
 		es = " Coherencia",
 	},
-	combat_ability_colour = {
+	combat_ability_text_colour = {
 		en = " Combat Ability",
 		fr = " Capacité de combat",
 		ru = " Боевая способность",
-		["zh-tw"] = " 戰鬥能力",
+		["zh-tw"] = " 戰鬥技能",
 		["zh-cn"] = " 能力",
 		de = " Kampffähigkeit",
 		it = " Abilità di combattimento",
@@ -815,7 +793,7 @@ local localizations = {
 		["pt-br"] = " Habilidade de Combate",
 		es = " Habilidad de Combate",
 	},
-	corruption_colour = {
+	corruption_text_colour = {
 		en = " Corruption",
 		fr = " Corruption",
 		ru = " Порча",
@@ -829,11 +807,11 @@ local localizations = {
 		["pt-br"] = " Corrupção",
 		es = " Corrupción",
 	},
-	crit_colour = {
+	crit_text_colour = {
 		en = " Crit",
 		fr = " Critique",
 		ru = " Криты",
-		["zh-tw"] = " 暴擊",
+		["zh-tw"] = " 致命一擊",
 		["zh-cn"] = " 暴击",
 		de = " Kritisch",
 		it = " Critico",
@@ -843,7 +821,7 @@ local localizations = {
 		["pt-br"] = " Crítico",
 		es = " Crítico",
 	},
-	damage_colour = {
+	damage_text_colour = {
 		en = " Damage",
 		fr = " Dégât",
 		ru = " Урон",
@@ -857,7 +835,7 @@ local localizations = {
 		["pt-br"] = " Dano",
 		es = " Daño",
 	},
-	electrocuted_colour = {
+	electrocuted_text_colour = {
 		en = " Electrocuted",
 		fr = " Eclair",
 		ru = " Поражение током",
@@ -871,7 +849,7 @@ local localizations = {
 		["pt-br"] = " Electrocutado",
 		es = " Electrocutado",
 	},
-	finesse_colour = {
+	finesse_text_colour = {
 		en = " Finesse",
 		fr = " Finesse",
 		ru = " Точность",
@@ -885,11 +863,11 @@ local localizations = {
 		["pt-br"] = " Fineza",
 		es = " Sutileza",
 	},
-	health_colour = {
+	health_text_colour = {
 		en = " Health / Wound",
 		fr = " Santé / Blessure",
 		ru = " Здоровье / Рана",
-		["zh-tw"] = " 生命 / 傷痕",
+		["zh-tw"] = " 生命值／傷痕",
 		["zh-cn"] = " 生命值 / 伤口",
 		de = " Gesundheit / Wunde",
 		it = " Salute / Ferita",
@@ -899,7 +877,7 @@ local localizations = {
 		["pt-br"] = " Vida / Ferimento",
 		es = " Salud / Herida",
 	},
-	hit_mass_colour = {
+	hit_mass_text_colour = {
 		en = " Hit Mass",
 		fr = " Coup en masse",
 		ru = " Ударная масса",
@@ -913,7 +891,7 @@ local localizations = {
 		["pt-br"] = " Massa de Acerto",
 		es = " Masa de Impacto",
 	},
-	impact_colour = {
+	impact_text_colour = {
 		en = " Impact",
 		fr = " Impact",
 		ru = " Выведение из равновесия",
@@ -927,7 +905,7 @@ local localizations = {
 		["pt-br"] = " Impacto",
 		es = " Impacto",
 	},
-	peril_colour = {
+	peril_text_colour = {
 		en = " Peril",
 		fr = " Péril",
 		ru = " Опасность",
@@ -941,7 +919,7 @@ local localizations = {
 		["pt-br"] = " Perigo",
 		es = " Peligro",
 	},
-	power_colour = {
+	power_text_colour = {
 		en = " Power",
 		fr = " Puissance",
 		ru = " Сила",
@@ -955,7 +933,7 @@ local localizations = {
 		["pt-br"] = " Poder",
 		es = " Poder",
 	},
-	rending_colour = {
+	rending_text_colour = {
 		en = " Rending",
 		fr = " Déchirure",
 		ru = " Пробитие брони",
@@ -969,7 +947,7 @@ local localizations = {
 		["pt-br"] = " Dilaceração",
 		es = " Desgarro",
 	},
-	soulblaze_colour = {
+	soulblaze_text_colour = {
 		en = " Soulblaze",
 		fr = " Embrasement d'âme",
 		ru = " Горение души",
@@ -983,7 +961,7 @@ local localizations = {
 		["pt-br"] = " Chama da Alma",
 		es = " Llama de Alma",
 	},
-	stagger_colour = {
+	stagger_text_colour = {
 		en = " Stagger",
 		fr = " Vacillement",
 		ru = " Ошеломление",
@@ -997,7 +975,7 @@ local localizations = {
 		["pt-br"] = " Cambaleante",
 		es = " Tambaleo",
 	},
-	stamina_colour = {
+	stamina_text_colour = {
 		en = " Stamina",
 		fr = " Endurance",
 		ru = " Выносливость",
@@ -1011,7 +989,7 @@ local localizations = {
 		["pt-br"] = " Vigor",
 		es = " Aguante",
 	},
-	toughness_colour = {
+	toughness_text_colour = {
 		en = " Toughness",
 		fr = " Robustesse",
 		ru = " Стойкость",
@@ -1025,7 +1003,7 @@ local localizations = {
 		["pt-br"] = " Resistência",
 		es = " Dureza",
 	},
-	weakspot_colour = {
+	weakspot_text_colour = {
 		en = " Weak Spot",
 		fr = " Coup sur point faible",
 		ru = " Уязвимые места",
@@ -1041,7 +1019,7 @@ local localizations = {
 	},
 
 --[+PSYKER+]--
-	class_psyker_colour = {
+	class_psyker_text_colour = {
 		en = " Psyker",
 		fr = " Psyker",
 		ru = " Псайкер",
@@ -1055,7 +1033,7 @@ local localizations = {
 		["pt-br"] = " Psíquico",
 		es = " Psíquico",
 	},
-	precision_colour = {
+	precision_text_colour = {
 		en = " Precision",
 		fr = " Precision",
 		ru = " Точность",
@@ -1071,7 +1049,7 @@ local localizations = {
 	},
 
 --[+OGRYN+]--
-	class_ogryn_colour = {
+	class_ogryn_text_colour = {
 		en = " Ogryn",
 		fr = " Ogryn",
 		ru = " Огрин",
@@ -1085,7 +1063,7 @@ local localizations = {
 		["pt-br"] = " Ogryn",
 		es = " Ogryn",
 	},
-	fnp_colour = {
+	fnp_text_colour = {
 		en = " Feel No Pain",
 		fr = " Adieu la douleur",
 		ru = " Неболит",
@@ -1099,7 +1077,7 @@ local localizations = {
 		["pt-br"] = " Insensibilidade à Dor",
 		es = " Insensibilidad al Dolor",
 	},
-	luckyb_colour = {
+	luckyb_text_colour = {
 		en = " Lucky bullet",
 		fr = " Balles chanceuses",
 		ru = " Счастливая пуля",
@@ -1113,7 +1091,7 @@ local localizations = {
 		["pt-br"] = " Bala Sortuda",
 		es = " Bala Afortunada",
 	},
-	trample_colour = {
+	trample_text_colour = {
 		en = " Trample",
 		fr = " Piétinement",
 		ru = " Топот",
@@ -1129,7 +1107,7 @@ local localizations = {
 	},
 
 --[+ZEALOT+]--
-	class_zealot_colour = {
+	class_zealot_text_colour = {
 		en = " Zealot",
 		fr = " Zélote",
 		ru = " Изувер",
@@ -1143,7 +1121,7 @@ local localizations = {
 		["pt-br"] = " Fanático",
 		es = " Fanático",
 	},
-	fury_colour = {
+	fury_text_colour = {
 		en = " Fury",
 		fr = " Piété embrasée",
 		ru = " Ярость",
@@ -1157,7 +1135,7 @@ local localizations = {
 		["pt-br"] = " Fúria",
 		es = " Furia",
 	},
-	momentum_colour = {
+	momentum_text_colour = {
 		en = " Momentum",
 		fr = " Jugement inexorable",
 		ru = " Моментум",
@@ -1171,7 +1149,7 @@ local localizations = {
 		["pt-br"] = " Momentum",
 		es = " Impulso",
 	},
-	stealth_colour = {
+	stealth_text_colour = {
 		en = " Stealth",
 		fr = " Furtivité",
 		ru = " Скрытность",
@@ -1187,7 +1165,7 @@ local localizations = {
 	},
 
 --[+VETERAN+]--
-	class_veteran_colour = {
+	class_veteran_text_colour = {
 		en = " Veteran",
 		fr = " Vétéran",
 		ru = " Ветеран",
@@ -1201,7 +1179,7 @@ local localizations = {
 		["pt-br"] = " Veterano",
 		es = " Veterano",
 	},
-	focus_colour = {
+	focus_text_colour = {
 		en = " Focus",
 		fr = " Focalisation",
 		ru = " Концентрация",
@@ -1215,11 +1193,11 @@ local localizations = {
 		["pt-br"] = " Foco",
 		es = " Concentración",
 	},
-	focust_colour = {
+	focust_text_colour = {
 		en = " Focus Target",
 		fr = " Ciblage",
 		ru = " Важная цель",
-		["zh-tw"] = " 專注目標",
+		["zh-tw"] = " 鎖定目標",
 		["zh-cn"] = " 聚焦目标",
 		de = " Fokusziel",
 		it = " Bersaglio Prioritario",
@@ -1229,7 +1207,7 @@ local localizations = {
 		["pt-br"] = " Alvo Focal",
 		es = " Objetivo Prioritario",
 	},
-	meleespec_colour = {
+	meleespec_text_colour = {
 		en = " Melee Specialist",
 		fr = " Spécialiste en mêlée",
 		ru = " Специалист-рукопашник",
@@ -1243,7 +1221,7 @@ local localizations = {
 		["pt-br"] = " Especialista Corpo a Corpo",
 		es = " Especialista Cuerpo a Cuerpo",
 	},
-	rangedspec_colour = {
+	rangedspec_text_colour = {
 		en = " Ranged Specialist",
 		fr = " Spécialiste à distance",
 		ru = " Специалист-стрелок",
@@ -1259,11 +1237,11 @@ local localizations = {
 	},
 
 --[+ARBITRATOR+]--
-	class_arbites_colour = {
+	class_arbites_text_colour = {
 		en = " Arbitrator",
 		fr = " Arbitre",
 		ru = " Арбитратор",
-		["zh-tw"] = " 仲裁官",
+		["zh-tw"] = " 法務官",
 		["zh-cn"] = " 仲裁官",
 		de = " Schiedsrichter",
 		it = " Arbitro",
@@ -1275,37 +1253,37 @@ local localizations = {
 	},
 
 --[+HIVE SCUM+]--
-	class_scum_colour = {
+	class_scum_text_colour = {
 		en = " Hive Scum",
-		-- fr = "",
+		fr = " Racaille de la Ruche",
 		ru = " Отребье Улья",
-		-- ["zh-tw"] = "",
-		-- ["zh-cn"] = "",
-		-- de = "",
-		-- it = "",
-		-- ja = "",
-		-- ko = "",
-		-- pl = "",
-		-- ["pt-br"] = "",
-		-- es = "",
+		["zh-tw"] = " 巢都敗類",
+		["zh-cn"] = " 巢都渣滓",
+		de = " Hive-Abschaum",
+		it = " Feccia dell'alveare",
+		ja = " ハイブの屑",
+		ko = " 하이브 찌꺼기",
+		pl = " Szumowiny ulowe",
+		["pt-br"] = " Escória da Colmeia",
+		es = " Escoria de la colmena",
 	},
-	chemtox_colour = {
+	chemtox_text_colour = {
 		en = " Chem Toxin",
-		-- fr = "",
+		fr = " Toxine chimique",
 		ru = " Хим-токсин",
-		-- ["zh-tw"] = "",
-		-- ["zh-cn"] = "",
-		-- de = "",
-		-- it = "",
-		-- ja = "",
-		-- ko = "",
-		-- pl = "",
-		-- ["pt-br"] = "",
-		-- es = "",
+		["zh-tw"] = " 化學毒素",
+		["zh-cn"] = " 化学毒素",
+		de = " Chemisches Toxin",
+		it = " Tossina chimica",
+		ja = " 化学毒素",
+		ko = " 화학 독소",
+		pl = " Toksyna chemiczna",
+		["pt-br"] = " Toxina química",
+		es = " Toxina química",
 	},
 
 --[+MISC+]--
-	talents_colour = {
+	talents_text_colour = {
 		en = " Talents",
 		fr = " Talents",
 		ru = " Таланты",
@@ -1319,11 +1297,11 @@ local localizations = {
 		["pt-br"] = " Talentos",
 		es = " Talentos",
 	},
-	talents_penances_colour = {
+	talents_penances_text_colour = {
 		en = " Talents - Penances",
 		fr = " Talents - Pénitences",
 		ru = " Таланты - Искупления",
-		["zh-tw"] = " 天賦 - 苦修",
+		["zh-tw"] = " 天賦－苦修",
 		["zh-cn"] = " 天赋 - 苦修",
 		de = " Talente - Bußen",
 		it = " Talent - Penitenze",
@@ -1333,11 +1311,11 @@ local localizations = {
 		["pt-br"] = " Talentos - Penitências",
 		es = " Talentos - Penitencias",
 	},
-	numbers_colour = {
+	numbers_text_colour = {
 		en = " Numbers",
 		fr = " Nombres",
 		ru = " Числа",
-		["zh-tw"] = " 數字",
+		["zh-tw"] = " 數值",
 		["zh-cn"] = " 数字",
 		de = " Zahlen",
 		it = " Numeri",
@@ -1347,7 +1325,7 @@ local localizations = {
 		["pt-br"] = " Números",
 		es = " Números",
 	},
-	variables_colour = {
+	variables_text_colour = {
 		en = " Variables",
 		fr = " Variables",
 		ru = " Переменные",
@@ -1361,7 +1339,7 @@ local localizations = {
 		["pt-br"] = " Variáveis",
 		es = " Variables",
 	},
-	note_colour = {
+	note_text_colour = {
 		en = " Note",
 		fr = " Annotation",
 		ru = " Примечания",
@@ -1375,7 +1353,7 @@ local localizations = {
 		["pt-br"] = " Nota",
 		es = " Nota",
 	},
-	warning_colour = {
+	warning_text_colour = {
 		en = " Warning",
 		fr = " Alerte",
 		ru = " Предупреждения",
@@ -1391,7 +1369,7 @@ local localizations = {
 	},
 
 --[+DIFFICULTIES+]--
-	sedition_colour = {
+	sedition_text_colour = {
 		en = "Sedition",
 		fr = "Sédition",
 		ru = "Мятеж",
@@ -1405,7 +1383,7 @@ local localizations = {
 		["pt-br"] = "Sedição",
 		es = "Sedición",
 	},
-	uprising_colour = {
+	uprising_text_colour = {
 		en = "Uprising",
 		fr = "Soulèvement",
 		ru = "Восстание",
@@ -1419,7 +1397,7 @@ local localizations = {
 		["pt-br"] = "Revolta",
 		es = "Levantamiento",
 	},
-	malice_colour = {
+	malice_text_colour = {
 		en = "Malice",
 		fr = "Malveillance",
 		ru = "Злоба",
@@ -1433,7 +1411,7 @@ local localizations = {
 		["pt-br"] = "Maldade",
 		es = "Maldad",
 	},
-	heresy_colour = {
+	heresy_text_colour = {
 		en = "Heresy",
 		fr = "Hérésie",
 		ru = "Ересь",
@@ -1447,7 +1425,7 @@ local localizations = {
 		["pt-br"] = "Heresia",
 		es = "Herejía",
 	},
-	damnation_colour = {
+	damnation_text_colour = {
 		en = "Damnation",
 		fr = "Damnation",
 		ru = "Проклятие",
@@ -1461,11 +1439,11 @@ local localizations = {
 		["pt-br"] = "Danação",
 		es = "Condenación",
 	},
-	auric_colour = {
+	auric_text_colour = {
 		en = "Auric",
 		fr = "Aurique",
 		ru = "Золото",
-		["zh-tw"] = "奧瑞克",
+		["zh-tw"] = "奧里克",
 		["zh-cn"] = "奥瑞克",
 		de = "Aurisch",
 		it = "Aurico",
@@ -1475,15 +1453,100 @@ local localizations = {
 		["pt-br"] = "Áurico",
 		es = "Áurico",
 	},
+
+-- Presets
+	presets_group = {
+		en = "Color presets",
+		ru = "Пресеты цветов",
+		fr = "Préréglages de couleurs",
+		["zh-tw"] = "顏色預設",
+		["zh-cn"] = "颜色预设",
+		de = "Farbvoreinstellungen",
+		it = "Preimpostazioni colore",
+		ja = "カラープリセット",
+		ko = "색상 프리셋",
+		pl = "Ustawienia kolorów",
+		["pt-br"] = "Predefinições de cores",
+		es = "Ajustes predefinidos de color",
+	},
+	color_preset = {
+		en = "Color preset",
+		ru = "Пресет цветов",
+		fr = "Préréglage de couleur",
+		["zh-tw"] = "顏色預設集",
+		["zh-cn"] = "颜色预设",
+		de = "Farbvoreinstellung",
+		it = "Preimpostazione colore",
+		ja = "カラープリセット",
+		ko = "색상 프리셋",
+		pl = "Ustawienie kolorów",
+		["pt-br"] = "Predefinição de cor",
+		es = "Ajuste predefinido de color",
+	},
+	color_preset_description = {
+		en = "Apply a predefined set of colors to all keyword/stat highlights.\n" ..
+			 "• Default – returns to the original colors from mod's config.\n" ..
+			 "• Monochrome – sets everything to 'terminal_text_body' (plain text).",
+		ru = "Применить заранее заданный набор цветов для всех выделений ключевых слов/статов.\n" ..
+			 "• По умолчанию – возвращает исходные цвета из конфигурации мода.\n" ..
+			 "• Монохром – устанавливает всё в 'terminal_text_body' (простой текст).",
+		fr = "Appliquer un ensemble prédéfini de couleurs à toutes les surbrillances de mots-clés/statistiques.\n" ..
+			 "• Défaut – revient aux couleurs originales de la configuration du mod.\n" ..
+			 "• Monochrome – définit tout sur 'terminal_text_body' (texte brut).",
+		["zh-tw"] = "為所有關鍵字/數值高亮套用預設的色彩組合。\n" ..
+			 "• 預設 – 還原至模組原始設定顏色。\n" ..
+			 "• 單色 – 全部設為 'terminal_text_body'（純文字）。",
+		["zh-cn"] = "为所有关键字/数值高亮应用预设的颜色组合。\n• 默认 – 恢复为模组原始颜色。\n• 单色 – 全部设为 'terminal_text_body'（纯文本）。",
+		de = "Wenden Sie einen vordefinierten Farbsatz auf alle Hervorhebungen von Schlüsselwörtern/Statistiken an.\n" ..
+			 "• Standard – stellt die ursprünglichen Farben aus der Mod-Konfiguration wieder her.\n" ..
+			 "• Monochrom – setzt alles auf 'terminal_text_body' (reiner Text).",
+		it = "Applica un set predefinito di colori a tutte le evidenziazioni di parole chiave/statistiche.\n" ..
+			 "• Predefinito – ripristina i colori originali dalla configurazione del mod.\n" ..
+			 "• Monocromatico – imposta tutto su 'terminal_text_body' (testo semplice).",
+		ja = "すべてのキーワード/ステータスハイライトに事前定義されたカラーセットを適用します。\n" ..
+			 "• デフォルト – モッド設定から元の色に戻します。\n" ..
+			 "• モノクロ – すべてを 'terminal_text_body'（プレーンテキスト）に設定します。",
+		ko = "모든 키워드/스탯 하이라이트에 미리 정의된 색상 세트를 적용합니다.\n" ..
+			 "• 기본 – 모드 설정에서 원래 색상으로 되돌립니다.\n" ..
+			 "• 단색 – 모든 것을 'terminal_text_body'(일반 텍스트)로 설정합니다.",
+		pl = "Zastosuj predefiniowany zestaw kolorów do wszystkich wyróżnień słów kluczowych/statystyk.\n" ..
+			 "• Domyślny – przywraca oryginalne kolory z konfiguracji moda.\n" ..
+			 "• Monochromatyczny – ustawia wszystko na 'terminal_text_body' (zwykły tekst).",
+		["pt-br"] = "Aplique um conjunto predefinido de cores a todos os destaques de palavras-chave/estatísticas.\n" ..
+			 "• Padrão – retorna às cores originais da configuração do mod.\n" ..
+			 "• Monocromático – define tudo para 'terminal_text_body' (texto simples).",
+		es = "Aplicar un conjunto predefinido de colores a todos los resaltados de palabras clave/estadísticas.\n" ..
+			 "• Predeterminado – vuelve a los colores originales de la configuración del mod.\n" ..
+			 "• Monocromo – establece todo en 'terminal_text_body' (texto sin formato).",
+	},
+	color_preset_default = {
+		en = "Default",
+		ru = "По умолчанию",
+		fr = "Défaut",
+		["zh-tw"] = "預設",
+		["zh-cn"] = "默认",
+		de = "Standard",
+		it = "Predefinito",
+		ja = "デフォルト",
+		ko = "기본",
+		pl = "Domyślny",
+		["pt-br"] = "Padrão",
+		es = "Predeterminado",
+	},
+	color_preset_monochrome = {
+		en = "Monochrome (all terminal_text_body)",
+		ru = "Монохром (всё terminal_text_body)",
+		fr = "Monochrome (tout en terminal_text_body)",
+		["zh-tw"] = "單色（全部 terminal_text_body）",
+		["zh-cn"] = "单色（全部 terminal_text_body）",
+		de = "Monochrom (alles terminal_text_body)",
+		it = "Monocromatico (tutto terminal_text_body)",
+		ja = "モノクロ（すべて terminal_text_body）",
+		ko = "단색 (모두 terminal_text_body)",
+		pl = "Monochromatyczny (wszystko terminal_text_body)",
+		["pt-br"] = "Monocromático (tudo terminal_text_body)",
+		es = "Monocromo (todo terminal_text_body)",
+	},
 }
-
--- INITIALIZATION
--- Add color picker localizations for all groups
-for _, group_name in ipairs(LOCALIZATION_GROUPS) do
-	add_localisation_entry(localizations, group_name)
-end
-
--- Add color names localizations
-add_color_localizations(localizations)
 
 return localizations

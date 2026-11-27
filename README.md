@@ -301,10 +301,10 @@
 
 ### [Enhanced Descriptions](https://www.nexusmods.com/warhammer40kdarktide/mods/210)
     描述改善
-- MOD 網站最後更新日期：Last updated 18 July 2026, 2:02AM
-- MOD 版本：6.0.0b
-- MOD 檔案名稱：Enhanced Descriptions 210 6.0.0b 2026-07-17T18-02Z YFIfRFOFf.zip
-- 手動維護最後下載日期：2026-08-29
+- MOD 網站最後更新日期：Last updated 20 September 2026, 03:24AM
+- MOD 版本：6.5.0b
+- MOD 檔案名稱：Enhanced Descriptions 210 6.5.0b 2026-09-19T19-24Z EGv9eGJdA
+- 手動維護最後下載日期：2026-11-26
 - GitHub :
 - Source=>  https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA
 - Fork  =>  https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Enhanced_Descriptions

@@ -35,6 +35,110 @@ local menus_templates = {
 			-- es = "",
 		-- },
 
+-- TUTORIAL - 
+		["loc_chain_light"] = {
+			ru = "Серии атак",
+		},
+		["loc_tg_attack_chain_light"] = {
+			ru = "Повторные атаки, совершаемые в быстрой последовательности, объединяются в серию.\n"
+				.."Удары в серии отличаются по направлению и "..CKWord("урону", "uronu_rgb_ru")..".",
+		},
+		["loc_melee_chain_objective"] = {
+			ru = "Выполните серию лёгких атак",
+		},
+		["loc_tg_attack_chain_heavy"] = {
+			ru = "Тяжёлые атаки тоже можно объединять в серию.\n"
+				.."Лёгкие и тяжёлые атаки также можно комбинировать в серии атак."
+		},
+		["loc_heavy_attack"] = {
+			ru = "Тяжёлая атака",
+		},
+		["loc_melee_chain_objective_heavy"] = {
+			ru = "Выполните серию тяжёлых атак",
+		},
+		["loc_weapon_special"] = {
+			ru = "Специальные атаки оружия",
+		},
+		["loc_weapon_special_desc"] = {
+			ru = "Одно оружие может иметь мощные {#color(255,255,190)}специальные атаки{#reset()}.\n"
+				.."Другое - {#color(255,255,190)}специальные способности{#reset()}, изменяющие его следующую атаку.",
+		},
+		["loc_tg_weapon_special_powermaul_p3"] = {
+			ru = "Активация специальной атаки",
+		},
+		["loc_weapon_special_objective"] = {
+			ru = "Выполните специальную атаку",
+		},
+		["loc_pushing"] = {
+			ru = "Отталкивание",
+		},
+		["loc_pushing_desc"] = {
+			ru = "{#color(255,255,190)}Отталкивание{#reset()} может "..CKWord("ошеломить", "oshelomit_rgb_ru").." группу врагов, но тратит "..CKWord("выносливость", "vynoslivost_rgb_ru")..".",
+		},
+		["loc_block"] = {
+			ru = "Блокирование",
+		},
+		["loc_pushf"] = {
+			ru = "Отталкивание (в блоке)",
+		},
+		["loc_talent_cryptic_power_keyword"] = {
+			ru = "Ёмкость",
+		},
+		["loc_tutorial_cryptic_capacitance_desc"] = {
+			ru = "Скитарии используют "..CKWord("ёмкость", "emkost_rgb_ru").." для усиления своих способностей.\n"
+				.."При достижении "..CNumb("100%", "pc_100_rgb").."  "..CKWord("ёмкости", "emkosti_rgb_ru")..", вы получаете заряд.\n"
+				.."Вы получаете "..CKWord("ёмкость", "emkost_rgb_ru").." пассивно со временем и за убийства врагов.",
+		},
+		["loc_tutorial_cryptic_ability_desc"] = {
+			ru = "Ваша способность называется "..CKWord("Вольтаический расширитель", "VoltaicExpander_rgb_ru")..". Она поражает ближайших врагов "..CKWord("электрошоком", "elektroshokom_rgb_ru")..", "..CKWord("ошеломляет", "oshelomlaet_rgb_ru").." их и наносит "..CKWord("урон", "uron_rgb_ru")..".",
+		},
+		["loc_tutorial_cryptic_ability_charges_desc"] = {
+			ru = "У вас может быть до "..CNumb("3", "n_3_rgb").." зарядов. Ваша способность "..CKWord("Вольтаический расширитель", "VoltaicExpander_rgb_ru").." может потратить все заряды, увеличивая радиус поражения за каждый потраченный заряд.",
+		},
+		["loc_tutorial_cryptic_companion_enemy_desc"] = {
+			ru = "Вас сопровождает "..CKWord("сервочереп", "servocherep_rgb_ru")..". Вы можете приказать ему стрелять во врагов.",
+		},
+		["loc_setting_com_wheel_double_tap"] = {
+			ru = "Пометка двойным нажатием",
+		},
+		["loc_setting_com_wheel_single_tap"] = {
+			ru = "Пометка одиночным нажатием",
+		},
+		["loc_tutorial_cryptic_companion_hacking_desc"] = {
+			ru = "Вы можете также приказать своему "..CKWord("сервочерепу", "servocherepu_rgb_ru").." автоматически выполнять события взлома данных.",
+		},
+		["loc_tutorial_cryptic_companion_hacking"] = {
+			ru = "Прикажите сервочерепу взломать данные.",
+		},
+		["loc_tutorial_cryptic_companion_empower_desc"] = {
+			ru = "Вы можете временно усилить свой "..CKWord("сервочереп", "servocherep_rgb_ru")..".",
+		},
+		["loc_tutorial_cryptic_companion_empower_use"] = {
+			ru = "Усильте свой сервочереп, используя кнопку блица.",
+		},
+		["loc_training_ground_dodge_description"] = {
+			ru = "Уклонение в движении.",
+		},
+		["loc_training_ground_move_backward_description"] = {
+			ru = "Движение назад.",
+		},
+		["loc_training_ground_move_left_description"] = {
+			ru = "Движение влево.",
+		},
+		["loc_training_ground_move_right_description"] = {
+			ru = "Движение вправо.",
+		},
+		["loc_training_ground_psyker_a__dodging_tutorial_desc_a_01"] = {
+			ru = "Уклонение позволяет избежать атак дальнего и ближнего боя.",
+		},
+		["loc_toughness_damage_tutorial_desc"] = {
+			ru = "Атаки врагов сначала поражают вашу "..CKWord("стойкость", "stoikost_rgb_ru")..". Когда ваша "..CKWord("стойкость", "stoikost_rgb_ru").." пробита, они начинают поражать ваше "..CKWord("здоровье", "zdorovie_rgb_ru")..", а также их атаки начнут вас "..CKWord("ошеломлять", "oshelomlat_rgb_ru").." или даже "..CKWord("оглушать", "oglushat_rgb_ru").." на некоторое время.",
+		},
+		["loc_toughness_tutorial_desc"] = {
+			ru = "Убийство врагов в ближнем бою восполняет "..CKWord("стойкость", "stoikost_rgb_ru")..".\n"
+				.."Также "..CKWord("стойкость", "stoikost_rgb_ru").." восстанавливается, когда рядом с вами в радиусе "..CKWord("сплочённости", "splochennosti_rgb_ru").." находятся товарищи по команде.",
+		},
+
 	--[+ Plasteel +]--
 	["loc_currency_name_plasteel"] = {
 		ru = "Пласталь",
@@ -83,7 +187,7 @@ local menus_templates = {
 		["loc_contracts_task_label_kill_bosses"] = {
 			en = "Kill "..CNumb("{count:%d}", "countd_var_rgb").." Monstrosities",
 			ru = "Убить "..CNumb("{count:%d}", "countd_var_rgb").." монстров", -- Убить 4 монстров
-			["zh-tw"] = "擊殺 "..CNumb("{count:%d}", "countd_var_rgb").." 巨獸(畸形怪獸)", -- 擊殺巨獸
+			["zh-tw"] = "擊殺 "..CNumb("{count:%d}", "countd_var_rgb").." 隻巨獸", -- 擊殺 X 隻巨獸
 			["zh-cn"] = "击杀 "..CNumb("{count:%d}", "countd_var_rgb").." 个怪物", -- 击杀 X 怪物
 		},
 		--[+ Collect Х kind +]--
@@ -104,28 +208,28 @@ local menus_templates = {
 		["loc_contracts_task_label_complete_missions"] = {
 			en = "Complete "..CNumb("{count:%d}", "countd_var_rgb").." missions",
 			ru = "Завершите "..CNumb("{count:%d}", "countd_var_rgb").." миссий",
-			["zh-tw"] = "完成 "..CNumb("{count:%d}", "countd_var_rgb").." 任務", -- 完成[x]場任務
+			["zh-tw"] = "完成 "..CNumb("{count:%d}", "countd_var_rgb").." 場任務", -- 完成[x]場任務，並且無人死亡
 			["zh-cn"] = "完成 "..CNumb("{count:%d}", "countd_var_rgb").." 个任务", -- 完成 X 任务
 		},
 		--[+ Complete Х missions with no player deaths +]--
 		["loc_contracts_task_label_complete_mission_no_death"] = {
 			en = "Complete "..CNumb("{count:%d}", "countd_var_rgb").." missions with no player deaths",
 			ru = "Завершите миссии без гибели союзников: "..CNumb("{count:%d}", "countd_var_rgb"),
-			["zh-tw"] = "完成 "..CNumb("{count:%d}", "countd_var_rgb").." 任務，且無玩家死亡", -- 完成[x]場任務，並且無人死亡
+			["zh-tw"] = "完成 "..CNumb("{count:%d}", "countd_var_rgb").." 場任務，且沒有玩家死亡",
 			["zh-cn"] = "完成 "..CNumb("{count:%d}", "countd_var_rgb").." 任务且没有玩家死亡", -- 完成 X 任务且没有玩家死亡
 		},
 	--[+ Melk's Intro +]--
 	["loc_contract_view_intro_description"] = {
 		-- en = "Well? What is it you want?",
 		ru = "Ну? Чего ты хочешь?",
-		["zh-tw"] = "好吧，你想要什麼?", -- 好吧，你想要什麼?
+		["zh-tw"] = "嗯？你想要什麼？",
 		["zh-cn"] = "嗯？你有什么需要？", -- 梅尔克介绍语
 	},
 	--[+ Melk's Intro Title +]--
 	["loc_contract_view_intro_title"] = {
 		-- en = "Sire Melk's Requisitorium",
 		ru = "Мелк",
-		["zh-tw"] = "梅爾克領主", -- 梅爾克領主的必備品店
+		["zh-tw"] = "梅爾克領主的必備品店", -- 梅爾克領主的必備品店
 		-- ["zh-cn"] = "梅尔克大人的采购店", -- 梅尔克大人的采购店
 	},
 	--[+ Melk's Option For Check Contracts +]--
@@ -139,7 +243,7 @@ local menus_templates = {
 	["loc_contracts_contract_reward_label"] = {
 		-- en = "Contract completion reward:",
 		ru = "Награда за выполнение:",
-		["zh-tw"] = "獎勵", -- 獎勵
+		["zh-tw"] = "合約完成獎勵：", -- 獎勵
 		-- ["zh-cn"] = "奖励", -- 奖励
 	},
 	--[+ Task difficulty +]--
@@ -175,14 +279,14 @@ local menus_templates = {
 	["loc_contracts_view_general_goods_random_gadget_defensive"] = {
 		-- en = "Unknown Defensive Curio",
 		ru = "Неизвестная защитная реликвия",
-		["zh-tw"] = "未知的珍品", -- 未知的防禦性珍品
+		["zh-tw"] = "未知的防禦型珍品",
 		["zh-cn"] = "未知的珍品", -- 未知的珍品
 	},
 	--[+ New Contracts Notification Message +]--
 	["loc_notification_new_contract"] = {
 		-- en = "New weekly contracts are available", --???
 		-- ru = ,
-		-- ["zh-tw"] = ,
+		["zh-tw"] = "新的每週合約現已開放",
 		["zh-cn"] = "新的每周合同可用", -- 新的每周合同可用
 	},
 
@@ -191,14 +295,14 @@ local menus_templates = {
 	["loc_crafting_error_no_consecrate"] = {
 		-- en = "Max Rarity reached!",
 		ru = "Достигнут максимум редкости!",
-		["zh-tw"] = "以聖化至最高稀有度!", -- 已達最高稀有度。
+		["zh-tw"] = "已達最高稀有度！", -- 已達最高稀有度。
 		-- ["zh-cn"] = "已达到最高稀有度。",
 	},
 	--[+ Max Power reached! +]--
 	["loc_crafting_error_max_power"] = {
 		-- en = "Max Power reached!",
 		ru = "Достигнут максимум силы!",
-		["zh-tw"] = "以強化至最高等級!",  -- 已達最高升級級別。
+		["zh-tw"] = "已達最高威力！",  -- 已達最高升級級別。
 		["zh-cn"] = "已达到最高等级。",
 	},
 	--[+ Sacrifice Weapons +]--
@@ -215,13 +319,13 @@ local menus_templates = {
 	["loc_credits_vendor_view_intro_description"] = {
 		-- en = "Which of my humble services do you require?",
 		ru = "Какая из моих скромных услуг вам требуется?",
-		["zh-tw"] = "您需要我為您提供甚麼服務?", -- 您需要我為您提供甚麼服務?
+		["zh-tw"] = "您需要我提供什麼服務？", -- 您需要我為您提供甚麼服務?
 	},
 	--[+ Requisition Weapons & Curios +]--
 	["loc_credits_vendor_view_option_buy"] = {
 		en = "Requisition Weapons and Curios", -- Requisition Weapons & Curios
 		ru = "Запросы на оружие и реликвии",
-		["zh-tw"] = "購買武器和珍品", 			-- 武器&珍品申請單
+		["zh-tw"] = "購買武器與珍品", 			-- 武器&珍品申請單
 		["zh-cn"] = "武器与珍品采购店", -- 武器与珍品采购店
 	},
 	--[+ Brunt's Armoury +]--
@@ -234,7 +338,7 @@ local menus_templates = {
 	["loc_credits_goods_vendor_description_text"] = {
 		-- en = "Acquire a profane weapon of your choosing.",
 		ru = "Купите нечестивое оружие по вашему выбору.",
-		["zh-tw"] = "獲得一件你選擇的武器，只會是褻瀆級(白武)。", -- 獲得一件你選定的褻瀆武器。
+		["zh-tw"] = "取得一件自選的褻瀆級武器（白武）。", -- 獲得一件你選定的褻瀆武器。
 		["zh-cn"] = "获得一件你选择的武器（亵渎级）。",
 	},
 
@@ -250,12 +354,12 @@ local menus_templates = {
 	["loc_main_menu_warband_count"] = {
 		-- en = "Strike Team",
 		ru = "Ударная группа",
-		["zh-tw"] = "突擊小隊", -- 打擊小隊
+		["zh-tw"] = "打擊小隊", -- 打擊小隊
 	},
 	["loc_social_menu_roster_view_display_name"] = {
 		-- en = "Strike Team",
 		ru = "Ударная группа",
-		["zh-tw"] = "突擊小隊", -- 打擊小隊
+		["zh-tw"] = "打擊小隊", -- 打擊小隊
 	},
 	--[+ Previous Missions +]--
 	["loc_social_menu_roster_players_from_previous_missions"] = {
@@ -267,6 +371,7 @@ local menus_templates = {
 	["loc_broker_stimm_builder_view_display_name"] = {
 		-- en = "Stimm Lab",
 		ru = "Стим лаба", -- руоф Стимуляторы
+		["zh-tw"] = "興奮劑實驗室",
 	},
 
 
@@ -294,7 +399,7 @@ local menus_templates = {
 	["loc_havoc_reward_objective_order"] = {
 		-- en = "Complete a Havoc Assignment",
 		ru = "Выполнить задание Хавока",
-		["zh-tw"] = "完成任一場劫任務", -- 完成任一浩劫任務
+		["zh-tw"] = "完成一場浩劫任務", -- 完成任一浩劫任務
 	},
 
 --[+ ++KILLFEED++ +]--
@@ -494,7 +599,7 @@ local menus_templates = {
 	["loc_weapon_special_special_attack"] = {
 		-- en = Special Melee Attack,
 		ru = "Специальная атака",
-		["zh-tw"] = "特殊攻擊", -- 特殊功能(近戰)
+		["zh-tw"] = "特殊攻擊（近戰）", -- 特殊功能（近戰）
 	},
 
 
@@ -502,34 +607,41 @@ local menus_templates = {
 	["loc_stats_display_mobility_stat"] = { -- Mobility
 		en = CKWord("Mobility", "Mobility_rgb"),
 		ru = CKWord("Мобильность", "Mobility_rgb_ru"),
+		["zh-tw"] = CKWord("移動性", "Mobility_rgb_tw"),
 	},
 	["loc_glossary_term_melee_damage"] = { -- Melee Damage -- Ogryn's Grenadier Gauntlet
 		en = CKWord("Melee Damage", "Melee_dmg_rgb"),
 		ru = CKWord("Урон рукопашный", "Melee_dmg_rgb_ru"),
+		["zh-tw"] = CKWord("近戰傷害", "Melee_dmg_rgb_tw"), -- 近戰
 	},
 	["loc_stats_display_warp_resist_stat"] = { -- Warp Resistance -- Psyker
 		en = CKWord("Warp Resistance", "Warp_resist_rgb"),
 		ru = CKWord("Сопротивление варпу", "Warp_resist_rgb_ru"),
+		["zh-tw"] = CKWord("反噬抗性", "Warp_resist_rgb_tw"),
 	},
 
 --[+ +DUMP STATS 2+ +]--
 	["loc_stats_display_ammo_stat"] = { -- Ammo -- Ogryn's Ripper Gun
 		en = CKWord("Ammo", "Ammo_rgb"),
 		ru = CKWord("Боеприпасы", "Ammo_rgb_ru"),
+		["zh-tw"] = CKWord("彈藥", "Ammo_rgb_tw"),
 	},
 	["loc_stats_display_defense_stat"] = { -- Defences
 		en = CKWord("Defences", "Defences_rgb"),
 		ru = CKWord("Защита", "Defences_rgb_ru"),
+		["zh-tw"] = CKWord("防禦", "Defences_rgb_tw"),
 	},
 	["loc_stats_display_heat_management_powersword_2h"] = { -- Heat Management -- Zealot Relic. //Thanks RedF4llc0n
 		en = CKWord("Heat Management", "Heat_mngt_rgb"),
 		ru = CKWord("Отведение тепла", "Heat_mngt_rgb_ru"),
+		["zh-tw"] = CKWord("熱能管理", "Heat_mngt_rgb_tw"),
 	},
 
 --[+ +DUMP STATS 3+ +]--
 	["loc_stats_display_damage_stat"] = { -- Damage -- DoT guns: Needle Gun, Flamethrower, etc. This stat only affect direct damage and not DoT. //Thanks Hater
 		en = CKWord("Damage", "DamageDS_rgb"),
 		ru = CKWord("Урон", "DamageDS_rgb_ru"),
+		["zh-tw"] = CKWord("傷害", "DamageDS_rgb_tw"),
 	},
 
 
@@ -582,43 +694,43 @@ local menus_templates = {
 	["loc_wait_reason_dedicated_server"] = {
 		-- en = ,
 		ru = "Выдаём рекаф и брикеты", -- Выделенный сервер
-		["zh-tw"] = "正在載入著色器或模組包",
+		["zh-tw"] = "正在連接專用伺服器……",
 	},
 	--[+ Waiting for other player(s) +]--
 	["loc_wait_reason_other_player"] = {
 		-- en = ,
 		ru = "Шлёпаем уборщицу за вырванные кабели...", -- Ожидание других игроков -- Добавление других оперативников к сеансу связи...
-		["zh-tw"] = "正在等待其他玩家加入...",
+		["zh-tw"] = "正在等待其他玩家加入……",
 	},
 	--[+ Communicating with Fatshark backend +]--
 	["loc_wait_reason_backend"] = {
 		-- en = ,
 		ru = "Пытаемся сшить связь, потому что она порвалась...", -- Взаимодействие с бэкэндом Fatshark
-		["zh-tw"] = "正在與Fatshark伺服器進行連線... T_T",
+		["zh-tw"] = "正在與 Fatshark 後端通訊……",
 	},
 	--[+ Store +]--
 	["loc_wait_reason_store"] = {
 		-- en = ,
 		ru = "Попытка установить обновление магазина чаще, чем раз в две недели... Критический провал!", -- Магазин
-		["zh-tw"] = "正在更新商店...",
+		["zh-tw"] = "正在更新商店……",
 	},
 	--[+ Platform Steam - Платформа Steam +]--
 	["loc_wait_reason_platform_steam"] = {
 		-- en = ,
 		-- ru = "Подключение к Steam",
-		["zh-tw"] = "正在連接Steam...",
+		["zh-tw"] = "正在連接 Steam……",
 	},
 	--[+ Platform Xbox +]--
 	["loc_wait_reason_platform_xbox_live"] = {
 		-- en = ,
 		-- ru = "Подключение к Коробокс", -- Платформа Xbox
-		["zh-tw"] = "正在連接Xbox...",
+		["zh-tw"] = "正在連接 Xbox……",
 	},
 	--[+ Platform PSN +]--
 	["loc_wait_reason_platform_psn"] = {
 		-- en = ,
 		-- ru = "Подключение к ПэЭсЭн", -- Платформа PSN
-		["zh-tw"] = "正在連接PSN...",
+		["zh-tw"] = "正在連接 PSN……",
 	},
 }
 
