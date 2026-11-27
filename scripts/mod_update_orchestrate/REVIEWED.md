@@ -17,6 +17,12 @@ A replay rebuilds from the receipt and current base. Any remaining pending units
 
 After Apply, Receipt and lint pass, the publication commit records the canonical review JSON as Base64 and its SHA-256 in the `Reviewed-Translation-Base64` and `Reviewed-Translation-SHA256` trailers. The PR body carries the same record and the new `verified_head`. Retrieve the trailers with `git show -s --format=%B <verified_head>`, decode the Base64 and hash the decoded bytes. The input becomes public with the PR. An existing PR must match the Nexus/file, route, base branch, source branch and previous verified head. A changed head, mismatched PR or orphan branch requires operator reconciliation. An open reviewed PR requires fresh reviewed input to regenerate and must be merged manually.
 
+## Terminology correction for a single unchanged key
+
+Add `--terminology-key <exact-key>` once to the manual dry-run template command. The template contains an empty `units` array and a single `terminologyCorrection` object for an eligible `NONE` unit. Fill `reviewer`, `reviewReference` and `terminologyCorrection.translation`, then submit with `--reviewed-input` from the same checkout baseline. The object carries the generated `sourceId`, `containerPath`, `key`, `occurrence`, `unitId` and `action`. Its `old` and `new` snapshots each carry `sourceRaw` and `zhTwRaw` Lua literals.
+
+On validated replay, the CLI emits a JSON diagnostic with `status` set to `pendingSkillEvidence` and the bound review in `request`. This includes both original localization byte hashes, the generated immutable, rules and glossary digests, the Nexus/file identity, the selected unit and the operator's replacement and attribution. Replay uses the current `HEAD` and exits with code 1 before editing the workset, invoking the translation adapter, running Apply or Receipt, or producing a publication or `verified_head`. An authorized exact-key Skill proof is still required before any correction can be applied.
+
 ## Exact-head CI observations
 
 ```text

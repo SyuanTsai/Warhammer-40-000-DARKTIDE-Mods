@@ -27,7 +27,10 @@ from .report import (
     blocked_units, cell, plain, pr_body, prepare_term_reviews, skipped_git_note, sync_term_review_translations,
     term_review_log, term_review_title, unquoted_note,
 )
-from .reviewed import apply_review, review_run, review_template, verify_resume
+from .reviewed import (
+    TERMINOLOGY_CORRECTION, PendingSkillEvidence, apply_review, pending_skill_evidence, review_run, review_template,
+    verify_resume,
+)
 from .section import DEFAULT_SECTION, choose_section, describe
 from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
 
@@ -126,7 +129,8 @@ def _budget(github, number, nexus_id, receipt, mod, summary):
 
 def candidate(root, git, github, drive, processed, issue, number, receipt, mod, paths, archive,
               new_tree, workspace, cache, skill, base_oid, *, max_items, dry_run, emit,
-              route="update", upstream_oid=None, skipped_paths=(), review=None, review_template_only=False):
+              route="update", upstream_oid=None, skipped_paths=(), review=None, review_template_only=False,
+              terminology_key=None):
     nexus_id = receipt.nexus_id
     mod_path, _, hash_path = paths
     hash_fields = _read_hash(root / hash_path) if (root / hash_path).exists() else {}
@@ -176,8 +180,11 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
                 raise ValueError("review requires one original localization")
             binding = (nexus_id, receipt_key(receipt), originals[0], new_tree[loc.relative])
             if review_template_only:
-                emit(json.dumps(review_template(document, *binding), ensure_ascii=True))
+                template = review_template(document, *binding, terminology_key=terminology_key)
+                emit(json.dumps(template, ensure_ascii=True))
                 return None
+            if TERMINOLOGY_CORRECTION in review:
+                return pending_skill_evidence(document, review, *binding)
             document = apply_review(document, review, *binding)
             fixed_ids = {u["unitId"] for u in document["units"] if u["reviewStatus"] == "approved"}
             loc.workset.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
@@ -340,33 +347,47 @@ def restore_new(git, base_oid, paths):
 
 def process(root, git, github, drive, processed, number, nexus_id, file_id, skill, scratch, cache,
             *, max_items=None, mode="manual", dry_run=False, emit=print, route="update", regenerate=False,
-            review=None, review_template_only=False):
+            review=None, review_template_only=False, terminology_key=None):
     reviewing = review is not None or review_template_only
     if reviewing and (not regenerate or route != "update" or mode != "manual" or review_template_only and not dry_run):
         raise ValueError("review requires explicit manual update regeneration")
+    if terminology_key is not None and (not review_template_only or review is not None):
+        raise ValueError("terminology key belongs to review template generation")
+    terminology = terminology_key is not None or review is not None and TERMINOLOGY_CORRECTION in review
     if git("status", "--porcelain", "--untracked-files=all"):
         raise ValueError("編排需要乾淨的 checkout")
     for attempt in range(2):
         issue = github.issue(number)
         comments = github.comments(number)
         if unresolved_external_label(issue, comments):
+            if terminology:
+                raise ValueError(f"terminology correction blocked by an unresolved external issue label on issue {number}")
             emit("Issue 另有人工待辦，略過")
             return
         receipt = latest_receipt(comments, nexus_id)
         if not receipt or not matches_issue(issue, receipt, route) or receipt_key(receipt) != file_id:
+            if terminology:
+                raise ValueError("terminology correction requires a matching active receipt")
             emit("Issue 已關閉、收件不完整或目標已變更，略過")
             return
-        base_oid = git("rev-parse", "HEAD") if dry_run else latest(git)
-        if not dry_run and git("rev-parse", "HEAD") != base_oid:
+        read_current_head = dry_run or terminology
+        base_oid = git("rev-parse", "HEAD") if read_current_head else latest(git)
+        if not read_current_head and git("rev-parse", "HEAD") != base_oid:
             git("switch", "--detach", base_oid)
         cleanup = None
         upstream_oid = None
         try:
             mod = registry_mod(root, nexus_id)
             if (mod is None) != (route == "new"):
+                if terminology:
+                    raise ValueError(f"terminology correction requires a MOD registry entry for the update route "
+                                     f"(Nexus {nexus_id})")
                 emit("MOD 登錄已變更，略過並等候重新探索")
                 return
             if already_recorded(root, mod, receipt):
+                if terminology:
+                    raise ValueError(f"terminology correction blocked because the target archive is already recorded "
+                                     f"(Nexus {nexus_id}, file {file_id})")
                 version = recorded_version(mod, receipt)
                 emit(f"repo 紀錄已是版本 {version}，跳過。" if version else "main 已收錄相同主檔，略過")
                 return
@@ -403,7 +424,10 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                                     paths, archive, new_tree, workspace, cache, skill, base_oid,
                                     max_items=max_items, dry_run=dry_run, emit=emit,
                                     route=route, upstream_oid=upstream_oid, skipped_paths=skipped_paths,
-                                    review=review, review_template_only=review_template_only)
+                                    review=review, review_template_only=review_template_only,
+                                    **({"terminology_key": terminology_key} if terminology_key is not None else {}))
+            if isinstance(outcome, PendingSkillEvidence):
+                return outcome
             if outcome is False:
                 if route != "new":
                     restore(git, base_oid, paths)

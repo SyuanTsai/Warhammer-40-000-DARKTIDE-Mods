@@ -3,8 +3,11 @@ import json
 import os
 import tempfile
 import unittest
+from contextlib import ExitStack, nullcontext, redirect_stderr
 from copy import deepcopy
+from io import StringIO
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
 from scripts.mod_update_orchestrate.loc_layout import decode_lua_string
@@ -148,6 +151,273 @@ class ReviewTests(unittest.TestCase):
         review = {**self.template, "units": [{**self.template["units"][0], "translation": translation}]}
         approved = apply_review(document, review, 12, 34, b"old", b"new")
         self.assertEqual(decode_lua_string(approved["units"][0]["suggestedZhTwExpression"]), translation)
+
+
+class TerminologyCliTests(unittest.TestCase):
+    KEY = "staff_circle_enabled"
+    PREVIOUS = "震盪杖特效？"
+    REPLACEMENT = "虛空爆破力場法杖特效？"
+
+    def setUp(self):
+        stack = self.enterContext(ExitStack())
+        scratch = Path(stack.enter_context(tempfile.TemporaryDirectory(dir=Path.cwd())))
+        self.root = scratch / "repo"
+        skill = scratch / "mock-skill"
+        self.root.mkdir()
+        skill.mkdir()
+        stack.enter_context(patch.dict(os.environ, {
+            "RUNNER_TEMP": str(scratch), "SKILL_ROOT": str(skill), "GDRIVE_PROCESSED_FOLDER_ID": "fixture",
+            "GOOGLE_ACCESS_TOKEN": "fixture", "GITHUB_TOKEN": "fixture", "GITHUB_REPOSITORY": "example/mods",
+        }, clear=True))
+        self.input = scratch / "review.json"
+        self.args = ["process", "--issue", "7", "--nexus-id", "417", "--file-id", "9786",
+                     "--review-mode", "manual", "--regenerate"]
+        self.github = stack.enter_context(patch("scripts.mod_update_orchestrate.main.GitHub")).return_value
+        self.github.pulls.return_value = []
+        self.drive = stack.enter_context(patch("scripts.mod_update_orchestrate.main.DriveClient"))
+        self.git = stack.enter_context(patch("scripts.mod_update_orchestrate.main.run_git"))
+        self.git.side_effect = lambda root, cmd, *args: "a" * 40 if cmd == "rev-parse" else ""
+        self.emit = stack.enter_context(patch("scripts.mod_update_orchestrate.main.emit"))
+
+        def patch_process(name, **kwargs):
+            return stack.enter_context(patch(f"scripts.mod_update_orchestrate.process.{name}", **kwargs))
+
+        self.relative = "example_localization.lua"
+        text = (f'return {{ {self.KEY} = {{ en = "Trauma Staff Effect?", ["zh-tw"] = "{self.PREVIOUS}" }},\n'
+                'other = { en = "Other", ["zh-tw"] = "其他" }, pending = { en = "Start", ["zh-tw"] = "開始" } }\n')
+        self.old = patch_process("read_repo_tree", return_value={self.relative: text.encode()})
+        self.new = {self.relative: ("-- upstream\n" + text).encode()}
+        receipt = SimpleNamespace(nexus_id=417, drive_file_id="archive")
+        patch_process("latest_receipt", return_value=receipt)
+        patch_process("receipt_key", return_value=9786)
+        patch_process("matches_issue", return_value=True)
+        patch_process("unresolved_external_label", return_value=False)
+        patch_process("registry_mod", return_value=SimpleNamespace(directory="Example", hash_file=None))
+        patch_process("already_recorded", return_value=False)
+        patch_process("download", return_value=scratch / "archive")
+        patch_process("locate_mod", return_value=scratch / "extracted")
+        patch_process("read_tree", side_effect=lambda path, **kwargs: self.new if path.name == "extracted" else {})
+        patch_process("find_base", return_value=None)
+        patch_process("merge_tree", return_value=({}, []))
+        patch_process("log_stage", side_effect=lambda name: nullcontext())
+        self.loc = patch_process("Localization").return_value
+        self.loc.relative = self.relative
+        self.unit = self.unchanged_unit(self.KEY, "Trauma Staff Effect?", self.PREVIOUS)
+        self.other = self.unchanged_unit("other", "Other", "其他")
+        self.ai = {**self.unchanged_unit("pending", "Start", "開始"), "action": "AI_REQUIRED",
+                   "changeType": "modified", "reviewStatus": "pending"}
+        self.document = {
+            "old": {"sha256": hashlib.sha256(self.old.return_value[self.relative]).hexdigest()},
+            "new": {"sha256": hashlib.sha256(self.new[self.relative]).hexdigest()},
+            "immutableContractSha256": "a" * 64,
+            "translationBinding": {"rulesSha256": "b" * 64, "glossarySha256": "c" * 64},
+            "units": [self.unit, self.other, self.ai],
+        }
+        self.loc.generate.return_value = self.document
+        self.after_review = [patch_process(name) for name in ("prepare_term_reviews", "install_tree", "publish",
+                                                               "restore", "lint_changes")]
+
+    def unchanged_unit(self, key, source, previous):
+        locator = {"sourceId": "nexus-417", "containerPath": "$", "key": key, "occurrence": 1,
+                   "unitId": f"nexus-417 :: $ :: {key} :: 1"}
+        entry = {**locator, "blockedReason": None, "sourceExpression": {"raw": f'"{source}"'},
+                 "zhTwExpression": {"raw": f'"{previous}"'}}
+        return {**locator, "action": "NONE", "changeType": "unchanged", "reviewStatus": "not-required",
+                "suggestedZhTwExpression": None, "blockedReason": None, "old": entry, "new": deepcopy(entry)}
+
+    def run_cli(self, *args):
+        self.emit.reset_mock()
+        self.git.reset_mock()
+        self.stderr = StringIO()
+        with redirect_stderr(self.stderr):
+            return main([*self.args, *args], root=self.root)
+
+    def assert_stopped_before_changes(self):
+        for operation in (self.loc.workset.write_text, self.loc.translate, self.loc.apply, *self.after_review):
+            operation.assert_not_called()
+        for operation in (self.github.write_pr, self.github.merge_pr, self.github.needs_human, self.github.resolve):
+            operation.assert_not_called()
+        self.assertTrue(all(call.args[1] in {"status", "rev-parse"} for call in self.git.call_args_list))
+        self.assertEqual(list(self.root.iterdir()), [])
+
+    # Scenario: A caller supplies a selector outside template mode or supplies multiple selectors.
+    # Purpose: Scope selection to a single explicit template invocation.
+    def test_UnitT10_cli_rejects_selectors_outside_single_template(self):
+        for options in (("--terminology-key", self.KEY),
+                        ("--reviewed-input", str(self.input), "--terminology-key", self.KEY),
+                        ("--dry-run", "--review-template", "--terminology-key", self.KEY,
+                         "--terminology-key", self.KEY)):
+            with self.subTest(options=options), self.assertRaises(SystemExit) as error:
+                self.run_cli(*options)
+            self.assertEqual(error.exception.code, 2)
+            self.assertIn("--terminology-key requires one selector with --review-template", self.stderr.getvalue())
+            self.loc.generate.assert_not_called()
+            self.git.assert_not_called()
+
+    # Scenario: An external label, missing registry entry, or recorded archive blocks the update.
+    # Purpose: Require an error for both explicit terminology modes and preserve ordinary skips.
+    def test_UnitT15_terminology_fails_closed_at_ordinary_skip_guards(self):
+        terminology = self.approved_request()
+        self.assertEqual(self.run_cli("--dry-run", "--review-template"), 0)
+        ordinary = json.loads(self.emit.call_args.args[0])
+        ordinary.update(reviewer="operator-1", reviewReference="sha256:" + "d" * 64)
+        ordinary["units"][0]["translation"] = "現在開始"
+        module = "scripts.mod_update_orchestrate.process."
+        guards = (
+            ("unresolved_external_label", True, "unresolved external issue label", "Issue 另有人工待辦，略過"),
+            ("registry_mod", None, "MOD registry entry for the update route", "MOD 登錄已變更，略過並等候重新探索"),
+            ("already_recorded", True, "target archive is already recorded", "main 已收錄相同主檔，略過"),
+        )
+        with patch(module + "candidate") as candidate, patch(module + "recorded_version", return_value=None):
+            for guard, value, diagnostic, skip in guards:
+                with self.subTest(guard=guard), patch(module + guard, return_value=value):
+                    self.input.write_text(json.dumps(terminology), encoding="utf-8")
+                    for options in (("--dry-run", "--review-template", "--terminology-key", self.KEY),
+                                    ("--reviewed-input", str(self.input))):
+                        with self.subTest(options=options):
+                            self.assertEqual(self.run_cli(*options), 1)
+                            self.assertIn(diagnostic, self.stderr.getvalue())
+                            self.emit.assert_not_called()
+                            candidate.assert_not_called()
+                            self.assert_stopped_before_changes()
+                    self.assertEqual(self.run_cli("--dry-run"), 0)
+                    self.emit.assert_called_once_with(skip)
+                    self.assertEqual(self.replay(ordinary, "--dry-run"), 0)
+                    self.emit.assert_called_once_with(skip)
+                    candidate.assert_not_called()
+                    self.assert_stopped_before_changes()
+
+    # Scenario: Ordinary preview sees NONE and pending AI units. A second preview selects exactly one NONE key.
+    # Purpose: Expose approved, bound evidence for that key while stopping every downstream stage.
+    def test_UnitT20_cli_returns_exact_pending_evidence_without_writes(self):
+        self.assertEqual(self.run_cli("--dry-run", "--review-template"), 0)
+        ordinary = json.loads(self.emit.call_args.args[0])
+        self.assertNotIn("terminologyCorrection", ordinary)
+        self.assertEqual([row["key"] for row in ordinary["units"]], ["pending"])
+
+        before = deepcopy(self.document)
+        review = self.approved_request()
+        self.assertEqual(review["units"], [])
+        row = review["terminologyCorrection"]
+        for field in ("sourceId", "containerPath", "key", "occurrence", "unitId"):
+            self.assertEqual(row[field], self.unit[field])
+        self.assertEqual(row["action"], "NONE")
+        for side in ("old", "new"):
+            self.assertEqual(row[side], {"sourceRaw": '"Trauma Staff Effect?"', "zhTwRaw": f'"{self.PREVIOUS}"'})
+        self.assertEqual(self.replay(review), 1)
+        self.assertEqual(self.stderr.getvalue(), "")
+        result = json.loads(self.emit.call_args.args[0])
+        self.assertEqual(result, {"status": "pendingSkillEvidence", "request": review})
+        self.assertEqual((review["nexusId"], review["fileId"]), (417, 9786))
+        for side in ("old", "new"):
+            self.assertEqual(review[f"{side}Sha256"], self.document[side]["sha256"])
+        self.assertEqual(review["immutableContractSha256"], before["immutableContractSha256"])
+        self.assertEqual(self.document, before)
+        self.assert_stopped_before_changes()
+
+    def approved_request(self):
+        self.assertEqual(self.run_cli("--dry-run", "--review-template", "--terminology-key", self.KEY), 0,
+                         self.stderr.getvalue())
+        review = json.loads(self.emit.call_args.args[0])
+        review.update(reviewer="operator-1", reviewReference="sha256:" + "d" * 64)
+        review["terminologyCorrection"]["translation"] = self.REPLACEMENT
+        return review
+
+    def replay(self, review, *args):
+        self.input.write_text(json.dumps(review), encoding="utf-8")
+        return self.run_cli("--reviewed-input", str(self.input), *args)
+
+    # Scenario: The operator asks for a wildcard, a differently cased key, or an ordinary AI unit.
+    # Purpose: Require one exact eligible NONE key even on preview.
+    def test_UnitT30_cli_preview_rejects_inexact_or_ineligible_keys(self):
+        for key in ("*", self.KEY.upper(), "pending", ""):
+            with self.subTest(key=key):
+                self.assertEqual(self.run_cli("--dry-run", "--review-template", "--terminology-key", key), 1)
+                self.emit.assert_not_called()
+                self.assert_stopped_before_changes()
+
+    # Scenario: A replay edits identity, snapshots, attribution, translation, or protected request fields.
+    # Purpose: Reject stale and forged input and require a concrete change to the prior literal.
+    def test_UnitT40_cli_replay_rejects_mismatched_or_unsafe_input(self):
+        review = self.approved_request()
+        row = review["terminologyCorrection"]
+        cases = [{**review, **patch} for patch in (
+            {"oldSha256": "f" * 64}, {"newSha256": "f" * 64}, {"immutableContractSha256": "f" * 64},
+            {"rulesSha256": "f" * 64}, {"glossarySha256": "f" * 64}, {"nexusId": 418}, {"fileId": 9787},
+            {"reviewer": ""}, {"reviewReference": "approved"}, {"units": [{"unitId": "pending-unit"}]},
+            {"proof": "untrusted"}, {"terminologyCorrection": [row, row]},
+        )] + [{**review, "terminologyCorrection": {**row, **patch}} for patch in (
+            {"key": "other"}, {"unitId": self.other["unitId"]}, {"action": "AI_REQUIRED"}, {"occurrence": True},
+            {"containerPath": "$.different"}, {"old": {**row["old"], "sourceRaw": '"Different"'}},
+            {"new": {**row["new"], "zhTwRaw": '"不同"'}}, {"translation": self.PREVIOUS}, {"translation": " "},
+            {"translation": "unsafe\x00"}, {"translation": "%d"}, {"translation": "extra\nline"},
+        )]
+        for index, changed in enumerate(cases):
+            with self.subTest(index=index):
+                self.assertEqual(self.replay(changed), 1)
+                self.assertIn("ValueError", self.stderr.getvalue())
+                self.emit.assert_not_called()
+                self.assert_stopped_before_changes()
+
+        self.loc.generate.reset_mock()
+        self.assertEqual(self.replay(review, "--file-id", "9787"), 1)
+        self.assertIn("matching active receipt", self.stderr.getvalue())
+        self.loc.generate.assert_not_called()
+        self.assert_stopped_before_changes()
+
+    # Scenario: Original OLD or NEW bytes change, or the regenerated unit no longer matches the selector.
+    # Purpose: Require actual source hashes and an unambiguous, unchanged generated literal on both sides.
+    def test_UnitT50_cli_replay_rejects_stale_bytes_and_ineligible_workset(self):
+        review = self.approved_request()
+        for side, tree in (("old", self.old.return_value), ("new", self.new)):
+            with self.subTest(side=side), patch.dict(tree, {self.relative: b"stale bytes"}):
+                self.assertEqual(self.replay(review), 1)
+                self.assertIn(f"generated {side} localization does not match source bytes", self.stderr.getvalue())
+                self.emit.assert_not_called()
+                self.assert_stopped_before_changes()
+
+        empty_zh_tw = {side: {**self.unit[side], "zhTwExpression": {"raw": '""'}} for side in ("old", "new")}
+        changes = (
+            {"action": "AI_REQUIRED"}, {"changeType": "modified"}, {"reviewStatus": "approved"},
+            {"suggestedZhTwExpression": '"prefilled"'}, {"blockedReason": "blocked"}, {"occurrence": 0},
+            {"old": {**self.unit["old"], "key": "other"}},
+            {"old": {**self.unit["old"], "sourceExpression": {"raw": '"Trauma " .. staff'}}},
+            {"new": {**self.unit["new"], "zhTwExpression": {"raw": "localized()"}}},
+            {"new": {**self.unit["new"], "sourceExpression": {"raw": '"Trauma Staff Effects?"'}}},
+            empty_zh_tw,
+            {"new": {**self.unit["new"], "zhTwExpression": {"raw": '"不同"'}}},
+        )
+        units = self.document["units"]
+        invalid_units = [[{**self.unit, **change}, *units[1:]] for change in changes]
+        invalid_units.extend(([*units, {**self.unit, "unitId": "duplicate"}],
+                              [*units, {**self.unit, "key": "duplicate"}]))
+        for index, changed in enumerate(invalid_units):
+            with self.subTest(index=index), patch.dict(self.document, {"units": changed}):
+                self.assertEqual(self.replay(review), 1)
+                self.assertIn("ValueError", self.stderr.getvalue())
+                self.emit.assert_not_called()
+                self.assert_stopped_before_changes()
+
+    # Scenario: A default review approves one AI unit while another remains pending during a dry-run replay.
+    # Purpose: Preserve approval writes to staging and the existing estimate-only adapter path for ordinary reviews.
+    def test_UnitT60_ordinary_review_replay_uses_existing_pending_ai_flow(self):
+        more = {**self.ai, "key": "another", "unitId": "another-unit"}
+        self.document["units"].append(more)
+        self.assertEqual(self.run_cli("--dry-run", "--review-template"), 0)
+        review = json.loads(self.emit.call_args.args[0])
+        review.update(reviewer="operator-1", reviewReference="sha256:" + "d" * 64)
+        review["units"] = [{**review["units"][0], "translation": "現在開始"}]
+        self.loc.translate.side_effect = lambda doc, **kwargs: (0, {"apiItemCount": 1}, doc)
+        self.after_review[0].side_effect = lambda doc, summary: (doc, summary, [])
+
+        self.assertEqual(self.replay(review, "--dry-run"), 0, self.stderr.getvalue())
+        self.loc.workset.write_text.assert_called_once()
+        staged = json.loads(self.loc.workset.write_text.call_args.args[0])
+        self.loc.translate.assert_called_once_with(staged, max_items=None, dry_run=True)
+        self.assertEqual(staged["units"], [self.unit, self.other, {**self.ai, "reviewStatus": "approved",
+                                                                  "suggestedZhTwExpression": '"現在開始"'}, more])
+        self.loc.apply.assert_not_called()
+        self.assertIn("翻譯預覽", self.emit.call_args.args[0])
 
 
 class PublicationTests(unittest.TestCase):

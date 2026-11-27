@@ -7,6 +7,7 @@ import re
 import sys
 import tempfile
 import traceback
+from dataclasses import asdict
 from functools import cache as memoize, partial
 from html import escape
 from pathlib import Path
@@ -16,7 +17,7 @@ from scripts.mod_update_watch.issues import GitHubError
 from scripts.mod_update_watch.registry import load_registry, positive_id
 
 from .checks import check_report
-from .reviewed import load_review
+from .reviewed import PendingSkillEvidence, load_review
 from .discover import discover
 from .github import GitHub
 from .pr import current_pr, merge_check, run_git
@@ -87,7 +88,10 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     reviewed = parser.add_mutually_exclusive_group()
     reviewed.add_argument("--reviewed-input", type=Path)
     reviewed.add_argument("--review-template", action="store_true")
+    parser.add_argument("--terminology-key", action="append", help="one exact NONE key for --review-template")
     args = parser.parse_args(argv)
+    if args.terminology_key and (not args.review_template or len(args.terminology_key) != 1):
+        parser.error("--terminology-key requires one selector with --review-template")
 
     try:
         github = GitHub(github_transport)
@@ -171,11 +175,17 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
                      scratch / f"darktide-translate-{args.nexus_id}").resolve()
         if any(path.is_relative_to(root) or path.is_relative_to(skill) for path in (scratch, cache)):
             raise ValueError("暫存與快取目錄須位於兩個 checkout 之外")
-        process(root, git, github, DriveClient(drive_transport), processed,
-                args.issue, args.nexus_id, identity, skill, scratch, cache,
-                max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit, route=args.route,
-                regenerate=args.regenerate, review=load_review(args.reviewed_input) if args.reviewed_input else None,
-                review_template_only=args.review_template)
+        outcome = process(
+            root, git, github, DriveClient(drive_transport), processed,
+            args.issue, args.nexus_id, identity, skill, scratch, cache,
+            max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit, route=args.route,
+            regenerate=args.regenerate, review=load_review(args.reviewed_input) if args.reviewed_input else None,
+            review_template_only=args.review_template,
+            **({"terminology_key": args.terminology_key[0]} if args.terminology_key else {}),
+        )
+        if isinstance(outcome, PendingSkillEvidence):
+            emit(json.dumps(asdict(outcome), ensure_ascii=True))
+            return 1
         return 0
     except (GitHubError, DriveError, RuntimeError) as error:
         emit(str(error))
