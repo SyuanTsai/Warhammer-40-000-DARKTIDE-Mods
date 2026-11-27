@@ -1,3 +1,4 @@
+
 -- File: uptime/scripts/mods/uptime/tracking/uptime_loadout_tracking.lua
 local mod = get_mod("uptime")
 if not mod then
@@ -174,7 +175,10 @@ local function get_weapon_data(profile, slot_name)
         end
     end
 
-    local weapon_icon = icon or "content/ui/materials/icons/weapons/hud/combat_blade_01"
+    -- Weapon passes use a UI material, not a raw UI texture.
+    local weapon_icon = type(icon) == "string"
+        and string.sub(icon, 1, 21) == "content/ui/materials/"
+        and icon or "content/ui/materials/icons/weapons/hud/combat_blade_01"
 
     if mod.packages and type(mod.packages.load_resource) == "function" then
         mod.packages.load_resource(weapon_icon)
@@ -404,3 +408,5 @@ function mod:capture_team_loadouts()
 
     return current_team_loadouts
 end
+
+

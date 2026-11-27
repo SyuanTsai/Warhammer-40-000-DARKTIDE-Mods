@@ -1,3 +1,4 @@
+
 -- File: uptime/scripts/mods/uptime/view/uptime_tactical_overlay.lua
 local mod = get_mod("uptime"); if not mod then return end
 
@@ -484,6 +485,11 @@ local function create_player_card_definition(card_index)
             value_id = icon_id,
             style_id = icon_id,
             value = "content/ui/materials/frames/talents/talent_icon_container",
+            visibility_function = function(content, style)
+                local material_values = style.material_values
+                local icon = material_values and material_values.icon
+                return type(icon) == "string" and icon ~= ""
+            end,
             style = {
                 size = { TALENT_ICON_SIZE, TALENT_ICON_SIZE },
                 offset = { x, talent_y, 30 },
@@ -513,6 +519,13 @@ local function create_player_card_definition(card_index)
             value_id = weapon_id,
             style_id = weapon_id,
             value = "",
+            -- Alpha zero is not sufficient: drawing an empty material name can
+            -- still ask the renderer to load a non-existent material.
+            visibility_function = function(content)
+                local icon = content[weapon_id]
+                return type(icon) == "string"
+                    and string.sub(icon, 1, 21) == "content/ui/materials/"
+            end,
             style = {
                 size = { WEAPON_WIDTH, WEAPON_HEIGHT },
                 offset = { x, weapon_y, 30 },
@@ -635,8 +648,10 @@ local function update_weapon_icons(widget, weapons)
         local weapon_data = weapons and weapons[i]
         local icon = weapon_data and weapon_data.icon or ""
 
-        widget.content["weapon_icon_" .. i] = icon or ""
-        set_texture_alpha(widget, "weapon_icon_" .. i, icon ~= "" and 255 or 0)
+        local valid_icon = type(icon) == "string"
+            and string.sub(icon, 1, 21) == "content/ui/materials/"
+        widget.content["weapon_icon_" .. i] = valid_icon and icon or ""
+        set_texture_alpha(widget, "weapon_icon_" .. i, valid_icon and 255 or 0)
     end
 end
 
@@ -869,3 +884,5 @@ mod:hook(CLASS.EndView, "_setup_spawn_slots", function(func, self, players, ...)
 end)
 
 return true
+
+

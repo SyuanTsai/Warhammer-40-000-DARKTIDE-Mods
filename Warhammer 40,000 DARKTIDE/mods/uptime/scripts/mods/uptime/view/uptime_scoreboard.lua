@@ -1,3 +1,4 @@
+
 -- File: uptime/scripts/mods/uptime/view/uptime_scoreboard.lua
 local mod = get_mod("uptime"); if not mod then return end
 
@@ -134,7 +135,7 @@ local function create_loadout_talents_row(view, id, icons, width)
         local icon_data = icons and icons[i]
         local icon_texture = icon_data and icon_data.icon or ""
 
-        if icon_texture ~= "" then
+        if type(icon_texture) == "string" and icon_texture ~= "" then
             local gradient_map = icon_data and icon_data.gradient_map or "content/ui/textures/color_ramps/talent_default"
             local category = icon_data and icon_data.category or "Ability"
             local meta = CATEGORY_METADATA[category] or CATEGORY_METADATA.Ability
@@ -213,7 +214,8 @@ local function create_loadout_weapons_row(view, id, weapons, width)
     if weapons then
         for i = 1, weapon_count do
             local w_data = weapons[i]
-            if w_data and w_data.icon and w_data.icon ~= "" then
+            if w_data and type(w_data.icon) == "string"
+                and string_sub(w_data.icon, 1, 21) == "content/ui/materials/" then
                 local w_icon_style_id = "weapon_icon_" .. i
                 local w_hotspot_id = "weapon_icon_hotspot_" .. i
                 local w_offset = { start_weapon_x + (i - 1) * (weapon_width + weapon_spacing), weapon_y, 260 }
@@ -385,3 +387,5 @@ local function get_scoreboard_widgets(uptime_view, damage_data, width)
 end
 
 return get_scoreboard_widgets
+
+

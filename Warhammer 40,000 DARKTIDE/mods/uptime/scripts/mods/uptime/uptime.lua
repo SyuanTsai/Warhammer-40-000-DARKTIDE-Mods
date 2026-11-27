@@ -12,7 +12,7 @@
 --]]
 
 local mod = get_mod("uptime"); if not mod then return end
-mod.version = "Uptime2 v2.15"
+mod.version = "Uptime2 v2.16"
 
 local view_name = "uptime_view"
 
