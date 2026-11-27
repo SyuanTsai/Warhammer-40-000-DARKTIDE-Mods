@@ -342,10 +342,10 @@
 
 ### [Character Screen Contracts (aka Better Melk)](https://www.nexusmods.com/warhammer40kdarktide/mods/71)
     角色大廳快速顯示週任進度
-- MOD 網站最後更新日期：Last updated 22 July 2025, 2:15PM
-- MOD 版本：1.11
-- MOD 檔案名稱：BetterMelk-71-1-13-1753164937
-- 手動維護最後下載日期：2025-07-23
+- MOD 網站最後更新日期：Last updated 24 August 2026, 05:04AM
+- MOD 版本：1.14
+- MOD 檔案名稱：BetterMelk 71 1.14 2026-08-23T21-04Z DEJ2kEWse
+- 手動維護最後下載日期：2026-11-26
 
 ### [Chat Block](https://www.nexusmods.com/warhammer40kdarktide/mods/68)
     2對話時自動防禦
