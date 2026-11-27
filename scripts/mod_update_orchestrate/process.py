@@ -23,7 +23,7 @@ from .merge import change_summary, merge_tree, private_changes
 from .pr import branch_for, current_pr, publish, stage_raw, sync_term_review, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
 from .report import (
-    blocked_units, cell, plain, pr_body, prepare_term_reviews, sync_term_review_translations,
+    blocked_units, cell, plain, pr_body, prepare_term_reviews, skipped_git_note, sync_term_review_translations,
     term_review_log, term_review_title, unquoted_note,
 )
 from .section import DEFAULT_SECTION, choose_section, describe
@@ -70,7 +70,7 @@ def new_mod(root, issue, receipt, directory, tree):
     return TrackedMod(receipt.nexus_id, plain(name), directory, "hash", None, None, None, None, None)
 
 
-def download(drive, receipt, workspace):
+def download(drive, receipt, workspace, *, skipped_paths=None):
     path = workspace / "new-archive"
     with log_stage("下載"):
         drive.download(receipt.drive_file_id, path, DEFAULT_LIMITS.max_archive_bytes)
@@ -80,7 +80,7 @@ def download(drive, receipt, workspace):
             raise NeedsHuman("archive", "下載檔案 SHA-256 與收件標記不符")
     with log_stage("解壓"):
         try:
-            extract(path, workspace / "new")
+            extract(path, workspace / "new", skipped_paths=skipped_paths)
         except ArchiveError as error:
             raise NeedsHuman("archive", f"解壓拒絕（{type(error).__name__}）：{error}") from None
     return path
@@ -124,7 +124,7 @@ def _budget(github, number, nexus_id, receipt, mod, summary):
 
 def candidate(root, git, github, drive, processed, issue, number, receipt, mod, paths, archive,
               new_tree, workspace, cache, skill, base_oid, *, max_items, dry_run, emit,
-              route="update", upstream_oid=None):
+              route="update", upstream_oid=None, skipped_paths=()):
     nexus_id = receipt.nexus_id
     mod_path, _, hash_path = paths
     hash_fields = _read_hash(root / hash_path) if (root / hash_path).exists() else {}
@@ -267,6 +267,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         code_changes.append((loc.relative, layout_note))
     if unquoted_keys:
         code_changes.append((loc.relative, unquoted_note(unquoted_keys)))
+    if skipped_paths:
+        code_changes.append(("上游封存", skipped_git_note(skipped_paths)))
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
                    private_files=private_files, private_recorded=private_recorded, term_reviews=reviews,
@@ -347,7 +349,8 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 return
             with tempfile.TemporaryDirectory(dir=scratch, prefix=f"mod-{nexus_id}-") as work:
                 workspace = Path(work)
-                archive = download(drive, receipt, workspace)
+                skipped_paths = []
+                archive = download(drive, receipt, workspace, skipped_paths=skipped_paths)
                 extracted = locate_mod(workspace / "new", mod.directory if mod else None)
                 new_tree = read_tree(extracted, include_localization=True)
                 if route == "new":
@@ -364,7 +367,7 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 outcome = candidate(root, git, github, drive, processed, issue, number, receipt, mod,
                                     paths, archive, new_tree, workspace, cache, skill, base_oid,
                                     max_items=max_items, dry_run=dry_run, emit=emit,
-                                    route=route, upstream_oid=upstream_oid)
+                                    route=route, upstream_oid=upstream_oid, skipped_paths=skipped_paths)
             if outcome is False:
                 if route != "new":
                     restore(git, base_oid, paths)

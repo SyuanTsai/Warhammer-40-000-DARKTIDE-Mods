@@ -1,6 +1,9 @@
+import hashlib
 import os
 import tempfile
 import unittest
+import zipfile
+from dataclasses import replace
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock, call, patch
@@ -89,7 +92,7 @@ class ExecutionTests(unittest.TestCase):
         self.loc.apply.assert_not_called()
         self.assertFalse(self.github.mock_calls)
 
-    def run_update(self, *, dry_run=False, mode="manual"):
+    def run_update(self, *, dry_run=False, mode="manual", git_metadata=()):
         self.loc.relative = "Example_localization.lua"
         self.loc.apply.return_value = (b"return {}\n", [])
         self.github.write_pr.return_value = {
@@ -101,6 +104,15 @@ class ExecutionTests(unittest.TestCase):
         }.get(command, "")
         values = {"filename": "new.zip", "nexus_last_updated": "2026-11-25T00:00:00Z",
                   "version": "2", "downloaded": "2026-11-25", "acquisition_method": "drive-intake"}
+        archive_path = self.scratch / "test.zip"
+        with zipfile.ZipFile(archive_path, "w") as archive:
+            archive.writestr("Example/Example.mod", "ok")
+            for path in git_metadata:
+                archive.writestr(path, "metadata")
+        data = archive_path.read_bytes()
+        receipt = replace(RECEIPT, md5=hashlib.md5(data).hexdigest())
+        drive = Mock()
+        drive.download.side_effect = lambda file_id, dest, limit: dest.write_bytes(data)
         skill = self.scratch / "skill"
         skill.mkdir(exist_ok=True)
         env = {"SKILL_ROOT": str(skill), "RUNNER_TEMP": str(self.scratch), "MOD_UPDATE_CACHE_DIR": "",
@@ -108,18 +120,15 @@ class ExecutionTests(unittest.TestCase):
         with (patch.dict(os.environ, env),
               patch("scripts.mod_update_orchestrate.main.run_git", side_effect=lambda _, *args: self.git(*args)),
               patch("scripts.mod_update_orchestrate.main.GitHub", return_value=self.github),
-              patch("scripts.mod_update_orchestrate.main.DriveClient"),
+              patch("scripts.mod_update_orchestrate.main.DriveClient", return_value=drive),
               patch("scripts.mod_update_orchestrate.main.emit", self.emit),
-              patch("scripts.mod_update_orchestrate.process.latest_receipt", return_value=RECEIPT),
+              patch("scripts.mod_update_orchestrate.process.latest_receipt", return_value=receipt),
               patch("scripts.mod_update_orchestrate.process.registry_mod", return_value=self.mod),
-              patch("scripts.mod_update_orchestrate.process.download", return_value=self.scratch / "archive"),
-              patch("scripts.mod_update_orchestrate.process.locate_mod", return_value=self.root / MOD),
               patch("scripts.mod_update_orchestrate.process.folder_id", return_value=None),
               patch("scripts.mod_update_orchestrate.process.matches_issue", return_value=True),
               patch("scripts.mod_update_orchestrate.process.updates", return_value=values),
               patch("scripts.mod_update_orchestrate.process.update_readme"),
               patch("scripts.mod_update_orchestrate.process.stage_raw"),
-              patch("scripts.mod_update_orchestrate.process.validate_git"),
               patch("scripts.mod_update_orchestrate.process.lint_changes")):
             args = ["process", "--nexus-id", "123", "--issue", "7", "--file-id", "9001", "--review-mode", mode]
             return main([*args, "--dry-run"] if dry_run else args, root=self.root)
@@ -129,6 +138,20 @@ class ExecutionTests(unittest.TestCase):
         self.loc.translate.return_value = (0, {}, READY)
         self.assertEqual(self.run_update(), 0)
         self.assertIn("未知 → 2", self.github.write_pr.call_args.args[2])
+        self.assertNotIn("封存中的 .git 目錄已略過", self.github.write_pr.call_args.args[3])
+
+    def test_git_metadata_is_skipped_and_reported_in_pr(self):
+        self.loc.translate.return_value = (0, {}, READY)
+        paths = ("Example/.git/config", "Example/.GiT/HEAD", "Example/a/b/.git/config",
+                 "Example/.git/[path]", "Example/.git/refs/heads/main", "Example/.git/omitted")
+        self.assertEqual(self.run_update(git_metadata=paths), 0)
+        self.github.needs_human.assert_not_called()
+        body = self.github.write_pr.call_args.args[3]
+        preview = "、".join((*paths[:3], "Example/.git/&#91;path&#93;", paths[4]))
+        self.assertIn(f"封存中的 .git 目錄已略過：{preview}（共 6 筆）", body)
+        self.assertNotIn(paths[5], body)
+        self.assertEqual((self.root / MOD / "Example.mod").read_bytes(), b"ok")
+        self.assertFalse(any(path.name.casefold() == ".git" for path in (self.root / MOD).rglob("*")))
 
     def test_UnitT31_unknown_terms_apply_publish_and_open_review(self):
         self.loc.translate.return_value = (0, {"unknownTerms": [FLAGGED]}, READY)

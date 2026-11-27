@@ -59,6 +59,13 @@ def _expression_cell(value):
     return _normalize_newlines(value).translate(_TABLE_ESCAPES)
 
 
+def skipped_git_note(paths):
+    preview = "、".join(map(_expression_cell, paths[:5]))
+    if len(paths) > 5:
+        preview += f"（共 {len(paths)} 筆）"
+    return "封存中的 .git 目錄已略過：" + preview
+
+
 def prepare_term_reviews(workset, summary):
     """Normalize term review rows and recover legacy AI_REQUIRED units with a usable translation."""
     units = {unit["unitId"]: unit for unit in workset["units"]}
