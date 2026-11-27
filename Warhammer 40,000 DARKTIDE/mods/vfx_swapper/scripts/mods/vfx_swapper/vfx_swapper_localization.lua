@@ -421,67 +421,67 @@ local localizations = {
 	disable_coral_vfx_tip = {
 		en = "Disables the toxic gas spewing out from geysers/corals.",
 		["zh-cn"] = "禁用喷泉/珊瑚喷出的毒气。",
-		["zh-tw"] = "停用噴泉/珊瑚噴出的毒氣。"
+		["zh-tw"] = "停用噴泉/珊瑚噴出的毒氣。",
 	},
 	vfx_limiter_group = {
 		en = "Misc. Effect Toggles",
 		["zh-cn"] = "杂项特效切换",
-		["zh-tw"] = "其他特效開關"
+		["zh-tw"] = "其他特效開關",
 	},
 	forcesword_vfx = {
 		en = "Disable Force Sword VFX",
 		["zh-cn"] = "禁用原力剑特效",
-		["zh-tw"] = "停用烈焰力場劍特效"
+		["zh-tw"] = "停用烈焰力場劍特效",
 	},
 	frag_grenade_vfx = {
 		en = "Disable Shredder Frag/Rumbler/Arbites Grenades VFX",
 		["zh-cn"] = "禁用老兵手雷/榴弹发射器/法务手雷特效",
-		["zh-tw"] = "停用老兵手雷/震盪槍/法務手雷特效"
+		["zh-tw"] = "停用老兵手雷/震盪槍/法務手雷特效",
 	},
 	krak_grenade_vfx = {
 		en = "Disable Krak Grenade VFX",
 		["zh-cn"] = "禁用穿甲手雷特效",
-		["zh-tw"] = "停用穿甲手雷特效"
+		["zh-tw"] = "停用穿甲手雷特效",
 	},
 	box_grenade_ogryn_vfx = {
 		en = "Disable Box Grenade VFX",
 		["zh-cn"] = "禁用欧格林盒子雷特效",
-		["zh-tw"] = "停用巨量傷害盒子雷特效"
+		["zh-tw"] = "停用巨量傷害盒子雷特效",
 	},
 	frag_bomb_ogryn_vfx = {
 		en = "Disable Frag Bomb VFX",
 		["zh-cn"] = "禁用欧格林胖男孩特效",
-		["zh-tw"] = "停用歐格林破片炸彈特效"
+		["zh-tw"] = "停用歐格林破片炸彈特效",
 	},
 	stumm_grenade_vfx = {
 		en = "Disable Stun Grenade VFX",
 		["zh-cn"] = "禁用晕眩手雷特效",
-		["zh-tw"] = "停用眩暈風暴手雷特效"
+		["zh-tw"] = "停用眩暈風暴手雷特效",
 	},
 	fire_grenade_vfx = {
 		en = "Disable Immolation Grenade VFX (Explosion)",
 		["zh-cn"] = "禁用狂信火雷爆炸特效",
-		["zh-tw"] = "停用狂信徒獻祭手雷爆炸特效"
+		["zh-tw"] = "停用狂信徒獻祭手雷爆炸特效",
 	},
 	net_electric_vfx = {
 		en = "Disable Trapper's net lightning effect",
 		["zh-cn"] = "禁用血痂陷阱手的电网效果",
-		["zh-tw"] = "停用陷阱兵的電網效果"
+		["zh-tw"] = "停用陷阱兵的電網效果",
 	},
 	netgunner_vfx = {
 		en = "Disable Netgunner muzzle flash",
 		["zh-cn"] = "禁用血痂陷阱手的开火特效",
-		["zh-tw"] = "停用陷阱兵開火特效"
+		["zh-tw"] = "停用陷阱兵開火特效",
 	},
 	voidstrike_explosion_vfx = {
 		en = "Disable Voidstrike Staff explosion effect",
 		["zh-cn"] = "禁用虚空打击法杖爆炸特效",
-		["zh-tw"] = "停用虛空打擊力場法杖爆炸特效"
+		["zh-tw"] = "停用虛空打擊力場法杖爆炸特效",
 	},
 	ritual_vfx = {
 		en = "Disable Heinous Ritual effects",
 		["zh-cn"] = "禁用邪恶仪式特效",
-		["zh-tw"] = "停用魔縛儀式特效"
+		["zh-tw"] = "停用魔縛儀式特效",
 	},
 	ritual_vfx_tt = {
 		en = "Disables 2 of the ritual effects. Specifically the ones that get bugged and become attached to players. Note that this does make Rituals harder to see at a distance.",
@@ -491,32 +491,32 @@ local localizations = {
 	scum_stimm_screen = {
 		en = "Disable Scum's Stimm Smoke screen effect",
 		["zh-cn"] = "禁用兴奋剂烟雾屏幕特效",
-		["zh-tw"] = "停用巢都敗類興奮劑煙霧螢幕特效"
+		["zh-tw"] = "停用巢都敗類興奮劑煙霧螢幕特效",
 	},
 	scum_rampage_screen = {
 		en = "Disable Scum's Rampage screen effect",
 		["zh-cn"] = "禁用狂暴状态屏幕特效",
-		["zh-tw"] = "停用巢都敗類暴走螢幕特效"
+		["zh-tw"] = "停用巢都敗類暴走螢幕特效",
 	},
 	lasgun_vfx = {
 		en = "Disable Lasgun Muzzle VFX",
 		["zh-cn"] = "禁用激光枪特效",
-		["zh-tw"] = "停用雷射槍開火特效"
+		["zh-tw"] = "停用雷射槍開火特效",
 	},
 	arc_vfx = {
 		en = "Disable Arc Rifle Lightning VFX",
 		["zh-cn"] = "禁用电弧步枪闪电特效",
-		["zh-tw"] = "停用電弧步槍閃電特效"
+		["zh-tw"] = "停用電弧步槍閃電特效",
 	},
 	purgator_vfx = {
 		en = "Simple Purgator VFX",
 		["zh-cn"] = "简化洗罪者火焰特效",
-		["zh-tw"] = "簡化伺服器顱骨特效"
+		["zh-tw"] = "簡化伺服器顱骨特效",
 	},
 	purg_tt = {
 		en = "Replaces Purgator flamer with a mild, hazeless flamer effect",
 		["zh-cn"] = "用一种温和、无烟雾的火焰特效替换洗罪者伺服头骨的火焰特效",
-		["zh-tw"] = "將伺服器顱骨火焰替換為較溫和、無煙霧的火焰特效"
+		["zh-tw"] = "將伺服器顱骨火焰替換為較溫和、無煙霧的火焰特效",
 	},
 	arc_beam_tt = {
 		en = "Removes the muzzle black smoke effect.",
@@ -531,7 +531,7 @@ local localizations = {
 	galv_vfx = {
 		en = "Disable Galvanic Rifle Muzzle Flash",
 		["zh-cn"] = "禁用流电步枪开火特效",
-		["zh-tw"] = "停用電能步槍開火特效"
+		["zh-tw"] = "停用電能步槍開火特效",
 	},
 	arc_maul_vfx = {
 		en = "Disable Arc Maul Special Activation VFX",
@@ -574,17 +574,17 @@ local localizations = {
 	disable_bon_death = {
 		en = "Disable Beast of Nurgle death explosion",
 		["zh-cn"] = "禁用纳垢兽死亡特效",
-		["zh-tw"] = "停用納垢獸死亡爆炸"
+		["zh-tw"] = "停用納垢獸死亡爆炸",
 	},
 	disable_burster_death = {
 		en = "Disable Burster explosions",
 		["zh-cn"] = "禁用瘟疫爆破手爆炸",
-		["zh-tw"] = "停用瘟疫爆者爆炸"
+		["zh-tw"] = "停用瘟疫爆者爆炸",
 	},
 	simple_havoc_color_vfx = {
 		en = "Simple Havoc Color VFX",
 		["zh-cn"] = "简化浩劫颜色特效",
-		["zh-tw"] = "簡化浩劫顏色特效"
+		["zh-tw"] = "簡化浩劫顏色特效",
 	},
 	simple_hav_tt = {
 		en = "Removes particle effects from Final Toll and Encroaching Garden while maintaining color. Requires restart.",
