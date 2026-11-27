@@ -38,6 +38,23 @@ class ReviewTests(unittest.TestCase):
                                               "suggestedZhTwExpression": '"開始 \\"now\\""'}])
         self.assertEqual(self.unit["reviewStatus"], "pending")
 
+    # Scenario: An operator approves a pretranslated literal already present in NEW.
+    # Purpose: Record an explicit approval without writing the same shared Lua span again.
+    def test_UnitT15_preserves_an_approved_existing_literal_without_a_write(self):
+        original = r'"開始 \"now\""'
+        new = {**self.unit["new"], "zhTwExpression": {"raw": original}}
+        document = {**self.document, "units": [{**self.unit, "new": new}]}
+
+        result = apply_review(document, self.template, 12, 34, b"old", b"new")
+
+        self.assertEqual(result["units"], [{**document["units"][0], "reviewStatus": "preserved",
+                                            "suggestedZhTwExpression": None}])
+        changed = deepcopy(self.template)
+        changed["units"][0]["translation"] = "現在開始"
+        changed_result = apply_review(document, changed, 12, 34, b"old", b"new")
+        self.assertEqual(changed_result["units"][0]["reviewStatus"], "approved")
+        self.assertEqual(changed_result["units"][0]["suggestedZhTwExpression"], '"現在開始"')
+
     # Scenario: Evidence is reused with changed bytes, identity, key, or rules.
     # Purpose: Reject each mismatch before modifying the workset.
     def test_UnitT20_reject_mismatches(self):

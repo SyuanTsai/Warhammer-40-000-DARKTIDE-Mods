@@ -131,14 +131,16 @@ def _review_template(document, nexus, file, old, new):
     for u in units:
         if (u["action"] == "AI_REQUIRED" and u["reviewStatus"] == "pending"
                 and not u.get("blockedReason") and u.get("suggestedZhTwExpression") is None):
-            expression = ((u.get("new") or {}).get("sourceExpression") or {}).get("raw")
+            new_unit = u.get("new") or {}
+            expression = (new_unit.get("sourceExpression") or {}).get("raw")
             source = decode_lua_string(expression)
             if source is None or _has_unsafe_controls(source):
                 continue
             if ids[u["unitId"]] != 1 or keys[u["key"]] != 1:
                 raise ValueError("ambiguous generated review unit")
-            eligible[u["unitId"]] = (u["key"], source)
-    template["units"] = [{"unitId": uid, "key": key, "translation": ""} for uid, (key, _) in eligible.items()]
+            existing = (new_unit.get("zhTwExpression") or {}).get("raw")
+            eligible[u["unitId"]] = (u["key"], source, decode_lua_string(existing))
+    template["units"] = [{"unitId": uid, "key": key, "translation": ""} for uid, (key, _, _) in eligible.items()]
     return template, eligible
 
 
@@ -303,10 +305,13 @@ def apply_review(document, review, nexus, file, old, new):
         uid, key, value = row["unitId"], row["key"], row["translation"]
         if not isinstance(uid, str) or not isinstance(key, str):
             raise ValueError("invalid reviewed unit identity")
-        expected_key, source = eligible.pop(uid, (None, None))
+        expected_key, source, existing = eligible.pop(uid, (None, None, None))
         if expected_key != key:
             raise ValueError("duplicate, stale or ineligible reviewed unit")
         _validate_translation(value, source, key)
+        if value == existing:
+            approved[uid] = {"suggestedZhTwExpression": None, "reviewStatus": "preserved"}
+            continue
         escaped = re.sub(r'["\\\x00-\x1f]', lambda m: "\\" + (
             m[0] if m[0] in '"\\' else f"{ord(m[0]):03d}"), value)
         approved[uid] = {"suggestedZhTwExpression": f'"{escaped}"', "reviewStatus": "approved"}
