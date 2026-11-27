@@ -427,10 +427,10 @@
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     浩劫詞條說明改善
-- MOD 網站最後更新日期：Last updated 24 September 2025, 11:37AM
-- MOD 版本：3.1
-- MOD 檔案名稱：Improved Havoc Tags-500-2-3-1750873657
-- 手動維護最後下載日期：2025-10-01
+- MOD 網站最後更新日期：Last updated 02 September 2026, 10:55PM
+- MOD 版本：3.2
+- MOD 檔案名稱：Improved Havoc Tags 500 3.2 2026-09-02T14-55Z ke28Welah
+- 手動維護最後下載日期：2026-11-26
 
 ### [Ovenproof's Scoreboard Plugin - Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/514)
     記分板排版工具
