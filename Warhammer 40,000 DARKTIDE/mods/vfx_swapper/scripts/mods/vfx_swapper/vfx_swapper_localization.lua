@@ -22,7 +22,7 @@ local localizations = {
 	replace_cultist_grenadier_gas = {
 		en = "Replace Cultist Grenadier's Gas Grenade",
 		["zh-cn"] = "替换渣滓剧毒轰炸者毒气弹",
-		["zh-tw"] = "替換異教徒轟炸者的毒氣手雷特效",
+		["zh-tw"] = "替換渣滓劇毒轟炸者的毒氣手榴彈特效",
 	},
 	replace_renegade_grenade_vfx = {
 		en = "Replace Renegade Grenadier's Fire Grenade",
@@ -32,7 +32,7 @@ local localizations = {
 	replace_renegade_flamer_vfx = {
 		en = "Replace Renegade Flamer",
 		["zh-cn"] = "替换血痂火焰兵燃烧地板特效",
-		["zh-tw"] = "替換血痂火焰兵特效",
+		["zh-tw"] = "替換血痂噴火者特效",
 	},
 	replace_cultist_flamer_vfx = {
 		en = "Replace Cultist Flamer VFX",
@@ -52,27 +52,27 @@ local localizations = {
 	replace_renegade_flamer_backpack_vfx = {
 		en = "Replace Renegade Backpack Fire",
 		["zh-cn"] = "替换背部燃烧特效",
-		["zh-tw"] = "替換叛徒背部火焰特效",
+		["zh-tw"] = "替換血痂噴火者背包的火焰特效",
 	},
 	replace_cultist_flamer_backpack_vfx = {
 		en = "Replace Cultist Backpack Fire",
 		["zh-cn"] = "替换背部燃烧特效",
-		["zh-tw"] = "替換異教徒背部火焰特效",
+		["zh-tw"] = "替換渣滓毒焰噴射者背包的火焰特效",
 	},
 	chem_grenade_vfx = {
 		en = "Disable Chem Grenade VFX (Explosion)",
 		["zh-cn"] = "禁用兴奋剂手雷初始爆炸特效",
 		["zh-tw"] = "停用化學手榴彈爆炸特效",
-	},
+	},	
 	arc_r_beam_vfx = {
 		en = "Disable Arc Rifle Muzzle FX (black cloud)",
 		["zh-cn"] = "禁用电磁步枪枪口特效（黑色烟云）",
-		["zh-tw"] = "停用電弧步槍槍口特效（黑色煙霧）",
+		["zh-tw"] = "停用電弧步槍槍口特效（黑煙）",
 	},
 	arc_r_lightning_vfx = {
 		en = "Disable Arc Rifle Lightning VFX(1st target)",
 		["zh-cn"] = "禁用电磁步枪电荷链特效（首目标）",
-		["zh-tw"] = "停用電弧步槍閃電特效（第1個目標）",
+		["zh-tw"] = "停用電弧步槍閃電特效（第一個目標）",
 	},
 	replace_rotten_armor = {
 		en = "Replace Rotten Armor's Lingering Gas (after kill)",
@@ -252,7 +252,7 @@ local localizations = {
 	staff_circle_enabled = {
 		en = "Trauma Staff Effect?",
 		["zh-cn"] = "震荡杖特效？",
-		["zh-tw"] = "震盪杖特效？",
+		["zh-tw"] = "虛空爆破力場法杖特效？",
 	},
 
 	blight_indicators_group = {
@@ -291,12 +291,12 @@ local localizations = {
 	gasnade_indicators_group = {
 		en = "Tox Bomber Grenade Indicators",
 		["zh-cn"] = "毒爆弹指示器",
-		["zh-tw"] = "劇毒轟炸者手雷顯示",
+		["zh-tw"] = "渣滓劇毒轟炸者的毒氣手榴彈指示器",
 	},
 	gas_grenade_circle_enabled = {
 		en = "Tox Bomber Grenade Circle",
 		["zh-cn"] = "毒爆弹圆形范围指示器",
-		["zh-tw"] = "劇毒轟炸者手雷範圍顯示",
+		["zh-tw"] = "渣滓劇毒轟炸者的毒氣手榴彈範圍顯示",
 	},
 	circle_count_group = {
 		en = "'Circle Only' Count",
@@ -356,12 +356,12 @@ local localizations = {
 	charge_tip = {
 		en = "Adds the 'lightning charge' ground effect (from Expeditions) as an additional, half-sized indicator to show remaining duration of the effect.",
 		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“闪电充能”地面特效（来自远征任务），作为显示效果剩余持续时间的附加指示器，尺寸为一半大小。",
-		["zh-tw"] = "加入「閃電充能」地面特效（來自遠征任務），以半尺寸的額外指示器顯示效果剩餘時間。",
+		["zh-tw"] = "加入遠征任務中的「閃電充能」地面特效，作為額外指示器顯示效果的剩餘時間。此指示器的尺寸減半。",
 	},
 	staff_circle_tip = {
 		en = "Adds the ground targeting indicator from Trauma Staff to show remaining duration of the effect. VERY BRIGHT AND BIG",
 		["zh-cn"] = "添加了“虚空爆破立场杖目标指示器”，作为显示效果剩余持续时间的附加指示器。非常明亮和巨大",
-		["zh-tw"] = "加入創傷法杖的地面瞄準指示器，用來顯示效果剩餘時間。非常明亮且巨大。",
+		["zh-tw"] = "加入虛空爆破力場法杖的地面瞄準指示器，以顯示效果的剩餘時間。此指示器非常明亮，尺寸也很大。",
 	},
 	toxin_death_tip = {
 		en = "Includes explosions from grenades, and certain needler alt fire modes.",
@@ -386,7 +386,7 @@ local localizations = {
 	circle_count = {
 		en = "Number of Added Circles (circles only mode!)",
 		["zh-cn"] = "'仅圆圈'模式的圆圈数量",
-		["zh-tw"] = "額外新增的圓圈數量（僅限圓圈模式！）",
+		["zh-tw"] = "新增圓形指示器數量（「僅範圍顯示」模式專用）",
 	},
 	tox_gas_group = {
 		en = "Toxic Gas (mission mutator)",
@@ -411,7 +411,7 @@ local localizations = {
 	disable_toxic_gas_tip = {
 		en = "Disables the green cloud particles (looks like cultist gas grenade).",
 		["zh-cn"] = "禁用绿色云雾粒子（看起来像渣滓毒雷）。",
-		["zh-tw"] = "停用綠色煙霧粒子（劇毒轟炸者毒氣手雷）。",
+		["zh-tw"] = "停用綠色煙霧粒子（外觀類似渣滓劇毒轟炸者的毒氣手榴彈）。",
 	},
 	disable_toxic_fog_tip = {
 		en = "Disables the volumetric fog (green haze effect).",
@@ -421,67 +421,67 @@ local localizations = {
 	disable_coral_vfx_tip = {
 		en = "Disables the toxic gas spewing out from geysers/corals.",
 		["zh-cn"] = "禁用喷泉/珊瑚喷出的毒气。",
-		["zh-tw"] = "停用噴泉/珊瑚噴出的毒氣。",
+		["zh-tw"] = "停用噴泉/珊瑚噴出的毒氣。"
 	},
 	vfx_limiter_group = {
 		en = "Misc. Effect Toggles",
 		["zh-cn"] = "杂项特效切换",
-		["zh-tw"] = "其他特效開關",
+		["zh-tw"] = "其他特效開關"
 	},
 	forcesword_vfx = {
 		en = "Disable Force Sword VFX",
 		["zh-cn"] = "禁用原力剑特效",
-		["zh-tw"] = "停用烈焰力場劍特效",
+		["zh-tw"] = "停用烈焰力場劍特效"
 	},
 	frag_grenade_vfx = {
 		en = "Disable Shredder Frag/Rumbler/Arbites Grenades VFX",
 		["zh-cn"] = "禁用老兵手雷/榴弹发射器/法务手雷特效",
-		["zh-tw"] = "停用老兵手雷/震盪槍/法務手雷特效",
+		["zh-tw"] = "停用老兵手雷/震盪槍/法務手雷特效"
 	},
 	krak_grenade_vfx = {
 		en = "Disable Krak Grenade VFX",
 		["zh-cn"] = "禁用穿甲手雷特效",
-		["zh-tw"] = "停用穿甲手雷特效",
+		["zh-tw"] = "停用穿甲手雷特效"
 	},
 	box_grenade_ogryn_vfx = {
 		en = "Disable Box Grenade VFX",
 		["zh-cn"] = "禁用欧格林盒子雷特效",
-		["zh-tw"] = "停用巨量傷害盒子雷特效",
+		["zh-tw"] = "停用巨量傷害盒子雷特效"
 	},
 	frag_bomb_ogryn_vfx = {
 		en = "Disable Frag Bomb VFX",
 		["zh-cn"] = "禁用欧格林胖男孩特效",
-		["zh-tw"] = "停用歐格林破片炸彈特效",
+		["zh-tw"] = "停用歐格林破片炸彈特效"
 	},
 	stumm_grenade_vfx = {
 		en = "Disable Stun Grenade VFX",
 		["zh-cn"] = "禁用晕眩手雷特效",
-		["zh-tw"] = "停用眩暈風暴手雷特效",
+		["zh-tw"] = "停用眩暈風暴手雷特效"
 	},
 	fire_grenade_vfx = {
 		en = "Disable Immolation Grenade VFX (Explosion)",
 		["zh-cn"] = "禁用狂信火雷爆炸特效",
-		["zh-tw"] = "停用狂信徒獻祭手雷爆炸特效",
+		["zh-tw"] = "停用狂信徒獻祭手雷爆炸特效"
 	},
 	net_electric_vfx = {
 		en = "Disable Trapper's net lightning effect",
 		["zh-cn"] = "禁用血痂陷阱手的电网效果",
-		["zh-tw"] = "停用陷阱兵的電網效果",
+		["zh-tw"] = "停用陷阱兵的電網效果"
 	},
 	netgunner_vfx = {
 		en = "Disable Netgunner muzzle flash",
 		["zh-cn"] = "禁用血痂陷阱手的开火特效",
-		["zh-tw"] = "停用陷阱兵開火特效",
+		["zh-tw"] = "停用陷阱兵開火特效"
 	},
 	voidstrike_explosion_vfx = {
 		en = "Disable Voidstrike Staff explosion effect",
 		["zh-cn"] = "禁用虚空打击法杖爆炸特效",
-		["zh-tw"] = "停用虛空打擊力場法杖爆炸特效",
+		["zh-tw"] = "停用虛空打擊力場法杖爆炸特效"
 	},
 	ritual_vfx = {
 		en = "Disable Heinous Ritual effects",
 		["zh-cn"] = "禁用邪恶仪式特效",
-		["zh-tw"] = "停用魔縛儀式特效",
+		["zh-tw"] = "停用魔縛儀式特效"
 	},
 	ritual_vfx_tt = {
 		en = "Disables 2 of the ritual effects. Specifically the ones that get bugged and become attached to players. Note that this does make Rituals harder to see at a distance.",
@@ -491,32 +491,32 @@ local localizations = {
 	scum_stimm_screen = {
 		en = "Disable Scum's Stimm Smoke screen effect",
 		["zh-cn"] = "禁用兴奋剂烟雾屏幕特效",
-		["zh-tw"] = "停用巢都敗類興奮劑煙霧螢幕特效",
+		["zh-tw"] = "停用巢都敗類興奮劑煙霧螢幕特效"
 	},
 	scum_rampage_screen = {
 		en = "Disable Scum's Rampage screen effect",
 		["zh-cn"] = "禁用狂暴状态屏幕特效",
-		["zh-tw"] = "停用巢都敗類暴走螢幕特效",
+		["zh-tw"] = "停用巢都敗類暴走螢幕特效"
 	},
 	lasgun_vfx = {
 		en = "Disable Lasgun Muzzle VFX",
 		["zh-cn"] = "禁用激光枪特效",
-		["zh-tw"] = "停用雷射槍開火特效",
+		["zh-tw"] = "停用雷射槍開火特效"
 	},
 	arc_vfx = {
 		en = "Disable Arc Rifle Lightning VFX",
 		["zh-cn"] = "禁用电弧步枪闪电特效",
-		["zh-tw"] = "停用電弧步槍閃電特效",
+		["zh-tw"] = "停用電弧步槍閃電特效"
 	},
 	purgator_vfx = {
 		en = "Simple Purgator VFX",
 		["zh-cn"] = "简化洗罪者火焰特效",
-		["zh-tw"] = "簡化伺服器顱骨特效",
+		["zh-tw"] = "簡化伺服器顱骨特效"
 	},
 	purg_tt = {
 		en = "Replaces Purgator flamer with a mild, hazeless flamer effect",
 		["zh-cn"] = "用一种温和、无烟雾的火焰特效替换洗罪者伺服头骨的火焰特效",
-		["zh-tw"] = "將伺服器顱骨火焰替換為較溫和、無煙霧的火焰特效",
+		["zh-tw"] = "將伺服器顱骨火焰替換為較溫和、無煙霧的火焰特效"
 	},
 	arc_beam_tt = {
 		en = "Removes the muzzle black smoke effect.",
@@ -531,7 +531,7 @@ local localizations = {
 	galv_vfx = {
 		en = "Disable Galvanic Rifle Muzzle Flash",
 		["zh-cn"] = "禁用流电步枪开火特效",
-		["zh-tw"] = "停用電能步槍開火特效",
+		["zh-tw"] = "停用電能步槍開火特效"
 	},
 	arc_maul_vfx = {
 		en = "Disable Arc Maul Special Activation VFX",
@@ -549,12 +549,12 @@ local localizations = {
 		["zh-tw"] = "停用電弧手榴彈爆炸特效",
 	},
 	environmental_px = {
-		en = "Disable Environment Particles",
 		["zh-tw"] = "停用環境粒子",
+		en = "Disable Environment Particles",
 	},
 	env_px_tt = {
+		["zh-tw"] = "停用由 GPU 渲染的環境粒子，例如「小蟲」、火盆和飄雪。此選項不會移除霧氣或任何體積特效。",
 		en = "GPU 'mites', braziers, snow, etc. - doesn't remove fog or any volumetric FX.",	
-		["zh-tw"] = "GPU「小蟲」、火盆、飄雪等；不會移除霧氣或任何體積特效。",
 	},
 	replace_shock_mine_vfx = {
 		en = "Swap Shock Mine VFX with basic chain lightning VFX",
@@ -574,17 +574,17 @@ local localizations = {
 	disable_bon_death = {
 		en = "Disable Beast of Nurgle death explosion",
 		["zh-cn"] = "禁用纳垢兽死亡特效",
-		["zh-tw"] = "停用納垢獸死亡爆炸",
+		["zh-tw"] = "停用納垢獸死亡爆炸"
 	},
 	disable_burster_death = {
 		en = "Disable Burster explosions",
 		["zh-cn"] = "禁用瘟疫爆破手爆炸",
-		["zh-tw"] = "停用瘟疫爆者爆炸",
+		["zh-tw"] = "停用瘟疫爆者爆炸"
 	},
 	simple_havoc_color_vfx = {
 		en = "Simple Havoc Color VFX",
 		["zh-cn"] = "简化浩劫颜色特效",
-		["zh-tw"] = "簡化浩劫顏色特效",
+		["zh-tw"] = "簡化浩劫顏色特效"
 	},
 	simple_hav_tt = {
 		en = "Removes particle effects from Final Toll and Encroaching Garden while maintaining color. Requires restart.",
@@ -630,12 +630,12 @@ local localizations = {
 	circle_tt = {
 		en = "Global on/off to show decal indicating the effect's radius.",
 		["zh-cn"] = "全局开关，显示带贴花的圆形范围",
-		["zh-tw"] = "全域開關，用來顯示標示效果半徑的貼花指示。",
+		["zh-tw"] = "全域開關，控制是否顯示標示效果半徑的地面貼花。",
 	},
 	grenade_group = {
 		en = "Grenade VFX Toggles",
 		["zh-cn"] = "手雷特效开关",
-		["zh-tw"] = "手雷特效開關",
+		["zh-tw"] = "手榴彈特效開關",
 	},
 	weapon_group = {
 		en = "Weapon VFX Toggles",
@@ -650,27 +650,27 @@ local localizations = {
 	ring_erode_on = {
 		en = "Spillway Boss Ring 'Brightness'",
 		["zh-cn"] = "暗蚀者光环'亮度'",
-		["zh-tw"] = "溢流道首領光環「亮度」",
+		["zh-tw"] = "溢洪道首領光環的亮度",
 	},
 	ring_erode_on_tt = {
 		en = "Negative values INCREASE the rings' maximum brightness, positive values DECREASE it. Vanilla setting is 0.",
 		["zh-cn"] = "负值会增加光环的",
-		["zh-tw"] = "負值會提高光環的最大亮度，正值則會降低。原版設定為 0。",
+		["zh-tw"] = "負值會提高光環的最大亮度，正值則會降低。遊戲原始設定為 0。",
 	},
 	alt_decal = {
 		en = "Use Spillway Ring as decal and effect",
 		["zh-cn"] = "使用暗蚀者光环作为贴花和特效",
-		["zh-tw"] = "使用溢流道光環作為貼花與特效",
+		["zh-tw"] = "以溢洪道光環作為貼花和特效",
 	},
 	alt_decal_tt = {
 		en = "{#color(255, 35, 5)}Requires 'Circle Only(no vfx)' to be selected for this effect! {#color(208, 208, 208)} \nReplaces normal 'circle' decal with Spillway boss's Nurgle Ring. \nDONUT shaped. \nExperimental. Recommended to use on VFX with small radius. ",
 		["zh-cn"] = "需要设置 Circle Only 模式！会将普通『圆』贴花替换为暗蚀者领主的纳垢之环。呈现甜甜圈状。\n实验性功能。推荐用于半径较小的特效。",
-		["zh-tw"] = "{#color(255, 35, 5)}此效果必須選擇「僅圓圈（無特效）」才會生效！{#color(208, 208, 208)} \n將一般「圓圈」貼花替換為溢流道首領的納垢光環。\n呈甜甜圈形狀。\n實驗性質。建議用於半徑較小的特效。 ",
+		["zh-tw"] = "{#color(255, 35, 5)}須選取「僅範圍顯示（無特效）」才能使用此效果！{#color(208, 208, 208)} \010以溢洪道首領的納垢光環取代一般圓形貼花。 \010呈中空環形。 \010實驗功能。建議用於半徑較小的特效。 ",
 	},
 	psyker_overcharge_screen = {
 		en = "Disable Scier's Gaze Visual Screen effect",
 		["zh-cn"] = "禁用心灵超载屏幕特效",
-		["zh-tw"] = "停用先知凝視的螢幕視覺特效",
+		["zh-tw"] = "停用「占卜者的注視」畫面特效",
 	},
 }
 
@@ -693,9 +693,11 @@ end
 local MoodSettings = require("scripts/settings/camera/mood/mood_settings")
 
 localizations.mood_vfx_group = {
+	["zh-tw"] = "氛圍特效（停用畫面特效，保留音效）",
 	en = "Mood VFX - 'Disable Screen Effects', but keeps any audio.",
 }
 localizations.mood_vfx_tt = {
+	["zh-tw"] = "移除所選氛圍的畫面粒子與調色效果。音效不受影響。需重新啟動。",
 	en = "Removes the screen particles/colour grading for the selected moods. Sounds are unaffected. Requires restart.",
 }
 
