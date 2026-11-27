@@ -299,9 +299,7 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 	local ping_max_size = template.ping_max_size
 	local ping_style = style.ping
 	local ping_size = ping_style.size
-	local ping_speed = 7
-	local ping_anim_progress = 0.5 + math.sin(Application.time_since_launch() * ping_speed) * 0.5
-	local ping_pulse_size_increase = ping_anim_progress * 15
+	local ping_pulse_size_increase = (mod._aio_ping_progress or 0.5) * 15
 
 	ping_size[1] = (
 		ping_min_size[1]
@@ -342,9 +340,9 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 	widget.alpha_multiplier = line_of_sight_progress or 1
 	widget.visible = true
 
-	local smart_tag_system = Managers.state.extension:system("smart_tag_system")
+	local smart_tag_system = mod.get_smart_tag_system()
 	local marker_unit = marker.unit
-	local is_tagged = marker_unit and smart_tag_system:unit_tag_id(marker_unit) ~= nil
+	local is_tagged = marker_unit and smart_tag_system and smart_tag_system:unit_tag_id(marker_unit) ~= nil
 
 	content.tagged = is_tagged
 	marker.block_fade_settings = is_tagged

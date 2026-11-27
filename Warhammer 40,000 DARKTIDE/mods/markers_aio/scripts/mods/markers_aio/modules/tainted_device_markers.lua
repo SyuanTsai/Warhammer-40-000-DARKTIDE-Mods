@@ -7,7 +7,12 @@ local WorldMarkerTemplateInteraction =
 	require("scripts/ui/hud/elements/world_markers/templates/world_marker_template_interaction")
 local UIWidget = require("scripts/managers/ui/ui_widget")
 local fs = mod.frame_settings
+
 mod.update_TaintedDevices_markers = function(self, marker)
+	if not fs.mod_enabled then
+		return
+	end
+
 	if marker and self then
 		local unit = marker.unit
 
@@ -23,10 +28,12 @@ mod.update_TaintedDevices_markers = function(self, marker)
 
 					marker.markers_aio_type = "event"
 
-					mod.set_colour(marker.widget.style.background.color, mod.lookup_colour(fs.marker_background_colour))
-					marker.template.check_line_of_sight = fs.per_type[marker.markers_aio_type].require_line_of_sight
+					local pt = fs.per_type.event
 
-					marker.template.max_distance = fs.per_type[marker.markers_aio_type].max_distance
+					mod.set_colour(marker.widget.style.background.color, mod.lookup_colour(fs.marker_background_colour))
+					marker.template.check_line_of_sight = pt.require_line_of_sight
+
+					marker.template.max_distance = pt.max_distance
 
 					marker.template.screen_clamp = fs.event_keep_on_screen
 					marker.block_screen_clamp = false

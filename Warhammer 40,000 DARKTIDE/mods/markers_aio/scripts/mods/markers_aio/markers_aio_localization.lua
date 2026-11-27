@@ -1,5 +1,5 @@
 local mod = get_mod("markers_aio")
-mod.version = "2.15.8"
+mod.version = "2.17.2"
 mod:info("Markers Improved AIO Improved is installed, using version: " .. tostring(mod.version))
 
 mod.lookup_border_color = function(colour_string)
@@ -3938,6 +3938,76 @@ local loc = {
 		["zh-cn"] = "标记缩放倍数。\n例如：100=1倍大小，50=0.5倍大小，150=1.5倍大小。",
 		["zh-tw"] = "標記縮放倍數。\n例如：100=1倍大小，50=0.5倍大小，150=1.5倍大小。",
 	},
+	dashed = {
+		en = "Dashed line",
+		ru = "Пунктирная линия",
+		["zh-cn"] = "虚线",
+		["zh-tw"] = "虛線",
+	},
+	arrows = {
+		en = "Arrows",
+		ru = "Стрелки",
+		["zh-cn"] = "箭头",
+		["zh-tw"] = "箭頭",
+	},
+	dots = {
+		en = "Dots",
+		ru = "Точки",
+		["zh-cn"] = "圆点",
+		["zh-tw"] = "圓點",
+	},
+	spillway_route_fx_smoke = {
+		en = "Smoke",
+		ru = "Дым",
+		["zh-cn"] = "烟雾",
+		["zh-tw"] = "煙霧",
+	},
+	spillway_route_fx_fire = {
+		en = "Fire",
+		ru = "Пламя",
+		["zh-cn"] = "火焰",
+		["zh-tw"] = "火焰",
+	},
+	spillway_route_fx_arc = {
+		en = "Lightning",
+		ru = "Молнии",
+		["zh-cn"] = "闪电",
+		["zh-tw"] = "閃電",
+	},
+	spillway_route_fx_warp = {
+		en = "Warp",
+		ru = "Варп",
+		["zh-cn"] = "灵能",
+		["zh-tw"] = "亞空間",
+	},
+	spillway_route_fx_beacon = {
+		en = "Beacons",
+		ru = "Маяки",
+		["zh-cn"] = "信标",
+		["zh-tw"] = "信標",
+	},
+	off = {
+		en = "Off",
+		ru = "Выкл.",
+		["zh-cn"] = "关闭",
+		["zh-tw"] = "關閉",
+	},
+	spillway_path_route_fx = {
+		en = "Safe path route style",
+		["zh-tw"] = "安全路徑路線樣式",
+	},
+	spillway_path_route_fx_tooltip = {
+		en = "Visual style used to draw the safe path routes between path markers. (On Spillway map)\n",
+		ru = "Визуальный стиль, используемый для отрисовки маршрутов Spillway между нумерованными маркерами пути.\nПунктирная линия, Стрелки, Точки: линии без дополнительных ресурсов.\nДым, Пламя, Молнии, Варп, Маяки: эффекты частиц вдоль маршрута (загружают пакет эффекта; при недоступности заменяются пунктиром).",
+		["zh-cn"] = "用于绘制 Spillway 编号路径标记之间路线的视���样式。\n虚线、箭头、圆点：无需额外资源。\n烟雾、火焰、闪电、灵能、信标：沿路线放置的粒子效果（加载效果资源包，不可用时回退为虚线）。",
+		["zh-tw"] = "用於繪製路徑標記之間安全路徑路線的視覺樣式。（Spillway 地圖）\n",
+	},
+	spillway_path_route_thickness_tooltip = {
+		en = "Thickness of the safe path route decals. (On Spillway map)",
+		ru = "Толщина линий маршрута безопасного пути. (На карте Spillway)",
+		["zh-cn"] = "安全路径路线贴花的粗细。（Spillway 地图）",
+		["zh-tw"] = "安全路徑路線貼花的粗細。（Spillway 地圖）",
+	},
 	los_fade_enable_tooltip = {
 		en = "Fade out markers that are behind a world object/out of line of sight? Only takes effect if 'Require Line of Sight' is disabled.",
 		ru = "Скрывать метки, находящиеся за объектами в игровом мире/вне прямой видимости? Эффект проявляется только в том случае, если параметр «Требовать прямой видимости» отключён.",
@@ -4074,7 +4144,7 @@ local loc = {
 	},
 	ammo_status_show_most_needy_tooltip = {
 		en = "When a teammate needs the ammo more than you, show their class icon with their team colour to mark who should take this pickup.",
-		ru = "Если союзнику нужно больше боеприпасов, чем вам, показывает иконку его класса в цвете его команды, чтобы отметить, кому следует забрать этот предмет.",
+		ru = "Если союзнику нужно больше боеприпасов, чем вам, показывает иконку ег�� класса в цвете его команды, чтобы отметить, кому следует забрать этот предмет.",
 		["zh-tw"] = "當隊友比你更需要這份彈藥時，顯示該隊友的職業圖示與對應顏色，標示應由誰拾取。",
 		["zh-cn"] = "当队友比您更需要弹药时，以队友职业图标与队友颜色标示谁应该拾取。",
 	},
@@ -4577,7 +4647,346 @@ local loc = {
 		["zh-tw"] = "掃描器",
 		["zh-cn"] = "扫描器",
 	},
+
+	-- Spillway Path Markers
+	tab_spillway_path = {
+		en = "Spillway Path",
+		fr = "Chemin du déversoir",
+		ru = "Путь водосброса",
+		["zh-tw"] = "洩洪道路徑",
+		["zh-cn"] = "泄洪道路径",
+	},
+	spillway_path_markers_settings = {
+		en = "SPILLWAY PATH MARKERS",
+		fr = "MARQUEURS DU CHEMIN DU DÉVERSOIR",
+		ru = "МЕТКИ ПУТИ ВОДОСБРОСА",
+		["zh-tw"] = "洩洪道路徑標記",
+		["zh-cn"] = "泄洪道路径标记",
+	},
+	spillway_path_enable = {
+		en = "Enable Spillway Path Markers",
+		fr = "Activer les marqueurs du chemin du déversoir",
+		ru = "Включить метки пути водосброса",
+		["zh-tw"] = "啟用洩洪道路徑標記",
+		["zh-cn"] = "启用泄洪道路径标记",
+	},
+	spillway_path_route_enable = {
+		en = "Enable Spillway Path Route",
+		fr = "Activer l'itinéraire du chemin du déversoir",
+		ru = "Включить маршрут пути водосброса",
+		["zh-tw"] = "啟用洩洪道路徑路線",
+		["zh-cn"] = "启用泄洪道路由",
+	},
+	route_enable_tooltip = {
+		en = "Toggle an in-world path showing the safe route to follow.",
+		fr = "Activer l'itinéraire du chemin du déversoir",
+		ru = "Включить маршрут пути водосброса",
+		["zh-tw"] = "切換顯示於場景中、指引安全前進路線的路徑。",
+		["zh-cn"] = "启用泄洪道路由",
+	},
+	mod_marker_spillway_path_name = {
+		en = "Safe Spillway Path",
+		fr = "Chemin sûr du déversoir",
+		ru = "Безопасный путь водосброса",
+		["zh-tw"] = "安全的洩洪道路徑",
+		["zh-cn"] = "安全的泄洪道路径",
+	},
+	spillway_path_max_distance = {
+		en = "Max Distance",
+		fr = "Distance maximale",
+		ru = "Макс. дистанция",
+		["zh-tw"] = "最大距離",
+		["zh-cn"] = "最大距离",
+	},
+	spillway_path_colour = {
+		en = "Marker Colour",
+		fr = "Couleur du marqueur",
+		ru = "Цвет метки",
+		["zh-tw"] = "標記顏色",
+		["zh-cn"] = "标记颜色",
+	},
+	spillway_path_colour_R = {
+		en = "Red",
+		fr = "Rouge",
+		ru = "Красный",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红色",
+	},
+	spillway_path_colour_G = {
+		en = "Green",
+		fr = "Vert",
+		ru = "Зелёный",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿色",
+	},
+	spillway_path_colour_B = {
+		en = "Blue",
+		fr = "Bleu",
+		ru = "Синий",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝色",
+	},
+	spillway_path_border_colour = {
+		en = "Border Colour",
+		fr = "Couleur de bordure",
+		ru = "Цвет рамки",
+		["zh-tw"] = "邊框顏色",
+		["zh-cn"] = "边框颜色",
+	},
+	spillway_path_keep_on_screen = {
+		en = "Keep On Screen",
+		fr = "Garder à l'écran",
+		ru = "Держать на экране",
+		["zh-tw"] = "保持顯示在螢幕上",
+		["zh-cn"] = "保持在屏幕上",
+	},
+	spillway_path_require_line_of_sight = {
+		en = "Require Line Of Sight",
+		fr = "Nécessite une ligne de vue",
+		ru = "Требовать прямую видимость",
+		["zh-tw"] = "需要視線",
+		["zh-cn"] = "需要视线",
+	},
+	spillway_path_scale = {
+		en = "Scale",
+		fr = "Échelle",
+		ru = "Масштаб",
+		["zh-tw"] = "縮放",
+		["zh-cn"] = "缩放",
+	},
+	spillway_path_alpha = {
+		en = "Alpha",
+		fr = "Opacité",
+		ru = "Прозрачность",
+		["zh-tw"] = "透明度",
+		["zh-cn"] = "透明度",
+	},
 }
+
+local proximity_localizations = {
+	tab_proximity = {
+		en = "Proximity Alerts",
+		fr = "Alertes de proximité",
+		ru = "Оповещения о близости",
+		["zh-tw"] = "鄰近警告",
+		["zh-cn"] = "邻近警告",
+	},
+	proximity_settings = {
+		en = "Proximity Alerts",
+		fr = "Alertes de proximité",
+		ru = "Оповещения о близости",
+		["zh-tw"] = "鄰近警告",
+		["zh-cn"] = "邻近警告",
+	},
+	proximity_message_destination = {
+		en = "Notification Location",
+		fr = "Emplacement de la notification",
+		ru = "Местоположение уведомления",
+		["zh-tw"] = "通知位置",
+		["zh-cn"] = "通知位置",
+	},
+	proximity_message_destination_tooltip = {
+		en = "Where proximity alerts appear.",
+		fr = "Où afficher les alertes de proximité.",
+		ru = "Где отображать оповещения о близости.",
+		["zh-tw"] = "鄰近警告的顯示位置。",
+		["zh-cn"] = "显示邻近警告的位置",
+	},
+	chat = {
+		en = "Chat",
+		fr = "Discussion",
+		ru = "Чат",
+		["zh-tw"] = "聊天",
+		["zh-cn"] = "聊天",
+	},
+	combat_feed = {
+		en = "Combat Feed",
+		fr = "Fil de combat",
+		ru = "Лента боя",
+		["zh-tw"] = "戰鬥資訊",
+		["zh-cn"] = "战斗信息",
+	},
+	proximity_message_format = {
+		en = "Message Format",
+		fr = "Format du message",
+		ru = "Формат сообщения",
+		["zh-tw"] = "訊息格式",
+		["zh-cn"] = "消息格式",
+	},
+	proximity_message_default = {
+		en = "You sense the presence of {a/an} {name} nearby...",
+		fr = "{name} à proximité",
+		ru = "{name} рядом",
+		["zh-tw"] = "你感覺到附近有{a/an}{name}……",
+		["zh-cn"] = "{name} 在附近",
+	},
+	proximity_message_format_placeholder = {
+		en = "{a/an} {name} nearby",
+		fr = "{name} à proximité",
+		ru = "{name} рядом",
+		["zh-tw"] = "附近有{a/an}{name}",
+		["zh-cn"] = "{name} 在附近",
+	},
+	proximity_message_format_tooltip = {
+		en = "Edit the notification text. \n\n{name} is replaced with the marker name, \n\n{a/an} with 'a' or 'an' depending on the name.",
+		fr = "Modifiez le texte de la notification. {name} est remplacé par le nom du marqueur, {a/an} par « un » ou « une » selon le nom.",
+		ru = "Измените текст уведомления. {name} заменяется на название маркера, {a/an} — на «a» или «an» в зависимости от названия.",
+		["zh-tw"] = "編輯通知文字。\n\n{name} 會替換為標記名稱，\n\n{a/an} 會依名稱替換為「a」或「an」。",
+		["zh-cn"] = "编辑通知文字。{name} 将替换为标记名称，{a/an} 会依据名称替换为适当的冠词。",
+	},
+	proximity_enable = {
+		en = "Enable Proximity Alerts",
+		fr = "Activer les alertes de proximité",
+		ru = "Включить оповещения о близости",
+		["zh-tw"] = "啟用鄰近警告",
+		["zh-cn"] = "启用邻近警告",
+	},
+	proximity_enable_tooltip = {
+		en = "Sends a notification when you enter range of an enabled marker type.",
+		fr = "Envoie une notification lorsque vous entrez dans la portée d'un type de marqueur activé.",
+		ru = "Отправляет уведомление при входе в зону действия включённого типа маркера.",
+		["zh-tw"] = "進入已啟用標記類型的範圍時，傳送通知。",
+		["zh-cn"] = "当您进入已启用标记类型的范围时，发送通知。",
+	},
+	proximity_range = {
+		en = "Proximity Range",
+		fr = "Portée de proximité",
+		ru = "Дальность оповещения",
+		["zh-tw"] = "鄰近範圍",
+		["zh-cn"] = "邻近范围",
+	},
+	proximity_range_tooltip = {
+		en = "Distance in metres at which a proximity alert is triggered.",
+		fr = "Distance en mètres à laquelle une alerte de proximité est déclenchée.",
+		ru = "Расстояние в метрах, на котором срабатывает оповещение.",
+		["zh-tw"] = "觸發鄰近警告的距離（公尺）。",
+		["zh-cn"] = "触发邻近警告的距离（米）。",
+	},
+	proximity_type_tooltip = {
+		en = "Send an alert when entering range of this marker type.",
+		fr = "Envoyer une alerte lors de l'entrée dans la portée de ce type de marqueur.",
+		ru = "Отправлять оповещение при входе в зону этого типа маркера.",
+		["zh-tw"] = "進入此標記類型的範圍時傳送警告。",
+		["zh-cn"] = "进入此标记类型范围时发送警告。",
+	},
+}
+
+local proximity_type_names = {
+	tome = {
+		en = "Tome",
+		fr = "Tome",
+		ru = "Том",
+		["zh-tw"] = "書籍",
+		["zh-cn"] = "书籍",
+	},
+	material = {
+		en = "Material",
+		fr = "Matériau",
+		ru = "Материал",
+		["zh-tw"] = "材料",
+		["zh-cn"] = "材料",
+	},
+	ammo_med = {
+		en = "Ammo & Medical",
+		fr = "Munitions et soins",
+		ru = "Патроны и аптечки",
+		["zh-tw"] = "彈藥與醫療",
+		["zh-cn"] = "弹药与医疗",
+	},
+	stimm = {
+		en = "Stimm",
+		fr = "Stim",
+		ru = "Стим",
+		["zh-tw"] = "興奮劑",
+		["zh-cn"] = "刺激剂",
+	},
+	chest = {
+		en = "Chest",
+		fr = "Coffre",
+		ru = "Сундук",
+		["zh-tw"] = "寶箱",
+		["zh-cn"] = "宝箱",
+	},
+	heretical_idol = {
+		en = "Heretical Idol",
+		fr = "Idole hérétique",
+		ru = "Еретический идол",
+		["zh-tw"] = "異端神像",
+		["zh-cn"] = "异端偶像",
+	},
+	event = {
+		en = "Event",
+		fr = "Événement",
+		ru = "Событие",
+		["zh-tw"] = "事件",
+		["zh-cn"] = "事件",
+	},
+	objective = {
+		en = "Objective",
+		fr = "Objectif",
+		ru = "Цель",
+		["zh-tw"] = "目標",
+		["zh-cn"] = "目标",
+	},
+	luggable = {
+		en = "Luggable",
+		fr = "Objet transportable",
+		ru = "Переносимый предмет",
+		["zh-tw"] = "可搬運物",
+		["zh-cn"] = "可搬运物",
+	},
+	martyrs_skull = {
+		en = "Martyr's Skull",
+		fr = "Crâne du martyr",
+		ru = "Череп мученика",
+		["zh-tw"] = "殉道者之顱",
+		["zh-cn"] = "殉道者头骨",
+	},
+	expedition = {
+		en = "Expedition",
+		fr = "Expédition",
+		ru = "Экспедиция",
+		["zh-tw"] = "遠征",
+		["zh-cn"] = "远征",
+	},
+	servo_skull = {
+		en = "Servo Skull",
+		fr = "Crâne servo",
+		ru = "Сервочереп",
+		["zh-tw"] = "伺服頭骨",
+		["zh-cn"] = "伺服头骨",
+	},
+	unknown = {
+		en = "Unknown",
+		fr = "Inconnu",
+		ru = "Неизвестно",
+		["zh-tw"] = "未知",
+		["zh-cn"] = "未知",
+	},
+	player_assistance = {
+		en = "Player Assistance",
+		fr = "Assistance aux joueurs",
+		ru = "Помощь игроку",
+		["zh-tw"] = "玩家援助",
+		["zh-cn"] = "玩家援助",
+	},
+	spillway_path = {
+		en = "Spillway Path",
+		fr = "Chemin de déversement",
+		ru = "Путь слива",
+		["zh-tw"] = "洩洪道路徑",
+		["zh-cn"] = "泄洪道路径",
+	},
+}
+
+for key, value in pairs(proximity_localizations) do
+	loc[key] = value
+end
+
+for key, value in pairs(proximity_type_names) do
+	loc["proximity_" .. key] = value
+	loc["proximity_type_" .. key] = value
+end
 
 local apply_color_to_text = function(text, r, g, b)
 	return "{#color(" .. r .. "," .. g .. "," .. b .. ")}" .. text .. "{#reset()}"
@@ -4631,8 +5040,6 @@ local apply_colours = function()
 				local rgb = { 144, 155, 136 }
 
 				if rgb ~= nil then
-					-- Strip any colour tags applied by a previous pass, otherwise every
-					-- call wraps the already-wrapped string again and grows it forever.
 					local clean = string.gsub(text, "{#.-}", "")
 					local text = apply_color_to_text(clean, rgb[1], rgb[2], rgb[3])
 
@@ -4646,9 +5053,18 @@ local apply_colours = function()
 			end
 		end
 	end
-
-	return loc
 end
+
+mod:add_global_localize_strings({
+
+	mod_marker_spillway_path_name = {
+		en = "Safe Spillway Path",
+		fr = "Chemin sûr du déversoir",
+		ru = "Безопасный путь водосброса",
+		["zh-tw"] = "安全的洩洪道路徑",
+		["zh-cn"] = "安全的泄洪道路径",
+	},
+})
 
 -- Insert font localisation
 insert_fonts(loc)
@@ -4673,6 +5089,7 @@ mod.toggle_pizazz()
 
 mod.apply_colours = function()
 	apply_colours()
+
 	return loc
 end
 
