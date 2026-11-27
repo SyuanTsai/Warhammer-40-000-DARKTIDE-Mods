@@ -171,7 +171,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         pending = blocked_units(document, summary)
         if dry_run and reviews:
             issue_title = term_review_title(mod.name, nexus_id)
-            emit(f"預計建立或更新 Issue：{issue_title}\n\n{term_review_log(reviews)}\n\n- PR：待發布")
+            emit(f"預計建立或更新 Issue：{issue_title}\n- 版本：{plain(receipt.version)}\n\n"
+                 f"{term_review_log(reviews)}\n\n- PR：待發布")
         elif reviews and (status or pending):
             emit(term_review_log(reviews))
         if dry_run and summary:
@@ -272,7 +273,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
                    private_files=private_files, private_recorded=private_recorded, term_reviews=reviews,
-                   term_review_name=mod.name)
+                   term_review_name=mod.name, term_review_version=receipt.version)
     action = {"update": "更新", "new": "新增", "hotfix": "hotfix"}[route]
     version = plain(receipt.version)
     if route != "new":

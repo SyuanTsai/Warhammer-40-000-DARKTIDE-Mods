@@ -286,6 +286,29 @@ class ExecutionTests(unittest.TestCase):
         self.assertNotIn("&#", messages)
         self.assertNotIn("<br>", messages)
 
+    # Scenario: Skill 回傳查詞回退與保留運算式，工作集已完成處置。
+    # Purpose: 走正常套用及 PR 流程，並將原因、版本與實際採用值送至術語 Issue。
+    def test_UnitT37_text_reviews_publish_with_reasons_and_version(self):
+        source = 'Localize("loc_zone_expeditions") .. helper("Expedition: %s")'
+        lookup = {**FLAGGED, "reason": "needs_lookup_definition", "adoption": "english_fallback",
+                  "source": '"Shot Recovery"', "translation": '"Shot Recovery"'}
+        preserved = {"unitId": "b", "key": "expedition", "source": source, "translation": source,
+                     "terms": ["Expedition: %s"], "reason": "complex_expression",
+                     "adoption": "preserved_expression"}
+        document = {**READY, "units": [*READY["units"], {
+            "unitId": "b", "key": "expedition", "action": "AI_REQUIRED", "reviewStatus": "preserved",
+            "suggestedZhTwExpression": None,
+        }]}
+        self.loc.translate.return_value = (0, {"termReviews": [lookup, preserved]}, document)
+
+        self.assertEqual(self.run_update(), 0)
+        self.loc.apply.assert_called_once()
+        issue_body = self.github.term_review_issue.call_args.args[3]
+        for evidence in ("範例", "版本：2", "PR：", "待確認詞", "needs&#95;lookup&#95;definition",
+                         "complex&#95;expression", "回退英文", "原樣保留運算式", "Expedition: %s",
+                         "Localize", "Shot Recovery"):
+            self.assertIn(evidence, issue_body)
+
     # Scenario: 第一次候選完成後 main 改變，第二次從新基準重建。
     # Purpose: 重建一次後才標記人工待辦，舊候選無法發布。
     def test_UnitT40_second_main_race_stops_publication(self):
