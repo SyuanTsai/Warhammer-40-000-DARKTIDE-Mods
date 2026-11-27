@@ -555,10 +555,10 @@
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 02 October 2026, 4:01AM
-- MOD 版本：1.3.1
-- MOD 檔案名稱：Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
-- 手動維護最後下載日期：2026-10-02
+- MOD 網站最後更新日期：Last updated 08 November 2026, 04:25AM
+- MOD 版本：1.3.4
+- MOD 檔案名稱：Vfx Swapper 678 1.3.4 2026-11-07T20-25Z ke28WelLW
+- 手動維護最後下載日期：2026-11-26
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板

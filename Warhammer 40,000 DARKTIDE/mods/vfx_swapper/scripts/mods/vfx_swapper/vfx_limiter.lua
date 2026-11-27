@@ -1,6 +1,9 @@
 local mod = get_mod("vfx_swapper")
-
 mod.hey_im_the_slim_version = true
+local env_px = mod:get("environmental_px")
+local is_env = nil
+local _any_blocked = false
+local blocked_vfx_active = {}
 
 local blocked_vfx = {
 	["content/fx/particles/explosions/frag_grenade_01"] = "frag_grenade_vfx",
@@ -24,11 +27,12 @@ local blocked_vfx = {
 	["content/fx/particles/screenspace/player_screen_broker_stimm_syringe"] = "scum_stimm_screen",
 	["content/fx/particles/screenspace/screen_rage_persistant"] = "scum_rampage_screen",
 	["content/fx/particles/screenspace/screen_broker_punk_rage"] = "scum_rampage_screen",
+	["content/fx/particles/screenspace/screen_psyker_overcharge_stance"] = "psyker_overcharge_screen",
 	["content/fx/particles/impacts/flesh/gib_flesh_bits_01"] = "poxwalker_vfx",
 	["content/fx/particles/impacts/flesh/poxwalker_maggots_small_01"] = "poxwalker_vfx",
-	["content/fx/particles/weapons/rifles/arc_rifle/arc_rifle_beamlinger"] = "arc_vfx",
+	["content/fx/particles/weapons/rifles/arc_rifle/arc_rifle_beamlinger"] = "arc_r_beam_vfx",
 	["content/fx/particles/weapons/rifles/galvanic/galvanic_rifle_muzzle"] = "galv_vfx",
-	["content/fx/particles/weapons/rifles/arc_rifle/arc_rifle_lightning"] = "arc_vfx",
+	["content/fx/particles/weapons/rifles/arc_rifle/arc_rifle_lightning"] = "arc_r_lightning_vfx",
 	["content/fx/particles/weapons/grenades/chem_grenade/chem_grenade_player_initial_blast"] = "chem_grenade_vfx",
 	["content/fx/particles/weapons/rifles/plasma_gun/plasma_muzzle_ks"] = "plasma_muzzle",
 	["content/fx/particles/weapons/rifles/plasma_gun/plasma_beam_linger"] = "plasma_beam",
@@ -67,11 +71,9 @@ local blocked_vfx = {
 	["content/fx/particles/weapons/arc/arc_maul/arc_maul_weapon_special_01"] = "arc_maul_vfx",
 	["content/fx/particles/weapons/grenades/arc_grenade/arc_grenade_01"] = "arc_grenade_vfx",
 }
-local blocked_vfx_active = {}
-local _any_blocked = false
-
 local function refresh_blocked_vfx_cache()
-    _any_blocked = false
+	_any_blocked = false
+	env_px = mod:get("environmental_px")
     for particle_name, setting_id in pairs(blocked_vfx) do
         local active = mod:get(setting_id) or false
         blocked_vfx_active[particle_name] = active
@@ -82,9 +84,11 @@ end
 mod._refresh_vfx_limiter_cache = refresh_blocked_vfx_cache
 
 refresh_blocked_vfx_cache()
-
+local World = World
 mod:hook("World", "create_particles", function(func, world, particle_name, ...)
-	if _any_blocked and blocked_vfx_active[particle_name] then
+	--mod:echo(particle_name)
+	is_env = string.find(particle_name, "particles/environment")
+	if (_any_blocked and blocked_vfx_active[particle_name]) or (env_px and is_env) then
 		local id = func(world, particle_name, ...)
 		World.stop_spawning_particles(world, id)
 		return id
