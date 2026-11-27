@@ -141,23 +141,18 @@ return {
 	},
 	icon_skull = {
 		en = "",
-		["zh-tw"] = "",
 	},
 	icon_dagger = {
 		en = "",
-		["zh-tw"] = "",
 	},
 	icon_thunderbolt = {
 		en = "",
-		["zh-tw"] = "",
 	},
 	icon_darktide = {
 		en = "",
-		["zh-tw"] = "",
 	},
 	icon_laurels = {
 		en = "",
-		["zh-tw"] = "",
 	},
 	crit_chance_indicator_settings_appearance = {
 		en = "Indicator Appearance",
