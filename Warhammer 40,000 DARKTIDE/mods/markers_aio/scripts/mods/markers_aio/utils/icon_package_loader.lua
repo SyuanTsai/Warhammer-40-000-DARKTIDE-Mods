@@ -1,7 +1,5 @@
 local mod = get_mod("markers_aio")
 
-mod._required_icon_packages = mod._required_icon_packages or {}
-
 mod._required_icon_packages = {
 	"packages/ui/views/main_menu_view/main_menu_view",
 	"packages/ui/views/main_menu_background_view/main_menu_background_view",
@@ -126,7 +124,6 @@ mod._required_icon_packages = {
 	"content/levels/ui/expedition/world",
 }
 
-local _loaded_package_ids = {}
 PACKAGE_REF = "MarkersAIO"
 
 local function _package_is_available(package_name)
@@ -136,11 +133,7 @@ local function _package_is_available(package_name)
 		return false
 	end
 
-	local ok, exists = pcall(function()
-		return application.can_get_resource("package", package_name)
-	end)
-
-	return ok and exists or false
+	return application.can_get_resource("package", package_name) or false
 end
 
 local function _package_is_loaded(package_name)
@@ -151,12 +144,8 @@ local function _package_is_loaded(package_name)
 		return false
 	end
 
-	local ok, is_loaded = pcall(package_manager.has_loaded, package_manager, package_name)
-
-	return ok and is_loaded or false
+	return package_manager:has_loaded(package_name) or false
 end
-
-local loaded_packages = {}
 
 local function _load_package_list(package_list)
 	local managers = Managers
@@ -171,12 +160,12 @@ local function _load_package_list(package_list)
 			if _package_is_loaded(pkg) then
 				mod._required_icon_packages[pkg] = true
 			else
-				local ok = pcall(function()
-					package_manager:load(pkg, PACKAGE_REF, nil, true)
-				end)
+				local package_id = package_manager:load(pkg, PACKAGE_REF, nil, true)
 
-				if ok then
+				if package_id then
 					mod._required_icon_packages[pkg] = true
+				else
+					mod:error("MARKERS AIO PACKAGE FAILED: " .. tostring(pkg))
 				end
 			end
 		end

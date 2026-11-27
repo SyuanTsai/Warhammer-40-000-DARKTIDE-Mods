@@ -71,20 +71,29 @@ mod.get_all_items_in_chest = function(self, chest_unit)
 end
 
 mod.update_chest_markers = function(self, marker)
-	local max_distance = get_max_distance()
+	if not fs.mod_enabled then
+		return
+	end
 
-	for chest_unit, chest in pairs(mod.active_chests) do
-		if not Unit.alive(chest_unit) or (chest and chest._current_state ~= "closed") then
-			if chest then
-				mod.remove_chest_markers(chest._unit, self._markers)
+	local frame = mod._aio_frame
+
+	if mod._chest_cleanup_frame ~= frame then
+		mod._chest_cleanup_frame = frame
+
+		for chest_unit, chest in pairs(mod.active_chests) do
+			if not Unit.alive(chest_unit) or (chest and chest._current_state ~= "closed") then
+				if chest then
+					mod.remove_chest_markers(chest._unit, self._markers)
+				end
+				mod.active_chests[chest_unit] = nil
 			end
-			mod.active_chests[chest_unit] = nil
 		end
 	end
 
 	if marker and self then
 		local unit = marker.unit
 		if marker.data and marker.data._active_interaction_type == "chest" then
+			local max_distance = get_max_distance()
 			self._chest_extension = ScriptUnit.has_extension(unit, "chest_system")
 
 			mod.active_chests[unit] = self._chest_extension
@@ -95,7 +104,7 @@ mod.update_chest_markers = function(self, marker)
 				chest_items = mod.get_all_items_in_chest(self, unit)
 
 				local local_player = Managers.player:local_player(1)
-				local local_player_unit = local_player.player_unit
+				local local_player_unit = mod.get_player_unit(local_player)
 
 				local chest_pos = POSITION_LOOKUP[unit]
 
@@ -225,11 +234,6 @@ mod.update_chest_markers = function(self, marker)
 
 			self.max_distance = max_distance
 			marker.max_distance = max_distance
-
-			if self.fade_settings then
-				self.fade_settings.distance_max = max_distance
-				self.fade_settings.distance_min = max_distance - self.evolve_distance * 2
-			end
 
 			mod.set_colour_argb(
 				marker.widget.style.icon.color,
