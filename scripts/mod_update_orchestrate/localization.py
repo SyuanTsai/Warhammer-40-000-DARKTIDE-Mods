@@ -153,13 +153,13 @@ class Localization:
         summary = read_json(self.summary) if self.summary.is_file() else {}
         return status, summary, read_json(self.workset)
 
-    def apply(self, document, summary, *, rewrite_workset=False):
+    def apply(self, document, summary, *, rewrite_workset=False, reviewed_ids=()):
         if blocked_units(document, summary):
             raise LocalizationError("工作集含未核准或 BLOCKED 項目")
         units = []
         unquoted_keys = []
         for unit in document["units"]:
-            if _unexpected_quotes(unit):
+            if unit["unitId"] not in reviewed_ids and _unexpected_quotes(unit):
                 expression = unit.get("suggestedZhTwExpression")
                 unwrapped = unwrap_literal_outer_double_quotes(expression)
                 if unwrapped is not None and unwrapped != expression:

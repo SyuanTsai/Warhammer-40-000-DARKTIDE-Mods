@@ -1,5 +1,6 @@
 """下載、重建並驗證單一 MOD 的更新候選。"""
 
+import json
 import os
 import re
 import shutil
@@ -20,12 +21,13 @@ from .gate import validate_git, validate_paths, validate_upstream
 from .localization import Localization, LocalizationError, log_stage, read_json
 from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
-from .pr import branch_for, current_pr, publish, stage_raw, sync_term_review, upstream_commit
+from .pr import branch_for, current_pr, publish, require_reviewed_input, stage_raw, sync_term_review, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
 from .report import (
     blocked_units, cell, plain, pr_body, prepare_term_reviews, skipped_git_note, sync_term_review_translations,
     term_review_log, term_review_title, unquoted_note,
 )
+from .reviewed import apply_review, review_run, review_template, verify_resume
 from .section import DEFAULT_SECTION, choose_section, describe
 from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
 
@@ -124,7 +126,7 @@ def _budget(github, number, nexus_id, receipt, mod, summary):
 
 def candidate(root, git, github, drive, processed, issue, number, receipt, mod, paths, archive,
               new_tree, workspace, cache, skill, base_oid, *, max_items, dry_run, emit,
-              route="update", upstream_oid=None, skipped_paths=()):
+              route="update", upstream_oid=None, skipped_paths=(), review=None, review_template_only=False):
     nexus_id = receipt.nexus_id
     mod_path, _, hash_path = paths
     hash_fields = _read_hash(root / hash_path) if (root / hash_path).exists() else {}
@@ -156,7 +158,9 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         validate_paths([*(f"{mod_path}/{path}" for path in merged),
                         *(f"{mod_path}/{path}" for path in new_tree if is_localization(path)),
                         *paths[1:]], mod_path, hash_path)
-    with tempfile.TemporaryDirectory(prefix=".p3-localization-", dir=root) as temporary:
+    reviewing = review is not None or review_template_only
+    run = review_run(root) if reviewing else tempfile.TemporaryDirectory(prefix=".p3-localization-", dir=root)
+    with run as temporary:
         loc = Localization(root, Path(temporary), workspace, skill, mod_path, upstream_oid or base_oid,
                            f"nexus-{nexus_id}", cache)
         with log_stage("工作集"):
@@ -165,9 +169,27 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if preblocked:
             details = blocked_units(document, {})
             raise NeedsHuman("localization", "有 BLOCKED 工作集項目。\n\n" + "\n".join(details))
+        fixed_ids = set()
+        if reviewing:
+            originals = [v for k, v in ours.items() if is_localization(k)]
+            if len(originals) != 1:
+                raise ValueError("review requires one original localization")
+            binding = (nexus_id, receipt_key(receipt), originals[0], new_tree[loc.relative])
+            if review_template_only:
+                emit(json.dumps(review_template(document, *binding), ensure_ascii=True))
+                return None
+            document = apply_review(document, review, *binding)
+            fixed_ids = {u["unitId"] for u in document["units"] if u["reviewStatus"] == "approved"}
+            loc.workset.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
         with log_stage("翻譯"):
-            status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run)
-        document, summary, reviews = prepare_term_reviews(translated, summary)
+            if review is not None and not blocked_units(document, {}):
+                status, summary, translated = 0, {}, document
+            else:
+                status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run)
+        prepared, summary, reviews = prepare_term_reviews(translated, summary)
+        if review is not None:
+            verify_resume(document, prepared)
+        document = prepared
         pending = blocked_units(document, summary)
         if dry_run and reviews:
             issue_title = term_review_title(mod.name, nexus_id)
@@ -211,7 +233,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if pending:
             raise NeedsHuman("localization", "有未核准或 BLOCKED 項目。\n\n" + "\n".join(pending))
         with log_stage("Apply 與 Receipt"):
-            applied, unquoted_keys = loc.apply(document, summary, rewrite_workset=document is not translated)
+            applied, unquoted_keys = loc.apply(document, summary, rewrite_workset=document is not translated,
+                                               **({"reviewed_ids": fixed_ids} if fixed_ids else {}))
         if unquoted_keys and reviews:
             sync_term_review_translations(reviews, read_json(loc.workset), set(unquoted_keys))
         if reviews:
@@ -280,8 +303,13 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         version = f"{plain(mod.baseline_version or '未知')} → {version}"
     title = f"[MOD {action}] {plain(mod.name)} {version}"[:256]
     if dry_run:
+        if review is not None:
+            try:
+                lint_changes(git, base_oid)
+            finally:
+                restore(git, base_oid, paths)
         emit(f"{title}\n\nApply、Receipt、Gate 通過。\n\n{body}")
-        if route != "new":
+        if route != "new" and review is None:
             restore(git, base_oid, paths)
         return None
     if latest(git) != base_oid:
@@ -311,7 +339,11 @@ def restore_new(git, base_oid, paths):
 
 
 def process(root, git, github, drive, processed, number, nexus_id, file_id, skill, scratch, cache,
-            *, max_items=None, mode="manual", dry_run=False, emit=print, route="update", regenerate=False):
+            *, max_items=None, mode="manual", dry_run=False, emit=print, route="update", regenerate=False,
+            review=None, review_template_only=False):
+    reviewing = review is not None or review_template_only
+    if reviewing and (not regenerate or route != "update" or mode != "manual" or review_template_only and not dry_run):
+        raise ValueError("review requires explicit manual update regeneration")
     if git("status", "--porcelain", "--untracked-files=all"):
         raise ValueError("編排需要乾淨的 checkout")
     for attempt in range(2):
@@ -324,6 +356,11 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
         if not receipt or not matches_issue(issue, receipt, route) or receipt_key(receipt) != file_id:
             emit("Issue 已關閉、收件不完整或目標已變更，略過")
             return
+        pulls = github.pulls(branch_for(nexus_id))
+        previous = pulls[0] if len(pulls) == 1 else None
+        reuse = not regenerate and current_pr(pulls, nexus_id, file_id)
+        if not reviewing and not reuse:
+            require_reviewed_input(previous)
         base_oid = git("rev-parse", "HEAD") if dry_run else latest(git)
         if not dry_run and git("rev-parse", "HEAD") != base_oid:
             git("switch", "--detach", base_oid)
@@ -338,14 +375,11 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 version = recorded_version(mod, receipt)
                 emit(f"repo 紀錄已是版本 {version}，跳過。" if version else "main 已收錄相同主檔，略過")
                 return
-            branch = branch_for(nexus_id)
-            pulls = github.pulls(branch)
             if len(pulls) > 1:
                 raise NeedsHuman("publication", "固定分支出現多個開啟中的 PR")
-            if not regenerate and current_pr(pulls, nexus_id, file_id):
+            if reuse:
                 if not dry_run:
-                    pull = pulls[0]
-                    sync_term_review(github, pull, pull.get("body") or "", nexus_id, file_id, emit=emit)
+                    sync_term_review(github, previous, previous.get("body") or "", nexus_id, file_id, emit=emit)
                 emit("同主檔已有開啟中的 PR，略過")
                 return
             with tempfile.TemporaryDirectory(dir=scratch, prefix=f"mod-{nexus_id}-") as work:
@@ -368,7 +402,8 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 outcome = candidate(root, git, github, drive, processed, issue, number, receipt, mod,
                                     paths, archive, new_tree, workspace, cache, skill, base_oid,
                                     max_items=max_items, dry_run=dry_run, emit=emit,
-                                    route=route, upstream_oid=upstream_oid, skipped_paths=skipped_paths)
+                                    route=route, upstream_oid=upstream_oid, skipped_paths=skipped_paths,
+                                    review=review, review_template_only=review_template_only)
             if outcome is False:
                 if route != "new":
                     restore(git, base_oid, paths)
@@ -393,23 +428,30 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             else:
                 resolved.add("merge")
             with log_stage("PR"):
-                pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
+                pr_number = publish(git, github, previous, nexus_id, title, body,
                                     mode, conflicts, upstream_oid or base_oid, paths, route=route,
-                                    mod_staged=True, emit=emit)
+                                    mod_staged=True, emit=emit,
+                                    **({"review": review} if review is not None else {}))
                 github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")
             return
         except NeedsHuman as error:
+            if reviewing:
+                raise
             if not dry_run:
                 github.needs_human(number, error.reason, str(error))
             emit(str(error))
             return
         except TreeError as error:
+            if reviewing:
+                raise
             if not dry_run:
                 github.needs_human(number, "layout", str(error))
             emit(str(error))
             return
         except (ArchiveError, LocalizationError, DriveError) as error:
+            if reviewing:
+                raise
             note = str(error) if isinstance(error, (LocalizationError, DriveError)) else "壓縮檔無法處理"
             if not dry_run:
                 github.needs_human(number, "localization" if isinstance(error, LocalizationError)

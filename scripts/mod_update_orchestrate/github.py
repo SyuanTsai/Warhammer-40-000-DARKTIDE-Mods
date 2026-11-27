@@ -18,7 +18,7 @@ class GitHub(GitHubClient):
         return self._request(method, f"{self._repo_url}/{path}", action, payload,
                              expected=expected)[0]
 
-    def pages(self, path, action):
+    def pages(self, path, action, *, field=None):
         url = f"{self._repo_url}/{path}"
         endpoint = "/" + path.split("?", 1)[0]
         named_path = urlsplit(self._repo_url).path + endpoint
@@ -36,7 +36,11 @@ class GitHub(GitHubClient):
                 if parsed.path != numeric_path:
                     raise GitHubError(action)
             seen.add(url)
-            page, headers = self._request("GET", url, action, expected=list)
+            page, headers = self._request("GET", url, action, expected=dict if field else list)
+            if field:
+                page = page.get(field)
+                if not isinstance(page, list):
+                    raise GitHubError(action)
             if any(not isinstance(item, dict) for item in page):
                 raise GitHubError(action)
             found.extend(page)

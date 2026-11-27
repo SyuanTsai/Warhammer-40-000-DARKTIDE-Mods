@@ -10,6 +10,7 @@ from scripts.mod_update_watch.registry import positive_id
 from .discover import latest_receipt, matches_issue, receipt_key, target, unresolved_external_label
 from .gate import validate_paths, validate_upstream
 from .report import term_review_from_pr
+from .reviewed import review_record
 
 PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_id=([0-9]+|sha256-[a-f0-9]{64})"
                        r"(?: verified_head=([a-f0-9]{40})(?: route=(update|new|hotfix))?)? -->")
@@ -40,6 +41,16 @@ def current_pr(pulls, nexus_id, file_id):
 def pr_marker(body):
     markers = [line for line in body.splitlines() if line.startswith("<!-- mod-update-orchestrate:pr ")]
     return PR_MARKER.fullmatch(markers[0]) if len(markers) == 1 else None
+
+
+def _has_reviewed_evidence(body):
+    return "<!-- reviewed-translation-v1 " in body
+
+
+def require_reviewed_input(previous):
+    if (previous and previous.get("state") != "closed"
+            and _has_reviewed_evidence(previous.get("body") or "")):
+        raise PullHeadError("replacing an open reviewed PR requires new reviewed input")
 
 
 def should_merge(mode, route, blocked, draft):
@@ -105,6 +116,8 @@ def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_r
         reason = "PR 標記無效或與 Issue 目標不符"
     elif not (verified_head := marker[3]):
         reason = "PR 標記缺少 verified_head"
+    elif _has_reviewed_evidence(body):
+        reason = "人工核准譯文須人工合併"
     elif marker[4] == "new" or route == "new":
         reason = "PR 標記為 route=new"
     elif (marker[4] == "hotfix") != (route == "hotfix"):
@@ -206,14 +219,38 @@ def _verify_pull_head(git, github, branch, pull, head, old_head):
     raise PullHeadError(f"PR #{number} head SHA 不符（預期 {head}，實際 {actual}，重讀 {reads} 次）")
 
 
+def _review_target(pull, branch, marker):
+    previous = pr_marker(pull.get("body") or "")
+    if (pull.get("state") != "open" or (pull.get("base") or {}).get("ref") != "main"
+            or (pull.get("head") or {}).get("ref") != branch or not previous
+            or previous.groups()[:2] != marker.groups()[:2] or previous[4] not in (None, "update")):
+        raise PullHeadError("reviewed regeneration requires the same open update PR")
+    return previous
+
+
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
-            paths, *, route="update", mod_staged=False, emit=print):
+            paths, *, route="update", mod_staged=False, emit=print, review=None):
+    if review is None:
+        require_reviewed_input(previous)
     marker = pr_marker(body)
     if (not marker or marker[1] != str(nexus_id) or marker[3]
             or marker[2].startswith("sha256-") != (route == "hotfix")):
         raise ValueError("PR 內文缺少唯一且有效的更新標記")
     branch = branch_for(nexus_id)
     expected = remote_head(git, branch)
+    trailers = ()
+    if review is not None:
+        review_digest, encoded = review_record(review)
+        trailers = ("-m", f"Reviewed-Translation-SHA256: {review_digest}\nReviewed-Translation-Base64: {encoded}")
+        body += f"\n\n<!-- reviewed-translation-v1 sha256={review_digest} data={encoded} -->"
+        if mode != "manual" or route != "update":
+            raise ValueError("reviewed publication requires a manual update")
+        if previous:
+            old = _review_target(previous, branch, marker)
+            if not expected or old[3] != expected:
+                raise PullHeadError("previous verified_head differs from the update branch")
+        elif expected:
+            raise PullHeadError("existing review branch has no matching open PR")
     if previous and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("PR 分支已變更，請重新執行")
     git("-c", "core.autocrlf=false", "add", "-A", "--",
@@ -229,15 +266,27 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
     else:
         git("-c", "user.name=github-actions[bot]", "-c",
             "user.email=41898282+github-actions[bot]@users.noreply.github.com",
-            "commit", "-m", f"chore(mod): update Nexus MOD {nexus_id}")
+            "commit", "-m", f"chore(mod): update Nexus MOD {nexus_id}", *trailers)
         head = git("rev-parse", "HEAD")
     verified_marker = (f"<!-- mod-update-orchestrate:pr nexus_id={nexus_id} file_id={marker[2]}"
                        f" verified_head={head} route={route} -->")
     body = body.replace(marker[0], verified_marker, 1)
-    push(git, branch, expected, head if route == "new" else "HEAD")
+    if review is not None and len(body.encode("utf-8")) > 65536:
+        raise ValueError("review evidence exceeds PR body limit")
+    push(git, branch, expected, head if route == "new" or review is not None else "HEAD")
+    if review is not None and previous:
+        live = _verify_pull_head(git, github, branch, github.pull(previous["number"]), head, expected)
+        if (live.get("number") != previous["number"] or live.get("body") != previous.get("body")
+                or _review_target(live, branch, marker)[0] != old[0] or remote_head(git, branch) != head):
+            raise PullHeadError("PR identity or lease changed before evidence update")
     pull = github.write_pr(previous, branch, title, body, bool(conflicts))
     number = pull["number"]
     pull = _verify_pull_head(git, github, branch, pull, head, expected if previous else None)
+    if review is not None:
+        if (previous and number != previous["number"] or pull.get("number") != number
+                or pull.get("body") != body or _review_target(pull, branch, marker)[3] != head
+                or remote_head(git, branch) != head):
+            raise PullHeadError("review evidence or published head did not match")
     had_blocked = any(label.get("name") == "blocked" for label in pull.get("labels", []))
     draft = bool(conflicts) or (pull["draft"] and not had_blocked)
     github.set_draft(pull, draft)
