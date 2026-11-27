@@ -76,7 +76,7 @@ class TerminologyBridgeTests(unittest.TestCase):
         self.github = stack.enter_context(patch("scripts.mod_update_orchestrate.main.GitHub")).return_value
         self.github.issue.return_value = ISSUE
         self.pr_before = pull(marker())
-        self.github.pulls.side_effect = lambda branch: [self.pr_before]
+        self.github.pulls.side_effect = lambda branch: [self.pr_before] if branch in (None, BRANCH) else []
         self.github.pull.side_effect = lambda number: pull(self.pr_before["body"], self.remote)
         self.github.write_pr.side_effect = lambda previous, branch, title, body, draft: pull(body, self.remote)
         stack.enter_context(patch("scripts.mod_update_orchestrate.main.DriveClient"))
@@ -604,8 +604,8 @@ class TerminologyPublicationTests(unittest.TestCase):
         git, github = Mock(return_value=""), Mock()
         evidence = TerminologyEvidence(b"{}", {}, sha(NEW), sha(NEW))
         with self.assertRaisesRegex(ValueError, "proof does not match"):
-            publish(git, github, None, 417, "Title", marker().split(" verified_head=")[0] + " -->", "manual", [],
-                    BASE, (MOD, "README.md", ".hash/example.hash"), terminology_evidence=evidence)
+            publish(git, github, pull(marker()), 417, "Title", marker().split(" verified_head=")[0] + " -->",
+                    "manual", [], BASE, (MOD, "README.md", ".hash/example.hash"), terminology_evidence=evidence)
         self.assertEqual([call.args[0] for call in git.call_args_list], ["ls-remote"])
         self.assertFalse(github.mock_calls)
 

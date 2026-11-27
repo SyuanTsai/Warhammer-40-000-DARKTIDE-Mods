@@ -146,7 +146,6 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
               route="update", upstream_oid=None, skipped_paths=(), review=None, review_template_only=False,
               terminology_key=None, terminology_request=None):
     nexus_id = receipt.nexus_id
-    file_id = receipt_key(receipt)
     mod_path, _, hash_path = paths
     hash_fields = _read_hash(root / hash_path) if (root / hash_path).exists() else {}
     base_archive = None
@@ -192,6 +191,7 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
             raise NeedsHuman("localization", "有 BLOCKED 工作集項目。\n\n" + "\n".join(details))
         fixed_ids = set()
         if reviewing:
+            file_id = receipt_key(receipt)
             originals = {k: v for k, v in ours.items() if is_localization(k)}
             if len(originals) != 1:
                 raise ValueError("review requires one original localization")
