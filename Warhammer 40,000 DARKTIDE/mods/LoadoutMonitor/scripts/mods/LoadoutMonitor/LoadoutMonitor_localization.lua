@@ -705,6 +705,7 @@ for i = 1,4 do
 	locr[string.format("player_Feats_order_%s",i)] = {
 		en = "Slot: "..tostring(i),
 		["zh-cn"] = "槽位："..tostring(i),
+		["zh-tw"] = "欄位："..tostring(i),
 	}
 end
 local common = {
