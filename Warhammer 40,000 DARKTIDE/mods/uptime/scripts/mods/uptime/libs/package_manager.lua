@@ -1,3 +1,4 @@
+
 -- File: uptime\scripts\mods\uptime\libs\package_manager.lua
 local mod = get_mod("uptime")
 if not mod then
@@ -7,27 +8,34 @@ end
 local loaded_packages = {}
 
 local function is_managed_resource(name)
+    -- The history/detail views may show icons from another class or from an
+    -- earlier mission. These assets need not already be resident in the range.
     return type(name) == "string"
-        and name ~= ""
-        and (
-            string.find(name, "content/ui/textures/icons/traits/weapon", 1, true) ~= nil
-            or string.find(name, "content/ui/materials/icons/weapons/hud", 1, true) ~= nil
-        )
+        and string.sub(name, 1, 11) == "content/ui/"
 end
 
 mod.packages = mod.packages or {}
 
 mod.packages.load_resource = function(name)
     if not is_managed_resource(name) then
-        return
+        return nil
     end
 
-    if loaded_packages[name] then
-        return
+    local id = loaded_packages[name]
+    if id then
+        return id
     end
 
-    loaded_packages[name] = Managers.package:load(name, "uptime", function()
-    end)
+    -- Not every UI texture/material has its own loadable resource package.
+    -- Those already provided by a view package must not be requested by name.
+    if not Application.can_get_resource("package", name) then
+        return nil
+    end
+
+    id = Managers.package:load(name, "uptime", nil, true, false)
+    loaded_packages[name] = id
+
+    return id
 end
 
 mod.packages.unload_resource = function(name)
@@ -42,3 +50,5 @@ mod.packages.unload_resource = function(name)
     -- Weapon-trait icons loaded by Uptime are kept for the rest of the game
     -- session instead.
 end
+
+

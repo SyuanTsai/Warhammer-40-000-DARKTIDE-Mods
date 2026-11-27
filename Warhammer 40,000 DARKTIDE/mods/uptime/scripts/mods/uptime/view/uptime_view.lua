@@ -1,3 +1,4 @@
+
 -- File: uptime/scripts/mods/uptime/view/uptime_view.lua
 local mod = get_mod("uptime"); if not mod then return end
 local DMF = get_mod("DMF")
@@ -13,6 +14,24 @@ local uptime_mission_overview = mod:io_dofile("uptime/scripts/mods/uptime/view/u
 local get_scoreboard_widgets = mod:io_dofile("uptime/scripts/mods/uptime/view/uptime_scoreboard")
 
 local UptimeView = class("UptimeView", "BaseView")
+
+-- Asset packages from the Options view do not necessarily include every
+-- material used by the detail view (notably in tg_shooting_range).
+-- Request independently packaged assets before drawing the view.
+local DETAIL_VIEW_MATERIALS = {
+    "content/ui/materials/frames/dropshadow_heavy",
+    "content/ui/materials/frames/inner_shadow_medium",
+    "content/ui/materials/backgrounds/terminal_basic",
+    "content/ui/materials/bars/heavy/frame_back",
+    "content/ui/materials/bars/heavy/frame_top",
+    "content/ui/materials/icons/buffs/hud/buff_container_with_background",
+    "content/ui/materials/frames/talents/talent_icon_container",
+    "content/ui/materials/backgrounds/default_square",
+    "content/ui/materials/gradients/gradient_vertical",
+    "content/ui/materials/frames/dropshadow_medium",
+    "content/ui/materials/frames/frame_tile_2px",
+    "content/ui/materials/frames/frame_corner_2px",
+}
 
 local show_mission_overview = true
 
@@ -49,7 +68,28 @@ end
 
 function UptimeView:on_enter()
     self._uptime_icon_packages_unloaded = false
-    self:for_all_icons(mod.packages.load_resource)
+    self._uptime_resource_ids = {}
+    self._uptime_resources_ready = false
+
+    local resource_ids = self._uptime_resource_ids
+    local seen = {}
+    local function request_resource(name)
+        if type(name) ~= "string" or name == "" or seen[name] then
+            return
+        end
+
+        seen[name] = true
+        local id = mod.packages.load_resource(name)
+        if id then
+            resource_ids[#resource_ids + 1] = id
+        end
+    end
+
+    self:for_all_icons(request_resource)
+    for i = 1, #DETAIL_VIEW_MATERIALS do
+        request_resource(DETAIL_VIEW_MATERIALS[i])
+    end
+
     if show_mission_overview then
         self:create_mission_section(self.display_values.mission)
     end
@@ -425,6 +465,18 @@ function UptimeView:update(dt, t, input_service, ...)
 end
 
 function UptimeView:draw(dt, t, input_service, layer)
+    -- Managers.package:load is asynchronous. An ID being returned does not
+    -- mean its material is available to the renderer yet.
+    if not self._uptime_resources_ready then
+        local resource_ids = self._uptime_resource_ids
+        for i = 1, #resource_ids do
+            if not Managers.package:has_loaded_id(resource_ids[i]) then
+                return
+            end
+        end
+        self._uptime_resources_ready = true
+    end
+
     self:_draw_row_grid(dt, t, input_service)
     self:_draw_scoreboard_grid(dt, t, input_service)
     return UptimeView.super.draw(self, dt, t, input_service, layer)
@@ -538,3 +590,5 @@ function UptimeView:setup_tooltip(tooltip_data, hovered_widget, hotspot_offset)
 end
 
 return UptimeView
+
+

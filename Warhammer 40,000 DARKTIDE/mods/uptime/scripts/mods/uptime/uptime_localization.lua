@@ -55,7 +55,7 @@ return {
             ": " ..
             Localize("loc_hud_presence_mission") .. " %s - " .. Localize("loc_keybind_category_combat") .. " %s (%s)",
     },
-    mod_name = { en = "Uptime 2" },
+    mod_name = { en = "Uptime 2", ["zh-tw"] = "Uptime 2" },
     mod_description = {
         en = "Tracks uptime of buffs.",
         fr = "Suit le temps d'activité des bonus.",
@@ -501,7 +501,7 @@ return {
     },
 
     -- Ingame loc keys
-    loc_note_empty_placeholder = { en = "--" },
+    loc_note_empty_placeholder = { en = "--", ["zh-tw"] = "--" },
     loc_uptime_save = { en = Localize("loc_confirm") },
     loc_note_save_failed = { en = Localize("loc_popup_header_error") },
 

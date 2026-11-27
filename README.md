@@ -853,10 +853,10 @@
 
 ### [Uptime 2 - Buff Data and Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/898)
     觀察天賦的運作狀況
-- MOD 網站最後更新日期：Last updated 01 October 2026, 8:49PM（Nexus 頁面原文；UTC：2026-10-01T20:49:05Z；Asia/Taipei：2026-10-02 04:49:05）
-- MOD 版本：2.15
-- MOD 檔案名稱：Uptime (5) 898 2.15 2026-10-01T20-49Z l24cL2qWj.zip
-- 手動維護最後下載日期：2026-10-06
+- MOD 網站最後更新日期：Last updated 14 October 2026, 04:36AM
+- MOD 版本：2.16
+- MOD 檔案名稱：Uptime (5) 898 2.16 2026-10-13T20-36Z K6YR06iYX
+- 手動維護最後下載日期：2026-11-25
 
 # 移除的MOD
 
