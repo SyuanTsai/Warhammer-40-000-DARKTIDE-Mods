@@ -23,29 +23,11 @@ return {
 		ru = "Таланты вставлены!",
 		["zh-tw"] = "已貼上天賦配點！",
 	},
-	msg_code_copied = {
-		en = "Talents code copied! This code may expire after a game update",
-		["zh-cn"] = "已复制天赋加点代码！此代码可能会在游戏更新后失效",
-		ru = "Код билда скопирован! Срок действия этого кода может истечь после обновления игры.",
-		["zh-tw"] = "已複製天賦配點程式碼！此程式碼可能會在遊戲更新後失效",
-	},
-	msg_code_applied = {
-		en = "Talents code applied!",
-		["zh-cn"] = "已应用天赋加点代码！",
-		ru = "Код билда применён!",
-		["zh-tw"] = "已套用天賦配點！",
-	},
 	err_unknown = {
 		en = "Error: unknown error",
 		["zh-cn"] = "错误：未知错误",
 		ru = "Ошибка: неизвестная ошибка",
 		["zh-tw"] = "錯誤：未知錯誤",
-	},
-	err_invalid_talents = {
-		en = "Error: current talents invalid",
-		["zh-cn"] = "错误：当前天赋无效",
-		ru = "Ошибка: текущие таланты недействительны",
-		["zh-tw"] = "錯誤：目前天賦無效",
 	},
 	err_archetype_mismatch = {
 		en = "Error: archetype mismatch",
@@ -58,12 +40,6 @@ return {
 		["zh-cn"] = "错误：天赋代码无效或已过期",
 		ru = "Ошибка: код таланта недействителен или срок его действия истёк",
 		["zh-tw"] = "錯誤：天賦配點無效或已過期",
-	},
-	err_argument = {
-		en = "Error: command argument invalid",
-		["zh-cn"] = "错误：命令参数无效",
-		ru = "Ошибка: неверный аргумент команды",
-		["zh-tw"] = "錯誤：指令參數無效",
 	},
 	err_clipboard_notfound = {
 		en = "Error: no talents in the clipboard",
