@@ -490,7 +490,7 @@ for breed_name, breed in pairs(Breeds) do
         end
 
         loc[breed_name] = {
-            en = display_name,
+            en = display_name
         }
     end
 end

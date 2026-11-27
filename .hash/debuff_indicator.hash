@@ -1,0 +1,13 @@
+nexus_id=137
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/137
+nexus_page_version=1.7.4
+nexus_last_updated=2026-06-23T18:40:02Z
+main_file_id=5737
+version=1.7.5
+main_file_uploaded_at_utc=2026-06-23T18:40:02Z
+filename=Debuff Indicator 137 1.7.5 2026-06-23T18-40Z DEJ2kE3Sx.zip
+size_bytes=11862
+sha256=319bc43bcd08abe852abed984618997dd3cdb4ba72ed6aea50b30c26a8f7eba5
+acquisition_method=drive-intake
+drive_intake_md5=a605b8457a9436142a24a8f1d631db85
+repo_directory=debuff_indicator
