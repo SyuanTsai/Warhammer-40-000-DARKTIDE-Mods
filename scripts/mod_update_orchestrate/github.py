@@ -126,10 +126,11 @@ class GitHub(GitHubClient):
             self.label(number, "needs-human", False)
 
     def pulls(self, branch):
-        owner = self._repo_url.split("/")[-2]
-        query = urlencode({"state": "open", "head": f"{owner}:{branch}", "base": "main",
-                           "per_page": 100})
-        return self.pages(f"pulls?{query}", "列出同分支的開啟 PR")
+        filters = {"state": "open", "base": "main", "per_page": 100}
+        if branch is not None:
+            owner = self._repo_url.split("/")[-2]
+            filters["head"] = f"{owner}:{branch}"
+        return self.pages(f"pulls?{urlencode(filters)}", "列出開啟的 PR")
 
     def pull(self, number):
         return self.api("GET", f"pulls/{number}", "重讀更新 PR")

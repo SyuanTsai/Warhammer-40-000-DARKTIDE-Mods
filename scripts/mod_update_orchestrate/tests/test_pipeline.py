@@ -87,9 +87,10 @@ class DiscoverTests(unittest.TestCase):
         github = Mock()
         github.list_open_issues.return_value = [issue()]
         github.comments.return_value = [comment(marker())]
-        github.pages.return_value = [{"pull_request": {}, "body":
-            "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"}]
-        mods = [SimpleNamespace(nexus_id=123, hash_file=None, baseline_version="1")]
+        previous = {"state": "open", "head": {"ref": "auto/mod-update/123", "sha": "a" * 40},
+                    "base": {"ref": "main"}, "body": "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"}
+        github.pulls.side_effect = lambda branch: [previous] if branch == previous["head"]["ref"] else []
+        mods = [SimpleNamespace(nexus_id=123, name="Example", hash_file=None, baseline_version="1")]
         with tempfile.TemporaryDirectory() as tmp, patch(
                 "scripts.mod_update_orchestrate.main.GitHub", return_value=github), patch(
                 "scripts.mod_update_orchestrate.main.load_registry", return_value=(mods, [])):
@@ -139,9 +140,11 @@ class DiscoverTests(unittest.TestCase):
         github = Mock()
         github.list_open_issues.return_value = [issue()]
         github.comments.return_value = [comment(marker())]
-        github.pages.return_value = [{"pull_request": {}, "body": (
+        previous = {"state": "open", "head": {"ref": "Update/Example-2", "sha": "a" * 40},
+                    "base": {"ref": "main"}, "body": (
             "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 verified_head="
-            + "a" * 40 + " -->")}]
+            + "a" * 40 + " route=update -->")}
+        github.pulls.side_effect = lambda branch: [previous] if branch == previous["head"]["ref"] else []
         for variable, flags, actions in [("", [], []), ("auto", ["--review-mode", "manual"], []),
                                          ("auto", ["--skip-updates"], ["merge-check"]),
                                          ("manual", ["--review-mode", "auto"], ["merge-check"])]:
@@ -149,7 +152,7 @@ class DiscoverTests(unittest.TestCase):
                     "MOD_UPDATE_REVIEW_MODE": variable, "GITHUB_OUTPUT": ""}), patch(
                     "scripts.mod_update_orchestrate.main.GitHub", return_value=github), patch(
                     "scripts.mod_update_orchestrate.main.load_registry", return_value=(
-                        [SimpleNamespace(nexus_id=123, hash_file=None)], None)), patch(
+                        [SimpleNamespace(nexus_id=123, name="Example", hash_file=None)], None)), patch(
                     "builtins.print") as printed:
                 # When
                 result = main(["discover", *flags])
@@ -340,12 +343,15 @@ class ArchiveTests(unittest.TestCase):
         base, previous_head, head = ("a" * 40, "b" * 40, "c" * 40)
         branch_ref = "refs/heads/auto/mod-update/123"
         body = "<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 -->"
-        previous = {"number": 8, "head": {"sha": previous_head}, "body": body}
+        previous = {"number": 8, "head": {"sha": previous_head, "ref": "auto/mod-update/123"},
+                    "state": "open", "base": {"ref": "main"},
+                    "body": body.replace(" -->", f" verified_head={previous_head} -->")}
         github = Mock()
         github.issue.return_value = issue()
         github.comments.return_value = [comment(marker())]
-        github.pulls.return_value = [previous]
-        github.write_pr.return_value = {"number": 8, "head": {"sha": head}, "draft": False}
+        github.pulls.side_effect = lambda branch: [previous] if branch == previous["head"]["ref"] else []
+        github.write_pr.return_value = {**previous, "head": {**previous["head"], "sha": head}, "draft": False,
+                                        "body": body.replace(" -->", f" verified_head={head} route=update -->")}
 
         def git_response(*args):
             if args[:2] == ("rev-parse", "FETCH_HEAD"):
@@ -359,7 +365,7 @@ class ArchiveTests(unittest.TestCase):
             return ""
 
         git = Mock(side_effect=git_response)
-        mod = SimpleNamespace(directory="Example", hash_file=None, baseline_version="1")
+        mod = SimpleNamespace(directory="Example", name="Example", hash_file=None, baseline_version="1")
         with tempfile.TemporaryDirectory() as tmp, patch(
                 "scripts.mod_update_orchestrate.process.registry_mod", return_value=mod), patch(
                 "scripts.mod_update_orchestrate.process.download"), patch(
@@ -471,9 +477,13 @@ class HumanAndPrTests(unittest.TestCase):
         path = "Warhammer 40,000 DARKTIDE/mods/Example"
         ref = "refs/heads/auto/mod-update/123"
         github = Mock()
-        github.write_pr.return_value = {"number": 7, "head": {"sha": head}, "draft": False}
+        branch = ref.removeprefix("refs/heads/")
+        previous = {"number": 7, "state": "open", "base": {"ref": "main"},
+                    "head": {"sha": expected, "ref": branch},
+                    "body": body.replace(" -->", f" verified_head={expected} -->")}
+        github.write_pr.return_value = {**previous, "head": {"ref": branch, "sha": head}, "draft": False,
+                                        "body": body.replace(" -->", f" verified_head={head} route=update -->")}
         github.discussions_resolved.return_value = True
-        previous = {"number": 7, "head": {"sha": expected}}
         git = Mock(side_effect=lambda *args: {"ls-remote": f"{expected}\t{ref}",
                          "rev-parse": head, "diff": "README.md\0"}.get(args[0], ""))
         # When
@@ -660,7 +670,9 @@ class PublishHeadTests(unittest.TestCase):
         self.sleep = self.enterContext(patch("time.sleep"))
 
     def pull(self, sha, **fields):
-        return {"number": 7, "head": {"sha": sha}, "draft": False, **fields}
+        return {"number": 7, "head": {"sha": sha, "ref": self.branch},
+                "body": self.body.replace(" -->", f" verified_head={sha} route=update -->"),
+                "state": "open", "base": {"ref": "main"}, "draft": False, **fields}
 
     def publish(self):
         return publish(self.git, self.github, self.previous, 123, "標題", self.body, "auto", [],
@@ -813,16 +825,15 @@ class PublishHeadTests(unittest.TestCase):
                 self.assert_verification_calls([1])
                 self.assert_no_finalize()
 
-    # Scenario: 建立 PR 時，回應恰好含有推送前的遠端 SHA。
-    # Purpose: 只有更新既有 PR 時才可將舊 SHA 視為暫時狀態。
-    def test_UnitT80_create_response_does_not_retry_old_head(self):
-        # Given
-        self.previous = None
-        # When
-        with self.assertRaisesRegex(PullHeadError, rf"PR #7.*實際 {self.old_head}.*重讀 0 次"):
-            self.publish()
-        # Then
-        self.assert_verification_calls([], remote_checks=1)
+    # Scenario: A versioned branch appears after lookup, before the first publication.
+    # Purpose: An occupied ref without an identified PR must never be leased for replacement.
+    def test_UnitT80_create_rejects_occupied_branch(self):
+        self.ref = "refs/heads/Update/Example-2"
+        with self.assertRaisesRegex(ValueError, "缺少相符"):
+            publish(self.git, self.github, None, 123, "標題", self.body, "auto", [],
+                    "d" * 40, self.paths, branch="Update/Example-2")
+        self.assertEqual(self.git.call_args_list, [call("ls-remote", "--heads", "origin", self.ref)])
+        self.github.write_pr.assert_not_called()
         self.assert_no_finalize()
 
 
@@ -853,7 +864,7 @@ class MergeCheckTests(unittest.TestCase):
         if path == "issues/7":
             response = issue()
         elif path.startswith("pulls?"):
-            response = [{"number": 8}]
+            response = [{"number": 8}] if "head=" in path else [self.pull]
         elif path == "pulls/8":
             self.assertEqual(method, "GET")
             response = self.pull

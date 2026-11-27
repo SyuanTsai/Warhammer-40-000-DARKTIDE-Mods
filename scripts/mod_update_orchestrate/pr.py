@@ -1,5 +1,6 @@
 """以固定分支發布更新，並核對自動合併條件。"""
 
+import hashlib
 import re
 import subprocess
 import time
@@ -30,6 +31,79 @@ def run_git(root, *args, input=None, raw=False):
 
 def branch_for(nexus_id):
     return f"auto/mod-update/{nexus_id}"
+
+
+def _ref_component(value):
+    words = re.sub(r"\s+", "-", value.strip())
+    if (len(words) <= 96 and re.fullmatch(r"[A-Za-z0-9_-]+(?:\.[A-Za-z0-9_-]+)*", words)
+            and not words.lower().endswith(".lock")):
+        return words
+    prefix = re.sub(r"[^A-Za-z0-9_-]+", "-", words).strip("-")[:72]
+    digest = hashlib.sha256(value.encode("utf-8")).hexdigest()[:16]
+    return f"{prefix}-{digest}" if prefix else digest
+
+
+def update_branch(name, version):
+    if not isinstance(name, str) or not name.strip():
+        raise ValueError("缺少登錄的 MOD 名稱")
+    if not isinstance(version, str) or version.strip().casefold() in {"", "unknown", "未知", "（待補）"}:
+        raise ValueError("缺少已確認的 Nexus 主檔版本")
+    return f"Update/{_ref_component(name)}-{_ref_component(version)}"
+
+
+def _check_existing_update(pull, branch, nexus_id, file_id, *, identify_legacy=False):
+    marker = pr_marker(pull.get("body") or "")
+    head = pull.get("head") or {}
+    if (not marker or marker.groups()[:2] != (str(nexus_id), str(file_id))
+            or marker[4] not in (None, "update")):
+        raise ValueError(f"更新分支 {branch} 的 PR 標記與目標不符")
+    if (head.get("ref") != branch or (pull.get("base") or {}).get("ref") != "main"
+            or pull.get("state") != "open" or not re.fullmatch("[a-f0-9]{40}", head.get("sha") or "")):
+        raise ValueError(f"更新分支 {branch} 的 PR 來源、目標或 head SHA 不符")
+    # Historical markers can identify a PR for deduplication. Replacing or merging
+    # its tip still requires an independently recorded, matching verified_head.
+    if identify_legacy and branch == branch_for(nexus_id) and marker[3] is None:
+        return
+    if marker[3] != head["sha"]:
+        raise ValueError(f"更新分支 {branch} 的 PR 缺少相符的 verified_head")
+
+
+def _check_unique_legacy(pulls_for, previous, nexus_id, file_id):
+    # Without a target version, the alternate ref cannot be reconstructed.
+    matches = [pull for pull in pulls_for(None) if current_pr([pull], nexus_id, file_id)]
+    if (len(matches) != 1 or not positive_id(previous.get("number"))
+            or matches[0].get("number") != previous["number"]
+            or (matches[0].get("head") or {}).get("ref") != branch_for(nexus_id)
+            or (matches[0].get("head") or {}).get("sha") != previous["head"]["sha"]):
+        raise ValueError("無法確認相同目標只有一個開啟中的舊版 PR")
+
+
+def resolve_update(pulls_for, nexus_id, file_id, name, version):
+    legacy = branch_for(nexus_id)
+    legacy_pulls = pulls_for(legacy)
+    previous = None
+    if current_pr(legacy_pulls, nexus_id, file_id):
+        if len(legacy_pulls) != 1:
+            raise ValueError(f"更新分支 {legacy} 有多個開啟中的 PR")
+        previous = legacy_pulls[0]
+        _check_existing_update(previous, legacy, nexus_id, file_id, identify_legacy=True)
+    try:
+        branch = update_branch(name, version)
+    except ValueError:
+        if previous:
+            _check_unique_legacy(pulls_for, previous, nexus_id, file_id)
+            return legacy, previous
+        raise
+    pulls = pulls_for(branch)
+    if previous:
+        if current_pr(pulls, nexus_id, file_id):
+            raise ValueError(f"{branch} 與 {legacy} 同時存在相同目標的 PR")
+        return legacy, previous
+    if len(pulls) > 1:
+        raise ValueError(f"更新分支 {branch} 有多個開啟中的 PR")
+    if pulls:
+        _check_existing_update(pulls[0], branch, nexus_id, file_id)
+    return branch, pulls[0] if pulls else None
 
 
 def current_pr(pulls, nexus_id, file_id):
@@ -72,7 +146,8 @@ def remote_head(git, branch):
     return oid
 
 
-def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_run=False, emit=print):
+def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_run=False, emit=print,
+                mod=None):
     issue = github.issue(number)
     if route == "hotfix":
         comments = github.comments(number)
@@ -85,7 +160,13 @@ def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_r
         emit(f"Issue #{number} 已關閉或目標已變更，略過合併檢查。")
         return
     branch = branch_for(nexus_id)
-    pulls = github.pulls(branch)
+    if route == "update" and mod is not None:
+        receipt = latest_receipt(github.comments(number), nexus_id)
+        version = receipt.version if receipt and matches_issue(issue, receipt, route) else None
+        branch, previous = resolve_update(github.pulls, nexus_id, file_id, mod.name, version)
+        pulls = [previous] if previous else []
+    else:
+        pulls = github.pulls(branch)
     if len(pulls) != 1 or not (pr_number := positive_id(pulls[0].get("number"))):
         emit(f"Issue #{number} 的固定分支找不到唯一且開啟的 PR，略過合併檢查。")
         return
@@ -111,12 +192,14 @@ def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_r
         reason = "PR 路線與收件類型不符"
     elif head.get("sha") != verified_head or remote_head(git, branch) != verified_head:
         reason = "PR head 或遠端固定分支 head 與 verified_head 不符"
-    elif not github.discussions_resolved(pull):
-        if not dry_run:
-            github.note(pr_number, "auto-merge", UNRESOLVED_THREADS)
-        reason = UNRESOLVED_THREADS
     else:
-        if dry_run:
+        if route == "update" and mod is None:
+            _check_unique_legacy(github.pulls, pull, nexus_id, file_id)
+        if not github.discussions_resolved(pull):
+            if not dry_run:
+                github.note(pr_number, "auto-merge", UNRESOLVED_THREADS)
+            emit(f"PR #{pr_number} 略過自動合併，{UNRESOLVED_THREADS}")
+        elif dry_run:
             emit(f"PR #{pr_number} 符合自動合併資格（dry-run）。")
         else:
             sync_term_review(github, pull, body, nexus_id, file_id, emit=emit)
@@ -207,13 +290,20 @@ def _verify_pull_head(git, github, branch, pull, head, old_head):
 
 
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
-            paths, *, route="update", mod_staged=False, emit=print):
+            paths, *, route="update", mod_staged=False, emit=print, branch=None):
     marker = pr_marker(body)
     if (not marker or marker[1] != str(nexus_id) or marker[3]
             or marker[2].startswith("sha256-") != (route == "hotfix")):
         raise ValueError("PR 內文缺少唯一且有效的更新標記")
-    branch = branch_for(nexus_id)
+    branch = branch or branch_for(nexus_id)
+    if route == "update":
+        if previous:
+            _check_existing_update(previous, branch, nexus_id, marker[2])
+        elif branch == branch_for(nexus_id):
+            raise ValueError("建立更新分支需要已確認的 MOD 名稱與主檔版本")
     expected = remote_head(git, branch)
+    if route == "update" and expected and not previous:
+        raise ValueError(f"更新分支 {branch} 已存在且缺少相符的開啟 PR")
     if previous and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("PR 分支已變更，請重新執行")
     git("-c", "core.autocrlf=false", "add", "-A", "--",
@@ -238,6 +328,8 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
     pull = github.write_pr(previous, branch, title, body, bool(conflicts))
     number = pull["number"]
     pull = _verify_pull_head(git, github, branch, pull, head, expected if previous else None)
+    if route == "update":
+        _check_existing_update(pull, branch, nexus_id, marker[2])
     had_blocked = any(label.get("name") == "blocked" for label in pull.get("labels", []))
     draft = bool(conflicts) or (pull["draft"] and not had_blocked)
     github.set_draft(pull, draft)
