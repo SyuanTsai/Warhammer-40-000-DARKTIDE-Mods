@@ -2,24 +2,31 @@
 
 from pathlib import PurePosixPath
 
-from .tree import is_localization
+from scripts.mod_update_watch.safe_extract import UnsafeArchive, _path_parts
+
+from .tree import TreeError, is_localization
 
 _ARCHIVES = {".zip", ".7z", ".rar", ".tar", ".gz", ".tgz", ".xz", ".bz2"}
 _ARTIFACTS = {"localization-workset.json", "new.lua", "merged.lua", "state.json",
               "summary.json", "summary.md"}
 
 
+class GateError(TreeError):
+    pass
+
+
 def validate_paths(paths, mod_path, hash_path):
     for path in paths:
-        leaf = PurePosixPath(path)
-        if (path.startswith("/") or "\\" in path or set(path.split("/")) & {"", ".", ".."}
-                or any(part.casefold() == ".git" for part in leaf.parts)):
-            raise ValueError("Gate 拒絕不安全路徑")
+        try:
+            parts = _path_parts(path, allow_directory_entry=False)
+        except UnsafeArchive:
+            raise GateError(f"Gate 拒絕不安全路徑：{path!r}") from None
         if path in {"README.md", hash_path}:
             continue
+        leaf = PurePosixPath(parts[-1])
         if (not path.startswith(mod_path + "/") or leaf.suffix.casefold() in _ARCHIVES
                 or leaf.name.casefold() in _ARTIFACTS):
-            raise ValueError(f"Gate 拒絕路徑：{path}")
+            raise GateError(f"Gate 拒絕路徑：{path!r}")
 
 
 def validate_git(git, base_oid, mod_path, hash_path):

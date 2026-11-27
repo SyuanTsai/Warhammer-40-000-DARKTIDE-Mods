@@ -16,14 +16,14 @@ from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, 
 from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
 from .eol import FORMAT_ONLY, MIXED_EOL, default_format, normalize, repo_bytes
-from .gate import validate_git, validate_paths
-from .localization import Localization, LocalizationError, read_json
+from .gate import validate_git, validate_paths, validate_upstream
+from .localization import Localization, LocalizationError, log_stage, read_json
 from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
 from .pr import branch_for, current_pr, publish, stage_raw, sync_term_review, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
 from .report import (
-    blocked_units, cell, plain, pr_body, prepare_term_reviews, sync_term_review_translations,
+    blocked_units, cell, plain, pr_body, prepare_term_reviews, skipped_git_note, sync_term_review_translations,
     term_review_log, term_review_title, unquoted_note,
 )
 from .section import DEFAULT_SECTION, choose_section, describe
@@ -70,17 +70,19 @@ def new_mod(root, issue, receipt, directory, tree):
     return TrackedMod(receipt.nexus_id, plain(name), directory, "hash", None, None, None, None, None)
 
 
-def download(drive, receipt, workspace):
+def download(drive, receipt, workspace, *, skipped_paths=None):
     path = workspace / "new-archive"
-    drive.download(receipt.drive_file_id, path, DEFAULT_LIMITS.max_archive_bytes)
-    if not receipt.source and digest(path, "md5") != receipt.md5:
-        raise NeedsHuman("archive", "下載檔案 MD5 與收件標記不符")
-    if receipt.sha256 and digest(path) != receipt.sha256:
-        raise NeedsHuman("archive", "下載檔案 SHA-256 與收件標記不符")
-    try:
-        extract(path, workspace / "new")
-    except ArchiveError as error:
-        raise NeedsHuman("archive", f"解壓拒絕（{type(error).__name__}）") from None
+    with log_stage("下載"):
+        drive.download(receipt.drive_file_id, path, DEFAULT_LIMITS.max_archive_bytes)
+        if not receipt.source and digest(path, "md5") != receipt.md5:
+            raise NeedsHuman("archive", "下載檔案 MD5 與收件標記不符")
+        if receipt.sha256 and digest(path) != receipt.sha256:
+            raise NeedsHuman("archive", "下載檔案 SHA-256 與收件標記不符")
+    with log_stage("解壓"):
+        try:
+            extract(path, workspace / "new", skipped_paths=skipped_paths)
+        except ArchiveError as error:
+            raise NeedsHuman("archive", f"解壓拒絕（{type(error).__name__}）：{error}") from None
     return path
 
 
@@ -122,19 +124,23 @@ def _budget(github, number, nexus_id, receipt, mod, summary):
 
 def candidate(root, git, github, drive, processed, issue, number, receipt, mod, paths, archive,
               new_tree, workspace, cache, skill, base_oid, *, max_items, dry_run, emit,
-              route="update", upstream_oid=None):
+              route="update", upstream_oid=None, skipped_paths=()):
     nexus_id = receipt.nexus_id
     mod_path, _, hash_path = paths
     hash_fields = _read_hash(root / hash_path) if (root / hash_path).exists() else {}
-    base_archive = None if route == "new" else find_base(drive, processed, nexus_id, hash_fields.get("sha256"), workspace,
-                             exclude=receipt.drive_file_id,
-                             preferred_md5=hash_fields.get("drive_intake_md5"))
+    base_archive = None
+    if route != "new":
+        with log_stage("下載封存基準"):
+            base_archive = find_base(
+                drive, processed, nexus_id, hash_fields.get("sha256"), workspace,
+                exclude=receipt.drive_file_id, preferred_md5=hash_fields.get("drive_intake_md5"))
     base = None
     if base_archive:
         try:
             base_root = workspace / "base"
-            extract(base_archive, base_root)
-            base = read_tree(locate_mod(base_root, mod.directory))
+            with log_stage("解壓封存基準"):
+                extract(base_archive, base_root)
+                base = read_tree(locate_mod(base_root, mod.directory))
         except (ArchiveError, ValueError):
             emit("封存基準無法安全解壓或定位，使用無基準路線")
     repo_mod = root / mod_path
@@ -146,18 +152,21 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
     private_recorded = hash_fields.get("private_fix") == "true"
     merged, conflicts = (non_local, []) if route == "new" else merge_tree(
         ours_non_local, base, non_local, workspace, repo=ours)
-    validate_paths([*(f"{mod_path}/{path}" for path in merged),
-                    *(f"{mod_path}/{path}" for path in new_tree if is_localization(path)),
-                    *paths[1:]], mod_path, hash_path)
+    with log_stage("Gate 路徑預檢"):
+        validate_paths([*(f"{mod_path}/{path}" for path in merged),
+                        *(f"{mod_path}/{path}" for path in new_tree if is_localization(path)),
+                        *paths[1:]], mod_path, hash_path)
     with tempfile.TemporaryDirectory(prefix=".p3-localization-", dir=root) as temporary:
         loc = Localization(root, Path(temporary), workspace, skill, mod_path, upstream_oid or base_oid,
                            f"nexus-{nexus_id}", cache)
-        document = loc.generate(new_tree)
+        with log_stage("工作集"):
+            document = loc.generate(new_tree)
         preblocked = [unit for unit in document["units"] if unit["action"] == "BLOCKED"]
         if preblocked:
             details = blocked_units(document, {})
             raise NeedsHuman("localization", "有 BLOCKED 工作集項目。\n\n" + "\n".join(details))
-        status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run)
+        with log_stage("翻譯"):
+            status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run)
         document, summary, reviews = prepare_term_reviews(translated, summary)
         pending = blocked_units(document, summary)
         if dry_run and reviews:
@@ -200,7 +209,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
             raise NeedsHuman("localization", f"翻譯轉接層失敗（回傳碼 {status}）")
         if pending:
             raise NeedsHuman("localization", "有未核准或 BLOCKED 項目。\n\n" + "\n".join(pending))
-        applied, unquoted_keys = loc.apply(document, summary, rewrite_workset=document is not translated)
+        with log_stage("Apply 與 Receipt"):
+            applied, unquoted_keys = loc.apply(document, summary, rewrite_workset=document is not translated)
         if unquoted_keys and reviews:
             sync_term_review_translations(reviews, read_json(loc.workset), set(unquoted_keys))
         if reviews:
@@ -215,7 +225,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         raise NeedsHuman("private-fix", "更新候選變更已登記的私人修正檔，請確認修正仍有效。\n\n"
                          + "\n".join(f"- {cell(path)}" for path in changed_private_paths))
 
-    validate_paths((f"{mod_path}/{path}" for path in merged), mod_path, hash_path)
+    with log_stage("Gate 候選路徑"):
+        validate_paths((f"{mod_path}/{path}" for path in merged), mod_path, hash_path)
     endings = sorted(merged)
     folded = {name.casefold() for name in endings}
     if len(endings) != len(folded) or any(
@@ -248,13 +259,16 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
     if deleted:
         git("update-index", "--force-remove", "--", *(f"{mod_path}/{path}" for path in deleted))
     stage_raw(git, (f"{mod_path}/{path}" for path in written), preserve_mode=True)
-    validate_git(git, upstream_oid or base_oid, mod_path, hash_path)
+    with log_stage("Gate Git 異動"):
+        validate_git(git, upstream_oid or base_oid, mod_path, hash_path)
     code_changes = [(path, delta) for path, delta in change_summary({} if route == "new" else ours, merged, workspace)
                     if not is_localization(path) or delta == FORMAT_ONLY or MIXED_EOL in delta]
     if layout_note:
         code_changes.append((loc.relative, layout_note))
     if unquoted_keys:
         code_changes.append((loc.relative, unquoted_note(unquoted_keys)))
+    if skipped_paths:
+        code_changes.append(("上游封存", skipped_git_note(skipped_paths)))
     body = pr_body(number, base is not None, document, summary, conflicts, code_changes,
                    nexus_id, receipt_key(receipt), route=route, section=section, classification=classification,
                    private_files=private_files, private_recorded=private_recorded, term_reviews=reviews,
@@ -335,7 +349,8 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 return
             with tempfile.TemporaryDirectory(dir=scratch, prefix=f"mod-{nexus_id}-") as work:
                 workspace = Path(work)
-                archive = download(drive, receipt, workspace)
+                skipped_paths = []
+                archive = download(drive, receipt, workspace, skipped_paths=skipped_paths)
                 extracted = locate_mod(workspace / "new", mod.directory if mod else None)
                 new_tree = read_tree(extracted, include_localization=True)
                 if route == "new":
@@ -344,13 +359,15 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 hash_path = f".hash/{mod.hash_file or mod.directory + '.hash'}"
                 paths = (mod_path, "README.md", hash_path)
                 if route == "new":
+                    with log_stage("Gate 上游路徑預檢"):
+                        validate_upstream([f"{mod_path}/{path}" for path in new_tree], mod_path)
                     cleanup = paths
                     install_tree(root / mod_path, {}, new_tree)
                     upstream_oid = upstream_commit(git, base_oid, mod_path, new_tree, nexus_id)
                 outcome = candidate(root, git, github, drive, processed, issue, number, receipt, mod,
                                     paths, archive, new_tree, workspace, cache, skill, base_oid,
                                     max_items=max_items, dry_run=dry_run, emit=emit,
-                                    route=route, upstream_oid=upstream_oid)
+                                    route=route, upstream_oid=upstream_oid, skipped_paths=skipped_paths)
             if outcome is False:
                 if route != "new":
                     restore(git, base_oid, paths)
@@ -362,7 +379,8 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 return
             # 使用 main 基準，涵蓋新增 MOD 的上游提交與最終候選。
             try:
-                lint_changes(git, base_oid)
+                with log_stage("Gate 本地化語法"):
+                    lint_changes(git, base_oid)
             except (LocalizationSyntaxError, ValueError):
                 if route != "new":
                     restore(git, base_oid, paths)
@@ -373,10 +391,11 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 github.needs_human(number, "merge", "\n".join(f"- merge-conflict：{cell(item)}" for item in conflicts))
             else:
                 resolved.add("merge")
-            pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
-                                mode, conflicts, upstream_oid or base_oid, paths, route=route, mod_staged=True,
-                                emit=emit)
-            github.resolve(number, resolved)
+            with log_stage("PR"):
+                pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
+                                    mode, conflicts, upstream_oid or base_oid, paths, route=route,
+                                    mod_staged=True, emit=emit)
+                github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")
             return
         except NeedsHuman as error:

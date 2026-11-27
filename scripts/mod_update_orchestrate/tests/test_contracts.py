@@ -93,6 +93,17 @@ class PublicationTests(unittest.TestCase):
             with self.subTest(path=path), self.assertRaises(ValueError):
                 validate_paths([path], mod, hash_path)
 
+    # Scenario: 候選樹含解壓器也會拒絕的片段或控制字元。
+    # Purpose: Gate 拒絕相同路徑，診斷保留路徑且不換行。
+    def test_UnitT15_gate_displays_escaped_unsafe_paths(self):
+        mod = "mods/Example"
+        for path in (f"{mod}/.GiT/config", f"{mod}/CON.lua", f"{mod}/leaf.",
+                     f"{mod}/a:stream", f"{mod}/bad\nname", f"{mod}/dir/"):
+            with self.subTest(path=path):
+                with self.assertRaises(ValueError) as error:
+                    validate_paths([path], mod, None)
+                self.assertEqual(str(error.exception), f"Gate 拒絕不安全路徑：{path!r}")
+
     # Scenario: 演練 manual、auto、draft、blocked 與未來新增路線。
     # Purpose: 只有合格的更新 PR 自動合併。
     def test_UnitT20_merge_requires_auto_unblocked_update(self):

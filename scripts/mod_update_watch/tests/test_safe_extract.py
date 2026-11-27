@@ -48,7 +48,9 @@ class ArchiveTests(unittest.TestCase):
         """Scenario: Given a valid file followed by an unsafe path, when extracting, then the destination stays empty.
         Purpose: Verify validation covers the entire archive before writing.
         """
-        for name in ("../evil", "/abs", "C:x", "nested/C:x", "a/../b", "folder\\evil", "nul\0name"):
+        for name in ("../evil", "/abs", "C:x", "nested/C:x", "a/../b",
+                     "folder\\evil", "nul\0name", "mod//file", "mod/NUL.txt",
+                     "mod/.git/../file", "mod/.GiT//file", "mod/.git/CON"):
             with self.subTest(name=name):
                 # ZipInfo normalizes backslashes on Windows and truncates at NUL.
                 safe_name = name.replace("\\", "/").replace("\0", "_")
@@ -57,7 +59,22 @@ class ArchiveTests(unittest.TestCase):
                     self.archive.write_bytes(
                         self.archive.read_bytes().replace(safe_name.encode(), name.encode())
                     )
-                self.assert_rejected()
+                with patch("scripts.mod_update_watch.safe_extract._read_zip_member") as read:
+                    with self.assertRaises(UnsafeArchive):
+                        inspect_archive(self.archive)
+                    self.assert_rejected()
+                    read.assert_not_called()
+
+    def test_git_paths_are_skipped_without_writing_git_metadata(self):
+        skipped = ("mod/.git/", "mod/.git/config", "mod/.GiT/config", "a/b/.git/HEAD", ".git")
+        self.zip([("mod/keep.lua", b"ok"), ("a/b/keep.lua", b"also ok"),
+                  (skipped[0], b""), *((name, b"metadata") for name in skipped[1:])])
+        reported = []
+        self.assertEqual(inspect_archive(self.archive).skipped_paths, skipped)
+        files = extract(self.archive, self.dest, skipped_paths=reported)
+        self.assertEqual(reported, list(skipped))
+        self.assertEqual([file.read_bytes() for file in files], [b"ok", b"also ok"])
+        self.assertFalse(any(path.name.casefold() == ".git" for path in self.dest.rglob("*")))
 
     def test_UnitT03_reject_zip_link_and_device(self):
         """Scenario: Given special POSIX modes in a ZIP, when extracting, then links and devices are rejected.
@@ -86,9 +103,9 @@ class ArchiveTests(unittest.TestCase):
         """Scenario: Given entries exceeding a configured bound, when extracting, then every bound rejects the ZIP.
         Purpose: Exercise compressed size, entry count, file size, total size and compression ratio.
         """
-        self.zip([("a", b"a" * 1024), ("b", b"b" * 1024)], zipfile.ZIP_DEFLATED)
+        self.zip([("a", b"a"), ("mod/.git/config", b"b" * 1024)], zipfile.ZIP_DEFLATED)
         for limits in (ArchiveLimits(max_archive_bytes=1), ArchiveLimits(max_entries=1),
-                       ArchiveLimits(max_file_bytes=1023), ArchiveLimits(max_total_bytes=2047),
+                       ArchiveLimits(max_file_bytes=1023), ArchiveLimits(max_total_bytes=1024),
                        ArchiveLimits(max_ratio=2)):
             with self.subTest(limits=limits):
                 self.assert_rejected(limits=limits)
@@ -170,6 +187,25 @@ class ArchiveTests(unittest.TestCase):
         self.assertEqual(extract(self.archive, self.dest, **options), [self.dest / "a"])
         self.assertEqual([call[1] for call in calls], ["l", "x"])
         self.assertEqual(calls[-1][-2:], ["--", str(self.archive)])
+
+    def test_7zip_excludes_git_paths_and_rejects_unexpected_git_output(self):
+        skipped = ("mod/.git/config", "mod/.GiT/config", "a/b/.git/HEAD")
+        listing = "\n\n".join(f"Path = {name}\nSize = 1\nPacked Size = 1"
+                              for name in ("a", *skipped))
+        for magic in (b"7z\xbc\xaf\x27\x1c", b"Rar!\x1a\x07"):
+            with self.subTest(magic=magic):
+                self.archive.write_bytes(magic)
+                dest = self.root / magic.hex()
+                calls, options = self.fake_7zip(listing, lambda root: (root / "a").write_bytes(b"a"))
+                reported = []
+                self.assertEqual(extract(self.archive, dest, skipped_paths=reported, **options), [dest / "a"])
+                self.assertEqual(reported, list(skipped))
+                self.assertEqual([args[1] for args in calls], ["l", "t", "x"])
+                self.assertIn("-ssc-", calls[-1])
+                self.assertIn("-xr!.git", calls[-1])
+
+        _, options = self.fake_7zip(listing, lambda root: (root / ".GiT").mkdir())
+        self.assert_rejected(**options)
 
     def test_UnitT11_missing_7zip_is_unsupported(self):
         """Scenario: Given RAR magic and no 7-Zip, when inspecting, then the format is unsupported.

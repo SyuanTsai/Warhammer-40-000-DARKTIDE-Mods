@@ -5,7 +5,11 @@ import os
 import shutil
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
+from datetime import datetime, timezone
 from pathlib import Path
+from threading import Lock
 
 from .loc_layout import literal_has_boundary_quote, unwrap_literal_outer_double_quotes
 from .report import blocked_units
@@ -18,6 +22,51 @@ class LocalizationError(ValueError):
 
 def read_json(path):
     return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def _log(message):
+    print(f"{datetime.now(timezone.utc).isoformat(timespec='milliseconds')} {message}", flush=True)
+
+
+@contextmanager
+def log_stage(name):
+    _log(f"{name} 開始")
+    try:
+        yield
+    finally:
+        _log(f"{name} 結束")
+
+
+def _run_skill(command, cwd, label):
+    secrets = {os.environ.get(name, "").strip() for name in (
+        "ANTHROPIC_API_KEY", "GITHUB_TOKEN", "GOOGLE_ACCESS_TOKEN", "NEXUS_API_KEY",
+    )}
+    secrets.discard("")
+    secrets = sorted(secrets, key=len, reverse=True)
+    log_lock = Lock()
+
+    def drain(stream, channel):
+        last = b""
+        for raw in stream:
+            line = raw.decode("utf-8-sig", errors="replace").rstrip("\r\n")
+            if not line.strip():
+                continue
+            last = raw
+            for secret in secrets:
+                line = line.replace(secret, "[已遮蔽]")
+            # GitHub Actions also recognizes legacy workflow commands inside a line.
+            line = line.replace("##[", r"##\x5b")
+            with log_lock:
+                _log(f"{label} [{channel}] {line if line.isprintable() else repr(line)}")
+        return last
+
+    with ThreadPoolExecutor(max_workers=1) as threads, subprocess.Popen(
+        command, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+    ) as child:
+        diagnostic = threads.submit(drain, child.stderr, "stderr")
+        last = drain(child.stdout, "stdout")
+        diagnostic.result()
+        return child.wait(), last
 
 
 def _unexpected_quotes(unit):
@@ -49,13 +98,15 @@ class Localization:
     def powershell(self, script, *args):
         path = self.skill / "skills" / "auto-update-darktide-mod" / "scripts" / f"{script}.ps1"
         try:
-            result = subprocess.run(
+            status, last = _run_skill(
                 ["pwsh", "-NoProfile", "-NonInteractive", "-File", str(path), *map(str, args)],
-                cwd=self.root, check=True, capture_output=True,
+                self.root, f"Skill {script}",
             )
-            return json.loads(result.stdout.decode("utf-8-sig").strip().splitlines()[-1])
-        except (OSError, subprocess.CalledProcessError, ValueError, IndexError):
-            raise LocalizationError(f"Skill {script} 執行或驗證失敗") from None
+            if status == 0:
+                return json.loads(last.decode("utf-8-sig"))
+        except (OSError, ValueError):
+            pass
+        raise LocalizationError(f"Skill {script} 執行或驗證失敗") from None
 
     def generate(self, new_files):
         locations = [path for path in new_files if is_localization(path)]
@@ -93,11 +144,8 @@ class Localization:
         if adapter is None:
             script = self.skill / "packages" / "darktide-translate" / "darktide_translate.py"
             try:
-                subprocess.run([sys.executable, "-B", str(script), *argv], cwd=self.skill,
-                               check=True, capture_output=True)
-                status = 0
-            except subprocess.CalledProcessError as error:
-                status = error.returncode
+                status, _ = _run_skill([sys.executable, "-B", "-u", "-X", "utf8", str(script), *argv],
+                                       self.skill, "Skill 翻譯")
             except OSError:
                 raise LocalizationError("無法啟動翻譯轉接層") from None
         else:

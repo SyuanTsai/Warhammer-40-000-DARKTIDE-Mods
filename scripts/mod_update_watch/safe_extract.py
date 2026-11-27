@@ -67,6 +67,7 @@ class ArchiveInfo:
     format: str
     entries: tuple[ArchiveEntry, ...]
     total_size: int
+    skipped_paths: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -90,7 +91,7 @@ def _format(path, limits):
     raise UnsupportedArchive("無法辨識壓縮檔 magic bytes")
 
 
-def _path_parts(name):
+def _path_parts(name, *, allow_directory_entry=True, allow_git=False):
     if not name:
         raise UnsafeArchive("項目名稱為空")
     if name.startswith("/"):
@@ -99,8 +100,12 @@ def _path_parts(name):
         raise UnsafeArchive("項目路徑含反斜線")
     if "\0" in name:
         raise UnsafeArchive("項目路徑含 NUL")
+    if not allow_directory_entry and name.endswith("/"):
+        raise UnsafeArchive("路徑須指向檔案")
     parts = name.removesuffix("/").split("/")
     for part in parts:
+        if not allow_git and part.casefold() == ".git":
+            raise UnsafeArchive("項目路徑含 .git 片段")
         if part == "..":
             raise UnsafeArchive("項目路徑含 .. 片段")
         if (not part or part.endswith((" ", "."))
@@ -127,8 +132,21 @@ def _validate(fmt, entries, limits, root):
     total = 0
     names = {}
     prefixes = {}
+    skipped = []
     for entry in entries:
-        parts = _path_parts(entry.name)
+        parts = _path_parts(entry.name, allow_git=True)
+        if entry.size > limits.max_file_bytes:
+            raise UnsafeArchive("單檔解壓大小超過上限")
+        if entry.size > limits.max_ratio * max(1, entry.packed_size):
+            raise UnsafeArchive("項目壓縮比超過上限")
+        if entry.is_dir and entry.size:
+            raise UnsafeArchive("資料夾項目宣告了檔案內容")
+        total += entry.size
+        if total > limits.max_total_bytes:
+            raise UnsafeArchive("總解壓大小超過上限")
+        if any(part.casefold() == ".git" for part in parts):
+            skipped.append(entry.name)
+            continue
         if root is not None:
             _target(root, entry.name)
         key = tuple(unicodedata.normalize("NFC", part).casefold() for part in parts)
@@ -139,19 +157,10 @@ def _validate(fmt, entries, limits, root):
             prefix = key[:depth]
             if prefixes.setdefault(prefix, parts[:depth]) != parts[:depth]:
                 raise UnsafeArchive("項目路徑在大小寫或字元正規化後衝突")
-        if entry.size > limits.max_file_bytes:
-            raise UnsafeArchive("單檔解壓大小超過上限")
-        if entry.size > limits.max_ratio * max(1, entry.packed_size):
-            raise UnsafeArchive("項目壓縮比超過上限")
-        if entry.is_dir and entry.size:
-            raise UnsafeArchive("資料夾項目宣告了檔案內容")
-        total += entry.size
-        if total > limits.max_total_bytes:
-            raise UnsafeArchive("總解壓大小超過上限")
     for key in names:
         if any(names.get(key[:depth]) is False for depth in range(1, len(key))):
             raise UnsafeArchive("檔案路徑與資料夾路徑衝突")
-    return ArchiveInfo(fmt, tuple(entries), total)
+    return ArchiveInfo(fmt, tuple(entries), total, tuple(skipped))
 
 
 def _zip_entries(members):
@@ -286,12 +295,13 @@ def _zip(path, root, limits):
                 raise UnsafeArchive("項目數超過上限")
             info = _validate("zip", _zip_entries(members), limits, root)
             offsets = _zip_data_offsets(stream, members, archive.start_dir)
+            skipped = set(info.skipped_paths)
             files = []
             for entry, member in zip(info.entries, members):
                 offset = offsets[member.header_offset]
-                if root is None or entry.is_dir:
+                if root is None or entry.is_dir or entry.name in skipped:
                     _read_zip_member(stream, member, offset, None)
-                    if root is not None:
+                    if root is not None and entry.name not in skipped:
                         _target(root, entry.name).mkdir(parents=True, exist_ok=True)
                 else:
                     dest = _target(root, entry.name)
@@ -396,8 +406,17 @@ def _scan_output(root, info, limits):
     metadata = root.lstat()
     if not stat.S_ISDIR(metadata.st_mode) or getattr(metadata, "st_file_attributes", 0) & REPARSE_POINT:
         raise UnsafeArchive("解壓目錄已被替換")
-    files = {root.joinpath(*_path_parts(entry.name)): entry.size for entry in info.entries if not entry.is_dir}
-    dirs = {root.joinpath(*_path_parts(entry.name)) for entry in info.entries if entry.is_dir}
+    skipped = set(info.skipped_paths)
+    files = {}
+    dirs = set()
+    for entry in info.entries:
+        if entry.name in skipped:
+            continue
+        path = root.joinpath(*_path_parts(entry.name))
+        if entry.is_dir:
+            dirs.add(path)
+        else:
+            files[path] = entry.size
     for path in (*files, *dirs):
         dirs.update(parent for parent in path.parents if parent != root and parent.is_relative_to(root))
     found = []
@@ -442,10 +461,12 @@ def _7zip(path, fmt, root, limits, runner, which):
         listing = _7zip_run(executable, "l", path, fmt, runner, "-slt", "-ba")
     info = _validate("rar" if fmt == "rar5" else fmt,
                      _7zip_entries(_listing(listing, limits), limits), limits, root)
-    if root is None:
+    if root is None or info.skipped_paths:
         _7zip_run(executable, "t", path, fmt, runner)
+    if root is None:
         return info, []
-    _7zip_run(executable, "x", path, fmt, runner, "-y", f"-o{root}")
+    exclusions = ("-ssc-", "-xr!.git") if info.skipped_paths else ()
+    _7zip_run(executable, "x", path, fmt, runner, "-y", f"-o{root}", *exclusions)
     return info, _scan_output(root, info, limits)
 
 
@@ -462,8 +483,11 @@ def _reparse(path):
     return path.is_symlink() or (path.exists() and getattr(path.lstat(), "st_file_attributes", 0) & REPARSE_POINT)
 
 
-def extract(path, dest, *, limits=DEFAULT_LIMITS, runner=subprocess.run, which=shutil.which):
-    """Extract into an empty scratch directory and clear it on any failure."""
+def extract(path, dest, *, limits=DEFAULT_LIMITS, runner=subprocess.run, which=shutil.which, skipped_paths=None):
+    """Extract into empty scratch space, clearing it on failure.
+
+    Extend skipped_paths with skipped member names after successful extraction.
+    """
     path, dest = Path(path).resolve(), Path(dest)
     if _reparse(dest):
         raise UnsafeArchive("解壓目錄是連結")
@@ -475,9 +499,11 @@ def extract(path, dest, *, limits=DEFAULT_LIMITS, runner=subprocess.run, which=s
     complete = False
     try:
         if fmt == "zip":
-            files = _zip(path, root, limits)[1]
+            info, files = _zip(path, root, limits)
         else:
-            files = _7zip(path, fmt, root, limits, runner, which)[1]
+            info, files = _7zip(path, fmt, root, limits, runner, which)
+        if skipped_paths is not None:
+            skipped_paths.extend(info.skipped_paths)
         complete = True
         return files
     finally:
