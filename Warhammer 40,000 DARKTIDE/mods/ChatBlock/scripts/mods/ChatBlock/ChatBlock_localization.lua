@@ -68,6 +68,6 @@ return {
 		["pt-br"] = "Se você estiver recarregando no momento em que a troca automática para a arma corpo a corpo ocorreria, a recarga termina primeiro e a troca acontece depois.\nSe você voltar ao jogo antes de a recarga terminar, mantém sua arma de longo alcance.",
 		ja = "近接武器への自動切り替えが行われるときにリロード中だった場合、リロードの完了後に切り替えます。\nリロードが終わる前にゲームに戻ると、遠隔武器のままになります。",
 		ko = "근접 무기로 자동 교체될 때 재장전 중이면, 재장전을 마친 뒤에 교체합니다.\n재장전이 끝나기 전에 게임으로 돌아오면 원거리 무기를 그대로 유지합니다.",
-		["zh-tw"] = "如果「自動切換至近戰」要切換武器時你正在換彈，會先完成換彈，再進行切換。\n如果你在換彈結束前返回遊戲，則會保留遠程武器。",
+		["zh-tw"] = "若觸發「自動切換至近戰武器」時正在換彈，會等換彈完成後再切換。\n若在換彈完成前恢復角色操控（例如關閉聊天、選單或 Steam 內嵌介面，或切回遊戲視窗），就會繼續使用手上的遠程武器。",
 	},
 }
