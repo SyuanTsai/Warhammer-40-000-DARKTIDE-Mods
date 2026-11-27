@@ -8,7 +8,6 @@ local font = "proxima_nova_bold"
 local shadow_offsets={{-1,0},{1,0},{0,-1},{0,1}}
 local sparks={{1,0},{.7,.7},{0,1},{-.7,.7},{-1,0},{-.7,-.7},{0,-1},{.7,-.7}}
 local dot_black, dot_white = {255,0,0,0}, {255,255,255,255}
-local dot_plain={255,225,225,215}
 local EMPTY={}
 local pink,cyan,red={255,255,0,255},{255,0,255,255},{255,255,0,0}
 -- Merge equal-width rows once; preserve every pixel of the original circles.
@@ -26,8 +25,12 @@ local dot_fill,dot_border=circle_rectangles(5),circle_rectangles(7)
 -- Double the fill radius, preserving the ordinary two-pixel outline thickness.
 local monster_fill,monster_border=circle_rectangles(10),circle_rectangles(12)
 local function dot_contrast(tint)
- -- Blue-dominant fills include dark blue; cyan and magenta keep black borders.
- return tint[4]>tint[2]*2 and tint[4]>tint[3]*2 and dot_white or dot_black
+ -- Dark brown trash dots need the same light edge as blue-dominant fills.
+ -- Includes the dark Scab Vanguard blue (13,49,81).
+ -- Bright orange, cyan and magenta retain their existing black borders.
+ local dark_brown=tint[2]<=128 and tint[2]>tint[3] and tint[3]>tint[4]
+ local blue=tint[4]>tint[2]*2 and tint[4]>tint[3]*1.5
+ return (dark_brown or blue) and dot_white or dot_black
 end
 local function finite(n)
  return type(n)=="number" and n==n and math.abs(n)<10000000
@@ -43,7 +46,8 @@ local function pulse_limit(status)
  return type(status)=="table" and (status.pulse_at or status.max_count) or nil
 end
 local function icon_size(status)
- local limit=pulse_limit(status)
+ -- Lower flashing thresholds must not enlarge icons earlier.
+ local limit=type(status)=="table" and status.max_count or nil
  if type(status)=="table" and finite(status.count) and status.count>=1 and finite(limit) and limit>1 then
   return 30+12*math.min(1,(status.count-1)/(limit-1))
  end
@@ -72,6 +76,7 @@ function View.new(renderer,icons,ground_projection,visibility,mod)
  local boss_marker_style=mod and mod.io_dofile and mod:io_dofile(prefix.."boss_marker_style")
  local boss_icons=mod and mod.io_dofile and mod:io_dofile(prefix.."boss_icons").new(mod,renderer,mod:io_dofile(prefix.."boss_icon_geometry"))
  local daemon_warning=mod and mod.io_dofile and mod:io_dofile(prefix.."daemonhost_warning")
+ local dot_groups=mod and mod.io_dofile and mod:io_dofile(prefix.."weakspot_groups")
  local camera_x,camera_y,camera_z,camera_sampled
  local options={}
  local function reset_options() for key in pairs(options) do options[key]=nil end end
@@ -94,14 +99,24 @@ function View.new(renderer,icons,ground_projection,visibility,mod)
  end
  local function selected_marker(record)
   local kind=marker_kind(record)
+  if kind=="bomb" and dot_groups and not dot_groups.dot_enabled(mod,record) then return nil end
   return option("disabler_icons_enabled",true) and kind and option(kind.."_icon_enabled",true) and kind or nil
+ end
+ local function dot_enabled(record)
+  if not option("empty_status_enabled",false) or marker_kind(record)=="bomb" then return false end
+  if boss_marker_style and boss_marker_style.get(record,mod)==0 then return false end
+  if dot_groups and dot_groups.is_trash(record) and not option("weakspot_trash_enabled",true) then return false end
+  if not dot_groups then return true end
+  local key=dot_groups.mode_setting(record)
+  if options[key]==nil then options[key]=dot_groups.dot_enabled(mod,record) end
+  return options[key]
  end
  local function eligible(record)
   return (option("health_display_enabled",true) and (record.elite or record.specialist) and finite(record.fraction))
    or has_enabled_status(record)
    or selected_marker(record)
    or (option("burster_label_enabled",true) and record.breed=="chaos_poxwalker_bomber")
-   or (option("empty_status_enabled",false) and marker_kind(record)~="bomb")
+   or (dot_enabled(record))
  end
  local self={renderer=renderer,icons=icons,color={255,255,255,255},text_options={},bursters={},others={},
   burster_cursor=0,other_cursor=0,scan_cursor=nil,records=nil,
@@ -167,7 +182,7 @@ function View.new(renderer,icons,ground_projection,visibility,mod)
   end
   if not eligible(record) then return end
   -- One LOS query per target; only dots extend beyond the 40m icon bundle.
-  local range=option("empty_status_enabled",false) and marker_kind(record)~="bomb" and 80 or 40
+  local range=dot_enabled(record) and 80 or 40
   local function distant(head)
    local camera_position=Camera.local_position(camera)
    return (head.x-camera_position.x)^2+(head.y-camera_position.y)^2+(head.z-camera_position.z)^2>1600
@@ -179,7 +194,7 @@ function View.new(renderer,icons,ground_projection,visibility,mod)
    local x,y=project(camera,head.x,head.y,head.z+0.35,scale)
    if x and (not visibility or visibility:visible(record,head,range)) then
     local head_y
-    if option("empty_status_enabled",false) and marker_kind(record)~="bomb" then
+    if dot_enabled(record) then
      local unused;unused,head_y=project(camera,head.x,head.y,head.z,scale)
     end
     return x,y-24,bar_factor(record,camera),head_y and head_y-9,distant(head)
@@ -192,7 +207,7 @@ function View.new(renderer,icons,ground_projection,visibility,mod)
   local head={x=p.x,y=p.y,z=p.z+(record.height or (tall and 3.2 or 2.05))}
   if x and (not visibility or visibility:visible(record,head,range)) then
    local head_y
-   if option("empty_status_enabled",false) and marker_kind(record)~="bomb" then
+   if dot_enabled(record) then
     local unused;unused,head_y=project(camera,p.x,p.y,p.z+(record.height or (tall and 3.2 or 2.05)),scale)
    end
    return x,y-24,bar_factor(record,camera),head_y and head_y-9,distant(head)
@@ -231,9 +246,10 @@ function View.new(renderer,icons,ground_projection,visibility,mod)
   end
   local marker=selected_marker(record)
   local boss_style=boss_marker_style and boss_marker_style.get(record,mod)
-  if boss_style~=0 and option("empty_status_enabled",false) and marker_kind(record)~="bomb" then
+  if boss_style~=0 and dot_enabled(record) then
    local dot_y=seat.dot_y or y+15
-   local tint=(record.boss or has_bar) and color or dot_plain
+   -- Match the enemy color even without a health bar or body outline.
+   local tint=dot_groups and dot_groups.white_dot(record) and dot_white or color
    local daemonhost=record.breed=="chaos_daemonhost" or record.breed=="chaos_mutator_daemonhost"
    if daemonhost then
     -- Only the replicated combat stage strobes; standing up does not.

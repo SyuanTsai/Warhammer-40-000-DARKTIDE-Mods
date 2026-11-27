@@ -2,15 +2,26 @@
 local M={}
 function M.decorate(mod,UIWidget)
  local definitions=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/Field_Awareness_data")
- local colors,defaults,labels={},{},{}
+ local colors,defaults,labels,compact={},{},{},{}
  local function scan(rows)
   for _,row in ipairs(rows or {}) do
    local id=row.setting_id
+   if id=="trash_outlines_enabled" or id=="weakspot_trash_enabled" then compact[id]=true;labels[mod:localize(id)]=id end
+   if id and id:match("^enemy_display_") then
+    colors[id]="color_"..id:sub(#"enemy_display_"+1)
+    compact[id]=true
+    labels[mod:localize(id)]=id
+   end
    if id and id:match("^color_") then
     local base=id:match("^(color_.+)_[rgb]$") or id
     colors[id]=base
     if row.default_value~=nil then defaults[id]=row.default_value end
-    if row.type=="group" then labels[mod:localize(id)]=id end
+    if row.type=="group" or row.type=="dropdown" then labels[mod:localize(id)]=id end
+   end
+   if id and id:match("^color_") and row.type=="dropdown" then
+    for _,child in ipairs(row.sub_widgets or {})do
+     if child.type=="checkbox" then compact[child.setting_id]=true end
+    end
    end
    scan(row.sub_widgets)
   end
@@ -18,7 +29,7 @@ function M.decorate(mod,UIWidget)
  scan(definitions.options.widgets)
  local callbacks={}
  labels[mod:localize("section_colors")]="section_colors"
- local function known(id)return type(id)=="string" and (colors[id] or id=="section_colors")end
+ local function known(id)return type(id)=="string" and (colors[id] or compact[id] or id=="section_colors")end
  local function owns(config)
   local readable=mod.get_readable_name and mod:get_readable_name()
   return config.mod_name=="Field_Awareness" or config.category=="Field_Awareness"
@@ -68,7 +79,7 @@ function M.decorate(mod,UIWidget)
  local applied=0
  return function(widget,alignment,config)
   local id=identify(config)
-  if not widget or not id or widget.fa_color_compact then return widget,alignment end
+  if not widget or not id or id=="section_colors" or widget.fa_color_compact then return widget,alignment end
   widget.fa_color_compact=true
   applied=applied+1
   if applied<=3 and mod.info then
@@ -93,11 +104,18 @@ function M.decorate(mod,UIWidget)
   end
   shrink(content.size)
   if alignment then shrink(alignment.size) end
-  for _,style in pairs(widget.style or {}) do
-   if style.font_size then style.font_size=math.min(style.font_size,id=="section_colors" and 16 or 13) end
-   shrink(style.size)
-   if style.offset and not resized[style.offset] then
-    resized[style.offset]=true;style.offset[2]=(style.offset[2] or 0)*ratio
+  for style_id,style in pairs(widget.style or {}) do
+   -- Native dropdown update/animation uses full-height option positions. Keep
+   -- its popup/hit targets intact while compacting only our collapsed row.
+   -- Checkbox On/Off labels are part of the compact row, not a popup.
+   local popup=id:match("^enemy_display_") and (style_id:match("^option_") or style_id:match("^outline_%d+$")
+    or style_id:match("^scrollbar") or style_id=="dropdown_background" or style_id=="thumb")
+   if not popup then
+    if style.font_size then style.font_size=math.min(style.font_size,13) end
+    shrink(style.size)
+    if style.offset and not resized[style.offset] then
+     resized[style.offset]=true;style.offset[2]=(style.offset[2] or 0)*ratio
+    end
    end
   end
   -- Alignment rows may include padding beyond the widget's own height.

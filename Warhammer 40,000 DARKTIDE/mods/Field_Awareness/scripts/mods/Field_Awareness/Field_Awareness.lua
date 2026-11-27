@@ -11,7 +11,12 @@ local outline_pass=load_part("outline_pass")
 local attack_strobes=load_part("attack_strobes").new(mod)
 local performance=load_part("performance_watch").new(mod,Application,load_part("memory_watch"))
 mod.performance_watch=performance
+local outline_diagnostics=load_part("outline_diagnostics").new(mod)
 local outline_visibility=load_part("enemy_visibility").new(math.huge,512)
+local enemy_controls=load_part("weakspot_groups")
+enemy_controls.migrate_colors(mod)
+enemy_controls.migrate_modes(mod)
+enemy_controls.migrate_trash_controls(mod)
 local units=load_part("awareness_units").new(mod,load_part("palette"),load_part("status_readout"),attack_strobes,outline_visibility,load_part("outline_layers").new(mod))
 local view=load_part("awareness_view").new(require("scripts/managers/ui/ui_renderer"),load_part("status_icons"),load_part("ground_projection"),load_part("enemy_visibility").new(nil,nil,true,mod),mod)
 local pickups=load_part("pickup_markers").new(require("scripts/managers/ui/ui_renderer"),nil,mod)
@@ -103,6 +108,7 @@ failure_cleanup.outline_materials=function()
  failed.unit_readability_enabled=true
  pcall(units.clear,units);view:clear()
 end
+failure_cleanup.outline_diagnostics=function() outline_diagnostics:set_enabled(false) end
 failure_cleanup.core=function()
  mission_gas:cleanup()
  pickups:clear()
@@ -114,6 +120,7 @@ local function reset(discard)
  pickups:clear()
  supplies:clear();aquila:clear()
  performance:flush("context_change")
+ outline_diagnostics:clear("context_change")
  mission_active=false
  pcall(units.clear,units,discard)
  view:clear()
@@ -154,10 +161,12 @@ mod.on_game_state_changed=function(status,name)
   running=false; reset(true)
  end
 end
-mod.on_setting_changed=function()
+mod.on_setting_changed=function(setting_id)
+ enemy_controls.on_setting_changed(mod,setting_id)
  pickups:clear()
  supplies:clear();aquila:clear()
  performance:set_enabled(mod:get("performance_diagnostics_enabled")==true)
+ outline_diagnostics:set_enabled(enabled and running and mission_active and not failed.outline_diagnostics and mod:get("performance_diagnostics_enabled")==true)
  if units.settings_changed then units:settings_changed() end
  view:clear()
  teammates:clear()
@@ -205,7 +214,15 @@ local function update_features(system,dt)
 end
 local function after_outline(...)
  if active("unit_readability_enabled") and not failed.outline_materials and next(units.records) then
-  guarded("outline_materials",function() units:apply_material_colors() end)
+  guarded("outline_materials",function()
+   units:apply_material_colors()
+  end,"outline_materials")
+  if outline_diagnostics.enabled then
+   guarded("outline_diagnostics",function()
+    units:log_readability(view.selected)
+    outline_diagnostics:tick(units,view.selected)
+   end,"outline_diagnostics")
+  end
  end
  return ...
 end
@@ -296,6 +313,7 @@ mod.update=function(dt)
   elseif not menu then last_color_rows=nil end
  end
  performance:set_enabled(enabled and running and mod:get("performance_diagnostics_enabled")==true)
+ outline_diagnostics:set_enabled(enabled and running and mission_active and not failed.outline_diagnostics and mod:get("performance_diagnostics_enabled")==true)
  performance:count("segments",#ground.segments)
  performance:count("fire_tiles",#(ground.segments.fire_tiles or EMPTY))
  performance:frame(dt)

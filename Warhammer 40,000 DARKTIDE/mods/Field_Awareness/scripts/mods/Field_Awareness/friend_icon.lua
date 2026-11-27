@@ -1,7 +1,7 @@
--- Approved blue raised clasp, rendered natively without a texture dependency.
+-- Approved ivory raised clasp; explicit friend tint still overrides this default.
 -- Geometry sampled from assets/friend_icons/darktide_friend_blue.png.
 local Icon = {}
-local blue = {255,65,155,245}
+local ivory = {255,255,241,204}
 local rectangles = {
  {20,2,8,1},
  {16,3,16,1},
@@ -120,7 +120,7 @@ local rectangles = {
 }
 function Icon.draw(renderer, ui, x, y, z, width, tint)
  local scale = width/48
- tint = tint or blue
+ tint = tint or ivory
  for _,r in ipairs(rectangles) do
   renderer.draw_rect(ui,Vector3(x+r[1]*scale,y+r[2]*scale,z),
    Vector2(r[3]*scale,r[4]*scale),tint)
