@@ -35,22 +35,13 @@ refresh_toxicgas_cache()
 -- The toxic gas geysers (called "corals" in the code) use Unit.flow_event to spawn VFX
 mod:hook("Unit", "flow_event", function(func, unit, event_name)
 
-    if event_name and _disable_coral_vfx then    
-        -- Block toxic gas geyser events
-        if blocked_events[event_name] then
-            debug_log("[BLOCKING GEYSER] " .. tostring(event_name))
+    if not event_name then return func(unit, event_name) end
+    if _disable_coral_vfx and blocked_events[event_name] then return end
+    if _disable_toxic_gas and (event_name == "create_particle" or event_name == "destroy_particle") then
+        local has_toxic_gas_fog, has_toxic_gas_corals = get_components(unit)
+        if has_toxic_gas_fog or has_toxic_gas_corals then
+        --debug_log("[BLOCKING PARTICLE] " .. tostring(event_name) .. " (toxic gas unit)")
             return
-        end
-    end
-    
-    -- Block toxic gas fog particles (the persistent cloud)
-    if _disable_toxic_gas then
-        if event_name == "create_particle" or event_name == "destroy_particle" then
-            local has_toxic_gas_fog, has_toxic_gas_corals = get_components(unit)
-            if has_toxic_gas_fog or has_toxic_gas_corals then
-                debug_log("[BLOCKING PARTICLE] " .. tostring(event_name) .. " (toxic gas unit)")
-                return
-            end
         end
     end
     return func(unit, event_name)

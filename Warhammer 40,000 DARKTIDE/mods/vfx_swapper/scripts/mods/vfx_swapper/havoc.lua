@@ -22,7 +22,6 @@ HavocBuffTemplates.havoc_corrupted_enemies.stop_func = function(template_data, t
     local unit = template_context.unit
     local position = POSITION_LOOKUP[unit]
     if not position or not Vector3.is_valid(position) then
-        -- Still clear the material color (what the stop_func does before the server-only path)
         Unit.set_vector3_for_materials(unit, "stimmed_color", Vector3(0, 0, 0), true)
         return
     end
