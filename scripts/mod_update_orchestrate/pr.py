@@ -11,10 +11,13 @@ from scripts.mod_update_watch.registry import positive_id
 from .discover import latest_receipt, matches_issue, receipt_key, target, unresolved_external_label
 from .gate import validate_paths, validate_upstream
 from .report import term_review_from_pr
+from .reviewed import TerminologyEvidence, byte_record, review_record
+from .tree import is_localization
 
 PR_MARKER = re.compile(r"<!-- mod-update-orchestrate:pr nexus_id=([0-9]+) file_id=([0-9]+|sha256-[a-f0-9]{64})"
                        r"(?: verified_head=([a-f0-9]{40})(?: route=(update|new|hotfix))?)? -->")
 UNRESOLVED_THREADS = "暫停自動合併，PR 尚有未解決的討論串。"
+TERMINOLOGY_MARKER = "<!-- reviewed-terminology-v1 "
 
 
 class PullHeadError(RuntimeError):
@@ -116,6 +119,20 @@ def pr_marker(body):
     return PR_MARKER.fullmatch(markers[0]) if len(markers) == 1 else None
 
 
+def _has_reviewed_evidence(body):
+    return "<!-- reviewed-translation-v1 " in body
+
+
+def require_reviewed_input(previous, *, review=None, terminology_request=None):
+    if not previous or previous.get("state") == "closed":
+        return
+    body = previous.get("body") or ""
+    if terminology_request is None and TERMINOLOGY_MARKER in body:
+        raise PullHeadError("replacing an open terminology PR requires new explicit terminology input")
+    if review is None and _has_reviewed_evidence(body):
+        raise PullHeadError("replacing an open reviewed PR requires new reviewed input")
+
+
 def should_merge(mode, route, blocked, draft):
     return mode == "auto" and route != "new" and not blocked and not draft
 
@@ -186,6 +203,8 @@ def merge_check(git, github, number, nexus_id, file_id, *, route="update", dry_r
         reason = "PR 標記無效或與 Issue 目標不符"
     elif not (verified_head := marker[3]):
         reason = "PR 標記缺少 verified_head"
+    elif _has_reviewed_evidence(body) or TERMINOLOGY_MARKER in body:
+        reason = "人工核准譯文須人工合併"
     elif marker[4] == "new" or route == "new":
         reason = "PR 標記為 route=new"
     elif (marker[4] == "hotfix") != (route == "hotfix"):
@@ -289,8 +308,19 @@ def _verify_pull_head(git, github, branch, pull, head, old_head):
     raise PullHeadError(f"PR #{number} head SHA 不符（預期 {head}，實際 {actual}，重讀 {reads} 次）")
 
 
+def _review_target(pull, branch, marker):
+    previous = pr_marker(pull.get("body") or "")
+    if (pull.get("state") != "open" or (pull.get("base") or {}).get("ref") != "main"
+            or (pull.get("head") or {}).get("ref") != branch or not previous
+            or previous.groups()[:2] != marker.groups()[:2] or previous[4] not in (None, "update")):
+        raise PullHeadError("reviewed regeneration requires the same open update PR")
+    return previous
+
+
 def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_oid,
-            paths, *, route="update", mod_staged=False, emit=print, branch=None):
+            paths, *, route="update", mod_staged=False, emit=print, branch=None,
+            review=None, terminology_evidence=None):
+    require_reviewed_input(previous, review=review, terminology_request=terminology_evidence)
     marker = pr_marker(body)
     if (not marker or marker[1] != str(nexus_id) or marker[3]
             or marker[2].startswith("sha256-") != (route == "hotfix")):
@@ -302,7 +332,48 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
         elif branch == branch_for(nexus_id):
             raise ValueError("建立更新分支需要已確認的 MOD 名稱與主檔版本")
     expected = remote_head(git, branch)
-    if route == "update" and expected and not previous:
+    formal = terminology_evidence is not None
+    reviewed = review is not None or formal
+    trailers = []
+    if review is not None:
+        review_digest, encoded = review_record(review)
+        trailers.extend((f"Reviewed-Translation-SHA256: {review_digest}", f"Reviewed-Translation-Base64: {encoded}"))
+        body += f"\n\n<!-- reviewed-translation-v1 sha256={review_digest} data={encoded} -->"
+    if formal:
+        if not isinstance(terminology_evidence, TerminologyEvidence):
+            raise ValueError("terminology publication requires independently verified proof")
+        request_sha, request_data = byte_record(terminology_evidence.request_bytes)
+        proof = terminology_evidence.proof
+        if (not isinstance(proof, dict) or proof.get("requestSha256") != request_sha
+                or (proof.get("nexusId"), str(proof.get("fileId")), proof.get("baseOid"), proof.get("modRelativePath"))
+                != (nexus_id, marker[2], base_oid, paths[0])):
+            raise ValueError("terminology publication proof does not match its target or request")
+        location = proof.get("localizationRelativePath")
+        if not isinstance(location, str) or not is_localization(location):
+            raise ValueError("terminology publication proof has no localization path")
+        validate_paths((location,), paths[0], None)
+        raw_sha = terminology_evidence.raw_output_sha256
+        repo_sha = terminology_evidence.repo_format_sha256
+        if not all(isinstance(value, str) and re.fullmatch(r"[a-f0-9]{64}", value) for value in (raw_sha, repo_sha)):
+            raise ValueError("terminology publication requires raw and repository-format SHA-256 evidence")
+        proof_sha, proof_data = review_record(proof)
+        trailers.extend((f"Reviewed-Terminology-Request-SHA256: {request_sha}",
+                         f"Reviewed-Terminology-Request-Base64: {request_data}",
+                         f"Reviewed-Terminology-Proof-SHA256: {proof_sha}",
+                         f"Reviewed-Terminology-Proof-Base64: {proof_data}"))
+    if reviewed:
+        if mode != "manual" or route != "update":
+            raise ValueError("reviewed publication requires a manual update")
+        if previous:
+            old = _review_target(previous, branch, marker)
+            if not expected or old[3] != expected:
+                raise PullHeadError("previous verified_head differs from the update branch")
+        elif expected:
+            raise PullHeadError("existing review branch has no matching open PR")
+        head_suffix = f" verified_head={'0' * 40} route={route}"
+        if not formal and len(body.encode("utf-8")) + len(head_suffix) > 65536:
+            raise ValueError("review evidence exceeds PR body limit")
+    elif route == "update" and expected and not previous:
         raise ValueError(f"更新分支 {branch} 已存在且缺少相符的開啟 PR")
     if previous and (previous.get("head") or {}).get("sha") != expected:
         raise ValueError("PR 分支已變更，請重新執行")
@@ -312,22 +383,50 @@ def publish(git, github, previous, nexus_id, title, body, mode, conflicts, base_
     if not changes:
         raise ValueError("Git index 無候選異動")
     validate_paths(filter(None, changes.split("\0")), paths[0], paths[2])
+    if formal:
+        staged_blob = git("cat-file", "blob", f":{location}", raw=True)
+        staged_sha = hashlib.sha256(staged_blob).hexdigest()
+        if staged_sha != repo_sha:
+            raise ValueError("staged terminology blob SHA-256 does not match the expected repository format")
+        trailers.extend((f"Reviewed-Terminology-Raw-Output-SHA256: {raw_sha}",
+                         f"Reviewed-Terminology-Repo-Format-SHA256: {repo_sha}",
+                         f"Reviewed-Terminology-Staged-Blob-SHA256: {staged_sha}"))
+        body += (f"\n\n{TERMINOLOGY_MARKER}request-sha256={request_sha} request-data={request_data} "
+                 f"proof-sha256={proof_sha} proof-data={proof_data} raw-output-sha256={raw_sha} "
+                 f"repo-format-sha256={repo_sha} staged-blob-sha256={staged_sha} -->")
+        if len(body.encode("utf-8")) + len(head_suffix) > 65536:
+            raise ValueError("review evidence exceeds PR body limit")
     if route == "new":
         if not set(paths[1:]) <= set(changes.split("\0")):
             raise ValueError("Gate 要求第二個提交包含 README 與新增 .hash")
         head = commit_tree(git, base_oid, f"chore(mod): translate and register Nexus MOD {nexus_id}")
     else:
-        git("-c", "user.name=github-actions[bot]", "-c",
-            "user.email=41898282+github-actions[bot]@users.noreply.github.com",
-            "commit", "-m", f"chore(mod): update Nexus MOD {nexus_id}")
+        subject = f"chore(mod): update Nexus MOD {nexus_id}"
+        trailer_text = "\n".join(trailers)
+        commit = ("-c", "user.name=github-actions[bot]", "-c",
+                  "user.email=41898282+github-actions[bot]@users.noreply.github.com", "commit")
+        if formal:
+            git(*commit, "-F", "-", input=f"{subject}\n\n{trailer_text}\n".encode("utf-8"))
+        else:
+            git(*commit, "-m", subject, *(("-m", trailer_text) if trailers else ()))
         head = git("rev-parse", "HEAD")
     verified_marker = (f"<!-- mod-update-orchestrate:pr nexus_id={nexus_id} file_id={marker[2]}"
                        f" verified_head={head} route={route} -->")
     body = body.replace(marker[0], verified_marker, 1)
-    push(git, branch, expected, head if route == "new" else "HEAD")
+    push(git, branch, expected, head if route == "new" or reviewed else "HEAD")
+    if reviewed and previous:
+        live = _verify_pull_head(git, github, branch, github.pull(previous["number"]), head, expected)
+        if (live.get("number") != previous["number"] or live.get("body") != previous.get("body")
+                or _review_target(live, branch, marker)[0] != old[0] or remote_head(git, branch) != head):
+            raise PullHeadError("PR identity or lease changed before evidence update")
     pull = github.write_pr(previous, branch, title, body, bool(conflicts))
     number = pull["number"]
     pull = _verify_pull_head(git, github, branch, pull, head, expected if previous else None)
+    if reviewed:
+        if (previous and number != previous["number"] or pull.get("number") != number
+                or pull.get("body") != body or _review_target(pull, branch, marker)[3] != head
+                or remote_head(git, branch) != head):
+            raise PullHeadError("review evidence or published head did not match")
     if route == "update":
         _check_existing_update(pull, branch, nexus_id, marker[2])
     had_blocked = any(label.get("name") == "blocked" for label in pull.get("labels", []))

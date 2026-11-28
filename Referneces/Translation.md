@@ -54,6 +54,7 @@
 - Countdown - 冷卻
 - Empower - 強化
 - Toughness - 韌性
+- Wound - 傷痕（生命值區段，例：Health / Wound - 生命值／傷痕）
 - Hit Mass - 順劈目標
   - 1.13.1機制說明暫用「命中質量」表示敵人消耗的順劈容量，待人工確認；保留原譯。來源：[ActionSweep](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_sweep.lua#L1356-L1367)
 - Cleave - 順劈攻擊
@@ -125,6 +126,7 @@
 - Malice - 惡毒
 - Heresy - 異端
 - Damnation - 詛咒
+- Auric - 奧里克（高難度任務等級）
 
 ### 其他 (MISC)
 
@@ -175,10 +177,14 @@
 
 - Renegade - 血痂（敵方派系；不得譯為叛徒）
 - Cultist - 渣滓（敵方派系；不得譯為異教徒）
+- Mutator - 變種（敵人變體後綴，例：渣滓祭司（變種））
+- Warp Fire - 靈魂之火（同 Soulblaze）
 
 #### BOSS
 - Admonition Champion - 告誡教勇士
 - Twins - 雙子
+- Scab Twin Captain - 雙子（槍）（renegade_twin_captain，遠程）
+- Scab Twin Captain Two - 雙子（劍）（renegade_twin_captain_two，近戰）
 - Prophet of Decay - 腐朽的先知
 - Scab Captain - 血痂隊長
 - Beast of Nurgle - 納垢巨獸
@@ -239,7 +245,7 @@
 
 #### 待確認定義
 
-- Scab Radio Operator - 血痂無線電兵（暫譯；繁中資源保留英文；原始碼標為菁英，實際出現狀態未確認）
+- Scab Radio Operator - 血痂無線電兵（正式譯名；繁中資源保留英文；原始碼標為菁英，實際出現狀態未確認）
 
 #### 通稱、陣營與MOD名稱
 
@@ -1121,6 +1127,7 @@
 #### 法務官專有名詞
 
 - Arbites - 法務官
+- Arbitrator - 法務官（Arbites 職業別稱）
 - Cyber-Mastiff - 電子獒犬
 
 #### 法務官天賦

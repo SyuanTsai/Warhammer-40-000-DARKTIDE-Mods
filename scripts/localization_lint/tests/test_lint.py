@@ -4,13 +4,13 @@ import os
 import re
 from codecs import BOM_UTF8
 from pathlib import Path
-import shutil
 import subprocess
 import tempfile
 import unittest
 from unittest.mock import ANY, Mock, patch
 
 from scripts.localization_lint import lint_changes, lint_paths
+from scripts.test_env import resolve_luajit
 from scripts.localization_lint.__main__ import main
 
 
@@ -78,9 +78,19 @@ class LocalizationLintTests(unittest.TestCase):
             self.assertEqual(tracked.call_count, 1)
 
 
-@unittest.skipUnless(shutil.which(os.environ.get("SYP_LUAJIT", "luajit")),
-                     "找不到 LuaJIT；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
 class LuaParserTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        # Given
+        luajit = resolve_luajit()
+        # When / Then
+        if luajit is None and os.environ.get("DARKTIDE_ALLOW_NO_LUAJIT") == "1":
+            raise unittest.SkipTest(
+                "已明確允許缺少 LuaJIT（DARKTIDE_ALLOW_NO_LUAJIT=1）"
+            )
+        if luajit is None:
+            raise AssertionError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
+
     # Scenario: localization 檔第二行含語法錯誤。
     # Purpose: CLI 失敗且診斷指出檔案及行號。
     def test_InterT02_reports_filename_and_line(self):

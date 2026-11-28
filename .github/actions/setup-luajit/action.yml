@@ -1,0 +1,49 @@
+name: Setup pinned LuaJIT
+description: Build, cache, and verify the LuaJIT commit pinned by test-environment.json.
+
+inputs:
+  config-path:
+    description: Path to config/test-environment.json, relative to GITHUB_WORKSPACE.
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Read pinned LuaJIT configuration
+      id: config
+      shell: bash
+      env:
+        CONFIG_PATH: ${{ inputs.config-path }}
+      run: |
+        python -c "import json, os; c=json.load(open(os.environ['CONFIG_PATH'], encoding='utf-8')); print('commit=' + c['luajit']['commit']); print('expected=' + c['luajit']['expectedVersion']); print('repository=' + c['luajit']['repository'])" >> "$GITHUB_OUTPUT"
+    - name: Restore compiled LuaJIT
+      id: cache
+      uses: actions/cache@v4
+      with:
+        path: ${{ runner.temp }}/luajit-${{ runner.os }}-${{ steps.config.outputs.commit }}
+        key: luajit-${{ runner.os }}-${{ steps.config.outputs.commit }}
+    - name: Build pinned LuaJIT
+      if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
+      env:
+        LUAJIT_COMMIT: ${{ steps.config.outputs.commit }}
+        LUAJIT_REPOSITORY: ${{ steps.config.outputs.repository }}
+        LUAJIT_SOURCE: ${{ runner.temp }}/luajit-${{ runner.os }}-${{ steps.config.outputs.commit }}
+      run: |
+        git clone --filter=blob:none "$LUAJIT_REPOSITORY" "$LUAJIT_SOURCE"
+        git -C "$LUAJIT_SOURCE" checkout --detach "$LUAJIT_COMMIT"
+        test "$(git -C "$LUAJIT_SOURCE" rev-parse HEAD)" = "$LUAJIT_COMMIT"
+        make -C "$LUAJIT_SOURCE" -j
+    - name: Verify pinned LuaJIT
+      shell: bash
+      env:
+        LUAJIT_EXPECTED: ${{ steps.config.outputs.expected }}
+        LUAJIT_SOURCE: ${{ runner.temp }}/luajit-${{ runner.os }}-${{ steps.config.outputs.commit }}
+      run: |
+        version="$($LUAJIT_SOURCE/src/luajit -v 2>&1 | head -n 1)"
+        echo "$version"
+        case "$version" in
+          "$LUAJIT_EXPECTED"*) ;;
+          *) echo "Expected LuaJIT version prefix '$LUAJIT_EXPECTED', got '$version'." >&2; exit 1 ;;
+        esac
+        echo "$LUAJIT_SOURCE/src" >> "$GITHUB_PATH"

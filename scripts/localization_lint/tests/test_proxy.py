@@ -2,9 +2,10 @@ import contextlib
 import io
 import os
 from pathlib import Path
-import shutil
 import unittest
 from unittest.mock import patch
+
+from scripts.test_env import resolve_luajit
 
 from scripts.localization_lint.__main__ import main
 from scripts.localization_lint.runtime import (
@@ -12,14 +13,22 @@ from scripts.localization_lint.runtime import (
 )
 
 
-LUAJIT = shutil.which(os.environ.get("SYP_LUAJIT", "luajit"))
 MOOD_SOURCE = b'''local m = require("scripts/settings/camera/mood/mood_settings")
 local t = {}; for name in pairs(m.mood_types) do
 t["mood_" .. name] = {en=name, ["zh-tw"]="TW"} end; return t'''
 
 
-@unittest.skipUnless(LUAJIT, "LuaJIT unavailable; set SYP_LUAJIT")
 class ProxyTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        luajit = resolve_luajit()
+        if luajit is None and os.environ.get("DARKTIDE_ALLOW_NO_LUAJIT") == "1":
+            raise unittest.SkipTest(
+                "已明確允許缺少 LuaJIT（DARKTIDE_ALLOW_NO_LUAJIT=1）"
+            )
+        if luajit is None:
+            raise AssertionError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
+
     # Scenario: Missing globals, mod methods and modules are chained and formatted.
     # Purpose: Missing game APIs must not abort loading or lose provenance.
     def test_InterT10_lazy_dependencies_are_marked_at_values(self):

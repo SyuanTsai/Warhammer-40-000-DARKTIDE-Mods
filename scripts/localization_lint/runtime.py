@@ -3,9 +3,10 @@
 import os
 from pathlib import Path
 import re
-import shutil
 import subprocess
 import warnings
+
+from scripts import test_env
 
 
 class LocalizationValidationError(ValueError):
@@ -40,10 +41,9 @@ EN = '["en"]'
 
 
 def luajit_command():
-    requested = os.environ.get("SYP_LUAJIT", "luajit")
-    executable = shutil.which(requested)
-    if not executable:
-        raise LocalizationValidationError(f"找不到 LuaJIT：{requested}；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
+    executable = test_env.resolve_luajit()
+    if executable is None:
+        raise LocalizationValidationError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
     return executable
 
 

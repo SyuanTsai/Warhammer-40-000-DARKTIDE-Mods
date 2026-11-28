@@ -1,19 +1,28 @@
 import os
 from pathlib import Path
-import shutil
 import unittest
 from unittest.mock import patch
+
+from scripts.test_env import resolve_luajit
 
 from scripts.mod_update_orchestrate.loc_layout import preserve_layout
 from scripts.localization_lint.runtime import LocalizationValidationError
 
 
-LUAJIT = shutil.which(os.environ.get("SYP_LUAJIT", "luajit"))
 SOURCE = Path(__file__).with_name("fixtures").joinpath("survival_loadout.lua").read_bytes()
 
 
-@unittest.skipUnless(LUAJIT, "找不到 LuaJIT；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
 class SurvivalTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        luajit = resolve_luajit()
+        if luajit is None and os.environ.get("DARKTIDE_ALLOW_NO_LUAJIT") == "1":
+            raise unittest.SkipTest(
+                "已明確允許缺少 LuaJIT（DARKTIDE_ALLOW_NO_LUAJIT=1）"
+            )
+        if luajit is None:
+            raise AssertionError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
+
     # Scenario: Skill 移除主要語言表之外的第三欄。
     # Purpose: 即使排版 fallback，也不能放行遺失的繁中。
     def test_InterT10_missing_positional_translation_is_blocked(self):
@@ -90,6 +99,6 @@ class MissingRuntimeTests(unittest.TestCase):
     # Scenario: 執行環境沒有 LuaJIT。
     # Purpose: 即使 OLD 與輸出相同，也不可靜默跳過檢查。
     def test_UnitT10_missing_luajit_fails_closed(self):
-        with patch.dict(os.environ, {"SYP_LUAJIT": "syp700-missing-luajit"}):
+        with patch("scripts.test_env.resolve_luajit", return_value=None):
             with self.assertRaisesRegex(ValueError, "LuaJIT"):
                 preserve_layout(SOURCE, SOURCE)

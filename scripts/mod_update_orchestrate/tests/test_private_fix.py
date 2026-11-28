@@ -1,11 +1,12 @@
 import hashlib
 import os
-import shutil
 import tempfile
 import unittest
 import zipfile
 from pathlib import Path
 from unittest.mock import Mock, patch
+
+from scripts.test_env import resolve_luajit
 
 from scripts.localization_lint.runtime import LocalizationValidationError
 from scripts.mod_update_orchestrate.gate import validate_private
@@ -207,7 +208,7 @@ class PrivateFixTests(unittest.TestCase):
         self.changes.append(f"{MOD}/{LOC}")
         original = b'return { title = { en = "Title", ["zh-tw"] = "TW" } }'
         (self.root / MOD / LOC).write_bytes(original)
-        with (patch.dict(os.environ, {"SYP_LUAJIT": "syp700-missing-luajit"}),
+        with (patch("scripts.test_env.resolve_luajit", return_value=None),
               patch("scripts.mod_update_orchestrate.private_fix.translate_private",
                     return_value=(LOC, original, [], [])),
               patch("scripts.mod_update_orchestrate.private_fix.preserve_layout",
@@ -219,7 +220,7 @@ class PrivateFixTests(unittest.TestCase):
         self.github.needs_human.assert_called_once()
         message = self.github.needs_human.call_args.args[2]
         self.assertIn("LuaJIT", message)
-        self.assertIn("SYP_LUAJIT", message)
+        self.assertIn("python -m scripts.test_env", message)
         self.assertIn("needs-human", str(self.emit.call_args_list))
         self.github.write_pr.assert_not_called()
         self.assertEqual((self.root / MOD / LOC).read_bytes(), original)
@@ -355,9 +356,14 @@ class PrivateFixTests(unittest.TestCase):
 
     # Scenario: push 同時改動英文和程式，Drive 可用或未設定。
     # Purpose: 譯文在同一 PR；無封存時 Gate 只接受本地化檔。
-    @unittest.skipUnless(shutil.which(os.environ.get("SYP_LUAJIT", "luajit")),
-                         "找不到 LuaJIT；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
     def test_InterT80_translation_shares_pr_or_stands_alone_without_drive(self):
+        luajit = resolve_luajit()
+        if luajit is None and os.environ.get("DARKTIDE_ALLOW_NO_LUAJIT") == "1":
+            raise unittest.SkipTest(
+                "已明確允許缺少 LuaJIT（DARKTIDE_ALLOW_NO_LUAJIT=1）"
+            )
+        if luajit is None:
+            raise AssertionError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
         before = (b'return {\r\n    entry = {\r\n        en = "English",\r\n'
                   b'        ["zh-tw"] = "old",\r\n    },\r\n}\r\n')
         verified = ('return {\n    entry = {\n        ["zh-tw"] = "翻譯",\n'

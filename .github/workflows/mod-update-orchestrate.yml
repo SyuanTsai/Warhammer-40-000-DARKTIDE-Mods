@@ -24,6 +24,12 @@ on:
         description: 重建指定 nexus_id 的更新 PR
         type: boolean
         default: false
+      reviewed_input:
+        description: 審定修正檔的 JSON 內容（須指定 nexus_id 並啟用 regenerate）
+        type: string
+      terminology_request:
+        description: 單鍵術語請求檔的 JSON 內容（須指定 nexus_id 並啟用 regenerate）
+        type: string
 
 permissions: {}
 
@@ -59,14 +65,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: SyuanTsai/Skill-Darktide-Translate
-          ref: 47b8605a69f824dcd376875bc3338d0aace3c6ea
+          ref: 566acf556751903ebd0a536dd77f1b67bef6deaa
           path: .skill
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install LuaJIT
-        run: sudo apt-get update && sudo apt-get install -y luajit
+        uses: ./mods/.github/actions/setup-luajit
+        with:
+          config-path: mods/config/test-environment.json
       - name: 執行離線測試
         shell: pwsh
         env:
@@ -87,12 +95,18 @@ jobs:
           REGENERATE: ${{ github.event_name == 'workflow_dispatch' && inputs.regenerate }}
           DRY_RUN: ${{ inputs.dry_run }}
           REVIEW_INPUT: ${{ inputs.review_mode }}
+          REVIEWED_INPUT: ${{ inputs.reviewed_input }}
+          TERMINOLOGY_REQUEST: ${{ inputs.terminology_request }}
           MOD_UPDATE_REVIEW_MODE: ${{ vars.MOD_UPDATE_REVIEW_MODE }}
           GCP_WORKLOAD_IDENTITY_PROVIDER: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
           GCP_SERVICE_ACCOUNT: ${{ vars.GCP_SERVICE_ACCOUNT }}
           GDRIVE_PROCESSED_FOLDER_ID: ${{ vars.GDRIVE_PROCESSED_FOLDER_ID }}
         run: |
           $arguments = @()
+          if (($env:REVIEWED_INPUT -or $env:TERMINOLOGY_REQUEST) -and
+              (!$env:NEXUS_FILTER -or $env:REGENERATE -ne 'true')) {
+            throw '審定重發須指定 nexus_id 並啟用 regenerate。'
+          }
           if (!$env:GCP_WORKLOAD_IDENTITY_PROVIDER -or !$env:GCP_SERVICE_ACCOUNT -or !$env:GDRIVE_PROCESSED_FOLDER_ID) {
             Write-Output '::warning::缺少 Drive／WIF 設定，僅探索既有 PR 的合併資格。'
             '缺少 Drive／WIF 設定，僅探索既有 PR 的合併資格。' >> $env:GITHUB_STEP_SUMMARY
@@ -133,7 +147,7 @@ jobs:
         if: matrix.action == 'update'
         with:
           repository: SyuanTsai/Skill-Darktide-Translate
-          ref: 47b8605a69f824dcd376875bc3338d0aace3c6ea
+          ref: 566acf556751903ebd0a536dd77f1b67bef6deaa
           path: .skill
           persist-credentials: false
       - uses: actions/setup-python@v5
@@ -141,7 +155,9 @@ jobs:
           python-version: "3.12"
       - name: Install LuaJIT
         if: matrix.action == 'update' && inputs.dry_run != true
-        run: sudo apt-get update && sudo apt-get install -y luajit
+        uses: ./mods/.github/actions/setup-luajit
+        with:
+          config-path: mods/config/test-environment.json
       - name: 安裝 Skill 相依套件
         if: matrix.action == 'update'
         shell: pwsh
@@ -191,6 +207,8 @@ jobs:
           MOD_UPDATE_FAILURE_DIR: ${{ runner.temp }}/mod-update-failure-${{ matrix.nexus_id }}
           MOD_UPDATE_REVIEW_MODE: ${{ vars.MOD_UPDATE_REVIEW_MODE }}
           REVIEW_INPUT: ${{ inputs.review_mode }}
+          REVIEWED_INPUT: ${{ inputs.reviewed_input }}
+          TERMINOLOGY_REQUEST: ${{ inputs.terminology_request }}
           MAX_ITEMS: ${{ inputs.max_items }}
           DRY_RUN: ${{ inputs.dry_run }}
           NEXUS_ID: ${{ matrix.nexus_id }}
@@ -209,7 +227,24 @@ jobs:
           if ($env:REVIEW_INPUT) { $arguments += @('--review-mode', $env:REVIEW_INPUT) }
           if ($env:MAX_ITEMS -and $env:MAX_ITEMS -ne '0') { $arguments += @('--max-items', $env:MAX_ITEMS) }
           if ($env:DRY_RUN -eq 'true') { $arguments += '--dry-run' }
-          python -m scripts.mod_update_orchestrate.main process @arguments
+          $inputFiles = @()
+          try {
+            foreach ($inputFile in @(
+              @{ Flag = '--reviewed-input'; Json = $env:REVIEWED_INPUT },
+              @{ Flag = '--terminology-request'; Json = $env:TERMINOLOGY_REQUEST }
+            )) {
+              if (!$inputFile.Json) { continue }
+              $path = Join-Path $env:RUNNER_TEMP ("mod-update-review-{0}.json" -f [guid]::NewGuid())
+              $inputFiles += $path
+              [IO.File]::WriteAllText($path, $inputFile.Json)
+              $arguments += @($inputFile.Flag, $path)
+            }
+            python -m scripts.mod_update_orchestrate.main process @arguments
+          } finally {
+            foreach ($path in $inputFiles) {
+              Remove-Item -LiteralPath $path -ErrorAction SilentlyContinue
+            }
+          }
       - uses: actions/cache/save@v4
         if: always() && matrix.action == 'update' && steps.process.outcome != 'skipped' && inputs.dry_run != true && steps.translation_cache.outputs.cache-hit != 'true'
         with:

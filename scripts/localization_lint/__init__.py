@@ -4,8 +4,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+from scripts.test_env import resolve_luajit
 from .runtime import (LocalizationValidationError, dynamic_diagnostics, load_localization,
-                      luajit_command, validate_survival)
+                      validate_survival)
 
 SUFFIX = "_localization.lua"
 MOD_PATHSPEC = f":(top,glob)Warhammer 40,000 DARKTIDE/mods/**/*{SUFFIX}"
@@ -25,14 +26,21 @@ class LocalizationSyntaxError(RuntimeError):
 
 def lint_paths(paths, *, read=lambda path: Path(path).read_bytes(), mood_types=None):
     errors = []
+    luajit = None
     for path in paths:
         if not path.endswith(SUFFIX):
             continue
+        if luajit is None:
+            luajit = resolve_luajit()
+            if luajit is None:
+                raise LocalizationSyntaxError(
+                    "找不到 LuaJIT，請執行 python -m scripts.test_env 檢查"
+                )
         source = read(path)
         try:
-            result = subprocess.run([luajit_command(), "-E", "-e", COMPILE_LUA], input=source,
+            result = subprocess.run([luajit, "-E", "-e", COMPILE_LUA], input=source,
                                     capture_output=True, timeout=10)
-        except (OSError, subprocess.TimeoutExpired, LocalizationValidationError) as error:
+        except (OSError, subprocess.TimeoutExpired) as error:
             raise LocalizationSyntaxError(f"無法執行 LuaJIT：{error}") from error
         if result.returncode:
             diagnostic = result.stderr.decode("utf-8", errors="replace").strip()

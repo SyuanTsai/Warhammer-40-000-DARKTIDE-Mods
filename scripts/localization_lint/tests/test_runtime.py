@@ -2,24 +2,35 @@ import contextlib
 import io
 import os
 from pathlib import Path
-import shutil
 import subprocess
 import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
+from scripts.test_env import resolve_luajit
+
 from scripts.localization_lint import LocalizationSyntaxError, lint_changes, lint_paths
 from scripts.localization_lint.__main__ import main
-from scripts.localization_lint.runtime import LocalizationValidationError, load_localization, validate_survival
+from scripts.localization_lint.runtime import (
+    LocalizationValidationError, load_localization, luajit_command, validate_survival,
+)
 
 
-LUAJIT = shutil.which(os.environ.get("SYP_LUAJIT", "luajit"))
 MOODS = ("corruption", "critical_health")
 SOURCE = Path(__file__).with_name("fixtures").joinpath("survival_moods.lua").read_bytes()
 
 
-@unittest.skipUnless(LUAJIT, "找不到 LuaJIT；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
 class ControlledLoadTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        luajit = resolve_luajit()
+        if luajit is None and os.environ.get("DARKTIDE_ALLOW_NO_LUAJIT") == "1":
+            raise unittest.SkipTest(
+                "已明確允許缺少 LuaJIT（DARKTIDE_ALLOW_NO_LUAJIT=1）"
+            )
+        if luajit is None:
+            raise AssertionError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
+
     # Scenario: 以指定清單執行 mood_types 迴圈。
     # Purpose: 驗證 stub 產生每個動態 key，並保留 mod:localize 結果。
     def test_InterT10_mood_stub_flattens_all_keys(self):
@@ -127,10 +138,24 @@ class ControlledLoadTests(unittest.TestCase):
 
 
 class RuntimeFailureTests(unittest.TestCase):
+    # Scenario: The shared resolver selects a managed or explicitly configured executable.
+    # Purpose: Controlled loading must use the same LuaJIT as the syntax checker.
+    def test_UnitT01_shared_resolver_selects_runtime(self):
+        with patch("scripts.test_env.resolve_luajit", return_value="managed/luajit.exe") as resolve:
+            self.assertEqual(luajit_command(), "managed/luajit.exe")
+        resolve.assert_called_once_with()
+
+    # Scenario: No executable is available through the shared resolver.
+    # Purpose: Fail closed with the standard environment diagnostic command.
+    def test_UnitT05_missing_runtime_points_to_test_environment(self):
+        with patch("scripts.test_env.resolve_luajit", return_value=None):
+            with self.assertRaisesRegex(LocalizationValidationError, "python -m scripts.test_env"):
+                luajit_command()
+
     # Scenario: 執行檔缺失或載入逾時。
     # Purpose: CLI 與共用驗證器均明確回報失敗。
     def test_UnitT10_runtime_failure_is_not_silently_skipped(self):
-        with patch.dict(os.environ, {"SYP_LUAJIT": "syp700-missing-luajit"}):
+        with patch("scripts.test_env.resolve_luajit", return_value=None):
             with self.assertRaisesRegex(LocalizationSyntaxError, "LuaJIT"):
                 lint_paths(["a_localization.lua"], read=lambda _: b'return {}')
         with patch("scripts.localization_lint.runtime.luajit_command", return_value="luajit"), \

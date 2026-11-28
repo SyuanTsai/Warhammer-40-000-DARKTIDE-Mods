@@ -881,7 +881,7 @@ overlay_name_sets.full = {
     renegade_twin_captain = {
         en = "Twins",
         ["zh-cn"] = "双子",
-        ["zh-tw"] = "雙子連長",
+        ["zh-tw"] = "雙子",
     },
 }
 
@@ -1154,7 +1154,7 @@ loc_raw.mod_ui["renegade_captain_notif_name"] = {
 loc_raw.mod_ui["renegade_twin_captain_notif_name"] = {
     en = "TWIN CAPTAINS",
     ["zh-cn"] = "双子连长",
-    ["zh-tw"] = "雙子連長",
+    ["zh-tw"] = "雙子",
 }
 
 

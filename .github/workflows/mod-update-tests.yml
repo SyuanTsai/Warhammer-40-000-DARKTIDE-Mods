@@ -6,6 +6,9 @@ on:
       - 'scripts/localization_lint/**'
       - 'scripts/mod_update_watch/**'
       - 'scripts/mod_update_orchestrate/**'
+      - 'scripts/test_env/**'
+      - 'config/test-environment.json'
+      - '.github/actions/setup-luajit/**'
       - '.github/workflows/mod-update-*.yml'
       - '.github/workflows/mod-drive-intake.yml'
       - '.github/workflows/mod-private-fix.yml'
@@ -32,14 +35,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: SyuanTsai/Skill-Darktide-Translate
-          ref: 47b8605a69f824dcd376875bc3338d0aace3c6ea
+          ref: 566acf556751903ebd0a536dd77f1b67bef6deaa
           path: .skill
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install LuaJIT
-        run: sudo apt-get update && sudo apt-get install -y luajit
+        uses: ./mods/.github/actions/setup-luajit
+        with:
+          config-path: mods/config/test-environment.json
       - name: Install Skill dependencies
         run: |
           pwsh --version
@@ -47,7 +52,9 @@ jobs:
       - name: Check for undefined Python names
         run: |
           python -m pip install flake8
-          python -m flake8 --select=F821 scripts/mod_update_watch scripts/mod_update_orchestrate
+          python -m flake8 --select=F821 scripts/mod_update_watch scripts/mod_update_orchestrate scripts/test_env scripts/localization_lint
+      - name: Run test environment tests
+        run: python -m unittest discover -s scripts/test_env/tests -t .
       - name: Run MOD update watch tests
         run: python -m unittest discover -s scripts/mod_update_watch/tests -t .
       - name: Run localization lint tests

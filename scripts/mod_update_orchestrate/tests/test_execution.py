@@ -1,4 +1,7 @@
+import base64
 import hashlib
+import json
+import re
 import os
 import tempfile
 import unittest
@@ -11,10 +14,12 @@ from unittest.mock import Mock, call, patch
 from scripts.localization_lint import LocalizationSyntaxError
 from scripts.localization_lint.runtime import LocalizationValidationError
 from scripts.mod_update_orchestrate.github import GitHub
-from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
+from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE, decode_lua_string
 from scripts.mod_update_orchestrate.main import main
+from scripts.mod_update_orchestrate.localization import LocalizationError
 from scripts.mod_update_orchestrate.pr import update_branch
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
+from scripts.mod_update_orchestrate.reviewed import review_template
 from scripts.mod_update_watch.handoff import Received
 from scripts.mod_update_watch.registry import _read_hash
 
@@ -30,6 +35,8 @@ FLAGGED = {"unitId": "a", "key": "start", "source": "Start Shot Recovery",
 READY = {"units": [{**PENDING["units"][0], "reviewStatus": "approved",
                    "suggestedZhTwExpression": '"開始射擊恢復"'}],
          "translationBinding": {"rulesSha256": "rules", "glossarySha256": "terms"}}
+# Distinct, valid Lua blobs keep review hashes meaningful through runtime validation.
+REVIEW_OLD, REVIEW_NEW = b"return {}\n", b"return { }\n"
 
 
 class ExecutionTests(unittest.TestCase):
@@ -94,11 +101,13 @@ class ExecutionTests(unittest.TestCase):
         self.loc.apply.assert_not_called()
         self.assertFalse(self.github.mock_calls)
 
-    def run_update(self, *, dry_run=False, mode="manual", git_metadata=()):
+    def run_update(self, *, dry_run=False, mode="manual", git_metadata=(), reviewed_args=(), lint_error=None,
+                   prior_reviewed=False):
         self.loc.relative = "Example_localization.lua"
         self.loc.apply.return_value = (b"return {}\n", [])
+        branch = update_branch(self.mod.name, RECEIPT.version)
         self.github.write_pr.return_value = {
-            "number": 22, "head": {"sha": "a" * 40, "ref": update_branch(self.mod.name, RECEIPT.version)},
+            "number": 22, "head": {"sha": "a" * 40, "ref": branch},
             "base": {"ref": "main"}, "state": "open", "draft": False,
             "html_url": "https://github.com/owner/mods/pull/22",
         }
@@ -107,11 +116,37 @@ class ExecutionTests(unittest.TestCase):
         self.git.side_effect = lambda command, *args: {
             "rev-parse": "a" * 40, "diff": "README.md\0",
         }.get(command, "")
+        if reviewed_args:
+            previous_head, publication_head = "b" * 40, "a" * 40
+            ref = "refs/heads/" + branch
+            previous = {"number": 22, "state": "open", "draft": False, "base": {"ref": "main"},
+                        "head": {"sha": previous_head, "ref": branch},
+                        "body": f"<!-- mod-update-orchestrate:pr nexus_id=123 file_id=9001 verified_head={previous_head} route=update -->"}
+            if prior_reviewed:
+                previous["body"] += "\n<!-- reviewed-translation-v1 sha256=fixture -->"
+            self.pr_before = previous
+            self.github.pulls.side_effect = lambda queried: [previous] if queried in (None, branch) else []
+            live = {**previous, "head": {"sha": publication_head, "ref": branch}}
+            self.github.pull.return_value = live
+            self.github.write_pr.side_effect = lambda prev, branch, title, body, draft: {**live, "body": body}
+            git_default = self.git.side_effect
+            remote = previous_head
+
+            def reviewed_git(command, *args):
+                nonlocal remote
+                if command == "push":
+                    remote = publication_head
+                if command == "ls-remote":
+                    return remote + "\t" + ref
+                return git_default(command, *args)
+            self.git.side_effect = reviewed_git
         values = {"filename": "new.zip", "nexus_last_updated": "2026-11-25T00:00:00Z",
                   "version": "2", "downloaded": "2026-11-25", "acquisition_method": "drive-intake"}
         archive_path = self.scratch / "test.zip"
         with zipfile.ZipFile(archive_path, "w") as archive:
             archive.writestr("Example/Example.mod", "ok")
+            if reviewed_args:
+                archive.writestr("Example/Example_localization.lua", REVIEW_NEW)
             for path in git_metadata:
                 archive.writestr(path, "metadata")
         data = archive_path.read_bytes()
@@ -134,9 +169,146 @@ class ExecutionTests(unittest.TestCase):
               patch("scripts.mod_update_orchestrate.process.updates", return_value=values),
               patch("scripts.mod_update_orchestrate.process.update_readme"),
               patch("scripts.mod_update_orchestrate.process.stage_raw"),
-              patch("scripts.mod_update_orchestrate.process.lint_changes")):
+              patch("scripts.mod_update_orchestrate.process.lint_changes", side_effect=lint_error)):
             args = ["process", "--nexus-id", "123", "--issue", "7", "--file-id", "9001", "--review-mode", mode]
+            args.extend(reviewed_args)
             return main([*args, "--dry-run"] if dry_run else args, root=self.root)
+
+    def reviewed_fixture(self, source_expression='"Start"'):
+        loc_path = "Example_localization.lua"
+        self.baseline.return_value = {loc_path: REVIEW_OLD}
+        self.loc.workset = self.scratch / "generated.json"
+        document = {**PENDING, "old": {"sha256": hashlib.sha256(REVIEW_OLD).hexdigest()},
+                    "new": {"sha256": hashlib.sha256(REVIEW_NEW).hexdigest()},
+                    "immutableContractSha256": "e" * 64,
+                    "translationBinding": {"rulesSha256": "f" * 64, "glossarySha256": "d" * 64},
+                    "units": [{**PENDING["units"][0], "new": {"sourceExpression": {"raw": source_expression}}}]}
+        self.loc.generate.return_value = document
+        evidence = review_template(document, 123, 9001, REVIEW_OLD, REVIEW_NEW)
+        evidence.update(reviewer="maintainer", reviewReference="https://github.com/example/mods/pull/42#issuecomment-123")
+        evidence["units"][0]["translation"] = "開始"
+        return evidence
+
+    def replay(self, evidence, **kwargs):
+        path = self.scratch / "review.json"
+        path.write_text(json.dumps(evidence), encoding="utf-8")
+        return self.run_update(reviewed_args=("--regenerate", "--reviewed-input", str(path)), **kwargs)
+
+    # Scenario: Preview and replay a reviewed value over a versioned PR for the same file.
+    # Purpose: Bind retrievable evidence to the new commit, retain lease, and skip API and merge.
+    def test_UnitT22_reviewed_cli_replays_over_previous_head(self):
+        evidence = self.reviewed_fixture(r'"{#color(255,0,0)}Ammo %d \u{E000}{#reset()}\nDetails"')
+        translation = '{#color(255,0,0)}"彈藥" %d \ue000{#reset()}\n詳細資料'
+        evidence["units"][0]["translation"] = translation
+        self.assertEqual(self.run_update(dry_run=True, reviewed_args=("--regenerate", "--review-template"),
+                                         prior_reviewed=True), 0)
+        template = json.loads(self.emit.call_args.args[0])
+        self.assertEqual(template["immutableContractSha256"], evidence["immutableContractSha256"])
+        self.assertEqual(self.replay(evidence, prior_reviewed=True), 0)
+        self.loc.translate.assert_not_called()
+        self.github.merge_pr.assert_not_called()
+        applied = self.loc.apply.call_args.args[0]["units"][0]["suggestedZhTwExpression"]
+        self.assertEqual(decode_lua_string(applied), translation)
+        body = self.github.write_pr.call_args.args[3]
+        sha, data = re.search(r"reviewed-translation-v1 sha256=(\w+) data=(\S+) -->", body).groups()
+        raw = base64.b64decode(data, validate=True)
+        self.assertEqual(json.loads(raw), evidence)
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), sha)
+        self.assertIn("verified_head=" + "a" * 40, body)
+        self.assertIn("Reviewed-Translation-SHA256: " + sha, str(self.git.call_args_list))
+        ref = "refs/heads/" + update_branch(self.mod.name, RECEIPT.version)
+        self.git.assert_any_call("push", f"--force-with-lease={ref}:{'b' * 40}", "origin", f"{'a' * 40}:{ref}")
+
+    # Scenario: An operator supplies plain text for a dynamic source or drops a literal's runtime tokens.
+    # Purpose: Reject through the candidate entry before seeding approvals, applying the workset or publishing.
+    def test_UnitT23_reviewed_cli_rejects_removed_source_structure(self):
+        for raw in ('"Ammo %d " .. mk_icon("special")', r'"{#font(ui)}Ammo %d \u{E000}{#reset()}"'):
+            evidence = self.reviewed_fixture()
+            evidence["units"][0]["translation"] = "彈藥"
+            unit = self.loc.generate.return_value["units"][0]
+            unit["new"]["sourceExpression"]["raw"] = raw
+            with self.subTest(raw=raw):
+                self.assertEqual(self.replay(evidence), 1)
+                self.assertEqual(unit["reviewStatus"], "pending")
+                self.assertFalse(self.loc.workset.exists())
+                self.loc.translate.assert_not_called()
+                self.loc.apply.assert_not_called()
+                self.github.write_pr.assert_not_called()
+                self.assertFalse(any(c.args[0] == "push" for c in self.git.call_args_list))
+
+    # Scenario: The review names stale bytes or a key belonging to another unit.
+    # Purpose: Reject before the workset is written or a PR is updated.
+    def test_UnitT24_reviewed_cli_rejects_before_write(self):
+        for field in ("newSha256", "key"):
+            evidence = self.reviewed_fixture()
+            (evidence if field == "newSha256" else evidence["units"][0])[field] = "stale"
+            self.assertEqual(self.replay(evidence), 1)
+            self.assertFalse(self.loc.workset.exists())
+            self.loc.apply.assert_not_called()
+            self.github.write_pr.assert_not_called()
+
+    # Scenario: One reviewed unit is approved while another still needs the adapter.
+    # Purpose: Resume with the seeded review intact and reject an adapter that overwrites it.
+    def test_UnitT25_partial_review_resumes_remaining_unit(self):
+        evidence = self.reviewed_fixture()
+        second = {**PENDING["units"][0], "unitId": "b", "key": "stop",
+                  "new": {"sourceExpression": {"raw": '"Stop " .. mk_icon("special")'}}}
+        self.loc.generate.return_value["units"] = [*PENDING["units"], second]
+
+        def resume(document, **options):
+            self.assertEqual(json.loads(self.loc.workset.read_text(encoding="utf-8")), document)
+            approved, pending = document["units"]
+            self.assertEqual((approved["reviewStatus"], pending["reviewStatus"]), ("approved", "pending"))
+            result = {**document, "units": [approved, {**pending, "reviewStatus": "approved",
+                                                       "suggestedZhTwExpression": '"停止 " .. mk_icon("special")'}]}
+            self.loc.workset.write_text(json.dumps(result), encoding="utf-8")
+            return 0, {}, result
+
+        self.loc.translate.side_effect = resume
+        self.assertEqual(self.replay(evidence), 0)
+        self.github.write_pr.reset_mock()
+
+        def changed(document, **options):
+            status, summary, result = resume(document, **options)
+            result["units"][0] = {**result["units"][0], "suggestedZhTwExpression": '"覆寫"'}
+            return status, summary, result
+
+        self.loc.translate.side_effect = changed
+        self.assertEqual(self.replay(evidence), 1)
+        self.github.write_pr.assert_not_called()
+
+    # Scenario: An exact review passes binding but the Receipt or syntax gate rejects it.
+    # Purpose: A human decision cannot bypass the publication gates.
+    def test_UnitT26_reviewed_cli_requires_receipt_and_lint(self):
+        evidence = self.reviewed_fixture()
+        self.loc.apply.side_effect = LocalizationError("Receipt 未通過")
+        self.assertEqual(self.replay(evidence), 1)
+        self.loc.apply.side_effect = None
+        self.assertEqual(self.replay(evidence, lint_error=LocalizationSyntaxError("invalid Lua")), 1)
+        self.github.write_pr.assert_not_called()
+        self.assertFalse(any(c.args[0] == "push" for c in self.git.call_args_list))
+
+    # Scenario: Ordinary regeneration targets the versioned branch of an open reviewed PR.
+    # Purpose: Keep publication under manual review and stop before generating a candidate.
+    def test_UnitT27_ordinary_regeneration_preserves_reviewed_pr(self):
+        self.loc.translate.return_value = (0, {}, READY)
+        self.assertEqual(self.run_update(mode="auto", reviewed_args=("--regenerate",), prior_reviewed=True), 1)
+        self.assertIn("reviewed-translation-v1", self.pr_before["body"])
+        self.assertTrue(all(call.args[0] in {"status", "fetch", "rev-parse"} for call in self.git.call_args_list))
+        self.loc.generate.assert_not_called()
+        self.github.write_pr.assert_not_called()
+        self.github.merge_pr.assert_not_called()
+
+    # Scenario: Ordinary regeneration targets the versioned branch of an open PR without reviewed evidence.
+    # Purpose: Keep the existing candidate, leased push and automatic merge behavior.
+    def test_UnitT28_ordinary_regeneration_updates_unreviewed_pr(self):
+        self.loc.translate.return_value = (0, {}, READY)
+        self.assertEqual(self.run_update(mode="auto", reviewed_args=("--regenerate",)), 0)
+        self.loc.apply.assert_called_once()
+        ref = "refs/heads/" + update_branch(self.mod.name, RECEIPT.version)
+        self.git.assert_any_call("push", f"--force-with-lease={ref}:{'b' * 40}", "origin", f"HEAD:{ref}")
+        self.assertNotIn("reviewed-translation-v1", self.github.write_pr.call_args.args[3])
+        self.github.merge_pr.assert_called_once_with(22, "a" * 40)
 
     def test_pr_title_uses_unknown_for_missing_baseline_version(self):
         self.mod.baseline_version = None

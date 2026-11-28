@@ -1,11 +1,12 @@
 import json
 import os
-import shutil
 import sys
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+
+from scripts.test_env import resolve_luajit
 
 from scripts.mod_update_orchestrate.loc_layout import (
     decode_lua_string, preserve_layout, unwrap_literal_outer_double_quotes,
@@ -90,9 +91,14 @@ class LocalizationQuoteTests(unittest.TestCase):
 
     # Scenario: 新英文和上游繁中皆無顯示用外層引號，核准譯文卻多出一對。
     # Purpose: 去除顯示用外層引號，再交給 Apply、Receipt 和排版重建。
-    @unittest.skipUnless(shutil.which(os.environ.get("SYP_LUAJIT", "luajit")),
-                         "找不到 LuaJIT；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
     def test_InterT10_broker_translation_is_unwrapped_before_apply(self):
+        luajit = resolve_luajit()
+        if luajit is None and os.environ.get("DARKTIDE_ALLOW_NO_LUAJIT") == "1":
+            raise unittest.SkipTest(
+                "已明確允許缺少 LuaJIT（DARKTIDE_ALLOW_NO_LUAJIT=1）"
+            )
+        if luajit is None:
+            raise AssertionError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
         document = {"units": [self.unit]}
         self.loc.workset.write_text(json.dumps(document), encoding="utf-8")
 
@@ -119,9 +125,14 @@ class LocalizationQuoteTests(unittest.TestCase):
 
     # Scenario: BrokerAutoStim 的核准譯文是正常文字。
     # Purpose: Apply、Receipt 和排版重建後，值仍然沒有顯示用的外層引號。
-    @unittest.skipUnless(shutil.which(os.environ.get("SYP_LUAJIT", "luajit")),
-                         "找不到 LuaJIT；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
     def test_InterT20_clean_translation_survives_apply_and_layout(self):
+        luajit = resolve_luajit()
+        if luajit is None and os.environ.get("DARKTIDE_ALLOW_NO_LUAJIT") == "1":
+            raise unittest.SkipTest(
+                "已明確允許缺少 LuaJIT（DARKTIDE_ALLOW_NO_LUAJIT=1）"
+            )
+        if luajit is None:
+            raise AssertionError("找不到 LuaJIT，請執行 python -m scripts.test_env 檢查")
         self.unit["suggestedZhTwExpression"] = TRANSLATION
         self.staged.write_bytes(BEFORE.encode("utf-8"))
 
