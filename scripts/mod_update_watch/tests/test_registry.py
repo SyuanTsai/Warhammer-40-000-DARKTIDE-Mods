@@ -88,18 +88,33 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(mods[13].source, "override")
         self.assertNotIn(13, [entry.nexus_id for entry in unmapped])
 
-    def test_readme_version_checks_identifiable_filenames(self):
+    def test_UnitT32_readme_version_checks_identifiable_filenames(self):
+        """Scenario: Given README and filename versions, load the README baseline.
+        Purpose: Accept equivalent and missing versions and warn only on a real mismatch.
+        """
         readme = self.root / "README.md"
-        for filename, expected, warns in (
-            ("Example.zip-123-V1-0-3-1744814116.rar", "v1.0.3", False),
-            ("Example 123 2.0.2 2025-04-16T14-35Z receipt", None, True),
-            ("Example-124-2-0-2-1744814116", "v1.0.3", False),
-            ("Example-123-special-build-1744814116", "v1.0.3", False),
+        for version, filename_version, expected, warns in (
+            ("Version v1.0.3", "Example.zip-123-V1-0-3-1744814116.rar", "v1.0.3", False),
+            ("v1.0.3", "Example-124-2-0-2-1744814116", "v1.0.3", False),
+            ("v1.0.3", "Example-123-special-build-1744814116", "v1.0.3", False),
+            ("1.1", "1.1.0", "1.1", False),
+            ("V1.0", "未提供", "V1.0", False),
+            ("V1.1", "1.1.0", "V1.1", False),
+            ("23.04.05", "23.4.05", "23.04.05", False),
+            ("1.2.00", "", "1.2.00", False),
+            ("未提供", "V1.0", None, False),
+            ("", "V1.0", None, False),
+            ("3.1", "2.3", None, True),
+            ("1.11", "1.13", None, True),
+            ("1.2.8", "1.2.7", None, True),
         ):
-            with self.subTest(filename=filename):
+            with self.subTest(version=version, filename_version=filename_version):
+                filename = filename_version if filename_version.startswith("Example") else (
+                    f"Example 123 {filename_version} 2025-04-16T14-35Z receipt"
+                )
                 readme.write_text(
                     "### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n"
-                    "- MOD 版本：Version v1.0.3\n"
+                    f"- MOD 版本：{version}\n"
                     f"- MOD 檔案名稱：{filename}\n", encoding="utf-8")
                 with patch("scripts.mod_update_watch.registry.LOGGER.warning") as warning:
                     mods, _ = load_registry(self.root)
