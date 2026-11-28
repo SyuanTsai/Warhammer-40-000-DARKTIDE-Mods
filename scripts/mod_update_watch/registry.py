@@ -73,6 +73,20 @@ def strip_version(value):
     return re.sub(r"^version\s+", "", value.strip(), flags=re.IGNORECASE)
 
 
+def normalized_version(value):
+    return strip_version(value or "").casefold().removeprefix("v").strip()
+
+
+def _readme_version_key(value):
+    version = normalized_version(value)
+    if version == "未提供":
+        return ""
+    if re.fullmatch(r"[0-9]+(?:\.[0-9]+)*", version):
+        version = ".".join(part.lstrip("0") or "0" for part in version.split("."))
+        return re.sub(r"(?:\.0)+$", "", version)
+    return version
+
+
 def parse_uploaded(value):
     if not value:
         return None
@@ -101,7 +115,8 @@ def _readme_uploaded(entry):
 
 
 def _readme_version(entry):
-    if not entry.version:
+    readme_version = _readme_version_key(entry.version)
+    if not readme_version:
         return None
     nexus_id = entry.nexus_id
     legacy = re.search(rf"-{nexus_id}-(v?[0-9]+(?:-[0-9]+)*)-[0-9]{{10}}(?:\.(?:zip|7z|rar))?$",
@@ -113,7 +128,8 @@ def _readme_version(entry):
         filename_version = current[1]
     else:
         return entry.version
-    if entry.version.casefold().removeprefix("v").strip() != filename_version.casefold().removeprefix("v"):
+    filename_key = _readme_version_key(filename_version)
+    if filename_key and readme_version != filename_key:
         LOGGER.warning("Nexus %s | %s | README 版本 %s 與檔名版本 %s 不一致，基準版本視為未知",
                        nexus_id, entry.name, entry.version, filename_version)
         return None
@@ -133,7 +149,8 @@ def _readme_entries(path):
                 current = _ReadmeEntry(int(match[2]), match[1])
         elif current is not None:
             if line.startswith("- MOD 版本："):
-                current.version = strip_version(line.removeprefix("- MOD 版本：")) or None
+                version = strip_version(line.removeprefix("- MOD 版本："))
+                current.version = version if version and version != "未提供" else None
             elif line.startswith("- 手動維護最後下載日期："):
                 value = line.removeprefix("- 手動維護最後下載日期：").strip()
                 try:

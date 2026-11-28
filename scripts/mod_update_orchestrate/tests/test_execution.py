@@ -299,14 +299,17 @@ class ExecutionTests(unittest.TestCase):
             "unitId": "b", "key": "expedition", "action": "AI_REQUIRED", "reviewStatus": "preserved",
             "suggestedZhTwExpression": None,
         }]}
-        self.loc.translate.return_value = (0, {"termReviews": [lookup, preserved]}, document)
+        exhausted = {**FLAGGED, "reason": "max_corrections_reached", "adoption": "existing_zh_tw",
+                     "lastFailure": [{"category": "meaning", "detail": "語意有誤"}]}
+        self.loc.translate.return_value = (0, {"termReviews": [lookup, preserved, exhausted]}, document)
 
         self.assertEqual(self.run_update(), 0)
         self.loc.apply.assert_called_once()
         issue_body = self.github.term_review_issue.call_args.args[3]
         for evidence in ("範例", "版本：2", "PR：", "待確認詞", "needs&#95;lookup&#95;definition",
                          "complex&#95;expression", "回退英文", "原樣保留運算式", "Expedition: %s",
-                         "Localize", "Shot Recovery"):
+                         "Localize", "Shot Recovery", "max&#95;corrections&#95;reached",
+                         "最後一次失敗：meaning：語意有誤"):
             self.assertIn(evidence, issue_body)
 
     # Scenario: 第一次候選完成後 main 改變，第二次從新基準重建。

@@ -86,6 +86,13 @@ def prepare_term_reviews(workset, summary):
         }
         if item.get("reason") not in (None, "", "unknown_term"):
             review.update(reason=item["reason"], adoption=item.get("adoption"))
+            if isinstance(item.get("lastFailure"), list):
+                review["lastFailure"] = [
+                    issue if isinstance(issue, str) else f"{issue['category']}：{issue['detail']}"
+                    for issue in item["lastFailure"] if isinstance(issue, str) or (
+                        isinstance(issue, dict) and isinstance(issue.get("category"), str)
+                        and isinstance(issue.get("detail"), str))
+                ]
         reviews.append(review)
 
     reported_ids = set()
@@ -174,6 +181,8 @@ def _term_review_rows(reviews, has_reasons):
             reason = item.get("reason") or "unknown_term"
             if label := _ADOPTION_LABELS.get(item.get("adoption")):
                 reason = f"{reason}（{label}）"
+            if last_failure := item.get("lastFailure"):
+                reason += "；最後一次失敗：" + "、".join(last_failure)
             yield key, source, reason, adopted, terms
         else:
             yield key, source, terms, adopted
