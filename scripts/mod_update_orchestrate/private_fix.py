@@ -4,6 +4,7 @@ import re
 import tempfile
 from pathlib import Path
 
+from scripts.localization_lint.runtime import LocalizationValidationError
 from scripts.mod_update_watch.drive import DriveError
 from scripts.mod_update_watch.issues import GitHubError
 from scripts.mod_update_watch.registry import _read_hash, load_registry, parse_hash
@@ -16,7 +17,7 @@ from .localization import Localization, LocalizationError
 from .loc_layout import preserve_layout
 from .merge import private_changes
 from .pr import UNRESOLVED_THREADS, commit_tree, push, remote_head, should_merge, stage_raw
-from .process import latest
+from .process import NeedsHuman, latest
 from .records import mark_private_readme, update_hash
 from .report import api_usage, blocked_units, cell, plain, unquoted_note, workset_actions
 from .tree import MODS, TreeError, is_localization, locate_mod, read_repo_tree, read_tree
@@ -207,7 +208,15 @@ def check_mod(root, git, github, drive, processed, before, after, skill, workspa
     if loc_name:
         baseline = read_repo_tree(git, after, mod_path)
         original = baseline.get(loc_name)
-        translated, layout_note = preserve_layout(original, translated)
+        try:
+            translated, layout_note = preserve_layout(original, translated)
+        except LocalizationValidationError as error:
+            if previous is not None and not dry_run:
+                if (previous.get("head") or {}).get("sha") != remote_head(git, branch):
+                    raise ValueError("私人修正 PR 分支已變更，請重新執行")
+                github.set_draft(previous, True)
+                block_private(github, previous["number"], f"{loc_name}：{error}；已保留原 PR head。")
+            raise NeedsHuman("localization", f"{loc_name}：{error}") from error
         target = repo_bytes(translated, original, default_format(baseline))
         if note := format_note(original, translated, target):
             report.append(f"- {cell(loc_name)} ｜ {note}")
@@ -303,6 +312,9 @@ def private_fix(root, git, github, drive, processed, before, after, skill, scrat
                               mod, changed, cache=cache, mode=mode, max_items=max_items, dry_run=dry_run, emit=emit)
                 except TreeError as error:
                     emit(f"- {cell(directory)}：{cell(error)}")
+                except NeedsHuman as error:
+                    failed = True
+                    emit(f"- {cell(directory)}：翻譯需要人工處理（needs-human）。{cell(error)}")
                 except (GitHubError, OSError, ValueError) as error:
                     failed = True
                     emit(f"- {cell(directory)}：{cell(error)}")

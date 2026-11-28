@@ -9,6 +9,7 @@ from types import SimpleNamespace
 from unittest.mock import Mock, call, patch
 
 from scripts.localization_lint import LocalizationSyntaxError
+from scripts.localization_lint.runtime import LocalizationValidationError
 from scripts.mod_update_orchestrate.github import GitHub
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
 from scripts.mod_update_orchestrate.main import main
@@ -379,6 +380,8 @@ class ExecutionTests(unittest.TestCase):
     # Purpose: C5 列出原有私人修改、保留修改與 private_fix_commit，清除 hotfix 來源。
     def test_UnitT60_c5_keeps_private_fix_when_official_replaces_hotfix(self):
         # Given
+        # 此流程測試使用純文字佔位內容；Lua 載入與阻擋另有專屬測試。
+        self.enterContext(patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", return_value=[]))
         readme = self.root / "README.md"
         readme.write_text("# 遊戲體驗改善\n\n### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n"
                           "- MOD 版本：1\n- MOD 網站最後更新日期：待補\n- MOD 檔案名稱：patch.zip\n"
@@ -431,6 +434,25 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual((self.root / MOD / self.loc.relative).read_bytes(), b"translation\n")
         self.assertFalse(conflicts)
 
+    # Scenario: Skill Apply 成功，但共同出口的 OLD 存續驗證拒絕候選。
+    # Purpose: 轉成 NeedsHuman 並在安裝、metadata、PR 寫入之前停止。
+    def test_UnitT62_survival_failure_stops_candidate(self):
+        self.loc.relative = "Example_localization.lua"
+        self.loc.generate.return_value = READY
+        self.loc.translate.return_value = (0, {}, READY)
+        self.loc.apply.return_value = (b"return {}", [])
+        self.baseline.return_value = {self.loc.relative: b"return {}"}
+        error = LocalizationValidationError('def_abb["shout"] 欄位 [3] 遺失')
+        with patch("scripts.mod_update_orchestrate.process.find_base", return_value=None), \
+                patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", side_effect=error), \
+                patch("scripts.mod_update_orchestrate.process.install_tree") as install:
+            with self.assertRaisesRegex(NeedsHuman, "Example_localization.lua.*shout.*3") as caught:
+                self.build_candidate()
+        self.assertEqual(caught.exception.reason, "localization")
+        install.assert_not_called()
+        self.github.write_pr.assert_not_called()
+        self.assertFalse((self.root / "README.md").exists())
+
     # Scenario: 沒有封存基準，候選缺少已登記的程式檔，或改動本地化載入檔。
     # Purpose: 更新在安裝候選前列出受影響的檔案，讓既有 Issue 流程要求人工確認。
     def test_UnitT65_registered_private_fix_stops_changed_candidate(self):
@@ -445,6 +467,7 @@ class ExecutionTests(unittest.TestCase):
         self.loc.translate.return_value = (0, {}, ready)
         self.loc.apply.return_value = (b"return {}\n", [])
         with (patch("scripts.mod_update_orchestrate.process.find_base", return_value=None),
+              patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", return_value=[]),
               patch("scripts.mod_update_orchestrate.process.install_tree") as install):
             with self.assertRaises(NeedsHuman) as blocked:
                 self.build_candidate()

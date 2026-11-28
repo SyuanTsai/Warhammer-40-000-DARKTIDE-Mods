@@ -1,10 +1,13 @@
 import hashlib
+import os
+import shutil
 import tempfile
 import unittest
 import zipfile
 from pathlib import Path
 from unittest.mock import Mock, patch
 
+from scripts.localization_lint.runtime import LocalizationValidationError
 from scripts.mod_update_orchestrate.gate import validate_private
 from scripts.mod_update_orchestrate.github import GitHub
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
@@ -171,10 +174,35 @@ class PrivateFixTests(unittest.TestCase):
                          ["commit_pulls", "pulls", "commit_pulls", "pulls"])
         self.assertIn("無法判定", str(self.emit.call_args_list))
 
+    # Scenario: 私人修正的 Apply 通過，但 OLD 存續檢查失敗。
+    # Purpose: 既有 PR 標記 needs-human 並保留 head；不寫檔、不推送新候選。
+    def test_UnitT45_survival_failure_preserves_existing_pr(self):
+        self.expected = OLD
+        previous = {"number": 7, "head": {"sha": OLD},
+                    "body": f"<!-- mod-private-fix:pr nexus_id=123 before={BEFORE} after={AFTER} verified_head={OLD} -->"}
+        self.github.pulls.return_value = [previous]
+        self.changes.append(f"{MOD}/{LOC}")
+        original = b'return { title = { en = "Title", ["zh-tw"] = "TW" } }'
+        (self.root / MOD / LOC).write_bytes(original)
+        error = LocalizationValidationError('title 欄位 ["zh-tw"] 遺失')
+        with patch("scripts.mod_update_orchestrate.private_fix.translate_private",
+                   return_value=(LOC, b"return {}", [], [])), \
+                patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", side_effect=error):
+            with self.assertRaisesRegex(ValueError, "無法發布"):
+                self.run_detection()
+        self.github.set_draft.assert_called_once_with(previous, True)
+        self.github.needs_human.assert_called_once()
+        self.assertIn("title", self.github.needs_human.call_args.args[2])
+        self.github.write_pr.assert_not_called()
+        self.assertEqual((self.root / MOD / LOC).read_bytes(), original)
+        self.assertFalse(any(call.args[0] == "push" for call in self.git.call_args_list))
+
     # Scenario: MOD 非本地化檔不同，同一固定分支已有標記 PR。
     # Purpose: 更新原 PR、保留 hash 欄位、驗證 lease 與 verified head。
     def test_UnitT50_private_fix_updates_legacy_pr_using_merge_base(self):
         # Given
+        # 此流程測試使用純文字佔位內容；Lua 載入與阻擋另有專屬測試。
+        self.enterContext(patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", return_value=[]))
         self.expected = OLD
         self.before = "f" * 40
         previous = {"number": 7, "head": {"sha": OLD},
@@ -299,7 +327,9 @@ class PrivateFixTests(unittest.TestCase):
 
     # Scenario: push 同時改動英文和程式，Drive 可用或未設定。
     # Purpose: 譯文在同一 PR；無封存時 Gate 只接受本地化檔。
-    def test_UnitT80_translation_shares_pr_or_stands_alone_without_drive(self):
+    @unittest.skipUnless(shutil.which(os.environ.get("SYP_LUAJIT", "luajit")),
+                         "找不到 LuaJIT；設定 SYP_LUAJIT 或將 luajit 加入 PATH")
+    def test_InterT80_translation_shares_pr_or_stands_alone_without_drive(self):
         before = (b'return {\r\n    entry = {\r\n        en = "English",\r\n'
                   b'        ["zh-tw"] = "old",\r\n    },\r\n}\r\n')
         verified = ('return {\n    entry = {\n        ["zh-tw"] = "翻譯",\n'

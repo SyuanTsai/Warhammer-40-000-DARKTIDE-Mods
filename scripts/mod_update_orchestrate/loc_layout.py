@@ -5,6 +5,8 @@ from codecs import BOM_UTF8
 from collections import Counter, defaultdict
 from dataclasses import dataclass, replace
 
+from scripts.localization_lint.runtime import validate_survival
+
 from .eol import is_text, mixed_eol, text_format
 
 FALLBACK_NOTE = "本地化檔無法保留原排版，已使用 Skill 輸出"
@@ -565,7 +567,7 @@ def _rebuild(repo, applied):
             + repo.trailing + applied.suffix)
 
 
-def preserve_layout(before, applied):
+def _preserve_layout(before, applied):
     """Return bytes for repo_bytes and a PR note when the layout cannot be preserved."""
     if before is None:
         return applied, ""
@@ -586,3 +588,13 @@ def preserve_layout(before, applied):
     except (UnsupportedLayout, RecursionError):
         return applied, FALLBACK_NOTE
     return (BOM_UTF8 if applied.startswith(BOM_UTF8) else b"") + output.encode("utf-8"), ""
+
+
+def preserve_layout(before, applied):
+    """所有排版出口均驗證 OLD 繁中；驗證失敗不可回退到 Skill 輸出。"""
+    output, note = _preserve_layout(before, applied)
+    if before is not None:
+        deleted = validate_survival(before, output)
+        if deleted:
+            note = "\n".join(filter(None, (note, "已刪除本地化 key：" + "、".join(deleted))))
+    return output, note

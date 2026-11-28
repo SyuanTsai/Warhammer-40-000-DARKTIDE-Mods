@@ -9,6 +9,7 @@ from html import unescape
 from pathlib import Path
 
 from scripts.localization_lint import LocalizationSyntaxError, lint_changes
+from scripts.localization_lint.runtime import LocalizationValidationError
 from scripts.mod_update_watch.drive import DriveError, validate_id
 from scripts.mod_update_watch.registry import README_MOD, TAIPEI, TrackedMod, _load_overrides, _read_hash, load_registry
 from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, WINDOWS_DEVICE, extract
@@ -217,7 +218,10 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if reviews:
             emit(term_review_log(reviews))
         layout_base = None if route == "new" else ours.get(loc.relative)
-        merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
+        try:
+            merged[loc.relative], layout_note = preserve_layout(layout_base, applied)
+        except LocalizationValidationError as error:
+            raise NeedsHuman("localization", f"{loc.relative}：{error}") from error
 
     private_paths = {path.strip() for path in hash_fields.get("private_fix_paths", "").split(",") if path.strip()}
     changed_private_paths = [path for path in sorted(private_paths)
