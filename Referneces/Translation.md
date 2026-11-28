@@ -54,6 +54,7 @@
 - Countdown - 冷卻
 - Empower - 強化
 - Toughness - 韌性
+- Wound - 傷痕（生命值區段，例：Health / Wound - 生命值／傷痕）
 - Hit Mass - 順劈目標
   - 1.13.1機制說明暫用「命中質量」表示敵人消耗的順劈容量，待人工確認；保留原譯。來源：[ActionSweep](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_sweep.lua#L1356-L1367)
 - Cleave - 順劈攻擊
@@ -125,6 +126,7 @@
 - Malice - 惡毒
 - Heresy - 異端
 - Damnation - 詛咒
+- Auric - 奧里克（高難度任務等級）
 
 ### 其他 (MISC)
 
@@ -1125,6 +1127,7 @@
 #### 法務官專有名詞
 
 - Arbites - 法務官
+- Arbitrator - 法務官（Arbites 職業別稱）
 - Cyber-Mastiff - 電子獒犬
 
 #### 法務官天賦
