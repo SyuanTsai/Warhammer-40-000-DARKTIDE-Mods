@@ -114,7 +114,7 @@ class TestEnvironmentTests(unittest.TestCase):
             # Then
             self.assertIn("python -m scripts.test_env", str(caught.exception))
 
-    # Scenario: Lua parser integration tests run on a machine without LuaJIT.
+    # Scenario: Lua parser, controlled loading and orchestration tests run without LuaJIT.
     # Purpose: Missing LuaJIT may skip only through the explicit opt-out variable.
     def test_UnitT60_lua_parser_tests_fail_unless_missing_luajit_is_allowed(self):
         # Given
@@ -127,7 +127,16 @@ class TestEnvironmentTests(unittest.TestCase):
                 "PATH": "",
             })
             command = [sys.executable, "-m", "unittest",
-                       "scripts.localization_lint.tests.test_lint.LuaParserTests"]
+                       "scripts.localization_lint.tests.test_lint.LuaParserTests",
+                       "scripts.localization_lint.tests.test_runtime.ControlledLoadTests",
+                       "scripts.localization_lint.tests.test_proxy.ProxyTests",
+                       "scripts.mod_update_orchestrate.tests.test_loc_survival.SurvivalTests",
+                       "scripts.mod_update_orchestrate.tests.test_localization.LocalizationQuoteTests."
+                       "test_InterT10_broker_translation_is_unwrapped_before_apply",
+                       "scripts.mod_update_orchestrate.tests.test_localization.LocalizationQuoteTests."
+                       "test_InterT20_clean_translation_survives_apply_and_layout",
+                       "scripts.mod_update_orchestrate.tests.test_private_fix.PrivateFixTests."
+                       "test_InterT80_translation_shares_pr_or_stands_alone_without_drive"]
             # When
             denied = subprocess.run(command, cwd=Path(__file__).parents[3],
                                     env=base_environment, capture_output=True, text=True)
@@ -137,6 +146,7 @@ class TestEnvironmentTests(unittest.TestCase):
             # Then
             self.assertNotEqual(denied.returncode, 0, denied.stdout + denied.stderr)
             self.assertIn("python -m scripts.test_env", denied.stdout + denied.stderr)
+            self.assertNotIn("skipped", (denied.stdout + denied.stderr).lower())
             self.assertEqual(allowed.returncode, 0, allowed.stdout + allowed.stderr)
             self.assertIn("skipped", (allowed.stdout + allowed.stderr).lower())
 

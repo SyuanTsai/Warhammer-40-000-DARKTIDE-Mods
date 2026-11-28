@@ -40,7 +40,7 @@ class LocalizationLintTests(unittest.TestCase):
     def test_UnitT03_reads_nul_separated_paths(self):
         # Given
         path = "My Mod/example_localization.lua"
-        git = Mock(side_effect=[path + "\0", b"return {}"])
+        git = Mock(side_effect=[path + "\0", "merge-base", "", b"return {}"])
         with patch("scripts.localization_lint.lint_paths") as lint:
             # When
             lint_changes(git, "base", "head")
@@ -106,18 +106,19 @@ class LuaParserTests(unittest.TestCase):
             self.assertEqual(status, 1)
             self.assertRegex(stderr.getvalue(), rf"^{re.escape(str(path))}:2: .+")
 
-    # Scenario: localization 檔包含合法 LuaJIT 語法及翻譯文字。
-    # Purpose: 只解析語法，且不執行 Lua chunk。
-    def test_InterT03_valid_file_passes_without_execution(self):
+    # Scenario: localization 雖有合法語法，執行時卻發生錯誤。
+    # Purpose: 新增的受控載入必須阻擋執行期錯誤。
+    def test_InterT03_runtime_error_is_blocked(self):
         # Given
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory, "example_localization.lua")
             path.write_text('error("test")\nreturn { en = "Start", ["zh-cn"] = "启动" }\n',
                             encoding="utf-8")
             # When
-            status = main([str(path)])
+            with contextlib.redirect_stderr(io.StringIO()):
+                status = main([str(path)])
             # Then
-            self.assertEqual(status, 0)
+            self.assertEqual(status, 1)
 
     def test_InterT04_accepts_utf8_bom(self):
         lint_paths(["bom_localization.lua"], read=lambda _: BOM_UTF8 + b"return {}\n")

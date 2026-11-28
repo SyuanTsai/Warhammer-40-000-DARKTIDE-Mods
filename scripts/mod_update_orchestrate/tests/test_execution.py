@@ -12,6 +12,7 @@ from types import SimpleNamespace
 from unittest.mock import Mock, call, patch
 
 from scripts.localization_lint import LocalizationSyntaxError
+from scripts.localization_lint.runtime import LocalizationValidationError
 from scripts.mod_update_orchestrate.github import GitHub
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE, decode_lua_string
 from scripts.mod_update_orchestrate.main import main
@@ -34,6 +35,8 @@ FLAGGED = {"unitId": "a", "key": "start", "source": "Start Shot Recovery",
 READY = {"units": [{**PENDING["units"][0], "reviewStatus": "approved",
                    "suggestedZhTwExpression": '"開始射擊恢復"'}],
          "translationBinding": {"rulesSha256": "rules", "glossarySha256": "terms"}}
+# Distinct, valid Lua blobs keep review hashes meaningful through runtime validation.
+REVIEW_OLD, REVIEW_NEW = b"return {}\n", b"return { }\n"
 
 
 class ExecutionTests(unittest.TestCase):
@@ -143,7 +146,7 @@ class ExecutionTests(unittest.TestCase):
         with zipfile.ZipFile(archive_path, "w") as archive:
             archive.writestr("Example/Example.mod", "ok")
             if reviewed_args:
-                archive.writestr("Example/Example_localization.lua", b"new")
+                archive.writestr("Example/Example_localization.lua", REVIEW_NEW)
             for path in git_metadata:
                 archive.writestr(path, "metadata")
         data = archive_path.read_bytes()
@@ -173,15 +176,15 @@ class ExecutionTests(unittest.TestCase):
 
     def reviewed_fixture(self, source_expression='"Start"'):
         loc_path = "Example_localization.lua"
-        self.baseline.return_value = {loc_path: b"old"}
+        self.baseline.return_value = {loc_path: REVIEW_OLD}
         self.loc.workset = self.scratch / "generated.json"
-        document = {**PENDING, "old": {"sha256": hashlib.sha256(b"old").hexdigest()},
-                    "new": {"sha256": hashlib.sha256(b"new").hexdigest()},
+        document = {**PENDING, "old": {"sha256": hashlib.sha256(REVIEW_OLD).hexdigest()},
+                    "new": {"sha256": hashlib.sha256(REVIEW_NEW).hexdigest()},
                     "immutableContractSha256": "e" * 64,
                     "translationBinding": {"rulesSha256": "f" * 64, "glossarySha256": "d" * 64},
                     "units": [{**PENDING["units"][0], "new": {"sourceExpression": {"raw": source_expression}}}]}
         self.loc.generate.return_value = document
-        evidence = review_template(document, 123, 9001, b"old", b"new")
+        evidence = review_template(document, 123, 9001, REVIEW_OLD, REVIEW_NEW)
         evidence.update(reviewer="maintainer", reviewReference="https://github.com/example/mods/pull/42#issuecomment-123")
         evidence["units"][0]["translation"] = "開始"
         return evidence
@@ -549,6 +552,8 @@ class ExecutionTests(unittest.TestCase):
     # Purpose: C5 列出原有私人修改、保留修改與 private_fix_commit，清除 hotfix 來源。
     def test_UnitT60_c5_keeps_private_fix_when_official_replaces_hotfix(self):
         # Given
+        # 此流程測試使用純文字佔位內容；Lua 載入與阻擋另有專屬測試。
+        self.enterContext(patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", return_value=[]))
         readme = self.root / "README.md"
         readme.write_text("# 遊戲體驗改善\n\n### [Example](https://www.nexusmods.com/warhammer40kdarktide/mods/123)\n"
                           "- MOD 版本：1\n- MOD 網站最後更新日期：待補\n- MOD 檔案名稱：patch.zip\n"
@@ -601,6 +606,25 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual((self.root / MOD / self.loc.relative).read_bytes(), b"translation\n")
         self.assertFalse(conflicts)
 
+    # Scenario: Skill Apply 成功，但共同出口的 OLD 存續驗證拒絕候選。
+    # Purpose: 轉成 NeedsHuman 並在安裝、metadata、PR 寫入之前停止。
+    def test_UnitT62_survival_failure_stops_candidate(self):
+        self.loc.relative = "Example_localization.lua"
+        self.loc.generate.return_value = READY
+        self.loc.translate.return_value = (0, {}, READY)
+        self.loc.apply.return_value = (b"return {}", [])
+        self.baseline.return_value = {self.loc.relative: b"return {}"}
+        error = LocalizationValidationError('def_abb["shout"] 欄位 [3] 遺失')
+        with patch("scripts.mod_update_orchestrate.process.find_base", return_value=None), \
+                patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", side_effect=error), \
+                patch("scripts.mod_update_orchestrate.process.install_tree") as install:
+            with self.assertRaisesRegex(NeedsHuman, "Example_localization.lua.*shout.*3") as caught:
+                self.build_candidate()
+        self.assertEqual(caught.exception.reason, "localization")
+        install.assert_not_called()
+        self.github.write_pr.assert_not_called()
+        self.assertFalse((self.root / "README.md").exists())
+
     # Scenario: 沒有封存基準，候選缺少已登記的程式檔，或改動本地化載入檔。
     # Purpose: 更新在安裝候選前列出受影響的檔案，讓既有 Issue 流程要求人工確認。
     def test_UnitT65_registered_private_fix_stops_changed_candidate(self):
@@ -615,6 +639,7 @@ class ExecutionTests(unittest.TestCase):
         self.loc.translate.return_value = (0, {}, ready)
         self.loc.apply.return_value = (b"return {}\n", [])
         with (patch("scripts.mod_update_orchestrate.process.find_base", return_value=None),
+              patch("scripts.mod_update_orchestrate.loc_layout.validate_survival", return_value=[]),
               patch("scripts.mod_update_orchestrate.process.install_tree") as install):
             with self.assertRaises(NeedsHuman) as blocked:
                 self.build_candidate()

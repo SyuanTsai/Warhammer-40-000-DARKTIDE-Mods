@@ -69,7 +69,8 @@ class TerminologyBridgeTests(unittest.TestCase):
         stack.enter_context(patch.dict(os.environ, {
             "RUNNER_TEMP": str(scratch), "SKILL_ROOT": str(skill), "GDRIVE_PROCESSED_FOLDER_ID": "fixture",
             "GOOGLE_ACCESS_TOKEN": "fixture",
-            **{key: os.environ[key] for key in ("PATH", "SystemRoot") if key in os.environ},
+            **{key: os.environ[key] for key in ("PATH", "SystemRoot", "LUAJIT", "AI_TEST_ENV_ROOT")
+               if key in os.environ},
         }, clear=True))
         self.args = ["process", "--issue", "7", "--nexus-id", "417", "--file-id", "9786",
                      "--review-mode", "manual", "--regenerate", "--route", "update"]

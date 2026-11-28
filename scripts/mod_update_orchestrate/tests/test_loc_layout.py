@@ -5,7 +5,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts.mod_update_orchestrate.eol import repo_bytes
-from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE, _Parser, preserve_layout
+# 此組只驗證排版轉換（包含刻意不完整的 Lua）；公開出口的存續契約另由 test_loc_survival 驗證。
+from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE, _Parser, _preserve_layout as preserve_layout
 from scripts.mod_update_orchestrate.report import pr_body
 
 
