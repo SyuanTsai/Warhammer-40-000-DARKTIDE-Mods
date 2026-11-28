@@ -7,7 +7,7 @@ from html import escape
 
 from .loc_layout import decode_lua_string
 
-SKILL_SHA = "3d7b3305cb0655a52a01629ff34521a80cda6e15"
+SKILL_SHA = "47b8605a69f824dcd376875bc3338d0aace3c6ea"
 TERM_REVIEW_HEADING = "## 待審查術語"
 _TERM_REVIEW_COLUMNS = ("| 鍵值 | 英文原文 | 標記詞彙 | 採用譯文 |", "| --- | --- | --- | --- |")
 _TEXT_REVIEW_COLUMNS = ("| 鍵值 | 英文原文 | 原因 | 實際採用值 | 待確認詞 |", "| --- | --- | --- | --- | --- |")
@@ -86,6 +86,13 @@ def prepare_term_reviews(workset, summary):
         }
         if item.get("reason") not in (None, "", "unknown_term"):
             review.update(reason=item["reason"], adoption=item.get("adoption"))
+            if isinstance(item.get("lastFailure"), list):
+                review["lastFailure"] = [
+                    issue if isinstance(issue, str) else f"{issue['category']}：{issue['detail']}"
+                    for issue in item["lastFailure"] if isinstance(issue, str) or (
+                        isinstance(issue, dict) and isinstance(issue.get("category"), str)
+                        and isinstance(issue.get("detail"), str))
+                ]
         reviews.append(review)
 
     reported_ids = set()
@@ -174,6 +181,8 @@ def _term_review_rows(reviews, has_reasons):
             reason = item.get("reason") or "unknown_term"
             if label := _ADOPTION_LABELS.get(item.get("adoption")):
                 reason = f"{reason}（{label}）"
+            if last_failure := item.get("lastFailure"):
+                reason += "；最後一次失敗：" + "、".join(last_failure)
             yield key, source, reason, adopted, terms
         else:
             yield key, source, terms, adopted

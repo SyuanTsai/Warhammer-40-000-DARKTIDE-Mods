@@ -27,6 +27,11 @@ local data = {
                                 ["setting_id"] = "enemy_outlines_enabled"
                             },
                             {
+                                type = "checkbox",
+                                setting_id = "trash_outlines_enabled",
+                                default_value = false,
+                            },
+                            {
                                 ["type"] = "numeric",
                                 ["range"] = {0,100},
                                 ["decimals_number"] = 0,
@@ -149,6 +154,11 @@ local data = {
                                         ["type"] = "checkbox",
                                         ["default_value"] = true,
                                         ["setting_id"] = "debuff_soulblaze_enabled"
+                                    },
+                                    {
+                                        ["type"] = "checkbox",
+                                        ["default_value"] = true,
+                                        ["setting_id"] = "debuff_toxin_enabled"
                                     },
                                     {
                                         ["type"] = "checkbox",
@@ -2241,7 +2251,7 @@ end
 
 local hostile = assert(find(data.options.widgets, "section_hostiles")).sub_widgets[1]
 collapse(hostile.sub_widgets, "enemy_outlines_enabled", {
-    "enemy_outline_intensity", "occluded_outline_mode", "occluded_outline_intensity", "occluded_orange_glow"
+    "trash_outlines_enabled", "enemy_outline_intensity", "occluded_outline_mode", "occluded_outline_intensity", "occluded_orange_glow"
 })
 local outlines = find(hostile.sub_widgets, "enemy_outlines_enabled")
 local mode = find(outlines.sub_widgets, "occluded_outline_mode")
@@ -2259,4 +2269,46 @@ table.insert(debuffs.sub_widgets, 2, pulse)
 local team = find(data.options.widgets, "section_team").sub_widgets[1]
 team.sub_widgets[#team.sub_widgets+1] = {type="checkbox", setting_id="teammate_squadmate_icon_enabled", default_value=true}
 team.sub_widgets[#team.sub_widgets+1] = {type="checkbox", setting_id="teammate_friend_icon_enabled", default_value=true}
+-- Keep dot controls together; preserve the three existing boss style setting IDs.
+local dots = assert(find(hostile.sub_widgets, "empty_status_enabled"))
+dots.sub_widgets[#dots.sub_widgets+1] = {type="checkbox", setting_id="weakspot_trash_enabled", default_value=true}
+local markers = assert(find(data.options.widgets, "section_markers"))
+for _, id in ipairs({"daemonhost_marker_style", "monstrosity_marker_style", "human_boss_marker_style"}) do
+ local row, index = find(markers.sub_widgets, id)
+ assert(row, id)
+ table.remove(markers.sub_widgets, index)
+ dots.sub_widgets[#dots.sub_widgets+1] = row
+end
+-- Presentation modes use stable string values: native dropdown preview reads
+-- false as no selection. Keep RGB groups independent of display choices.
+local enemies=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/weakspot_groups")
+local colors, colors_index=find(data.options.widgets,"section_colors")
+table.remove(data.options.widgets,colors_index)
+-- Keep group selectors immediately below Enemy types and before its enemy rows.
+local trash_outline,trash_outline_index=find(outlines.sub_widgets,"trash_outlines_enabled")
+table.remove(outlines.sub_widgets,assert(trash_outline_index))
+local trash_dot,trash_dot_index=find(dots.sub_widgets,"weakspot_trash_enabled")
+table.remove(dots.sub_widgets,assert(trash_dot_index))
+local enemy_rows={trash_dot,trash_outline}
+local color_rows={}
+for _,breed in ipairs(enemies.order)do
+ local color=assert(find(colors.sub_widgets,"color_"..breed))
+ if enemies.bosses[breed] then
+  color.sub_widgets[1].default_value,color.sub_widgets[2].default_value,color.sub_widgets[3].default_value=130,40,210
+ end
+ color_rows[#color_rows+1]=color
+ enemy_rows[#enemy_rows+1]={
+  type="dropdown",setting_id="enemy_display_"..breed,default_value="both",
+  options={
+   {text="enemy_display_both",value="both"},
+   {text="enemy_display_outline",value="outline"},
+   {text="enemy_display_weakspot",value="weakspot"},
+   {text="enemy_display_off",value="off"},
+  },
+ }
+end
+hostile.sub_widgets[#hostile.sub_widgets+1]={type="group",setting_id="section_enemy_types",sub_widgets=enemy_rows}
+colors.sub_widgets=color_rows
+local _,diagnostics_index=find(data.options.widgets,"performance_diagnostics_enabled")
+table.insert(data.options.widgets,assert(diagnostics_index),colors)
 return data

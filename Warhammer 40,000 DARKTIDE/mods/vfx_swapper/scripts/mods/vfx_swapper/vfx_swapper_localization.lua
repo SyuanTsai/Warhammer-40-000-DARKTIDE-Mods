@@ -22,7 +22,7 @@ local localizations = {
 	replace_cultist_grenadier_gas = {
 		en = "Replace Cultist Grenadier's Gas Grenade",
 		["zh-cn"] = "替换渣滓剧毒轰炸者毒气弹",
-		["zh-tw"] = "替換渣滓劇毒轟炸者的毒氣手榴彈特效",
+		["zh-tw"] = "替換渣滓劇毒轟炸者的毒氣手雷特效",
 	},
 	replace_renegade_grenade_vfx = {
 		en = "Replace Renegade Grenadier's Fire Grenade",
@@ -650,7 +650,7 @@ local localizations = {
 	ring_erode_on = {
 		en = "Spillway Boss Ring 'Brightness'",
 		["zh-cn"] = "暗蚀者光环'亮度'",
-		["zh-tw"] = "溢洪道首領光環的亮度",
+		["zh-tw"] = "溢洪道首領光環「亮度」",
 	},
 	ring_erode_on_tt = {
 		en = "Negative values INCREASE the rings' maximum brightness, positive values DECREASE it. Vanilla setting is 0.",
@@ -660,17 +660,17 @@ local localizations = {
 	alt_decal = {
 		en = "Use Spillway Ring as decal and effect",
 		["zh-cn"] = "使用暗蚀者光环作为贴花和特效",
-		["zh-tw"] = "以溢洪道光環作為貼花和特效",
+		["zh-tw"] = "使用溢洪道光環作為貼花與特效",
 	},
 	alt_decal_tt = {
 		en = "{#color(255, 35, 5)}Requires 'Circle Only(no vfx)' to be selected for this effect! {#color(208, 208, 208)} \nReplaces normal 'circle' decal with Spillway boss's Nurgle Ring. \nDONUT shaped. \nExperimental. Recommended to use on VFX with small radius. ",
 		["zh-cn"] = "需要设置 Circle Only 模式！会将普通『圆』贴花替换为暗蚀者领主的纳垢之环。呈现甜甜圈状。\n实验性功能。推荐用于半径较小的特效。",
-		["zh-tw"] = "{#color(255, 35, 5)}須選取「僅範圍顯示（無特效）」才能使用此效果！{#color(208, 208, 208)} \010以溢洪道首領的納垢光環取代一般圓形貼花。 \010呈中空環形。 \010實驗功能。建議用於半徑較小的特效。 ",
+		["zh-tw"] = "{#color(255, 35, 5)}此效果必須選擇「僅圓圈（無特效）」才會生效！{#color(208, 208, 208)} \n將一般「圓圈」貼花替換為溢洪道首領的納垢光環。\n呈甜甜圈形狀。\n實驗性質。建議用於半徑較小的特效。 ",
 	},
 	psyker_overcharge_screen = {
 		en = "Disable Scier's Gaze Visual Screen effect",
 		["zh-cn"] = "禁用心灵超载屏幕特效",
-		["zh-tw"] = "停用「占卜者的注視」畫面特效",
+		["zh-tw"] = "停用「占卜者的注視」的螢幕視覺特效",
 	},
 }
 

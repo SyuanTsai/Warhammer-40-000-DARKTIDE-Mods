@@ -1,6 +1,6 @@
 -- Read-only Lua heap sampling. Net deltas are NOT total allocation or ownership.
 local Memory={}
-local names={"enemies","health_refresh","hazard_update","health_draw","ground_draw","custom_hud","hud_sample","hud_layout","hud_render","input_decision","pickup_refresh","pickup_draw"}
+local names={"enemies","outline_materials","outline_diagnostics","health_refresh","hazard_update","health_draw","ground_draw","custom_hud","hud_sample","hud_layout","hud_render","input_decision","pickup_refresh","pickup_draw"}
 local function valid(n)return type(n)=="number" and n==n and n>=0 and n<1e12 end
 function Memory.new(mod,collector)
  local self={enabled=false,slots={},seconds=0,next_heap=0,errors=0}

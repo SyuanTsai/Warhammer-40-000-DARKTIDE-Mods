@@ -12,6 +12,7 @@ from scripts.localization_lint import LocalizationSyntaxError
 from scripts.mod_update_orchestrate.github import GitHub
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
 from scripts.mod_update_orchestrate.main import main
+from scripts.mod_update_orchestrate.pr import update_branch
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
 from scripts.mod_update_watch.handoff import Received
 from scripts.mod_update_watch.registry import _read_hash
@@ -96,9 +97,12 @@ class ExecutionTests(unittest.TestCase):
         self.loc.relative = "Example_localization.lua"
         self.loc.apply.return_value = (b"return {}\n", [])
         self.github.write_pr.return_value = {
-            "number": 22, "head": {"sha": "a" * 40}, "draft": False,
+            "number": 22, "head": {"sha": "a" * 40, "ref": update_branch(self.mod.name, RECEIPT.version)},
+            "base": {"ref": "main"}, "state": "open", "draft": False,
             "html_url": "https://github.com/owner/mods/pull/22",
         }
+        self.github.write_pr.side_effect = lambda previous, branch, title, body, draft: {
+            **self.github.write_pr.return_value, "body": body}
         self.git.side_effect = lambda command, *args: {
             "rev-parse": "a" * 40, "diff": "README.md\0",
         }.get(command, "")
@@ -245,7 +249,8 @@ class ExecutionTests(unittest.TestCase):
             self.assertIn(evidence, messages)
         self.assertNotIn("&#", messages)
 
-        self.github.pulls.return_value = [{**self.github.write_pr.return_value, "body": body}]
+        pull = {**self.github.write_pr.return_value, "body": body}
+        self.github.pulls.side_effect = lambda branch: [pull] if branch == pull["head"]["ref"] else []
         transport.reset_mock()
         transport.side_effect = [label, no_issues, no_issues, (403, {}, b""),
                                  label, no_issues, no_issues, (201, {}, b'{"number": 31}')]
@@ -299,14 +304,17 @@ class ExecutionTests(unittest.TestCase):
             "unitId": "b", "key": "expedition", "action": "AI_REQUIRED", "reviewStatus": "preserved",
             "suggestedZhTwExpression": None,
         }]}
-        self.loc.translate.return_value = (0, {"termReviews": [lookup, preserved]}, document)
+        exhausted = {**FLAGGED, "reason": "max_corrections_reached", "adoption": "existing_zh_tw",
+                     "lastFailure": [{"category": "meaning", "detail": "語意有誤"}]}
+        self.loc.translate.return_value = (0, {"termReviews": [lookup, preserved, exhausted]}, document)
 
         self.assertEqual(self.run_update(), 0)
         self.loc.apply.assert_called_once()
         issue_body = self.github.term_review_issue.call_args.args[3]
         for evidence in ("範例", "版本：2", "PR：", "待確認詞", "needs&#95;lookup&#95;definition",
                          "complex&#95;expression", "回退英文", "原樣保留運算式", "Expedition: %s",
-                         "Localize", "Shot Recovery"):
+                         "Localize", "Shot Recovery", "max&#95;corrections&#95;reached",
+                         "最後一次失敗：meaning：語意有誤"):
             self.assertIn(evidence, issue_body)
 
     # Scenario: 第一次候選完成後 main 改變，第二次從新基準重建。

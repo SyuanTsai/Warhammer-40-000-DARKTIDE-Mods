@@ -25,6 +25,7 @@
 - AutoBlitz - 自動使用閃擊
 - Scoreboard - 記分板
 - Radar - 雷達
+- Proximity Alerts - 接近警告
 
 #### MOD名詞
 - Overhand - 高拋投擲
@@ -33,6 +34,7 @@
 - Center - 中心(用於表達畫面位置時)/中央(用於表達遊戲區域)
 - explosive - 爆炸桶(用於描述遊戲中的爆裂物)
 - Fire Barrel - 燃燒桶(用於描述遊戲中的燃燒爆裂物)
+- Spillway - 溢洪道（官方名詞，不得用溢流道／洩洪道）
 - Shot Recovery - 射擊恢復(PlasmaBFG 設定名稱)
 
 ##### MOD Enhanced descriptions 專用詞表
@@ -171,6 +173,9 @@
 
 名稱依 1.13.1（Steam Build 25606770）的英文與繁中資源核對，譯名優先沿用本表。分類依原始碼標籤；共用名稱的變體合併。BOSS 只列種類與稱號，不收錄個別或隨機姓名。
 
+- Renegade - 血痂（敵方派系；不得譯為叛徒）
+- Cultist - 渣滓（敵方派系；不得譯為異教徒）
+
 #### BOSS
 - Admonition Champion - 告誡教勇士
 - Twins - 雙子
@@ -187,12 +192,15 @@
 
 - Armoured Pox Hound - 裝甲瘟疫獵犬
 - Dreg Tox Bomber - 渣滓劇毒轟炸者
+- Cultist Grenadier - 渣滓劇毒轟炸者
 - Dreg Tox Flamer - 渣滓毒焰噴射者
+- Cultist Backpack Fire - 渣滓毒焰噴射者
 - Mutant - 變種人
 - Pox Hound - 瘟疫獵犬
 - Poxburster - 瘟疫爆者
 - Scab Bomber - 血痂轟炸者
 - Scab Flamer - 血痂噴火者
+- Renegade Backpack Fire - 血痂噴火者
 - Scab Sniper - 血痂狙擊手
 - Scab Trapper - 血痂陷阱兵
 
@@ -401,6 +409,8 @@
 - Twin-Linked Heavy Stubber - 雙鏈重型機槍
 - Vigilant Autogun - 機動自動槍
 - Voidblast Force Staff - 虛空爆破力場法杖
+- Trauma Force Staff - 虛空爆破力場法杖
+- Trauma Staff - 虛空爆破力場法杖
 - Voidstrike Force Staff - 虛空打擊力場法杖
 
 #### 既有英文通稱與別名
@@ -700,6 +710,7 @@
 - Telekine Dome - 念力穹頂
 - Sanctuary - 庇護所
 - Scrier's Gaze - 占卜者的注視
+- Scier's Gaze - 占卜者的注視
 - Precognition - 預知未來（範圍：靈能者主動技能節點）
 - Warp Speed - 亞空間加速
 - Reality Anchor - 現實錨點

@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 
 from .nexus import CallLimitExceeded, NexusError
-from .registry import TrackedMod, positive_id, strip_version
+from .registry import TrackedMod, normalized_version, positive_id
 
 
 CATEGORY_IDS = {1: "MAIN", 2: "UPDATE", 3: "OPTIONAL", 4: "OLD_VERSION",
@@ -70,10 +70,6 @@ def _latest_main(files):
     if positive_id(latest.get("file_id")) is None:
         return None, "最新主檔缺少有效的檔案 ID"
     return latest, None
-
-
-def normalized_version(value):
-    return strip_version(value or "").casefold().removeprefix("v").strip()
 
 
 def _utc_text(moment):

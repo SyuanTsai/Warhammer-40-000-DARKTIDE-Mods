@@ -636,10 +636,10 @@
 
 ### [Simple Speed Meter](https://www.nexusmods.com/warhammer40kdarktide/mods/404)
     顯示移動速度(用於比較不同武器的移動)
-- MOD 網站最後更新日期：Last updated 16 April 2025, 10:35PM
-- MOD 版本：1.0.3
-- MOD 檔案名稱：SimpleSpeedMeter-404-1-0-3-1744814116
-- 手動維護最後下載日期：2026-07-14
+- MOD 網站最後更新日期：Last updated 03 November 2026, 11:06AM
+- MOD 版本：1.0.4
+- MOD 檔案名稱：SimpleSpeedMeter 404 1.0.4 2026-11-03T03-06Z YFIfRFOND
+- 手動維護最後下載日期：2026-11-25
 
 ### [Server ping](https://www.nexusmods.com/warhammer40kdarktide/mods/1221)
     顯示真實的服務器PING
@@ -846,10 +846,10 @@
 
 ### [Field_Awareness](https://www.nexusmods.com/warhammer40kdarktide/mods/1359)
     顯示特定怪物的輪廓與攻擊區域(可視範圍內)
-- MOD 網站最後更新日期：Last updated 07 October 2026, 6:18PM（Nexus 頁面顯示；UTC：2026-10-07T18:18:49Z；Asia/Taipei：2026-10-08 02:18:49）
-- MOD 版本：1.5.1（Nexus 頁面與 ZIP 內版本；Nexus Main file 版本欄位：1）
-- MOD 檔案名稱：Field Awareness V1.5.1 Enemies Outlined And More 1359 1 2026-10-07T18-18Z Z1K0I1fL0.zip
-- 手動維護最後下載日期：2026-10-08
+- MOD 網站最後更新日期：Last updated 23 October 2026, 11:55PM
+- MOD 版本：1.7.0
+- MOD 檔案名稱：Field Awareness V1.7.0 Enemies Outlined And More 1359 1.7.0 2026-10-23T15-55Z QHh61HP98
+- 手動維護最後下載日期：2026-11-25
 
 ### [Uptime 2 - Buff Data and Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/898)
     觀察天賦的運作狀況
