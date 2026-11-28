@@ -216,7 +216,7 @@ return {
 
     ["color_renegade_flamer"] = {
         ["en"] = "Flamer",
-        ["zh-tw"] = "火焰兵",
+        ["zh-tw"] = "血痂噴火者",
     },
 
     ["section_colors_description"] = {
@@ -236,7 +236,7 @@ return {
 
     ["color_renegade_flamer_mutator"] = {
         ["en"] = "Scab Flamer Mutator",
-        ["zh-tw"] = "血痂火焰兵（詞條變體）",
+        ["zh-tw"] = "血痂噴火者",
     },
 
     ["color_renegade_flamer_mutator_r"] = {
@@ -256,7 +256,7 @@ return {
 
     ["color_renegade_grenadier"] = {
         ["en"] = "Bomber",
-        ["zh-tw"] = "火焰轟炸者",
+        ["zh-tw"] = "血痂轟炸者",
     },
 
     ["color_renegade_grenadier_r"] = {
@@ -316,7 +316,7 @@ return {
 
     ["color_renegade_netgunner"] = {
         ["en"] = "Trapper",
-        ["zh-tw"] = "陷阱兵",
+        ["zh-tw"] = "血痂陷阱兵",
     },
 
     ["color_renegade_netgunner_r"] = {
@@ -836,7 +836,7 @@ return {
 
     ["color_chaos_armored_hound"] = {
         ["en"] = "Armored Hound",
-        ["zh-tw"] = "重甲瘟疫獵犬",
+        ["zh-tw"] = "裝甲瘟疫獵犬",
     },
 
     ["color_chaos_armored_hound_r"] = {
@@ -936,7 +936,7 @@ return {
 
     ["color_chaos_hound_mutator"] = {
         ["en"] = "Hound Mutator",
-        ["zh-tw"] = "瘟疫獵犬（詞條變體）",
+        ["zh-tw"] = "瘟疫獵犬",
     },
 
     ["color_chaos_hound_mutator_r"] = {
@@ -956,7 +956,7 @@ return {
 
     ["color_chaos_lesser_mutated_poxwalker"] = {
         ["en"] = "Lesser Mutated Poxwalker",
-        ["zh-tw"] = "低階變異瘟疫行者",
+        ["zh-tw"] = "變異瘟疫行者",
     },
 
     ["color_chaos_lesser_mutated_poxwalker_r"] = {
@@ -976,7 +976,7 @@ return {
 
     ["color_chaos_mutated_poxwalker"] = {
         ["en"] = "Mutated Poxwalker",
-        ["zh-tw"] = "變異瘟疫行者",
+        ["zh-tw"] = "觸手瘟疫行者",
     },
 
     ["color_chaos_mutated_poxwalker_r"] = {
@@ -1016,7 +1016,7 @@ return {
 
     ["color_chaos_mutator_ritualist"] = {
         ["en"] = "Mutator Ritualist",
-        ["zh-tw"] = "渣滓祭司（詞條變體）",
+        ["zh-tw"] = "渣滓祭司",
     },
 
     ["color_chaos_mutator_ritualist_r"] = {
@@ -1056,7 +1056,7 @@ return {
 
     ["color_chaos_ogryn_bulwark"] = {
         ["en"] = "Bulwark",
-        ["zh-tw"] = "堡壘兵",
+        ["zh-tw"] = "堡壘",
     },
 
     ["color_chaos_ogryn_bulwark_r"] = {
@@ -1256,7 +1256,7 @@ return {
 
     ["color_cultist_captain"] = {
         ["en"] = "Dreg Captain",
-        ["zh-tw"] = "渣滓連長",
+        ["zh-tw"] = "告誡教勇士",
     },
 
     ["color_cultist_captain_r"] = {
@@ -1276,7 +1276,7 @@ return {
 
     ["color_cultist_flamer"] = {
         ["en"] = "Tox Flamer",
-        ["zh-tw"] = "劇毒火焰兵",
+        ["zh-tw"] = "渣滓毒焰噴射者",
     },
 
     ["color_cultist_flamer_r"] = {
@@ -1296,7 +1296,7 @@ return {
 
     ["color_cultist_grenadier"] = {
         ["en"] = "Pox Bomber",
-        ["zh-tw"] = "劇毒轟炸者",
+        ["zh-tw"] = "渣滓劇毒轟炸者",
     },
 
     ["color_cultist_grenadier_r"] = {
@@ -1376,7 +1376,7 @@ return {
 
     ["color_cultist_mutant_mutator"] = {
         ["en"] = "Dreg Mutant Mutator",
-        ["zh-tw"] = "渣滓變種人（詞條變體）",
+        ["zh-tw"] = "變種人",
     },
 
     ["color_cultist_mutant_mutator_r"] = {
@@ -1496,7 +1496,7 @@ return {
 
     ["color_renegade_captain"] = {
         ["en"] = "Scab Captain",
-        ["zh-tw"] = "血痂連長",
+        ["zh-tw"] = "血痂隊長",
     },
 
     ["color_renegade_captain_r"] = {
@@ -1679,55 +1679,55 @@ return {
  enemy_display_outline={en="Outline only", ["zh-tw"] = "僅顯示輪廓",},
  enemy_display_weakspot={en="Weak spot dot only", ["zh-tw"] = "僅顯示弱點圓點",},
  enemy_display_off={en="Off", ["zh-tw"] = "關閉",},
- enemy_display_chaos_armored_hound={en="Armored Hound", ["zh-tw"] = "裝甲獵犬",},
- enemy_display_chaos_armored_infected={en="Armored Infected", ["zh-tw"] = "裝甲感染者",},
+ enemy_display_chaos_armored_hound={en="Armored Hound", ["zh-tw"] = "裝甲瘟疫獵犬",},
+ enemy_display_chaos_armored_infected={en="Armored Infected", ["zh-tw"] = "重甲呻吟者",},
  enemy_display_chaos_beast_of_nurgle={en="Beast of Nurgle", ["zh-tw"] = "納垢巨獸",},
  enemy_display_chaos_daemonhost={en="Daemonhost", ["zh-tw"] = "惡魔宿主",},
- enemy_display_chaos_hound={en="Hound", ["zh-tw"] = "獵犬",},
- enemy_display_chaos_hound_mutator={en="Hound Mutator", ["zh-tw"] = "獵犬變異模式",},
- enemy_display_chaos_lesser_mutated_poxwalker={en="Lesser Mutated Poxwalker", ["zh-tw"] = "低階變異瘟疫行者",},
- enemy_display_chaos_mutated_poxwalker={en="Mutated Poxwalker", ["zh-tw"] = "變異瘟疫行者",},
- enemy_display_chaos_mutator_daemonhost={en="Mutator Daemonhost", ["zh-tw"] = "變異模式惡魔宿主",},
- enemy_display_chaos_mutator_ritualist={en="Mutator Ritualist", ["zh-tw"] = "變異模式渣滓祭司",},
- enemy_display_chaos_newly_infected={en="Newly Infected", ["zh-tw"] = "新感染者",},
+ enemy_display_chaos_hound={en="Hound", ["zh-tw"] = "瘟疫獵犬",},
+ enemy_display_chaos_hound_mutator={en="Hound Mutator", ["zh-tw"] = "瘟疫獵犬",},
+ enemy_display_chaos_lesser_mutated_poxwalker={en="Lesser Mutated Poxwalker", ["zh-tw"] = "變異瘟疫行者",},
+ enemy_display_chaos_mutated_poxwalker={en="Mutated Poxwalker", ["zh-tw"] = "觸手瘟疫行者",},
+ enemy_display_chaos_mutator_daemonhost={en="Mutator Daemonhost", ["zh-tw"] = "魔縛惡魔宿主",},
+ enemy_display_chaos_mutator_ritualist={en="Mutator Ritualist", ["zh-tw"] = "渣滓祭司",},
+ enemy_display_chaos_newly_infected={en="Newly Infected", ["zh-tw"] = "呻吟者",},
  enemy_display_chaos_ogryn_bulwark={en="Bulwark", ["zh-tw"] = "堡壘",},
  enemy_display_chaos_ogryn_executor={en="Crusher", ["zh-tw"] = "碾壓者",},
  enemy_display_chaos_ogryn_gunner={en="Reaper", ["zh-tw"] = "收割者",},
- enemy_display_chaos_ogryn_houndmaster={en="Ogryn Houndmaster", ["zh-tw"] = "歐格林獵犬馴養師",},
+ enemy_display_chaos_ogryn_houndmaster={en="Ogryn Houndmaster", ["zh-tw"] = "獸群領主",},
  enemy_display_chaos_plague_ogryn={en="Plague Ogryn", ["zh-tw"] = "瘟疫歐格林",},
  enemy_display_chaos_poxwalker={en="Poxwalker", ["zh-tw"] = "瘟疫行者",},
  enemy_display_chaos_poxwalker_bomber={en="Poxburster", ["zh-tw"] = "瘟疫爆者",},
  enemy_display_chaos_spawn={en="Chaos Spawn", ["zh-tw"] = "混沌魔物",},
- enemy_display_cultist_assault={en="Dreg Assault", ["zh-tw"] = "渣滓突擊兵",},
- enemy_display_cultist_berzerker={en="Dreg Berzerker", ["zh-tw"] = "渣滓狂戰士",},
- enemy_display_cultist_captain={en="Dreg Captain", ["zh-tw"] = "渣滓隊長",},
- enemy_display_cultist_flamer={en="Tox Flamer", ["zh-tw"] = "毒素火焰兵",},
- enemy_display_cultist_grenadier={en="Pox Bomber", ["zh-tw"] = "瘟疫轟炸者",},
+ enemy_display_cultist_assault={en="Dreg Assault", ["zh-tw"] = "渣滓潛行者",},
+ enemy_display_cultist_berzerker={en="Dreg Berzerker", ["zh-tw"] = "渣滓狂怒者",},
+ enemy_display_cultist_captain={en="Dreg Captain", ["zh-tw"] = "告誡教勇士",},
+ enemy_display_cultist_flamer={en="Tox Flamer", ["zh-tw"] = "渣滓毒焰噴射者",},
+ enemy_display_cultist_grenadier={en="Pox Bomber", ["zh-tw"] = "渣滓劇毒轟炸者",},
  enemy_display_cultist_gunner={en="Dreg Gunner", ["zh-tw"] = "渣滓砲手",},
- enemy_display_cultist_melee={en="Dreg Melee", ["zh-tw"] = "渣滓近戰兵",},
+ enemy_display_cultist_melee={en="Dreg Melee", ["zh-tw"] = "渣滓格鬥兵",},
  enemy_display_cultist_mutant={en="Mutant", ["zh-tw"] = "變種人",},
- enemy_display_cultist_mutant_mutator={en="Dreg Mutant Mutator", ["zh-tw"] = "渣滓變種人變異模式",},
+ enemy_display_cultist_mutant_mutator={en="Dreg Mutant Mutator", ["zh-tw"] = "變種人",},
  enemy_display_cultist_ritualist={en="Dreg Ritualist", ["zh-tw"] = "渣滓祭司",},
- enemy_display_cultist_shocktrooper={en="Dreg Shocktrooper", ["zh-tw"] = "渣滓突擊隊員",},
- enemy_display_cultist_vanguard={en="Dreg Vanguard", ["zh-tw"] = "渣滓先鋒",},
- enemy_display_renegade_assault={en="Scab Assault", ["zh-tw"] = "血痂突擊兵",},
- enemy_display_renegade_berzerker={en="Scab Berzerker", ["zh-tw"] = "血痂狂戰士",},
+ enemy_display_cultist_shocktrooper={en="Dreg Shocktrooper", ["zh-tw"] = "渣滓霰彈槍手",},
+ enemy_display_cultist_vanguard={en="Dreg Vanguard", ["zh-tw"] = "渣滓先鋒 (盾兵)",},
+ enemy_display_renegade_assault={en="Scab Assault", ["zh-tw"] = "血痂潛行者",},
+ enemy_display_renegade_berzerker={en="Scab Berzerker", ["zh-tw"] = "血痂狂暴者",},
  enemy_display_renegade_captain={en="Scab Captain", ["zh-tw"] = "血痂隊長",},
  enemy_display_renegade_executor={en="Scab Mauler", ["zh-tw"] = "血痂重錘兵",},
- enemy_display_renegade_flamer={en="Flamer", ["zh-tw"] = "火焰兵",},
- enemy_display_renegade_flamer_mutator={en="Scab Flamer Mutator", ["zh-tw"] = "血痂噴火者變異模式",},
- enemy_display_renegade_grenadier={en="Bomber", ["zh-tw"] = "轟炸者",},
+ enemy_display_renegade_flamer={en="Flamer", ["zh-tw"] = "血痂噴火者",},
+ enemy_display_renegade_flamer_mutator={en="Scab Flamer Mutator", ["zh-tw"] = "血痂噴火者",},
+ enemy_display_renegade_grenadier={en="Bomber", ["zh-tw"] = "血痂轟炸者",},
  enemy_display_renegade_gunner={en="Scab Gunner", ["zh-tw"] = "血痂砲手",},
- enemy_display_renegade_melee={en="Scab Melee", ["zh-tw"] = "血痂近戰兵",},
- enemy_display_renegade_netgunner={en="Trapper", ["zh-tw"] = "陷阱兵",},
+ enemy_display_renegade_melee={en="Scab Melee", ["zh-tw"] = "血痂格鬥兵",},
+ enemy_display_renegade_netgunner={en="Trapper", ["zh-tw"] = "血痂陷阱兵",},
  enemy_display_renegade_plasma_gunner={en="Scab Plasma Gunner", ["zh-tw"] = "血痂電漿槍手",},
  enemy_display_renegade_radio_operator={en="Scab Radio Operator", ["zh-tw"] = "血痂無線電兵",},
- enemy_display_renegade_rifleman={en="Scab Rifleman", ["zh-tw"] = "血痂步槍兵",},
- enemy_display_renegade_shocktrooper={en="Scab Shocktrooper", ["zh-tw"] = "血痂突擊兵",},
+ enemy_display_renegade_rifleman={en="Scab Rifleman", ["zh-tw"] = "血痂射手",},
+ enemy_display_renegade_shocktrooper={en="Scab Shocktrooper", ["zh-tw"] = "血痂霰彈槍手",},
  enemy_display_renegade_sniper={en="Scab Sniper", ["zh-tw"] = "血痂狙擊手",},
  enemy_display_renegade_twin_captain={en="Scab Twin Captain", ["zh-tw"] = "血痂雙子隊長",},
  enemy_display_renegade_twin_captain_two={en="Scab Twin Captain Two", ["zh-tw"] = "血痂雙子隊長二號",},
- enemy_display_renegade_vanguard={en="Scab Vanguard", ["zh-tw"] = "血痂先鋒",},
+ enemy_display_renegade_vanguard={en="Scab Vanguard", ["zh-tw"] = "血痂先鋒 (盾兵)",},
  enemy_display_fallback={en="Other / future enemies", ["zh-tw"] = "其他／未來敵人",},
  outline_chaos_armored_hound_enabled={en="Outline", ["zh-tw"] = "輪廓",},
  outline_chaos_armored_hound_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
