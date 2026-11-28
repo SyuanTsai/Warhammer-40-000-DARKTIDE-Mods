@@ -670,7 +670,7 @@ local localizations = {
 	psyker_overcharge_screen = {
 		en = "Disable Scier's Gaze Visual Screen effect",
 		["zh-cn"] = "禁用心灵超载屏幕特效",
-		["zh-tw"] = "停用先知凝視的螢幕視覺特效",
+		["zh-tw"] = "停用「占卜者的注視」的螢幕視覺特效",
 	},
 }
 

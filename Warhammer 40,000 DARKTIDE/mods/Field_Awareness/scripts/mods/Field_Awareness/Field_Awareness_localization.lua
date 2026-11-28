@@ -631,7 +631,7 @@ return {
 
     ["weakspot_high_contrast_enabled_description"] = {
         ["en"] = "Add white borders to dark-brown and blue weak spot dots, including dark-blue Vanguards. Small ordinary shooters use white dots with black borders; other colors retain their contrast borders. Death-pop fragments alternate between fill and border colors. Turn off for plain dots and single-color pops. Enabled by default.",
-        ["zh-tw"] = "為深棕色和藍色的弱點圓點加上白色邊框，包括深藍色的先鋒兵。小型一般射手使用帶黑色邊框的白色圓點；其他顏色保留其對比邊框。死亡爆散時，碎片會交替使用填色和邊框顏色。關閉後為單純圓點和單色爆散。預設開啟。",
+        ["zh-tw"] = "為深棕色和藍色的弱點圓點加上白色邊框，包括深藍色的先鋒（盾兵）。小型一般射手使用帶黑色邊框的白色圓點；其他顏色保留其對比邊框。死亡爆散時，碎片會交替使用填色和邊框顏色。關閉後為單純圓點和單色爆散。預設開啟。",
     },
 
     ["debuff_nonwarp_enabled"] = {
@@ -641,7 +641,7 @@ return {
 
     ["empty_status_enabled_description"] = {
         ["en"] = "Show a persistent head-position dot matching the enemy outline color. Choose trash mobs, boss marker styles and individual enemy categories below; each category can be switched off separately. Dot color stays independent of health bars and body-outline switches; outline intensity only dims the body outline. Daemonhosts retain their green/yellow warning colors. Uses existing line-of-sight and distance limits and pops on death. Trappers and hounds can show dots alongside specialist icons; Poxbursters keep their bomb icon instead. Uses the head anchor, not separate weak-spot geometry.",
-        ["zh-tw"] = "持續顯示頭部位置的圓點，顏色與敵人輪廓顏色一致。請在下方選擇雜兵、首領標記樣式和各敵人類別；每個類別可分別關閉。圓點顏色與血條和身體輪廓開關各自獨立；輪廓強度只會讓身體輪廓變暗。惡魔宿主保留綠色／黃色的警示顏色。沿用現有的視線和距離限制，死亡時會爆散。陷阱兵和獵犬可在專家圖示旁顯示圓點；瘟疫爆者則維持使用炸彈圖示。使用頭部錨點，而非獨立的弱點幾何形狀。",
+        ["zh-tw"] = "持續顯示頭部位置的圓點，顏色與敵人輪廓顏色一致。請在下方選擇雜兵、首領標記樣式和各敵人類別；每個類別可分別關閉。圓點顏色與血條和身體輪廓開關各自獨立；輪廓強度只會讓身體輪廓變暗。惡魔宿主保留綠色／黃色的警示顏色。沿用現有的視線和距離限制，死亡時會爆散。陷阱兵和瘟疫獵犬可在專家圖示旁顯示圓點；瘟疫爆者則維持使用炸彈圖示。使用頭部錨點，而非獨立的弱點幾何形狀。",
     },
 
     ["debuff_pulse_enabled"] = {
@@ -1684,11 +1684,11 @@ return {
  enemy_display_chaos_beast_of_nurgle={en="Beast of Nurgle", ["zh-tw"] = "納垢巨獸",},
  enemy_display_chaos_daemonhost={en="Daemonhost", ["zh-tw"] = "惡魔宿主",},
  enemy_display_chaos_hound={en="Hound", ["zh-tw"] = "瘟疫獵犬",},
- enemy_display_chaos_hound_mutator={en="Hound Mutator", ["zh-tw"] = "瘟疫獵犬",},
+ enemy_display_chaos_hound_mutator={en="Hound Mutator", ["zh-tw"] = "瘟疫獵犬（變異模式）",},
  enemy_display_chaos_lesser_mutated_poxwalker={en="Lesser Mutated Poxwalker", ["zh-tw"] = "變異瘟疫行者",},
  enemy_display_chaos_mutated_poxwalker={en="Mutated Poxwalker", ["zh-tw"] = "觸手瘟疫行者",},
- enemy_display_chaos_mutator_daemonhost={en="Mutator Daemonhost", ["zh-tw"] = "魔縛惡魔宿主",},
- enemy_display_chaos_mutator_ritualist={en="Mutator Ritualist", ["zh-tw"] = "渣滓祭司",},
+ enemy_display_chaos_mutator_daemonhost={en="Mutator Daemonhost", ["zh-tw"] = "魔縛惡魔宿主（變異模式）",},
+ enemy_display_chaos_mutator_ritualist={en="Mutator Ritualist", ["zh-tw"] = "渣滓祭司（變異模式）",},
  enemy_display_chaos_newly_infected={en="Newly Infected", ["zh-tw"] = "呻吟者",},
  enemy_display_chaos_ogryn_bulwark={en="Bulwark", ["zh-tw"] = "堡壘",},
  enemy_display_chaos_ogryn_executor={en="Crusher", ["zh-tw"] = "碾壓者",},
@@ -1706,7 +1706,7 @@ return {
  enemy_display_cultist_gunner={en="Dreg Gunner", ["zh-tw"] = "渣滓砲手",},
  enemy_display_cultist_melee={en="Dreg Melee", ["zh-tw"] = "渣滓格鬥兵",},
  enemy_display_cultist_mutant={en="Mutant", ["zh-tw"] = "變種人",},
- enemy_display_cultist_mutant_mutator={en="Dreg Mutant Mutator", ["zh-tw"] = "變種人",},
+ enemy_display_cultist_mutant_mutator={en="Dreg Mutant Mutator", ["zh-tw"] = "渣滓變種人（變異模式）",},
  enemy_display_cultist_ritualist={en="Dreg Ritualist", ["zh-tw"] = "渣滓祭司",},
  enemy_display_cultist_shocktrooper={en="Dreg Shocktrooper", ["zh-tw"] = "渣滓霰彈槍手",},
  enemy_display_cultist_vanguard={en="Dreg Vanguard", ["zh-tw"] = "渣滓先鋒 (盾兵)",},
@@ -1715,7 +1715,7 @@ return {
  enemy_display_renegade_captain={en="Scab Captain", ["zh-tw"] = "血痂隊長",},
  enemy_display_renegade_executor={en="Scab Mauler", ["zh-tw"] = "血痂重錘兵",},
  enemy_display_renegade_flamer={en="Flamer", ["zh-tw"] = "血痂噴火者",},
- enemy_display_renegade_flamer_mutator={en="Scab Flamer Mutator", ["zh-tw"] = "血痂噴火者",},
+ enemy_display_renegade_flamer_mutator={en="Scab Flamer Mutator", ["zh-tw"] = "血痂噴火者（變異模式）",},
  enemy_display_renegade_grenadier={en="Bomber", ["zh-tw"] = "血痂轟炸者",},
  enemy_display_renegade_gunner={en="Scab Gunner", ["zh-tw"] = "血痂砲手",},
  enemy_display_renegade_melee={en="Scab Melee", ["zh-tw"] = "血痂格鬥兵",},
