@@ -34,7 +34,7 @@
 - Center - 中心(用於表達畫面位置時)/中央(用於表達遊戲區域)
 - explosive - 爆炸桶(用於描述遊戲中的爆裂物)
 - Fire Barrel - 燃燒桶(用於描述遊戲中的燃燒爆裂物)
-- Spillway - 溢洪道
+- Spillway - 溢洪道（官方名詞，不得用溢流道／洩洪道）
 - Shot Recovery - 射擊恢復(PlasmaBFG 設定名稱)
 
 ##### MOD Enhanced descriptions 專用詞表
@@ -172,6 +172,9 @@
 ### 怪物相關
 
 名稱依 1.13.1（Steam Build 25606770）的英文與繁中資源核對，譯名優先沿用本表。分類依原始碼標籤；共用名稱的變體合併。BOSS 只列種類與稱號，不收錄個別或隨機姓名。
+
+- Renegade - 血痂（敵方派系；不得譯為叛徒）
+- Cultist - 渣滓（敵方派系；不得譯為異教徒）
 
 #### BOSS
 - Admonition Champion - 告誡教勇士
