@@ -347,30 +347,39 @@ loc_raw.option = {
         ["zh-tw"] = "任務投票視窗 - 隱藏詳細內容",
     },
     arial = {
+        ["zh-tw"] = "Arial",
         en = "Arial",
     },
     itc_novarese_medium = {
+        ["zh-tw"] = "ITC Novarese - Medium",
         en = "ITC Novarese - Medium",
     },
     itc_novarese_bold = {
+        ["zh-tw"] = "ITC Novarese - Bold",
         en = "ITC Novarese - Bold",
     },
     proxima_nova_light = {
+        ["zh-tw"] = "Proxima Nova - Light",
         en = "Proxima Nova - Light",
     },
     proxima_nova_medium = {
+        ["zh-tw"] = "Proxima Nova - Medium",
         en = "Proxima Nova - Medium",
     },
     proxima_nova_bold = {
+        ["zh-tw"] = "Proxima Nova - Bold",
         en = "Proxima Nova - Bold",
     },
     friz_quadrata = {
+        ["zh-tw"] = "Friz Quadrata",
         en = "Friz Quadrata",
     },
     rexlia = {
+        ["zh-tw"] = "Rexlia",
         en = "Rexlia",
     },
     machine_medium = {
+        ["zh-tw"] = "Machine Medium",
         en = "Machine Medium",
     },
     top = {
@@ -422,15 +431,19 @@ loc_raw.option = {
 
 loc_raw.mod_ui = {
     spawn_message_icon = {
+        ["zh-tw"] = "%s — %s",
         en = "%s \u{2014} %s",
     },
     death_message_icon = {
+        ["zh-tw"] = "%s — %s",
         en = "%s \u{2014} %s",
     },
     spawn_message_simple_icon = {
+        ["zh-tw"] = "%s",
         en = "%s"
     },
     death_message_simple_icon = {
+        ["zh-tw"] = "%s",
         en = "%s",
     },
     spawn_message_text = {
@@ -454,15 +467,19 @@ loc_raw.mod_ui = {
         ["zh-tw"] = "%s 已死亡",
     },
     hybrid_message_grouped = {
+        ["zh-tw"] = "%s —\n %s ▲ — %s ▼",
         en = "%s \u{2014}\n %s \u{25B2} \u{2014} %s \u{25BC}",
     },
     hybrid_message_grouped_1_icon = {
+        ["zh-tw"] = "%s",
         en = "%s",
     },
     hybrid_message_grouped_2_icon = {
+        ["zh-tw"] = "%s ▲ — %s ▼",
         en = "%s \u{25B2} \u{2014} %s \u{25BC}",
     },
     hybrid_message_grouped_1_text = {
+        ["zh-tw"] = "%s",
         en = "%s",
     },
     hybrid_message_grouped_2_text = {
@@ -881,7 +898,7 @@ overlay_name_sets.full = {
     renegade_twin_captain = {
         en = "Twins",
         ["zh-cn"] = "双子",
-        ["zh-tw"] = "雙子",
+        ["zh-tw"] = "雙子連長",
     },
 }
 
