@@ -20,9 +20,9 @@ from .checks import check_report
 from .reviewed import PendingSkillEvidence, load_review, load_terminology_request
 from .discover import discover
 from .github import GitHub
-from .pr import current_pr, merge_check, run_git
+from .pr import branch_for, current_pr, merge_check, resolve_update, run_git
 from .private_fix import private_fix
-from .process import process
+from .process import process, registry_mod
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -114,15 +114,13 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             return 0
         if args.command == "discover":
             mods, _ = load_registry(root)
-            @memoize
-            def open_pulls():
-                return [item for item in github.pages("issues?state=open&per_page=100", "列出開啟的 PR 議題")
-                        if "pull_request" in item]
+            pulls_for = memoize(github.pulls)
 
             matrix, notes = discover(
                 root, github, {mod.nexus_id: mod for mod in mods}, nexus_filter=args.nexus_id,
                 dry_run=args.dry_run,
-                current=lambda nexus, file: current_pr(open_pulls(), nexus, file),
+                current=lambda nexus, file: current_pr(pulls_for(branch_for(nexus)), nexus, file),
+                lookup_update=partial(resolve_update, pulls_for),
                 mode=mode, skip_updates=args.skip_updates, regenerate=args.regenerate,
             )
             for note in notes:
@@ -160,7 +158,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             identity = args.file_id
         if args.merge_check:
             if mode == "auto":
-                options = {"route": args.route} if args.route != "update" else {}
+                options = ({"mod": registry_mod(root, args.nexus_id)} if args.route == "update"
+                           else {"route": args.route})
                 merge_check(git, github, args.issue, args.nexus_id, identity,
                             dry_run=args.dry_run, emit=emit, **options)
             else:

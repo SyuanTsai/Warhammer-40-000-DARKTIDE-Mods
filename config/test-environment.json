@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "toolRoot": { "windows": "F:\\GitFile\\AI-Test-Env", "environmentOverride": "AI_TEST_ENV_ROOT" },
+  "luajit": {
+    "repository": "https://github.com/LuaJIT/LuaJIT.git",
+    "commit": "3bfb8fa4ab970b36d42d108ead04e92341c49998",
+    "expectedVersion": "LuaJIT 2.1.1795687819",
+    "environmentOverride": "LUAJIT"
+  }
+}

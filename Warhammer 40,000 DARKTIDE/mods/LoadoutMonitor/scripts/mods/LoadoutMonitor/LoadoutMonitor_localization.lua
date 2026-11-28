@@ -1,10 +1,24 @@
 local mod = get_mod("LoadoutMonitor")
 local locr = {}
-local lid = Managers and Managers.localization and Managers.localization:language() or mod:get("user_lid") or "en"
-local default_lid_order = {"en","zh-cn","zh-tw"}
+mod.lid = Managers and Managers.localization and Managers.localization:language() or Application.user_setting("language_id") or "en"
+local lid = mod.lid
+local default_lid_order = {"en","zh-cn"}
 local _io = Mods.lua.io
-mod.color_text = function(R,G,B,text)
-	return string.format("{#color(%s,%s,%s)}%s{#reset()}",R,G,B,text)
+mod.domodfile = function(name,folder)
+	local file = folder and folder..name or name
+	return mod:io_dofile("LoadoutMonitor/scripts/mods/LoadoutMonitor/"..file)
+end
+mod.datalookup = mod.domodfile("LoadoutMonitor_lookup")
+local datalookup = mod.datalookup
+mod.color_text = function(R,G,B,text,alpha)
+	if alpha then
+		return string.format("{#color(%s,%s,%s,%s)}%s{#reset()}",R,G,B,alpha,text)
+	else
+		return string.format("{#color(%s,%s,%s)}%s{#reset()}",R,G,B,text)
+	end
+end
+mod.tcolor_text = function(RGB,text)
+	return mod.color_text(RGB[2],RGB[3],RGB[4],text,RGB[1])
 end
 local dnt = function(text,R,G,B)
 	local L_text = Localize(text)
@@ -47,7 +61,7 @@ locr = {
 		},
 	lobby_exhibition = {
 		en = "In lobby",
-		["zh-cn"] = "在准备大厅中",
+		["zh-cn"] = "准备大厅",
 		["zh-tw"] = "在大廳中",
 	},
 	lobby_exhibition_weapons = {
@@ -682,20 +696,9 @@ locr = {
 		["zh-tw"] = "鑰石",
 	},
 	player_feats_display_type = {
-		en = "Display type",
-		["zh-cn"] = "显示方式",
-		["zh-tw"] = "顯示方式",
-	},
-	
-
-	user_custom_feats_abbreviation_description = {
-		en = "1:Ability   2:Blitz   3:Aura   4:Keystone",
-		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",		
-		["zh-tw"] = "1：戰鬥技能   2：閃擊   3：光環   4：鑰石",
-	},
-	lobby_log_debug = {
-		en = "Debug:lobby",
-		["zh-tw"] = "除錯：大廳",
+		en = "Talent display mode",
+		["zh-cn"] = "天赋显示方式",
+		["zh-tw"] = "天賦顯示模式",
 	},
 }
 for i = 1,4 do
@@ -705,120 +708,135 @@ for i = 1,4 do
 		["zh-tw"] = "欄位："..tostring(i),
 	}
 end
+local common = {
+	in_game_group = {"In Game","游戏中"},
+	in_hub_group = {"In Mourningstar","哀星号"},
+	setting_display_feats = {"Talents","天赋"},
+	tooltip_expandcollapseswitch = {"Expand / Collapse options","展开 / 折叠 设置"},
+	custom_char_Ability = {"Ability","技能"},
+	custom_char_Blitz = {"Blitz","闪击"},
+	custom_char_Aura = {"Aura","光环"},
+	custom_char_Keystone = {"Keystone","基石"},
+	custom_char_Keystone_dog = {"Dog","狗"},
+	setting_reset = {"Reset","重置"},
+	id_reset_abb = {"Reset abbreviations","重置指代字符"},
+	display_feat_order = {"Display feats order","显示天赋顺序"},
+	tooltip_display_feat_order = {"Auto-hide when feat slot settings are set to default","天赋槽位均为默认设定时自动隐藏"},
+}
 local def_abb = {
 	--veteran
-	veteran_combat_ability_elite_and_special_outlines = {"ES","刽","處",},
-	veteran_combat_ability_stagger_nearby_enemies = {"VoC","令","吼",},
-	veteran_invisibility_on_combat_ability = {"Inf","渗","滲",},
+	veteran_combat_ability_elite_and_special_outlines = {"ES","高亮","處",},
+	veteran_combat_ability_stagger_nearby_enemies = {"VoC","战吼","吼",},
+	veteran_invisibility_on_combat_ability = {"Inf","渗透","滲",},
 	
-	veteran_grenade_apply_bleed = {"F","碎","破",},
-	veteran_krak_grenade = {"K","穿","穿",},
-	veteran_smoke_grenade = {"S","烟","煙",},
+	veteran_grenade_apply_bleed = {"F","破片","破",},
+	veteran_krak_grenade = {"K","穿甲","穿",},
+	veteran_smoke_grenade = {"S","烟雾","煙",},
 	
-	veteran_aura_gain_ammo_on_elite_kill_improved = {"Amo","回","回",},
-	veteran_increased_damage_coherency = {"Dmg","伤","傷",},
-	veteran_movement_speed_coherency = {"Spe","速","速",},
+	veteran_aura_gain_ammo_on_elite_kill_improved = {"Amo","回弹","回",},
+	veteran_increased_damage_coherency = {"Dmg","伤害","傷",},
+	veteran_movement_speed_coherency = {"Spe","速度","速",},
 	
-	veteran_snipers_focus = {"MF","专","專",},
-	veteran_improved_tag = {"FT","聚","標",},
-	veteran_weapon_switch_passive = {"WS","武","武",},
+	veteran_snipers_focus = {"MF","专注","專",},
+	veteran_improved_tag = {"FT","聚焦","標",},
+	veteran_weapon_switch_passive = {"WS","武器","武",},
 	--zealot
-	zealot_attack_speed_post_ability = {"FF","冲","衝",},
-	zealot_bolstering_prayer = {"CSF","祷","禱",},
-	zealot_stealth = {"Sf","隐","隱",},
+	zealot_attack_speed_post_ability = {"FF","冲锋","衝",},
+	zealot_bolstering_prayer = {"CSF","祷告","禱",},
+	zealot_stealth = {"Sf","隐身","隱",},
 	
-	zealot_improved_stun_grenade = {"S","晕","暈",},
-	zealot_flame_grenade = {"I","燃","燃",},
-	zealot_throwing_knives = {"B","刃","刃",},
+	zealot_improved_stun_grenade = {"S","晕眩","暈",},
+	zealot_flame_grenade = {"I","燃烧","燃",},
+	zealot_throwing_knives = {"B","飞刀","刃",},
 	
-	zealot_toughness_damage_reduction_coherency_improved = {"Bene","赐","賜",},
-	zealot_corruption_healing_coherency_improved = {"BoP","纯","淨",},
-	zealot_always_in_coherency = {"Z","孤","孤",},
+	zealot_toughness_damage_reduction_coherency_improved = {"Bene","赐福","賜",},
+	zealot_corruption_healing_coherency_improved = {"BoP","信标","淨",},
+	zealot_always_in_coherency = {"Z","孤狼","孤",},
 	zealot_stamina_cost_multiplier_aura = {"L","狂","狂",},
 	
-	zealot_fanatic_rage = {"BP","炽","熾",},
-	zealot_martyrdom = {"M","殉","殉",},
-	zealot_quickness_passive = {"IJ","审","命",},
+	zealot_fanatic_rage = {"BP","炽热","熾",},
+	zealot_martyrdom = {"M","殉道","殉",},
+	zealot_quickness_passive = {"IJ","势能","命",},
 	--psyker
-	psyker_shout_vent_warp_charge = {"VS","啸","推",},
-	psyker_combat_ability_force_field = {"TS","盾","盾",},
-	psyker_combat_ability_stance = {"SG","凝","凝",},
+	psyker_shout_vent_warp_charge = {"VS","尖啸","推",},
+	psyker_combat_ability_force_field = {"TS","护盾","盾",},
+	psyker_combat_ability_stance = {"SG","占卜","凝",},
 	
-	psyker_brain_burst_improved = {"B","脑","腦",},
-	psyker_grenade_chain_lightning = {"S","电","電",},
-	psyker_grenade_throwing_knives = {"A","袭","襲",},
+	psyker_brain_burst_improved = {"B","脑爆","腦",},
+	psyker_grenade_chain_lightning = {"S","电手","電",},
+	psyker_grenade_throwing_knives = {"A","强袭","襲",},
 	
-	psyker_aura_damage_vs_elites = {"KP","伤","傷",},
-	psyker_cooldown_aura_improved = {"SP","回","技",},
-	psyker_aura_crit_chance_aura = {"Pr","暴","暴",},
+	psyker_aura_damage_vs_elites = {"KP","伤害","傷",},
+	psyker_cooldown_aura_improved = {"SP","冷却","技",},
+	psyker_aura_crit_chance_aura = {"Pr","暴击","暴",},
 	
-	psyker_passive_souls_from_elite_kills = {"WP","虹","虹",},
-	psyker_empowered_ability = {"EP","强","強",},
-	psyker_new_mark_passive = {"DD","命","命",},
+	psyker_passive_souls_from_elite_kills = {"WP","虹吸","虹",},
+	psyker_empowered_ability = {"EP","强效","強",},
+	psyker_new_mark_passive = {"DD","命运","命",},
 	--ogryn
-	ogryn_longer_charge = {"I","冲","衝",},
-	ogryn_taunt_shout = {"L","护","忠",},
-	ogryn_special_ammo = {"P","弹","彈",},
+	ogryn_longer_charge = {"I","冲锋","衝",},
+	ogryn_taunt_shout = {"L","嘲讽","忠",},
+	ogryn_special_ammo = {"P","弹幕","彈",},
 	
-	ogryn_grenade_friend_rock = {"BR","石","石",},
-	ogryn_grenade_frag = {"FG","雷","雷",},
-	ogryn_box_explodes = {"BA","盒","盒",},
+	ogryn_grenade_friend_rock = {"BR","石头","石",},
+	ogryn_grenade_frag = {"FG","核弹","雷",},
+	ogryn_box_explodes = {"BA","盒子","盒",},
 	
-	ogryn_melee_damage_coherency_improved = {"B","伤","碎",},
-	ogryn_toughness_regen_aura = {"S","韧","跟",},
-	ogryn_damage_vs_suppressed_coherency = {"C","压","優",},
+	ogryn_melee_damage_coherency_improved = {"B","伤害","碎",},
+	ogryn_toughness_regen_aura = {"S","韧性","跟",},
+	ogryn_damage_vs_suppressed_coherency = {"C","压制","優",},
 	
-	ogryn_passive_heavy_hitter = {"HH","重","重",},
-	ogryn_carapace_armor = {"FNP","痛","麻",},
-	ogryn_leadbelcher_no_ammo_chance = {"BLO","覆","爆",},
+	ogryn_passive_heavy_hitter = {"HH","重击","重",},
+	ogryn_carapace_armor = {"FNP","麻木","麻",},
+	ogryn_leadbelcher_no_ammo_chance = {"BLO","幸运","爆",},
 	--adamant
-	adamant_stance = {"CS","惩","懲",},
-	adamant_area_buff_drone_improved = {"NA","谕","天",},
-	adamant_charge = {"BL","突","突",},
+	adamant_stance = {"CS","惩戒","懲",},
+	adamant_area_buff_drone_improved = {"NA","天鹰","天",},
+	adamant_charge = {"BL","突破","突",},
 	
-	adamant_whistle = {"RD","引","爆",},
-	adamant_shock_mine = {"SM","电","電",},
-	adamant_grenade_improved = {"AG","雷","雷",},
+	adamant_whistle = {"RD","引爆","爆",},
+	adamant_shock_mine = {"SM","电击","電",},
+	adamant_grenade_improved = {"AG","手雷","雷",},
 	
-	adamant_companion_coherency = {"PoS","协","隊",},
-	adamant_reload_speed_aura = {"RE","效","雷",},
-	adamant_damage_vs_staggered_aura = {"BD","压","鎮",},
+	adamant_companion_coherency = {"PoS","协同","隊",},
+	adamant_reload_speed_aura = {"RE","装填","雷",},
+	adamant_damage_vs_staggered_aura = {"BD","踉跄","鎮",},
 	
-	adamant_execution_order = {"EO","处","處",},
-	adamant_terminus_warrant = {"TW","终","終",},
-	adamant_forceful = {"F","力","堅",},
+	adamant_execution_order = {"EO","处决","處",},
+	adamant_terminus_warrant = {"TW","最终","終",},
+	adamant_forceful = {"F","力量","堅",},
 
-	adamant_companion_focus_elite = {"UB","野","猛",},
-	adamant_disable_companion = {"LW","独","獨",},
-	adamant_companion_focus_ranged = {"GGM","追","前",},
+	adamant_companion_focus_elite = {"UB","精英","猛",},
+	adamant_disable_companion = {"LW","独狼","獨",},
+	adamant_companion_focus_ranged = {"GGM","远程","前",},
 	--broker
-	broker_ability_focus_improved = {"Desp","亡","亡",},
-	broker_ability_punk_rage = {"Ram","怒","橫",},
-	broker_ability_stimm_field = {"Sup","箱","興",},
+	broker_ability_focus_improved = {"Desp","亡命","亡",},
+	broker_ability_punk_rage = {"Ram","怒火","橫",},
+	broker_ability_stimm_field = {"Sup","箱子","興",},
 	 
-	broker_blitz_flash_grenade_improved = {"BO","熄","暈",},
-	broker_blitz_missile_launcher = {"RPG","爆","炸",},
-	broker_blitz_tox_grenade = {"CG","化","化",},
+	broker_blitz_flash_grenade_improved = {"BO","瞎眼","暈",},
+	broker_blitz_missile_launcher = {"RPG","火箭","炸",},
+	broker_blitz_tox_grenade = {"CG","毒雷","化",},
 	
-	broker_aura_gunslinger_improved = {"Gun","枪","射",},
-	broker_coherency_melee_damage = {"Ruf","恶","惡",},
-	broker_coherency_anarchist = {"Anar","叛","無",},
+	broker_aura_gunslinger_improved = {"Gun","弹药","射",},
+	broker_coherency_melee_damage = {"Ruf","伤害","惡",},
+	broker_coherency_anarchist = {"Anar","暴击","無",},
 
-	broker_keystone_vultures_mark_on_kill = {"VM","掠","兀",},
-	broker_keystone_adrenaline_junkie = {"AF","肾","腎",},
-	broker_keystone_chemical_dependency = {"CD","化","化",},
+	broker_keystone_vultures_mark_on_kill = {"VM","印记","兀",},
+	broker_keystone_adrenaline_junkie = {"AF","激素","腎",},
+	broker_keystone_chemical_dependency = {"CD","依赖","化",},
 	--cryptic
-	cryptic_chordclaw = {"Claw","爪","爪",},
+	cryptic_chordclaw = {"Claw","爪击","爪",},
 	cryptic_discharge = {"VE","电流","電流",},
-	cryptic_precision_stance = {"ACD","高级","進階",},
+	cryptic_precision_stance = {"ACD","自瞄","進階",},
 	
 	cryptic_servo_skull_improved = {"S","头骨","頭骨",},
-	cryptic_grenade_ability_arc_grenade = {"Arc","电弧","電弧",},
-	cryptic_grenade_ability_force_field = {"IRE","折射","折射",},
+	cryptic_grenade_ability_arc_grenade = {"Arc","电弧","電弧"},
+	cryptic_grenade_ability_force_field = {"IRE","折射","折射"},
 	
-	cryptic_coherency_regen_aura_improved = {"Res","振","振",},
-	cryptic_aura_weapon_improved = {"FRC","裂","裂",},
-	cryptic_ammo_aura = {"AD","弹","彈",},
+	cryptic_coherency_regen_aura_improved = {"Res","韧性","振",},
+	cryptic_aura_weapon_improved = {"FRC","劈裂","裂",},
+	cryptic_ammo_aura = {"AD","弹药","彈",},
 	
 	cryptic_redline = {"RC","红线","紅線",},
 	cryptic_dissector = {"FP","剥皮","剝皮",},
@@ -830,9 +848,35 @@ local highlights = {
 	veteran_combat_ability_revive_nearby_allies = {"Rv","活","活"},
 	cryptic_servo_skull_inject_ally = {"MS","疗","療"},
 }
-generate_translation(def_abb,"def_","",default_lid_order)
-generate_translation(highlights,"highlight_","",default_lid_order)
 
+local groupfinder = {
+	groupfinder_request = {"Group finder", "组队查找"},
+	setting_name_font_size = {"Name font size","名称字体大小"},
+	groupfinder_request_toggle = {"Toggle", "开关"},
+	groupfinder_request_talent = {"Talent", "天赋"},
+	groupfinder_request_weapon = {"Weapon", "武器"},
+	setting_weapon_font_size = {"Weapon font size","武器字体大小"},
+	setting_weapon_spacing = {"Weapon spacing", "武器行距"},
+	setting_pt_font_size = {"P&B font size","专长祝福字体大小"},
+	setting_blessing_gap = {"X:Blessing", "祝福距离"},
+	setting_perk_gap = {"X:Perk", "专长距离"},
+	groupfinder_perk_rule = {"Display perk by", "专长显示方式"},
+	groupfinder_trait_rule = {"Display blessing by", "祝福显示方式"},
+	setting_line_spacing = {"Line spacing", "行距"},
+}
+local FI = {
+	FI_crate_toggle = {"FI crate","临场发挥箱"},
+	FI_color = {"Crate color","箱子图标颜色"},
+}
+generate_translation(def_abb,"def_","",{"en","zh-cn","zh-tw"})
+generate_translation(highlights,"highlight_","",{"en","zh-cn","zh-tw"})
+generate_translation(groupfinder,"","",default_lid_order)
+generate_translation(common,nil,nil,default_lid_order)
+generate_translation(FI,nil,nil,default_lid_order)
+for _,class in pairs(datalookup.class_index) do
+	locr["game_class_name_"..class] = locr["game_class_name_"..class] or {}
+	locr["game_class_name_"..class][lid] = Localize("loc_class_"..class.."_name")
+end
 if lid and type(lid) == "string" then
 	local _mod_directory = "./../mods/"
 	local my_lid = "LoadoutMonitor/scripts/mods/LoadoutMonitor/LoadoutMonitor_localization_" .. lid

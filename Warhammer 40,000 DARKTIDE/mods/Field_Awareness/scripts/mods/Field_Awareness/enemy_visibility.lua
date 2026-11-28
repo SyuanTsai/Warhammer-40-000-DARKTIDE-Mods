@@ -80,7 +80,11 @@ function Visibility.new(max_range,max_rays,shooting_los,mod)
      local distance=hit.distance or hit[2]
      if not actor or type(distance)~="number" or distance~=distance then return false end
      local hit_unit=Actor.unit(actor)
-     if hit_unit~=unit and not self.owned[hit_unit] then
+     -- Spawned body/armor parts belong to this target even when the part has
+     -- no breed extension of its own. The unit adapter refreshes this map when
+     -- loadout parts arrive or change; world geometry remains an obstruction.
+     local target_part=record.material_targets and record.material_targets[hit_unit]~=nil
+     if hit_unit~=unit and not target_part and not self.owned[hit_unit] then
       local character=self.characters[hit_unit]
       if character==nil then
        local breed=Breed.unit_breed_or_nil(hit_unit)

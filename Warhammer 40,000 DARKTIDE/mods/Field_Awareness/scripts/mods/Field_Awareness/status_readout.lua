@@ -1,6 +1,9 @@
--- Independent read-only status projection; API facts recorded in STACK_CONTRACT.md.
+-- Independent read-only status projection. Thresholds documented in STACK_THRESHOLDS.txt.
 local Status = {}
-local ORDER = {"bleed", "burn", "soulblaze", "brittle", "warp", "vulnerable", "melee", "ranged", "nonwarp"}
+local ORDER = {"bleed", "burn", "soulblaze", "toxin", "brittle", "warp", "vulnerable", "melee", "ranged", "nonwarp"}
+-- Selected source caps in native 1.13.2: tier-IV Infernus/Blazing Spirit and needle-pistol
+-- toxin. These are display thresholds, not changes to native game limits.
+local FLASH_THRESHOLDS = {bleed = 16, burn = 12, soulblaze = 12, toxin = 30}
 local MODIFIERS = {
     {"rending_multiplier", "brittle"}, {"warp_damage_taken_multiplier", "warp"},
     {"damage_taken_multiplier", "vulnerable"}, {"melee_damage_taken_multiplier", "melee"},
@@ -19,15 +22,18 @@ local function classify(template)
     local keywords = template.keywords
     if keywords == nil then return nil, template.conditional_keywords == nil end
     if type(keywords) ~= "table" then return nil, false end
-    local soul,burn,bleed,cursor=false,false,false,nil
+    local soul,burn,bleed,toxin,cursor=false,false,false,false,nil
     for _ = 1, 33 do
         local key, value = next(keywords, cursor)
         if key == nil then
+            -- Toxin armour-rending also has the toxin keyword. Count only the
+            -- damaging interval effects, never that separate armour debuff.
             local kind = soul and "soulblaze" or burn and "burn" or bleed and "bleed"
+                or toxin and template.class_name == "interval_buff" and "toxin"
             return kind, template.conditional_keywords == nil
         end
         cursor = key
-        if value=="warpfire_burning" then soul=true elseif value=="burning" then burn=true elseif value=="bleeding" then bleed=true end
+        if value=="warpfire_burning" then soul=true elseif value=="burning" then burn=true elseif value=="bleeding" then bleed=true elseif value=="toxin" then toxin=true end
     end
     return nil, false
 end
@@ -95,13 +101,14 @@ function Status.read(extension,scratch)
     for _, kind in ipairs(ORDER) do
         if visible[kind] then
             local count = complete and not unknown[kind] and counts[kind] or nil
-            -- Combined types flash only at the sum of all known active ceilings.
-            -- Unknown or incomplete observations never imply maximum stacks.
+            -- Preserve live native ceilings for icon sizing. Flashing uses the
+            -- researched per-family threshold even when the effect can go higher.
+            -- Incomplete or unknown stack observations still cannot flash.
             local cap = count and not unknown_caps[kind] and caps[kind] or nil
             if cap and count > cap then cap = nil end
             result[#result + 1] = {kind = kind, count = count, max_count = cap,
                 percentage = percentages[kind],
-                pulse_at = cap}
+                pulse_at = count and (FLASH_THRESHOLDS[kind] or cap) or nil}
         end
     end
     return result

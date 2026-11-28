@@ -17,7 +17,9 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Install LuaJIT
-        run: sudo apt-get update && sudo apt-get install -y luajit
+        uses: ./.github/actions/setup-luajit
+        with:
+          config-path: config/test-environment.json
       - name: Check changed localization files
         env:
           PR_BASE: ${{ github.event.pull_request.base.sha }}

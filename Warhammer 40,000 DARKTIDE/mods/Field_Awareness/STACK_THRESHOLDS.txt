@@ -1,0 +1,48 @@
+SELECTED FLASHING THRESHOLDS - OCTOBER 9, 2026
+Native scripts: Darktide 1.13.2, commit ba6c148f3c2768ca3ce20d846a12e56e2f433f3e.
+Source repository: https://github.com/Aussiemon/Darktide-Source-Code
+
+The user rejected the initial lowest-source thresholds (Burn/Soulblaze 3,
+gas Toxin 6). Final choices: Burn 12, Soulblaze 12, Bleed 16, Toxin 30.
+Flash inclusively at the selected threshold and above. These are display
+thresholds, not restrictions on gameplay or changes to native stack caps.
+
+Burn: 12, tier-IV Infernus. Infernus tiers I-IV have caps 3/6/9/12, so
+6 is the next blessing tier above 3, not 12. Twelve was chosen explicitly.
+Incendiary shotgun has a 10-stack application cap; it is not overlooked,
+but the chosen 12 threshold intentionally will not flash at that cap.
+The native flamer_assault effect cap is 31, retained for icon growth.
+Source: scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua:306-357
+Source: scripts/settings/equipment/weapon_templates/shotguns/settings_templates/shotgun_shotshell_templates.lua
+
+Warp Fire / Soulblaze / psyker burn: one family, threshold 12. Blazing
+Spirit on Force Swords has tier caps 3/6/9/12. User selected 12 separately.
+Wildfire's transfer cap is 4; that smaller source no longer triggers
+early flashing. The native warp_fire effect cap is 31 for icon growth.
+Source: scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua:575-625
+
+Bleed: 16. Ordinary bleed native cap is 16; bleed_long caps at 18.
+Weapon blessings use application ceiling 31, limited by the effect's 16.
+Per-hit stack awards are not caps. Class talents add to the bleed pool.
+Source: scripts/settings/buff/weapon_buff_templates.lua:235-312
+Source: scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua
+Source: scripts/settings/buff/buff_utils.lua (add_proc_debuff)
+
+Chem Toxin: 30, the needle-pistol damage pool cap. Its toxin hit effects
+resolve to neurotoxin_interval_buff/2/3, each max_stacks and max_stacks_cap
+30. Weapon modes/critical hits/weakspots change stacks awarded per shot,
+not this accumulated cap. All three damage variants are read.
+The gas controller's toxin_max_stacks 6 is intentionally not the selected
+threshold. Its single controller stack is not a damaging toxin stack.
+The separate toxin armour-rending buff caps at 15 and shares keyword toxin
+but is class buff rather than interval_buff: exclude it from DOT counts.
+Source: scripts/settings/buff/weapon_buff_templates.lua (m1/m2/m3_toxins and neurotoxin_interval_buff/2/3)
+Source: scripts/settings/equipment/weapon_templates/needlepistols/settings_templates/needlepistol_damage_profile_templates.lua
+Source: scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua
+Source: scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua
+
+Research scope: obtainable weapons, all blessing tiers and class talents
+in normal missions. Retired event modifiers and player ailments do not
+set weapon/talent thresholds. Unknown/incomplete counts never flash.
+Chem Toxin display is a new default-On setting; existing settings remain.
+No personal saved settings or native reference code are in the public ZIP.

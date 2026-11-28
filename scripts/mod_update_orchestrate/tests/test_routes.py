@@ -15,7 +15,7 @@ from unittest.mock import Mock, patch
 from scripts.mod_update_orchestrate.discover import discover
 from scripts.mod_update_orchestrate.gate import validate_upstream
 from scripts.mod_update_orchestrate.pr import (
-    current_pr, merge_check, publish, run_git, should_merge, stage_raw, upstream_commit,
+    current_pr, merge_check, publish, resolve_update, run_git, should_merge, stage_raw, upstream_commit, update_branch,
 )
 from scripts.mod_update_orchestrate.process import NeedsHuman, download, new_mod, restore_new
 from scripts.mod_update_orchestrate.records import (
@@ -39,7 +39,105 @@ README = (
 )
 
 
+class UpdateResolverTests(unittest.TestCase):
+    legacy = "auto/mod-update/736"
+    branch = "Update/Auto-Mark-2.5.6"
+    sha = "a" * 40
+    identity = "<!-- mod-update-orchestrate:pr nexus_id=736 file_id=9484"
+
+    def pull(self, ref, proof):
+        return {"number": 407, "state": "open", "base": {"ref": "main"},
+                "head": {"ref": ref, "sha": self.sha}, "body": self.identity + proof + " -->"}
+
+    def resolve(self, refs, version="2.5.6"):
+        return resolve_update(lambda ref: refs.get(ref, []), 736, 9484, "Auto Mark", version)
+
+    # Scenario: The versioned PR has the exact receipt but missing, malformed or stale proof.
+    # Purpose: Neither retry nor direct publication may treat the PR as verified.
+    def test_UnitT10_versioned_reuse_requires_matching_proof(self):
+        for proof in ("", " verified_head=bad", " verified_head=" + "b" * 40):
+            with self.subTest(proof=proof):
+                pull = self.pull(self.branch, proof)
+                with self.assertRaises(ValueError):
+                    self.resolve({self.branch: [pull]})
+                git, github = Mock(), Mock()
+                with self.assertRaises(ValueError):
+                    publish(git, github, pull, 736, "Auto Mark", self.identity + " -->",
+                            "auto", [], self.sha, (), branch=self.branch)
+                self.assertFalse(git.mock_calls or github.mock_calls)
+
+    # Scenario: Legacy and versioned PRs identify the very same MAIN file.
+    # Purpose: Require reconciliation even when the target version is unavailable.
+    def test_UnitT20_duplicate_receipt_stops_resolution(self):
+        old = self.pull(self.legacy, "")
+        new = self.pull(self.branch, " verified_head=" + self.sha)
+        for version in ("2.5.6", None):
+            with self.subTest(version=version), self.assertRaisesRegex(ValueError, "相同目標"):
+                self.resolve({self.branch: [new], self.legacy: [old], None: [old, new]}, version)
+
+    # Scenario: An unversioned receipt identifies one historical PR without pinned proof.
+    # Purpose: Deduplicate safely while preventing regeneration from overwriting an unverified tip.
+    def test_UnitT30_legacy_without_proof_is_identification_only(self):
+        old = self.pull(self.legacy, "")
+        self.assertEqual(self.resolve({self.legacy: [old], None: [old]}, None), (self.legacy, old))
+        git, github = Mock(), Mock()
+        with self.assertRaisesRegex(ValueError, "verified_head"):
+            publish(git, github, old, 736, "Auto Mark", self.identity + " -->", "auto", [], self.sha, ())
+        self.assertFalse(git.mock_calls or github.mock_calls)
+        with self.assertRaisesRegex(ValueError, "版本"):
+            self.resolve({}, None)
+
+    # Scenario: A legacy PR identifies a different file and the versioned ref may be occupied.
+    # Purpose: Allow a distinct release and exact retries while protecting collisions across files or MODs.
+    def test_UnitT40_distinct_targets_and_identical_retries(self):
+        old = self.pull(self.legacy, "")
+        old["body"] = old["body"].replace("9484", "9483")
+        refs = {self.legacy: [old]}
+        self.assertEqual(self.resolve(refs), (self.branch, None))
+        new = self.pull(self.branch, " verified_head=" + self.sha)
+        refs[self.branch] = [new]
+        self.assertEqual(self.resolve(refs), (self.branch, new))
+        for original, different in (("9484", "9485"), ("736", "737")):
+            with self.subTest(original=original), patch.dict(new, body=new["body"].replace(original, different)):
+                with self.assertRaisesRegex(ValueError, "標記"):
+                    self.resolve(refs)
+
+    # Scenario: A verified versioned PR is re-read for deferred merge after discovery.
+    # Purpose: Only the current marker and pinned remote head can qualify it for merge.
+    def test_UnitT50_deferred_check_rechecks_versioned_proof(self):
+        pull = self.pull(self.branch, " verified_head=" + self.sha + " route=update")
+        github, emit = Mock(), Mock()
+        github.issue.return_value = {"state": "open", "body": issue()["body"].replace("123", "736").replace("9001", "9484")}
+        github.comments.return_value = [comment(marker(9484, version="2.5.6").replace("nexus_id=123", "nexus_id=736"))]
+        github.pulls.side_effect = lambda ref: [pull] if ref == self.branch else []
+        git = Mock(return_value=f"{self.sha}\trefs/heads/{self.branch}")
+        for proof, message in (("", "verified_head"), (" verified_head=bad", "標記"),
+                               (" verified_head=" + "b" * 40, "verified_head"),
+                               (" verified_head=" + self.sha, "符合自動合併資格")):
+            with self.subTest(proof=proof):
+                github.pull.return_value = {**self.pull(self.branch, proof), "draft": False}
+                merge_check(git, github, 7, 736, 9484, mod=SimpleNamespace(name="Auto Mark"),
+                            dry_run=True, emit=emit)
+                self.assertIn(message, emit.call_args.args[0])
+        git.assert_called_once_with("ls-remote", "--heads", "origin", f"refs/heads/{self.branch}")
+        github.discussions_resolved.assert_called_once()
+        github.merge_pr.assert_not_called()
+
+
 class RouteTests(unittest.TestCase):
+    # Scenario: #407 updates Auto Mark from 2.5.4 to the received MAIN file 9484.
+    # Purpose: versioned publications use the registry name and the target file version.
+    def test_UnitT05_versioned_update_branch(self):
+        self.assertEqual(update_branch("Auto Mark", "2.5.6"), "Update/Auto-Mark-2.5.6")
+        self.assertNotEqual(update_branch("Auto Mark", "2.5.4"), update_branch("Auto Mark", "2.5.6"))
+        for name, version in (("測試 /..@{", "beta:1.lock"), ("x" * 300, "v?2")):
+            branch = update_branch(name, version)
+            self.assertEqual(branch, update_branch(name, version))
+            subprocess.run(["git", "check-ref-format", "--branch", branch], check=True, capture_output=True)
+        for version in ("", " UnKnOwN ", "未知", "（待補）"):
+            with self.assertRaisesRegex(ValueError, "版本"):
+                update_branch("Auto Mark", version)
+
     def setUp(self):
         self.root = Path(self.enterContext(tempfile.TemporaryDirectory()))
         self.readme = self.root / "README.md"

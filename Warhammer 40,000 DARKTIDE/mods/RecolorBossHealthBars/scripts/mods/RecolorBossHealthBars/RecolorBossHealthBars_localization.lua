@@ -27,7 +27,7 @@ local loc = {
 	color_twins = {
 		en = "Twin captains",
 		["zh-cn"] = "双子连长",
-		["zh-tw"] = "雙子連長",
+		["zh-tw"] = "雙子",
 	},
 	color_weakened = {
 		en = "Weakened monsters",

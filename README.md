@@ -256,10 +256,10 @@
 
 ### [Loadout Monitor](https://www.nexusmods.com/warhammer40kdarktide/mods/160)
     載入中顯示隊友武器
-- MOD 網站最後更新日期：Last updated 08 August 2026, 6:04PM
-- MOD 版本：1.9.4
-- MOD 檔案名稱：LoadoutMonitor 160 1.9.4 2026-08-08T10-03Z vNTD9Nbji.rar
-- 手動維護最後下載日期：2026-08-18
+- MOD 網站最後更新日期：Last updated 25 September 2026, 03:20AM
+- MOD 版本：1.9.6
+- MOD 檔案名稱：LoadoutMonitor 160 1.9.6 2026-09-24T19-20Z OIXCuIsQu
+- 手動維護最後下載日期：2026-11-26
 
 ### [Quick Look Card](https://www.nexusmods.com/warhammer40kdarktide/mods/142)
     快速資訊卡 可以快速取得武器的五維
@@ -555,10 +555,10 @@
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 02 October 2026, 4:01AM
-- MOD 版本：1.3.1
-- MOD 檔案名稱：Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
-- 手動維護最後下載日期：2026-10-02
+- MOD 網站最後更新日期：Last updated 08 November 2026, 04:25AM
+- MOD 版本：1.3.4
+- MOD 檔案名稱：Vfx Swapper 678 1.3.4 2026-11-07T20-25Z ke28WelLW
+- 手動維護最後下載日期：2026-11-26
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
@@ -636,10 +636,10 @@
 
 ### [Simple Speed Meter](https://www.nexusmods.com/warhammer40kdarktide/mods/404)
     顯示移動速度(用於比較不同武器的移動)
-- MOD 網站最後更新日期：Last updated 16 April 2025, 10:35PM
-- MOD 版本：1.0.3
-- MOD 檔案名稱：SimpleSpeedMeter-404-1-0-3-1744814116
-- 手動維護最後下載日期：2026-07-14
+- MOD 網站最後更新日期：Last updated 03 November 2026, 11:06AM
+- MOD 版本：1.0.4
+- MOD 檔案名稱：SimpleSpeedMeter 404 1.0.4 2026-11-03T03-06Z YFIfRFOND
+- 手動維護最後下載日期：2026-11-25
 
 ### [Server ping](https://www.nexusmods.com/warhammer40kdarktide/mods/1221)
     顯示真實的服務器PING
@@ -846,10 +846,10 @@
 
 ### [Field_Awareness](https://www.nexusmods.com/warhammer40kdarktide/mods/1359)
     顯示特定怪物的輪廓與攻擊區域(可視範圍內)
-- MOD 網站最後更新日期：Last updated 07 October 2026, 6:18PM（Nexus 頁面顯示；UTC：2026-10-07T18:18:49Z；Asia/Taipei：2026-10-08 02:18:49）
-- MOD 版本：1.5.1（Nexus 頁面與 ZIP 內版本；Nexus Main file 版本欄位：1）
-- MOD 檔案名稱：Field Awareness V1.5.1 Enemies Outlined And More 1359 1 2026-10-07T18-18Z Z1K0I1fL0.zip
-- 手動維護最後下載日期：2026-10-08
+- MOD 網站最後更新日期：Last updated 23 October 2026, 11:55PM
+- MOD 版本：1.7.0
+- MOD 檔案名稱：Field Awareness V1.7.0 Enemies Outlined And More 1359 1.7.0 2026-10-23T15-55Z QHh61HP98
+- 手動維護最後下載日期：2026-11-25
 
 ### [Uptime 2 - Buff Data and Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/898)
     觀察天賦的運作狀況

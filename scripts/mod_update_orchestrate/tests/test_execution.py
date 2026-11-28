@@ -16,8 +16,9 @@ from scripts.mod_update_orchestrate.github import GitHub
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE, decode_lua_string
 from scripts.mod_update_orchestrate.main import main
 from scripts.mod_update_orchestrate.localization import LocalizationError
-from scripts.mod_update_orchestrate.reviewed import review_template
+from scripts.mod_update_orchestrate.pr import update_branch
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
+from scripts.mod_update_orchestrate.reviewed import review_template
 from scripts.mod_update_watch.handoff import Received
 from scripts.mod_update_watch.registry import _read_hash
 
@@ -101,16 +102,19 @@ class ExecutionTests(unittest.TestCase):
                    prior_reviewed=False):
         self.loc.relative = "Example_localization.lua"
         self.loc.apply.return_value = (b"return {}\n", [])
+        branch = update_branch(self.mod.name, RECEIPT.version)
         self.github.write_pr.return_value = {
-            "number": 22, "head": {"sha": "a" * 40}, "draft": False,
+            "number": 22, "head": {"sha": "a" * 40, "ref": branch},
+            "base": {"ref": "main"}, "state": "open", "draft": False,
             "html_url": "https://github.com/owner/mods/pull/22",
         }
+        self.github.write_pr.side_effect = lambda previous, branch, title, body, draft: {
+            **self.github.write_pr.return_value, "body": body}
         self.git.side_effect = lambda command, *args: {
             "rev-parse": "a" * 40, "diff": "README.md\0",
         }.get(command, "")
         if reviewed_args:
             previous_head, publication_head = "b" * 40, "a" * 40
-            branch = "auto/mod-update/123"
             ref = "refs/heads/" + branch
             previous = {"number": 22, "state": "open", "draft": False, "base": {"ref": "main"},
                         "head": {"sha": previous_head, "ref": branch},
@@ -187,7 +191,7 @@ class ExecutionTests(unittest.TestCase):
         path.write_text(json.dumps(evidence), encoding="utf-8")
         return self.run_update(reviewed_args=("--regenerate", "--reviewed-input", str(path)), **kwargs)
 
-    # Scenario: Preview and replay a reviewed value over a PR for the same file.
+    # Scenario: Preview and replay a reviewed value over a versioned PR for the same file.
     # Purpose: Bind retrievable evidence to the new commit, retain lease, and skip API and merge.
     def test_UnitT22_reviewed_cli_replays_over_previous_head(self):
         evidence = self.reviewed_fixture(r'"{#color(255,0,0)}Ammo %d \u{E000}{#reset()}\nDetails"')
@@ -209,7 +213,8 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(raw).hexdigest(), sha)
         self.assertIn("verified_head=" + "a" * 40, body)
         self.assertIn("Reviewed-Translation-SHA256: " + sha, str(self.git.call_args_list))
-        self.assertIn("--force-with-lease=refs/heads/auto/mod-update/123:" + "b"*40, str(self.git.call_args_list))
+        ref = "refs/heads/" + update_branch(self.mod.name, RECEIPT.version)
+        self.git.assert_any_call("push", f"--force-with-lease={ref}:{'b' * 40}", "origin", f"{'a' * 40}:{ref}")
 
     # Scenario: An operator supplies plain text for a dynamic source or drops a literal's runtime tokens.
     # Purpose: Reject through the candidate entry before seeding approvals, applying the workset or publishing.
@@ -280,7 +285,7 @@ class ExecutionTests(unittest.TestCase):
         self.github.write_pr.assert_not_called()
         self.assertFalse(any(c.args[0] == "push" for c in self.git.call_args_list))
 
-    # Scenario: Ordinary regeneration targets the fixed branch of an open reviewed PR.
+    # Scenario: Ordinary regeneration targets the versioned branch of an open reviewed PR.
     # Purpose: Keep publication under manual review and stop before generating a candidate.
     def test_UnitT27_ordinary_regeneration_preserves_reviewed_pr(self):
         self.loc.translate.return_value = (0, {}, READY)
@@ -291,14 +296,14 @@ class ExecutionTests(unittest.TestCase):
         self.github.write_pr.assert_not_called()
         self.github.merge_pr.assert_not_called()
 
-    # Scenario: Ordinary regeneration targets the fixed branch of an open PR without reviewed evidence.
+    # Scenario: Ordinary regeneration targets the versioned branch of an open PR without reviewed evidence.
     # Purpose: Keep the existing candidate, leased push and automatic merge behavior.
     def test_UnitT28_ordinary_regeneration_updates_unreviewed_pr(self):
         self.loc.translate.return_value = (0, {}, READY)
         self.assertEqual(self.run_update(mode="auto", reviewed_args=("--regenerate",)), 0)
         self.loc.apply.assert_called_once()
-        self.git.assert_any_call("push", "--force-with-lease=refs/heads/auto/mod-update/123:" + "b" * 40,
-                                 "origin", "HEAD:refs/heads/auto/mod-update/123")
+        ref = "refs/heads/" + update_branch(self.mod.name, RECEIPT.version)
+        self.git.assert_any_call("push", f"--force-with-lease={ref}:{'b' * 40}", "origin", f"HEAD:{ref}")
         self.assertNotIn("reviewed-translation-v1", self.github.write_pr.call_args.args[3])
         self.github.merge_pr.assert_called_once_with(22, "a" * 40)
 
@@ -414,7 +419,8 @@ class ExecutionTests(unittest.TestCase):
             self.assertIn(evidence, messages)
         self.assertNotIn("&#", messages)
 
-        self.github.pulls.return_value = [{**self.github.write_pr.return_value, "body": body}]
+        pull = {**self.github.write_pr.return_value, "body": body}
+        self.github.pulls.side_effect = lambda branch: [pull] if branch == pull["head"]["ref"] else []
         transport.reset_mock()
         transport.side_effect = [label, no_issues, no_issues, (403, {}, b""),
                                  label, no_issues, no_issues, (201, {}, b'{"number": 31}')]
@@ -468,14 +474,17 @@ class ExecutionTests(unittest.TestCase):
             "unitId": "b", "key": "expedition", "action": "AI_REQUIRED", "reviewStatus": "preserved",
             "suggestedZhTwExpression": None,
         }]}
-        self.loc.translate.return_value = (0, {"termReviews": [lookup, preserved]}, document)
+        exhausted = {**FLAGGED, "reason": "max_corrections_reached", "adoption": "existing_zh_tw",
+                     "lastFailure": [{"category": "meaning", "detail": "語意有誤"}]}
+        self.loc.translate.return_value = (0, {"termReviews": [lookup, preserved, exhausted]}, document)
 
         self.assertEqual(self.run_update(), 0)
         self.loc.apply.assert_called_once()
         issue_body = self.github.term_review_issue.call_args.args[3]
         for evidence in ("範例", "版本：2", "PR：", "待確認詞", "needs&#95;lookup&#95;definition",
                          "complex&#95;expression", "回退英文", "原樣保留運算式", "Expedition: %s",
-                         "Localize", "Shot Recovery"):
+                         "Localize", "Shot Recovery", "max&#95;corrections&#95;reached",
+                         "最後一次失敗：meaning：語意有誤"):
             self.assertIn(evidence, issue_body)
 
     # Scenario: 第一次候選完成後 main 改變，第二次從新基準重建。
