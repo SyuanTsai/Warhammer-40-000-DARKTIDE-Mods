@@ -175,10 +175,14 @@
 
 - Renegade - 血痂（敵方派系；不得譯為叛徒）
 - Cultist - 渣滓（敵方派系；不得譯為異教徒）
+- Mutator - 變種（敵人變體後綴，例：渣滓祭司（變種））
+- Warp Fire - 靈魂之火（同 Soulblaze）
 
 #### BOSS
 - Admonition Champion - 告誡教勇士
 - Twins - 雙子
+- Scab Twin Captain - 雙子（槍）（renegade_twin_captain，遠程）
+- Scab Twin Captain Two - 雙子（劍）（renegade_twin_captain_two，近戰）
 - Prophet of Decay - 腐朽的先知
 - Scab Captain - 血痂隊長
 - Beast of Nurgle - 納垢巨獸
@@ -239,7 +243,7 @@
 
 #### 待確認定義
 
-- Scab Radio Operator - 血痂無線電兵（暫譯；繁中資源保留英文；原始碼標為菁英，實際出現狀態未確認）
+- Scab Radio Operator - 血痂無線電兵（正式譯名；繁中資源保留英文；原始碼標為菁英，實際出現狀態未確認）
 
 #### 通稱、陣營與MOD名稱
 
