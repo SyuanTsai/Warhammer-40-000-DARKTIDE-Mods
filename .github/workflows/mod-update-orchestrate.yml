@@ -66,7 +66,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install LuaJIT
-        run: sudo apt-get update && sudo apt-get install -y luajit
+        uses: ./mods/.github/actions/setup-luajit
+        with:
+          config-path: mods/config/test-environment.json
       - name: 執行離線測試
         shell: pwsh
         env:
@@ -141,7 +143,9 @@ jobs:
           python-version: "3.12"
       - name: Install LuaJIT
         if: matrix.action == 'update' && inputs.dry_run != true
-        run: sudo apt-get update && sudo apt-get install -y luajit
+        uses: ./mods/.github/actions/setup-luajit
+        with:
+          config-path: mods/config/test-environment.json
       - name: 安裝 Skill 相依套件
         if: matrix.action == 'update'
         shell: pwsh
