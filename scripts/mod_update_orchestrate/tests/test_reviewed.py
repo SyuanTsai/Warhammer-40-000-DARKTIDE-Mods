@@ -505,11 +505,15 @@ class CheckTests(unittest.TestCase):
         head = "a" * 40
         runs = [{"id": 1, "name": "CI", "head_sha": head, "status": status, "conclusion": result}
                 for status, result in (("waiting", None), ("queued", None), ("in_progress", None),
-                                       ("completed", "action_required"), ("completed", "failure"))]
+                                       ("action_required", None), ("completed", "action_required"),
+                                       ("completed", "success"), ("completed", "failure"))]
         github.api.return_value = [{"environment": {"name": "production"}, "reviewers": [{"type": "User"}]}]
         github.pages.side_effect = [[*runs, {**runs[0], "head_sha": "b"*40}], []]
         report = check_report(github, head)
         self.assertEqual([row["status"] for row in report["workflowRuns"]], [r["status"] for r in runs])
+        self.assertEqual([row["state"] for row in report["workflowRuns"]],
+                         ["awaiting_approval", "running", "running", "awaiting_approval",
+                          "awaiting_approval", "passed", "failed"])
         self.assertEqual(report["workflowRuns"][0]["awaitingReviewEnvironments"], ["production"])
         self.assertEqual(report["checkRuns"], [])
         self.assertEqual(report["checkRunsObservation"], "not_observed")
@@ -521,15 +525,42 @@ class CheckTests(unittest.TestCase):
         head = "b"*40
         github = Mock()
         fixtures = [{"id": 3, "head_sha": head, "name": "lint", "status": "completed", "conclusion": state}
-                    for state in ("success", "failure", "cancelled", "skipped")]
+                    for state in ("success", "failure", "cancelled", "skipped", "neutral", None)]
         github.pages.side_effect = [[], fixtures]
         report = check_report(github, head, "mod-update-localization-lint.yml")
         self.assertEqual(report["workflowRunsObservation"], "not_observed")
         self.assertEqual([row["conclusion"] for row in report["checkRuns"]],
-                         ["success", "failure", "cancelled", "skipped"])
+                         ["success", "failure", "cancelled", "skipped", "neutral", None])
+        self.assertEqual([row["state"] for row in report["checkRuns"]],
+                         ["passed", "failed", "failed", "skipped", "neutral", "unknown"])
         self.assertIn("actions/workflows/mod-update-localization-lint.yml/runs?head_sha=" + head,
                       github.pages.call_args_list[0].args[0])
         github.api.assert_not_called()
+
+    def test_not_triggered_requires_scoped_evidence_and_no_matching_run(self):
+        head = "c" * 40
+        workflow = "mod-update-localization-lint.yml"
+        evidence = "release-journal/ci-dispatch-decision"
+        github = Mock()
+        transport = Mock(side_effect=[
+            (200, {}, b'{"workflow_runs":[]}'), (200, {}, b'{"check_runs":[]}'),
+        ])
+        with patch.dict(os.environ, {"GITHUB_TOKEN": "fixture", "GITHUB_REPOSITORY": "example/mods"}), patch(
+                "scripts.mod_update_orchestrate.main.emit") as emit:
+            args = ["check-report", "--head", head, "--workflow", workflow, "--not-triggered-evidence", evidence]
+            self.assertEqual(main(args, github_transport=transport), 0)
+        report = json.loads(emit.call_args.args[0])
+        self.assertEqual(report["workflowRunsObservation"], "not_triggered")
+        self.assertEqual(report["workflowNotTriggeredEvidence"], evidence)
+        self.assertEqual(report["checkRunsObservation"], "not_observed")
+
+        github.pages.side_effect = [[{"head_sha": head, "status": "queued"}], []]
+        report = check_report(github, head, workflow, not_triggered_evidence=evidence)
+        self.assertEqual(report["workflowRunsObservation"], "observed")
+        self.assertNotIn("workflowNotTriggeredEvidence", report)
+
+        with self.assertRaisesRegex(ValueError, "requires a workflow"):
+            check_report(github, head, not_triggered_evidence=evidence)
 
     # Scenario: GitHub paginates a waiting workflow and denies the deployment-review query.
     # Purpose: Retain the visible run without inventing an approval or swallowing missing pages.

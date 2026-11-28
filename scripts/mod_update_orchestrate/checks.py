@@ -5,11 +5,27 @@ import re
 from scripts.mod_update_watch.issues import GitHubError
 
 
-def check_report(github, head, workflow=None):
+def _run_state(status, conclusion):
+    if status in ("waiting", "action_required") or conclusion == "action_required":
+        return "awaiting_approval"
+    if status in ("requested", "pending", "queued", "in_progress"):
+        return "running"
+    if conclusion == "success":
+        return "passed"
+    if conclusion in ("failure", "cancelled", "timed_out", "startup_failure", "stale"):
+        return "failed"
+    if conclusion in ("neutral", "skipped"):
+        return conclusion
+    return "unknown"
+
+
+def check_report(github, head, workflow=None, *, not_triggered_evidence=None):
     if not isinstance(head, str) or not re.fullmatch("[a-f0-9]{40}", head):
         raise ValueError("check report requires a full lowercase commit SHA")
     if workflow is not None and not re.fullmatch(r"[a-zA-Z0-9_-]+\.ya?ml", workflow):
         raise ValueError("workflow must be a workflow YAML filename")
+    if not_triggered_evidence is not None and (workflow is None or not not_triggered_evidence.strip()):
+        raise ValueError("not-triggered evidence requires a workflow and a nonempty reference")
     runs = f"actions/workflows/{workflow}/runs" if workflow else "actions/runs"
     report = {"head": head, "workflow": workflow}
     for key, path, field in (
@@ -21,6 +37,7 @@ def check_report(github, head, workflow=None):
             if item.get("head_sha") != head:
                 continue
             row = {k: item.get(k) for k in ("id", "name", "path", "html_url", "status", "conclusion")}
+            row["state"] = _run_state(row["status"], row["conclusion"])
             if field == "workflow_runs" and row["status"] == "waiting":
                 try:
                     pending = github.api("GET", f"actions/runs/{int(row['id'])}/pending_deployments",
@@ -35,4 +52,7 @@ def check_report(github, head, workflow=None):
             observations.append(row)
         report[key] = observations
         report[key + "Observation"] = "observed" if observations else "not_observed"
+    if not_triggered_evidence is not None and not report["workflowRuns"]:
+        report["workflowRunsObservation"] = "not_triggered"
+        report["workflowNotTriggeredEvidence"] = not_triggered_evidence
     return report

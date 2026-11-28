@@ -85,6 +85,7 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     parser.add_argument("--regenerate", action="store_true")
     parser.add_argument("--head")
     parser.add_argument("--workflow", help="check-report workflow YAML filename")
+    parser.add_argument("--not-triggered-evidence", help="independently verified non-trigger reference for this head and workflow")
     reviewed = parser.add_mutually_exclusive_group()
     reviewed.add_argument("--reviewed-input", type=Path)
     reviewed.add_argument("--review-template", action="store_true")
@@ -99,8 +100,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
         mode = args.review_mode or os.environ.get("MOD_UPDATE_REVIEW_MODE") or "manual"
         if mode not in ("manual", "auto"):
             raise ValueError("MOD_UPDATE_REVIEW_MODE 必須為 manual 或 auto")
-        if args.command != "check-report" and (args.workflow or args.head):
-            parser.error("--head and --workflow belong to check-report")
+        if args.command != "check-report" and (args.workflow or args.head or args.not_triggered_evidence is not None):
+            parser.error("--head, --workflow and --not-triggered-evidence belong to check-report")
         if args.reviewed_input or args.review_template or args.terminology_request:
             if (args.command != "process" or not args.regenerate or args.route != "update"
                     or args.merge_check or mode != "manual" or args.review_template and not args.dry_run):
@@ -108,7 +109,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
         if args.terminology_request and args.review_template:
             parser.error("--terminology-request cannot accompany --review-template")
         if args.command == "check-report":
-            emit(json.dumps(check_report(github, args.head, args.workflow), ensure_ascii=True))
+            report = check_report(github, args.head, args.workflow, not_triggered_evidence=args.not_triggered_evidence)
+            emit(json.dumps(report, ensure_ascii=True))
             return 0
         if args.command == "discover":
             mods, _ = load_registry(root)
