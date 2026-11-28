@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: SyuanTsai/Skill-Darktide-Translate
-          ref: 3d7b3305cb0655a52a01629ff34521a80cda6e15
+          ref: 47b8605a69f824dcd376875bc3338d0aace3c6ea
           path: .skill
           persist-credentials: false
       - uses: actions/setup-python@v5
