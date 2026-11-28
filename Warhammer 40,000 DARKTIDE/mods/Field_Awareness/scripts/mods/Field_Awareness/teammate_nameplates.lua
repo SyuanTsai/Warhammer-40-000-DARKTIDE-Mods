@@ -50,6 +50,7 @@ end
 
 function Nameplates.install(mod,renderer,is_active)
  local BarStyle=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/bar_style")
+ local BotIcon=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/bot_icon")
  local FriendIcon=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/friend_icon")
  local friends=mod:io_dofile("Field_Awareness/scripts/mods/Field_Awareness/darktide_friends").new(function(message)
   if mod.get and mod:get("performance_diagnostics_enabled")==true then pcall(mod.info,mod,message) end
@@ -133,10 +134,11 @@ function Nameplates.install(mod,renderer,is_active)
     end
    end
   end
-  local is_friend = option("teammate_friend_icon_enabled") and friends:is_friend(player,t)
+  local is_friend = not is_bot and option("teammate_friend_icon_enabled") and friends:is_friend(player,t)
   if is_friend or option("teammate_squadmate_icon_enabled") then
    local top=option("teammate_names_enabled") and ty+cached.by or y-1
-   FriendIcon.draw(renderer,ui,x-16,top-(warning_drawn and 70 or 38),27,32,is_friend and FRIEND_ICON_GREEN or nil)
+   if is_bot then BotIcon.draw(renderer,ui,x-16,top-(warning_drawn and 70 or 38),27,32)
+   else FriendIcon.draw(renderer,ui,x-16,top-(warning_drawn and 70 or 38),27,32,is_friend and FRIEND_ICON_GREEN or nil)end
   end
   return true
  end

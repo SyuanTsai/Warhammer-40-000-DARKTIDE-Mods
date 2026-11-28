@@ -1,6 +1,6 @@
 -- Local, bounded diagnostics. Wall times include native calls, not GPU execution.
 local Watch={}
-local names={"enemies","health_refresh","hazard_update","health_draw","ground_draw","custom_hud","input_decision","pickup_refresh","pickup_draw"}
+local names={"enemies","outline_materials","outline_diagnostics","health_refresh","hazard_update","health_draw","ground_draw","custom_hud","input_decision","pickup_refresh","pickup_draw"}
 local function finite(n)return type(n)=="number" and n==n and n>=0 and n<1e9 end
 function Watch.new(mod,api,Memory)
  local self={enabled=false}

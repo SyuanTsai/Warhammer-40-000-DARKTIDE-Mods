@@ -1,5 +1,5 @@
 return {
-    version = "1.5.1",
+    version = "1.7.0",
 	run = function()
 		fassert(rawget(_G, "new_mod"), "`Field_Awareness` requires the Darktide Mod Framework.")
 

@@ -1,24 +1,19 @@
-UPDATING FIELD AWARENESS - KEEPING YOUR SETTINGS
+FIELD AWARENESS 1.7.0 - INSTALL / UPDATE
+Creator: joERodman. Accepted for upload on October 23, 2026.
 
-1. Close Darktide before replacing mod files.
-2. Extract the downloaded ZIP. Open its mods folder.
-3. Copy the Field_Awareness folder into your Darktide game's mods folder.
-4. When Windows asks about existing files, choose Replace the files in the destination.
-5. Keep the existing Field_Awareness entry in mod_load_order.txt. Start the game normally.
+1. Close Darktide and back up your current mod folder and saved preferences.
+2. Extract this ZIP. Copy its mods/Field_Awareness folder into your game's mods
+   folder and choose Copy and Replace. You can also extract into the game
+   root so the lowercase mods folder merges with the existing folder.
+3. Keep Field_Awareness enabled exactly once in your existing mod_load_order.txt.
+   Preserve entries for your other mods. DML and DMF are required.
 
-We are attempting to preserve your settings for future updates. The current
-packages use the same mod ID, and preservation checks for existing choices have
-passed. DMF stores saved settings separately from the mod folder, in Darktide's
-user_settings.config. These downloads contain mod files only, without personal
-settings or a settings-reset installer. Existing settings, keybinds and
-character/build choices are intended to remain; defaults initialize only missing
-or newly introduced settings. Updating menu/code files does not itself reset them.
-You do not need a separate update-only download: this ZIP also supports updates.
+When switching from a versioned testing folder, retire that older folder
+outside the game's mods folder and replace its load-order entry with
+Field_Awareness. Do not load both copies. The public folder and manifest use
+the stable Field_Awareness name for subsequent Copy and Replace updates.
 
-FIRST INSTALL
-Close the game, extract the ZIP, and copy its mods folder into the Darktide game
-root. With the usual DML/DMF prerequisites installed, add Field_Awareness once to
-mods/mod_load_order.txt if it is not already there. New settings receive defaults.
-
-These instructions apply to the stable public folder Field_Awareness. A versioned
-cross-computer transfer package has its own HANDOFF.txt and load-order instructions.
+We're attempting to preserve your settings for future updates. DMF stores
+preferences separately, and retaining your choices is the intended workflow;
+this is not a guarantee for every future release. Keep a backup before updating.
+This archive contains no personal saved settings or private load order.

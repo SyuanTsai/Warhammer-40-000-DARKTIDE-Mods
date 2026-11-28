@@ -1,7 +1,7 @@
 return {
     ["debuff_pulse_enabled_description"] = {
-        ["en"] = "Flash at the active effect's native maximum stacks, including live overrides: ordinary bleed 16, long bleed 18, burn and Soulblaze normally 31. Lower weapon application limits are not the enemy effect cap. Combined effects flash only when all known active effects are at their maximum. Unknown counts or caps do not flash.",
-        ["zh-tw"] = "效果累積到遊戲設定的層數上限時，圖示就會閃爍，也會依照遊戲即時調整後的上限判斷：一般流血為 16 層、長效流血為 18 層，燃燒和靈魂之火通常為 31 層。武器能施加的層數可能比較低，但不代表敵人身上的效果只能累積到那個層數。如果同時有多種效果，所有已知且仍在生效的效果都達到各自的上限時才會閃爍。無法確認層數或上限時不會閃爍。",
+        ["en"] = "Flash damage-over-time icons at or above these stack thresholds: Burning 12, Warp Fire (Soulblaze) 12, Bleed 16 and Chem Toxin 30. Burning and Soulblaze use tier-IV blessing caps; Chem Toxin uses the needle-pistol cap. Higher counts keep flashing. This does not change damage or native stack limits. Unknown or incomplete counts do not flash.",
+        ["zh-tw"] = "當持續傷害圖示的疊加數達到或超過下列門檻時閃爍：燃燒 12、亞空間之火（靈魂之火）12、流血 16、化學毒素 30。燃燒和靈魂之火採用四階祝福的上限；化學毒素採用針刺手槍的上限。超過門檻後會持續閃爍。這不會改變傷害或遊戲原生的疊加上限。未知或不完整的層數不會閃爍。",
     },
 
     ["teammate_squadmate_icon_enabled"] = {
@@ -10,8 +10,8 @@ return {
     },
 
     ["teammate_squadmate_icon_enabled_description"] = {
-        ["en"] = "Show the approved blue raised clasped-hands circle above all squadmates, including bots, during missions. Independent of Darktide friend icon. Green replaces blue for friends when that toggle is On. On by default.",
-        ["zh-tw"] = "任務中，會在所有小隊隊友（包含電腦隊友）頭上顯示藍色握手圓形圖示。這項功能和「Darktide 好友圖示」各自獨立。開啟好友圖示時，好友的藍色圖示會改成綠色。預設開啟。",
+        ["en"] = "Show the approved ivory raised clasped-hands circle above human squadmates and the light-gray robot emblem above bots during missions. Independent of Darktide friend icon. Green replaces ivory for friends when that toggle is On. On by default.",
+        ["zh-tw"] = "任務中，會在真人小隊隊友頭上顯示經核准的象牙白凸起握手圓形圖示，並在電腦隊友頭上顯示淺灰色機器人徽記。這項功能和「黑潮好友圖示」各自獨立。開啟「黑潮好友圖示」時，好友的象牙白圖示會改為綠色。預設開啟。",
     },
 
     ["teammate_friend_icon_enabled"] = {
@@ -20,8 +20,8 @@ return {
     },
 
     ["teammate_friend_icon_enabled_description"] = {
-        ["en"] = "Show a bright-green raised clasped-hands circle above accepted, unblocked Darktide/Fatshark friends during missions. Platform friendship alone does not qualify. Independent of Squadmate icon; green takes its place at the same position when both are On. On by default.",
-        ["zh-tw"] = "任務中，會在已加入你的 Darktide／Fatshark 好友名單、且未被封鎖的隊友頭上顯示亮綠色握手圓形圖示。只有平台上的好友關係不算。這項功能和「小隊隊友圖示」各自獨立；兩者都開啟時，綠色圖示會在相同位置取代藍色圖示。預設開啟。",
+        ["en"] = "Show a bright-green raised clasped-hands circle above accepted, unblocked friends recognized by Darktide's Social menu, including Steam/platform friends and Fatshark friends. Pending requests alone do not qualify. Independent of Squadmate icon; green takes its place at the same position when both are On. On by default.",
+        ["zh-tw"] = "任務中，會在黑潮社交選單中認得的好友頭上顯示亮綠色握手圓形圖示，對象須為已接受且未被封鎖的好友，包含 Steam／平台好友與 Fatshark 好友。僅有待處理的邀請不算。這項功能和「小隊隊友圖示」各自獨立；兩者都開啟時，綠色圖示會在相同位置取代原本的圖示。預設開啟。",
     },
 
     ["aquila_circle_enabled"] = {
@@ -70,8 +70,8 @@ return {
     },
 
     ["section_markers_description"] = {
-        ["en"] = "Choose boss weak-spot marker styles, Daemonhost proximity warnings and nearby pickup icons.",
-        ["zh-tw"] = "設定首領弱點標記的樣式、惡魔宿主的接近警示，以及附近物品的拾取圖示。",
+        ["en"] = "Choose Daemonhost proximity warnings and nearby world/pickup markers. Boss weak-spot styles are under Enemy Displays > Weak spot dot.",
+        ["zh-tw"] = "設定惡魔宿主的接近警示，以及附近的場景／拾取物標記。首領弱點樣式位於「敵人顯示 > 弱點圓點」。",
     },
 
     ["prophet_floor_enabled"] = {
@@ -190,8 +190,8 @@ return {
     },
 
     ["performance_diagnostics_enabled_description"] = {
-        ["en"] = "Enable the existing Field Awareness performance recorder. Writes bounded frame and feature timing summaries to the game log.",
-        ["zh-tw"] = "開啟 Field Awareness 內建的效能記錄功能，把影格和各項功能的執行時間摘要寫進遊戲紀錄，並限制記錄量。",
+        ["en"] = "Record performance timings and a focused outline investigation in the game log. Turn On as soon as a bright enemy appears, aim at it, and move around it for 20–30 seconds, then turn Off. Records stable enemy/body-part IDs, camera angle, requested RGB and limited part/material inventory. Extra sampling runs only while On. This records no screenshots, video or final GPU colors.",
+        ["zh-tw"] = "在遊戲紀錄中記錄效能計時與針對輪廓的專項調查。看到明亮的敵人時立即開啟，瞄準它並在其周圍移動 20–30 秒，然後關閉。會記錄穩定的敵人／身體部位 ID、攝影機角度、要求的 RGB，以及有限的部位／材質清單。額外取樣只會在開啟時執行。不會記錄截圖、影片或最終 GPU 顏色。",
     },
 
     ["teammate_status_enabled"] = {
@@ -216,12 +216,12 @@ return {
 
     ["color_renegade_flamer"] = {
         ["en"] = "Flamer",
-        ["zh-tw"] = "火焰兵",
+        ["zh-tw"] = "血痂噴火者",
     },
 
     ["section_colors_description"] = {
-        ["en"] = "Each enemy type has compact Red, Green and Blue controls from 0 to 255. The color sample beside each control updates as you adjust it. Changes affect outlines and matching overhead colors. Disable color flashes above for a steady color. Reset restores the original palette.",
-        ["zh-tw"] = "每種敵人都能用紅、綠、藍三個小選項調色，數值從 0 到 255。調整時，旁邊的色塊會即時顯示結果。設定會套用到敵人輪廓和對應的頭頂顯示顏色。想讓顏色保持不變，可以關閉上方的顏色閃爍選項。重設會恢復原本的配色。",
+        ["en"] = "Compact Red, Green and Blue controls with live previews. These colors set enemy body outlines and most weak-spot dots. Small Scab Shooters, Scab Stalkers and Dreg Stalkers use white dots for contrast while retaining their selected outline color.",
+        ["zh-tw"] = "精簡的紅、綠、藍控制項，附即時預覽。這些顏色會設定敵人身體輪廓和大多數弱點圓點。小型血痂射手、血痂潛行者和渣滓潛行者為了對比會使用白色圓點，同時保留所選的輪廓顏色。",
     },
 
     ["color_renegade_flamer_g"] = {
@@ -236,7 +236,7 @@ return {
 
     ["color_renegade_flamer_mutator"] = {
         ["en"] = "Scab Flamer Mutator",
-        ["zh-tw"] = "血痂火焰兵（詞條變體）",
+        ["zh-tw"] = "血痂噴火者",
     },
 
     ["color_renegade_flamer_mutator_r"] = {
@@ -256,7 +256,7 @@ return {
 
     ["color_renegade_grenadier"] = {
         ["en"] = "Bomber",
-        ["zh-tw"] = "火焰轟炸者",
+        ["zh-tw"] = "血痂轟炸者",
     },
 
     ["color_renegade_grenadier_r"] = {
@@ -316,7 +316,7 @@ return {
 
     ["color_renegade_netgunner"] = {
         ["en"] = "Trapper",
-        ["zh-tw"] = "陷阱兵",
+        ["zh-tw"] = "血痂陷阱兵",
     },
 
     ["color_renegade_netgunner_r"] = {
@@ -360,8 +360,8 @@ return {
     },
 
     ["mod_name"] = {
-        ["en"] = "Field Awareness v1.4.7",
-        ["zh-tw"] = "戰場感知（Field Awareness）v1.4.7",
+        ["en"] = "Field Awareness v1.7.0",
+        ["zh-tw"] = "戰場感知（Field Awareness）v1.7.0",
     },
 
     ["color_renegade_radio_operator_g"] = {
@@ -427,6 +427,14 @@ return {
     ["enemy_outlines_enabled"] = {
         ["en"] = "Colored enemy outlines",
         ["zh-tw"] = "敵人彩色輪廓",
+    },
+    ["trash_outlines_enabled"] = {
+        ["en"] = "Trash-mob outlines (still debugging)",
+        ["zh-tw"] = "雜兵輪廓（仍在除錯）",
+    },
+    ["trash_outlines_enabled_description"] = {
+        ["en"] = "Turn On or Off to enable or disable outlines in all seven trash-enemy dropdowns, preserving each row\'s dot choice. This selector is On when any trash row has outlines enabled. Individual rows remain customizable. The intermittent bright-orange trash-outline issue is still under investigation. Native game marks and health bars keep their settings.",
+        ["zh-tw"] = "開啟或關閉，即可在全部七個雜兵敵人下拉選單中啟用或停用輪廓，並保留各列的圓點選擇。只要有任一雜兵列啟用輪廓，此選擇器就會是開啟狀態。各列仍可個別自訂。雜兵輪廓偶爾出現亮橘色的問題仍在調查中。遊戲原生標記和血條維持原有設定。",
     },
 
     ["occluded_outline_mode"] = {
@@ -598,6 +606,8 @@ return {
         ["en"] = "Warp Fire (Soulblaze)",
         ["zh-tw"] = "亞空間火焰（靈魂之火）",
     },
+    ["debuff_toxin_enabled"] = {en="Chem Toxin", ["zh-tw"] = "化學毒素",},
+    ["debuff_toxin_enabled_description"] = {en="Show a green toxin icon and its observed damage-over-time stacks. Enabled by default. Stack numbers and flashing follow their separate switches. Does not count toxin armour-rending or gas-controller stacks.", ["zh-tw"] = "顯示綠色毒素圖示及其觀察到的持續傷害疊加數。預設開啟。疊加數字和閃爍分別由各自的開關控制。不計入毒素的護甲撕裂或毒氣控制器的疊加。",},
 
     ["occluded_outline_intensity_description"] = {
         ["en"] = "Adjust out-of-sight outlines from 5%% to 95%%. Applies only to Light mode; visible enemies use the Enemy outline intensity slider.",
@@ -620,8 +630,8 @@ return {
     },
 
     ["weakspot_high_contrast_enabled_description"] = {
-        ["en"] = "Add black outlines to weak spot dots (white for blue dots), with death-pop fragments alternating between fill and outline colors. Turn off for plain dots and single-color pops. Enabled by default.",
-        ["zh-tw"] = "在弱點圓點外加上黑色邊框，藍色圓點則加上白色邊框。死亡爆散時，碎片會交替使用圓點和邊框的顏色。關閉後，圓點不會有邊框，爆散效果也只會使用單一顏色。預設開啟。",
+        ["en"] = "Add white borders to dark-brown and blue weak spot dots, including dark-blue Vanguards. Small ordinary shooters use white dots with black borders; other colors retain their contrast borders. Death-pop fragments alternate between fill and border colors. Turn off for plain dots and single-color pops. Enabled by default.",
+        ["zh-tw"] = "為深棕色和藍色的弱點圓點加上白色邊框，包括深藍色的先鋒兵。小型一般射手使用帶黑色邊框的白色圓點；其他顏色保留其對比邊框。死亡爆散時，碎片會交替使用填色和邊框顏色。關閉後為單純圓點和單色爆散。預設開啟。",
     },
 
     ["debuff_nonwarp_enabled"] = {
@@ -630,8 +640,8 @@ return {
     },
 
     ["empty_status_enabled_description"] = {
-        ["en"] = "Show a persistent head-position dot: matching the enemy color when its health bar is displayed, otherwise off-white. Uses existing line-of-sight and distance limits. Pops on death. Trappers and hounds can show the dot alongside their specialist icons. Poxbursters keep their bomb icon instead. Uses the head anchor, not separate weak-spot geometry.",
-        ["zh-tw"] = "持續在敵人頭部顯示圓點。有顯示血條時，圓點會使用你設定的敵人顏色，否則顯示灰白色。仍會依照原本的視線和距離限制顯示，死亡時會有爆散效果。陷阱兵和瘟疫獵犬可以同時顯示圓點和專家敵人圖示；瘟疫爆者則繼續使用炸彈圖示。圓點跟著頭部的位置，不會依照另外的弱點形狀調整。",
+        ["en"] = "Show a persistent head-position dot matching the enemy outline color. Choose trash mobs, boss marker styles and individual enemy categories below; each category can be switched off separately. Dot color stays independent of health bars and body-outline switches; outline intensity only dims the body outline. Daemonhosts retain their green/yellow warning colors. Uses existing line-of-sight and distance limits and pops on death. Trappers and hounds can show dots alongside specialist icons; Poxbursters keep their bomb icon instead. Uses the head anchor, not separate weak-spot geometry.",
+        ["zh-tw"] = "持續顯示頭部位置的圓點，顏色與敵人輪廓顏色一致。請在下方選擇雜兵、首領標記樣式和各敵人類別；每個類別可分別關閉。圓點顏色與血條和身體輪廓開關各自獨立；輪廓強度只會讓身體輪廓變暗。惡魔宿主保留綠色／黃色的警示顏色。沿用現有的視線和距離限制，死亡時會爆散。陷阱兵和獵犬可在專家圖示旁顯示圓點；瘟疫爆者則維持使用炸彈圖示。使用頭部錨點，而非獨立的弱點幾何形狀。",
     },
 
     ["debuff_pulse_enabled"] = {
@@ -810,8 +820,8 @@ return {
     },
 
     ["section_colors"] = {
-        ["en"] = "Enemy Colors (RGB)",
-        ["zh-tw"] = "敵人顏色（RGB）",
+        ["en"] = "Color Selector",
+        ["zh-tw"] = "顏色選擇器",
     },
 
     ["gas_hexagons_enabled_description"] = {
@@ -826,7 +836,7 @@ return {
 
     ["color_chaos_armored_hound"] = {
         ["en"] = "Armored Hound",
-        ["zh-tw"] = "重甲瘟疫獵犬",
+        ["zh-tw"] = "裝甲瘟疫獵犬",
     },
 
     ["color_chaos_armored_hound_r"] = {
@@ -926,7 +936,7 @@ return {
 
     ["color_chaos_hound_mutator"] = {
         ["en"] = "Hound Mutator",
-        ["zh-tw"] = "瘟疫獵犬（詞條變體）",
+        ["zh-tw"] = "瘟疫獵犬",
     },
 
     ["color_chaos_hound_mutator_r"] = {
@@ -946,7 +956,7 @@ return {
 
     ["color_chaos_lesser_mutated_poxwalker"] = {
         ["en"] = "Lesser Mutated Poxwalker",
-        ["zh-tw"] = "低階變異瘟疫行者",
+        ["zh-tw"] = "變異瘟疫行者",
     },
 
     ["color_chaos_lesser_mutated_poxwalker_r"] = {
@@ -966,7 +976,7 @@ return {
 
     ["color_chaos_mutated_poxwalker"] = {
         ["en"] = "Mutated Poxwalker",
-        ["zh-tw"] = "變異瘟疫行者",
+        ["zh-tw"] = "觸手瘟疫行者",
     },
 
     ["color_chaos_mutated_poxwalker_r"] = {
@@ -1006,7 +1016,7 @@ return {
 
     ["color_chaos_mutator_ritualist"] = {
         ["en"] = "Mutator Ritualist",
-        ["zh-tw"] = "渣滓祭司（詞條變體）",
+        ["zh-tw"] = "渣滓祭司",
     },
 
     ["color_chaos_mutator_ritualist_r"] = {
@@ -1046,7 +1056,7 @@ return {
 
     ["color_chaos_ogryn_bulwark"] = {
         ["en"] = "Bulwark",
-        ["zh-tw"] = "堡壘兵",
+        ["zh-tw"] = "堡壘",
     },
 
     ["color_chaos_ogryn_bulwark_r"] = {
@@ -1246,7 +1256,7 @@ return {
 
     ["color_cultist_captain"] = {
         ["en"] = "Dreg Captain",
-        ["zh-tw"] = "渣滓連長",
+        ["zh-tw"] = "告誡教勇士",
     },
 
     ["color_cultist_captain_r"] = {
@@ -1266,7 +1276,7 @@ return {
 
     ["color_cultist_flamer"] = {
         ["en"] = "Tox Flamer",
-        ["zh-tw"] = "劇毒火焰兵",
+        ["zh-tw"] = "渣滓毒焰噴射者",
     },
 
     ["color_cultist_flamer_r"] = {
@@ -1286,7 +1296,7 @@ return {
 
     ["color_cultist_grenadier"] = {
         ["en"] = "Pox Bomber",
-        ["zh-tw"] = "劇毒轟炸者",
+        ["zh-tw"] = "渣滓劇毒轟炸者",
     },
 
     ["color_cultist_grenadier_r"] = {
@@ -1366,7 +1376,7 @@ return {
 
     ["color_cultist_mutant_mutator"] = {
         ["en"] = "Dreg Mutant Mutator",
-        ["zh-tw"] = "渣滓變種人（詞條變體）",
+        ["zh-tw"] = "變種人",
     },
 
     ["color_cultist_mutant_mutator_r"] = {
@@ -1486,7 +1496,7 @@ return {
 
     ["color_renegade_captain"] = {
         ["en"] = "Scab Captain",
-        ["zh-tw"] = "血痂連長",
+        ["zh-tw"] = "血痂隊長",
     },
 
     ["color_renegade_captain_r"] = {
@@ -1663,4 +1673,263 @@ return {
         ["en"] = "Red",
         ["zh-tw"] = "紅",
     },
+ section_enemy_types={en="Enemy types", ["zh-tw"] = "敵人類型",},
+ section_enemy_types_description={en="Choose outlines and weak-spot markers independently for each enemy type. The two trash selectors update the seven trash-enemy dropdowns below them. Shared enemy, outline and dot switches still apply. Off hides these two displays; health bars, debuffs and native game marks keep their own controls. Poxbursters keep their bomb icon in place of a dot.", ["zh-tw"] = "可針對每種敵人類型獨立選擇輪廓與弱點標記。兩個雜兵選擇器會更新其下方的七個雜兵敵人下拉選單。共用的敵人、輪廓與圓點開關仍然有效。「關閉」會隱藏這兩種顯示；生命條、減益效果與遊戲原生標記則各自有獨立控制。瘟疫爆者會以炸彈圖示取代圓點。",},
+ enemy_display_both={en="Outlines and weak spot dots", ["zh-tw"] = "輪廓與弱點圓點",},
+ enemy_display_outline={en="Outline only", ["zh-tw"] = "僅顯示輪廓",},
+ enemy_display_weakspot={en="Weak spot dot only", ["zh-tw"] = "僅顯示弱點圓點",},
+ enemy_display_off={en="Off", ["zh-tw"] = "關閉",},
+ enemy_display_chaos_armored_hound={en="Armored Hound", ["zh-tw"] = "裝甲瘟疫獵犬",},
+ enemy_display_chaos_armored_infected={en="Armored Infected", ["zh-tw"] = "重甲呻吟者",},
+ enemy_display_chaos_beast_of_nurgle={en="Beast of Nurgle", ["zh-tw"] = "納垢巨獸",},
+ enemy_display_chaos_daemonhost={en="Daemonhost", ["zh-tw"] = "惡魔宿主",},
+ enemy_display_chaos_hound={en="Hound", ["zh-tw"] = "瘟疫獵犬",},
+ enemy_display_chaos_hound_mutator={en="Hound Mutator", ["zh-tw"] = "瘟疫獵犬",},
+ enemy_display_chaos_lesser_mutated_poxwalker={en="Lesser Mutated Poxwalker", ["zh-tw"] = "變異瘟疫行者",},
+ enemy_display_chaos_mutated_poxwalker={en="Mutated Poxwalker", ["zh-tw"] = "觸手瘟疫行者",},
+ enemy_display_chaos_mutator_daemonhost={en="Mutator Daemonhost", ["zh-tw"] = "魔縛惡魔宿主",},
+ enemy_display_chaos_mutator_ritualist={en="Mutator Ritualist", ["zh-tw"] = "渣滓祭司",},
+ enemy_display_chaos_newly_infected={en="Newly Infected", ["zh-tw"] = "呻吟者",},
+ enemy_display_chaos_ogryn_bulwark={en="Bulwark", ["zh-tw"] = "堡壘",},
+ enemy_display_chaos_ogryn_executor={en="Crusher", ["zh-tw"] = "碾壓者",},
+ enemy_display_chaos_ogryn_gunner={en="Reaper", ["zh-tw"] = "收割者",},
+ enemy_display_chaos_ogryn_houndmaster={en="Ogryn Houndmaster", ["zh-tw"] = "獸群領主",},
+ enemy_display_chaos_plague_ogryn={en="Plague Ogryn", ["zh-tw"] = "瘟疫歐格林",},
+ enemy_display_chaos_poxwalker={en="Poxwalker", ["zh-tw"] = "瘟疫行者",},
+ enemy_display_chaos_poxwalker_bomber={en="Poxburster", ["zh-tw"] = "瘟疫爆者",},
+ enemy_display_chaos_spawn={en="Chaos Spawn", ["zh-tw"] = "混沌魔物",},
+ enemy_display_cultist_assault={en="Dreg Assault", ["zh-tw"] = "渣滓潛行者",},
+ enemy_display_cultist_berzerker={en="Dreg Berzerker", ["zh-tw"] = "渣滓狂怒者",},
+ enemy_display_cultist_captain={en="Dreg Captain", ["zh-tw"] = "告誡教勇士",},
+ enemy_display_cultist_flamer={en="Tox Flamer", ["zh-tw"] = "渣滓毒焰噴射者",},
+ enemy_display_cultist_grenadier={en="Pox Bomber", ["zh-tw"] = "渣滓劇毒轟炸者",},
+ enemy_display_cultist_gunner={en="Dreg Gunner", ["zh-tw"] = "渣滓砲手",},
+ enemy_display_cultist_melee={en="Dreg Melee", ["zh-tw"] = "渣滓格鬥兵",},
+ enemy_display_cultist_mutant={en="Mutant", ["zh-tw"] = "變種人",},
+ enemy_display_cultist_mutant_mutator={en="Dreg Mutant Mutator", ["zh-tw"] = "變種人",},
+ enemy_display_cultist_ritualist={en="Dreg Ritualist", ["zh-tw"] = "渣滓祭司",},
+ enemy_display_cultist_shocktrooper={en="Dreg Shocktrooper", ["zh-tw"] = "渣滓霰彈槍手",},
+ enemy_display_cultist_vanguard={en="Dreg Vanguard", ["zh-tw"] = "渣滓先鋒 (盾兵)",},
+ enemy_display_renegade_assault={en="Scab Assault", ["zh-tw"] = "血痂潛行者",},
+ enemy_display_renegade_berzerker={en="Scab Berzerker", ["zh-tw"] = "血痂狂暴者",},
+ enemy_display_renegade_captain={en="Scab Captain", ["zh-tw"] = "血痂隊長",},
+ enemy_display_renegade_executor={en="Scab Mauler", ["zh-tw"] = "血痂重錘兵",},
+ enemy_display_renegade_flamer={en="Flamer", ["zh-tw"] = "血痂噴火者",},
+ enemy_display_renegade_flamer_mutator={en="Scab Flamer Mutator", ["zh-tw"] = "血痂噴火者",},
+ enemy_display_renegade_grenadier={en="Bomber", ["zh-tw"] = "血痂轟炸者",},
+ enemy_display_renegade_gunner={en="Scab Gunner", ["zh-tw"] = "血痂砲手",},
+ enemy_display_renegade_melee={en="Scab Melee", ["zh-tw"] = "血痂格鬥兵",},
+ enemy_display_renegade_netgunner={en="Trapper", ["zh-tw"] = "血痂陷阱兵",},
+ enemy_display_renegade_plasma_gunner={en="Scab Plasma Gunner", ["zh-tw"] = "血痂電漿槍手",},
+ enemy_display_renegade_radio_operator={en="Scab Radio Operator", ["zh-tw"] = "血痂無線電兵",},
+ enemy_display_renegade_rifleman={en="Scab Rifleman", ["zh-tw"] = "血痂射手",},
+ enemy_display_renegade_shocktrooper={en="Scab Shocktrooper", ["zh-tw"] = "血痂霰彈槍手",},
+ enemy_display_renegade_sniper={en="Scab Sniper", ["zh-tw"] = "血痂狙擊手",},
+ enemy_display_renegade_twin_captain={en="Scab Twin Captain", ["zh-tw"] = "血痂雙子隊長",},
+ enemy_display_renegade_twin_captain_two={en="Scab Twin Captain Two", ["zh-tw"] = "血痂雙子隊長二號",},
+ enemy_display_renegade_vanguard={en="Scab Vanguard", ["zh-tw"] = "血痂先鋒 (盾兵)",},
+ enemy_display_fallback={en="Other / future enemies", ["zh-tw"] = "其他／未來敵人",},
+ outline_chaos_armored_hound_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_armored_hound_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_armored_hound_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_armored_hound_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_armored_infected_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_armored_infected_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_armored_infected_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_armored_infected_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_beast_of_nurgle_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_beast_of_nurgle_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_beast_of_nurgle_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_beast_of_nurgle_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_daemonhost_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_daemonhost_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_daemonhost_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_daemonhost_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_hound_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_hound_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_hound_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_hound_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_hound_mutator_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_hound_mutator_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_hound_mutator_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_hound_mutator_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_lesser_mutated_poxwalker_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_lesser_mutated_poxwalker_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_lesser_mutated_poxwalker_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_lesser_mutated_poxwalker_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_mutated_poxwalker_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_mutated_poxwalker_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_mutated_poxwalker_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_mutated_poxwalker_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_mutator_daemonhost_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_mutator_daemonhost_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_mutator_daemonhost_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_mutator_daemonhost_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_mutator_ritualist_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_mutator_ritualist_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_mutator_ritualist_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_mutator_ritualist_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_newly_infected_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_newly_infected_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_newly_infected_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_newly_infected_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_ogryn_bulwark_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_ogryn_bulwark_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_ogryn_bulwark_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_ogryn_bulwark_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_ogryn_executor_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_ogryn_executor_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_ogryn_executor_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_ogryn_executor_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_ogryn_gunner_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_ogryn_gunner_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_ogryn_gunner_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_ogryn_gunner_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_ogryn_houndmaster_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_ogryn_houndmaster_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_ogryn_houndmaster_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_ogryn_houndmaster_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_plague_ogryn_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_plague_ogryn_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_plague_ogryn_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_plague_ogryn_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_poxwalker_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_poxwalker_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_poxwalker_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_poxwalker_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_chaos_poxwalker_bomber_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_poxwalker_bomber_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ outline_chaos_spawn_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_chaos_spawn_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_chaos_spawn_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_chaos_spawn_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_assault_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_assault_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_assault_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_assault_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_berzerker_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_berzerker_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_berzerker_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_berzerker_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_captain_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_captain_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_captain_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_captain_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_flamer_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_flamer_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_flamer_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_flamer_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_grenadier_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_grenadier_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_grenadier_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_grenadier_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_gunner_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_gunner_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_gunner_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_gunner_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_melee_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_melee_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_melee_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_melee_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_mutant_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_mutant_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_mutant_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_mutant_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_mutant_mutator_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_mutant_mutator_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_mutant_mutator_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_mutant_mutator_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_ritualist_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_ritualist_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_ritualist_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_ritualist_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_shocktrooper_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_shocktrooper_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_shocktrooper_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_shocktrooper_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_cultist_vanguard_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_cultist_vanguard_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_cultist_vanguard_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_cultist_vanguard_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_assault_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_assault_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_assault_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_assault_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_berzerker_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_berzerker_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_berzerker_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_berzerker_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_captain_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_captain_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_captain_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_captain_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_executor_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_executor_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_executor_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_executor_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_flamer_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_flamer_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_flamer_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_flamer_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_flamer_mutator_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_flamer_mutator_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_flamer_mutator_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_flamer_mutator_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_grenadier_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_grenadier_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_grenadier_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_grenadier_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_gunner_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_gunner_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_gunner_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_gunner_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_melee_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_melee_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_melee_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_melee_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_netgunner_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_netgunner_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_netgunner_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_netgunner_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_plasma_gunner_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_plasma_gunner_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_plasma_gunner_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_plasma_gunner_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_radio_operator_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_radio_operator_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_radio_operator_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_radio_operator_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_rifleman_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_rifleman_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_rifleman_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_rifleman_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_shocktrooper_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_shocktrooper_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_shocktrooper_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_shocktrooper_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_sniper_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_sniper_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_sniper_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_sniper_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_twin_captain_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_twin_captain_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_twin_captain_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_twin_captain_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_twin_captain_two_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_twin_captain_two_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_twin_captain_two_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_twin_captain_two_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_renegade_vanguard_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_renegade_vanguard_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_renegade_vanguard_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_renegade_vanguard_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+ outline_fallback_enabled={en="Outline", ["zh-tw"] = "輪廓",},
+ outline_fallback_enabled_description={en="Show Field Awareness body outlines for this enemy type. The main Colored enemy outlines switch and the existing Trash-mob outlines switch still apply. Native game/talent marks are retained.", ["zh-tw"] = "為此敵人類型顯示戰場感知的身體輪廓。主要的「彩色敵人輪廓」開關與現有的「雜兵輪廓」開關仍然適用。遊戲原生／天賦標記會保留。",},
+ weakspot_fallback_enabled={en="Weak spot dot", ["zh-tw"] = "弱點圓點",},
+ weakspot_fallback_enabled_description={en="Show the weak-spot dot or selected boss icon for this enemy type. The main Weak spot dot switch, shared trash-dot switch and boss marker-style choices still apply. Independent of body outlines and health bars.", ["zh-tw"] = "為此敵人類型顯示弱點圓點或所選的首領圖示。主要的「弱點圓點」開關、共用的雜兵圓點開關，以及首領標記樣式的選擇仍然適用。與身體輪廓和血條各自獨立。",},
+
+ customize_enemy_colors={en="Change joERodman's defaults", ["zh-tw"] = "更改 joERodman 的預設值",},
+ customize_enemy_colors_description={en="Show or hide the compact enemy-color controls. Off hides the editor only; it keeps all saved custom colors active. On reveals the existing small RGB sliders and preview swatches. Use Reset to restore the default palette.", ["zh-tw"] = "顯示或隱藏精簡的敵人顏色控制項。關閉只會隱藏編輯器，已儲存的自訂顏色仍會維持生效。開啟會顯示現有的小型 RGB 滑桿和預覽色塊。使用「重設」可恢復預設配色。",},
+ weakspot_trash_enabled={en="Trash-mob weak spot dots", ["zh-tw"] = "雜兵弱點圓點",},
+ weakspot_trash_enabled_description={en="Turn On or Off to enable or disable weak-spot dots in all seven trash-enemy dropdowns, preserving each row's outline choice. This selector is On when any trash row has dots enabled. You can still customize each row independently. Health bars and other enemy types are unchanged.", ["zh-tw"] = "開啟或關閉，即可在全部七個雜兵敵人下拉選單中啟用或停用弱點圓點，並保留各列的輪廓選擇。只要有任一雜兵列啟用圓點，此選擇器就會是開啟狀態。你仍可獨立自訂每一列。血條和其他敵人類型不受影響。",},
 }
