@@ -32,7 +32,7 @@ local localizations = {
 	replace_renegade_flamer_vfx = {
 		en = "Replace Renegade Flamer",
 		["zh-cn"] = "替换血痂火焰兵燃烧地板特效",
-		["zh-tw"] = "替換血痂火焰兵特效",
+		["zh-tw"] = "替換血痂噴火者特效",
 	},
 	replace_cultist_flamer_vfx = {
 		en = "Replace Cultist Flamer VFX",
@@ -42,7 +42,7 @@ local localizations = {
 	replace_havoc_enemy_corruption_liquid = {
 		en = "Replace Havoc's Blight Spreads (ground effect)",
 		["zh-cn"] = "替换浩劫腐化扩散（地面效果）特效",
-		["zh-tw"] = "替換浩劫的瘟疫散播（地面）特效",
+		["zh-tw"] = "替換浩劫的瘟疫蔓延（地面）特效",
 	},
 	replace_fire_grenade = {
 		en = "Replace Zealot's Immolation Grenade",
@@ -52,42 +52,42 @@ local localizations = {
 	replace_renegade_flamer_backpack_vfx = {
 		en = "Replace Renegade Backpack Fire",
 		["zh-cn"] = "替换背部燃烧特效",
-		["zh-tw"] = "替換血痂背部火焰特效",
+		["zh-tw"] = "替換血痂噴火者背包的火焰特效",
 	},
 	replace_cultist_flamer_backpack_vfx = {
 		en = "Replace Cultist Backpack Fire",
 		["zh-cn"] = "替换背部燃烧特效",
-		["zh-tw"] = "替換渣滓背部火焰特效",
+		["zh-tw"] = "替換渣滓毒焰噴射者背包的火焰特效",
 	},
 	chem_grenade_vfx = {
 		en = "Disable Chem Grenade VFX (Explosion)",
 		["zh-cn"] = "禁用兴奋剂手雷初始爆炸特效",
 		["zh-tw"] = "停用化學手榴彈爆炸特效",
-	},
+	},	
 	arc_r_beam_vfx = {
 		en = "Disable Arc Rifle Muzzle FX (black cloud)",
 		["zh-cn"] = "禁用电磁步枪枪口特效（黑色烟云）",
-		["zh-tw"] = "停用電弧步槍槍口特效（黑色煙霧）",
+		["zh-tw"] = "停用電弧步槍槍口特效（黑煙）",
 	},
 	arc_r_lightning_vfx = {
 		en = "Disable Arc Rifle Lightning VFX(1st target)",
 		["zh-cn"] = "禁用电磁步枪电荷链特效（首目标）",
-		["zh-tw"] = "停用電弧步槍閃電特效（第1個目標）",
+		["zh-tw"] = "停用電弧步槍閃電特效（第一個目標）",
 	},
 	replace_rotten_armor = {
 		en = "Replace Rotten Armor's Lingering Gas (after kill)",
 		["zh-cn"] = "替换腐化装甲残留毒气（击杀后）特效",
-		["zh-tw"] = "替換腐敗護甲殘留毒氣（擊殺後）特效",
+		["zh-tw"] = "替換腐敗之鎧殘留毒氣（擊殺後）特效",
 	},	
 	replace_broker_tox_grenade = {
 		en = "Replace Chem Grenade",
 		["zh-cn"] = "替换化学手雷特效",
-		["zh-tw"] = "替換化學手雷特效",
+		["zh-tw"] = "替換化學手榴彈特效",
 	},
 	replace_fire_barrel_vfx = {
 		en = "Replace Fire Barrel",
 		["zh-cn"] = "替换油桶燃烧特效",
-		["zh-tw"] = "替換火焰桶燃燒特效",
+		["zh-tw"] = "替換燃燒桶燃燒特效",
 	},
 	fire_barrel_vfx_default = {
 		en = "Default",
@@ -142,7 +142,7 @@ local localizations = {
 	gas_vfx_beast_goo = {
 		en = "Beast Goo",
 		["zh-cn"] = "绿色纳垢兽粘液（冒泡）",
-		["zh-tw"] = "納垢獸黏液",
+		["zh-tw"] = "納垢巨獸黏液",
 	},
 	fire_vfx_default = {
 		en = "Default",
@@ -152,12 +152,12 @@ local localizations = {
 	fire_vfx_beast_slime = {
 		en = "Beast Slime",
 		["zh-cn"] = "黄色纳垢兽黏液（冒泡）",
-		["zh-tw"] = "納垢獸黏液（黃色，冒泡）",
+		["zh-tw"] = "納垢巨獸黏液（黃色，冒泡）",
 	},
 	fire_vfx_beast_goo = {
 		en = "Beast Goo",
 		["zh-cn"] = "绿色纳垢兽粘液（冒泡）",
-		["zh-tw"] = "納垢獸腐液",
+		["zh-tw"] = "納垢巨獸腐液",
 	},
 	fire_short = {
 		en = "Short Red Fire",
@@ -237,12 +237,12 @@ local localizations = {
 	rotten_indicators_group = {
 		en = "Rotten Armor Indicators",
 		["zh-cn"] = "腐化装甲指示器",
-		["zh-tw"] = "腐化裝甲顯示",
+		["zh-tw"] = "腐敗之鎧顯示",
 	},
 	rotten_circle_enabled = {
 		en = "Rotten Armor Circle",
 		["zh-cn"] = "腐化装甲圆形范围指示器",
-		["zh-tw"] = "腐敗護甲範圍顯示",
+		["zh-tw"] = "腐敗之鎧範圍顯示",
 	},
 	charge_enabled = {
 		en = "Lightning Charge Effect?",
@@ -252,29 +252,29 @@ local localizations = {
 	staff_circle_enabled = {
 		en = "Trauma Staff Effect?",
 		["zh-cn"] = "震荡杖特效？",
-		["zh-tw"] = "震盪杖特效？",
+		["zh-tw"] = "虛空爆破力場法杖特效？",
 	},
 
 	blight_indicators_group = {
 		en = "Blight Spreads Indicators",
 		["zh-cn"] = "瘟疫扩散指示器",
-		["zh-tw"] = "瘟疫散播顯示",
+		["zh-tw"] = "瘟疫蔓延顯示",
 	},
 	blight_circle_enabled = {
 		en = "Blight Spreads Circle",
 		["zh-cn"] = "瘟疫扩散圆形范围指示器",
-		["zh-tw"] = "瘟疫散播範圍顯示",
+		["zh-tw"] = "瘟疫蔓延範圍顯示",
 	},
 
 	chemnade_indicators_group = {
 		en = "Chem Grenade Indicators",
 		["zh-cn"] = "化学手雷指示器",
-		["zh-tw"] = "化學手雷顯示",
+		["zh-tw"] = "化學手榴彈顯示",
 	},
 	chemnade_circle_enabled = {
 		en = "Chem Grenade Circle",
 		["zh-cn"] = "化学手雷圆形范围指示器",
-		["zh-tw"] = "化學手雷範圍顯示",
+		["zh-tw"] = "化學手榴彈範圍顯示",
 	},
 
 	fire_indicators_group = {
@@ -291,12 +291,12 @@ local localizations = {
 	gasnade_indicators_group = {
 		en = "Tox Bomber Grenade Indicators",
 		["zh-cn"] = "毒爆弹指示器",
-		["zh-tw"] = "劇毒轟炸者手雷顯示",
+		["zh-tw"] = "渣滓劇毒轟炸者的毒氣手榴彈指示器",
 	},
 	gas_grenade_circle_enabled = {
 		en = "Tox Bomber Grenade Circle",
 		["zh-cn"] = "毒爆弹圆形范围指示器",
-		["zh-tw"] = "劇毒轟炸者手雷範圍顯示",
+		["zh-tw"] = "渣滓劇毒轟炸者的毒氣手榴彈範圍顯示",
 	},
 	circle_count_group = {
 		en = "'Circle Only' Count",
@@ -316,27 +316,27 @@ local localizations = {
 	disable_toughened_skin = {
 		en = "Disable Pus-Hardened Skin",
 		["zh-cn"] = "禁用硬化皮肤特效",
-		["zh-tw"] = "停用膿液硬化皮膚",
+		["zh-tw"] = "停用硬膿皮膚",
 	},
 	disable_rotten_armor_stages = {
 		en = "Disable Rotten Armor Passive VFX",
 		["zh-cn"] = "禁用腐化装甲被动特效",
-		["zh-tw"] = "停用腐敗護甲死亡時「釋放毒液」的特效",
+		["zh-tw"] = "停用腐敗之鎧死亡時「釋放毒液」的特效",
 	},
 	disable_corrupted_enemies_vfx = {
 		en = "Disable Blight Spreads Passive VFX*",
 		["zh-cn"] = "禁用瘟疫扩散敌人特效",
-		["zh-tw"] = "停用疫病蔓延敵人被動特效*",
+		["zh-tw"] = "停用瘟疫蔓延敵人被動特效*",
 	},
 	disable_corrupted_enemies_color = {
 		en = "Disable Blight Spreads Enemy Color (green)",
 		["zh-cn"] = "禁用瘟疫扩散敌人颜色（绿色）",
-		["zh-tw"] = "停用疫病蔓延敵人顏色（綠色）",
+		["zh-tw"] = "停用瘟疫蔓延敵人顏色（綠色）",
 	},
 	disable_rotten_armor_impact = {
 		en = "Disable Rotten Armor Impact VFX",
 		["zh-cn"] = "禁用腐化装甲打击特效",
-		["zh-tw"] = "停用腐敗護甲打擊特效",
+		["zh-tw"] = "停用腐敗之鎧打擊特效",
 	},
 	disable_toxin_death_vfx = {
 		en = "Disable Chem-Toxin Death VFX",
@@ -346,7 +346,7 @@ local localizations = {
 	disable_rampaging_vfx = {
 		en = "Disable Rampaging Enemies VFX*",
 		["zh-cn"] = "禁用暴走特效。需要重启。",
-		["zh-tw"] = "停用憤怒敵人特效*",
+		["zh-tw"] = "停用蠻橫敵軍特效*",
 	},
 	corruptor_goo = {
 		en = "Corruptor Goo",
@@ -356,12 +356,12 @@ local localizations = {
 	charge_tip = {
 		en = "Adds the 'lightning charge' ground effect (from Expeditions) as an additional, half-sized indicator to show remaining duration of the effect.",
 		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“闪电充能”地面特效（来自远征任务），作为显示效果剩余持续时间的附加指示器，尺寸为一半大小。",
-		["zh-tw"] = "加入「閃電充能」地面特效（來自遠征任務），以半尺寸的額外指示器顯示效果剩餘時間。",
+		["zh-tw"] = "加入遠征任務中的「閃電充能」地面特效，作為額外指示器顯示效果的剩餘時間。此指示器的尺寸減半。",
 	},
 	staff_circle_tip = {
 		en = "Adds the ground targeting indicator from Trauma Staff to show remaining duration of the effect. VERY BRIGHT AND BIG",
 		["zh-cn"] = "添加了“虚空爆破立场杖目标指示器”，作为显示效果剩余持续时间的附加指示器。非常明亮和巨大",
-		["zh-tw"] = "加入創傷法杖的地面瞄準指示器，用來顯示效果剩餘時間。非常明亮且巨大。",
+		["zh-tw"] = "加入虛空爆破力場法杖的地面瞄準指示器，以顯示效果的剩餘時間。此指示器非常明亮，尺寸也很大。",
 	},
 	toxin_death_tip = {
 		en = "Includes explosions from grenades, and certain needler alt fire modes.",
@@ -376,17 +376,17 @@ local localizations = {
 	corrupted_vfx_tip = {
 		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nDisables Green Flies effect on Blight Spreads enemies.",
 		["zh-cn"] = "{#color(255, 35, 5)}*关闭此选项需要重启。{#color(208, 208, 208)}\n禁用瘟疫扩散敌人的绿色苍蝇特效。",
-		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n停用瘟疫散播敵人的綠色蒼蠅特效。",
+		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n停用瘟疫蔓延敵人的綠色蒼蠅特效。",
 	},
 	disable_death_vfx = {
 		en = "Disable Havoc Death-splosions",
 		["zh-cn"] = "禁用某些浩劫死亡特效（暴走冲击波，瘟疫扩散/腐化装甲死亡爆炸）",
-		["zh-tw"] = "停用浩劫死亡爆炸特效(衝擊波、瘟疫散播、腐敗之鎧)",
+		["zh-tw"] = "停用浩劫死亡爆炸特效(衝擊波、瘟疫蔓延、腐敗之鎧)",
 	},
 	circle_count = {
 		en = "Number of Added Circles (circles only mode!)",
 		["zh-cn"] = "'仅圆圈'模式的圆圈数量",
-		["zh-tw"] = "額外新增的圓圈數量（僅限圓圈模式！）",
+		["zh-tw"] = "新增圓形指示器數量（「僅範圍顯示」模式專用）",
 	},
 	tox_gas_group = {
 		en = "Toxic Gas (mission mutator)",
@@ -411,7 +411,7 @@ local localizations = {
 	disable_toxic_gas_tip = {
 		en = "Disables the green cloud particles (looks like cultist gas grenade).",
 		["zh-cn"] = "禁用绿色云雾粒子（看起来像渣滓毒雷）。",
-		["zh-tw"] = "停用綠色煙霧粒子（劇毒轟炸者毒氣手雷）。",
+		["zh-tw"] = "停用綠色煙霧粒子（外觀類似渣滓劇毒轟炸者的毒氣手榴彈）。",
 	},
 	disable_toxic_fog_tip = {
 		en = "Disables the volumetric fog (green haze effect).",
@@ -436,7 +436,7 @@ local localizations = {
 	frag_grenade_vfx = {
 		en = "Disable Shredder Frag/Rumbler/Arbites Grenades VFX",
 		["zh-cn"] = "禁用老兵手雷/榴弹发射器/法务手雷特效",
-		["zh-tw"] = "停用老兵手雷/震盪槍/法務手雷特效",
+		["zh-tw"] = "停用老兵手雷/震盪槍/法務官手榴彈特效",
 	},
 	krak_grenade_vfx = {
 		en = "Disable Krak Grenade VFX",
@@ -456,7 +456,7 @@ local localizations = {
 	stumm_grenade_vfx = {
 		en = "Disable Stun Grenade VFX",
 		["zh-cn"] = "禁用晕眩手雷特效",
-		["zh-tw"] = "停用眩暈風暴手雷特效",
+		["zh-tw"] = "停用眩暈手雷特效",
 	},
 	fire_grenade_vfx = {
 		en = "Disable Immolation Grenade VFX (Explosion)",
@@ -481,7 +481,7 @@ local localizations = {
 	ritual_vfx = {
 		en = "Disable Heinous Ritual effects",
 		["zh-cn"] = "禁用邪恶仪式特效",
-		["zh-tw"] = "停用魔縛儀式特效",
+		["zh-tw"] = "停用萬惡儀式特效",
 	},
 	ritual_vfx_tt = {
 		en = "Disables 2 of the ritual effects. Specifically the ones that get bugged and become attached to players. Note that this does make Rituals harder to see at a distance.",
@@ -511,12 +511,12 @@ local localizations = {
 	purgator_vfx = {
 		en = "Simple Purgator VFX",
 		["zh-cn"] = "简化洗罪者火焰特效",
-		["zh-tw"] = "簡化伺服器顱骨特效",
+		["zh-tw"] = "簡化滌罪伺服頭骨特效",
 	},
 	purg_tt = {
 		en = "Replaces Purgator flamer with a mild, hazeless flamer effect",
 		["zh-cn"] = "用一种温和、无烟雾的火焰特效替换洗罪者伺服头骨的火焰特效",
-		["zh-tw"] = "將伺服器顱骨火焰替換為較溫和、無煙霧的火焰特效",
+		["zh-tw"] = "將滌罪伺服頭骨火焰替換為較溫和、無煙霧的火焰特效",
 	},
 	arc_beam_tt = {
 		en = "Removes the muzzle black smoke effect.",
@@ -536,7 +536,7 @@ local localizations = {
 	arc_maul_vfx = {
 		en = "Disable Arc Maul Special Activation VFX",
 		["zh-cn"] = "禁用电弧钉锤特效",
-		["zh-tw"] = "停用電弧錘特殊啟動特效",
+		["zh-tw"] = "停用電弧鎚特殊啟動特效",
 	},
 	arc_maul_tt = {
 		en = "The visual effects on the weapon itself when it is activated.",
@@ -549,12 +549,12 @@ local localizations = {
 		["zh-tw"] = "停用電弧手榴彈爆炸特效",
 	},
 	environmental_px = {
-		en = "Disable Environment Particles",
 		["zh-tw"] = "停用環境粒子",
+		en = "Disable Environment Particles",
 	},
 	env_px_tt = {
+		["zh-tw"] = "停用由 GPU 渲染的環境粒子，例如「小蟲」、火盆和飄雪。此選項不會移除霧氣或任何體積特效。",
 		en = "GPU 'mites', braziers, snow, etc. - doesn't remove fog or any volumetric FX.",	
-		["zh-tw"] = "GPU「小蟲」、火盆、飄雪等；不會移除霧氣或任何體積特效。",
 	},
 	replace_shock_mine_vfx = {
 		en = "Swap Shock Mine VFX with basic chain lightning VFX",
@@ -574,7 +574,7 @@ local localizations = {
 	disable_bon_death = {
 		en = "Disable Beast of Nurgle death explosion",
 		["zh-cn"] = "禁用纳垢兽死亡特效",
-		["zh-tw"] = "停用納垢獸死亡爆炸",
+		["zh-tw"] = "停用納垢巨獸死亡爆炸",
 	},
 	disable_burster_death = {
 		en = "Disable Burster explosions",
@@ -630,12 +630,12 @@ local localizations = {
 	circle_tt = {
 		en = "Global on/off to show decal indicating the effect's radius.",
 		["zh-cn"] = "全局开关，显示带贴花的圆形范围",
-		["zh-tw"] = "全域開關，用來顯示標示效果半徑的貼花指示。",
+		["zh-tw"] = "全域開關，控制是否顯示標示效果半徑的地面貼花。",
 	},
 	grenade_group = {
 		en = "Grenade VFX Toggles",
 		["zh-cn"] = "手雷特效开关",
-		["zh-tw"] = "手雷特效開關",
+		["zh-tw"] = "手榴彈特效開關",
 	},
 	weapon_group = {
 		en = "Weapon VFX Toggles",
@@ -655,7 +655,7 @@ local localizations = {
 	ring_erode_on_tt = {
 		en = "Negative values INCREASE the rings' maximum brightness, positive values DECREASE it. Vanilla setting is 0.",
 		["zh-cn"] = "负值会增加光环的",
-		["zh-tw"] = "負值會提高光環的最大亮度，正值則會降低。原版設定為 0。",
+		["zh-tw"] = "負值會提高光環的最大亮度，正值則會降低。遊戲原始設定為 0。",
 	},
 	alt_decal = {
 		en = "Use Spillway Ring as decal and effect",
@@ -693,16 +693,64 @@ end
 local MoodSettings = require("scripts/settings/camera/mood/mood_settings")
 
 localizations.mood_vfx_group = {
+	["zh-tw"] = "氛圍特效（停用畫面特效，保留音效）",
 	en = "Mood VFX - 'Disable Screen Effects', but keeps any audio.",
 }
 localizations.mood_vfx_tt = {
+	["zh-tw"] = "移除所選氛圍的畫面粒子與調色效果。音效不受影響。需重新啟動。",
 	en = "Removes the screen particles/colour grading for the selected moods. Sounds are unaffected. Requires restart.",
+}
+
+local mood_names_zh_tw = {
+	corruption = "腐敗",
+	corruption_taken = "受到腐敗",
+	corruptor_proximity = "腐蝕者接近",
+	critical_health = "瀕危生命",
+	damage_taken = "受到傷害",
+	knocked_down = "被擊倒",
+	last_wound = "最後傷口",
+	expeditions_death_imminent = "遠征死亡迫近",
+	no_toughness = "無韌性",
+	toughness_absorbed = "韌性減免",
+	toughness_absorbed_melee = "近戰韌性減免",
+	toughness_broken = "韌性破裂",
+	suppression_low = "低壓制",
+	suppression_high = "高壓制",
+	suppression_ongoing = "持續壓制",
+	sprinting = "衝刺",
+	sprinting_overtime = "衝刺過久",
+	stealth = "隱身",
+	generic_stealth = "通用隱身",
+	warped = "亞空間",
+	warped_critical = "亞空間反噬",
+	warped_low_to_high = "亞空間低轉高",
+	warped_high_to_critical = "亞空間高轉反噬",
+	veteran_combat_ability_stance = "處決者姿態",
+	veteran_stealth = "滲透",
+	veteran_stealth_and_stance = "滲透與處決者姿態",
+	zealot_combat_ability_dash = "有信者之怒",
+	psyker_combat_ability_shout = "刺耳尖嘯",
+	psyker_force_field_sphere = "念力穹頂",
+	ogryn_combat_ability_charge = "蠻牛衝撞",
+	ogryn_combat_ability_shout = "忠誠守護者",
+	ogryn_combat_ability_stance = "貼身火力",
+	adamant_combat_ability_charge = "突破重圍",
+	broker_combat_ability_focus = "亡命之徒",
+	broker_combat_ability_punk_rage = "橫衝直撞！",
+	cryptic_grenade_ability_force_field = "艾曼納圖斯力場",
+	syringe_ability = "專注興奮劑",
+	syringe_power = "戰鬥興奮劑",
+	syringe_speed = "敏捷興奮劑",
+	syringe_broker = "巢都敗類興奮劑",
+	story_echo = "劇情迴響",
+	spillway_nurgle_transition = "溢洪道納垢轉場",
 }
 
 for mood_type, _ in pairs(MoodSettings.mood_types) do
 	local label = string.gsub(mood_type, "_", " ")
 	localizations["hide_mood_vfx_" .. mood_type] = {
 		en = "Disable " .. label,
+		["zh-tw"] = "停用 " .. (mood_names_zh_tw[mood_type] or label),
 	}
 end
 
