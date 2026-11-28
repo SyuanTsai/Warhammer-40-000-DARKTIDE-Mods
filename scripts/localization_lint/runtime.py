@@ -150,11 +150,11 @@ def compare_localizations(old, new, *, old_source=b"", new_source=b""):
             continue
         current = new[key]
         english = EN if EN in fields else "[1]"
-        if (english in current and current[english][0] != "proxy"
-                and fields.get(english, (None,))[0] != "proxy"
-                and current[english] != fields.get(english)):
-            continue
-        if positions and len(current) < len(fields):
+        english_changed = (english in current and current[english][0] != "proxy"
+                           and fields.get(english, (None,))[0] != "proxy"
+                           and current[english] != fields.get(english))
+        # 英文更新可調整其他欄位，但不能跳過原有繁中欄位的有效性檢查。
+        if not english_changed and positions and len(current) < len(fields):
             removed = sorted(fields.keys() - current.keys())
             errors.append(f"{key} 欄位 {', '.join(removed)}：欄位數由 {len(fields)} 減少為 {len(current)}")
         for position in positions:

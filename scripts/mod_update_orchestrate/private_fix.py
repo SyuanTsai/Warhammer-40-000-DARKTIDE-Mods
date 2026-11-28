@@ -4,7 +4,7 @@ import re
 import tempfile
 from pathlib import Path
 
-from scripts.localization_lint.runtime import LocalizationValidationError
+from scripts.localization_lint.runtime import LocalizationValidationError, luajit_command
 from scripts.mod_update_watch.drive import DriveError
 from scripts.mod_update_watch.issues import GitHubError
 from scripts.mod_update_watch.registry import _read_hash, load_registry, parse_hash
@@ -209,6 +209,7 @@ def check_mod(root, git, github, drive, processed, before, after, skill, workspa
         baseline = read_repo_tree(git, after, mod_path)
         original = baseline.get(loc_name)
         try:
+            luajit_command()
             translated, layout_note = preserve_layout(original, translated)
         except LocalizationValidationError as error:
             if previous is not None and not dry_run:

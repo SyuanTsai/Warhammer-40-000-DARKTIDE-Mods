@@ -74,6 +74,22 @@ class ControlledLoadTests(unittest.TestCase):
         with self.assertRaisesRegex(LocalizationValidationError, r'a.*zh-cn'):
             validate_survival(before, before.replace(b'["zh-cn"]="CN", ', b''))
 
+    # Scenario: 英文更新後重新翻譯，或移除、清空、以非字串取代原有繁中。
+    # Purpose: named 與第 3 欄起的 positional 翻譯都必須存續，仍允許重新翻譯。
+    def test_InterT47_changed_english_requires_valid_translation(self):
+        for field in ('["zh-tw"]', '[3]', '[4]'):
+            english = 'en' if field == '["zh-tw"]' else '[1]'
+            before = f'return {{ a = {{ {english}="A", {field}="TW" }} }}'.encode()
+            for value in ('"New TW"', None, '""', '"   "', 'false', '42', '{}'):
+                with self.subTest(field=field, value=value):
+                    translation = f', {field}={value}' if value is not None else ''
+                    after = f'return {{ a = {{ {english}="B"{translation} }} }}'.encode()
+                    if value == '"New TW"':
+                        self.assertEqual(validate_survival(before, after), [])
+                    else:
+                        with self.assertRaises(LocalizationValidationError):
+                            validate_survival(before, after)
+
     # Scenario: --diff 的 HEAD 是合法 Lua，但同 key 繁中消失。
     # Purpose: CLI 回傳失敗並包含檔案、key、欄位位置。
     def test_InterT50_diff_cli_reports_file_key_and_field(self):

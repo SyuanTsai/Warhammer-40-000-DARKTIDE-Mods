@@ -197,6 +197,34 @@ class PrivateFixTests(unittest.TestCase):
         self.assertEqual((self.root / MOD / LOC).read_bytes(), original)
         self.assertFalse(any(call.args[0] == "push" for call in self.git.call_args_list))
 
+    # Scenario: 私人修正需要套用版面，但 LuaJIT 執行檔不存在。
+    # Purpose: 呼叫 preserve_layout 前即明確回報 needs-human，保留原檔與既有 PR head。
+    def test_UnitT47_missing_luajit_blocks_before_layout(self):
+        self.expected = OLD
+        previous = {"number": 7, "head": {"sha": OLD},
+                    "body": f"<!-- mod-private-fix:pr nexus_id=123 before={BEFORE} after={AFTER} verified_head={OLD} -->"}
+        self.github.pulls.return_value = [previous]
+        self.changes.append(f"{MOD}/{LOC}")
+        original = b'return { title = { en = "Title", ["zh-tw"] = "TW" } }'
+        (self.root / MOD / LOC).write_bytes(original)
+        with (patch.dict(os.environ, {"SYP_LUAJIT": "syp700-missing-luajit"}),
+              patch("scripts.mod_update_orchestrate.private_fix.translate_private",
+                    return_value=(LOC, original, [], [])),
+              patch("scripts.mod_update_orchestrate.private_fix.preserve_layout",
+                    return_value=(original, "")) as layout):
+            with self.assertRaisesRegex(ValueError, "無法發布"):
+                self.run_detection()
+        layout.assert_not_called()
+        self.github.set_draft.assert_called_once_with(previous, True)
+        self.github.needs_human.assert_called_once()
+        message = self.github.needs_human.call_args.args[2]
+        self.assertIn("LuaJIT", message)
+        self.assertIn("SYP_LUAJIT", message)
+        self.assertIn("needs-human", str(self.emit.call_args_list))
+        self.github.write_pr.assert_not_called()
+        self.assertEqual((self.root / MOD / LOC).read_bytes(), original)
+        self.assertFalse(any(call.args[0] == "push" for call in self.git.call_args_list))
+
     # Scenario: MOD 非本地化檔不同，同一固定分支已有標記 PR。
     # Purpose: 更新原 PR、保留 hash 欄位、驗證 lease 與 verified head。
     def test_UnitT50_private_fix_updates_legacy_pr_using_merge_base(self):

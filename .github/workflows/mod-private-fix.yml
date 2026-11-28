@@ -70,6 +70,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: 安裝 LuaJIT
+        run: sudo apt-get update && sudo apt-get install -y luajit
       - name: 安裝 Skill 相依套件
         env:
           SKILL_ROOT: ${{ github.workspace }}/.skill

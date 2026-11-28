@@ -41,11 +41,19 @@ class SurvivalTests(unittest.TestCase):
     # Purpose: 合法上游改動可通過，但刪除 key 必須記錄。
     def test_InterT40_upstream_changes_and_deletion_report(self):
         before = 'return { old = { en = "Old", ["zh-tw"] = "舊" }, change = { en = "A", ["zh-tw"] = "甲" } }'.encode()
-        after = b'return { added = { en = "New" }, change = { en = "B" } }'
+        after = 'return { added = { en = "New" }, change = { en = "B", ["zh-tw"] = "新譯" } }'.encode()
         output, note = preserve_layout(before, after)
         self.assertEqual(output, after)
         self.assertIn("old", note)
         self.assertIn("刪除", note)
+
+    # Scenario: 同 key 英文變更，但原有繁中欄位被移除。
+    # Purpose: 上游英文更新不能繞過存續檢查。
+    def test_InterT45_changed_english_without_translation_is_blocked(self):
+        before = 'return { change = { en = "A", ["zh-tw"] = "原譯" } }'.encode()
+        after = b'return { change = { en = "B" } }'
+        with self.assertRaisesRegex(LocalizationValidationError, 'change.*zh-tw'):
+            preserve_layout(before, after)
 
     # Scenario: 可解析的具名語言表與不同 fallback 路徑皆缺少繁中。
     # Purpose: 不論排版成功、CR 換行或重建失敗，共同出口都不能漏驗證。
