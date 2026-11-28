@@ -20,7 +20,7 @@ from .gate import validate_git, validate_paths, validate_upstream
 from .localization import Localization, LocalizationError, log_stage, read_json
 from .loc_layout import preserve_layout
 from .merge import change_summary, merge_tree, private_changes
-from .pr import branch_for, current_pr, publish, stage_raw, sync_term_review, upstream_commit
+from .pr import branch_for, current_pr, publish, resolve_update, stage_raw, sync_term_review, upstream_commit
 from .records import PENDING, insert_readme, mark_private_readme, readme_sections, update_hash, update_readme, updates
 from .report import (
     blocked_units, cell, plain, pr_body, prepare_term_reviews, skipped_git_note, sync_term_review_translations,
@@ -338,14 +338,20 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
                 version = recorded_version(mod, receipt)
                 emit(f"repo 紀錄已是版本 {version}，跳過。" if version else "main 已收錄相同主檔，略過")
                 return
-            branch = branch_for(nexus_id)
-            pulls = github.pulls(branch)
-            if len(pulls) > 1:
-                raise NeedsHuman("publication", "固定分支出現多個開啟中的 PR")
-            if not regenerate and current_pr(pulls, nexus_id, file_id):
+            if route == "update":
+                try:
+                    branch, previous = resolve_update(github.pulls, nexus_id, file_id, mod.name, receipt.version)
+                except ValueError as error:
+                    raise NeedsHuman("publication", str(error)) from error
+            else:
+                branch = branch_for(nexus_id)
+                pulls = github.pulls(branch)
+                if len(pulls) > 1:
+                    raise NeedsHuman("publication", "固定分支出現多個開啟中的 PR")
+                previous = pulls[0] if pulls else None
+            if previous and not regenerate and current_pr([previous], nexus_id, file_id):
                 if not dry_run:
-                    pull = pulls[0]
-                    sync_term_review(github, pull, pull.get("body") or "", nexus_id, file_id, emit=emit)
+                    sync_term_review(github, previous, previous.get("body") or "", nexus_id, file_id, emit=emit)
                 emit("同主檔已有開啟中的 PR，略過")
                 return
             with tempfile.TemporaryDirectory(dir=scratch, prefix=f"mod-{nexus_id}-") as work:
@@ -393,9 +399,9 @@ def process(root, git, github, drive, processed, number, nexus_id, file_id, skil
             else:
                 resolved.add("merge")
             with log_stage("PR"):
-                pr_number = publish(git, github, pulls[0] if pulls else None, nexus_id, title, body,
+                pr_number = publish(git, github, previous, nexus_id, title, body,
                                     mode, conflicts, upstream_oid or base_oid, paths, route=route,
-                                    mod_staged=True, emit=emit)
+                                    mod_staged=True, emit=emit, branch=branch)
                 github.resolve(number, resolved)
             emit(f"更新 PR #{pr_number} 已發布")
             return

@@ -83,7 +83,7 @@ def unresolved_external_label(issue, comments):
 
 
 def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=None,
-             mode="manual", skip_updates=False, regenerate=False):
+             mode="manual", skip_updates=False, regenerate=False, lookup_update=None):
     matrix, notes = [], []
     if regenerate and nexus_filter is None:
         notes.append("警告：未指定 nexus_id，已忽略 regenerate。")
@@ -122,7 +122,17 @@ def discover(root, github, mods, *, nexus_filter=None, dry_run=False, current=No
             continue
         if nexus_id in seen or already_recorded(root, mod, receipt, match_version=False):
             continue
-        if not regenerate and current and current(nexus_id, receipt_key(receipt)):
+        existing = False
+        if not regenerate:
+            if route == "update" and lookup_update:
+                try:
+                    _, existing = lookup_update(nexus_id, receipt.file_id, mod.name, receipt.version)
+                except ValueError as error:
+                    notes.append(f"Issue #{number}：{error}")
+                    continue
+            elif current:
+                existing = current(nexus_id, receipt_key(receipt))
+        if existing:
             if mode != "auto" or route == "new":
                 continue
             action = "merge-check"

@@ -12,6 +12,7 @@ from scripts.localization_lint import LocalizationSyntaxError
 from scripts.mod_update_orchestrate.github import GitHub
 from scripts.mod_update_orchestrate.loc_layout import FALLBACK_NOTE
 from scripts.mod_update_orchestrate.main import main
+from scripts.mod_update_orchestrate.pr import update_branch
 from scripts.mod_update_orchestrate.process import NeedsHuman, candidate, process
 from scripts.mod_update_watch.handoff import Received
 from scripts.mod_update_watch.registry import _read_hash
@@ -96,9 +97,12 @@ class ExecutionTests(unittest.TestCase):
         self.loc.relative = "Example_localization.lua"
         self.loc.apply.return_value = (b"return {}\n", [])
         self.github.write_pr.return_value = {
-            "number": 22, "head": {"sha": "a" * 40}, "draft": False,
+            "number": 22, "head": {"sha": "a" * 40, "ref": update_branch(self.mod.name, RECEIPT.version)},
+            "base": {"ref": "main"}, "state": "open", "draft": False,
             "html_url": "https://github.com/owner/mods/pull/22",
         }
+        self.github.write_pr.side_effect = lambda previous, branch, title, body, draft: {
+            **self.github.write_pr.return_value, "body": body}
         self.git.side_effect = lambda command, *args: {
             "rev-parse": "a" * 40, "diff": "README.md\0",
         }.get(command, "")
@@ -245,7 +249,8 @@ class ExecutionTests(unittest.TestCase):
             self.assertIn(evidence, messages)
         self.assertNotIn("&#", messages)
 
-        self.github.pulls.return_value = [{**self.github.write_pr.return_value, "body": body}]
+        pull = {**self.github.write_pr.return_value, "body": body}
+        self.github.pulls.side_effect = lambda branch: [pull] if branch == pull["head"]["ref"] else []
         transport.reset_mock()
         transport.side_effect = [label, no_issues, no_issues, (403, {}, b""),
                                  label, no_issues, no_issues, (201, {}, b'{"number": 31}')]
