@@ -30,6 +30,17 @@ def text_format(data):
     return (CRLF if CRLF in data and not mixed_eol(data) else LF, data.startswith(BOM_UTF8))
 
 
+def matches_except_uniform_eol(before, after):
+    if before == after:
+        return True
+    if not all(is_text(data) and LF in data and not mixed_eol(data) and b"\r" not in data.replace(CRLF, b"")
+               for data in (before, after)):
+        return False
+    before_eol, before_bom = text_format(before)
+    after_eol, after_bom = text_format(after)
+    return before_eol != after_eol and before_bom == after_bom and normalize(before) == normalize(after)
+
+
 def default_format(blobs):
     formats = [text_format(data) for data in blobs.values() if is_text(data)]
     return (CRLF if sum(eol == CRLF for eol, _ in formats) * 2 > len(formats) else LF,

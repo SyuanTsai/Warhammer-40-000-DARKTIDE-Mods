@@ -7,6 +7,7 @@ import re
 import sys
 import tempfile
 import traceback
+from dataclasses import asdict
 from functools import cache as memoize, partial
 from html import escape
 from pathlib import Path
@@ -15,6 +16,8 @@ from scripts.mod_update_watch.drive import DriveClient, DriveError
 from scripts.mod_update_watch.issues import GitHubError
 from scripts.mod_update_watch.registry import load_registry, positive_id
 
+from .checks import check_report
+from .reviewed import PendingSkillEvidence, load_review, load_terminology_request
 from .discover import discover
 from .github import GitHub
 from .pr import branch_for, current_pr, merge_check, resolve_update, run_git
@@ -66,7 +69,7 @@ def emit_stop(error):
 
 def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     parser = argparse.ArgumentParser(description="編排 Darktide MOD 更新")
-    parser.add_argument("command", choices=("discover", "process", "private-fix"))
+    parser.add_argument("command", choices=("discover", "process", "private-fix", "check-report"))
     parser.add_argument("--before")
     parser.add_argument("--after")
     parser.add_argument("--nexus-id", type=count)
@@ -80,13 +83,35 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
     parser.add_argument("--skip-updates", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--regenerate", action="store_true")
+    parser.add_argument("--head")
+    parser.add_argument("--workflow", help="check-report workflow YAML filename")
+    parser.add_argument("--not-triggered-evidence", help="independently verified non-trigger reference for this head and workflow")
+    reviewed = parser.add_mutually_exclusive_group()
+    reviewed.add_argument("--reviewed-input", type=Path)
+    reviewed.add_argument("--review-template", action="store_true")
+    parser.add_argument("--terminology-key", action="append", help="one exact NONE key for --review-template")
+    parser.add_argument("--terminology-request", type=Path, help="approved exact-key terminology request JSON")
     args = parser.parse_args(argv)
+    if args.terminology_key and (not args.review_template or len(args.terminology_key) != 1):
+        parser.error("--terminology-key requires one selector with --review-template")
 
     try:
         github = GitHub(github_transport)
         mode = args.review_mode or os.environ.get("MOD_UPDATE_REVIEW_MODE") or "manual"
         if mode not in ("manual", "auto"):
             raise ValueError("MOD_UPDATE_REVIEW_MODE 必須為 manual 或 auto")
+        if args.command != "check-report" and (args.workflow or args.head or args.not_triggered_evidence is not None):
+            parser.error("--head, --workflow and --not-triggered-evidence belong to check-report")
+        if args.reviewed_input or args.review_template or args.terminology_request:
+            if (args.command != "process" or not args.regenerate or args.route != "update"
+                    or args.merge_check or mode != "manual" or args.review_template and not args.dry_run):
+                parser.error("review requires manual process --regenerate --route update; template requires --dry-run")
+        if args.terminology_request and args.review_template:
+            parser.error("--terminology-request cannot accompany --review-template")
+        if args.command == "check-report":
+            report = check_report(github, args.head, args.workflow, not_triggered_evidence=args.not_triggered_evidence)
+            emit(json.dumps(report, ensure_ascii=True))
+            return 0
         if args.command == "discover":
             mods, _ = load_registry(root)
             pulls_for = memoize(github.pulls)
@@ -142,6 +167,8 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
             return 0
         processed = os.environ.get("GDRIVE_PROCESSED_FOLDER_ID")
         if not processed or not os.environ.get("GOOGLE_ACCESS_TOKEN"):
+            if args.reviewed_input or args.review_template or args.terminology_request:
+                raise ValueError("review regeneration requires configured Drive")
             emit("警告：缺少 Drive／WIF 設定，略過此次更新")
             return 0
         skill = Path(os.environ["SKILL_ROOT"]).resolve()
@@ -152,10 +179,19 @@ def main(argv=None, *, root=ROOT, github_transport=None, drive_transport=None):
                      scratch / f"darktide-translate-{args.nexus_id}").resolve()
         if any(path.is_relative_to(root) or path.is_relative_to(skill) for path in (scratch, cache)):
             raise ValueError("暫存與快取目錄須位於兩個 checkout 之外")
-        process(root, git, github, DriveClient(drive_transport), processed,
-                args.issue, args.nexus_id, identity, skill, scratch, cache,
-                max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit, route=args.route,
-                regenerate=args.regenerate)
+        outcome = process(
+            root, git, github, DriveClient(drive_transport), processed,
+            args.issue, args.nexus_id, identity, skill, scratch, cache,
+            max_items=args.max_items, mode=mode, dry_run=args.dry_run, emit=emit, route=args.route,
+            regenerate=args.regenerate, review=load_review(args.reviewed_input) if args.reviewed_input else None,
+            review_template_only=args.review_template,
+            **({"terminology_key": args.terminology_key[0]} if args.terminology_key else {}),
+            **({"terminology_request": load_terminology_request(args.terminology_request)}
+               if args.terminology_request else {}),
+        )
+        if isinstance(outcome, PendingSkillEvidence):
+            emit(json.dumps(asdict(outcome), ensure_ascii=True))
+            return 1
         return 0
     except (GitHubError, DriveError, RuntimeError) as error:
         emit(str(error))
