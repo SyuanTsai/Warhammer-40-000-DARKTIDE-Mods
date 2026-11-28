@@ -1,7 +1,7 @@
 return {
     ["debuff_pulse_enabled_description"] = {
         ["en"] = "Flash damage-over-time icons at or above these stack thresholds: Burning 12, Warp Fire (Soulblaze) 12, Bleed 16 and Chem Toxin 30. Burning and Soulblaze use tier-IV blessing caps; Chem Toxin uses the needle-pistol cap. Higher counts keep flashing. This does not change damage or native stack limits. Unknown or incomplete counts do not flash.",
-        ["zh-tw"] = "當持續傷害圖示的疊加數達到或超過下列門檻時閃爍：燃燒 12、亞空間之火（靈魂之火）12、流血 16、化學毒素 30。燃燒和靈魂之火採用四階祝福的上限；化學毒素採用針刺手槍的上限。超過門檻後會持續閃爍。這不會改變傷害或遊戲原生的疊加上限。未知或不完整的層數不會閃爍。",
+        ["zh-tw"] = "當持續傷害圖示的疊加數達到或超過下列門檻時閃爍：燃燒 12、靈魂之火 12、流血 16、化學毒素 30。燃燒和靈魂之火採用四階祝福的上限；化學毒素採用針刺手槍的上限。超過門檻後會持續閃爍。這不會改變傷害或遊戲原生的疊加上限。未知或不完整的層數不會閃爍。",
     },
 
     ["teammate_squadmate_icon_enabled"] = {
@@ -356,7 +356,7 @@ return {
 
     ["color_renegade_radio_operator"] = {
         ["en"] = "Scab Radio Operator",
-        ["zh-tw"] = "血痂通訊兵",
+        ["zh-tw"] = "血痂無線電兵",
     },
 
     ["mod_name"] = {
@@ -444,7 +444,7 @@ return {
 
     ["color_renegade_twin_captain"] = {
         ["en"] = "Scab Twin Captain",
-        ["zh-tw"] = "血痂雙子連長",
+        ["zh-tw"] = "雙子（槍）",
     },
 
     ["color_renegade_twin_captain_r"] = {
@@ -464,7 +464,7 @@ return {
 
     ["color_renegade_twin_captain_two"] = {
         ["en"] = "Scab Twin Captain Two",
-        ["zh-tw"] = "血痂雙子連長二號",
+        ["zh-tw"] = "雙子（劍）",
     },
 
     ["color_renegade_twin_captain_two_r"] = {
@@ -604,7 +604,7 @@ return {
 
     ["debuff_soulblaze_enabled"] = {
         ["en"] = "Warp Fire (Soulblaze)",
-        ["zh-tw"] = "亞空間火焰（靈魂之火）",
+        ["zh-tw"] = "靈魂之火",
     },
     ["debuff_toxin_enabled"] = {en="Chem Toxin", ["zh-tw"] = "化學毒素",},
     ["debuff_toxin_enabled_description"] = {en="Show a green toxin icon and its observed damage-over-time stacks. Enabled by default. Stack numbers and flashing follow their separate switches. Does not count toxin armour-rending or gas-controller stacks.", ["zh-tw"] = "顯示綠色毒素圖示及其觀察到的持續傷害疊加數。預設開啟。疊加數字和閃爍分別由各自的開關控制。不計入毒素的護甲撕裂或毒氣控制器的疊加。",},
@@ -1684,11 +1684,11 @@ return {
  enemy_display_chaos_beast_of_nurgle={en="Beast of Nurgle", ["zh-tw"] = "納垢巨獸",},
  enemy_display_chaos_daemonhost={en="Daemonhost", ["zh-tw"] = "惡魔宿主",},
  enemy_display_chaos_hound={en="Hound", ["zh-tw"] = "瘟疫獵犬",},
- enemy_display_chaos_hound_mutator={en="Hound Mutator", ["zh-tw"] = "瘟疫獵犬（變異模式）",},
+ enemy_display_chaos_hound_mutator={en="Hound Mutator", ["zh-tw"] = "瘟疫獵犬（變種）",},
  enemy_display_chaos_lesser_mutated_poxwalker={en="Lesser Mutated Poxwalker", ["zh-tw"] = "變異瘟疫行者",},
  enemy_display_chaos_mutated_poxwalker={en="Mutated Poxwalker", ["zh-tw"] = "觸手瘟疫行者",},
- enemy_display_chaos_mutator_daemonhost={en="Mutator Daemonhost", ["zh-tw"] = "魔縛惡魔宿主（變異模式）",},
- enemy_display_chaos_mutator_ritualist={en="Mutator Ritualist", ["zh-tw"] = "渣滓祭司（變異模式）",},
+ enemy_display_chaos_mutator_daemonhost={en="Mutator Daemonhost", ["zh-tw"] = "魔縛惡魔宿主（變種）",},
+ enemy_display_chaos_mutator_ritualist={en="Mutator Ritualist", ["zh-tw"] = "渣滓祭司（變種）",},
  enemy_display_chaos_newly_infected={en="Newly Infected", ["zh-tw"] = "呻吟者",},
  enemy_display_chaos_ogryn_bulwark={en="Bulwark", ["zh-tw"] = "堡壘",},
  enemy_display_chaos_ogryn_executor={en="Crusher", ["zh-tw"] = "碾壓者",},
@@ -1706,7 +1706,7 @@ return {
  enemy_display_cultist_gunner={en="Dreg Gunner", ["zh-tw"] = "渣滓砲手",},
  enemy_display_cultist_melee={en="Dreg Melee", ["zh-tw"] = "渣滓格鬥兵",},
  enemy_display_cultist_mutant={en="Mutant", ["zh-tw"] = "變種人",},
- enemy_display_cultist_mutant_mutator={en="Dreg Mutant Mutator", ["zh-tw"] = "渣滓變種人（變異模式）",},
+ enemy_display_cultist_mutant_mutator={en="Dreg Mutant Mutator", ["zh-tw"] = "渣滓變種人（變種）",},
  enemy_display_cultist_ritualist={en="Dreg Ritualist", ["zh-tw"] = "渣滓祭司",},
  enemy_display_cultist_shocktrooper={en="Dreg Shocktrooper", ["zh-tw"] = "渣滓霰彈槍手",},
  enemy_display_cultist_vanguard={en="Dreg Vanguard", ["zh-tw"] = "渣滓先鋒 (盾兵)",},
@@ -1715,7 +1715,7 @@ return {
  enemy_display_renegade_captain={en="Scab Captain", ["zh-tw"] = "血痂隊長",},
  enemy_display_renegade_executor={en="Scab Mauler", ["zh-tw"] = "血痂重錘兵",},
  enemy_display_renegade_flamer={en="Flamer", ["zh-tw"] = "血痂噴火者",},
- enemy_display_renegade_flamer_mutator={en="Scab Flamer Mutator", ["zh-tw"] = "血痂噴火者（變異模式）",},
+ enemy_display_renegade_flamer_mutator={en="Scab Flamer Mutator", ["zh-tw"] = "血痂噴火者（變種）",},
  enemy_display_renegade_grenadier={en="Bomber", ["zh-tw"] = "血痂轟炸者",},
  enemy_display_renegade_gunner={en="Scab Gunner", ["zh-tw"] = "血痂砲手",},
  enemy_display_renegade_melee={en="Scab Melee", ["zh-tw"] = "血痂格鬥兵",},
@@ -1725,8 +1725,8 @@ return {
  enemy_display_renegade_rifleman={en="Scab Rifleman", ["zh-tw"] = "血痂射手",},
  enemy_display_renegade_shocktrooper={en="Scab Shocktrooper", ["zh-tw"] = "血痂霰彈槍手",},
  enemy_display_renegade_sniper={en="Scab Sniper", ["zh-tw"] = "血痂狙擊手",},
- enemy_display_renegade_twin_captain={en="Scab Twin Captain", ["zh-tw"] = "血痂雙子隊長",},
- enemy_display_renegade_twin_captain_two={en="Scab Twin Captain Two", ["zh-tw"] = "血痂雙子隊長二號",},
+ enemy_display_renegade_twin_captain={en="Scab Twin Captain", ["zh-tw"] = "雙子（槍）",},
+ enemy_display_renegade_twin_captain_two={en="Scab Twin Captain Two", ["zh-tw"] = "雙子（劍）",},
  enemy_display_renegade_vanguard={en="Scab Vanguard", ["zh-tw"] = "血痂先鋒 (盾兵)",},
  enemy_display_fallback={en="Other / future enemies", ["zh-tw"] = "其他／未來敵人",},
  outline_chaos_armored_hound_enabled={en="Outline", ["zh-tw"] = "輪廓",},
