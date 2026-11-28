@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -131,7 +132,7 @@ class Localization:
             raise LocalizationError("工作集缺少規則與詞彙表 SHA")
         return document
 
-    def translate(self, document, *, max_items=None, dry_run=False, adapter=None):
+    def translate(self, document, *, max_items=None, dry_run=False, adapter=None, gameplay_context=None):
         if not any(unit["action"] == "AI_REQUIRED" for unit in document["units"]):
             return 0, {}, document
         argv = ["run", "--workset", str(self.workset), "--mods-root", str(self.root),
@@ -141,11 +142,25 @@ class Localization:
             argv.extend(["--max-items", str(max_items)])
         if dry_run:
             argv.append("--dry-run")
+        if gameplay_context is not None:
+            sidecar = gameplay_context.resolve()
+            workspace = self.workspace.resolve()
+            if (sidecar.parent == workspace or not sidecar.is_relative_to(workspace) or not sidecar.is_file()
+                    or sidecar.is_relative_to(self.root.resolve()) or sidecar.is_relative_to(self.skill.resolve())):
+                raise LocalizationError("gameplay-context：sidecar must be a local file in a separate temporary workspace")
+            argv.extend(["--gameplay-context", str(sidecar)])
         if adapter is None:
             script = self.skill / "packages" / "darktide-translate" / "darktide_translate.py"
+            command = [sys.executable, "-B", "-u", "-X", "utf8", str(script)]
             try:
-                status, _ = _run_skill([sys.executable, "-B", "-u", "-X", "utf8", str(script), *argv],
-                                       self.skill, "Skill 翻譯")
+                if gameplay_context is not None:
+                    help_result = subprocess.run([*command, "run", "--help"], cwd=self.skill, capture_output=True)
+                    if help_result.returncode:
+                        raise LocalizationError("gameplay-context：unable to verify the pinned Skill adapter CLI")
+                    if not re.search(rb"(?<![\w-])--gameplay-context(?![\w-])", help_result.stdout):
+                        raise LocalizationError("gameplay-context：the pinned Skill adapter does not support "
+                                                "--gameplay-context v1")
+                status, _ = _run_skill([*command, *argv], self.skill, "Skill 翻譯")
             except OSError:
                 raise LocalizationError("無法啟動翻譯轉接層") from None
         else:

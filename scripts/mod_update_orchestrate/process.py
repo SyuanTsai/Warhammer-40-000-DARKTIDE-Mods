@@ -16,6 +16,7 @@ from scripts.mod_update_watch.safe_extract import ArchiveError, DEFAULT_LIMITS, 
 from .base import digest, find_base, folder_id
 from .discover import already_recorded, latest_receipt, matches_issue, receipt_key, recorded_version, unresolved_external_label
 from .eol import FORMAT_ONLY, MIXED_EOL, default_format, normalize, repo_bytes
+from .gameplay_context import gameplay_translation_args
 from .gate import validate_git, validate_paths, validate_upstream
 from .localization import Localization, LocalizationError, log_stage, read_json
 from .loc_layout import preserve_layout
@@ -165,8 +166,8 @@ def candidate(root, git, github, drive, processed, issue, number, receipt, mod, 
         if preblocked:
             details = blocked_units(document, {})
             raise NeedsHuman("localization", "有 BLOCKED 工作集項目。\n\n" + "\n".join(details))
-        with log_stage("翻譯"):
-            status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run)
+        with log_stage("翻譯"), gameplay_translation_args(loc, document, git, new_tree, merged, ours, conflicts) as args:
+            status, summary, translated = loc.translate(document, max_items=max_items, dry_run=dry_run, **args)
         document, summary, reviews = prepare_term_reviews(translated, summary)
         pending = blocked_units(document, summary)
         if dry_run and reviews:
