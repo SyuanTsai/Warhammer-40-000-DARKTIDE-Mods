@@ -701,11 +701,56 @@ localizations.mood_vfx_tt = {
 	en = "Removes the screen particles/colour grading for the selected moods. Sounds are unaffected. Requires restart.",
 }
 
+local mood_names_zh_tw = {
+	corruption = "腐敗",
+	corruption_taken = "受到腐敗",
+	corruptor_proximity = "腐蝕者接近",
+	critical_health = "瀕危生命",
+	damage_taken = "受到傷害",
+	knocked_down = "被擊倒",
+	last_wound = "最後傷口",
+	expeditions_death_imminent = "遠征死亡迫近",
+	no_toughness = "無韌性",
+	toughness_absorbed = "韌性減免",
+	toughness_absorbed_melee = "近戰韌性減免",
+	toughness_broken = "韌性破裂",
+	suppression_low = "低壓制",
+	suppression_high = "高壓制",
+	suppression_ongoing = "持續壓制",
+	sprinting = "衝刺",
+	sprinting_overtime = "衝刺過久",
+	stealth = "隱身",
+	generic_stealth = "通用隱身",
+	warped = "亞空間",
+	warped_critical = "亞空間反噬",
+	warped_low_to_high = "亞空間低轉高",
+	warped_high_to_critical = "亞空間高轉反噬",
+	veteran_combat_ability_stance = "處決者姿態",
+	veteran_stealth = "滲透",
+	veteran_stealth_and_stance = "滲透與處決者姿態",
+	zealot_combat_ability_dash = "有信者之怒",
+	psyker_combat_ability_shout = "刺耳尖嘯",
+	psyker_force_field_sphere = "念力穹頂",
+	ogryn_combat_ability_charge = "蠻牛衝撞",
+	ogryn_combat_ability_shout = "忠誠守護者",
+	ogryn_combat_ability_stance = "貼身火力",
+	adamant_combat_ability_charge = "突破重圍",
+	broker_combat_ability_focus = "亡命之徒",
+	broker_combat_ability_punk_rage = "橫衝直撞！",
+	cryptic_grenade_ability_force_field = "艾曼納圖斯力場",
+	syringe_ability = "專注興奮劑",
+	syringe_power = "戰鬥興奮劑",
+	syringe_speed = "敏捷興奮劑",
+	syringe_broker = "巢都敗類興奮劑",
+	story_echo = "劇情迴響",
+	spillway_nurgle_transition = "溢洪道納垢轉場",
+}
+
 for mood_type, _ in pairs(MoodSettings.mood_types) do
 	local label = string.gsub(mood_type, "_", " ")
 	localizations["hide_mood_vfx_" .. mood_type] = {
 		en = "Disable " .. label,
-		["zh-tw"] = "停用 " .. label,
+		["zh-tw"] = "停用 " .. (mood_names_zh_tw[mood_type] or label),
 	}
 end
 
